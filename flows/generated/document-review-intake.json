@@ -1,0 +1,667 @@
+{
+  "name": "Document Review Intake",
+  "description": "Synthetic parsing, redaction, explainable scoring and asynchronous human approval.",
+  "endpoint_name": null,
+  "is_component": false,
+  "tags": [
+    "synthetic-data",
+    "document-review",
+    "built-on-langflow"
+  ],
+  "data": {
+    "nodes": [
+      {
+        "id": "SyntheticDocumentParser-demo0",
+        "type": "genericNode",
+        "position": {
+          "x": 120,
+          "y": 180
+        },
+        "data": {
+          "id": "SyntheticDocumentParser-demo0",
+          "type": "SyntheticDocumentParser",
+          "display_name": "Synthetic Document Parser",
+          "description": "Parse a synthetic PDF, DOCX, TXT, or Markdown file into traceable text sections.",
+          "node": {
+            "template": {
+              "_type": "Component",
+              "uploaded_file": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "file_path": "",
+                "fileTypes": [
+                  "pdf",
+                  "docx",
+                  "txt",
+                  "md"
+                ],
+                "temp_file": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "override_skip": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "uploaded_file",
+                "value": "",
+                "display_name": "Uploaded Synthetic Document",
+                "advanced": false,
+                "api_editable": false,
+                "dynamic": false,
+                "info": "Accepted types: PDF, DOCX, TXT, MD. Maximum 10 MB.",
+                "title_case": false,
+                "track_in_telemetry": false,
+                "type": "file",
+                "_input_type": "FileInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from lfx.custom.custom_component.component import Component\nfrom lfx.io import FileInput, Output, StrInput\nfrom lfx.schema import Data\n\nfrom review_core import parse_document\n\n\nclass SyntheticDocumentParser(Component):\n    display_name = \"Synthetic Document Parser\"\n    description = \"Parse a synthetic PDF, DOCX, TXT, or Markdown file into traceable text sections.\"\n    icon = \"file-text\"\n    name = \"SyntheticDocumentParser\"\n\n    inputs = [\n        FileInput(\n            name=\"uploaded_file\",\n            display_name=\"Uploaded Synthetic Document\",\n            info=\"Accepted types: PDF, DOCX, TXT, MD. Maximum 10 MB.\",\n            file_types=[\"pdf\", \"docx\", \"txt\", \"md\"],\n            required=False,\n        ),\n        StrInput(\n            name=\"demo_file_path\",\n            display_name=\"Mounted Demo File Path\",\n            value=\"/app/fixtures/documents/review-synthetic.txt\",\n            info=\"Trusted container path used when no file is uploaded.\",\n            advanced=True,\n        ),\n    ]\n    outputs = [Output(name=\"document\", display_name=\"Parsed Document\", method=\"parse\")]\n\n    def parse(self) -> Data:\n        file_path = self.uploaded_file or self.demo_file_path\n        if isinstance(file_path, list):\n            file_path = file_path[0] if file_path else \"\"\n        if not file_path:\n            msg = \"Upload a synthetic document or provide a mounted demo file path.\"\n            raise ValueError(msg)\n        result = parse_document(file_path)\n        self.status = f\"Parsed {len(result.sections)} sections with {len(result.warnings)} warnings\"\n        return Data(data=result.to_dict())\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "demo_file_path": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "override_skip": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "demo_file_path",
+                "value": "/app/fixtures/documents/review-synthetic.txt",
+                "display_name": "Mounted Demo File Path",
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": false,
+                "info": "Trusted container path used when no file is uploaded.",
+                "title_case": false,
+                "track_in_telemetry": false,
+                "type": "str",
+                "_input_type": "StrInput"
+              }
+            },
+            "description": "Parse a synthetic PDF, DOCX, TXT, or Markdown file into traceable text sections.",
+            "icon": "file-text",
+            "base_classes": [
+              "JSON"
+            ],
+            "display_name": "Synthetic Document Parser",
+            "documentation": "",
+            "minimized": false,
+            "custom_fields": {},
+            "output_types": [],
+            "pinned": false,
+            "conditional_paths": [],
+            "frozen": false,
+            "outputs": [
+              {
+                "types": [
+                  "JSON"
+                ],
+                "selected": "JSON",
+                "name": "document",
+                "display_name": "Parsed Document",
+                "method": "parse",
+                "value": "__UNDEFINED__",
+                "cache": true,
+                "allows_loop": false,
+                "group_outputs": false,
+                "tool_mode": true
+              }
+            ],
+            "field_order": [
+              "uploaded_file",
+              "demo_file_path"
+            ],
+            "beta": false,
+            "legacy": false,
+            "edited": false,
+            "metadata": {
+              "module": "_lfx_ext.extra.review_center.document_parser",
+              "code_hash": "361b05dd71bc",
+              "dependencies": {
+                "total_dependencies": 2,
+                "dependencies": [
+                  {
+                    "name": "lfx",
+                    "version": "1.11.6"
+                  },
+                  {
+                    "name": "review_core",
+                    "version": null
+                  }
+                ]
+              }
+            },
+            "tool_mode": false,
+            "extension": "review_center",
+            "bundle": "review_center",
+            "extension_version": "0.0.0",
+            "namespaced_id": "ext:review_center:SyntheticDocumentParser@extra",
+            "name": "SyntheticDocumentParser"
+          }
+        }
+      },
+      {
+        "id": "DeterministicPIIRedactor-demo1",
+        "type": "genericNode",
+        "position": {
+          "x": 480,
+          "y": 180
+        },
+        "data": {
+          "id": "DeterministicPIIRedactor-demo1",
+          "type": "DeterministicPIIRedactor",
+          "display_name": "Deterministic PII Redactor",
+          "description": "Redact synthetic identifiers using a versioned deterministic policy.",
+          "node": {
+            "template": {
+              "_type": "Component",
+              "document": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "trace_as_input": true,
+                "override_skip": false,
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "document",
+                "value": "",
+                "display_name": "Parsed Document",
+                "advanced": false,
+                "api_editable": false,
+                "input_types": [
+                  "Data",
+                  "JSON"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "track_in_telemetry": false,
+                "type": "other",
+                "_input_type": "JSONInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from lfx.custom.custom_component.component import Component\nfrom lfx.io import DataInput, Output\nfrom lfx.schema import Data\n\nfrom review_core import redact_text\n\n\nclass DeterministicPIIRedactor(Component):\n    display_name = \"Deterministic PII Redactor\"\n    description = \"Redact synthetic identifiers using a versioned deterministic policy.\"\n    icon = \"scan-eye\"\n    name = \"DeterministicPIIRedactor\"\n\n    inputs = [DataInput(name=\"document\", display_name=\"Parsed Document\", required=True)]\n    outputs = [Output(name=\"redacted\", display_name=\"Redacted Document\", method=\"redact\")]\n\n    def redact(self) -> Data:\n        payload = dict(self.document.data)\n        result = redact_text(str(payload.get(\"text\", \"\")))\n        payload[\"original_sha256\"] = payload.get(\"sha256\")\n        payload[\"text\"] = result.text\n        payload[\"redaction\"] = result.to_dict()\n        self.status = f\"Redacted {len(result.matches)} synthetic PII matches\"\n        return Data(data=payload)\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              }
+            },
+            "description": "Redact synthetic identifiers using a versioned deterministic policy.",
+            "icon": "scan-eye",
+            "base_classes": [
+              "JSON"
+            ],
+            "display_name": "Deterministic PII Redactor",
+            "documentation": "",
+            "minimized": false,
+            "custom_fields": {},
+            "output_types": [],
+            "pinned": false,
+            "conditional_paths": [],
+            "frozen": false,
+            "outputs": [
+              {
+                "types": [
+                  "JSON"
+                ],
+                "selected": "JSON",
+                "name": "redacted",
+                "display_name": "Redacted Document",
+                "method": "redact",
+                "value": "__UNDEFINED__",
+                "cache": true,
+                "allows_loop": false,
+                "group_outputs": false,
+                "tool_mode": true
+              }
+            ],
+            "field_order": [
+              "document"
+            ],
+            "beta": false,
+            "legacy": false,
+            "edited": false,
+            "metadata": {
+              "module": "_lfx_ext.extra.review_center.pii_redactor",
+              "code_hash": "112b623c0deb",
+              "dependencies": {
+                "total_dependencies": 2,
+                "dependencies": [
+                  {
+                    "name": "lfx",
+                    "version": "1.11.6"
+                  },
+                  {
+                    "name": "review_core",
+                    "version": null
+                  }
+                ]
+              }
+            },
+            "tool_mode": false,
+            "extension": "review_center",
+            "bundle": "review_center",
+            "extension_version": "0.0.0",
+            "namespaced_id": "ext:review_center:DeterministicPIIRedactor@extra",
+            "name": "DeterministicPIIRedactor"
+          }
+        }
+      },
+      {
+        "id": "ExplainableRiskScorer-demo2",
+        "type": "genericNode",
+        "position": {
+          "x": 840,
+          "y": 180
+        },
+        "data": {
+          "id": "ExplainableRiskScorer-demo2",
+          "type": "ExplainableRiskScorer",
+          "display_name": "Explainable Risk Scorer",
+          "description": "Score synthetic documents with transparent, versioned review rules.",
+          "node": {
+            "template": {
+              "_type": "Component",
+              "document": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "trace_as_input": true,
+                "override_skip": false,
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "document",
+                "value": "",
+                "display_name": "Redacted Document",
+                "advanced": false,
+                "api_editable": false,
+                "input_types": [
+                  "Data",
+                  "JSON"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "track_in_telemetry": false,
+                "type": "other",
+                "_input_type": "JSONInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from lfx.custom.custom_component.component import Component\nfrom lfx.io import DataInput, Output\nfrom lfx.schema import Data\n\nfrom review_core import score_document\n\n\nclass ExplainableRiskScorer(Component):\n    display_name = \"Explainable Risk Scorer\"\n    description = \"Score synthetic documents with transparent, versioned review rules.\"\n    icon = \"shield-alert\"\n    name = \"ExplainableRiskScorer\"\n\n    inputs = [DataInput(name=\"document\", display_name=\"Redacted Document\", required=True)]\n    outputs = [Output(name=\"assessment\", display_name=\"Risk Assessment\", method=\"score\")]\n\n    def score(self) -> Data:\n        payload = dict(self.document.data)\n        result = score_document(str(payload.get(\"text\", \"\")))\n        payload[\"risk_assessment\"] = result.to_dict()\n        self.status = f\"Risk {result.score}/100 ({result.level})\"\n        return Data(data=payload)\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              }
+            },
+            "description": "Score synthetic documents with transparent, versioned review rules.",
+            "icon": "shield-alert",
+            "base_classes": [
+              "JSON"
+            ],
+            "display_name": "Explainable Risk Scorer",
+            "documentation": "",
+            "minimized": false,
+            "custom_fields": {},
+            "output_types": [],
+            "pinned": false,
+            "conditional_paths": [],
+            "frozen": false,
+            "outputs": [
+              {
+                "types": [
+                  "JSON"
+                ],
+                "selected": "JSON",
+                "name": "assessment",
+                "display_name": "Risk Assessment",
+                "method": "score",
+                "value": "__UNDEFINED__",
+                "cache": true,
+                "allows_loop": false,
+                "group_outputs": false,
+                "tool_mode": true
+              }
+            ],
+            "field_order": [
+              "document"
+            ],
+            "beta": false,
+            "legacy": false,
+            "edited": false,
+            "metadata": {
+              "module": "_lfx_ext.extra.review_center.risk_scorer",
+              "code_hash": "749e125e303d",
+              "dependencies": {
+                "total_dependencies": 2,
+                "dependencies": [
+                  {
+                    "name": "lfx",
+                    "version": "1.11.6"
+                  },
+                  {
+                    "name": "review_core",
+                    "version": null
+                  }
+                ]
+              }
+            },
+            "tool_mode": false,
+            "extension": "review_center",
+            "bundle": "review_center",
+            "extension_version": "0.0.0",
+            "namespaced_id": "ext:review_center:ExplainableRiskScorer@extra",
+            "name": "ExplainableRiskScorer"
+          }
+        }
+      },
+      {
+        "id": "ApprovalTaskGateway-demo3",
+        "type": "genericNode",
+        "position": {
+          "x": 1200,
+          "y": 180
+        },
+        "data": {
+          "id": "ApprovalTaskGateway-demo3",
+          "type": "ApprovalTaskGateway",
+          "display_name": "Approval Task Gateway",
+          "description": "Create an asynchronous human approval task without blocking the Langflow run.",
+          "node": {
+            "template": {
+              "_type": "Component",
+              "assessment": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "trace_as_input": true,
+                "override_skip": false,
+                "required": true,
+                "placeholder": "",
+                "show": true,
+                "name": "assessment",
+                "value": "",
+                "display_name": "Risk Assessment",
+                "advanced": false,
+                "api_editable": false,
+                "input_types": [
+                  "Data",
+                  "JSON"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "track_in_telemetry": false,
+                "type": "other",
+                "_input_type": "JSONInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "import hashlib\nimport os\n\nimport httpx\nfrom lfx.custom.custom_component.component import Component\nfrom lfx.io import DataInput, Output, SecretStrInput, StrInput\nfrom lfx.schema import Data\n\n\nclass ApprovalTaskGateway(Component):\n    display_name = \"Approval Task Gateway\"\n    description = \"Create an asynchronous human approval task without blocking the Langflow run.\"\n    icon = \"user-check\"\n    name = \"ApprovalTaskGateway\"\n\n    inputs = [\n        DataInput(name=\"assessment\", display_name=\"Risk Assessment\", required=True),\n        StrInput(\n            name=\"review_api_url\",\n            display_name=\"Review API URL\",\n            value=\"http://api:8000\",\n            advanced=True,\n        ),\n        SecretStrInput(\n            name=\"service_token\",\n            display_name=\"Service Token\",\n            value=\"\",\n            required=False,\n            advanced=True,\n        ),\n    ]\n    outputs = [Output(name=\"task\", display_name=\"Approval Task\", method=\"create_task\")]\n\n    def create_task(self) -> Data:\n        payload = dict(self.assessment.data)\n        assessment = payload.get(\"risk_assessment\", {})\n        case_id = str(payload.get(\"case_id\") or \"\")\n        if not case_id:\n            digest = hashlib.sha256(str(payload.get(\"sha256\", \"synthetic\")).encode()).hexdigest()[\n                :10\n            ]\n            case_id = f\"LF-{digest}\"\n        task = {\n            \"case_id\": case_id,\n            \"status\": \"pending_approval\",\n            \"risk_score\": assessment.get(\"score\", 0),\n            \"risk_level\": assessment.get(\"level\", \"low\"),\n            \"idempotency_key\": f\"{case_id}:{assessment.get('ruleset_version', 'unknown')}\",\n        }\n        endpoint = f\"{self.review_api_url.rstrip('/')}/api/integrations/langflow/tasks\"\n        headers = {\"X-Service-Token\": self.service_token or os.getenv(\"REVIEW_SERVICE_TOKEN\", \"\")}\n        try:\n            response = httpx.post(endpoint, json=task, headers=headers, timeout=10)\n            if response.status_code not in {200, 201, 409}:\n                response.raise_for_status()\n            task[\"gateway_result\"] = response.json()\n        except httpx.HTTPError as exc:\n            task[\"gateway_result\"] = {\"mode\": \"degraded\", \"error\": str(exc)}\n        self.status = f\"Approval task {task['status']} for {case_id}\"\n        return Data(data=task)\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "review_api_url": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "override_skip": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "review_api_url",
+                "value": "http://api:8000",
+                "display_name": "Review API URL",
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "track_in_telemetry": false,
+                "type": "str",
+                "_input_type": "StrInput"
+              },
+              "service_token": {
+                "load_from_db": true,
+                "override_skip": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "service_token",
+                "value": "",
+                "display_name": "Service Token",
+                "advanced": true,
+                "api_editable": false,
+                "input_types": [],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "track_in_telemetry": false,
+                "password": true,
+                "type": "str",
+                "_input_type": "SecretStrInput"
+              }
+            },
+            "description": "Create an asynchronous human approval task without blocking the Langflow run.",
+            "icon": "user-check",
+            "base_classes": [
+              "JSON"
+            ],
+            "display_name": "Approval Task Gateway",
+            "documentation": "",
+            "minimized": false,
+            "custom_fields": {},
+            "output_types": [],
+            "pinned": false,
+            "conditional_paths": [],
+            "frozen": false,
+            "outputs": [
+              {
+                "types": [
+                  "JSON"
+                ],
+                "selected": "JSON",
+                "name": "task",
+                "display_name": "Approval Task",
+                "method": "create_task",
+                "value": "__UNDEFINED__",
+                "cache": true,
+                "allows_loop": false,
+                "group_outputs": false,
+                "tool_mode": true
+              }
+            ],
+            "field_order": [
+              "assessment",
+              "review_api_url",
+              "service_token"
+            ],
+            "beta": false,
+            "legacy": false,
+            "edited": false,
+            "metadata": {
+              "module": "_lfx_ext.extra.review_center.approval_gateway",
+              "code_hash": "0a3b7cf86250",
+              "dependencies": {
+                "total_dependencies": 2,
+                "dependencies": [
+                  {
+                    "name": "httpx",
+                    "version": "0.28.1"
+                  },
+                  {
+                    "name": "lfx",
+                    "version": "1.11.6"
+                  }
+                ]
+              }
+            },
+            "tool_mode": false,
+            "extension": "review_center",
+            "bundle": "review_center",
+            "extension_version": "0.0.0",
+            "namespaced_id": "ext:review_center:ApprovalTaskGateway@extra",
+            "name": "ApprovalTaskGateway"
+          }
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "reactflow__edge-SyntheticDocumentParser-demo0{œdataTypeœ:œSyntheticDocumentParserœ,œidœ:œSyntheticDocumentParser-demo0œ,œnameœ:œdocumentœ,œoutput_typesœ:[œJSONœ]}-DeterministicPIIRedactor-demo1{œfieldNameœ:œdocumentœ,œidœ:œDeterministicPIIRedactor-demo1œ,œinputTypesœ:[œDataœ,œJSONœ],œtypeœ:œotherœ}",
+        "source": "SyntheticDocumentParser-demo0",
+        "target": "DeterministicPIIRedactor-demo1",
+        "sourceHandle": "{œdataTypeœ:œSyntheticDocumentParserœ,œidœ:œSyntheticDocumentParser-demo0œ,œnameœ:œdocumentœ,œoutput_typesœ:[œJSONœ]}",
+        "targetHandle": "{œfieldNameœ:œdocumentœ,œidœ:œDeterministicPIIRedactor-demo1œ,œinputTypesœ:[œDataœ,œJSONœ],œtypeœ:œotherœ}",
+        "data": {
+          "sourceHandle": {
+            "dataType": "SyntheticDocumentParser",
+            "id": "SyntheticDocumentParser-demo0",
+            "name": "document",
+            "output_types": [
+              "JSON"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "document",
+            "id": "DeterministicPIIRedactor-demo1",
+            "inputTypes": [
+              "Data",
+              "JSON"
+            ],
+            "type": "other"
+          }
+        },
+        "animated": false,
+        "selected": false,
+        "className": ""
+      },
+      {
+        "id": "reactflow__edge-DeterministicPIIRedactor-demo1{œdataTypeœ:œDeterministicPIIRedactorœ,œidœ:œDeterministicPIIRedactor-demo1œ,œnameœ:œredactedœ,œoutput_typesœ:[œJSONœ]}-ExplainableRiskScorer-demo2{œfieldNameœ:œdocumentœ,œidœ:œExplainableRiskScorer-demo2œ,œinputTypesœ:[œDataœ,œJSONœ],œtypeœ:œotherœ}",
+        "source": "DeterministicPIIRedactor-demo1",
+        "target": "ExplainableRiskScorer-demo2",
+        "sourceHandle": "{œdataTypeœ:œDeterministicPIIRedactorœ,œidœ:œDeterministicPIIRedactor-demo1œ,œnameœ:œredactedœ,œoutput_typesœ:[œJSONœ]}",
+        "targetHandle": "{œfieldNameœ:œdocumentœ,œidœ:œExplainableRiskScorer-demo2œ,œinputTypesœ:[œDataœ,œJSONœ],œtypeœ:œotherœ}",
+        "data": {
+          "sourceHandle": {
+            "dataType": "DeterministicPIIRedactor",
+            "id": "DeterministicPIIRedactor-demo1",
+            "name": "redacted",
+            "output_types": [
+              "JSON"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "document",
+            "id": "ExplainableRiskScorer-demo2",
+            "inputTypes": [
+              "Data",
+              "JSON"
+            ],
+            "type": "other"
+          }
+        },
+        "animated": false,
+        "selected": false,
+        "className": ""
+      },
+      {
+        "id": "reactflow__edge-ExplainableRiskScorer-demo2{œdataTypeœ:œExplainableRiskScorerœ,œidœ:œExplainableRiskScorer-demo2œ,œnameœ:œassessmentœ,œoutput_typesœ:[œJSONœ]}-ApprovalTaskGateway-demo3{œfieldNameœ:œassessmentœ,œidœ:œApprovalTaskGateway-demo3œ,œinputTypesœ:[œDataœ,œJSONœ],œtypeœ:œotherœ}",
+        "source": "ExplainableRiskScorer-demo2",
+        "target": "ApprovalTaskGateway-demo3",
+        "sourceHandle": "{œdataTypeœ:œExplainableRiskScorerœ,œidœ:œExplainableRiskScorer-demo2œ,œnameœ:œassessmentœ,œoutput_typesœ:[œJSONœ]}",
+        "targetHandle": "{œfieldNameœ:œassessmentœ,œidœ:œApprovalTaskGateway-demo3œ,œinputTypesœ:[œDataœ,œJSONœ],œtypeœ:œotherœ}",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ExplainableRiskScorer",
+            "id": "ExplainableRiskScorer-demo2",
+            "name": "assessment",
+            "output_types": [
+              "JSON"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "assessment",
+            "id": "ApprovalTaskGateway-demo3",
+            "inputTypes": [
+              "Data",
+              "JSON"
+            ],
+            "type": "other"
+          }
+        },
+        "animated": false,
+        "selected": false,
+        "className": ""
+      }
+    ],
+    "viewport": {
+      "x": 0,
+      "y": 0,
+      "zoom": 0.8
+    }
+  }
+}

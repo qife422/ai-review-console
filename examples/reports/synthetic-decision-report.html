@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>AI Review Console Report</title>
+<style>body{font-family:Arial,sans-serif;color:#161616;margin:40px;line-height:1.55}
+h1{font-size:28px}.notice{padding:12px;background:#edf5ff;border-left:4px solid #0f62fe}
+table{width:100%;border-collapse:collapse;margin-top:20px}
+th,td{padding:10px;text-align:left;border-bottom:1px solid #ddd}
+.meta{color:#525252;font-size:13px}</style></head><body>
+<p class="notice">SYNTHETIC DEMO DATA ONLY / 演示仅使用虚构数据</p>
+<h1>文档审查决策报告</h1>
+<p class="meta">案件：虚构供应服务协议<br>
+文档哈希：8c803cd4d4582f87dd2c615b9029a4a92141a4e018485d85d6b2cc424882956d<br>
+生成时间：2026-09-01T08:00:00+08:00<br>基于 Langflow / Built on Langflow</p>
+<h2>结论</h2><p>风险分数：74 / 100<br>
+风险等级：high<br>人工决定：changes_requested<br>
+决定理由：请增加责任上限，并移除共享账号条款。</p>
+<h2>风险发现</h2><table><thead><tr><th>规则</th><th>发现</th><th>等级</th><th>证据</th></tr></thead>
+<tbody><tr><td>LEGAL-002</td><td>责任上限缺失或无限责任</td><td>critical</td><td>预付款90%，供应方承担全部损失，允许共享账号。</td></tr><tr><td>FIN-003</td><td>异常预付款比例</td><td>high</td><td>预付款90%，供应方承担全部损失，允许共享账号。</td></tr><tr><td>SEC-004</td><td>允许共享账号或明文凭据</td><td>critical</td><td>预付款90%，供应方承担全部损失，允许共享账号。</td></tr></tbody></table>
+<p class="meta">本报告是虚构数据演示和辅助决策输出，不构成法律意见。</p>
+</body></html>

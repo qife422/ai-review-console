@@ -1,0 +1,272 @@
+{
+  "schema_version": 1,
+  "id": "ARC-BASELINE-001",
+  "captured_on": "2026-10-08",
+  "timezone": "America/Los_Angeles",
+  "classification": "source_inventory",
+  "project_root": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+  "scope": "Implementation files and dependency/configuration inputs; excludes caches, dist, databases, generated Flow JSON, fixtures, SBOM and prior evidence.",
+  "method": "rg --files with explicit code roots; stat -f '%z'; shasum -a 256 per selected file; generated document via apply_patch.",
+  "source_baseline_bytes": 109346,
+  "input_total_bytes": 200964,
+  "file_count": 49,
+  "excludes": [
+    ".venv",
+    "frontend/node_modules",
+    "frontend/dist",
+    "**/__pycache__",
+    "*.sqlite3",
+    "fixtures",
+    "flows/generated",
+    "compliance/sbom",
+    "demo/screenshots",
+    "docs"
+  ],
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 1118,
+      "sha256": "fe7f1f3123b5da940f26a2bbdf3e9df077d5e982979f0017dae7bcdbf2a25837"
+    },
+    {
+      "path": "api/__init__.py",
+      "bytes": 26,
+      "sha256": "97d3535037113ef89b8b1a574a5849e90240478c6f718e710360ef4e47a01900"
+    },
+    {
+      "path": "api/app/__init__.py",
+      "bytes": 60,
+      "sha256": "cb3a09d6ce053b50184ef904f34795779518c2b6d78fdf93edea4fea33dc674c"
+    },
+    {
+      "path": "api/app/database.py",
+      "bytes": 676,
+      "sha256": "79dba9d836047dcdece84a03e9847403e0ebf208bd3b9988236a91c8a1fe180d"
+    },
+    {
+      "path": "api/app/main.py",
+      "bytes": 9745,
+      "sha256": "464ac5e7b19610a3d04fce0da2b3dde02b3321bcfd89fbc570636b47fbd2c985"
+    },
+    {
+      "path": "api/app/models.py",
+      "bytes": 2612,
+      "sha256": "10c82b8d36a5fa08e7268d80bc5e955bca15fa23309902e542adb98e2d7c6754"
+    },
+    {
+      "path": "api/app/schemas.py",
+      "bytes": 1781,
+      "sha256": "d7f8afe44580e2500a375b5a851c2d88eac4d040ec8ae15c9daafa8b12d7d59f"
+    },
+    {
+      "path": "api/app/seed.py",
+      "bytes": 5945,
+      "sha256": "180861fba47ed46612c24ef20da280d43341677a8be57518b141355c587bb1d2"
+    },
+    {
+      "path": "custom_components/review_center/__init__.py",
+      "bytes": 485,
+      "sha256": "c85035b3b321c25191075739ad0bdb371c1297cd395c0b1cb181aded644e8da9"
+    },
+    {
+      "path": "custom_components/review_center/approval_gateway.py",
+      "bytes": 2328,
+      "sha256": "0a3b7cf86250c03e2f103e610247a8fa096445334aa886d626a99a31aa67cb02"
+    },
+    {
+      "path": "custom_components/review_center/document_parser.py",
+      "bytes": 1613,
+      "sha256": "361b05dd71bc66f46914fbd8ad0a85c50f92f3aab0216d6b4115277637213511"
+    },
+    {
+      "path": "custom_components/review_center/pii_redactor.py",
+      "bytes": 975,
+      "sha256": "112b623c0deb641154433d472644633183a3062cdbd30181b008f0c35474b4e9"
+    },
+    {
+      "path": "custom_components/review_center/report_exporter.py",
+      "bytes": 2928,
+      "sha256": "55e787b7c4973e53eed3ba44945ad5cc6e6a1cc1c0c2c0d93ae3363d5f2a72cf"
+    },
+    {
+      "path": "custom_components/review_center/risk_scorer.py",
+      "bytes": 872,
+      "sha256": "749e125e303d24799b721bd9a5dc70ac86bebb18daa8eefa14a9fc1c873f9039"
+    },
+    {
+      "path": "docker-compose.yml",
+      "bytes": 3328,
+      "sha256": "f8bd910e870286cf6740bc71de2c8d1be58b1d1f38e2818335cd46721c5a10bb"
+    },
+    {
+      "path": "docker/api.Dockerfile",
+      "bytes": 522,
+      "sha256": "6c62f65c6e6fc27bc648174ba427a13f2cb9c868a736b522df3793d3fd59362e"
+    },
+    {
+      "path": "docker/langflow.Dockerfile",
+      "bytes": 488,
+      "sha256": "96226a915e6f8e2a6fedd4eeba33480b68b87b8893e125d7e3705c665545b97b"
+    },
+    {
+      "path": "docker/nginx.conf",
+      "bytes": 389,
+      "sha256": "36af1855d4885c153205b1c90b4acf2bff703a651c597c8d0f697d028b997617"
+    },
+    {
+      "path": "docker/postgres-init.sql",
+      "bytes": 59,
+      "sha256": "1d264c94146f77495adac974416b946bf2ee3b107c72614c197bc84639535cc3"
+    },
+    {
+      "path": "docker/web-build.Dockerfile",
+      "bytes": 372,
+      "sha256": "bed23ee0da197232f77aca2e46c6bdfe0444af337a0e420fd98271bad5d5cc36"
+    },
+    {
+      "path": "docker/web.Dockerfile",
+      "bytes": 132,
+      "sha256": "3d0085d736cb3ebf18be3f6440a98262851e7d015cabe4c24d58eb0c66323732"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "bytes": 89629,
+      "sha256": "0481b68b23b4014f9f6bfcb326fe3f1978ab2bdcd09d958341ce46a39d3ef2ae"
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 865,
+      "sha256": "dc3d6e31ae8a7722a05a04dcca73cdf3a82786b6d43b49b2670d71e6db7750ba"
+    },
+    {
+      "path": "frontend/src/api.ts",
+      "bytes": 1136,
+      "sha256": "22c53f3c63388a2d31efe8ae9432f422ba0c7c946f9f8440add2485ec71ab569"
+    },
+    {
+      "path": "frontend/src/App.test.tsx",
+      "bytes": 1391,
+      "sha256": "0996a4d1d78818255788e82282d8eeecdd8cffda64ef427cce5cc83ca9bd623c"
+    },
+    {
+      "path": "frontend/src/App.tsx",
+      "bytes": 4376,
+      "sha256": "99c74aaead6a477db479e57380c00645b34800b6acb4387be3f9802305f12c7a"
+    },
+    {
+      "path": "frontend/src/components/CaseDetail.tsx",
+      "bytes": 7202,
+      "sha256": "73f6b89d779ef485e929d466cd673e1ba052d1d4858771bbf32c11bf82e9229f"
+    },
+    {
+      "path": "frontend/src/components/Dashboard.tsx",
+      "bytes": 4652,
+      "sha256": "c6d0a544477d8b76cf1afc50c186b50b2e769a7e7b5b8ae984a880326b226505"
+    },
+    {
+      "path": "frontend/src/components/ReviewQueue.tsx",
+      "bytes": 4372,
+      "sha256": "24056d117fe4db7ac8ac7e6f00870b93f0f33a57a96b1ca05f1a771b15f79ba6"
+    },
+    {
+      "path": "frontend/src/components/StatusTag.tsx",
+      "bytes": 904,
+      "sha256": "7cdc40085e8089561d9d0c080a9f6ccf2813566cb7c017f8a380117093fc20ab"
+    },
+    {
+      "path": "frontend/src/main.tsx",
+      "bytes": 232,
+      "sha256": "42872c139e0e3d8172630987f57903e5bbf4c29516db310579559b5d4a3f506f"
+    },
+    {
+      "path": "frontend/src/styles.scss",
+      "bytes": 9600,
+      "sha256": "244f596b6a3bdd11939ec5ff785eef2bdc3af4b9e5a03851b15a1d5c36939942"
+    },
+    {
+      "path": "frontend/src/test/setup.ts",
+      "bytes": 383,
+      "sha256": "f11e9a78d182630960b305206210935de960b7a544c2462a9fa7f40acc24b6cd"
+    },
+    {
+      "path": "frontend/src/types.ts",
+      "bytes": 1426,
+      "sha256": "1079ee1a538b45bf529b4f430a42ce204258a88fc834cb68bff083a5772ab3ec"
+    },
+    {
+      "path": "frontend/src/vite-env.d.ts",
+      "bytes": 64,
+      "sha256": "46c20e340ec486f82908f17cd18be9f037dee62e53374737d2825dcfbd207dce"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 1102,
+      "sha256": "447f44f3970b62d67c426f260f707ea019678d63c83a65c4dd2bd4f38667aa3e"
+    },
+    {
+      "path": "requirements.lock",
+      "bytes": 1989,
+      "sha256": "3e922f3cd862294cc26dc83d6376415baed2ca8536bbb95a7aa67a475934078e"
+    },
+    {
+      "path": "review_core/__init__.py",
+      "bytes": 488,
+      "sha256": "a2955c3107b5c160e84999ee8754c992bdab0f90b3ec1ab18bedc92a1814c064"
+    },
+    {
+      "path": "review_core/parsing.py",
+      "bytes": 3441,
+      "sha256": "9843522324e3e9738c24699dc3f6b94dcac606a7e9c58deead138e37b408e38a"
+    },
+    {
+      "path": "review_core/redaction.py",
+      "bytes": 2363,
+      "sha256": "149e43726d8be7dbe1931e75d3cf9d3fcabfc6d7d59a70a3c3df7bf751860218"
+    },
+    {
+      "path": "review_core/reporting.py",
+      "bytes": 4305,
+      "sha256": "ff614209a3213087570fd1a45f92e11c4ad0f317e626a04eafd87f64a9843bb2"
+    },
+    {
+      "path": "review_core/risk.py",
+      "bytes": 4655,
+      "sha256": "0917571c21e40f5a3228e1f7b8d7a5f86a968fa318bed6b3f746695a6b24a6fc"
+    },
+    {
+      "path": "scripts/bootstrap_langflow.py",
+      "bytes": 7757,
+      "sha256": "b24a573ea8e34d093ce76d7e3d03e97ad5b95546979524670f2e9bfac39ce930"
+    },
+    {
+      "path": "scripts/generate_demo_report.py",
+      "bytes": 1763,
+      "sha256": "6dc1c81886ed6cbc370cf490f90cfe9b997f9bb52e7bfed265903dd1bfe2a045"
+    },
+    {
+      "path": "scripts/generate_fixtures.py",
+      "bytes": 1553,
+      "sha256": "5255a7e07a9e0dc73b30629e76ddfa1d46a21392c7a458448077708fb1b71a83"
+    },
+    {
+      "path": "scripts/validate_langflow.py",
+      "bytes": 3046,
+      "sha256": "f8e14a852d8bc89c286e5aaaa1b3a1eedb696906338a24ceb64c7573206c3fd5"
+    },
+    {
+      "path": "tests/conftest.py",
+      "bytes": 241,
+      "sha256": "9a1513ef6eb343e85530ea316a991f8903c78594ffcfa8c229e205d231a0ec62"
+    },
+    {
+      "path": "tests/test_api.py",
+      "bytes": 2677,
+      "sha256": "264f5a85904bf0ca595b6eda6c1c2a4bea097ed04e1112fce8ae325345bb3e21"
+    },
+    {
+      "path": "tests/test_core.py",
+      "bytes": 2898,
+      "sha256": "3afa7c1104e3a8ab8d76247fa70adda39f5ace942ae7a28fb3f438d805e5e948"
+    }
+  ]
+}

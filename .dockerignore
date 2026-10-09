@@ -1,0 +1,8 @@
+.git
+.venv
+node_modules
+frontend/node_modules
+__pycache__
+.pytest_cache
+*.sqlite3
+artifacts/*

@@ -1,0 +1,7 @@
+# SYNTHETIC DEMO DOCUMENT
+
+## Northstar Example Labs
+
+负责人：林晞，邮箱 lin.xi@example.com，个人手机号 13800138001。
+本订单要求预付款90%，供应方承担全部损失，且允许使用共享账号。
+本文件完全由固定演示文本生成，不对应任何真实组织或合同。

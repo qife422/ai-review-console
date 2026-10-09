@@ -1,0 +1,162 @@
+name: ai-review-console
+
+services:
+  postgres:
+    image: postgres:16.10-trixie
+    environment:
+      POSTGRES_USER: review
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-synthetic-demo-only}
+      POSTGRES_DB: postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./docker/postgres-init.sql:/docker-entrypoint-initdb.d/01-databases.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U review -d postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    networks: [backend]
+    ports:
+      - "127.0.0.1:5433:5432"
+
+  langflow:
+    image: ai-review-console-langflow:latest
+    build:
+      context: .
+      dockerfile: docker/langflow.Dockerfile
+    environment:
+      LANGFLOW_DATABASE_URL: postgresql://review:${POSTGRES_PASSWORD:-synthetic-demo-only}@postgres:5432/langflow
+      LANGFLOW_AUTO_LOGIN: "false"
+      LANGFLOW_ENABLE_SIGNUP: "false"
+      LANGFLOW_WEBHOOK_AUTH_ENABLE: "true"
+      LANGFLOW_CORS_ORIGINS: '["http://localhost:7860"]'
+      LANGFLOW_CORS_ALLOW_CREDENTIALS: "true"
+      LANGFLOW_ALLOW_CUSTOM_COMPONENTS: "false"
+      LANGFLOW_CUSTOM_COMPONENT_ADMIN_ONLY: "true"
+      LANGFLOW_SUPERUSER: ${LANGFLOW_SUPERUSER:-review-admin}
+      LANGFLOW_SUPERUSER_PASSWORD: ${LANGFLOW_SUPERUSER_PASSWORD:-synthetic-demo-change-me}
+      LANGFLOW_SECRET_KEY: ${LANGFLOW_SECRET_KEY:-synthetic-demo-secret-change-me}
+      REVIEW_SERVICE_TOKEN: ${REVIEW_SERVICE_TOKEN:-synthetic-demo-service-token}
+      DO_NOT_TRACK: "true"
+    volumes:
+      - report-artifacts:/app/artifacts
+      - source-documents:/app/documents:ro
+      - ./review_core:/app/review_core:ro
+      - ./custom_components:/app/custom_components:ro
+    ports:
+      - "127.0.0.1:7860:7860"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:7860/health', timeout=3)"]
+      interval: 10s
+      timeout: 10s
+      start_period: 600s
+      retries: 30
+    networks: [backend]
+
+  api:
+    image: ai-review-console-api:local
+    build:
+      context: .
+      dockerfile: docker/api.Dockerfile
+    environment:
+      APP_ENV: demo
+      DEMO_MODE: "true"
+      DATABASE_URL: postgresql+psycopg://review:${POSTGRES_PASSWORD:-synthetic-demo-only}@postgres:5432/review_console
+      LANGFLOW_URL: http://langflow:7860
+      LANGFLOW_API_KEY: ${LANGFLOW_API_KEY:-synthetic-demo-api-key}
+      REVIEW_SERVICE_TOKEN: ${REVIEW_SERVICE_TOKEN:-synthetic-demo-service-token}
+      DOCUMENTS_ROOT: /app/documents
+      REPORTS_ROOT: /app/artifacts
+      LANGFLOW_FLOW_MANIFEST: /app/config/langflow-flows.json
+    volumes:
+      - source-documents:/app/documents
+      - report-artifacts:/app/artifacts:ro
+      - flow-config:/app/config:ro
+      - ./api:/app/api:ro
+      - ./scripts:/app/scripts:ro
+      - ./review_core:/app/review_core:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+      langflow:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+    networks: [backend]
+    ports:
+      - "127.0.0.1:8000:8000"
+
+  migrate:
+    image: ai-review-console-api:local
+    command: ["python", "-m", "api.app.migrations"]
+    environment:
+      DATABASE_URL: postgresql+psycopg://review:${POSTGRES_PASSWORD:-synthetic-demo-only}@postgres:5432/review_console
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks: [backend]
+
+  worker:
+    image: ai-review-console-api:local
+    command: ["python", "-m", "api.app.worker"]
+    environment:
+      DATABASE_URL: postgresql+psycopg://review:${POSTGRES_PASSWORD:-synthetic-demo-only}@postgres:5432/review_console
+      LANGFLOW_URL: http://langflow:7860
+      LANGFLOW_SUPERUSER: ${LANGFLOW_SUPERUSER:-review-admin}
+      LANGFLOW_SUPERUSER_PASSWORD: ${LANGFLOW_SUPERUSER_PASSWORD:-synthetic-demo-change-me}
+      REVIEW_SERVICE_TOKEN: ${REVIEW_SERVICE_TOKEN:-synthetic-demo-service-token}
+      REVIEW_API_URL: http://api:8000
+      DOCUMENTS_ROOT: /app/documents
+      REPORTS_ROOT: /app/artifacts
+      LANGFLOW_FLOW_MANIFEST: /app/config/langflow-flows.json
+    volumes:
+      - source-documents:/app/documents:ro
+      - report-artifacts:/app/artifacts:ro
+      - flow-config:/app/config:ro
+      - ./api:/app/api:ro
+      - ./review_core:/app/review_core:ro
+    depends_on:
+      api:
+        condition: service_healthy
+    networks: [backend]
+
+  flow-init:
+    image: ai-review-console-api:local
+    command: ["python", "scripts/bootstrap_langflow.py", "--upload", "--manifest", "/app/config/langflow-flows.json"]
+    environment:
+      LANGFLOW_URL: http://langflow:7860
+      LANGFLOW_SUPERUSER: ${LANGFLOW_SUPERUSER:-review-admin}
+      LANGFLOW_SUPERUSER_PASSWORD: ${LANGFLOW_SUPERUSER_PASSWORD:-synthetic-demo-change-me}
+    depends_on:
+      langflow:
+        condition: service_healthy
+    networks: [backend]
+    volumes:
+      - flow-config:/app/config
+
+  web:
+    build:
+      context: .
+      dockerfile: docker/web.Dockerfile
+    ports:
+      - "127.0.0.1:8080:8080"
+    depends_on:
+      api:
+        condition: service_healthy
+    networks: [backend]
+
+networks:
+  backend:
+    internal: false
+
+volumes:
+  postgres-data:
+  report-artifacts:
+  source-documents:
+  flow-config:

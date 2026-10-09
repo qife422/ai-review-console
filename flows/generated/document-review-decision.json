@@ -1,0 +1,227 @@
+{
+  "name": "Document Review Decision",
+  "description": "Export a synthetic human decision as a deterministic report.",
+  "endpoint_name": null,
+  "is_component": false,
+  "tags": [
+    "synthetic-data",
+    "document-review",
+    "built-on-langflow"
+  ],
+  "data": {
+    "nodes": [
+      {
+        "id": "DecisionReportExporter-demo0",
+        "type": "genericNode",
+        "position": {
+          "x": 120,
+          "y": 180
+        },
+        "data": {
+          "id": "DecisionReportExporter-demo0",
+          "type": "DecisionReportExporter",
+          "display_name": "Decision Report Exporter",
+          "description": "Export a synthetic, human-decided review as JSON, HTML, or PDF.",
+          "node": {
+            "template": {
+              "_type": "Component",
+              "decision": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "list": false,
+                "list_add_label": "Add More",
+                "trace_as_input": true,
+                "override_skip": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "decision",
+                "value": "",
+                "display_name": "Decision Snapshot",
+                "advanced": false,
+                "api_editable": false,
+                "input_types": [
+                  "Data",
+                  "JSON"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "track_in_telemetry": false,
+                "type": "other",
+                "_input_type": "JSONInput"
+              },
+              "code": {
+                "type": "code",
+                "required": true,
+                "placeholder": "",
+                "list": false,
+                "show": true,
+                "multiline": true,
+                "value": "from __future__ import annotations\n\nimport json\nfrom pathlib import Path\n\nfrom lfx.custom.custom_component.component import Component\nfrom lfx.io import DataInput, DropdownInput, MultilineInput, Output, StrInput\nfrom lfx.schema import Data\n\nfrom review_core.reporting import (\n    artifact_metadata,\n    build_html_report,\n    build_json_report,\n    build_pdf_report,\n)\n\n\nclass DecisionReportExporter(Component):\n    display_name = \"Decision Report Exporter\"\n    description = \"Export a synthetic, human-decided review as JSON, HTML, or PDF.\"\n    icon = \"file-down\"\n    name = \"DecisionReportExporter\"\n\n    inputs = [\n        DataInput(name=\"decision\", display_name=\"Decision Snapshot\", required=False),\n        MultilineInput(\n            name=\"decision_json\",\n            display_name=\"Decision JSON\",\n            value=(\n                '{\"case_id\":\"RC-DEMO\",\"title\":\"Synthetic review\",'\n                '\"document_hash\":\"demo\",\"risk_score\":18,\"risk_level\":\"low\",'\n                '\"decision\":\"approved\",\"decision_reason\":\"Synthetic demo approval\",'\n                '\"findings\":[]}'\n            ),\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"report_format\",\n            display_name=\"Format\",\n            options=[\"json\", \"html\", \"pdf\"],\n            value=\"pdf\",\n        ),\n        StrInput(\n            name=\"output_directory\",\n            display_name=\"Output Directory\",\n            value=\"/app/artifacts\",\n            advanced=True,\n        ),\n    ]\n    outputs = [Output(name=\"artifact\", display_name=\"Report Artifact\", method=\"export\")]\n\n    def export(self) -> Data:\n        payload = dict(self.decision.data) if self.decision else json.loads(self.decision_json)\n        if payload.get(\"decision\") not in {\"approved\", \"rejected\", \"changes_requested\"}:\n            raise ValueError(\"A recorded human decision is required before report export\")\n        case_id = str(payload.get(\"case_id\", \"synthetic-case\"))\n        if self.report_format == \"json\":\n            content = build_json_report(payload)\n        elif self.report_format == \"html\":\n            content = build_html_report(payload).encode(\"utf-8\")\n        else:\n            content = build_pdf_report(payload)\n        directory = Path(self.output_directory).resolve()\n        directory.mkdir(parents=True, exist_ok=True)\n        destination = (directory / f\"{case_id}-report.{self.report_format}\").resolve()\n        if directory not in destination.parents:\n            raise ValueError(\"Report destination escapes the configured artifact directory\")\n        destination.write_bytes(content)\n        result = {\n            \"case_id\": case_id,\n            \"format\": self.report_format,\n            \"path\": str(destination),\n            **artifact_metadata(content),\n            \"data_classification\": \"SYNTHETIC_DEMO_ONLY\",\n        }\n        self.status = json.dumps(result, ensure_ascii=False)\n        return Data(data=result)\n",
+                "fileTypes": [],
+                "file_path": "",
+                "password": false,
+                "name": "code",
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "info": "",
+                "load_from_db": false,
+                "title_case": false
+              },
+              "decision_json": {
+                "tool_mode": false,
+                "trace_as_input": true,
+                "multiline": true,
+                "ai_enabled": false,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "override_skip": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "decision_json",
+                "value": "{\"case_id\":\"RC-DEMO\",\"title\":\"Synthetic review\",\"document_hash\":\"demo\",\"risk_score\":18,\"risk_level\":\"low\",\"decision\":\"approved\",\"decision_reason\":\"Synthetic demo approval\",\"findings\":[]}",
+                "display_name": "Decision JSON",
+                "advanced": true,
+                "api_editable": false,
+                "input_types": [
+                  "Message"
+                ],
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "track_in_telemetry": false,
+                "copy_field": false,
+                "password": false,
+                "type": "str",
+                "_input_type": "MultilineInput"
+              },
+              "output_directory": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "load_from_db": false,
+                "list": false,
+                "list_add_label": "Add More",
+                "override_skip": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "output_directory",
+                "value": "/app/artifacts",
+                "display_name": "Output Directory",
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "track_in_telemetry": false,
+                "type": "str",
+                "_input_type": "StrInput"
+              },
+              "report_format": {
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "options": [
+                  "json",
+                  "html",
+                  "pdf"
+                ],
+                "options_metadata": [],
+                "combobox": false,
+                "dialog_inputs": {},
+                "toggle": false,
+                "override_skip": false,
+                "required": false,
+                "placeholder": "",
+                "show": true,
+                "name": "report_format",
+                "value": "pdf",
+                "display_name": "Format",
+                "advanced": false,
+                "api_editable": false,
+                "dynamic": false,
+                "info": "",
+                "title_case": false,
+                "track_in_telemetry": true,
+                "external_options": {},
+                "type": "str",
+                "_input_type": "DropdownInput"
+              }
+            },
+            "description": "Export a synthetic, human-decided review as JSON, HTML, or PDF.",
+            "icon": "file-down",
+            "base_classes": [
+              "JSON"
+            ],
+            "display_name": "Decision Report Exporter",
+            "documentation": "",
+            "minimized": false,
+            "custom_fields": {},
+            "output_types": [],
+            "pinned": false,
+            "conditional_paths": [],
+            "frozen": false,
+            "outputs": [
+              {
+                "types": [
+                  "JSON"
+                ],
+                "selected": "JSON",
+                "name": "artifact",
+                "display_name": "Report Artifact",
+                "method": "export",
+                "value": "__UNDEFINED__",
+                "cache": true,
+                "allows_loop": false,
+                "group_outputs": false,
+                "tool_mode": true
+              }
+            ],
+            "field_order": [
+              "decision",
+              "decision_json",
+              "report_format",
+              "output_directory"
+            ],
+            "beta": false,
+            "legacy": false,
+            "edited": false,
+            "metadata": {
+              "module": "_lfx_ext.extra.review_center.report_exporter",
+              "code_hash": "55e787b7c497",
+              "dependencies": {
+                "total_dependencies": 2,
+                "dependencies": [
+                  {
+                    "name": "lfx",
+                    "version": "1.11.6"
+                  },
+                  {
+                    "name": "review_core",
+                    "version": null
+                  }
+                ]
+              }
+            },
+            "tool_mode": false,
+            "extension": "review_center",
+            "bundle": "review_center",
+            "extension_version": "0.0.0",
+            "namespaced_id": "ext:review_center:DecisionReportExporter@extra",
+            "name": "DecisionReportExporter"
+          }
+        }
+      }
+    ],
+    "edges": [],
+    "viewport": {
+      "x": 0,
+      "y": 0,
+      "zoom": 0.8
+    }
+  }
+}
