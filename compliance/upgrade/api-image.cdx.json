@@ -1,0 +1,2981 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "serialNumber": "urn:uuid:52572d09-dbd7-4737-b002-50ea4422f8a1",
+  "metadata": {
+    "timestamp": "2026-10-09T06:07:47.253745+00:00",
+    "tools": [
+      {
+        "vendor": "AI Review Console",
+        "name": "scan_release.py",
+        "version": "1"
+      }
+    ],
+    "component": {
+      "type": "container",
+      "name": "api",
+      "version": "sha256:4e807fd845c49d138849f25a1e3521d41ec4a9daa80c3af23c1ea9bdbbf2f29b",
+      "properties": [
+        {
+          "name": "arc:image:id",
+          "value": "sha256:4e807fd845c49d138849f25a1e3521d41ec4a9daa80c3af23c1ea9bdbbf2f29b"
+        },
+        {
+          "name": "arc:image:platform",
+          "value": "linux/arm64"
+        },
+        {
+          "name": "arc:inventory:scope",
+          "value": "installed package-manager metadata, not full filesystem"
+        },
+        {
+          "name": "arc:os-release",
+          "value": "{\"BUG_REPORT_URL\": \"https://bugs.debian.org/\", \"HOME_URL\": \"https://www.debian.org/\", \"ID\": \"debian\", \"NAME\": \"Debian GNU/Linux\", \"PRETTY_NAME\": \"Debian GNU/Linux 12 (bookworm)\", \"SUPPORT_URL\": \"https://www.debian.org/support\", \"VERSION\": \"12 (bookworm)\", \"VERSION_CODENAME\": \"bookworm\", \"VERSION_ID\": \"12\"}"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "adduser",
+      "version": "3.134",
+      "bom-ref": "pkg:deb/debian/adduser@3.134?arch=all&distro=debian-12",
+      "purl": "pkg:deb/debian/adduser@3.134?arch=all&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2+\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "apt",
+      "version": "2.6.1",
+      "bom-ref": "pkg:deb/debian/apt@2.6.1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/apt@2.6.1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"Expat\", \"GPL-2\", \"GPL-2+\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "base-files",
+      "version": "12.4+deb12u12",
+      "bom-ref": "pkg:deb/debian/base-files@12.4%2Bdeb12u12?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/base-files@12.4%2Bdeb12u12?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "base-passwd",
+      "version": "3.6.1",
+      "bom-ref": "pkg:deb/debian/base-passwd@3.6.1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/base-passwd@3.6.1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "bash",
+      "version": "5.2.15-2+b9",
+      "bom-ref": "pkg:deb/debian/bash@5.2.15-2%2Bb9?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/bash@5.2.15-2%2Bb9?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-4-clause-UC\", \"BSD-4-clause-UC and MIT-like\", \"GFDL-NIV-1.3\", \"GPL-2+\", \"GPL-3+\", \"GPL-3+ with Bison exception\", \"Latex2e\", \"MIT-like\", \"permissive\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "bsdutils",
+      "version": "1:2.38.1-5+deb12u3",
+      "bom-ref": "pkg:deb/debian/bsdutils@1%3A2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/bsdutils@1%3A2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"BSD-4-clause\", \"BSLA\", \"GPL-2\", \"GPL-2+\", \"GPL-3+\", \"LGPL\", \"LGPL-2+\", \"LGPL-2.1+\", \"LGPL-3+\", \"MIT\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ca-certificates",
+      "version": "20230311+deb12u1",
+      "bom-ref": "pkg:deb/debian/ca-certificates@20230311%2Bdeb12u1?arch=all&distro=debian-12",
+      "purl": "pkg:deb/debian/ca-certificates@20230311%2Bdeb12u1?arch=all&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2+\", \"MPL-2.0\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "coreutils",
+      "version": "9.1-1",
+      "bom-ref": "pkg:deb/debian/coreutils@9.1-1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/coreutils@9.1-1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-4-clause-UC\", \"FSFULLR\", \"GFDL-NIV-1.3\", \"GPL-3+\", \"GPL-3+ and BSD-4-clause-UC\", \"GPL-3+ and ISC\", \"ISC\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "dash",
+      "version": "0.5.12-2",
+      "bom-ref": "pkg:deb/debian/dash@0.5.12-2?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/dash@0.5.12-2?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause\", \"BSD-3-clause\", \"GPL-2+\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "debconf",
+      "version": "1.5.82",
+      "bom-ref": "pkg:deb/debian/debconf@1.5.82?arch=all&distro=debian-12",
+      "purl": "pkg:deb/debian/debconf@1.5.82?arch=all&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-2-clause\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "debian-archive-keyring",
+      "version": "2023.3+deb12u2",
+      "bom-ref": "pkg:deb/debian/debian-archive-keyring@2023.3%2Bdeb12u2?arch=all&distro=debian-12",
+      "purl": "pkg:deb/debian/debian-archive-keyring@2023.3%2Bdeb12u2?arch=all&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "debianutils",
+      "version": "5.7-0.5~deb12u1",
+      "bom-ref": "pkg:deb/debian/debianutils@5.7-0.5~deb12u1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/debianutils@5.7-0.5~deb12u1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2+\", \"SMAIL-GPL\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "diffutils",
+      "version": "1:3.8-4",
+      "bom-ref": "pkg:deb/debian/diffutils@1%3A3.8-4?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/diffutils@1%3A3.8-4?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"FSFAP\", \"FSFULLR\", \"GFDL-NIV-1.3\", \"GPL-2+\", \"GPL-3+\", \"GPL-3+ and FSFULLR\", \"GPL-3+ with autoconf exception\", \"GPL-3+ with texinfo exception\", \"LGPL-2.0+\", \"LGPL-2.1+\", \"LGPL-3.0+\", \"LGPL-3.0+ or GPL-2+\", \"X11\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "dpkg",
+      "version": "1.21.22",
+      "bom-ref": "pkg:deb/debian/dpkg@1.21.22?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/dpkg@1.21.22?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-2-clause\", \"GPL-2\", \"GPL-2+\", \"public-domain-s-s-d\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "e2fsprogs",
+      "version": "1.47.0-2+b2",
+      "bom-ref": "pkg:deb/debian/e2fsprogs@1.47.0-2%2Bb2?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/e2fsprogs@1.47.0-2%2Bb2?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Apache-2\", \"BSD-3-Clause\", \"GPL or MIT-US-export\", \"GPL-2\", \"GPL-2+ with Texinfo exception\", \"ISC\", \"Kazlib\", \"LGPL-2\", \"Latex2e\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "findutils",
+      "version": "4.9.0-4",
+      "bom-ref": "pkg:deb/debian/findutils@4.9.0-4?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/findutils@4.9.0-4?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"BSD-3-clause and/or GPL-3+\", \"FSFAP\", \"FSFULLR\", \"GFDL-NIV-1.3+\", \"GPL with automake exception\", \"GPL-2+\", \"GPL-2+ with Autoconf-data exception\", \"GPL-3+\", \"GPL-3+ with Autoconf-data exception\", \"GPL-3+ with Bison-2.2 exception\", \"ISC\", \"ISC and/or LGPL-2.1+\", \"LGPL-2+\", \"LGPL-2.1+\", \"LGPL-3\", \"LGPL-3+\", \"X11\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "gcc-12-base",
+      "version": "12.2.0-14+deb12u1",
+      "bom-ref": "pkg:deb/debian/gcc-12-base@12.2.0-14%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/gcc-12-base@12.2.0-14%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "gpgv",
+      "version": "2.2.40-1.1+deb12u1",
+      "bom-ref": "pkg:deb/debian/gpgv@2.2.40-1.1%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/gpgv@2.2.40-1.1%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"CC0-1.0\", \"Expat\", \"GPL-3+\", \"GPL-3+ or BSD-3-clause\", \"LGPL-2.1+\", \"LGPL-3+\", \"RFC-Reference\", \"TinySCHEME\", \"permissive\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "grep",
+      "version": "3.8-5",
+      "bom-ref": "pkg:deb/debian/grep@3.8-5?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/grep@3.8-5?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-3+\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "gzip",
+      "version": "1.12-1",
+      "bom-ref": "pkg:deb/debian/gzip@1.12-1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/gzip@1.12-1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"FSF-manpages\", \"GFDL-1.3+-no-invariant\", \"GPL-3+\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "hostname",
+      "version": "3.23+nmu1",
+      "bom-ref": "pkg:deb/debian/hostname@3.23%2Bnmu1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/hostname@3.23%2Bnmu1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "init-system-helpers",
+      "version": "1.65.2+deb12u1",
+      "bom-ref": "pkg:deb/debian/init-system-helpers@1.65.2%2Bdeb12u1?arch=all&distro=debian-12",
+      "purl": "pkg:deb/debian/init-system-helpers@1.65.2%2Bdeb12u1?arch=all&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"GPL-2+\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libacl1",
+      "version": "2.3.1-3",
+      "bom-ref": "pkg:deb/debian/libacl1@2.3.1-3?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libacl1@2.3.1-3?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2+\", \"LGPL-2+\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libapt-pkg6.0",
+      "version": "2.6.1",
+      "bom-ref": "pkg:deb/debian/libapt-pkg6.0@2.6.1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libapt-pkg6.0@2.6.1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"Expat\", \"GPL-2\", \"GPL-2+\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libattr1",
+      "version": "1:2.5.1-4",
+      "bom-ref": "pkg:deb/debian/libattr1@1%3A2.5.1-4?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libattr1@1%3A2.5.1-4?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2+\", \"LGPL-2+\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libaudit-common",
+      "version": "1:3.0.9-1",
+      "bom-ref": "pkg:deb/debian/libaudit-common@1%3A3.0.9-1?arch=all&distro=debian-12",
+      "purl": "pkg:deb/debian/libaudit-common@1%3A3.0.9-1?arch=all&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2\", \"LGPL-2.1\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libaudit1",
+      "version": "1:3.0.9-1",
+      "bom-ref": "pkg:deb/debian/libaudit1@1%3A3.0.9-1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libaudit1@1%3A3.0.9-1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2\", \"LGPL-2.1\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libblkid1",
+      "version": "2.38.1-5+deb12u3",
+      "bom-ref": "pkg:deb/debian/libblkid1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libblkid1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"BSD-4-clause\", \"BSLA\", \"GPL-2\", \"GPL-2+\", \"GPL-3+\", \"LGPL\", \"LGPL-2+\", \"LGPL-2.1+\", \"LGPL-3+\", \"MIT\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libbz2-1.0",
+      "version": "1.0.8-5+b1",
+      "bom-ref": "pkg:deb/debian/libbz2-1.0@1.0.8-5%2Bb1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libbz2-1.0@1.0.8-5%2Bb1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-variant\", \"GPL-2\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libc-bin",
+      "version": "2.36-9+deb12u13",
+      "bom-ref": "pkg:deb/debian/libc-bin@2.36-9%2Bdeb12u13?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libc-bin@2.36-9%2Bdeb12u13?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libc6",
+      "version": "2.36-9+deb12u13",
+      "bom-ref": "pkg:deb/debian/libc6@2.36-9%2Bdeb12u13?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libc6@2.36-9%2Bdeb12u13?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libcap-ng0",
+      "version": "0.8.3-1+b3",
+      "bom-ref": "pkg:deb/debian/libcap-ng0@0.8.3-1%2Bb3?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libcap-ng0@0.8.3-1%2Bb3?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2+\", \"GPL-3\", \"LGPL-2.1+\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libcap2",
+      "version": "1:2.66-4+deb12u2",
+      "bom-ref": "pkg:deb/debian/libcap2@1%3A2.66-4%2Bdeb12u2?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libcap2@1%3A2.66-4%2Bdeb12u2?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"BSD-3-clause or GPL-2\", \"BSD-3-clause or GPL-2+\", \"GPL-2\", \"GPL-2+\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libcom-err2",
+      "version": "1.47.0-2+b2",
+      "bom-ref": "pkg:deb/debian/libcom-err2@1.47.0-2%2Bb2?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libcom-err2@1.47.0-2%2Bb2?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Apache-2\", \"BSD-3-Clause\", \"GPL or MIT-US-export\", \"GPL-2\", \"GPL-2+ with Texinfo exception\", \"ISC\", \"Kazlib\", \"LGPL-2\", \"Latex2e\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libcrypt1",
+      "version": "1:4.4.33-2",
+      "bom-ref": "pkg:deb/debian/libcrypt1@1%3A4.4.33-2?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libcrypt1@1%3A4.4.33-2?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libdb5.3",
+      "version": "5.3.28+dfsg2-1",
+      "bom-ref": "pkg:deb/debian/libdb5.3@5.3.28%2Bdfsg2-1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libdb5.3@5.3.28%2Bdfsg2-1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Artistic or BSD-3-clause\", \"BSD-3-clause\", \"BSD-3-clause-fjord\", \"GPL\", \"GPL or Artistic\", \"GPL-3\", \"MIT-old\", \"Ms-PL\", \"Sleepycat\", \"Sleepycat and BSD-3-clause\", \"TCL-like\", \"X11\", \"zlib\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libdebconfclient0",
+      "version": "0.270",
+      "bom-ref": "pkg:deb/debian/libdebconfclient0@0.270?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libdebconfclient0@0.270?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-2-Clause\", \"BSD-2-clause\", \"GPL-2+\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libext2fs2",
+      "version": "1.47.0-2+b2",
+      "bom-ref": "pkg:deb/debian/libext2fs2@1.47.0-2%2Bb2?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libext2fs2@1.47.0-2%2Bb2?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Apache-2\", \"BSD-3-Clause\", \"GPL or MIT-US-export\", \"GPL-2\", \"GPL-2+ with Texinfo exception\", \"ISC\", \"Kazlib\", \"LGPL-2\", \"Latex2e\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libffi8",
+      "version": "3.4.4-1",
+      "bom-ref": "pkg:deb/debian/libffi8@3.4.4-1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libffi8@3.4.4-1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Expat\", \"GPL\", \"GPL-2+\", \"GPL-3+\", \"MPL-1.1 or GPL-2+ or LGPL-2.1+\", \"X11\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libgcc-s1",
+      "version": "12.2.0-14+deb12u1",
+      "bom-ref": "pkg:deb/debian/libgcc-s1@12.2.0-14%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libgcc-s1@12.2.0-14%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libgcrypt20",
+      "version": "1.10.1-3",
+      "bom-ref": "pkg:deb/debian/libgcrypt20@1.10.1-3?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libgcrypt20@1.10.1-3?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libgdbm6",
+      "version": "1.23-3",
+      "bom-ref": "pkg:deb/debian/libgdbm6@1.23-3?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libgdbm6@1.23-3?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GFDL-NIV-1.3+\", \"GPL-2+\", \"GPL-3+\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libgmp10",
+      "version": "2:6.2.1+dfsg1-1.1",
+      "bom-ref": "pkg:deb/debian/libgmp10@2%3A6.2.1%2Bdfsg1-1.1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libgmp10@2%3A6.2.1%2Bdfsg1-1.1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2+\", \"GPL-2+ or LGPL-3+\", \"GPL-3+\", \"GPL-3+ with Bison exception\", \"LGPL-3+\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libgnutls30",
+      "version": "3.7.9-2+deb12u5",
+      "bom-ref": "pkg:deb/debian/libgnutls30@3.7.9-2%2Bdeb12u5?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libgnutls30@3.7.9-2%2Bdeb12u5?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"\", \"Apache-2.0\", \"BSD-3-Clause\", \"CC0 license\", \"Expat\", \"GPLv3+\", \"LGPLv2.1+\", \"LGPLv3+_or_GPLv2+\", \"The main library is licensed under GNU Lesser\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libgpg-error0",
+      "version": "1.46-1",
+      "bom-ref": "pkg:deb/debian/libgpg-error0@1.46-1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libgpg-error0@1.46-1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"GPL-3+\", \"LGPL-2.1+\", \"LGPL-2.1+ or BSD-3-clause\", \"g10-permissive\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libgssapi-krb5-2",
+      "version": "1.20.1-2+deb12u4",
+      "bom-ref": "pkg:deb/debian/libgssapi-krb5-2@1.20.1-2%2Bdeb12u4?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libgssapi-krb5-2@1.20.1-2%2Bdeb12u4?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libhogweed6",
+      "version": "3.8.1-2",
+      "bom-ref": "pkg:deb/debian/libhogweed6@3.8.1-2?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libhogweed6@3.8.1-2?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Expat\", \"GAP\", \"GPL-2\", \"GPL-2+\", \"GPL-3+\", \"GPL-3+ with Autoconf exception\", \"LGPL-2+\", \"LGPL-3+\", \"LGPL-3+ or GPL-2+\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libidn2-0",
+      "version": "2.3.3-1+b1",
+      "bom-ref": "pkg:deb/debian/libidn2-0@2.3.3-1%2Bb1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libidn2-0@2.3.3-1%2Bb1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2+\", \"GPL-3+\", \"LGPL-3+\", \"LGPL-3+ or GPL-2+\", \"Unicode\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libk5crypto3",
+      "version": "1.20.1-2+deb12u4",
+      "bom-ref": "pkg:deb/debian/libk5crypto3@1.20.1-2%2Bdeb12u4?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libk5crypto3@1.20.1-2%2Bdeb12u4?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libkeyutils1",
+      "version": "1.6.3-2",
+      "bom-ref": "pkg:deb/debian/libkeyutils1@1.6.3-2?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libkeyutils1@1.6.3-2?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2+\", \"LGPL-2+\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libkrb5-3",
+      "version": "1.20.1-2+deb12u4",
+      "bom-ref": "pkg:deb/debian/libkrb5-3@1.20.1-2%2Bdeb12u4?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libkrb5-3@1.20.1-2%2Bdeb12u4?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libkrb5support0",
+      "version": "1.20.1-2+deb12u4",
+      "bom-ref": "pkg:deb/debian/libkrb5support0@1.20.1-2%2Bdeb12u4?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libkrb5support0@1.20.1-2%2Bdeb12u4?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "liblz4-1",
+      "version": "1.9.4-1",
+      "bom-ref": "pkg:deb/debian/liblz4-1@1.9.4-1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/liblz4-1@1.9.4-1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-2-clause\", \"GPL-2+\", \"GPL-2+ or BSD-2-clause\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "liblzma5",
+      "version": "5.4.1-1",
+      "bom-ref": "pkg:deb/debian/liblzma5@5.4.1-1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/liblzma5@5.4.1-1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"\", \"Autoconf\", \"GPL-2\", \"GPL-2+\", \"LGPL-2.1+\", \"PD\", \"PD-debian\", \"config-h\", \"noderivs\", \"none\", \"permissive-fsf\", \"permissive-nowarranty\", \"probably-PD\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libmd0",
+      "version": "1.0.4-2",
+      "bom-ref": "pkg:deb/debian/libmd0@1.0.4-2?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libmd0@1.0.4-2?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-2-clause\", \"BSD-2-clause-NetBSD\", \"BSD-3-clause\", \"BSD-3-clause-Aaron-D-Gifford\", \"Beerware\", \"ISC\", \"public-domain-md4\", \"public-domain-md5\", \"public-domain-sha1\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libmount1",
+      "version": "2.38.1-5+deb12u3",
+      "bom-ref": "pkg:deb/debian/libmount1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libmount1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"BSD-4-clause\", \"BSLA\", \"GPL-2\", \"GPL-2+\", \"GPL-3+\", \"LGPL\", \"LGPL-2+\", \"LGPL-2.1+\", \"LGPL-3+\", \"MIT\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libncursesw6",
+      "version": "6.4-4",
+      "bom-ref": "pkg:deb/debian/libncursesw6@6.4-4?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libncursesw6@6.4-4?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"MIT/X11\", \"X11\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libnettle8",
+      "version": "3.8.1-2",
+      "bom-ref": "pkg:deb/debian/libnettle8@3.8.1-2?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libnettle8@3.8.1-2?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Expat\", \"GAP\", \"GPL-2\", \"GPL-2+\", \"GPL-3+\", \"GPL-3+ with Autoconf exception\", \"LGPL-2+\", \"LGPL-3+\", \"LGPL-3+ or GPL-2+\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libnsl2",
+      "version": "1.3.0-2",
+      "bom-ref": "pkg:deb/debian/libnsl2@1.3.0-2?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libnsl2@1.3.0-2?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"GPL-2+-autoconf-exception\", \"GPL-2+-libtool-exception\", \"GPL-3+-autoconf-exception\", \"LGPL-2.1\", \"LGPL-2.1+\", \"MIT\", \"permissive-autoconf-m4\", \"permissive-autoconf-m4-no-warranty\", \"permissive-configure\", \"permissive-fsf\", \"permissive-makefile-in\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libp11-kit0",
+      "version": "0.24.1-2",
+      "bom-ref": "pkg:deb/debian/libp11-kit0@0.24.1-2?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libp11-kit0@0.24.1-2?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Apache-2.0\", \"BSD-3-Clause\", \"ISC\", \"ISC+IBM\", \"LGPL-2.1+\", \"permissive-like-automake-output\", \"same-as-rest-of-p11kit\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libpam-modules",
+      "version": "1.5.2-6+deb12u1",
+      "bom-ref": "pkg:deb/debian/libpam-modules@1.5.2-6%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libpam-modules@1.5.2-6%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause or GPL\", \"BSD-tcp_wrappers\", \"Beerware\", \"GPL-2\", \"GPL-2+\", \"GPL-3\", \"GPL-3+ with Bison exception\", \"LGPL-2+\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libpam-modules-bin",
+      "version": "1.5.2-6+deb12u1",
+      "bom-ref": "pkg:deb/debian/libpam-modules-bin@1.5.2-6%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libpam-modules-bin@1.5.2-6%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause or GPL\", \"BSD-tcp_wrappers\", \"Beerware\", \"GPL-2\", \"GPL-2+\", \"GPL-3\", \"GPL-3+ with Bison exception\", \"LGPL-2+\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libpam-runtime",
+      "version": "1.5.2-6+deb12u1",
+      "bom-ref": "pkg:deb/debian/libpam-runtime@1.5.2-6%2Bdeb12u1?arch=all&distro=debian-12",
+      "purl": "pkg:deb/debian/libpam-runtime@1.5.2-6%2Bdeb12u1?arch=all&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause or GPL\", \"BSD-tcp_wrappers\", \"Beerware\", \"GPL-2\", \"GPL-2+\", \"GPL-3\", \"GPL-3+ with Bison exception\", \"LGPL-2+\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libpam0g",
+      "version": "1.5.2-6+deb12u1",
+      "bom-ref": "pkg:deb/debian/libpam0g@1.5.2-6%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libpam0g@1.5.2-6%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause or GPL\", \"BSD-tcp_wrappers\", \"Beerware\", \"GPL-2\", \"GPL-2+\", \"GPL-3\", \"GPL-3+ with Bison exception\", \"LGPL-2+\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libpcre2-8-0",
+      "version": "10.42-1",
+      "bom-ref": "pkg:deb/debian/libpcre2-8-0@10.42-1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libpcre2-8-0@10.42-1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-2-clause\", \"BSD-3-clause\", \"BSD-3-clause-Cambridge with BINARY LIBRARY-LIKE PACKAGES exception\", \"X11\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libreadline8",
+      "version": "8.2-1.3",
+      "bom-ref": "pkg:deb/debian/libreadline8@8.2-1.3?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libreadline8@8.2-1.3?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GFDL-NIV-1.3+\", \"GPL-2+\", \"GPL-3\", \"GPL-3+\", \"ISC-no-attribution\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libseccomp2",
+      "version": "2.5.4-1+deb12u1",
+      "bom-ref": "pkg:deb/debian/libseccomp2@2.5.4-1%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libseccomp2@2.5.4-1%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"LGPL-2.1\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libselinux1",
+      "version": "3.4-1+b6",
+      "bom-ref": "pkg:deb/debian/libselinux1@3.4-1%2Bb6?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libselinux1@3.4-1%2Bb6?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libsemanage-common",
+      "version": "3.4-1",
+      "bom-ref": "pkg:deb/debian/libsemanage-common@3.4-1?arch=all&distro=debian-12",
+      "purl": "pkg:deb/debian/libsemanage-common@3.4-1?arch=all&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libsemanage2",
+      "version": "3.4-1+b5",
+      "bom-ref": "pkg:deb/debian/libsemanage2@3.4-1%2Bb5?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libsemanage2@3.4-1%2Bb5?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libsepol2",
+      "version": "3.4-2.1",
+      "bom-ref": "pkg:deb/debian/libsepol2@3.4-2.1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libsepol2@3.4-2.1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2\", \"GPL-2+\", \"LGPL-2.1+\", \"Zlib\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libsmartcols1",
+      "version": "2.38.1-5+deb12u3",
+      "bom-ref": "pkg:deb/debian/libsmartcols1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libsmartcols1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"BSD-4-clause\", \"BSLA\", \"GPL-2\", \"GPL-2+\", \"GPL-3+\", \"LGPL\", \"LGPL-2+\", \"LGPL-2.1+\", \"LGPL-3+\", \"MIT\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libsqlite3-0",
+      "version": "3.40.1-2+deb12u2",
+      "bom-ref": "pkg:deb/debian/libsqlite3-0@3.40.1-2%2Bdeb12u2?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libsqlite3-0@3.40.1-2%2Bdeb12u2?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2+\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libss2",
+      "version": "1.47.0-2+b2",
+      "bom-ref": "pkg:deb/debian/libss2@1.47.0-2%2Bb2?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libss2@1.47.0-2%2Bb2?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Apache-2\", \"BSD-3-Clause\", \"GPL or MIT-US-export\", \"GPL-2\", \"GPL-2+ with Texinfo exception\", \"ISC\", \"Kazlib\", \"LGPL-2\", \"Latex2e\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libssl3",
+      "version": "3.0.17-1~deb12u2",
+      "bom-ref": "pkg:deb/debian/libssl3@3.0.17-1~deb12u2?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libssl3@3.0.17-1~deb12u2?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Apache-2.0\", \"Artistic\", \"Artistic or GPL-1+\", \"GPL-1+\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libstdc++6",
+      "version": "12.2.0-14+deb12u1",
+      "bom-ref": "pkg:deb/debian/libstdc%2B%2B6@12.2.0-14%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libstdc%2B%2B6@12.2.0-14%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libsystemd0",
+      "version": "252.39-1~deb12u1",
+      "bom-ref": "pkg:deb/debian/libsystemd0@252.39-1~deb12u1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libsystemd0@252.39-1~deb12u1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"CC0-1.0\", \"Expat\", \"GPL-2 with Linux-syscall-note exception\", \"GPL-2+\", \"LGPL-2.1+\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libtasn1-6",
+      "version": "4.19.0-2+deb12u1",
+      "bom-ref": "pkg:deb/debian/libtasn1-6@4.19.0-2%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libtasn1-6@4.19.0-2%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libtinfo6",
+      "version": "6.4-4",
+      "bom-ref": "pkg:deb/debian/libtinfo6@6.4-4?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libtinfo6@6.4-4?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"MIT/X11\", \"X11\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libtirpc-common",
+      "version": "1.3.3+ds-1",
+      "bom-ref": "pkg:deb/debian/libtirpc-common@1.3.3%2Bds-1?arch=all&distro=debian-12",
+      "purl": "pkg:deb/debian/libtirpc-common@1.3.3%2Bds-1?arch=all&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-2-Clause\", \"BSD-3-Clause\", \"BSD-4-Clause\", \"GPL-2\", \"LGPL-2.1+\", \"PERMISSIVE\", \"__AUTO_PERMISSIVE__\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libtirpc3",
+      "version": "1.3.3+ds-1",
+      "bom-ref": "pkg:deb/debian/libtirpc3@1.3.3%2Bds-1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libtirpc3@1.3.3%2Bds-1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-2-Clause\", \"BSD-3-Clause\", \"BSD-4-Clause\", \"GPL-2\", \"LGPL-2.1+\", \"PERMISSIVE\", \"__AUTO_PERMISSIVE__\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libudev1",
+      "version": "252.39-1~deb12u1",
+      "bom-ref": "pkg:deb/debian/libudev1@252.39-1~deb12u1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libudev1@252.39-1~deb12u1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"CC0-1.0\", \"Expat\", \"GPL-2 with Linux-syscall-note exception\", \"GPL-2+\", \"LGPL-2.1+\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libunistring2",
+      "version": "1.0-2",
+      "bom-ref": "pkg:deb/debian/libunistring2@1.0-2?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libunistring2@1.0-2?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"FreeSoftware\", \"GFDL-1.2+\", \"GPL-2+\", \"GPL-2+ with distribution exception\", \"GPL-3+\", \"GPL-3+ or GFDL-1.2+\", \"LGPL-3+\", \"LGPL-3+ or GPL-2+\", \"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libuuid1",
+      "version": "2.38.1-5+deb12u3",
+      "bom-ref": "pkg:deb/debian/libuuid1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libuuid1@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"BSD-4-clause\", \"BSLA\", \"GPL-2\", \"GPL-2+\", \"GPL-3+\", \"LGPL\", \"LGPL-2+\", \"LGPL-2.1+\", \"LGPL-3+\", \"MIT\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libxxhash0",
+      "version": "0.8.1-1",
+      "bom-ref": "pkg:deb/debian/libxxhash0@0.8.1-1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libxxhash0@0.8.1-1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-2-clause\", \"GPL-2\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libzstd1",
+      "version": "1.5.4+dfsg2-5",
+      "bom-ref": "pkg:deb/debian/libzstd1@1.5.4%2Bdfsg2-5?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/libzstd1@1.5.4%2Bdfsg2-5?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"BSD-3-clause or GPL-2\", \"Expat\", \"GPL-2\", \"zlib\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "login",
+      "version": "1:4.13+dfsg1-1+deb12u1",
+      "bom-ref": "pkg:deb/debian/login@1%3A4.13%2Bdfsg1-1%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/login@1%3A4.13%2Bdfsg1-1%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"GPL-1\", \"GPL-2+\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "logsave",
+      "version": "1.47.0-2+b2",
+      "bom-ref": "pkg:deb/debian/logsave@1.47.0-2%2Bb2?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/logsave@1.47.0-2%2Bb2?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Apache-2\", \"BSD-3-Clause\", \"GPL or MIT-US-export\", \"GPL-2\", \"GPL-2+ with Texinfo exception\", \"ISC\", \"Kazlib\", \"LGPL-2\", \"Latex2e\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "mawk",
+      "version": "1.3.4.20200120-3.1",
+      "bom-ref": "pkg:deb/debian/mawk@1.3.4.20200120-3.1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/mawk@1.3.4.20200120-3.1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"CC-BY-3.0\", \"GPL-2\", \"X11\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "mount",
+      "version": "2.38.1-5+deb12u3",
+      "bom-ref": "pkg:deb/debian/mount@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/mount@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"BSD-4-clause\", \"BSLA\", \"GPL-2\", \"GPL-2+\", \"GPL-3+\", \"LGPL\", \"LGPL-2+\", \"LGPL-2.1+\", \"LGPL-3+\", \"MIT\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ncurses-base",
+      "version": "6.4-4",
+      "bom-ref": "pkg:deb/debian/ncurses-base@6.4-4?arch=all&distro=debian-12",
+      "purl": "pkg:deb/debian/ncurses-base@6.4-4?arch=all&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"MIT/X11\", \"X11\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ncurses-bin",
+      "version": "6.4-4",
+      "bom-ref": "pkg:deb/debian/ncurses-bin@6.4-4?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/ncurses-bin@6.4-4?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"MIT/X11\", \"X11\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "netbase",
+      "version": "6.4",
+      "bom-ref": "pkg:deb/debian/netbase@6.4?arch=all&distro=debian-12",
+      "purl": "pkg:deb/debian/netbase@6.4?arch=all&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "openssl",
+      "version": "3.0.17-1~deb12u2",
+      "bom-ref": "pkg:deb/debian/openssl@3.0.17-1~deb12u2?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/openssl@3.0.17-1~deb12u2?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Apache-2.0\", \"Artistic\", \"Artistic or GPL-1+\", \"GPL-1+\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "passwd",
+      "version": "1:4.13+dfsg1-1+deb12u1",
+      "bom-ref": "pkg:deb/debian/passwd@1%3A4.13%2Bdfsg1-1%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/passwd@1%3A4.13%2Bdfsg1-1%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"GPL-1\", \"GPL-2+\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "perl-base",
+      "version": "5.36.0-7+deb12u3",
+      "bom-ref": "pkg:deb/debian/perl-base@5.36.0-7%2Bdeb12u3?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/perl-base@5.36.0-7%2Bdeb12u3?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Artistic\", \"Artistic or GPL-1+ or Artistic-dist\", \"Artistic-2\", \"Artistic-dist\", \"BSD-3-clause\", \"BSD-3-clause-GENERIC\", \"BSD-3-clause-with-weird-numbering\", \"BSD-4-clause-POWERDOG\", \"BZIP\", \"CC0-1.0\", \"DONT-CHANGE-THE-GPL\", \"Expat\", \"Expat or GPL-1+ or Artistic\", \"GPL-1+\", \"GPL-1+ or Artistic\", \"GPL-1+ or Artistic or Artistic-dist\", \"GPL-1+ or Artistic, and BSD-3-clause-GENERIC\", \"GPL-1+ or Artistic, and BSD-4-clause-POWERDOG\", \"GPL-1+ or Artistic, and Expat\", \"GPL-1+ or Artistic, and Unicode\", \"GPL-2+\", \"GPL-2+ or Artistic\", \"GPL-3+-WITH-BISON-EXCEPTION\", \"HSIEH-BSD\", \"HSIEH-DERIVATIVE\", \"LGPL-2.1\", \"REGCOMP\", \"REGCOMP, and GPL-1+ or Artistic\", \"RRA-KEEP-THIS-NOTICE\", \"SDBM-PUBLIC-DOMAIN\", \"TEXT-TABS\", \"Unicode\", \"ZLIB\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "readline-common",
+      "version": "8.2-1.3",
+      "bom-ref": "pkg:deb/debian/readline-common@8.2-1.3?arch=all&distro=debian-12",
+      "purl": "pkg:deb/debian/readline-common@8.2-1.3?arch=all&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GFDL-NIV-1.3+\", \"GPL-2+\", \"GPL-3\", \"GPL-3+\", \"ISC-no-attribution\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "sed",
+      "version": "4.9-1",
+      "bom-ref": "pkg:deb/debian/sed@4.9-1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/sed@4.9-1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-4-clause-UC\", \"BSL-1\", \"GFDL-NIV-1.3+\", \"GPL-3+\", \"GPL-3+ and ISC\", \"ISC\", \"X11\", \"pcre\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "sysvinit-utils",
+      "version": "3.06-4",
+      "bom-ref": "pkg:deb/debian/sysvinit-utils@3.06-4?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/sysvinit-utils@3.06-4?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2.0\", \"GPL-2.0+\", \"GPL-3.0\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tar",
+      "version": "1.34+dfsg-1.2+deb12u1",
+      "bom-ref": "pkg:deb/debian/tar@1.34%2Bdfsg-1.2%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/tar@1.34%2Bdfsg-1.2%2Bdeb12u1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2+\", \"GPL-3+\", \"GPL-3+ with Bison exception\", \"LGPL-3+\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tzdata",
+      "version": "2025b-0+deb12u2",
+      "bom-ref": "pkg:deb/debian/tzdata@2025b-0%2Bdeb12u2?arch=all&distro=debian-12",
+      "purl": "pkg:deb/debian/tzdata@2025b-0%2Bdeb12u2?arch=all&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "usr-is-merged",
+      "version": "37~deb12u1",
+      "bom-ref": "pkg:deb/debian/usr-is-merged@37~deb12u1?arch=all&distro=debian-12",
+      "purl": "pkg:deb/debian/usr-is-merged@37~deb12u1?arch=all&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2+\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "util-linux",
+      "version": "2.38.1-5+deb12u3",
+      "bom-ref": "pkg:deb/debian/util-linux@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/util-linux@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"BSD-4-clause\", \"BSLA\", \"GPL-2\", \"GPL-2+\", \"GPL-3+\", \"LGPL\", \"LGPL-2+\", \"LGPL-2.1+\", \"LGPL-3+\", \"MIT\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "util-linux-extra",
+      "version": "2.38.1-5+deb12u3",
+      "bom-ref": "pkg:deb/debian/util-linux-extra@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/util-linux-extra@2.38.1-5%2Bdeb12u3?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-clause\", \"BSD-4-clause\", \"BSLA\", \"GPL-2\", \"GPL-2+\", \"GPL-3+\", \"LGPL\", \"LGPL-2+\", \"LGPL-2.1+\", \"LGPL-3+\", \"MIT\", \"public-domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "zlib1g",
+      "version": "1:1.2.13.dfsg-1",
+      "bom-ref": "pkg:deb/debian/zlib1g@1%3A1.2.13.dfsg-1?arch=arm64&distro=debian-12",
+      "purl": "pkg:deb/debian/zlib1g@1%3A1.2.13.dfsg-1?arch=arm64&distro=debian-12",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "deb"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/usr/share/doc/<binary-package>/copyright License fields"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Zlib\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pip",
+      "version": "25.0.1",
+      "bom-ref": "pkg:pypi/pip@25.0.1",
+      "purl": "pkg:pypi/pip@25.0.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\", \"License :: OSI Approved :: MIT License\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ai-review-console",
+      "version": "0.2.0",
+      "bom-ref": "pkg:pypi/ai-review-console@0.2.0",
+      "purl": "pkg:pypi/ai-review-console@0.2.0",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Apache-2.0\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "websockets",
+      "version": "17.1",
+      "bom-ref": "pkg:pypi/websockets@17.1",
+      "purl": "pkg:pypi/websockets@17.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "httpx",
+      "version": "0.28.1",
+      "bom-ref": "pkg:pypi/httpx@0.28.1",
+      "purl": "pkg:pypi/httpx@0.28.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause\", \"License :: OSI Approved :: BSD License\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "bom-ref": "pkg:pypi/typing-inspection@0.4.4",
+      "purl": "pkg:pypi/typing-inspection@0.4.4",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "charset-normalizer",
+      "version": "3.5.1",
+      "bom-ref": "pkg:pypi/charset-normalizer@3.5.1",
+      "purl": "pkg:pypi/charset-normalizer@3.5.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "bom-ref": "pkg:pypi/typing-extensions@4.16.0",
+      "purl": "pkg:pypi/typing-extensions@4.16.0",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"PSF-2.0\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "bom-ref": "pkg:pypi/annotated-types@0.8.0",
+      "purl": "pkg:pypi/annotated-types@0.8.0",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\", \"License :: OSI Approved :: MIT License\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "uvloop",
+      "version": "0.22.1",
+      "bom-ref": "pkg:pypi/uvloop@0.22.1",
+      "purl": "pkg:pypi/uvloop@0.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT License\", \"License :: OSI Approved :: Apache Software License\", \"License :: OSI Approved :: MIT License\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "reportlab",
+      "version": "4.5.1",
+      "bom-ref": "pkg:pypi/reportlab@4.5.1",
+      "purl": "pkg:pypi/reportlab@4.5.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD license (see license.txt for details), Copyright (c) 2000-2025, ReportLab Inc.\", \"License :: OSI Approved :: BSD License\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pydantic",
+      "version": "2.13.5",
+      "bom-ref": "pkg:pypi/pydantic@2.13.5",
+      "purl": "pkg:pypi/pydantic@2.13.5",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "SQLAlchemy",
+      "version": "2.0.52",
+      "bom-ref": "pkg:pypi/sqlalchemy@2.0.52",
+      "purl": "pkg:pypi/sqlalchemy@2.0.52",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pydantic_core",
+      "version": "2.46.5",
+      "bom-ref": "pkg:pypi/pydantic-core@2.46.5",
+      "purl": "pkg:pypi/pydantic-core@2.46.5",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "python-multipart",
+      "version": "0.0.32",
+      "bom-ref": "pkg:pypi/python-multipart@0.0.32",
+      "purl": "pkg:pypi/python-multipart@0.0.32",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Apache-2.0\", \"License :: OSI Approved :: Apache Software License\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "bom-ref": "pkg:pypi/pyyaml@6.0.3",
+      "purl": "pkg:pypi/pyyaml@6.0.3",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\", \"License :: OSI Approved :: MIT License\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "certifi",
+      "version": "2026.7.22",
+      "bom-ref": "pkg:pypi/certifi@2026.7.22",
+      "purl": "pkg:pypi/certifi@2026.7.22",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MPL-2.0\", \"License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "watchfiles",
+      "version": "1.2.0",
+      "bom-ref": "pkg:pypi/watchfiles@1.2.0",
+      "purl": "pkg:pypi/watchfiles@1.2.0",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\", \"License :: OSI Approved :: MIT License\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pypdf",
+      "version": "6.16.2",
+      "bom-ref": "pkg:pypi/pypdf@6.16.2",
+      "purl": "pkg:pypi/pypdf@6.16.2",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "psycopg",
+      "version": "3.3.5",
+      "bom-ref": "pkg:pypi/psycopg@3.3.5",
+      "purl": "pkg:pypi/psycopg@3.3.5",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"LGPL-3.0-only\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "fastapi",
+      "version": "0.141.1",
+      "bom-ref": "pkg:pypi/fastapi@0.141.1",
+      "purl": "pkg:pypi/fastapi@0.141.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "click",
+      "version": "8.5.0",
+      "bom-ref": "pkg:pypi/click@8.5.0",
+      "purl": "pkg:pypi/click@8.5.0",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "anyio",
+      "version": "4.14.2",
+      "bom-ref": "pkg:pypi/anyio@4.14.2",
+      "purl": "pkg:pypi/anyio@4.14.2",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "idna",
+      "version": "3.19",
+      "bom-ref": "pkg:pypi/idna@3.19",
+      "purl": "pkg:pypi/idna@3.19",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pillow",
+      "version": "12.3.0",
+      "bom-ref": "pkg:pypi/pillow@12.3.0",
+      "purl": "pkg:pypi/pillow@12.3.0",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT-CMU\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "h11",
+      "version": "0.16.0",
+      "bom-ref": "pkg:pypi/h11@0.16.0",
+      "purl": "pkg:pypi/h11@0.16.0",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\", \"License :: OSI Approved :: MIT License\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "httpcore",
+      "version": "1.0.9",
+      "bom-ref": "pkg:pypi/httpcore@1.0.9",
+      "purl": "pkg:pypi/httpcore@1.0.9",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause\", \"License :: OSI Approved :: BSD License\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "psycopg-binary",
+      "version": "3.3.5",
+      "bom-ref": "pkg:pypi/psycopg-binary@3.3.5",
+      "purl": "pkg:pypi/psycopg-binary@3.3.5",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"LGPL-3.0-only\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "starlette",
+      "version": "1.6.0",
+      "bom-ref": "pkg:pypi/starlette@1.6.0",
+      "purl": "pkg:pypi/starlette@1.6.0",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "python-docx",
+      "version": "1.2.0",
+      "bom-ref": "pkg:pypi/python-docx@1.2.0",
+      "purl": "pkg:pypi/python-docx@1.2.0",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\", \"License :: OSI Approved :: MIT License\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lxml",
+      "version": "6.1.2",
+      "bom-ref": "pkg:pypi/lxml@6.1.2",
+      "purl": "pkg:pypi/lxml@6.1.2",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "uvicorn",
+      "version": "0.52.4",
+      "bom-ref": "pkg:pypi/uvicorn@0.52.4",
+      "purl": "pkg:pypi/uvicorn@0.52.4",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "httptools",
+      "version": "0.8.0",
+      "bom-ref": "pkg:pypi/httptools@0.8.0",
+      "purl": "pkg:pypi/httptools@0.8.0",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "python-dotenv",
+      "version": "1.2.3",
+      "bom-ref": "pkg:pypi/python-dotenv@1.2.3",
+      "purl": "pkg:pypi/python-dotenv@1.2.3",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "greenlet",
+      "version": "3.5.5",
+      "bom-ref": "pkg:pypi/greenlet@3.5.5",
+      "purl": "pkg:pypi/greenlet@3.5.5",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT AND PSF-2.0\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "bom-ref": "pkg:pypi/annotated-doc@0.0.5",
+      "purl": "pkg:pypi/annotated-doc@0.0.5",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "pypi"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "installed METADATA of exact name/version"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    }
+  ]
+}

@@ -9,7 +9,7 @@ import uuid
 from datetime import UTC, datetime, timedelta
 from typing import Any
 
-from sqlalchemy import select, update
+from sqlalchemy import func, select, text, update
 from sqlalchemy.orm import Session
 
 from .langflow_client import flow_configuration
@@ -37,6 +37,11 @@ RETRYABLE_ERRORS = {
     "worker_interrupted",
     "report_partial",
     "report_file_missing",
+    "workflow_timeout",
+    "langflow_run_lost",
+    "result_not_persisted",
+    "report_output_missing",
+    "report_generation_failed",
 }
 INPUT_ERRORS = {
     "unsupported_type",
@@ -100,6 +105,22 @@ def audit(
     return record
 
 
+def ensure_queue_capacity(session: Session) -> None:
+    """Reserve through one transaction lock for every business job producer."""
+    if session.bind.dialect.name == "postgresql":
+        session.execute(text("SELECT pg_advisory_xact_lock(268102026)"))
+    states = {"queued", "retry_wait", "running"}
+    persisted = (
+        session.scalar(
+            select(func.count()).select_from(WorkflowJob).where(WorkflowJob.state.in_(states))
+        )
+        or 0
+    )
+    pending = sum(isinstance(item, WorkflowJob) and item.state in states for item in session.new)
+    if persisted + pending >= 50:
+        raise WorkflowError("queue_capacity_exceeded", "The local queue is at capacity", 429, True)
+
+
 def create_job(
     session: Session,
     *,
@@ -111,6 +132,7 @@ def create_job(
     decision_id: str | None = None,
     retry_generation: int = 0,
 ) -> WorkflowJob:
+    ensure_queue_capacity(session)
     config = flow_configuration(kind)
     fixed = {
         **payload,
@@ -168,7 +190,7 @@ def job_out(job: WorkflowJob) -> dict[str, Any]:
         "error_code": job.error_code,
         "error_detail": job.error_detail,
         "retryable": job.state == "failed"
-        and job.error_code not in INPUT_ERRORS
+        and job.error_code in RETRYABLE_ERRORS
         and job.retry_generation < 3,
         "langflow_job_id": job.langflow_job_id,
         "flow_id": job.flow_id,
@@ -545,7 +567,9 @@ def persist_intake(session: Session, payload: IntakeResult, request_id: str) -> 
 
 def persist_reports(session: Session, payload: ReportResult, request_id: str) -> dict[str, Any]:
     job = validate_attempt(session, payload, "report")
-    decision = session.get(Decision, payload.decision_id)
+    decision = session.scalar(
+        select(Decision).where(Decision.id == payload.decision_id).with_for_update()
+    )
     if (
         decision is None
         or decision.id != job.decision_id
@@ -554,6 +578,23 @@ def persist_reports(session: Session, payload: ReportResult, request_id: str) ->
         raise WorkflowError("report_snapshot_conflict", "Report does not match the saved decision")
     fixed = json.loads(job.payload_json)
     expected_formats = set(fixed["formats"])
+    artifacts = session.scalars(
+        select(ReportArtifact)
+        .where(ReportArtifact.snapshot_hash == decision.snapshot_hash)
+        .with_for_update()
+    ).all()
+    if any(
+        artifact.format in expected_formats
+        and artifact.state != "ready"
+        and artifact.generation_job_id != job.id
+        for artifact in artifacts
+    ):
+        raise WorkflowError(
+            "report_generation_conflict",
+            "An older generation cannot change the active report job",
+        )
+    if job.state not in {"running", "retry_wait", "succeeded"}:
+        raise WorkflowError("report_job_inactive", "A closed report job cannot publish results")
     if len({item.format for item in payload.artifacts}) != len(payload.artifacts):
         raise WorkflowError("report_formats_invalid", "Duplicate report formats", 422)
     for item in payload.artifacts:
@@ -617,16 +658,13 @@ def persist_reports(session: Session, payload: ReportResult, request_id: str) ->
             request_id=request_id,
             dedupe_key=f"report:{decision.snapshot_hash}:{item.format}",
         )
-    artifacts = session.scalars(
-        select(ReportArtifact).where(ReportArtifact.snapshot_hash == decision.snapshot_hash)
-    ).all()
     ready = {item.format for item in artifacts if item.state == "ready"}
     missing = set(FORMATS) - ready
     errors = {
         item.get("format"): item.get("code", "report_generation_failed") for item in payload.errors
     }
     for artifact in artifacts:
-        if artifact.format in missing:
+        if artifact.format in missing and artifact.format in expected_formats:
             artifact.state, artifact.error_code = (
                 "failed",
                 errors.get(artifact.format, "report_format_missing"),

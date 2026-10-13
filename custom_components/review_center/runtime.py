@@ -2,14 +2,23 @@
 
 from __future__ import annotations
 
+import base64
+import binascii
 import json
 from pathlib import Path
 from typing import Any
+
+RUNTIME_PREFIX = "arc-runtime-v1:"
 
 
 def execution_context(value: str) -> dict[str, Any]:
     if not value or not value.strip():
         raise ValueError("runtime_input_missing: an explicit per-run input is required")
+    if value.startswith(RUNTIME_PREFIX):
+        try:
+            value = base64.b64decode(value[len(RUNTIME_PREFIX) :], validate=True).decode("utf-8")
+        except (binascii.Error, UnicodeDecodeError) as exc:
+            raise ValueError("runtime_input_invalid: invalid canonical JSON transport") from exc
     context = json.loads(value)
     if not isinstance(context, dict):
         raise ValueError("runtime_input_invalid: expected an object")

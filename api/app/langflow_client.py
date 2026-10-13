@@ -6,10 +6,12 @@ runtime_json field is changed; no business execution PATCHes the stored Flow.
 
 from __future__ import annotations
 
+import base64
 import copy
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 from typing import Any
 
@@ -20,6 +22,7 @@ RUNTIME_NODES = {
     "intake": "SyntheticDocumentParser-review",
     "report": "DecisionReportExporter-review",
 }
+RUNTIME_PREFIX = "arc-runtime-v1:"
 
 
 def canonical_hash(payload: object) -> str:
@@ -30,6 +33,14 @@ def canonical_hash(payload: object) -> str:
 
 def graph_hash(data: dict[str, Any]) -> str:
     return canonical_hash({"nodes": data.get("nodes", []), "edges": data.get("edges", [])})
+
+
+def encode_runtime(runtime: dict[str, Any]) -> str:
+    """Keep Langflow 1.11.6's string unescaping outside the business envelope."""
+    canonical = json.dumps(
+        runtime, ensure_ascii=False, sort_keys=True, separators=(",", ":"), allow_nan=False
+    ).encode("utf-8")
+    return RUNTIME_PREFIX + base64.b64encode(canonical).decode("ascii")
 
 
 def flow_configuration(kind: str) -> dict[str, Any]:
@@ -150,9 +161,10 @@ class LangflowClient:
         field = template.get("runtime_json")
         if not isinstance(field, dict):
             raise LangflowError("flow_input_missing", "Trusted Flow has no runtime input")
-        field["value"] = json.dumps(
-            runtime, ensure_ascii=False, sort_keys=True, separators=(",", ":")
-        )
+        # 1.11.6 changes escaped \\n into literal newlines in every string input.
+        # Base64 is transport-only: identities, payload hashes and callback data
+        # are recovered byte-for-byte by the trusted component validator.
+        field["value"] = encode_runtime(runtime)
         response = self.request(
             "POST",
             f"/api/v1/build/{flow_id}/flow",
@@ -229,10 +241,16 @@ def event_error(event: dict[str, Any]) -> LangflowError | None:
     ):
         if code in text:
             return LangflowError(code, f"Document processing failed: {code}")
-    if "401" in text or "403" in text:
+    http_status = re.search(
+        r"(?:http(?: status(?: code)?)?\s*|error\s*['\"]?)([45]\d{2})\b", text, re.IGNORECASE
+    )
+    status = int(http_status.group(1)) if http_status else None
+    if status in {401, 403}:
         return LangflowError("callback_auth_failed", "Review result authentication failed")
-    if "409" in text or "422" in text:
+    if status in {409, 422}:
         return LangflowError("callback_validation_failed", "Review result was rejected")
-    if "timeout" in text.lower() or "connection" in text.lower() or "503" in text:
+    if status == 429 or (status is not None and status >= 500):
+        return LangflowError("callback_unavailable", "Review result could not be persisted", True)
+    if "timeout" in text.lower() or "connection" in text.lower():
         return LangflowError("callback_unavailable", "Review result could not be persisted", True)
     return LangflowError("langflow_component_failed", "A trusted Flow component failed")

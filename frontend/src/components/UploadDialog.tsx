@@ -55,7 +55,7 @@ export function UploadDialog({ onClose, onAccepted }: UploadDialogProps) {
   }
 
   return (
-    <Modal open modalHeading="上传虚构文档" modalLabel="本地演示" primaryButtonText={saving ? "正在提交" : "提交审查"} secondaryButtonText="取消" closeButtonLabel="关闭上传窗口" primaryButtonDisabled={saving || !file || !!fileError || !confirmed || !title.trim()} onRequestClose={() => { if (!saving) onClose(); }} onRequestSubmit={submit} preventCloseOnClickOutside hasScrollingContent>
+    <Modal open selectorPrimaryFocus="#upload-title" launcherButtonRef={launcher} modalHeading="上传虚构文档" modalLabel="本地演示" primaryButtonText={saving ? "正在提交" : "提交审查"} secondaryButtonText="取消" closeButtonLabel="关闭上传窗口" primaryButtonDisabled={saving || !file || !!fileError || !confirmed || !title.trim()} onRequestClose={() => { if (!saving) onClose(); }} onRequestSubmit={submit} preventCloseOnClickOutside hasScrollingContent>
       <div className="upload-form">
         <p className="modal-copy">支持 PDF、DOCX、TXT 和 MD，单文件 10 MiB，PDF 最多 200 页。正文须包含 <code>SYNTHETIC DEMO DOCUMENT</code>。</p>
         <div className="upload-file-field">

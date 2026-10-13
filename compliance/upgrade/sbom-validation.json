@@ -1,0 +1,113 @@
+{
+  "created_at": "2026-10-09T06:08:12.912993+00:00",
+  "revisions": [
+    {
+      "file": "node.cdx.json",
+      "before": {
+        "path": "compliance/upgrade/node.cdx.json",
+        "bytes": 197367,
+        "sha256": "ead90d679e41ef96aaa07f1fe9e7f65c49d8ac51ec2804f85e721978de312fa2"
+      },
+      "after": {
+        "path": "compliance/upgrade/node.cdx.json",
+        "bytes": 197367,
+        "sha256": "ead90d679e41ef96aaa07f1fe9e7f65c49d8ac51ec2804f85e721978de312fa2"
+      },
+      "raw_source": {
+        "path": "compliance/upgrade/verified-node-sbom.stdout",
+        "bytes": 200772,
+        "sha256": "429ac34642f15d818920e9835120c3c3aa38be2260c62a45762bee2d2108d21a"
+      },
+      "method": "dedup duplicate npm bom-ref; union dependsOn edges per ref",
+      "components_before": 237,
+      "components_after": 237,
+      "dependencies_before": 238,
+      "dependencies_after": 238
+    },
+    {
+      "file": "python-licenses.json",
+      "before": {
+        "path": "compliance/upgrade/python-licenses.json",
+        "bytes": 14151,
+        "sha256": "eebf00ea7e1a6cacf9ad65aba0e459482cf24a7b5fb72e6f53d049d60e24ad22"
+      },
+      "after": {
+        "path": "compliance/upgrade/python-licenses.json",
+        "bytes": 14151,
+        "sha256": "6ccf616fce610dc7a0a1848732d3636298d1ac427ad1698ea85cabe9ddf80657"
+      },
+      "raw_source": {
+        "path": "compliance/upgrade/verified-runtime-api-python-metadata.stdout",
+        "bytes": 28391,
+        "sha256": "57774de0e795c310cd06847dc3f0218ed39aea5986a136472cc955632566b582"
+      },
+      "method": "fill missing license using exact locked package version in final API image"
+    }
+  ],
+  "validations": [
+    {
+      "file": "api-image.cdx.json",
+      "sha256": "3f1b73255f98607499f65078909e1c0c5823a8ed1211a5f75c2166a005bb459f",
+      "schema": "CycloneDX strict 1.5",
+      "schema_valid": true,
+      "bom_refs_unique": true,
+      "errors": []
+    },
+    {
+      "file": "langflow-image.cdx.json",
+      "sha256": "e3278086288b7a1e1b0b8cddbd7c9bd80fa6f654d3ec8d67dc39e6d4f7f5ab38",
+      "schema": "CycloneDX strict 1.5",
+      "schema_valid": true,
+      "bom_refs_unique": true,
+      "errors": []
+    },
+    {
+      "file": "node.cdx.json",
+      "sha256": "ead90d679e41ef96aaa07f1fe9e7f65c49d8ac51ec2804f85e721978de312fa2",
+      "schema": "CycloneDX strict 1.5",
+      "schema_valid": true,
+      "bom_refs_unique": true,
+      "errors": []
+    },
+    {
+      "file": "python.cdx.json",
+      "sha256": "4dd05fde1947850a7f1e663719832de50a1324210e5eba253f04390a17c44a8b",
+      "schema": "CycloneDX strict 1.5",
+      "schema_valid": true,
+      "bom_refs_unique": true,
+      "errors": []
+    },
+    {
+      "file": "web-image.cdx.json",
+      "sha256": "47c2246f9a8a76a73ebd5e0ae6504f0bf0586f8f9f170f5f9cb245950b01d269",
+      "schema": "CycloneDX strict 1.5",
+      "schema_valid": true,
+      "bom_refs_unique": true,
+      "errors": []
+    },
+    {
+      "file": "api-image.spdx.json",
+      "sha256": "d27aa9e2b370d7c847a2ddab4c223f8f6764ffebc5bdcc522bfc6873322624ce",
+      "schema": "SPDX structural checks only, not full SPDX schema validation",
+      "package_ids_unique": true,
+      "document_relationships_valid": true
+    },
+    {
+      "file": "langflow-image.spdx.json",
+      "sha256": "512e8125152b720f13ccd8291b0b095981066c2bd3895238c15676fcac29e49b",
+      "schema": "SPDX structural checks only, not full SPDX schema validation",
+      "package_ids_unique": true,
+      "document_relationships_valid": true
+    },
+    {
+      "file": "web-image.spdx.json",
+      "sha256": "b7f4e77305d27077de174df98ab8ce080835a7a42f4e48ad0b9e51c82b3f146e",
+      "schema": "SPDX structural checks only, not full SPDX schema validation",
+      "package_ids_unique": true,
+      "document_relationships_valid": true
+    }
+  ],
+  "jsonschema": "4.23.0",
+  "online_vulnerability_audit": "not_executed_authorization_pending",
+  "no_additional_tool_downloads": true
+}

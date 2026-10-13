@@ -1,0 +1,992 @@
+{
+  "generated_at": "2026-10-09T06:07:51.791325+00:00",
+  "method": "metadata identifier inventory; conservative text matching",
+  "legal_conclusion": "none; unknown/restricted metadata requires distribution review",
+  "summary": {
+    "recorded": 51,
+    "unknown": 0,
+    "review_required_copyleft_or_restricted_match": 19
+  },
+  "packages": [
+    {
+      "name": "alpine-baselayout",
+      "version": "3.7.0-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "alpine-baselayout",
+      "license": {
+        "identifiers": [
+          "GPL-2.0-only"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "alpine-baselayout-data",
+      "version": "3.7.0-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "alpine-baselayout",
+      "license": {
+        "identifiers": [
+          "GPL-2.0-only"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "alpine-keys",
+      "version": "2.5-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "alpine-keys",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "alpine-release",
+      "version": "3.22.1-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "alpine-base",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "aom-libs",
+      "version": "3.12.1-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "aom",
+      "license": {
+        "identifiers": [
+          "BSD-2-Clause AND custom"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "apk-tools",
+      "version": "2.14.9-r2",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "apk-tools",
+      "license": {
+        "identifiers": [
+          "GPL-2.0-only"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "brotli-libs",
+      "version": "1.1.0-r2",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "brotli",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "busybox",
+      "version": "1.37.0-r18",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "busybox",
+      "license": {
+        "identifiers": [
+          "GPL-2.0-only"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "busybox-binsh",
+      "version": "1.37.0-r18",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "busybox",
+      "license": {
+        "identifiers": [
+          "GPL-2.0-only"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "c-ares",
+      "version": "1.34.5-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "c-ares",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "ca-certificates",
+      "version": "20250619-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "ca-certificates",
+      "license": {
+        "identifiers": [
+          "MPL-2.0 AND MIT"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "ca-certificates-bundle",
+      "version": "20250619-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "ca-certificates",
+      "license": {
+        "identifiers": [
+          "MPL-2.0 AND MIT"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "curl",
+      "version": "8.14.1-r1",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "curl",
+      "license": {
+        "identifiers": [
+          "curl"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "fontconfig",
+      "version": "2.15.0-r3",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "fontconfig",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "freetype",
+      "version": "2.13.3-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "freetype",
+      "license": {
+        "identifiers": [
+          "FTL OR GPL-2.0-or-later"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "geoip",
+      "version": "1.6.12-r6",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "geoip",
+      "license": {
+        "identifiers": [
+          "LGPL-2.1-or-later"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "gettext-envsubst",
+      "version": "0.24.1-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "gettext",
+      "license": {
+        "identifiers": [
+          "GPL-3.0-or-later AND LGPL-2.1-or-later AND MIT"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libapk2",
+      "version": "2.14.9-r2",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "apk-tools",
+      "license": {
+        "identifiers": [
+          "GPL-2.0-only"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libavif",
+      "version": "1.3.0-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libavif",
+      "license": {
+        "identifiers": [
+          "BSD-2-Clause"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libbsd",
+      "version": "0.12.2-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libbsd",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libbz2",
+      "version": "1.0.8-r6",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "bzip2",
+      "license": {
+        "identifiers": [
+          "bzip2-1.0.6"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libcrypto3",
+      "version": "3.5.1-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "openssl",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libcurl",
+      "version": "8.14.1-r1",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "curl",
+      "license": {
+        "identifiers": [
+          "curl"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libdav1d",
+      "version": "1.5.1-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "dav1d",
+      "license": {
+        "identifiers": [
+          "BSD-2-Clause"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libedit",
+      "version": "20250104.3.1-r1",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libedit",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libexpat",
+      "version": "2.7.1-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "expat",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libgcc",
+      "version": "14.2.0-r6",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "gcc",
+      "license": {
+        "identifiers": [
+          "GPL-2.0-or-later AND LGPL-2.1-or-later"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libgd",
+      "version": "2.3.3-r10",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "gd",
+      "license": {
+        "identifiers": [
+          "GD"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libice",
+      "version": "1.1.2-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libice",
+      "license": {
+        "identifiers": [
+          "X11"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libidn2",
+      "version": "2.3.7-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libidn2",
+      "license": {
+        "identifiers": [
+          "GPL-2.0-or-later OR LGPL-3.0-or-later"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libintl",
+      "version": "0.24.1-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "gettext",
+      "license": {
+        "identifiers": [
+          "LGPL-2.1-or-later"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libjpeg-turbo",
+      "version": "3.1.0-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libjpeg-turbo",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause AND IJG AND Zlib"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libmd",
+      "version": "1.1.0-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libmd",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause AND BSD-2-Clause AND ISC AND Beerware AND Public Domain"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libncursesw",
+      "version": "6.5_p20250503-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "ncurses",
+      "license": {
+        "identifiers": [
+          "X11"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libpng",
+      "version": "1.6.47-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libpng",
+      "license": {
+        "identifiers": [
+          "Libpng"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libpsl",
+      "version": "0.21.5-r3",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libpsl",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libsharpyuv",
+      "version": "1.5.0-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libwebp",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libsm",
+      "version": "1.2.5-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libsm",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libssl3",
+      "version": "3.5.1-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "openssl",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libstdc++",
+      "version": "14.2.0-r6",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "gcc",
+      "license": {
+        "identifiers": [
+          "GPL-2.0-or-later AND LGPL-2.1-or-later"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libunistring",
+      "version": "1.3-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libunistring",
+      "license": {
+        "identifiers": [
+          "GPL-2.0-or-later OR LGPL-3.0-or-later"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libuuid",
+      "version": "2.41-r9",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "util-linux",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libwebp",
+      "version": "1.5.0-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libwebp",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libx11",
+      "version": "1.8.11-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libx11",
+      "license": {
+        "identifiers": [
+          "X11"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libxau",
+      "version": "1.0.12-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libxau",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libxcb",
+      "version": "1.17.0-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libxcb",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libxdmcp",
+      "version": "1.1.5-r1",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libxdmcp",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libxext",
+      "version": "1.3.6-r2",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libxext",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libxml2",
+      "version": "2.13.8-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libxml2",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libxpm",
+      "version": "3.5.17-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libxpm",
+      "license": {
+        "identifiers": [
+          "X11"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libxslt",
+      "version": "1.1.43-r3",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libxslt",
+      "license": {
+        "identifiers": [
+          "X11"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libxt",
+      "version": "1.3.1-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libxt",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libyuv",
+      "version": "0.0.1887.20251502-r1",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "libyuv",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "musl",
+      "version": "1.2.5-r10",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "musl",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "musl-utils",
+      "version": "1.2.5-r10",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "musl",
+      "license": {
+        "identifiers": [
+          "MIT AND BSD-2-Clause AND GPL-2.0-or-later"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "ncurses-terminfo-base",
+      "version": "6.5_p20250503-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "ncurses",
+      "license": {
+        "identifiers": [
+          "X11"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "nghttp2-libs",
+      "version": "1.65.0-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "nghttp2",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "nginx",
+      "version": "1.29.1-r1",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "nginx",
+      "license": {
+        "identifiers": [
+          "2-clause BSD-like license"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "nginx-module-geoip",
+      "version": "1.29.1-r1",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "nginx-module-geoip",
+      "license": {
+        "identifiers": [
+          "2-clause BSD-like license"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "nginx-module-image-filter",
+      "version": "1.29.1-r1",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "nginx-module-image-filter",
+      "license": {
+        "identifiers": [
+          "2-clause BSD-like license"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "nginx-module-njs",
+      "version": "1.29.1.0.9.1-r1",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "nginx-module-njs",
+      "license": {
+        "identifiers": [
+          "2-clause BSD-like license"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "nginx-module-xslt",
+      "version": "1.29.1-r1",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "nginx-module-xslt",
+      "license": {
+        "identifiers": [
+          "2-clause BSD-like license"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "pcre2",
+      "version": "10.43-r1",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "pcre2",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "scanelf",
+      "version": "1.3.8-r1",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "pax-utils",
+      "license": {
+        "identifiers": [
+          "GPL-2.0-only"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "ssl_client",
+      "version": "1.37.0-r18",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "busybox",
+      "license": {
+        "identifiers": [
+          "GPL-2.0-only"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "tiff",
+      "version": "4.7.0-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "tiff",
+      "license": {
+        "identifiers": [
+          "libtiff"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "tzdata",
+      "version": "2025b-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "tzdata",
+      "license": {
+        "identifiers": [
+          "Public-Domain"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "xz-libs",
+      "version": "5.8.1-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "xz",
+      "license": {
+        "identifiers": [
+          "GPL-2.0-or-later AND 0BSD AND Public-Domain AND LGPL-2.1-or-later"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "zlib",
+      "version": "1.3.1-r2",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "zlib",
+      "license": {
+        "identifiers": [
+          "Zlib"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "zstd-libs",
+      "version": "1.5.7-r0",
+      "type": "apk",
+      "arch": "aarch64",
+      "source_name": "zstd",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause OR GPL-2.0-or-later"
+        ],
+        "source": "/lib/apk/db/installed L field"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    }
+  ]
+}

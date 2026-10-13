@@ -4,7 +4,7 @@ import hashlib
 from datetime import UTC, datetime
 
 import pytest
-from sqlalchemy import Column, ForeignKey, MetaData, Table, create_engine, inspect, select
+from sqlalchemy import Column, ForeignKey, MetaData, Table, create_engine, event, inspect, select
 from sqlalchemy.orm import Session
 
 from api.app.migrations import AUDIT_ADDITIONS, CASE_ADDITIONS, migrate, require_schema
@@ -111,6 +111,11 @@ def test_fresh_schema_requires_explicit_migration(tmp_path: object) -> None:
 @pytest.mark.parametrize("audit_fk", [False, True])
 def test_legacy_sqlite_is_protected_and_preserved(tmp_path: object, audit_fk: bool) -> None:
     target = create_engine(f"sqlite:///{tmp_path}/legacy.sqlite3")
+
+    @event.listens_for(target, "connect")
+    def enable_foreign_keys(connection: object, _: object) -> None:
+        connection.execute("PRAGMA foreign_keys=ON")
+
     legacy_database(target, audit_fk=audit_fk)
     with pytest.raises(RuntimeError, match="existing_database_protected"):
         migrate(target)
@@ -137,3 +142,31 @@ def test_legacy_sqlite_is_protected_and_preserved(tmp_path: object, audit_fk: bo
     with Session(target) as session:
         assert len(session.scalars(select(AuditEvent)).all()) == 2
         assert len(session.scalars(select(Decision)).all()) == 1
+        # A renamed legacy FK must not redirect new audit rows to the archive.
+        template = session.get(ReviewCase, "legacy-ready")
+        new_values = {
+            column.name: getattr(template, column.name) for column in ReviewCase.__table__.columns
+        }
+        new_values.update(
+            id="post-migration-case",
+            status="received",
+            current_document_version_id=None,
+            assessment_id=None,
+            risk_score=None,
+            risk_level=None,
+        )
+        session.add(ReviewCase(**new_values))
+        session.flush()
+        session.add(
+            AuditEvent(
+                case_id="post-migration-case",
+                event_type="post_migration_probe",
+                actor="synthetic-migration-validator",
+                detail="New active-case audit keeps its active-table foreign key.",
+                occurred_at=datetime.now(UTC),
+            )
+        )
+        session.commit()
+        assert session.query(AuditEvent).filter_by(event_type="post_migration_probe").count() == 1
+    with target.connect() as connection:
+        assert not connection.exec_driver_sql("PRAGMA foreign_key_check").all()

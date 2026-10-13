@@ -237,6 +237,20 @@ class Worker:
             ],
         }
 
+    def _reconcile_stopped_report(self, job: WorkflowJob, runtime: dict[str, Any]) -> bool:
+        """Register recoverable outputs once the upstream run cannot continue."""
+        if job.kind != "report":
+            return False
+        recovered = self._report_reconcile(job, runtime)
+        if recovered is None:
+            return False
+        self._post("/api/integrations/langflow/reports", recovered)
+        if self._state(job.id) == "succeeded":
+            return True
+        if recovered["errors"]:
+            raise LangflowError("report_partial", "Some report formats failed", True)
+        return False
+
     def run_job(self, job: WorkflowJob) -> None:
         try:
             self._post(
@@ -294,6 +308,8 @@ class Worker:
                 events = self.langflow.poll(job.langflow_job_id)
             except LangflowError as exc:
                 if exc.code == "langflow_not_found":
+                    if self._reconcile_stopped_report(job, runtime):
+                        return
                     raise LangflowError(
                         "langflow_run_lost", "The upstream run no longer exists", True
                     ) from exc
@@ -335,6 +351,8 @@ class Worker:
             self.langflow.cancel(job.langflow_job_id)
         except LangflowError:
             LOGGER.warning("Cancellation unavailable for job %s", job.id)
+        if self._reconcile_stopped_report(job, runtime):
+            return
         raise LangflowError(
             "workflow_timeout", "Flow exceeded its 120 second execution limit", True
         )
@@ -343,22 +361,34 @@ class Worker:
         now = datetime.now(UTC)
         retry = failure.retryable and job.attempt < 3
         with SessionLocal.begin() as session:
-            current = session.get(WorkflowJob, job.id)
-            if (
-                current is None
-                or current.state == "succeeded"
-                or current.execution_token != job.execution_token
-                or current.lease_token != job.lease_token
-            ):
+            # A successful callback can commit while a failure is being handled.
+            # The predicate is evaluated atomically after any row lock wait; an
+            # ORM read followed by a write could otherwise overwrite success.
+            changed = session.execute(
+                update(WorkflowJob)
+                .where(
+                    WorkflowJob.id == job.id,
+                    WorkflowJob.execution_token == job.execution_token,
+                    WorkflowJob.lease_token == job.lease_token,
+                    WorkflowJob.state != "succeeded",
+                )
+                .values(
+                    state="retry_wait" if retry else "failed",
+                    phase="failure_pending",
+                    error_code=failure.code,
+                    error_detail=failure.detail,
+                    next_run_at=(
+                        now + timedelta(seconds=RETRY_DELAYS[min(job.attempt - 1, 1)])
+                        if retry
+                        else now
+                    ),
+                    lease_until=None,
+                    lease_owner=None,
+                )
+                .execution_options(synchronize_session=False)
+            ).rowcount
+            if changed != 1:
                 return
-            current.state = "retry_wait" if retry else "failed"
-            current.phase = "failure_pending"
-            current.error_code, current.error_detail = failure.code, failure.detail
-            current.next_run_at = (
-                now + timedelta(seconds=RETRY_DELAYS[min(job.attempt - 1, 1)]) if retry else now
-            )
-            current.lease_until = None
-            current.lease_owner = None
         try:
             self._post(
                 f"/api/integrations/langflow/jobs/{job.id}/failure",

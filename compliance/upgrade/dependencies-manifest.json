@@ -1,0 +1,250 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "RELEASE-001",
+    "AC-19"
+  ],
+  "stage": "dependencies",
+  "created_at": "2026-10-09T05:49:04.284678+00:00",
+  "producer": "scripts/scan_release.py",
+  "temporary_root": "/private/tmp/arc-release-scan.lBO9lV",
+  "temporary_bytes": 1486333,
+  "temporary_limit_bytes": 268435456,
+  "source_inputs": [
+    {
+      "path": "requirements.lock",
+      "bytes": 1989,
+      "sha256": "3e922f3cd862294cc26dc83d6376415baed2ca8536bbb95a7aa67a475934078e"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "bytes": 89629,
+      "sha256": "0481b68b23b4014f9f6bfcb326fe3f1978ab2bdcd09d958341ce46a39d3ef2ae"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 1102,
+      "sha256": "3d193966d9d583c66b5a920e72fb1c12a1a64536a4f58c255cc9d21f0a574852"
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 865,
+      "sha256": "dc3d6e31ae8a7722a05a04dcca73cdf3a82786b6d43b49b2670d71e6db7750ba"
+    },
+    {
+      "path": "docker/api.Dockerfile",
+      "bytes": 739,
+      "sha256": "c91c064a2b614211cf1737ec0bf7e4851d57e8efaa22d4e94b35a69859cd82e0"
+    },
+    {
+      "path": "docker/langflow.Dockerfile",
+      "bytes": 560,
+      "sha256": "386af69cbc057c9ccd436544abc2e27099924202ba19a33a7d9844ec20e7dd6e"
+    },
+    {
+      "path": "docker/web.Dockerfile",
+      "bytes": 204,
+      "sha256": "4954ffd58f4c482cfd917219d44554f8491887fce4fdb1bf4cc88875a497827b"
+    },
+    {
+      "path": "docker-compose.yml",
+      "bytes": 5718,
+      "sha256": "3ed8114906db4b5a4a7e17dc2b0612f57e64ee73aac7b1b1c04bc5b46161b13c"
+    },
+    {
+      "path": "docs/UPGRADE_SPEC.md",
+      "bytes": 50489,
+      "sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753"
+    },
+    {
+      "path": "docs/spec-baseline.json",
+      "bytes": 8731,
+      "sha256": "5ad13f524e74554b9c8cb30b9809ffbbbbed8e3d7fa4ede5625bb1b7d781bf2e"
+    },
+    {
+      "path": "scripts/scan_release.py",
+      "bytes": 25747,
+      "sha256": "d1446f17da888ada4190c1f0594e8fdf29f9ce9c03014709a98dbf41b1f10185"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1397,
+      "sha256": "de363a619856afe3480aead03abfce454a51f85a2ba8b83d89d20f7c5dafb8fe"
+    }
+  ],
+  "tools": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "pip-audit": "2.10.1",
+    "cyclonedx-python-lib": "11.12.0",
+    "npm": "10.9.2",
+    "docker_scout": "1.18.1; locally probed before scanning"
+  },
+  "commands": [
+    {
+      "label": "node-sbom",
+      "command": [
+        "npm",
+        "sbom",
+        "--package-lock-only",
+        "--sbom-format=cyclonedx"
+      ],
+      "cwd": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend",
+      "started_at": "2026-10-09T05:49:03.752007+00:00",
+      "ended_at": "2026-10-09T05:49:04.176681+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "temporary_bytes_after": 1486333,
+      "stdout": "node-sbom.stdout",
+      "stderr": "node-sbom.stderr"
+    }
+  ],
+  "result": {
+    "python": {
+      "exit_code": null,
+      "components": 33,
+      "vulnerabilities": null,
+      "service": "pip-audit PyPI JSON API",
+      "database_snapshot_date": "not exposed by service"
+    },
+    "node_sbom_exit_code": 0,
+    "node_all": {
+      "exit_code": null,
+      "counts": null
+    },
+    "node_runtime": {
+      "exit_code": null,
+      "counts": null
+    },
+    "vulnerability_state": "not_scanned_external_authorization",
+    "node_service": "configured npm registry audit API",
+    "node_database_snapshot_date": "not exposed by registry"
+  },
+  "limitations": [
+    "Remote vulnerability services do not expose reproducible database snapshot dates.",
+    "Metadata SBOM is not a complete filesystem/static-binary scan.",
+    "License metadata is not legal approval; unknown/restricted licenses need review.",
+    "P0/P1 local release evidence does not establish production readiness."
+  ],
+  "files": [
+    {
+      "path": "compliance/upgrade/dependencies-summary.json",
+      "bytes": 529,
+      "sha256": "33dc6dafa83b2f11052f16498d7f0163ae8a47ce14f60f13f858e30d29f95c60"
+    },
+    {
+      "path": "compliance/upgrade/node-licenses.json",
+      "bytes": 67670,
+      "sha256": "973a1ba7a3e74fb2b526cd164fb9677447d90019b6e0e3f2952ca5bebc98b398"
+    },
+    {
+      "path": "compliance/upgrade/node-sbom.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/node-sbom.stdout",
+      "bytes": 200772,
+      "sha256": "4983cdedf93db833f76f7581e651d910faad36643c4996a0e4ef2743c0f9444e"
+    },
+    {
+      "path": "compliance/upgrade/node.cdx.json",
+      "bytes": 200772,
+      "sha256": "4983cdedf93db833f76f7581e651d910faad36643c4996a0e4ef2743c0f9444e"
+    },
+    {
+      "path": "compliance/upgrade/python-licenses.json",
+      "bytes": 13926,
+      "sha256": "7c07dc66db73b9c052c93dd01c710897b707277714416a1e04030e40309c28a3"
+    },
+    {
+      "path": "compliance/upgrade/python.cdx.json",
+      "bytes": 5007,
+      "sha256": "4dd05fde1947850a7f1e663719832de50a1324210e5eba253f04390a17c44a8b"
+    }
+  ],
+  "candidate_state": "superseded_node_input_use_node_refresh_manifest",
+  "candidate_revisions": [
+    {
+      "file": "node.cdx.json",
+      "before": {
+        "path": "compliance/upgrade/node.cdx.json",
+        "bytes": 197367,
+        "sha256": "ead90d679e41ef96aaa07f1fe9e7f65c49d8ac51ec2804f85e721978de312fa2"
+      },
+      "after": {
+        "path": "compliance/upgrade/node.cdx.json",
+        "bytes": 197367,
+        "sha256": "ead90d679e41ef96aaa07f1fe9e7f65c49d8ac51ec2804f85e721978de312fa2"
+      },
+      "raw_source": {
+        "path": "compliance/upgrade/verified-node-sbom.stdout",
+        "bytes": 200772,
+        "sha256": "429ac34642f15d818920e9835120c3c3aa38be2260c62a45762bee2d2108d21a"
+      },
+      "method": "dedup duplicate npm bom-ref; union dependsOn edges per ref",
+      "components_before": 237,
+      "components_after": 237,
+      "dependencies_before": 238,
+      "dependencies_after": 238
+    },
+    {
+      "file": "python-licenses.json",
+      "before": {
+        "path": "compliance/upgrade/python-licenses.json",
+        "bytes": 14151,
+        "sha256": "eebf00ea7e1a6cacf9ad65aba0e459482cf24a7b5fb72e6f53d049d60e24ad22"
+      },
+      "after": {
+        "path": "compliance/upgrade/python-licenses.json",
+        "bytes": 14151,
+        "sha256": "6ccf616fce610dc7a0a1848732d3636298d1ac427ad1698ea85cabe9ddf80657"
+      },
+      "raw_source": {
+        "path": "compliance/upgrade/verified-runtime-api-python-metadata.stdout",
+        "bytes": 28391,
+        "sha256": "57774de0e795c310cd06847dc3f0218ed39aea5986a136472cc955632566b582"
+      },
+      "method": "fill missing license using exact locked package version in final API image"
+    }
+  ],
+  "current_file_fingerprints": [
+    {
+      "path": "compliance/upgrade/dependencies-summary.json",
+      "bytes": 529,
+      "sha256": "33dc6dafa83b2f11052f16498d7f0163ae8a47ce14f60f13f858e30d29f95c60"
+    },
+    {
+      "path": "compliance/upgrade/node-licenses.json",
+      "bytes": 67670,
+      "sha256": "973a1ba7a3e74fb2b526cd164fb9677447d90019b6e0e3f2952ca5bebc98b398"
+    },
+    {
+      "path": "compliance/upgrade/node-sbom.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/node-sbom.stdout",
+      "bytes": 200772,
+      "sha256": "4983cdedf93db833f76f7581e651d910faad36643c4996a0e4ef2743c0f9444e"
+    },
+    {
+      "path": "compliance/upgrade/node.cdx.json",
+      "bytes": 197367,
+      "sha256": "ead90d679e41ef96aaa07f1fe9e7f65c49d8ac51ec2804f85e721978de312fa2"
+    },
+    {
+      "path": "compliance/upgrade/python-licenses.json",
+      "bytes": 14151,
+      "sha256": "6ccf616fce610dc7a0a1848732d3636298d1ac427ad1698ea85cabe9ddf80657"
+    },
+    {
+      "path": "compliance/upgrade/python.cdx.json",
+      "bytes": 5007,
+      "sha256": "4dd05fde1947850a7f1e663719832de50a1324210e5eba253f04390a17c44a8b"
+    }
+  ],
+  "current_runtime_record": "verified-runtime-manifest.json",
+  "historical_file_fingerprints_preserved": true,
+  "current_node_input_record": "node-refresh-manifest.json"
+}

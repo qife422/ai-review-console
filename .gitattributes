@@ -1,0 +1,4 @@
+# Preserve native inventory stdout bytes, including empty tab-separated fields.
+compliance/upgrade/*.stdout -whitespace linguist-generated=true
+compliance/upgrade/*.stderr -whitespace linguist-generated=true
+compliance/**/*.json linguist-generated=true

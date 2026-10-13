@@ -1,8 +1,10 @@
 @use "@carbon/styles/scss/config" with ($font-path: "@ibm/plex");
 @use "@carbon/react";
+@use "@carbon/styles/scss/theme";
+@use "@carbon/styles/scss/themes";
 
 :root {
-  color-scheme: light dark;
+  @include theme.theme(themes.$white);
   --accent: #0f62fe;
   --surface-page: #f4f4f4;
   --surface-panel: #ffffff;
@@ -14,6 +16,8 @@
 }
 
 [data-carbon-theme="g100"] {
+  @include theme.theme(themes.$g100);
+  --accent: #78a9ff;
   --surface-page: #161616;
   --surface-panel: #262626;
   --surface-subtle: #393939;

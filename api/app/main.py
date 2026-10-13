@@ -15,7 +15,7 @@ from fastapi import Depends, FastAPI, File, Form, Header, HTTPException, Query, 
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, Response
-from sqlalchemy import func, select, text
+from sqlalchemy import select, text
 from sqlalchemy.exc import IntegrityError, SQLAlchemyError
 from sqlalchemy.orm import Session
 
@@ -60,6 +60,7 @@ from .workflow import (
     WorkflowError,
     audit,
     create_job,
+    ensure_queue_capacity,
     ensure_snapshot,
     intake_payload,
     job_out,
@@ -125,12 +126,14 @@ async def request_context(request: Request, call_next: Any) -> Response:
         return error_response(
             request, "request_too_large", "Request exceeds the permitted size", 413
         )
-    if request.url.path.startswith("/api/integrations/"):
+    if request.method == "POST":
         body = bytearray()
         async for chunk in request.stream():
+            if len(body) + len(chunk) > limit:
+                return error_response(
+                    request, "request_too_large", "Request exceeds the permitted size", 413
+                )
             body.extend(chunk)
-            if len(body) > limit:
-                return error_response(request, "request_too_large", "Callback exceeds 4 MiB", 413)
         request._body = bytes(body)
     response = await call_next(request)
     response.headers["X-Request-ID"] = request.state.request_id
@@ -482,18 +485,7 @@ async def upload_case(
             "duplicate": True,
         }
     flow_configuration("intake")
-    if session.bind.dialect.name == "postgresql":
-        session.execute(text("SELECT pg_advisory_xact_lock(268102026)"))
-    queued = (
-        session.scalar(
-            select(func.count())
-            .select_from(WorkflowJob)
-            .where(WorkflowJob.state.in_(["queued", "retry_wait", "running"]))
-        )
-        or 0
-    )
-    if queued >= 50:
-        raise WorkflowError("queue_capacity_exceeded", "The local queue is at capacity", 429, True)
+    ensure_queue_capacity(session)
     duplicate = session.scalar(
         select(DocumentVersion)
         .where(DocumentVersion.source_sha256 == source_sha)
@@ -662,13 +654,25 @@ def retry_case(
         case.decision
         or case.status != "failed"
         or case.current_document_version_id != payload.document_version_id
+        or prior.document_version_id != case.current_document_version_id
         or prior.kind != "intake"
         or prior.state != "failed"
     ):
         raise WorkflowError(
             "retry_not_allowed", "Only an active failed, undecided intake can be retried"
         )
-    if prior.retry_generation >= 3:
+    history = session.scalars(
+        select(WorkflowJob).where(
+            WorkflowJob.case_id == case_id,
+            WorkflowJob.document_version_id == case.current_document_version_id,
+            WorkflowJob.kind == "intake",
+        )
+    ).all()
+    latest = max(history, key=lambda job: (job.retry_generation, job.created_at, job.id))
+    if latest.id != prior.id:
+        raise WorkflowError("retry_not_allowed", "Only the latest failed intake can be retried")
+    generation = max(job.retry_generation for job in history) + 1
+    if generation > 3:
         raise WorkflowError(
             "retry_limit_reached", "Manual retry limit reached; inspect the diagnostic"
         )
@@ -680,7 +684,7 @@ def retry_case(
         version_id=version.id,
         payload={**intake_payload(version), "retry_of": prior.id},
         dedupe_key=f"manual-intake:{case_id}:{key}",
-        retry_generation=prior.retry_generation + 1,
+        retry_generation=generation,
     )
     case.status, case.row_version = "received", case.row_version + 1
     audit(
@@ -766,7 +770,7 @@ def job_failure(
     dedupe_key = f"failed:{job.id}:{job.attempt}"
     if session.scalar(select(AuditEvent.id).where(AuditEvent.dedupe_key == dedupe_key)):
         return {"accepted": True, "state": "failed", "duplicate": True}
-    case = session.get(ReviewCase, job.case_id)
+    case = session.scalar(select(ReviewCase).where(ReviewCase.id == job.case_id).with_for_update())
     if (
         job.kind == "intake"
         and not case.decision
@@ -808,7 +812,7 @@ def job_started(
     x_service_token: Annotated[str | None, Header()] = None,
 ) -> dict[str, Any]:
     _service_auth(x_service_token)
-    job = session.get(WorkflowJob, job_id)
+    job = session.scalar(select(WorkflowJob).where(WorkflowJob.id == job_id).with_for_update())
     if job is None:
         raise WorkflowError("job_not_found", "Workflow job not found", 404)
     if (
@@ -818,7 +822,7 @@ def job_started(
         raise WorkflowError("job_attempt_conflict", "Start notification is from an older attempt")
     if job.state != "running":
         return {"accepted": True, "state": job.state}
-    case = session.get(ReviewCase, job.case_id)
+    case = session.scalar(select(ReviewCase).where(ReviewCase.id == job.case_id).with_for_update())
     if (
         job.kind == "intake"
         and case.current_document_version_id == job.document_version_id

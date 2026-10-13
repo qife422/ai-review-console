@@ -1,0 +1,1511 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "serialNumber": "urn:uuid:50a7d475-694b-445c-917a-ed164043b6b6",
+  "metadata": {
+    "timestamp": "2026-10-09T06:07:51.787801+00:00",
+    "tools": [
+      {
+        "vendor": "AI Review Console",
+        "name": "scan_release.py",
+        "version": "1"
+      }
+    ],
+    "component": {
+      "type": "container",
+      "name": "web",
+      "version": "sha256:1c74f907504a137f7348ee3bd845eda464dfeb6335952de4fcb9623a2c41e325",
+      "properties": [
+        {
+          "name": "arc:image:id",
+          "value": "sha256:1c74f907504a137f7348ee3bd845eda464dfeb6335952de4fcb9623a2c41e325"
+        },
+        {
+          "name": "arc:image:platform",
+          "value": "linux/arm64"
+        },
+        {
+          "name": "arc:inventory:scope",
+          "value": "installed package-manager metadata, not full filesystem"
+        },
+        {
+          "name": "arc:os-release",
+          "value": "{\"BUG_REPORT_URL\": \"https://gitlab.alpinelinux.org/alpine/aports/-/issues\", \"HOME_URL\": \"https://alpinelinux.org/\", \"ID\": \"alpine\", \"NAME\": \"Alpine Linux\", \"PRETTY_NAME\": \"Alpine Linux v3.22\", \"VERSION_ID\": \"3.22.1\"}"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "alpine-baselayout",
+      "version": "3.7.0-r0",
+      "bom-ref": "pkg:apk/alpine/alpine-baselayout@3.7.0-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/alpine-baselayout@3.7.0-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2.0-only\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "alpine-baselayout-data",
+      "version": "3.7.0-r0",
+      "bom-ref": "pkg:apk/alpine/alpine-baselayout-data@3.7.0-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/alpine-baselayout-data@3.7.0-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2.0-only\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "alpine-keys",
+      "version": "2.5-r0",
+      "bom-ref": "pkg:apk/alpine/alpine-keys@2.5-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/alpine-keys@2.5-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "alpine-release",
+      "version": "3.22.1-r0",
+      "bom-ref": "pkg:apk/alpine/alpine-release@3.22.1-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/alpine-release@3.22.1-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "aom-libs",
+      "version": "3.12.1-r0",
+      "bom-ref": "pkg:apk/alpine/aom-libs@3.12.1-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/aom-libs@3.12.1-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-2-Clause AND custom\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "apk-tools",
+      "version": "2.14.9-r2",
+      "bom-ref": "pkg:apk/alpine/apk-tools@2.14.9-r2?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/apk-tools@2.14.9-r2?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2.0-only\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "brotli-libs",
+      "version": "1.1.0-r2",
+      "bom-ref": "pkg:apk/alpine/brotli-libs@1.1.0-r2?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/brotli-libs@1.1.0-r2?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "busybox",
+      "version": "1.37.0-r18",
+      "bom-ref": "pkg:apk/alpine/busybox@1.37.0-r18?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/busybox@1.37.0-r18?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2.0-only\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "busybox-binsh",
+      "version": "1.37.0-r18",
+      "bom-ref": "pkg:apk/alpine/busybox-binsh@1.37.0-r18?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/busybox-binsh@1.37.0-r18?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2.0-only\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "c-ares",
+      "version": "1.34.5-r0",
+      "bom-ref": "pkg:apk/alpine/c-ares@1.34.5-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/c-ares@1.34.5-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ca-certificates",
+      "version": "20250619-r0",
+      "bom-ref": "pkg:apk/alpine/ca-certificates@20250619-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/ca-certificates@20250619-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MPL-2.0 AND MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ca-certificates-bundle",
+      "version": "20250619-r0",
+      "bom-ref": "pkg:apk/alpine/ca-certificates-bundle@20250619-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/ca-certificates-bundle@20250619-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MPL-2.0 AND MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "curl",
+      "version": "8.14.1-r1",
+      "bom-ref": "pkg:apk/alpine/curl@8.14.1-r1?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/curl@8.14.1-r1?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"curl\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "fontconfig",
+      "version": "2.15.0-r3",
+      "bom-ref": "pkg:apk/alpine/fontconfig@2.15.0-r3?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/fontconfig@2.15.0-r3?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "freetype",
+      "version": "2.13.3-r0",
+      "bom-ref": "pkg:apk/alpine/freetype@2.13.3-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/freetype@2.13.3-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"FTL OR GPL-2.0-or-later\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "geoip",
+      "version": "1.6.12-r6",
+      "bom-ref": "pkg:apk/alpine/geoip@1.6.12-r6?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/geoip@1.6.12-r6?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"LGPL-2.1-or-later\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "gettext-envsubst",
+      "version": "0.24.1-r0",
+      "bom-ref": "pkg:apk/alpine/gettext-envsubst@0.24.1-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/gettext-envsubst@0.24.1-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-3.0-or-later AND LGPL-2.1-or-later AND MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libapk2",
+      "version": "2.14.9-r2",
+      "bom-ref": "pkg:apk/alpine/libapk2@2.14.9-r2?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libapk2@2.14.9-r2?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2.0-only\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libavif",
+      "version": "1.3.0-r0",
+      "bom-ref": "pkg:apk/alpine/libavif@1.3.0-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libavif@1.3.0-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-2-Clause\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libbsd",
+      "version": "0.12.2-r0",
+      "bom-ref": "pkg:apk/alpine/libbsd@0.12.2-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libbsd@0.12.2-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libbz2",
+      "version": "1.0.8-r6",
+      "bom-ref": "pkg:apk/alpine/libbz2@1.0.8-r6?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libbz2@1.0.8-r6?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"bzip2-1.0.6\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libcrypto3",
+      "version": "3.5.1-r0",
+      "bom-ref": "pkg:apk/alpine/libcrypto3@3.5.1-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libcrypto3@3.5.1-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Apache-2.0\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libcurl",
+      "version": "8.14.1-r1",
+      "bom-ref": "pkg:apk/alpine/libcurl@8.14.1-r1?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libcurl@8.14.1-r1?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"curl\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libdav1d",
+      "version": "1.5.1-r0",
+      "bom-ref": "pkg:apk/alpine/libdav1d@1.5.1-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libdav1d@1.5.1-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-2-Clause\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libedit",
+      "version": "20250104.3.1-r1",
+      "bom-ref": "pkg:apk/alpine/libedit@20250104.3.1-r1?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libedit@20250104.3.1-r1?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libexpat",
+      "version": "2.7.1-r0",
+      "bom-ref": "pkg:apk/alpine/libexpat@2.7.1-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libexpat@2.7.1-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libgcc",
+      "version": "14.2.0-r6",
+      "bom-ref": "pkg:apk/alpine/libgcc@14.2.0-r6?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libgcc@14.2.0-r6?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2.0-or-later AND LGPL-2.1-or-later\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libgd",
+      "version": "2.3.3-r10",
+      "bom-ref": "pkg:apk/alpine/libgd@2.3.3-r10?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libgd@2.3.3-r10?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GD\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libice",
+      "version": "1.1.2-r0",
+      "bom-ref": "pkg:apk/alpine/libice@1.1.2-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libice@1.1.2-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"X11\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libidn2",
+      "version": "2.3.7-r0",
+      "bom-ref": "pkg:apk/alpine/libidn2@2.3.7-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libidn2@2.3.7-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2.0-or-later OR LGPL-3.0-or-later\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libintl",
+      "version": "0.24.1-r0",
+      "bom-ref": "pkg:apk/alpine/libintl@0.24.1-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libintl@0.24.1-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"LGPL-2.1-or-later\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libjpeg-turbo",
+      "version": "3.1.0-r0",
+      "bom-ref": "pkg:apk/alpine/libjpeg-turbo@3.1.0-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libjpeg-turbo@3.1.0-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause AND IJG AND Zlib\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libmd",
+      "version": "1.1.0-r0",
+      "bom-ref": "pkg:apk/alpine/libmd@1.1.0-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libmd@1.1.0-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause AND BSD-2-Clause AND ISC AND Beerware AND Public Domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libncursesw",
+      "version": "6.5_p20250503-r0",
+      "bom-ref": "pkg:apk/alpine/libncursesw@6.5_p20250503-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libncursesw@6.5_p20250503-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"X11\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libpng",
+      "version": "1.6.47-r0",
+      "bom-ref": "pkg:apk/alpine/libpng@1.6.47-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libpng@1.6.47-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Libpng\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libpsl",
+      "version": "0.21.5-r3",
+      "bom-ref": "pkg:apk/alpine/libpsl@0.21.5-r3?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libpsl@0.21.5-r3?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libsharpyuv",
+      "version": "1.5.0-r0",
+      "bom-ref": "pkg:apk/alpine/libsharpyuv@1.5.0-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libsharpyuv@1.5.0-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libsm",
+      "version": "1.2.5-r0",
+      "bom-ref": "pkg:apk/alpine/libsm@1.2.5-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libsm@1.2.5-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libssl3",
+      "version": "3.5.1-r0",
+      "bom-ref": "pkg:apk/alpine/libssl3@3.5.1-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libssl3@3.5.1-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Apache-2.0\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libstdc++",
+      "version": "14.2.0-r6",
+      "bom-ref": "pkg:apk/alpine/libstdc%2B%2B@14.2.0-r6?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libstdc%2B%2B@14.2.0-r6?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2.0-or-later AND LGPL-2.1-or-later\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libunistring",
+      "version": "1.3-r0",
+      "bom-ref": "pkg:apk/alpine/libunistring@1.3-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libunistring@1.3-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2.0-or-later OR LGPL-3.0-or-later\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libuuid",
+      "version": "2.41-r9",
+      "bom-ref": "pkg:apk/alpine/libuuid@2.41-r9?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libuuid@2.41-r9?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libwebp",
+      "version": "1.5.0-r0",
+      "bom-ref": "pkg:apk/alpine/libwebp@1.5.0-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libwebp@1.5.0-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libx11",
+      "version": "1.8.11-r0",
+      "bom-ref": "pkg:apk/alpine/libx11@1.8.11-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libx11@1.8.11-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"X11\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libxau",
+      "version": "1.0.12-r0",
+      "bom-ref": "pkg:apk/alpine/libxau@1.0.12-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libxau@1.0.12-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libxcb",
+      "version": "1.17.0-r0",
+      "bom-ref": "pkg:apk/alpine/libxcb@1.17.0-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libxcb@1.17.0-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libxdmcp",
+      "version": "1.1.5-r1",
+      "bom-ref": "pkg:apk/alpine/libxdmcp@1.1.5-r1?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libxdmcp@1.1.5-r1?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libxext",
+      "version": "1.3.6-r2",
+      "bom-ref": "pkg:apk/alpine/libxext@1.3.6-r2?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libxext@1.3.6-r2?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libxml2",
+      "version": "2.13.8-r0",
+      "bom-ref": "pkg:apk/alpine/libxml2@2.13.8-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libxml2@2.13.8-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libxpm",
+      "version": "3.5.17-r0",
+      "bom-ref": "pkg:apk/alpine/libxpm@3.5.17-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libxpm@3.5.17-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"X11\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libxslt",
+      "version": "1.1.43-r3",
+      "bom-ref": "pkg:apk/alpine/libxslt@1.1.43-r3?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libxslt@1.1.43-r3?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"X11\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libxt",
+      "version": "1.3.1-r0",
+      "bom-ref": "pkg:apk/alpine/libxt@1.3.1-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libxt@1.3.1-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "libyuv",
+      "version": "0.0.1887.20251502-r1",
+      "bom-ref": "pkg:apk/alpine/libyuv@0.0.1887.20251502-r1?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/libyuv@0.0.1887.20251502-r1?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "musl",
+      "version": "1.2.5-r10",
+      "bom-ref": "pkg:apk/alpine/musl@1.2.5-r10?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/musl@1.2.5-r10?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "musl-utils",
+      "version": "1.2.5-r10",
+      "bom-ref": "pkg:apk/alpine/musl-utils@1.2.5-r10?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/musl-utils@1.2.5-r10?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT AND BSD-2-Clause AND GPL-2.0-or-later\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ncurses-terminfo-base",
+      "version": "6.5_p20250503-r0",
+      "bom-ref": "pkg:apk/alpine/ncurses-terminfo-base@6.5_p20250503-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/ncurses-terminfo-base@6.5_p20250503-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"X11\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "nghttp2-libs",
+      "version": "1.65.0-r0",
+      "bom-ref": "pkg:apk/alpine/nghttp2-libs@1.65.0-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/nghttp2-libs@1.65.0-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"MIT\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "nginx",
+      "version": "1.29.1-r1",
+      "bom-ref": "pkg:apk/alpine/nginx@1.29.1-r1?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/nginx@1.29.1-r1?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"2-clause BSD-like license\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "nginx-module-geoip",
+      "version": "1.29.1-r1",
+      "bom-ref": "pkg:apk/alpine/nginx-module-geoip@1.29.1-r1?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/nginx-module-geoip@1.29.1-r1?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"2-clause BSD-like license\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "nginx-module-image-filter",
+      "version": "1.29.1-r1",
+      "bom-ref": "pkg:apk/alpine/nginx-module-image-filter@1.29.1-r1?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/nginx-module-image-filter@1.29.1-r1?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"2-clause BSD-like license\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "nginx-module-njs",
+      "version": "1.29.1.0.9.1-r1",
+      "bom-ref": "pkg:apk/alpine/nginx-module-njs@1.29.1.0.9.1-r1?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/nginx-module-njs@1.29.1.0.9.1-r1?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"2-clause BSD-like license\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "nginx-module-xslt",
+      "version": "1.29.1-r1",
+      "bom-ref": "pkg:apk/alpine/nginx-module-xslt@1.29.1-r1?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/nginx-module-xslt@1.29.1-r1?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"2-clause BSD-like license\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pcre2",
+      "version": "10.43-r1",
+      "bom-ref": "pkg:apk/alpine/pcre2@10.43-r1?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/pcre2@10.43-r1?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "scanelf",
+      "version": "1.3.8-r1",
+      "bom-ref": "pkg:apk/alpine/scanelf@1.3.8-r1?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/scanelf@1.3.8-r1?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2.0-only\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ssl_client",
+      "version": "1.37.0-r18",
+      "bom-ref": "pkg:apk/alpine/ssl_client@1.37.0-r18?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/ssl_client@1.37.0-r18?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2.0-only\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tiff",
+      "version": "4.7.0-r0",
+      "bom-ref": "pkg:apk/alpine/tiff@4.7.0-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/tiff@4.7.0-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"libtiff\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tzdata",
+      "version": "2025b-r0",
+      "bom-ref": "pkg:apk/alpine/tzdata@2025b-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/tzdata@2025b-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Public-Domain\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "xz-libs",
+      "version": "5.8.1-r0",
+      "bom-ref": "pkg:apk/alpine/xz-libs@5.8.1-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/xz-libs@5.8.1-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"GPL-2.0-or-later AND 0BSD AND Public-Domain AND LGPL-2.1-or-later\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "zlib",
+      "version": "1.3.1-r2",
+      "bom-ref": "pkg:apk/alpine/zlib@1.3.1-r2?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/zlib@1.3.1-r2?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"Zlib\"]"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "zstd-libs",
+      "version": "1.5.7-r0",
+      "bom-ref": "pkg:apk/alpine/zstd-libs@1.5.7-r0?arch=aarch64&distro=alpine-3.22.1",
+      "purl": "pkg:apk/alpine/zstd-libs@1.5.7-r0?arch=aarch64&distro=alpine-3.22.1",
+      "properties": [
+        {
+          "name": "arc:metadata:package-type",
+          "value": "apk"
+        },
+        {
+          "name": "arc:metadata:license-source",
+          "value": "/lib/apk/db/installed L field"
+        },
+        {
+          "name": "arc:metadata:license-raw",
+          "value": "[\"BSD-3-Clause OR GPL-2.0-or-later\"]"
+        }
+      ]
+    }
+  ]
+}

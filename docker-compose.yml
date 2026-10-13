@@ -41,8 +41,6 @@ services:
     volumes:
       - report-artifacts:/app/artifacts
       - source-documents:/app/documents:ro
-      - ./review_core:/app/review_core:ro
-      - ./custom_components:/app/custom_components:ro
     ports:
       - "127.0.0.1:7860:7860"
     depends_on:
@@ -75,9 +73,6 @@ services:
       - source-documents:/app/documents
       - report-artifacts:/app/artifacts:ro
       - flow-config:/app/config:ro
-      - ./api:/app/api:ro
-      - ./scripts:/app/scripts:ro
-      - ./review_core:/app/review_core:ro
     depends_on:
       postgres:
         condition: service_healthy
@@ -102,6 +97,26 @@ services:
         condition: service_healthy
     networks: [backend]
 
+  storage-init:
+    image: ai-review-console-api:local
+    user: "0:0"
+    network_mode: none
+    command:
+      - python
+      - -c
+      - |
+        import os
+        from pathlib import Path
+        for name, uid in (("documents", 10001), ("artifacts", 1000), ("config", 10001)):
+            path = Path("/app") / name
+            path.mkdir(exist_ok=True)
+            os.chown(path, uid, uid)
+            os.chmod(path, 0o755)
+    volumes:
+      - source-documents:/app/documents
+      - report-artifacts:/app/artifacts
+      - flow-config:/app/config
+
   worker:
     image: ai-review-console-api:local
     command: ["python", "-m", "api.app.worker"]
@@ -119,8 +134,6 @@ services:
       - source-documents:/app/documents:ro
       - report-artifacts:/app/artifacts:ro
       - flow-config:/app/config:ro
-      - ./api:/app/api:ro
-      - ./review_core:/app/review_core:ro
     depends_on:
       api:
         condition: service_healthy

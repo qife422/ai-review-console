@@ -1,0 +1,228 @@
+===os-release===
+PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+NAME="Debian GNU/Linux"
+VERSION_ID="12"
+VERSION="12 (bookworm)"
+VERSION_CODENAME=bookworm
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+
+===apk===
+
+===dpkg===
+adduser	3.134	all	adduser	3.134
+apt	2.6.1	arm64	apt	2.6.1
+base-files	12.4+deb12u12	arm64	base-files	12.4+deb12u12
+base-passwd	3.6.1	arm64	base-passwd	3.6.1
+bash	5.2.15-2+b9	arm64	bash	5.2.15-2
+bsdutils	1:2.38.1-5+deb12u3	arm64	util-linux	2.38.1-5+deb12u3
+ca-certificates	20230311+deb12u1	all	ca-certificates	20230311+deb12u1
+coreutils	9.1-1	arm64	coreutils	9.1-1
+dash	0.5.12-2	arm64	dash	0.5.12-2
+debconf	1.5.82	all	debconf	1.5.82
+debian-archive-keyring	2023.3+deb12u2	all	debian-archive-keyring	2023.3+deb12u2
+debianutils	5.7-0.5~deb12u1	arm64	debianutils	5.7-0.5~deb12u1
+diffutils	1:3.8-4	arm64	diffutils	1:3.8-4
+dpkg	1.21.22	arm64	dpkg	1.21.22
+e2fsprogs	1.47.0-2+b2	arm64	e2fsprogs	1.47.0-2
+findutils	4.9.0-4	arm64	findutils	4.9.0-4
+gcc-12-base:arm64	12.2.0-14+deb12u1	arm64	gcc-12	12.2.0-14+deb12u1
+gpgv	2.2.40-1.1+deb12u1	arm64	gnupg2	2.2.40-1.1+deb12u1
+grep	3.8-5	arm64	grep	3.8-5
+gzip	1.12-1	arm64	gzip	1.12-1
+hostname	3.23+nmu1	arm64	hostname	3.23+nmu1
+init-system-helpers	1.65.2+deb12u1	all	init-system-helpers	1.65.2+deb12u1
+libacl1:arm64	2.3.1-3	arm64	acl	2.3.1-3
+libapt-pkg6.0:arm64	2.6.1	arm64	apt	2.6.1
+libattr1:arm64	1:2.5.1-4	arm64	attr	1:2.5.1-4
+libaudit-common	1:3.0.9-1	all	audit	1:3.0.9-1
+libaudit1:arm64	1:3.0.9-1	arm64	audit	1:3.0.9-1
+libblkid1:arm64	2.38.1-5+deb12u3	arm64	util-linux	2.38.1-5+deb12u3
+libbz2-1.0:arm64	1.0.8-5+b1	arm64	bzip2	1.0.8-5
+libc-bin	2.36-9+deb12u13	arm64	glibc	2.36-9+deb12u13
+libc6:arm64	2.36-9+deb12u13	arm64	glibc	2.36-9+deb12u13
+libcap-ng0:arm64	0.8.3-1+b3	arm64	libcap-ng	0.8.3-1
+libcap2:arm64	1:2.66-4+deb12u2	arm64	libcap2	1:2.66-4+deb12u2
+libcom-err2:arm64	1.47.0-2+b2	arm64	e2fsprogs	1.47.0-2
+libcrypt1:arm64	1:4.4.33-2	arm64	libxcrypt	1:4.4.33-2
+libdb5.3:arm64	5.3.28+dfsg2-1	arm64	db5.3	5.3.28+dfsg2-1
+libdebconfclient0:arm64	0.270	arm64	cdebconf	0.270
+libext2fs2:arm64	1.47.0-2+b2	arm64	e2fsprogs	1.47.0-2
+libffi8:arm64	3.4.4-1	arm64	libffi	3.4.4-1
+libgcc-s1:arm64	12.2.0-14+deb12u1	arm64	gcc-12	12.2.0-14+deb12u1
+libgcrypt20:arm64	1.10.1-3	arm64	libgcrypt20	1.10.1-3
+libgdbm6:arm64	1.23-3	arm64	gdbm	1.23-3
+libgmp10:arm64	2:6.2.1+dfsg1-1.1	arm64	gmp	2:6.2.1+dfsg1-1.1
+libgnutls30:arm64	3.7.9-2+deb12u5	arm64	gnutls28	3.7.9-2+deb12u5
+libgpg-error0:arm64	1.46-1	arm64	libgpg-error	1.46-1
+libgssapi-krb5-2:arm64	1.20.1-2+deb12u4	arm64	krb5	1.20.1-2+deb12u4
+libhogweed6:arm64	3.8.1-2	arm64	nettle	3.8.1-2
+libidn2-0:arm64	2.3.3-1+b1	arm64	libidn2	2.3.3-1
+libk5crypto3:arm64	1.20.1-2+deb12u4	arm64	krb5	1.20.1-2+deb12u4
+libkeyutils1:arm64	1.6.3-2	arm64	keyutils	1.6.3-2
+libkrb5-3:arm64	1.20.1-2+deb12u4	arm64	krb5	1.20.1-2+deb12u4
+libkrb5support0:arm64	1.20.1-2+deb12u4	arm64	krb5	1.20.1-2+deb12u4
+liblz4-1:arm64	1.9.4-1	arm64	lz4	1.9.4-1
+liblzma5:arm64	5.4.1-1	arm64	xz-utils	5.4.1-1
+libmd0:arm64	1.0.4-2	arm64	libmd	1.0.4-2
+libmount1:arm64	2.38.1-5+deb12u3	arm64	util-linux	2.38.1-5+deb12u3
+libncursesw6:arm64	6.4-4	arm64	ncurses	6.4-4
+libnettle8:arm64	3.8.1-2	arm64	nettle	3.8.1-2
+libnsl2:arm64	1.3.0-2	arm64	libnsl	1.3.0-2
+libp11-kit0:arm64	0.24.1-2	arm64	p11-kit	0.24.1-2
+libpam-modules:arm64	1.5.2-6+deb12u1	arm64	pam	1.5.2-6+deb12u1
+libpam-modules-bin	1.5.2-6+deb12u1	arm64	pam	1.5.2-6+deb12u1
+libpam-runtime	1.5.2-6+deb12u1	all	pam	1.5.2-6+deb12u1
+libpam0g:arm64	1.5.2-6+deb12u1	arm64	pam	1.5.2-6+deb12u1
+libpcre2-8-0:arm64	10.42-1	arm64	pcre2	10.42-1
+libreadline8:arm64	8.2-1.3	arm64	readline	8.2-1.3
+libseccomp2:arm64	2.5.4-1+deb12u1	arm64	libseccomp	2.5.4-1+deb12u1
+libselinux1:arm64	3.4-1+b6	arm64	libselinux	3.4-1
+libsemanage-common	3.4-1	all	libsemanage	3.4-1
+libsemanage2:arm64	3.4-1+b5	arm64	libsemanage	3.4-1
+libsepol2:arm64	3.4-2.1	arm64	libsepol	3.4-2.1
+libsmartcols1:arm64	2.38.1-5+deb12u3	arm64	util-linux	2.38.1-5+deb12u3
+libsqlite3-0:arm64	3.40.1-2+deb12u2	arm64	sqlite3	3.40.1-2+deb12u2
+libss2:arm64	1.47.0-2+b2	arm64	e2fsprogs	1.47.0-2
+libssl3:arm64	3.0.17-1~deb12u2	arm64	openssl	3.0.17-1~deb12u2
+libstdc++6:arm64	12.2.0-14+deb12u1	arm64	gcc-12	12.2.0-14+deb12u1
+libsystemd0:arm64	252.39-1~deb12u1	arm64	systemd	252.39-1~deb12u1
+libtasn1-6:arm64	4.19.0-2+deb12u1	arm64	libtasn1-6	4.19.0-2+deb12u1
+libtinfo6:arm64	6.4-4	arm64	ncurses	6.4-4
+libtirpc-common	1.3.3+ds-1	all	libtirpc	1.3.3+ds-1
+libtirpc3:arm64	1.3.3+ds-1	arm64	libtirpc	1.3.3+ds-1
+libudev1:arm64	252.39-1~deb12u1	arm64	systemd	252.39-1~deb12u1
+libunistring2:arm64	1.0-2	arm64	libunistring	1.0-2
+libuuid1:arm64	2.38.1-5+deb12u3	arm64	util-linux	2.38.1-5+deb12u3
+libxxhash0:arm64	0.8.1-1	arm64	xxhash	0.8.1-1
+libzstd1:arm64	1.5.4+dfsg2-5	arm64	libzstd	1.5.4+dfsg2-5
+login	1:4.13+dfsg1-1+deb12u1	arm64	shadow	1:4.13+dfsg1-1+deb12u1
+logsave	1.47.0-2+b2	arm64	e2fsprogs	1.47.0-2
+mawk	1.3.4.20200120-3.1	arm64	mawk	1.3.4.20200120-3.1
+mount	2.38.1-5+deb12u3	arm64	util-linux	2.38.1-5+deb12u3
+ncurses-base	6.4-4	all	ncurses	6.4-4
+ncurses-bin	6.4-4	arm64	ncurses	6.4-4
+netbase	6.4	all	netbase	6.4
+openssl	3.0.17-1~deb12u2	arm64	openssl	3.0.17-1~deb12u2
+passwd	1:4.13+dfsg1-1+deb12u1	arm64	shadow	1:4.13+dfsg1-1+deb12u1
+perl-base	5.36.0-7+deb12u3	arm64	perl	5.36.0-7+deb12u3
+readline-common	8.2-1.3	all	readline	8.2-1.3
+sed	4.9-1	arm64	sed	4.9-1
+sysvinit-utils	3.06-4	arm64	sysvinit	3.06-4
+tar	1.34+dfsg-1.2+deb12u1	arm64	tar	1.34+dfsg-1.2+deb12u1
+tzdata	2025b-0+deb12u2	all	tzdata	2025b-0+deb12u2
+usr-is-merged	37~deb12u1	all	usrmerge	37~deb12u1
+util-linux	2.38.1-5+deb12u3	arm64	util-linux	2.38.1-5+deb12u3
+util-linux-extra	2.38.1-5+deb12u3	arm64	util-linux	2.38.1-5+deb12u3
+zlib1g:arm64	1:1.2.13.dfsg-1	arm64	zlib	1:1.2.13.dfsg-1
+
+===dpkg-licenses===
+adduser	License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;
+apt	License: GPL-2+;License: GPL-2;License: BSD-3-clause;License: Expat;License: GPL-2;License: GPL-2+;
+base-files	
+base-passwd	License: GPL-2;License: public-domain;License: GPL-2;License: GPL-2;
+bash	License: GPL-3+;License: GPL-3+;License: GPL-3+;License: GPL-3+;License: GPL-3+;License: GPL-3+;License: GPL-3+ with Bison exception;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GFDL-NIV-1.3;License: Latex2e;License: BSD-4-clause-UC and MIT-like;License: BSD-4-clause-UC;License: MIT-like;License: permissive;
+bsdutils	License: GPL-2+;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-3+;License: GPL-2;License: GPL-2;License: public-domain;License: BSD-4-clause;License: MIT;License: BSD-3-clause;License: BSLA;License: BSD-3-clause;License: BSD-3-clause;License: LGPL-2+;License: LGPL-2+;License: LGPL-2+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL;License: LGPL-2.1+;License: LGPL;License: LGPL;License: LGPL-2.1+;License: LGPL-3+;License: LGPL-2.1+;License: GPL-2+;License: GPL-2+;License: public-domain;License: GPL-2;License: GPL-2+;License: GPL-3+;License: BSD-3-clause;License: BSD-4-clause;License: BSLA;License: LGPL;License: LGPL-2+;License: LGPL-2.1+;License: LGPL-3+;License: MIT;
+ca-certificates	License: GPL-2+;License: MPL-2.0;
+coreutils	License: GPL-3+;License: GPL-3+ and BSD-4-clause-UC;License: GPL-3+;License: BSD-4-clause-UC;License: GPL-3+;License: GPL-3+ and ISC;License: ISC;License: FSFULLR;License: GPL-3+;License: GPL-3+;License: GPL-3+;License: GPL-3+;License: GFDL-NIV-1.3;
+dash	License: BSD-3-Clause;License: public-domain;License: GPL-2+;License: BSD-3-clause;License: BSD-3-clause;License: GPL-2+;
+debconf	License: BSD-2-clause;License: BSD-2-clause;License: BSD-2-clause;License: BSD-2-clause;License: BSD-2-clause;License: BSD-2-clause;License: BSD-2-clause;License: BSD-2-clause;License: BSD-2-clause;License: BSD-2-clause;License: BSD-2-clause;
+debian-archive-keyring	
+debianutils	License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: public-domain;License: SMAIL-GPL;
+diffutils	License: GPL-3+;License: FSFULLR;License: GPL-3+ and FSFULLR;License: LGPL-2.1+;License: GPL-3+ with autoconf exception;License: GPL-3+ with texinfo exception;License: LGPL-2.0+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: X11;License: FSFAP;License: GFDL-NIV-1.3;License: GPL-3+;License: LGPL-3.0+;License: LGPL-3.0+ or GPL-2+;License: public-domain;License: LGPL-2.0+;License: LGPL-2.1+;License: LGPL-3.0+;License: GPL-3+;License: GPL-2+;License: FSFULLR;License: GFDL-NIV-1.3;
+dpkg	License: GPL-2+;License: GPL-2+;License: GPL-2;License: BSD-2-clause;License: public-domain-s-s-d;License: GPL-2+;License: GPL-2;License: BSD-2-clause;
+e2fsprogs	License: GPL-2;License: GPL-2;License: LGPL-2;License: LGPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: BSD-3-Clause;License: BSD-3-Clause;License: GPL-2;License: GPL-2;License: Apache-2;License: GPL-2;License: LGPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: LGPL-2;License: GPL-2;License: LGPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: Apache-2;License: ISC;License: GPL or MIT-US-export;License: Kazlib;License: Latex2e;License: GPL-2+ with Texinfo exception;License: Apache-2;License: BSD-3-Clause;License: GPL-2;License: LGPL-2;
+findutils	License: GFDL-NIV-1.3+;License: GPL-3+;License: FSFAP;License: GFDL-NIV-1.3+;License: GPL-3+;License: GPL-3+ with Autoconf-data exception;License: FSFULLR;License: GPL-2+ with Autoconf-data exception;License: GPL-2+;License: X11;License: public-domain;License: GPL-2+;License: GFDL-NIV-1.3+;License: GPL-3+;License: GPL-3+;License: GPL-3+;License: GPL with automake exception;License: LGPL-2.1+;License: GPL-3+;License: LGPL-2+;License: public-domain;License: LGPL-2.1+;License: GPL-3+;License: LGPL-2.1+;License: LGPL-3+;License: LGPL-2.1+;License: GPL-3+;License: LGPL-2.1+;License: GPL-3+;License: BSD-3-clause and/or GPL-3+;License: LGPL-3+;License: GPL-3+ with Bison-2.2 exception;License: LGPL-3;License: LGPL-3+;License: LGPL-3;License: FSFULLR;License: FSFULLR;License: FSFULLR;License: FSFULLR;License: GPL-3+;License: FSFULLR;License: FSFULLR;License: GPL-3+;License: LGPL-2+;License: LGPL-2.1+;License: LGPL-3+;License: LGPL-2.1+;License: ISC and/or LGPL-2.1+;License: LGPL-3+;License: LGPL-3+;License: GPL-2+;License: LGPL-3+;License: GPL-3+;License: GPL-3+;License: GPL-3+;License: FSFULLR;License: GPL-3+;License: GPL-3+;License: GPL-3+;License: GPL-3+;License: BSD-3-clause;License: FSFULLR;License: GFDL-NIV-1.3+;License: GPL-2+;License: GPL-3+;License: ISC;License: LGPL-2+;License: LGPL-2.1+;License: LGPL-3;License: LGPL-3+;
+gcc-12-base	
+gpgv	License: GPL-3+;License: GPL-3+;License: permissive;License: permissive;License: LGPL-2.1+;License: Expat;License: GPL-3+;License: GPL-3+ or BSD-3-clause;License: LGPL-3+;License: GPL-3+;License: RFC-Reference;License: TinySCHEME;License: GPL-3+;License: CC0-1.0;License: TinySCHEME;License: permissive;License: RFC-Reference;License: GPL-3+;License: LGPL-3+;License: LGPL-2.1+;License: BSD-3-clause;License: Expat;License: CC0-1.0;
+grep	License: GPL-3+;License: GPL-3+;License: GPL-3+;
+gzip	License: GPL-3+;License: GPL-3+;License: GFDL-1.3+-no-invariant;License: FSF-manpages;License: GPL-3+;License: GFDL-1.3+-no-invariant;License: FSF-manpages;
+hostname	License: GPL-2;
+init-system-helpers	License: BSD-3-clause;License: BSD-3-clause;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: BSD-3-clause;
+libacl1	License: GPL-2+;License: LGPL-2+;
+libapt-pkg6.0	License: GPL-2+;License: GPL-2;License: BSD-3-clause;License: Expat;License: GPL-2;License: GPL-2+;
+libattr1	License: GPL-2+;License: LGPL-2+;
+libaudit-common	License: GPL-2;License: GPL-2;License: LGPL-2.1;License: GPL-2;License: GPL-2;
+libaudit1	License: GPL-2;License: GPL-2;License: LGPL-2.1;License: GPL-2;License: GPL-2;
+libblkid1	License: GPL-2+;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-3+;License: GPL-2;License: GPL-2;License: public-domain;License: BSD-4-clause;License: MIT;License: BSD-3-clause;License: BSLA;License: BSD-3-clause;License: BSD-3-clause;License: LGPL-2+;License: LGPL-2+;License: LGPL-2+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL;License: LGPL-2.1+;License: LGPL;License: LGPL;License: LGPL-2.1+;License: LGPL-3+;License: LGPL-2.1+;License: GPL-2+;License: GPL-2+;License: public-domain;License: GPL-2;License: GPL-2+;License: GPL-3+;License: BSD-3-clause;License: BSD-4-clause;License: BSLA;License: LGPL;License: LGPL-2+;License: LGPL-2.1+;License: LGPL-3+;License: MIT;
+libbz2-1.0	License: BSD-variant;License: GPL-2;
+libc-bin	
+libc6	
+libcap-ng0	License: LGPL-2.1+;License: LGPL-2.1+;License: GPL-2+;License: GPL-2+;License: GPL-3;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL-2.1+;License: GPL-2+;
+libcap2	License: BSD-3-clause or GPL-2;License: BSD-3-clause or GPL-2;License: BSD-3-clause or GPL-2;License: BSD-3-clause or GPL-2;License: BSD-3-clause or GPL-2;License: BSD-3-clause or GPL-2;License: BSD-3-clause or GPL-2+;License: BSD-3-clause or GPL-2;License: BSD-3-clause or GPL-2+;License: BSD-3-clause;License: GPL-2;License: GPL-2+;
+libcom-err2	License: GPL-2;License: GPL-2;License: LGPL-2;License: LGPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: BSD-3-Clause;License: BSD-3-Clause;License: GPL-2;License: GPL-2;License: Apache-2;License: GPL-2;License: LGPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: LGPL-2;License: GPL-2;License: LGPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: Apache-2;License: ISC;License: GPL or MIT-US-export;License: Kazlib;License: Latex2e;License: GPL-2+ with Texinfo exception;License: Apache-2;License: BSD-3-Clause;License: GPL-2;License: LGPL-2;
+libcrypt1	
+libdb5.3	License: Sleepycat and BSD-3-clause;License: Sleepycat;License: BSD-3-clause;License: BSD-3-clause;License: Ms-PL;License: GPL or Artistic;License: X11;License: MIT-old;License: TCL-like;License: BSD-3-clause-fjord;License: GPL-3;License: zlib;License: Artistic or BSD-3-clause;License: GPL;License: Sleepycat and BSD-3-clause;
+libdebconfclient0	License: BSD-2-Clause;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: BSD-2-clause;License: GPL-2+;
+libext2fs2	License: GPL-2;License: GPL-2;License: LGPL-2;License: LGPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: BSD-3-Clause;License: BSD-3-Clause;License: GPL-2;License: GPL-2;License: Apache-2;License: GPL-2;License: LGPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: LGPL-2;License: GPL-2;License: LGPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: Apache-2;License: ISC;License: GPL or MIT-US-export;License: Kazlib;License: Latex2e;License: GPL-2+ with Texinfo exception;License: Apache-2;License: BSD-3-Clause;License: GPL-2;License: LGPL-2;
+libffi8	License: Expat;License: Expat;License: X11;License: GPL-2+;License: GPL-3+;License: MPL-1.1 or GPL-2+ or LGPL-2.1+;License: public-domain;License: GPL-3+;License: GPL-3+;License: GPL-3+;License: GPL-2+;License: GPL;License: Expat;License: GPL-2+;License: GPL-3+;
+libgcc-s1	
+libgcrypt20	License:;
+libgdbm6	License: GPL-3+;License: GPL-2+;License: GPL-3+;License: GFDL-NIV-1.3+;License: GPL-3+;License: GPL-2+;License: GFDL-NIV-1.3+;
+libgmp10	License: GPL-2+ or LGPL-3+;License: GPL-3+;License: GPL-3+ with Bison exception;License: GPL-2+;License: GPL-3+;License: LGPL-3+;
+libgnutls30	License: The main library is licensed under GNU Lesser;License:;License:;License: CC0 license;License: Expat;License: Apache-2.0;License: LGPLv3+_or_GPLv2+;License: Apache-2.0;License: Apache-2.0;License: Expat;License: Expat;License: Expat;License: LGPLv2.1+;License: LGPLv2.1+;License: LGPLv2.1+;License: LGPLv3+_or_GPLv2+;License: LGPLv2.1+;License: LGPLv3+_or_GPLv2+;License: Expat;License: LGPLv3+_or_GPLv2+;License: LGPLv3+_or_GPLv2+;License: LGPLv3+_or_GPLv2+;License: LGPLv3+_or_GPLv2+;License: LGPLv3+_or_GPLv2+;License: LGPLv3+_or_GPLv2+;License: LGPLv3+_or_GPLv2+;License: LGPLv3+_or_GPLv2+;License: LGPLv3+_or_GPLv2+;License: LGPLv3+_or_GPLv2+;License: LGPLv3+_or_GPLv2+;License: LGPLv3+_or_GPLv2+;License: LGPLv3+_or_GPLv2+;License: LGPLv3+_or_GPLv2+;License: LGPLv3+_or_GPLv2+;License: LGPLv3+_or_GPLv2+;License: LGPLv3+_or_GPLv2+;License: LGPLv3+_or_GPLv2+;License:;License: LGPLv3+_or_GPLv2+;License: LGPLv3+_or_GPLv2+;License: LGPLv2.1+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: LGPLv2.1+;License: LGPLv2.1+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: LGPLv2.1+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: GPLv3+;License: LGPLv2.1+;License: BSD-3-Clause;
+libgpg-error0	License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL-2.1+ or BSD-3-clause;License: LGPL-2.1+;License: LGPL-2.1+;License: g10-permissive;License: g10-permissive;License: LGPL-2.1+;License: LGPL-2.1+;License: GPL-3+;License: g10-permissive;License: LGPL-2.1+;License: GPL-3+;License: BSD-3-clause;
+libgssapi-krb5-2	
+libhogweed6	License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: Expat;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: GPL-3+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: GPL-2+;License: GPL-3+ with Autoconf exception;License: public-domain;License: GPL-2;License: GAP;License: LGPL-3+;License: GPL-2+;License: Expat;
+libidn2-0	License: GPL-3+;License: LGPL-3+ or GPL-2+;License: GPL-3+;License: GPL-3+;License: Unicode;License: GPL-3+;License: GPL-2+;License: LGPL-3+;License: Unicode;
+libk5crypto3	
+libkeyutils1	License: GPL-2+;License: LGPL-2+;License: LGPL-2+;License: GPL-2+;License: LGPL-2+;
+libkrb5-3	
+libkrb5support0	
+liblz4-1	License: BSD-2-clause;License: GPL-2+;License: BSD-2-clause;License: GPL-2+;License: GPL-2+;License: BSD-2-clause;License: GPL-2+ or BSD-2-clause;License: BSD-2-clause;License: BSD-2-clause;License: BSD-2-clause;License: GPL-2+;License: GPL-2+;License: BSD-2-clause;
+liblzma5	License:;License: PD;License: probably-PD;License: GPL-2+;License: PD;License: PD;License: LGPL-2.1+;License: permissive-fsf;License: Autoconf;License: permissive-nowarranty;License: GPL-2;License: none;License: none;License: PD;License: PD;License: PD;License: permissive-nowarranty;License: config-h;License: LGPL-2.1+;License: noderivs;License: PD-debian;License: LGPL-2.1+;License: GPL-2;License: GPL-2+;License: Autoconf;License: permissive-fsf;License: permissive-nowarranty;
+libmd0	License: BSD-3-clause;License: BSD-3-clause-Aaron-D-Gifford;License: BSD-2-clause;License: BSD-2-clause-NetBSD;License: ISC;License: Beerware;License: public-domain-md4;License: public-domain-md5;License: public-domain-sha1;
+libmount1	License: GPL-2+;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-3+;License: GPL-2;License: GPL-2;License: public-domain;License: BSD-4-clause;License: MIT;License: BSD-3-clause;License: BSLA;License: BSD-3-clause;License: BSD-3-clause;License: LGPL-2+;License: LGPL-2+;License: LGPL-2+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL;License: LGPL-2.1+;License: LGPL;License: LGPL;License: LGPL-2.1+;License: LGPL-3+;License: LGPL-2.1+;License: GPL-2+;License: GPL-2+;License: public-domain;License: GPL-2;License: GPL-2+;License: GPL-3+;License: BSD-3-clause;License: BSD-4-clause;License: BSLA;License: LGPL;License: LGPL-2+;License: LGPL-2.1+;License: LGPL-3+;License: MIT;
+libncursesw6	License: MIT/X11;License: X11;License: BSD-3-clause;License: MIT/X11;License: X11;License: BSD-3-clause;
+libnettle8	License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: Expat;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: GPL-3+;License: LGPL-3+ or GPL-2+;License: LGPL-3+ or GPL-2+;License: GPL-2+;License: GPL-3+ with Autoconf exception;License: public-domain;License: GPL-2;License: GAP;License: LGPL-3+;License: GPL-2+;License: Expat;
+libnsl2	License: LGPL-2.1+;License: LGPL-2.1;License: LGPL-2.1+;License: BSD-3-clause;License: permissive-fsf;License: permissive-makefile-in;License: permissive-autoconf-m4-no-warranty;License: GPL-3+-autoconf-exception;License: permissive-configure;License: GPL-2+-autoconf-exception;License: MIT;License: GPL-2+-libtool-exception;License: permissive-autoconf-m4;License: permissive-fsf;License: BSD-3-clause;License: GPL-2+-autoconf-exception;License: GPL-2+-libtool-exception;License: GPL-3+-autoconf-exception;License: LGPL-2.1;License: LGPL-2.1+;License: MIT;License: permissive-autoconf-m4;License: permissive-autoconf-m4-no-warranty;License: permissive-configure;License: permissive-fsf;License: permissive-makefile-in;
+libp11-kit0	License: BSD-3-Clause;License: permissive-like-automake-output;License: BSD-3-Clause;License: BSD-3-Clause;License: ISC;License: ISC+IBM;License: BSD-3-Clause;License: BSD-3-Clause;License: BSD-3-Clause;License: BSD-3-Clause;License: LGPL-2.1+;License: Apache-2.0;License: BSD-3-Clause;License: BSD-3-Clause;License: same-as-rest-of-p11kit;License: BSD-3-Clause;License: LGPL-2.1+;License: Apache-2.0;
+libpam-modules-bin	License: BSD-3-clause or GPL;License: GPL-2;License: GPL-2+;License: GPL-3;License: GPL-3+ with Bison exception;License: BSD-tcp_wrappers;License: LGPL-2+;License: public-domain;License: public-domain;License: Beerware;
+libpam-modules	License: BSD-3-clause or GPL;License: GPL-2;License: GPL-2+;License: GPL-3;License: GPL-3+ with Bison exception;License: BSD-tcp_wrappers;License: LGPL-2+;License: public-domain;License: public-domain;License: Beerware;
+libpam-runtime	License: BSD-3-clause or GPL;License: GPL-2;License: GPL-2+;License: GPL-3;License: GPL-3+ with Bison exception;License: BSD-tcp_wrappers;License: LGPL-2+;License: public-domain;License: public-domain;License: Beerware;
+libpam0g	License: BSD-3-clause or GPL;License: GPL-2;License: GPL-2+;License: GPL-3;License: GPL-3+ with Bison exception;License: BSD-tcp_wrappers;License: LGPL-2+;License: public-domain;License: public-domain;License: Beerware;
+libpcre2-8-0	License: BSD-3-clause-Cambridge with BINARY LIBRARY-LIKE PACKAGES exception;License: BSD-3-clause;License: X11;License: BSD-2-clause;License: public-domain;
+libreadline8	License: GPL-3+;License: GPL-2+;License: GFDL-NIV-1.3+;License: ISC-no-attribution;License: GPL-3;
+libseccomp2	License: LGPL-2.1;License: LGPL-2.1;License: LGPL-2.1;License: LGPL-2.1;License: LGPL-2.1;
+libselinux1	
+libsemanage-common	
+libsemanage2	
+libsepol2	License: LGPL-2.1+;License: Zlib;License: GPL-2;License: GPL-2+;
+libsmartcols1	License: GPL-2+;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-3+;License: GPL-2;License: GPL-2;License: public-domain;License: BSD-4-clause;License: MIT;License: BSD-3-clause;License: BSLA;License: BSD-3-clause;License: BSD-3-clause;License: LGPL-2+;License: LGPL-2+;License: LGPL-2+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL;License: LGPL-2.1+;License: LGPL;License: LGPL;License: LGPL-2.1+;License: LGPL-3+;License: LGPL-2.1+;License: GPL-2+;License: GPL-2+;License: public-domain;License: GPL-2;License: GPL-2+;License: GPL-3+;License: BSD-3-clause;License: BSD-4-clause;License: BSLA;License: LGPL;License: LGPL-2+;License: LGPL-2.1+;License: LGPL-3+;License: MIT;
+libsqlite3-0	License: public-domain;License: GPL-2+;License: public-domain;License: public-domain;License: public-domain;License: public-domain;License: public-domain;
+libss2	License: GPL-2;License: GPL-2;License: LGPL-2;License: LGPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: BSD-3-Clause;License: BSD-3-Clause;License: GPL-2;License: GPL-2;License: Apache-2;License: GPL-2;License: LGPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: LGPL-2;License: GPL-2;License: LGPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: Apache-2;License: ISC;License: GPL or MIT-US-export;License: Kazlib;License: Latex2e;License: GPL-2+ with Texinfo exception;License: Apache-2;License: BSD-3-Clause;License: GPL-2;License: LGPL-2;
+libssl3	License: Apache-2.0;License: Apache-2.0;License: Apache-2.0;License: Artistic or GPL-1+;License: Artistic;License: GPL-1+;
+libstdc++6	
+libsystemd0	License: LGPL-2.1+;License: CC0-1.0;License: GPL-2 with Linux-syscall-note exception;License: Expat;License: public-domain;License: GPL-2+;License: LGPL-2.1+;License: Expat;License: GPL-2 with Linux-syscall-note exception;License: GPL-2+;License: LGPL-2.1+;License: CC0-1.0;
+libtasn1-6	
+libtinfo6	License: MIT/X11;License: X11;License: BSD-3-clause;License: MIT/X11;License: X11;License: BSD-3-clause;
+libtirpc-common	License: BSD-3-Clause;License: GPL-2;License: BSD-3-Clause;License:   __AUTO_PERMISSIVE__;License:   BSD-2-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-4-Clause;License:   LGPL-2.1+;License:   PERMISSIVE;License:   BSD-3-Clause;License:   BSD-2-Clause;License:   BSD-2-Clause;License:   BSD-2-Clause;License:   BSD-2-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-2-Clause;License:   BSD-4-Clause;License:   LGPL-2.1+;License: GPL-2;
+libtirpc3	License: BSD-3-Clause;License: GPL-2;License: BSD-3-Clause;License:   __AUTO_PERMISSIVE__;License:   BSD-2-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-4-Clause;License:   LGPL-2.1+;License:   PERMISSIVE;License:   BSD-3-Clause;License:   BSD-2-Clause;License:   BSD-2-Clause;License:   BSD-2-Clause;License:   BSD-2-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-3-Clause;License:   BSD-2-Clause;License:   BSD-4-Clause;License:   LGPL-2.1+;License: GPL-2;
+libudev1	License: LGPL-2.1+;License: CC0-1.0;License: GPL-2 with Linux-syscall-note exception;License: Expat;License: public-domain;License: GPL-2+;License: LGPL-2.1+;License: Expat;License: GPL-2 with Linux-syscall-note exception;License: GPL-2+;License: LGPL-2.1+;License: CC0-1.0;
+libunistring2	License: LGPL-3+ or GPL-2+;License: FreeSoftware;License: GPL-3+ or GFDL-1.2+;License: GPL-3+;License: GPL-2+;License: GPL-2+ with distribution exception;License: GPL-2+;License: MIT;License: GPL-3+;License: LGPL-3+;License: GPL-3+;License: GPL-2+;License: GFDL-1.2+;License: MIT;
+libuuid1	License: GPL-2+;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-3+;License: GPL-2;License: GPL-2;License: public-domain;License: BSD-4-clause;License: MIT;License: BSD-3-clause;License: BSLA;License: BSD-3-clause;License: BSD-3-clause;License: LGPL-2+;License: LGPL-2+;License: LGPL-2+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL;License: LGPL-2.1+;License: LGPL;License: LGPL;License: LGPL-2.1+;License: LGPL-3+;License: LGPL-2.1+;License: GPL-2+;License: GPL-2+;License: public-domain;License: GPL-2;License: GPL-2+;License: GPL-3+;License: BSD-3-clause;License: BSD-4-clause;License: BSLA;License: LGPL;License: LGPL-2+;License: LGPL-2.1+;License: LGPL-3+;License: MIT;
+libxxhash0	License: BSD-2-clause;License: GPL-2;License: GPL-2;License: BSD-2-clause;License: GPL-2;
+libzstd1	License: BSD-3-clause or GPL-2;License: zlib;License: zlib;License: zlib;License: Expat;License: BSD-3-clause or GPL-2;License: Expat;License: Expat;License: GPL-2;License: BSD-3-clause;
+login	License: BSD-3-clause;License: BSD-3-clause;License: GPL-1;License: BSD-3-clause;License: BSD-3-clause;License: BSD-3-clause;License: BSD-3-clause;License: GPL-2+;License: BSD-3-clause;License: BSD-3-clause;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: BSD-3-clause;License: BSD-3-clause;License: BSD-3-clause;License: BSD-3-clause;License: BSD-3-clause;License: BSD-3-clause;License: BSD-3-clause;License: GPL-2+;License: GPL-2+;License: public-domain;License: GPL-2+;License: BSD-3-clause;License: BSD-3-clause;License: GPL-2+;License: BSD-3-clause;License: BSD-3-clause;License: GPL-1;License: GPL-2+;
+logsave	License: GPL-2;License: GPL-2;License: LGPL-2;License: LGPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: BSD-3-Clause;License: BSD-3-Clause;License: GPL-2;License: GPL-2;License: Apache-2;License: GPL-2;License: LGPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: LGPL-2;License: GPL-2;License: LGPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-2;License: Apache-2;License: ISC;License: GPL or MIT-US-export;License: Kazlib;License: Latex2e;License: GPL-2+ with Texinfo exception;License: Apache-2;License: BSD-3-Clause;License: GPL-2;License: LGPL-2;
+mawk	License: GPL-2;License: GPL-2;License: X11;License: CC-BY-3.0;License: GPL-2;
+mount	License: GPL-2+;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-3+;License: GPL-2;License: GPL-2;License: public-domain;License: BSD-4-clause;License: MIT;License: BSD-3-clause;License: BSLA;License: BSD-3-clause;License: BSD-3-clause;License: LGPL-2+;License: LGPL-2+;License: LGPL-2+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL;License: LGPL-2.1+;License: LGPL;License: LGPL;License: LGPL-2.1+;License: LGPL-3+;License: LGPL-2.1+;License: GPL-2+;License: GPL-2+;License: public-domain;License: GPL-2;License: GPL-2+;License: GPL-3+;License: BSD-3-clause;License: BSD-4-clause;License: BSLA;License: LGPL;License: LGPL-2+;License: LGPL-2.1+;License: LGPL-3+;License: MIT;
+ncurses-base	License: MIT/X11;License: X11;License: BSD-3-clause;License: MIT/X11;License: X11;License: BSD-3-clause;
+ncurses-bin	License: MIT/X11;License: X11;License: BSD-3-clause;License: MIT/X11;License: X11;License: BSD-3-clause;
+netbase	License: GPL-2;
+openssl	License: Apache-2.0;License: Apache-2.0;License: Apache-2.0;License: Artistic or GPL-1+;License: Artistic;License: GPL-1+;
+passwd	License: BSD-3-clause;License: BSD-3-clause;License: GPL-1;License: BSD-3-clause;License: BSD-3-clause;License: BSD-3-clause;License: BSD-3-clause;License: GPL-2+;License: BSD-3-clause;License: BSD-3-clause;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: GPL-2+;License: BSD-3-clause;License: BSD-3-clause;License: BSD-3-clause;License: BSD-3-clause;License: BSD-3-clause;License: BSD-3-clause;License: BSD-3-clause;License: GPL-2+;License: GPL-2+;License: public-domain;License: GPL-2+;License: BSD-3-clause;License: BSD-3-clause;License: GPL-2+;License: BSD-3-clause;License: BSD-3-clause;License: GPL-1;License: GPL-2+;
+perl-base	License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: Expat;License: REGCOMP, and GPL-1+ or Artistic;License: GPL-3+-WITH-BISON-EXCEPTION;License: GPL-1+ or Artistic;License: Expat;License: GPL-1+ or Artistic;License: Unicode;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic, and Unicode;License: Expat;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: BZIP;License: GPL-1+ or Artistic;License: ZLIB;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-2+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-2+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: Expat or GPL-1+ or Artistic;License: Expat or GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: RRA-KEEP-THIS-NOTICE;License: Expat;License: Expat;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: BSD-3-clause-with-weird-numbering;License: GPL-1+ or Artistic;License: Expat;License: Expat;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License:  CC0-1.0;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: TEXT-TABS;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic, and BSD-4-clause-POWERDOG;License: GPL-1+ or Artistic;License: Unicode;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic, and BSD-3-clause-GENERIC;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: Artistic;License: BSD-3-clause;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: Artistic;License: SDBM-PUBLIC-DOMAIN;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: RRA-KEEP-THIS-NOTICE;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic;License: DONT-CHANGE-THE-GPL;License: GPL-1+ or Artistic;License: GPL-1+ or Artistic or Artistic-dist;License: Artistic-dist;License: Artistic or GPL-1+ or Artistic-dist;License: GPL-1+ or Artistic, and Expat;License: GPL-1+ or Artistic;License: LGPL-2.1;License: GPL-1+;License: GPL-2+;License: Artistic;License: Artistic-2;License: BZIP;License: ZLIB;License: Expat;License: BSD-3-clause-with-weird-numbering;License: BSD-4-clause-POWERDOG;License: Unicode;License: BSD-3-clause-GENERIC;License: BSD-3-clause;License: REGCOMP;License: TEXT-TABS;License: DONT-CHANGE-THE-GPL;License: SDBM-PUBLIC-DOMAIN;License: GPL-3+-WITH-BISON-EXCEPTION;License: HSIEH-DERIVATIVE;License: HSIEH-BSD;License:  CC0-1.0;License: RRA-KEEP-THIS-NOTICE;License: Artistic-dist;
+readline-common	License: GPL-3+;License: GPL-2+;License: GFDL-NIV-1.3+;License: ISC-no-attribution;License: GPL-3;
+sed	License: GPL-3+;License: GPL-3+;License: X11;License: GFDL-NIV-1.3+;License: GPL-3+ and ISC;License: ISC;License: BSD-4-clause-UC;License: BSL-1;License: pcre;
+sysvinit-utils	License: GPL-2.0+;License: GPL-2.0+;License: GPL-3.0;License: GPL-2.0;License: GPL-2.0+;License: GPL-3.0;License: GPL-2.0;
+tar	License: GPL-3+;License: GPL-3+ with Bison exception;License: LGPL-3+;License: GPL-2+;
+tzdata	License: public-domain;
+usr-is-merged	License: GPL-2+;
+util-linux-extra	License: GPL-2+;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-3+;License: GPL-2;License: GPL-2;License: public-domain;License: BSD-4-clause;License: MIT;License: BSD-3-clause;License: BSLA;License: BSD-3-clause;License: BSD-3-clause;License: LGPL-2+;License: LGPL-2+;License: LGPL-2+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL;License: LGPL-2.1+;License: LGPL;License: LGPL;License: LGPL-2.1+;License: LGPL-3+;License: LGPL-2.1+;License: GPL-2+;License: GPL-2+;License: public-domain;License: GPL-2;License: GPL-2+;License: GPL-3+;License: BSD-3-clause;License: BSD-4-clause;License: BSLA;License: LGPL;License: LGPL-2+;License: LGPL-2.1+;License: LGPL-3+;License: MIT;
+util-linux	License: GPL-2+;License: GPL-2;License: GPL-2;License: GPL-2;License: GPL-3+;License: GPL-2;License: GPL-2;License: public-domain;License: BSD-4-clause;License: MIT;License: BSD-3-clause;License: BSLA;License: BSD-3-clause;License: BSD-3-clause;License: LGPL-2+;License: LGPL-2+;License: LGPL-2+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL-2.1+;License: LGPL;License: LGPL-2.1+;License: LGPL;License: LGPL;License: LGPL-2.1+;License: LGPL-3+;License: LGPL-2.1+;License: GPL-2+;License: GPL-2+;License: public-domain;License: GPL-2;License: GPL-2+;License: GPL-3+;License: BSD-3-clause;License: BSD-4-clause;License: BSLA;License: LGPL;License: LGPL-2+;License: LGPL-2.1+;License: LGPL-3+;License: MIT;
+zlib1g	License: Zlib;License: Zlib;License: Zlib;License: Zlib;License: Zlib;
+
+===rpm===

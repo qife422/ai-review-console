@@ -1,0 +1,2484 @@
+{
+  "generated_at": "2026-10-09T06:07:47.258522+00:00",
+  "method": "metadata identifier inventory; conservative text matching",
+  "legal_conclusion": "none; unknown/restricted metadata requires distribution review",
+  "summary": {
+    "recorded": 42,
+    "unknown": 17,
+    "review_required_copyleft_or_restricted_match": 81
+  },
+  "packages": [
+    {
+      "name": "adduser",
+      "version": "3.134",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "adduser",
+      "source_version": "3.134",
+      "license": {
+        "identifiers": [
+          "GPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "apt",
+      "version": "2.6.1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "apt",
+      "source_version": "2.6.1",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "Expat",
+          "GPL-2",
+          "GPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "base-files",
+      "version": "12.4+deb12u12",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "base-files",
+      "source_version": "12.4+deb12u12",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "unknown"
+    },
+    {
+      "name": "base-passwd",
+      "version": "3.6.1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "base-passwd",
+      "source_version": "3.6.1",
+      "license": {
+        "identifiers": [
+          "GPL-2",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "bash",
+      "version": "5.2.15-2+b9",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "bash",
+      "source_version": "5.2.15-2",
+      "license": {
+        "identifiers": [
+          "BSD-4-clause-UC",
+          "BSD-4-clause-UC and MIT-like",
+          "GFDL-NIV-1.3",
+          "GPL-2+",
+          "GPL-3+",
+          "GPL-3+ with Bison exception",
+          "Latex2e",
+          "MIT-like",
+          "permissive"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "bsdutils",
+      "version": "1:2.38.1-5+deb12u3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "util-linux",
+      "source_version": "2.38.1-5+deb12u3",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-4-clause",
+          "BSLA",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3+",
+          "LGPL",
+          "LGPL-2+",
+          "LGPL-2.1+",
+          "LGPL-3+",
+          "MIT",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "ca-certificates",
+      "version": "20230311+deb12u1",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "ca-certificates",
+      "source_version": "20230311+deb12u1",
+      "license": {
+        "identifiers": [
+          "GPL-2+",
+          "MPL-2.0"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "coreutils",
+      "version": "9.1-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "coreutils",
+      "source_version": "9.1-1",
+      "license": {
+        "identifiers": [
+          "BSD-4-clause-UC",
+          "FSFULLR",
+          "GFDL-NIV-1.3",
+          "GPL-3+",
+          "GPL-3+ and BSD-4-clause-UC",
+          "GPL-3+ and ISC",
+          "ISC"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "dash",
+      "version": "0.5.12-2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "dash",
+      "source_version": "0.5.12-2",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause",
+          "BSD-3-clause",
+          "GPL-2+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "debconf",
+      "version": "1.5.82",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "debconf",
+      "source_version": "1.5.82",
+      "license": {
+        "identifiers": [
+          "BSD-2-clause"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "debian-archive-keyring",
+      "version": "2023.3+deb12u2",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "debian-archive-keyring",
+      "source_version": "2023.3+deb12u2",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "unknown"
+    },
+    {
+      "name": "debianutils",
+      "version": "5.7-0.5~deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "debianutils",
+      "source_version": "5.7-0.5~deb12u1",
+      "license": {
+        "identifiers": [
+          "GPL-2+",
+          "SMAIL-GPL",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "diffutils",
+      "version": "1:3.8-4",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "diffutils",
+      "source_version": "1:3.8-4",
+      "license": {
+        "identifiers": [
+          "FSFAP",
+          "FSFULLR",
+          "GFDL-NIV-1.3",
+          "GPL-2+",
+          "GPL-3+",
+          "GPL-3+ and FSFULLR",
+          "GPL-3+ with autoconf exception",
+          "GPL-3+ with texinfo exception",
+          "LGPL-2.0+",
+          "LGPL-2.1+",
+          "LGPL-3.0+",
+          "LGPL-3.0+ or GPL-2+",
+          "X11",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "dpkg",
+      "version": "1.21.22",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "dpkg",
+      "source_version": "1.21.22",
+      "license": {
+        "identifiers": [
+          "BSD-2-clause",
+          "GPL-2",
+          "GPL-2+",
+          "public-domain-s-s-d"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "e2fsprogs",
+      "version": "1.47.0-2+b2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "e2fsprogs",
+      "source_version": "1.47.0-2",
+      "license": {
+        "identifiers": [
+          "Apache-2",
+          "BSD-3-Clause",
+          "GPL or MIT-US-export",
+          "GPL-2",
+          "GPL-2+ with Texinfo exception",
+          "ISC",
+          "Kazlib",
+          "LGPL-2",
+          "Latex2e"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "findutils",
+      "version": "4.9.0-4",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "findutils",
+      "source_version": "4.9.0-4",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-3-clause and/or GPL-3+",
+          "FSFAP",
+          "FSFULLR",
+          "GFDL-NIV-1.3+",
+          "GPL with automake exception",
+          "GPL-2+",
+          "GPL-2+ with Autoconf-data exception",
+          "GPL-3+",
+          "GPL-3+ with Autoconf-data exception",
+          "GPL-3+ with Bison-2.2 exception",
+          "ISC",
+          "ISC and/or LGPL-2.1+",
+          "LGPL-2+",
+          "LGPL-2.1+",
+          "LGPL-3",
+          "LGPL-3+",
+          "X11",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "gcc-12-base",
+      "version": "12.2.0-14+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "gcc-12",
+      "source_version": "12.2.0-14+deb12u1",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "unknown"
+    },
+    {
+      "name": "gpgv",
+      "version": "2.2.40-1.1+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "gnupg2",
+      "source_version": "2.2.40-1.1+deb12u1",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "CC0-1.0",
+          "Expat",
+          "GPL-3+",
+          "GPL-3+ or BSD-3-clause",
+          "LGPL-2.1+",
+          "LGPL-3+",
+          "RFC-Reference",
+          "TinySCHEME",
+          "permissive"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "grep",
+      "version": "3.8-5",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "grep",
+      "source_version": "3.8-5",
+      "license": {
+        "identifiers": [
+          "GPL-3+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "gzip",
+      "version": "1.12-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "gzip",
+      "source_version": "1.12-1",
+      "license": {
+        "identifiers": [
+          "FSF-manpages",
+          "GFDL-1.3+-no-invariant",
+          "GPL-3+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "hostname",
+      "version": "3.23+nmu1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "hostname",
+      "source_version": "3.23+nmu1",
+      "license": {
+        "identifiers": [
+          "GPL-2"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "init-system-helpers",
+      "version": "1.65.2+deb12u1",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "init-system-helpers",
+      "source_version": "1.65.2+deb12u1",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "GPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libacl1",
+      "version": "2.3.1-3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "acl",
+      "source_version": "2.3.1-3",
+      "license": {
+        "identifiers": [
+          "GPL-2+",
+          "LGPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libapt-pkg6.0",
+      "version": "2.6.1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "apt",
+      "source_version": "2.6.1",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "Expat",
+          "GPL-2",
+          "GPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libattr1",
+      "version": "1:2.5.1-4",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "attr",
+      "source_version": "1:2.5.1-4",
+      "license": {
+        "identifiers": [
+          "GPL-2+",
+          "LGPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libaudit-common",
+      "version": "1:3.0.9-1",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "audit",
+      "source_version": "1:3.0.9-1",
+      "license": {
+        "identifiers": [
+          "GPL-2",
+          "LGPL-2.1"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libaudit1",
+      "version": "1:3.0.9-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "audit",
+      "source_version": "1:3.0.9-1",
+      "license": {
+        "identifiers": [
+          "GPL-2",
+          "LGPL-2.1"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libblkid1",
+      "version": "2.38.1-5+deb12u3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "util-linux",
+      "source_version": "2.38.1-5+deb12u3",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-4-clause",
+          "BSLA",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3+",
+          "LGPL",
+          "LGPL-2+",
+          "LGPL-2.1+",
+          "LGPL-3+",
+          "MIT",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libbz2-1.0",
+      "version": "1.0.8-5+b1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "bzip2",
+      "source_version": "1.0.8-5",
+      "license": {
+        "identifiers": [
+          "BSD-variant",
+          "GPL-2"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libc-bin",
+      "version": "2.36-9+deb12u13",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "glibc",
+      "source_version": "2.36-9+deb12u13",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "unknown"
+    },
+    {
+      "name": "libc6",
+      "version": "2.36-9+deb12u13",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "glibc",
+      "source_version": "2.36-9+deb12u13",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "unknown"
+    },
+    {
+      "name": "libcap-ng0",
+      "version": "0.8.3-1+b3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libcap-ng",
+      "source_version": "0.8.3-1",
+      "license": {
+        "identifiers": [
+          "GPL-2+",
+          "GPL-3",
+          "LGPL-2.1+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libcap2",
+      "version": "1:2.66-4+deb12u2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libcap2",
+      "source_version": "1:2.66-4+deb12u2",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-3-clause or GPL-2",
+          "BSD-3-clause or GPL-2+",
+          "GPL-2",
+          "GPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libcom-err2",
+      "version": "1.47.0-2+b2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "e2fsprogs",
+      "source_version": "1.47.0-2",
+      "license": {
+        "identifiers": [
+          "Apache-2",
+          "BSD-3-Clause",
+          "GPL or MIT-US-export",
+          "GPL-2",
+          "GPL-2+ with Texinfo exception",
+          "ISC",
+          "Kazlib",
+          "LGPL-2",
+          "Latex2e"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libcrypt1",
+      "version": "1:4.4.33-2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libxcrypt",
+      "source_version": "1:4.4.33-2",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "unknown"
+    },
+    {
+      "name": "libdb5.3",
+      "version": "5.3.28+dfsg2-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "db5.3",
+      "source_version": "5.3.28+dfsg2-1",
+      "license": {
+        "identifiers": [
+          "Artistic or BSD-3-clause",
+          "BSD-3-clause",
+          "BSD-3-clause-fjord",
+          "GPL",
+          "GPL or Artistic",
+          "GPL-3",
+          "MIT-old",
+          "Ms-PL",
+          "Sleepycat",
+          "Sleepycat and BSD-3-clause",
+          "TCL-like",
+          "X11",
+          "zlib"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libdebconfclient0",
+      "version": "0.270",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "cdebconf",
+      "source_version": "0.270",
+      "license": {
+        "identifiers": [
+          "BSD-2-Clause",
+          "BSD-2-clause",
+          "GPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libext2fs2",
+      "version": "1.47.0-2+b2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "e2fsprogs",
+      "source_version": "1.47.0-2",
+      "license": {
+        "identifiers": [
+          "Apache-2",
+          "BSD-3-Clause",
+          "GPL or MIT-US-export",
+          "GPL-2",
+          "GPL-2+ with Texinfo exception",
+          "ISC",
+          "Kazlib",
+          "LGPL-2",
+          "Latex2e"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libffi8",
+      "version": "3.4.4-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libffi",
+      "source_version": "3.4.4-1",
+      "license": {
+        "identifiers": [
+          "Expat",
+          "GPL",
+          "GPL-2+",
+          "GPL-3+",
+          "MPL-1.1 or GPL-2+ or LGPL-2.1+",
+          "X11",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libgcc-s1",
+      "version": "12.2.0-14+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "gcc-12",
+      "source_version": "12.2.0-14+deb12u1",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "unknown"
+    },
+    {
+      "name": "libgcrypt20",
+      "version": "1.10.1-3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libgcrypt20",
+      "source_version": "1.10.1-3",
+      "license": {
+        "identifiers": [
+          ""
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "unknown"
+    },
+    {
+      "name": "libgdbm6",
+      "version": "1.23-3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "gdbm",
+      "source_version": "1.23-3",
+      "license": {
+        "identifiers": [
+          "GFDL-NIV-1.3+",
+          "GPL-2+",
+          "GPL-3+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libgmp10",
+      "version": "2:6.2.1+dfsg1-1.1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "gmp",
+      "source_version": "2:6.2.1+dfsg1-1.1",
+      "license": {
+        "identifiers": [
+          "GPL-2+",
+          "GPL-2+ or LGPL-3+",
+          "GPL-3+",
+          "GPL-3+ with Bison exception",
+          "LGPL-3+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libgnutls30",
+      "version": "3.7.9-2+deb12u5",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "gnutls28",
+      "source_version": "3.7.9-2+deb12u5",
+      "license": {
+        "identifiers": [
+          "",
+          "Apache-2.0",
+          "BSD-3-Clause",
+          "CC0 license",
+          "Expat",
+          "GPLv3+",
+          "LGPLv2.1+",
+          "LGPLv3+_or_GPLv2+",
+          "The main library is licensed under GNU Lesser"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libgpg-error0",
+      "version": "1.46-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libgpg-error",
+      "source_version": "1.46-1",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "GPL-3+",
+          "LGPL-2.1+",
+          "LGPL-2.1+ or BSD-3-clause",
+          "g10-permissive"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libgssapi-krb5-2",
+      "version": "1.20.1-2+deb12u4",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "krb5",
+      "source_version": "1.20.1-2+deb12u4",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "unknown"
+    },
+    {
+      "name": "libhogweed6",
+      "version": "3.8.1-2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "nettle",
+      "source_version": "3.8.1-2",
+      "license": {
+        "identifiers": [
+          "Expat",
+          "GAP",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3+",
+          "GPL-3+ with Autoconf exception",
+          "LGPL-2+",
+          "LGPL-3+",
+          "LGPL-3+ or GPL-2+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libidn2-0",
+      "version": "2.3.3-1+b1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libidn2",
+      "source_version": "2.3.3-1",
+      "license": {
+        "identifiers": [
+          "GPL-2+",
+          "GPL-3+",
+          "LGPL-3+",
+          "LGPL-3+ or GPL-2+",
+          "Unicode"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libk5crypto3",
+      "version": "1.20.1-2+deb12u4",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "krb5",
+      "source_version": "1.20.1-2+deb12u4",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "unknown"
+    },
+    {
+      "name": "libkeyutils1",
+      "version": "1.6.3-2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "keyutils",
+      "source_version": "1.6.3-2",
+      "license": {
+        "identifiers": [
+          "GPL-2+",
+          "LGPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libkrb5-3",
+      "version": "1.20.1-2+deb12u4",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "krb5",
+      "source_version": "1.20.1-2+deb12u4",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "unknown"
+    },
+    {
+      "name": "libkrb5support0",
+      "version": "1.20.1-2+deb12u4",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "krb5",
+      "source_version": "1.20.1-2+deb12u4",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "unknown"
+    },
+    {
+      "name": "liblz4-1",
+      "version": "1.9.4-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "lz4",
+      "source_version": "1.9.4-1",
+      "license": {
+        "identifiers": [
+          "BSD-2-clause",
+          "GPL-2+",
+          "GPL-2+ or BSD-2-clause"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "liblzma5",
+      "version": "5.4.1-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "xz-utils",
+      "source_version": "5.4.1-1",
+      "license": {
+        "identifiers": [
+          "",
+          "Autoconf",
+          "GPL-2",
+          "GPL-2+",
+          "LGPL-2.1+",
+          "PD",
+          "PD-debian",
+          "config-h",
+          "noderivs",
+          "none",
+          "permissive-fsf",
+          "permissive-nowarranty",
+          "probably-PD"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libmd0",
+      "version": "1.0.4-2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libmd",
+      "source_version": "1.0.4-2",
+      "license": {
+        "identifiers": [
+          "BSD-2-clause",
+          "BSD-2-clause-NetBSD",
+          "BSD-3-clause",
+          "BSD-3-clause-Aaron-D-Gifford",
+          "Beerware",
+          "ISC",
+          "public-domain-md4",
+          "public-domain-md5",
+          "public-domain-sha1"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libmount1",
+      "version": "2.38.1-5+deb12u3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "util-linux",
+      "source_version": "2.38.1-5+deb12u3",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-4-clause",
+          "BSLA",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3+",
+          "LGPL",
+          "LGPL-2+",
+          "LGPL-2.1+",
+          "LGPL-3+",
+          "MIT",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libncursesw6",
+      "version": "6.4-4",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "ncurses",
+      "source_version": "6.4-4",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "MIT/X11",
+          "X11"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libnettle8",
+      "version": "3.8.1-2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "nettle",
+      "source_version": "3.8.1-2",
+      "license": {
+        "identifiers": [
+          "Expat",
+          "GAP",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3+",
+          "GPL-3+ with Autoconf exception",
+          "LGPL-2+",
+          "LGPL-3+",
+          "LGPL-3+ or GPL-2+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libnsl2",
+      "version": "1.3.0-2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libnsl",
+      "source_version": "1.3.0-2",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "GPL-2+-autoconf-exception",
+          "GPL-2+-libtool-exception",
+          "GPL-3+-autoconf-exception",
+          "LGPL-2.1",
+          "LGPL-2.1+",
+          "MIT",
+          "permissive-autoconf-m4",
+          "permissive-autoconf-m4-no-warranty",
+          "permissive-configure",
+          "permissive-fsf",
+          "permissive-makefile-in"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libp11-kit0",
+      "version": "0.24.1-2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "p11-kit",
+      "source_version": "0.24.1-2",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "BSD-3-Clause",
+          "ISC",
+          "ISC+IBM",
+          "LGPL-2.1+",
+          "permissive-like-automake-output",
+          "same-as-rest-of-p11kit"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libpam-modules",
+      "version": "1.5.2-6+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "pam",
+      "source_version": "1.5.2-6+deb12u1",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause or GPL",
+          "BSD-tcp_wrappers",
+          "Beerware",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3",
+          "GPL-3+ with Bison exception",
+          "LGPL-2+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libpam-modules-bin",
+      "version": "1.5.2-6+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "pam",
+      "source_version": "1.5.2-6+deb12u1",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause or GPL",
+          "BSD-tcp_wrappers",
+          "Beerware",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3",
+          "GPL-3+ with Bison exception",
+          "LGPL-2+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libpam-runtime",
+      "version": "1.5.2-6+deb12u1",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "pam",
+      "source_version": "1.5.2-6+deb12u1",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause or GPL",
+          "BSD-tcp_wrappers",
+          "Beerware",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3",
+          "GPL-3+ with Bison exception",
+          "LGPL-2+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libpam0g",
+      "version": "1.5.2-6+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "pam",
+      "source_version": "1.5.2-6+deb12u1",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause or GPL",
+          "BSD-tcp_wrappers",
+          "Beerware",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3",
+          "GPL-3+ with Bison exception",
+          "LGPL-2+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libpcre2-8-0",
+      "version": "10.42-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "pcre2",
+      "source_version": "10.42-1",
+      "license": {
+        "identifiers": [
+          "BSD-2-clause",
+          "BSD-3-clause",
+          "BSD-3-clause-Cambridge with BINARY LIBRARY-LIKE PACKAGES exception",
+          "X11",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libreadline8",
+      "version": "8.2-1.3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "readline",
+      "source_version": "8.2-1.3",
+      "license": {
+        "identifiers": [
+          "GFDL-NIV-1.3+",
+          "GPL-2+",
+          "GPL-3",
+          "GPL-3+",
+          "ISC-no-attribution"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libseccomp2",
+      "version": "2.5.4-1+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libseccomp",
+      "source_version": "2.5.4-1+deb12u1",
+      "license": {
+        "identifiers": [
+          "LGPL-2.1"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libselinux1",
+      "version": "3.4-1+b6",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libselinux",
+      "source_version": "3.4-1",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "unknown"
+    },
+    {
+      "name": "libsemanage-common",
+      "version": "3.4-1",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "libsemanage",
+      "source_version": "3.4-1",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "unknown"
+    },
+    {
+      "name": "libsemanage2",
+      "version": "3.4-1+b5",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libsemanage",
+      "source_version": "3.4-1",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "unknown"
+    },
+    {
+      "name": "libsepol2",
+      "version": "3.4-2.1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libsepol",
+      "source_version": "3.4-2.1",
+      "license": {
+        "identifiers": [
+          "GPL-2",
+          "GPL-2+",
+          "LGPL-2.1+",
+          "Zlib"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libsmartcols1",
+      "version": "2.38.1-5+deb12u3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "util-linux",
+      "source_version": "2.38.1-5+deb12u3",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-4-clause",
+          "BSLA",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3+",
+          "LGPL",
+          "LGPL-2+",
+          "LGPL-2.1+",
+          "LGPL-3+",
+          "MIT",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libsqlite3-0",
+      "version": "3.40.1-2+deb12u2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "sqlite3",
+      "source_version": "3.40.1-2+deb12u2",
+      "license": {
+        "identifiers": [
+          "GPL-2+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libss2",
+      "version": "1.47.0-2+b2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "e2fsprogs",
+      "source_version": "1.47.0-2",
+      "license": {
+        "identifiers": [
+          "Apache-2",
+          "BSD-3-Clause",
+          "GPL or MIT-US-export",
+          "GPL-2",
+          "GPL-2+ with Texinfo exception",
+          "ISC",
+          "Kazlib",
+          "LGPL-2",
+          "Latex2e"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libssl3",
+      "version": "3.0.17-1~deb12u2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "openssl",
+      "source_version": "3.0.17-1~deb12u2",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "Artistic",
+          "Artistic or GPL-1+",
+          "GPL-1+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libstdc++6",
+      "version": "12.2.0-14+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "gcc-12",
+      "source_version": "12.2.0-14+deb12u1",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "unknown"
+    },
+    {
+      "name": "libsystemd0",
+      "version": "252.39-1~deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "systemd",
+      "source_version": "252.39-1~deb12u1",
+      "license": {
+        "identifiers": [
+          "CC0-1.0",
+          "Expat",
+          "GPL-2 with Linux-syscall-note exception",
+          "GPL-2+",
+          "LGPL-2.1+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libtasn1-6",
+      "version": "4.19.0-2+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libtasn1-6",
+      "source_version": "4.19.0-2+deb12u1",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "unknown"
+    },
+    {
+      "name": "libtinfo6",
+      "version": "6.4-4",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "ncurses",
+      "source_version": "6.4-4",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "MIT/X11",
+          "X11"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "libtirpc-common",
+      "version": "1.3.3+ds-1",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "libtirpc",
+      "source_version": "1.3.3+ds-1",
+      "license": {
+        "identifiers": [
+          "BSD-2-Clause",
+          "BSD-3-Clause",
+          "BSD-4-Clause",
+          "GPL-2",
+          "LGPL-2.1+",
+          "PERMISSIVE",
+          "__AUTO_PERMISSIVE__"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libtirpc3",
+      "version": "1.3.3+ds-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libtirpc",
+      "source_version": "1.3.3+ds-1",
+      "license": {
+        "identifiers": [
+          "BSD-2-Clause",
+          "BSD-3-Clause",
+          "BSD-4-Clause",
+          "GPL-2",
+          "LGPL-2.1+",
+          "PERMISSIVE",
+          "__AUTO_PERMISSIVE__"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libudev1",
+      "version": "252.39-1~deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "systemd",
+      "source_version": "252.39-1~deb12u1",
+      "license": {
+        "identifiers": [
+          "CC0-1.0",
+          "Expat",
+          "GPL-2 with Linux-syscall-note exception",
+          "GPL-2+",
+          "LGPL-2.1+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libunistring2",
+      "version": "1.0-2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libunistring",
+      "source_version": "1.0-2",
+      "license": {
+        "identifiers": [
+          "FreeSoftware",
+          "GFDL-1.2+",
+          "GPL-2+",
+          "GPL-2+ with distribution exception",
+          "GPL-3+",
+          "GPL-3+ or GFDL-1.2+",
+          "LGPL-3+",
+          "LGPL-3+ or GPL-2+",
+          "MIT"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libuuid1",
+      "version": "2.38.1-5+deb12u3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "util-linux",
+      "source_version": "2.38.1-5+deb12u3",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-4-clause",
+          "BSLA",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3+",
+          "LGPL",
+          "LGPL-2+",
+          "LGPL-2.1+",
+          "LGPL-3+",
+          "MIT",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libxxhash0",
+      "version": "0.8.1-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "xxhash",
+      "source_version": "0.8.1-1",
+      "license": {
+        "identifiers": [
+          "BSD-2-clause",
+          "GPL-2"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "libzstd1",
+      "version": "1.5.4+dfsg2-5",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libzstd",
+      "source_version": "1.5.4+dfsg2-5",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-3-clause or GPL-2",
+          "Expat",
+          "GPL-2",
+          "zlib"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "login",
+      "version": "1:4.13+dfsg1-1+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "shadow",
+      "source_version": "1:4.13+dfsg1-1+deb12u1",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "GPL-1",
+          "GPL-2+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "logsave",
+      "version": "1.47.0-2+b2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "e2fsprogs",
+      "source_version": "1.47.0-2",
+      "license": {
+        "identifiers": [
+          "Apache-2",
+          "BSD-3-Clause",
+          "GPL or MIT-US-export",
+          "GPL-2",
+          "GPL-2+ with Texinfo exception",
+          "ISC",
+          "Kazlib",
+          "LGPL-2",
+          "Latex2e"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "mawk",
+      "version": "1.3.4.20200120-3.1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "mawk",
+      "source_version": "1.3.4.20200120-3.1",
+      "license": {
+        "identifiers": [
+          "CC-BY-3.0",
+          "GPL-2",
+          "X11"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "mount",
+      "version": "2.38.1-5+deb12u3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "util-linux",
+      "source_version": "2.38.1-5+deb12u3",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-4-clause",
+          "BSLA",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3+",
+          "LGPL",
+          "LGPL-2+",
+          "LGPL-2.1+",
+          "LGPL-3+",
+          "MIT",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "ncurses-base",
+      "version": "6.4-4",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "ncurses",
+      "source_version": "6.4-4",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "MIT/X11",
+          "X11"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "ncurses-bin",
+      "version": "6.4-4",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "ncurses",
+      "source_version": "6.4-4",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "MIT/X11",
+          "X11"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "netbase",
+      "version": "6.4",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "netbase",
+      "source_version": "6.4",
+      "license": {
+        "identifiers": [
+          "GPL-2"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "openssl",
+      "version": "3.0.17-1~deb12u2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "openssl",
+      "source_version": "3.0.17-1~deb12u2",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "Artistic",
+          "Artistic or GPL-1+",
+          "GPL-1+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "passwd",
+      "version": "1:4.13+dfsg1-1+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "shadow",
+      "source_version": "1:4.13+dfsg1-1+deb12u1",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "GPL-1",
+          "GPL-2+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "perl-base",
+      "version": "5.36.0-7+deb12u3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "perl",
+      "source_version": "5.36.0-7+deb12u3",
+      "license": {
+        "identifiers": [
+          "Artistic",
+          "Artistic or GPL-1+ or Artistic-dist",
+          "Artistic-2",
+          "Artistic-dist",
+          "BSD-3-clause",
+          "BSD-3-clause-GENERIC",
+          "BSD-3-clause-with-weird-numbering",
+          "BSD-4-clause-POWERDOG",
+          "BZIP",
+          "CC0-1.0",
+          "DONT-CHANGE-THE-GPL",
+          "Expat",
+          "Expat or GPL-1+ or Artistic",
+          "GPL-1+",
+          "GPL-1+ or Artistic",
+          "GPL-1+ or Artistic or Artistic-dist",
+          "GPL-1+ or Artistic, and BSD-3-clause-GENERIC",
+          "GPL-1+ or Artistic, and BSD-4-clause-POWERDOG",
+          "GPL-1+ or Artistic, and Expat",
+          "GPL-1+ or Artistic, and Unicode",
+          "GPL-2+",
+          "GPL-2+ or Artistic",
+          "GPL-3+-WITH-BISON-EXCEPTION",
+          "HSIEH-BSD",
+          "HSIEH-DERIVATIVE",
+          "LGPL-2.1",
+          "REGCOMP",
+          "REGCOMP, and GPL-1+ or Artistic",
+          "RRA-KEEP-THIS-NOTICE",
+          "SDBM-PUBLIC-DOMAIN",
+          "TEXT-TABS",
+          "Unicode",
+          "ZLIB"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "readline-common",
+      "version": "8.2-1.3",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "readline",
+      "source_version": "8.2-1.3",
+      "license": {
+        "identifiers": [
+          "GFDL-NIV-1.3+",
+          "GPL-2+",
+          "GPL-3",
+          "GPL-3+",
+          "ISC-no-attribution"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "sed",
+      "version": "4.9-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "sed",
+      "source_version": "4.9-1",
+      "license": {
+        "identifiers": [
+          "BSD-4-clause-UC",
+          "BSL-1",
+          "GFDL-NIV-1.3+",
+          "GPL-3+",
+          "GPL-3+ and ISC",
+          "ISC",
+          "X11",
+          "pcre"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "sysvinit-utils",
+      "version": "3.06-4",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "sysvinit",
+      "source_version": "3.06-4",
+      "license": {
+        "identifiers": [
+          "GPL-2.0",
+          "GPL-2.0+",
+          "GPL-3.0"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "tar",
+      "version": "1.34+dfsg-1.2+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "tar",
+      "source_version": "1.34+dfsg-1.2+deb12u1",
+      "license": {
+        "identifiers": [
+          "GPL-2+",
+          "GPL-3+",
+          "GPL-3+ with Bison exception",
+          "LGPL-3+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "tzdata",
+      "version": "2025b-0+deb12u2",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "tzdata",
+      "source_version": "2025b-0+deb12u2",
+      "license": {
+        "identifiers": [
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "usr-is-merged",
+      "version": "37~deb12u1",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "usrmerge",
+      "source_version": "37~deb12u1",
+      "license": {
+        "identifiers": [
+          "GPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "util-linux",
+      "version": "2.38.1-5+deb12u3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "util-linux",
+      "source_version": "2.38.1-5+deb12u3",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-4-clause",
+          "BSLA",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3+",
+          "LGPL",
+          "LGPL-2+",
+          "LGPL-2.1+",
+          "LGPL-3+",
+          "MIT",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "util-linux-extra",
+      "version": "2.38.1-5+deb12u3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "util-linux",
+      "source_version": "2.38.1-5+deb12u3",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-4-clause",
+          "BSLA",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3+",
+          "LGPL",
+          "LGPL-2+",
+          "LGPL-2.1+",
+          "LGPL-3+",
+          "MIT",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "zlib1g",
+      "version": "1:1.2.13.dfsg-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "zlib",
+      "source_version": "1:1.2.13.dfsg-1",
+      "license": {
+        "identifiers": [
+          "Zlib"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "pip",
+      "version": "25.0.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pip-25.0.1.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "ai-review-console",
+      "version": "0.2.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/ai_review_console-0.2.0.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "websockets",
+      "version": "17.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/websockets-17.1.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/httpx-0.28.1.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/typing_inspection-0.4.4.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/charset_normalizer-3.5.1.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "PSF-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/typing_extensions-4.16.0.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/annotated_types-0.8.0.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "uvloop",
+      "version": "0.22.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT License",
+          "License :: OSI Approved :: Apache Software License",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/uvloop-0.22.1.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "reportlab",
+      "version": "4.5.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD license (see license.txt for details), Copyright (c) 2000-2025, ReportLab Inc.",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/reportlab-4.5.1.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.13.5",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pydantic-2.13.5.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "SQLAlchemy",
+      "version": "2.0.52",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/sqlalchemy-2.0.52.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.46.5",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pydantic_core-2.46.5.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "python-multipart",
+      "version": "0.0.32",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/python_multipart-0.0.32.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pyyaml-6.0.3.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MPL-2.0",
+          "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/certifi-2026.7.22.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "watchfiles",
+      "version": "1.2.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/watchfiles-1.2.0.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "pypdf",
+      "version": "6.16.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pypdf-6.16.2.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "psycopg",
+      "version": "3.3.5",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "LGPL-3.0-only"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/psycopg-3.3.5.dist-info"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "fastapi",
+      "version": "0.141.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/fastapi-0.141.1.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/click-8.5.0.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "anyio",
+      "version": "4.14.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/anyio-4.14.2.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "idna",
+      "version": "3.19",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/idna-3.19.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT-CMU"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pillow-12.3.0.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/h11-0.16.0.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/httpcore-1.0.9.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "psycopg-binary",
+      "version": "3.3.5",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "LGPL-3.0-only"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/psycopg_binary-3.3.5.dist-info"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "starlette",
+      "version": "1.6.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/starlette-1.6.0.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "python-docx",
+      "version": "1.2.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/python_docx-1.2.0.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "lxml",
+      "version": "6.1.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/lxml-6.1.2.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.52.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/uvicorn-0.52.4.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "httptools",
+      "version": "0.8.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/httptools-0.8.0.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.2.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/python_dotenv-1.2.3.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "greenlet",
+      "version": "3.5.5",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT AND PSF-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/greenlet-3.5.5.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/annotated_doc-0.0.5.dist-info"
+      },
+      "license_check": "recorded"
+    }
+  ]
+}

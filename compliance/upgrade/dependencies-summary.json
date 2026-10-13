@@ -1,0 +1,21 @@
+{
+  "python": {
+    "exit_code": null,
+    "components": 33,
+    "vulnerabilities": null,
+    "service": "pip-audit PyPI JSON API",
+    "database_snapshot_date": "not exposed by service"
+  },
+  "node_sbom_exit_code": 0,
+  "node_all": {
+    "exit_code": null,
+    "counts": null
+  },
+  "node_runtime": {
+    "exit_code": null,
+    "counts": null
+  },
+  "vulnerability_state": "not_scanned_external_authorization",
+  "node_service": "configured npm registry audit API",
+  "node_database_snapshot_date": "not exposed by registry"
+}

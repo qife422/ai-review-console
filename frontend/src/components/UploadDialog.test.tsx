@@ -9,6 +9,7 @@ test("validates file size, format and the synthetic confirmation before submitti
   const input = container.querySelector('input[type="file"]')!;
   const submit = screen.getByRole("button", { name: "提交审查" });
   expect(submit).toBeDisabled();
+  expect(screen.getByLabelText("案件标题")).toHaveFocus();
   fireEvent.change(input, { target: { files: [new File(["invalid"], "document.exe")] } });
   expect(screen.getByText("仅支持 PDF、DOCX、TXT 和 MD。")).toBeInTheDocument();
   expect(submit).toBeDisabled();

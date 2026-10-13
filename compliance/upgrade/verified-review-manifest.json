@@ -1,0 +1,529 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "RELEASE-001",
+    "AC-19"
+  ],
+  "stage": "validate",
+  "created_at": "2026-10-09T06:08:12.921106+00:00",
+  "producer": "scripts/scan_release.py",
+  "temporary_root": "/private/tmp/arc-release-scan.lBO9lV",
+  "temporary_bytes": 1487377,
+  "temporary_limit_bytes": 268435456,
+  "source_inputs": [
+    {
+      "path": "requirements.lock",
+      "bytes": 1989,
+      "sha256": "3e922f3cd862294cc26dc83d6376415baed2ca8536bbb95a7aa67a475934078e"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "bytes": 89629,
+      "sha256": "4333ef73332a46fc299d162478978aed269a99952bb88c60f1eed1b43200d96e"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 1102,
+      "sha256": "3d193966d9d583c66b5a920e72fb1c12a1a64536a4f58c255cc9d21f0a574852"
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 914,
+      "sha256": "ac221a6e3e73079eb59e2e5cbac09c7982b40b780290ff7c1ab47fe9c974f7e2"
+    },
+    {
+      "path": "docker/api.Dockerfile",
+      "bytes": 739,
+      "sha256": "c91c064a2b614211cf1737ec0bf7e4851d57e8efaa22d4e94b35a69859cd82e0"
+    },
+    {
+      "path": "docker/langflow.Dockerfile",
+      "bytes": 560,
+      "sha256": "386af69cbc057c9ccd436544abc2e27099924202ba19a33a7d9844ec20e7dd6e"
+    },
+    {
+      "path": "docker/web.Dockerfile",
+      "bytes": 204,
+      "sha256": "4954ffd58f4c482cfd917219d44554f8491887fce4fdb1bf4cc88875a497827b"
+    },
+    {
+      "path": "docker-compose.yml",
+      "bytes": 5718,
+      "sha256": "3ed8114906db4b5a4a7e17dc2b0612f57e64ee73aac7b1b1c04bc5b46161b13c"
+    },
+    {
+      "path": "docs/UPGRADE_SPEC.md",
+      "bytes": 50489,
+      "sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753"
+    },
+    {
+      "path": "docs/spec-baseline.json",
+      "bytes": 8731,
+      "sha256": "5ad13f524e74554b9c8cb30b9809ffbbbbed8e3d7fa4ede5625bb1b7d781bf2e"
+    },
+    {
+      "path": "scripts/scan_release.py",
+      "bytes": 38339,
+      "sha256": "f3f353ff9a50651aa864aa75dbb480da9481dc78aaacaac2b74a90616558ea0c"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1397,
+      "sha256": "de363a619856afe3480aead03abfce454a51f85a2ba8b83d89d20f7c5dafb8fe"
+    }
+  ],
+  "tools": {
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 11:23:37) [Clang 14.0.6 ]",
+    "pip-audit": "2.10.1",
+    "cyclonedx-python-lib": "11.12.0",
+    "npm": "10.9.2",
+    "docker_scout": "1.18.1; locally probed before scanning"
+  },
+  "commands": [],
+  "result": {
+    "created_at": "2026-10-09T06:08:12.912993+00:00",
+    "revisions": [
+      {
+        "file": "node.cdx.json",
+        "before": {
+          "path": "compliance/upgrade/node.cdx.json",
+          "bytes": 197367,
+          "sha256": "ead90d679e41ef96aaa07f1fe9e7f65c49d8ac51ec2804f85e721978de312fa2"
+        },
+        "after": {
+          "path": "compliance/upgrade/node.cdx.json",
+          "bytes": 197367,
+          "sha256": "ead90d679e41ef96aaa07f1fe9e7f65c49d8ac51ec2804f85e721978de312fa2"
+        },
+        "raw_source": {
+          "path": "compliance/upgrade/verified-node-sbom.stdout",
+          "bytes": 200772,
+          "sha256": "429ac34642f15d818920e9835120c3c3aa38be2260c62a45762bee2d2108d21a"
+        },
+        "method": "dedup duplicate npm bom-ref; union dependsOn edges per ref",
+        "components_before": 237,
+        "components_after": 237,
+        "dependencies_before": 238,
+        "dependencies_after": 238
+      },
+      {
+        "file": "python-licenses.json",
+        "before": {
+          "path": "compliance/upgrade/python-licenses.json",
+          "bytes": 14151,
+          "sha256": "eebf00ea7e1a6cacf9ad65aba0e459482cf24a7b5fb72e6f53d049d60e24ad22"
+        },
+        "after": {
+          "path": "compliance/upgrade/python-licenses.json",
+          "bytes": 14151,
+          "sha256": "6ccf616fce610dc7a0a1848732d3636298d1ac427ad1698ea85cabe9ddf80657"
+        },
+        "raw_source": {
+          "path": "compliance/upgrade/verified-runtime-api-python-metadata.stdout",
+          "bytes": 28391,
+          "sha256": "57774de0e795c310cd06847dc3f0218ed39aea5986a136472cc955632566b582"
+        },
+        "method": "fill missing license using exact locked package version in final API image"
+      }
+    ],
+    "validations": [
+      {
+        "file": "api-image.cdx.json",
+        "sha256": "3f1b73255f98607499f65078909e1c0c5823a8ed1211a5f75c2166a005bb459f",
+        "schema": "CycloneDX strict 1.5",
+        "schema_valid": true,
+        "bom_refs_unique": true,
+        "errors": []
+      },
+      {
+        "file": "langflow-image.cdx.json",
+        "sha256": "e3278086288b7a1e1b0b8cddbd7c9bd80fa6f654d3ec8d67dc39e6d4f7f5ab38",
+        "schema": "CycloneDX strict 1.5",
+        "schema_valid": true,
+        "bom_refs_unique": true,
+        "errors": []
+      },
+      {
+        "file": "node.cdx.json",
+        "sha256": "ead90d679e41ef96aaa07f1fe9e7f65c49d8ac51ec2804f85e721978de312fa2",
+        "schema": "CycloneDX strict 1.5",
+        "schema_valid": true,
+        "bom_refs_unique": true,
+        "errors": []
+      },
+      {
+        "file": "python.cdx.json",
+        "sha256": "4dd05fde1947850a7f1e663719832de50a1324210e5eba253f04390a17c44a8b",
+        "schema": "CycloneDX strict 1.5",
+        "schema_valid": true,
+        "bom_refs_unique": true,
+        "errors": []
+      },
+      {
+        "file": "web-image.cdx.json",
+        "sha256": "47c2246f9a8a76a73ebd5e0ae6504f0bf0586f8f9f170f5f9cb245950b01d269",
+        "schema": "CycloneDX strict 1.5",
+        "schema_valid": true,
+        "bom_refs_unique": true,
+        "errors": []
+      },
+      {
+        "file": "api-image.spdx.json",
+        "sha256": "d27aa9e2b370d7c847a2ddab4c223f8f6764ffebc5bdcc522bfc6873322624ce",
+        "schema": "SPDX structural checks only, not full SPDX schema validation",
+        "package_ids_unique": true,
+        "document_relationships_valid": true
+      },
+      {
+        "file": "langflow-image.spdx.json",
+        "sha256": "512e8125152b720f13ccd8291b0b095981066c2bd3895238c15676fcac29e49b",
+        "schema": "SPDX structural checks only, not full SPDX schema validation",
+        "package_ids_unique": true,
+        "document_relationships_valid": true
+      },
+      {
+        "file": "web-image.spdx.json",
+        "sha256": "b7f4e77305d27077de174df98ab8ce080835a7a42f4e48ad0b9e51c82b3f146e",
+        "schema": "SPDX structural checks only, not full SPDX schema validation",
+        "package_ids_unique": true,
+        "document_relationships_valid": true
+      }
+    ],
+    "jsonschema": "4.23.0",
+    "online_vulnerability_audit": "not_executed_authorization_pending",
+    "no_additional_tool_downloads": true
+  },
+  "limitations": [
+    "Remote vulnerability services do not expose reproducible database snapshot dates.",
+    "Metadata SBOM is not a complete filesystem/static-binary scan.",
+    "License metadata is not legal approval; unknown/restricted licenses need review.",
+    "P0/P1 local release evidence does not establish production readiness."
+  ],
+  "files": [
+    {
+      "path": "compliance/upgrade/README.md",
+      "bytes": 4676,
+      "sha256": "b79d9eb577a01733f1b7ea5a65286c29d582bdffd35526c9f695cd768cba79eb"
+    },
+    {
+      "path": "compliance/upgrade/api-image-licenses.json",
+      "bytes": 68043,
+      "sha256": "094a504a7a754d0d97a06ab70e0b42380e22c879e6baa9a5a344b6a6e22685f3"
+    },
+    {
+      "path": "compliance/upgrade/api-image.cdx.json",
+      "bytes": 96043,
+      "sha256": "3f1b73255f98607499f65078909e1c0c5823a8ed1211a5f75c2166a005bb459f"
+    },
+    {
+      "path": "compliance/upgrade/api-image.spdx.json",
+      "bytes": 96649,
+      "sha256": "d27aa9e2b370d7c847a2ddab4c223f8f6764ffebc5bdcc522bfc6873322624ce"
+    },
+    {
+      "path": "compliance/upgrade/dependencies-summary.json",
+      "bytes": 529,
+      "sha256": "33dc6dafa83b2f11052f16498d7f0163ae8a47ce14f60f13f858e30d29f95c60"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-api-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-api-identity.stdout",
+      "bytes": 1411,
+      "sha256": "737fad19abcd8d144d9dfdd0a6ec2b2aad15d46158b3cdef3c72be4999bcf591"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-api-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-api-os-metadata.stdout",
+      "bytes": 44621,
+      "sha256": "8c189f7fa549554b83a06de3feec20f91473d6b90fbc1b0f2b14110e32238351"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-api-python-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-api-python-metadata.stdout",
+      "bytes": 28391,
+      "sha256": "57774de0e795c310cd06847dc3f0218ed39aea5986a136472cc955632566b582"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-langflow-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-langflow-identity.stdout",
+      "bytes": 1786,
+      "sha256": "93eaeb05b32ffc3af7d23a0bdb8e75845274122239f3bbaf9b8309e50dae4e15"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-langflow-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-langflow-os-metadata.stdout",
+      "bytes": 21552,
+      "sha256": "259d88c4d6b98653650e070b44fff7faca30eb3a48fd55bb0982db3ab15bd4fa"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-langflow-python-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-langflow-python-metadata.stdout",
+      "bytes": 771566,
+      "sha256": "127497e8e86bf9bc92f9d1e8ca7c5a7c82ed7b3ea2222afc2518698882fc221e"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-summary.json",
+      "bytes": 12302,
+      "sha256": "fc879976f1f20217d1ae9c05482c2761d365858565ae3f27a5a55d3ae2f37fa2"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-web-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-web-identity.stdout",
+      "bytes": 1048,
+      "sha256": "1a193ef95137ad426b5bd3091e77e96006f5eafd49f9ebc2ac945c5b0062e1fc"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-web-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-web-os-metadata.stdout",
+      "bytes": 103859,
+      "sha256": "5cafa2c6ffdaea8eadf564daf30fcc0e9fee4e52b18416d65be0048e5f91cf78"
+    },
+    {
+      "path": "compliance/upgrade/langflow-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/langflow-identity.stdout",
+      "bytes": 1786,
+      "sha256": "93eaeb05b32ffc3af7d23a0bdb8e75845274122239f3bbaf9b8309e50dae4e15"
+    },
+    {
+      "path": "compliance/upgrade/langflow-image-licenses.json",
+      "bytes": 340082,
+      "sha256": "cd0e3f6601033f437221a930899347293be93a38a7e44c0a215c0913bf03f23c"
+    },
+    {
+      "path": "compliance/upgrade/langflow-image.cdx.json",
+      "bytes": 509284,
+      "sha256": "e3278086288b7a1e1b0b8cddbd7c9bd80fa6f654d3ec8d67dc39e6d4f7f5ab38"
+    },
+    {
+      "path": "compliance/upgrade/langflow-image.spdx.json",
+      "bytes": 512635,
+      "sha256": "512e8125152b720f13ccd8291b0b095981066c2bd3895238c15676fcac29e49b"
+    },
+    {
+      "path": "compliance/upgrade/langflow-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/langflow-os-metadata.stdout",
+      "bytes": 21552,
+      "sha256": "259d88c4d6b98653650e070b44fff7faca30eb3a48fd55bb0982db3ab15bd4fa"
+    },
+    {
+      "path": "compliance/upgrade/langflow-python-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/langflow-python-metadata.stdout",
+      "bytes": 771566,
+      "sha256": "127497e8e86bf9bc92f9d1e8ca7c5a7c82ed7b3ea2222afc2518698882fc221e"
+    },
+    {
+      "path": "compliance/upgrade/langflow-web-summary.json",
+      "bytes": 5461,
+      "sha256": "68b3bc9fac7a4e8cf185c705c1e5c532570e3b10ff14d5fceb29ee66b9204439"
+    },
+    {
+      "path": "compliance/upgrade/node-licenses.json",
+      "bytes": 67670,
+      "sha256": "973a1ba7a3e74fb2b526cd164fb9677447d90019b6e0e3f2952ca5bebc98b398"
+    },
+    {
+      "path": "compliance/upgrade/node-sbom.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/node-sbom.stdout",
+      "bytes": 200772,
+      "sha256": "4983cdedf93db833f76f7581e651d910faad36643c4996a0e4ef2743c0f9444e"
+    },
+    {
+      "path": "compliance/upgrade/node.cdx.json",
+      "bytes": 197367,
+      "sha256": "ead90d679e41ef96aaa07f1fe9e7f65c49d8ac51ec2804f85e721978de312fa2"
+    },
+    {
+      "path": "compliance/upgrade/python-licenses.json",
+      "bytes": 14151,
+      "sha256": "6ccf616fce610dc7a0a1848732d3636298d1ac427ad1698ea85cabe9ddf80657"
+    },
+    {
+      "path": "compliance/upgrade/python.cdx.json",
+      "bytes": 5007,
+      "sha256": "4dd05fde1947850a7f1e663719832de50a1324210e5eba253f04390a17c44a8b"
+    },
+    {
+      "path": "compliance/upgrade/sbom-validation.json",
+      "bytes": 3953,
+      "sha256": "0dfb5bb2840e121e7b0450acad110c1f04d97ea7c7d337e3eed3960a1ee15e40"
+    },
+    {
+      "path": "compliance/upgrade/verified-node-sbom.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-node-sbom.stdout",
+      "bytes": 200772,
+      "sha256": "429ac34642f15d818920e9835120c3c3aa38be2260c62a45762bee2d2108d21a"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-api-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-api-identity.stdout",
+      "bytes": 1411,
+      "sha256": "2e04a0fdbc49a076f788c4411cd4c02a001683f915ad8a611e991e34f963cbcf"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-api-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-api-os-metadata.stdout",
+      "bytes": 44621,
+      "sha256": "8c189f7fa549554b83a06de3feec20f91473d6b90fbc1b0f2b14110e32238351"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-api-python-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-api-python-metadata.stdout",
+      "bytes": 28391,
+      "sha256": "57774de0e795c310cd06847dc3f0218ed39aea5986a136472cc955632566b582"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-langflow-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-langflow-identity.stdout",
+      "bytes": 1786,
+      "sha256": "85c0b3c859b48c8f2f19cb83162c783a65289051ed759ecb1b6a6a93388dd0c1"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-langflow-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-langflow-os-metadata.stdout",
+      "bytes": 21552,
+      "sha256": "259d88c4d6b98653650e070b44fff7faca30eb3a48fd55bb0982db3ab15bd4fa"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-langflow-python-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-langflow-python-metadata.stdout",
+      "bytes": 771566,
+      "sha256": "127497e8e86bf9bc92f9d1e8ca7c5a7c82ed7b3ea2222afc2518698882fc221e"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-summary.json",
+      "bytes": 12926,
+      "sha256": "8c954f5f689a545748eec5df21cd75ab2c1c1ed8a179cc825cd3ca521d959234"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-web-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-web-identity.stdout",
+      "bytes": 1048,
+      "sha256": "1a193ef95137ad426b5bd3091e77e96006f5eafd49f9ebc2ac945c5b0062e1fc"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-web-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-web-os-metadata.stdout",
+      "bytes": 103859,
+      "sha256": "5cafa2c6ffdaea8eadf564daf30fcc0e9fee4e52b18416d65be0048e5f91cf78"
+    },
+    {
+      "path": "compliance/upgrade/web-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/web-identity.stdout",
+      "bytes": 1047,
+      "sha256": "af47ee1e0e05071e9f80c36513db1de26bc4d45836d640f3db7886cf9b11e982"
+    },
+    {
+      "path": "compliance/upgrade/web-image-licenses.json",
+      "bytes": 23734,
+      "sha256": "b81fa65529466957d45679ba579e1486dfb3cdc3e0ba957ad435eac015f1d487"
+    },
+    {
+      "path": "compliance/upgrade/web-image.cdx.json",
+      "bytes": 44892,
+      "sha256": "47c2246f9a8a76a73ebd5e0ae6504f0bf0586f8f9f170f5f9cb245950b01d269"
+    },
+    {
+      "path": "compliance/upgrade/web-image.spdx.json",
+      "bytes": 49792,
+      "sha256": "b7f4e77305d27077de174df98ab8ce080835a7a42f4e48ad0b9e51c82b3f146e"
+    },
+    {
+      "path": "compliance/upgrade/web-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/web-os-metadata.stdout",
+      "bytes": 103859,
+      "sha256": "5cafa2c6ffdaea8eadf564daf30fcc0e9fee4e52b18416d65be0048e5f91cf78"
+    }
+  ]
+}

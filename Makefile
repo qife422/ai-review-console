@@ -1,7 +1,9 @@
 PYTHON ?= .venv/bin/python
 PIP ?= .venv/bin/pip
+COMPOSE_PROJECT ?= ai-review-console-upgrade
+COMPOSE = docker compose -p $(COMPOSE_PROJECT)
 
-.PHONY: install test lint audit fixtures web-install web-test web-build validate-langflow
+.PHONY: install test lint audit fixtures web-install web-test web-build validate-langflow migrate stack
 
 install:
 	$(PIP) install -r requirements.lock
@@ -21,7 +23,7 @@ fixtures:
 	$(PYTHON) scripts/generate_fixtures.py
 
 web-install:
-	cd frontend && npm install
+	cd frontend && npm ci
 
 web-test:
 	cd frontend && npm test -- --run
@@ -31,3 +33,14 @@ web-build:
 
 validate-langflow:
 	$(PYTHON) scripts/validate_langflow.py
+
+migrate:
+	$(PYTHON) -m api.app.migrations
+
+stack:
+	$(COMPOSE) build
+	$(COMPOSE) up -d postgres langflow
+	$(COMPOSE) run --no-deps storage-init
+	$(COMPOSE) run migrate
+	$(COMPOSE) run flow-init
+	$(COMPOSE) up -d --no-deps api worker web

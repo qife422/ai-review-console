@@ -1,0 +1,1301 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "RELEASE-001",
+    "AC-19"
+  ],
+  "stage": "images",
+  "created_at": "2026-10-09T06:07:51.794419+00:00",
+  "producer": "scripts/scan_release.py",
+  "temporary_root": "/private/tmp/arc-release-scan.lBO9lV",
+  "temporary_bytes": 1487377,
+  "temporary_limit_bytes": 268435456,
+  "source_inputs": [
+    {
+      "path": "requirements.lock",
+      "bytes": 1989,
+      "sha256": "3e922f3cd862294cc26dc83d6376415baed2ca8536bbb95a7aa67a475934078e"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "bytes": 89629,
+      "sha256": "4333ef73332a46fc299d162478978aed269a99952bb88c60f1eed1b43200d96e"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 1102,
+      "sha256": "3d193966d9d583c66b5a920e72fb1c12a1a64536a4f58c255cc9d21f0a574852"
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 914,
+      "sha256": "ac221a6e3e73079eb59e2e5cbac09c7982b40b780290ff7c1ab47fe9c974f7e2"
+    },
+    {
+      "path": "docker/api.Dockerfile",
+      "bytes": 739,
+      "sha256": "c91c064a2b614211cf1737ec0bf7e4851d57e8efaa22d4e94b35a69859cd82e0"
+    },
+    {
+      "path": "docker/langflow.Dockerfile",
+      "bytes": 560,
+      "sha256": "386af69cbc057c9ccd436544abc2e27099924202ba19a33a7d9844ec20e7dd6e"
+    },
+    {
+      "path": "docker/web.Dockerfile",
+      "bytes": 204,
+      "sha256": "4954ffd58f4c482cfd917219d44554f8491887fce4fdb1bf4cc88875a497827b"
+    },
+    {
+      "path": "docker-compose.yml",
+      "bytes": 5718,
+      "sha256": "3ed8114906db4b5a4a7e17dc2b0612f57e64ee73aac7b1b1c04bc5b46161b13c"
+    },
+    {
+      "path": "docs/UPGRADE_SPEC.md",
+      "bytes": 50489,
+      "sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753"
+    },
+    {
+      "path": "docs/spec-baseline.json",
+      "bytes": 8731,
+      "sha256": "5ad13f524e74554b9c8cb30b9809ffbbbbed8e3d7fa4ede5625bb1b7d781bf2e"
+    },
+    {
+      "path": "scripts/scan_release.py",
+      "bytes": 38339,
+      "sha256": "f3f353ff9a50651aa864aa75dbb480da9481dc78aaacaac2b74a90616558ea0c"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1397,
+      "sha256": "de363a619856afe3480aead03abfce454a51f85a2ba8b83d89d20f7c5dafb8fe"
+    }
+  ],
+  "tools": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "pip-audit": "2.10.1",
+    "cyclonedx-python-lib": "11.12.0",
+    "npm": "10.9.2",
+    "docker_scout": "1.18.1; locally probed before scanning"
+  },
+  "commands": [
+    {
+      "label": "verified-runtime-api-identity",
+      "command": [
+        "docker",
+        "image",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"created\":{{json .Created}},\"size\":{{json .Size}},\"os\":{{json .Os}},\"architecture\":{{json .Architecture}},\"repo_digests\":{{json .RepoDigests}},\"layers\":{{json .RootFS.Layers}}}",
+        "sha256:4e807fd845c49d138849f25a1e3521d41ec4a9daa80c3af23c1ea9bdbbf2f29b"
+      ],
+      "cwd": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+      "started_at": "2026-10-09T06:07:45.379289+00:00",
+      "ended_at": "2026-10-09T06:07:45.487874+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "temporary_bytes_after": 1487377,
+      "stdout": "verified-runtime-api-identity.stdout",
+      "stderr": "verified-runtime-api-identity.stderr"
+    },
+    {
+      "label": "verified-runtime-api-os-metadata",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "256m",
+        "--cpus",
+        "1",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "--entrypoint",
+        "/bin/sh",
+        "sha256:4e807fd845c49d138849f25a1e3521d41ec4a9daa80c3af23c1ea9bdbbf2f29b",
+        "-c",
+        "\nprintf '===os-release===\\n'\nif [ -r /etc/os-release ]; then cat /etc/os-release; fi\nprintf '\\n===apk===\\n'\nif [ -r /lib/apk/db/installed ]; then cat /lib/apk/db/installed; fi\nprintf '\\n===dpkg===\\n'\nif command -v dpkg-query >/dev/null 2>&1; then\n dpkg_fmt='${binary:Package}\\t${Version}\\t${Architecture}'\n dpkg_fmt=\"$dpkg_fmt\"'\\t${source:Package}\\t${source:Version}\\n'\n dpkg-query -W -f=\"$dpkg_fmt\"\nfi\nprintf '\\n===dpkg-licenses===\\n'\nfor copyright_path in /usr/share/doc/*/copyright; do\n [ -r \"$copyright_path\" ] || continue\n package_path=${copyright_path%/copyright}\n printf '%s\\t' \"${package_path##*/}\"\n awk '/^License:/ {gsub(/\\t/, \" \"); printf \"%s;\", $0}' \"$copyright_path\"\n printf '\\n'\ndone\nprintf '\\n===rpm===\\n'\nif command -v rpm >/dev/null 2>&1; then\n rpm -qa --qf '%{NAME}\\t%{VERSION}-%{RELEASE}\\t%{ARCH}\\t%{LICENSE}\\n'\nfi\n"
+      ],
+      "cwd": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+      "started_at": "2026-10-09T06:07:45.496836+00:00",
+      "ended_at": "2026-10-09T06:07:46.241669+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "temporary_bytes_after": 1487377,
+      "stdout": "verified-runtime-api-os-metadata.stdout",
+      "stderr": "verified-runtime-api-os-metadata.stderr"
+    },
+    {
+      "label": "verified-runtime-api-python-metadata",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "256m",
+        "--cpus",
+        "1",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "--entrypoint",
+        "python",
+        "sha256:4e807fd845c49d138849f25a1e3521d41ec4a9daa80c3af23c1ea9bdbbf2f29b",
+        "-c",
+        "\nimport importlib.metadata as m, json, sys\npackages=[]\nfor d in m.distributions():\n    h=d.metadata\n    packages.append({\"name\":h.get(\"Name\",\"\"), \"version\":d.version,\n        \"license_expression\":h.get(\"License-Expression\",\"\"),\n        \"license\":h.get(\"License\",\"\")[:4096],\n        \"classifiers\":h.get_all(\"Classifier\") or [],\n        \"location\":str(d._path)})\nprint(json.dumps({\"interpreter\":sys.executable,\"python_version\":sys.version,\n    \"packages\":packages},sort_keys=True))\n"
+      ],
+      "cwd": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+      "started_at": "2026-10-09T06:07:46.254660+00:00",
+      "ended_at": "2026-10-09T06:07:47.242598+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "temporary_bytes_after": 1487377,
+      "stdout": "verified-runtime-api-python-metadata.stdout",
+      "stderr": "verified-runtime-api-python-metadata.stderr"
+    },
+    {
+      "label": "verified-runtime-langflow-identity",
+      "command": [
+        "docker",
+        "image",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"created\":{{json .Created}},\"size\":{{json .Size}},\"os\":{{json .Os}},\"architecture\":{{json .Architecture}},\"repo_digests\":{{json .RepoDigests}},\"layers\":{{json .RootFS.Layers}}}",
+        "sha256:ff0f5cc380743034c05b4bfcf587be0e714da1610799f0c7c41d45902a5267c4"
+      ],
+      "cwd": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+      "started_at": "2026-10-09T06:07:47.265893+00:00",
+      "ended_at": "2026-10-09T06:07:47.382754+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "temporary_bytes_after": 1487377,
+      "stdout": "verified-runtime-langflow-identity.stdout",
+      "stderr": "verified-runtime-langflow-identity.stderr"
+    },
+    {
+      "label": "verified-runtime-langflow-os-metadata",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "256m",
+        "--cpus",
+        "1",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "--entrypoint",
+        "/bin/sh",
+        "sha256:ff0f5cc380743034c05b4bfcf587be0e714da1610799f0c7c41d45902a5267c4",
+        "-c",
+        "\nprintf '===os-release===\\n'\nif [ -r /etc/os-release ]; then cat /etc/os-release; fi\nprintf '\\n===apk===\\n'\nif [ -r /lib/apk/db/installed ]; then cat /lib/apk/db/installed; fi\nprintf '\\n===dpkg===\\n'\nif command -v dpkg-query >/dev/null 2>&1; then\n dpkg_fmt='${binary:Package}\\t${Version}\\t${Architecture}'\n dpkg_fmt=\"$dpkg_fmt\"'\\t${source:Package}\\t${source:Version}\\n'\n dpkg-query -W -f=\"$dpkg_fmt\"\nfi\nprintf '\\n===dpkg-licenses===\\n'\nfor copyright_path in /usr/share/doc/*/copyright; do\n [ -r \"$copyright_path\" ] || continue\n package_path=${copyright_path%/copyright}\n printf '%s\\t' \"${package_path##*/}\"\n awk '/^License:/ {gsub(/\\t/, \" \"); printf \"%s;\", $0}' \"$copyright_path\"\n printf '\\n'\ndone\nprintf '\\n===rpm===\\n'\nif command -v rpm >/dev/null 2>&1; then\n rpm -qa --qf '%{NAME}\\t%{VERSION}-%{RELEASE}\\t%{ARCH}\\t%{LICENSE}\\n'\nfi\n"
+      ],
+      "cwd": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+      "started_at": "2026-10-09T06:07:47.391705+00:00",
+      "ended_at": "2026-10-09T06:07:48.386325+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "temporary_bytes_after": 1487377,
+      "stdout": "verified-runtime-langflow-os-metadata.stdout",
+      "stderr": "verified-runtime-langflow-os-metadata.stderr"
+    },
+    {
+      "label": "verified-runtime-langflow-python-metadata",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "256m",
+        "--cpus",
+        "1",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "--entrypoint",
+        "python",
+        "sha256:ff0f5cc380743034c05b4bfcf587be0e714da1610799f0c7c41d45902a5267c4",
+        "-c",
+        "\nimport importlib.metadata as m, json, sys\npackages=[]\nfor d in m.distributions():\n    h=d.metadata\n    packages.append({\"name\":h.get(\"Name\",\"\"), \"version\":d.version,\n        \"license_expression\":h.get(\"License-Expression\",\"\"),\n        \"license\":h.get(\"License\",\"\")[:4096],\n        \"classifiers\":h.get_all(\"Classifier\") or [],\n        \"location\":str(d._path)})\nprint(json.dumps({\"interpreter\":sys.executable,\"python_version\":sys.version,\n    \"packages\":packages},sort_keys=True))\n"
+      ],
+      "cwd": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+      "started_at": "2026-10-09T06:07:48.398323+00:00",
+      "ended_at": "2026-10-09T06:07:50.685419+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "temporary_bytes_after": 1487377,
+      "stdout": "verified-runtime-langflow-python-metadata.stdout",
+      "stderr": "verified-runtime-langflow-python-metadata.stderr"
+    },
+    {
+      "label": "verified-runtime-web-identity",
+      "command": [
+        "docker",
+        "image",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"created\":{{json .Created}},\"size\":{{json .Size}},\"os\":{{json .Os}},\"architecture\":{{json .Architecture}},\"repo_digests\":{{json .RepoDigests}},\"layers\":{{json .RootFS.Layers}}}",
+        "sha256:1c74f907504a137f7348ee3bd845eda464dfeb6335952de4fcb9623a2c41e325"
+      ],
+      "cwd": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+      "started_at": "2026-10-09T06:07:51.035489+00:00",
+      "ended_at": "2026-10-09T06:07:51.154875+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "temporary_bytes_after": 1487377,
+      "stdout": "verified-runtime-web-identity.stdout",
+      "stderr": "verified-runtime-web-identity.stderr"
+    },
+    {
+      "label": "verified-runtime-web-os-metadata",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "256m",
+        "--cpus",
+        "1",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "--entrypoint",
+        "/bin/sh",
+        "sha256:1c74f907504a137f7348ee3bd845eda464dfeb6335952de4fcb9623a2c41e325",
+        "-c",
+        "\nprintf '===os-release===\\n'\nif [ -r /etc/os-release ]; then cat /etc/os-release; fi\nprintf '\\n===apk===\\n'\nif [ -r /lib/apk/db/installed ]; then cat /lib/apk/db/installed; fi\nprintf '\\n===dpkg===\\n'\nif command -v dpkg-query >/dev/null 2>&1; then\n dpkg_fmt='${binary:Package}\\t${Version}\\t${Architecture}'\n dpkg_fmt=\"$dpkg_fmt\"'\\t${source:Package}\\t${source:Version}\\n'\n dpkg-query -W -f=\"$dpkg_fmt\"\nfi\nprintf '\\n===dpkg-licenses===\\n'\nfor copyright_path in /usr/share/doc/*/copyright; do\n [ -r \"$copyright_path\" ] || continue\n package_path=${copyright_path%/copyright}\n printf '%s\\t' \"${package_path##*/}\"\n awk '/^License:/ {gsub(/\\t/, \" \"); printf \"%s;\", $0}' \"$copyright_path\"\n printf '\\n'\ndone\nprintf '\\n===rpm===\\n'\nif command -v rpm >/dev/null 2>&1; then\n rpm -qa --qf '%{NAME}\\t%{VERSION}-%{RELEASE}\\t%{ARCH}\\t%{LICENSE}\\n'\nfi\n"
+      ],
+      "cwd": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+      "started_at": "2026-10-09T06:07:51.165167+00:00",
+      "ended_at": "2026-10-09T06:07:51.766381+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "temporary_bytes_after": 1487377,
+      "stdout": "verified-runtime-web-os-metadata.stdout",
+      "stderr": "verified-runtime-web-os-metadata.stderr"
+    }
+  ],
+  "result": {
+    "api": {
+      "identity": {
+        "id": "sha256:4e807fd845c49d138849f25a1e3521d41ec4a9daa80c3af23c1ea9bdbbf2f29b",
+        "created": "2026-10-09T05:57:40.512102628Z",
+        "size": 103574931,
+        "os": "linux",
+        "architecture": "arm64",
+        "repo_digests": [
+          "ai-review-console-api@sha256:4e807fd845c49d138849f25a1e3521d41ec4a9daa80c3af23c1ea9bdbbf2f29b"
+        ],
+        "layers": [
+          "sha256:3e5d01a55aea2c9ea64c3cfef2bb870df4b01c7e206103a970d4c3dc6caed96b",
+          "sha256:62750a0d4afa47971eda307d875c99fc4a7292beb47970df9c18647609d86e88",
+          "sha256:3603fa54c00d0cb83e3070b70cd08bc24ca60844986408ade6c1b80ef7b0f532",
+          "sha256:4882eb1c66d54726bda0140b368f4388ceca8351cdcc6d10fe29bdcddb0b6f59",
+          "sha256:4be07e71362a8aa2d41974393757a969b8240e8eddeaef8319ddb344d29433d3",
+          "sha256:a7bec58548e478bdcf57059e988f8a990924764bd89704135dcbeab1e11666d5",
+          "sha256:dfd622086a5543f10dbc6e4a902d963f5b43bc7a3e5ffa21b0eff0555ce010ee",
+          "sha256:bdad3bcfd877d6cb87236ea9e5c825062a83ffac62ecbe92e77bda515713aae0",
+          "sha256:f8668ea0f9fe48168276b196c6bd05c29411e701d6d19f191506ab34ce13b70f",
+          "sha256:c7d082f146d488f8dc1196a1433e4baab0279ec3969acd991eb8ae35605a93e3",
+          "sha256:329ab78357c77bcb970f4162dea325355d0c2d0562873be8b96d3f1b55db1362",
+          "sha256:e351403548d33bbf0df99c5a4400444d334627f9869591c821b6922e629e0800",
+          "sha256:179ed91e3154f76bc9afe85b5e12d1c84356f9bfaaf26739d48dc5ddb8d434d4",
+          "sha256:f7bd11a43b934329b564280d288634f5508e499d68d51a7c1aa5063cb07441d6",
+          "sha256:acb76867fcb9e0c7714cdae95c0993b82485e2043f7618d44cfc54cf62e957f4"
+        ]
+      },
+      "os_release": {
+        "PRETTY_NAME": "Debian GNU/Linux 12 (bookworm)",
+        "NAME": "Debian GNU/Linux",
+        "VERSION_ID": "12",
+        "VERSION": "12 (bookworm)",
+        "VERSION_CODENAME": "bookworm",
+        "ID": "debian",
+        "HOME_URL": "https://www.debian.org/",
+        "SUPPORT_URL": "https://www.debian.org/support",
+        "BUG_REPORT_URL": "https://bugs.debian.org/"
+      },
+      "packages": 140,
+      "python_distributions_raw": 35,
+      "python_distributions_unique": 35,
+      "deduplication_method": "Python normalized name/version dedup; lib/lib64 aliases",
+      "candidate_revision": {
+        "previous_image_id": "sha256:4932442749f8533f211364738c6182037e02a02baaf2f992fd57296255e6de85",
+        "previous_derived_fingerprints": [
+          {
+            "path": "compliance/upgrade/api-image.cdx.json",
+            "bytes": 96043,
+            "sha256": "a4e75eb56fd2cc9f44338c61c65b93a52ca1344d0e1b5c98214e96be901d3223"
+          },
+          {
+            "path": "compliance/upgrade/api-image.spdx.json",
+            "bytes": 96649,
+            "sha256": "b64d211c78ea68962724d4aa5651728feb76173cb6fc9cdcd5a45dfde62ba4ee"
+          },
+          {
+            "path": "compliance/upgrade/api-image-licenses.json",
+            "bytes": 68043,
+            "sha256": "610b5f64facc429d6fc34cdc943a6bc34db68162aa50eea8897ba51cc57f3299"
+          }
+        ],
+        "current_derived_fingerprints": [
+          {
+            "path": "compliance/upgrade/api-image.cdx.json",
+            "bytes": 96043,
+            "sha256": "3f1b73255f98607499f65078909e1c0c5823a8ed1211a5f75c2166a005bb459f"
+          },
+          {
+            "path": "compliance/upgrade/api-image.spdx.json",
+            "bytes": 96649,
+            "sha256": "d27aa9e2b370d7c847a2ddab4c223f8f6764ffebc5bdcc522bfc6873322624ce"
+          },
+          {
+            "path": "compliance/upgrade/api-image-licenses.json",
+            "bytes": 68043,
+            "sha256": "094a504a7a754d0d97a06ab70e0b42380e22c879e6baa9a5a344b6a6e22685f3"
+          }
+        ],
+        "raw_metadata_preserved": true,
+        "historical_sbom_unchanged": true
+      },
+      "os_metadata_exit_code": 0,
+      "python_metadata_exit_code": 0,
+      "cve_scan_exit_code": null,
+      "sarif_findings": null,
+      "vulnerability_state": "not_scanned_external_authorization",
+      "inventory_scope": "installed package-manager metadata only; excludes undiscovered/static binaries and full file tree",
+      "service": "Docker Scout vulnerability service",
+      "database_snapshot_date": "not exposed by service"
+    },
+    "langflow": {
+      "identity": {
+        "id": "sha256:ff0f5cc380743034c05b4bfcf587be0e714da1610799f0c7c41d45902a5267c4",
+        "created": "2026-10-09T05:57:04.674058917Z",
+        "size": 934062614,
+        "os": "linux",
+        "architecture": "arm64",
+        "repo_digests": [
+          "ai-review-console-langflow@sha256:ff0f5cc380743034c05b4bfcf587be0e714da1610799f0c7c41d45902a5267c4"
+        ],
+        "layers": [
+          "sha256:13cd712d7d37b0e11b96b206d9d2063c8b323c576953bc61bbe58581ce45f9f7",
+          "sha256:60a0de809404261e76396f14e523084336e95fce16523d807061f6925cadc67a",
+          "sha256:06a14a89fd58ed478a6160a6856fd380cba0a9ed6178751b1dfa4353e2335148",
+          "sha256:329c1619b6cdeae347d20a9d7c4cd1e6f6b16aa104cef79f583c60186e8c7cbe",
+          "sha256:d2656073f9961d706cd4a30baabe7bce365ec8c2b696735948d33a9e71263b85",
+          "sha256:99a43b2775a2114808309993126c21d7191213ed160012b62f73927fd9a3ed1a",
+          "sha256:8b854f7c3b9d72f261aa8bd622c1835efddf27ea74f756744fbe73b2d7e8b4b1",
+          "sha256:a77f007c50ae383b4a5c9a32a002d463d260037c76543c9655eabe395c509914",
+          "sha256:8466c4beedb515f2e7e6f0004444ad07ad9421d04700ca21eae5b8bb849a7e04",
+          "sha256:93a1fef78c364f865e32e508cabd9ef57ed1659d0f60d2bb22fae3a68880db0e",
+          "sha256:6311264e2494cfd792b2c32d5a9125ffc0f264fd487cb80c14979e3d847399c0",
+          "sha256:e3f9b7c98913c241da1eecd436999472ba978e59d7aafbdcc9942cd10489addc",
+          "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+          "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+          "sha256:00d80754fc1f038c2129d3d5ada9d28c2ab9eeb521362e1a5eb4919d9a1e0c12",
+          "sha256:4079141ad11b1f7cb5c8d1affcb23059e5d297c96fcc6117cd5b22d3aae75a00",
+          "sha256:32e151c280aa095d404b22b8a2a0d36e87b0d8e7ec4150e9cbf63c6da7b01311",
+          "sha256:b417efcff496fcccd30805bc711d2c4914643866f4238986dc003b677a1cee3a",
+          "sha256:f11186ec8a09720518993297910172c9c324b425743416beb4e76c236c313fd6",
+          "sha256:17766f2fa72aab87700ec021af7e0edbe81936e4f4fa9126b6a78a0fe5d755a4"
+        ]
+      },
+      "os_release": {
+        "NAME": "Red Hat Enterprise Linux",
+        "VERSION": "10.2 (Coughlan)",
+        "RELEASE_TYPE": "stable",
+        "ID": "rhel",
+        "ID_LIKE": "centos fedora",
+        "VERSION_ID": "10.2",
+        "PLATFORM_ID": "platform:el10",
+        "PRETTY_NAME": "Red Hat Enterprise Linux 10.2 (Coughlan)",
+        "ANSI_COLOR": "0;31",
+        "LOGO": "fedora-logo-icon",
+        "CPE_NAME": "cpe:/o:redhat:enterprise_linux:10.2",
+        "HOME_URL": "https://www.redhat.com/",
+        "VENDOR_NAME": "Red Hat",
+        "VENDOR_URL": "https://www.redhat.com/",
+        "DOCUMENTATION_URL": "https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/10",
+        "BUG_REPORT_URL": "https://issues.redhat.com/",
+        "REDHAT_BUGZILLA_PRODUCT": "Red Hat Enterprise Linux 10",
+        "REDHAT_BUGZILLA_PRODUCT_VERSION": "10.2",
+        "REDHAT_SUPPORT_PRODUCT": "Red Hat Enterprise Linux",
+        "REDHAT_SUPPORT_PRODUCT_VERSION": "10.2"
+      },
+      "packages": 770,
+      "python_distributions_raw": 1088,
+      "python_distributions_unique": 544,
+      "deduplication_method": "Python normalized name/version dedup; lib/lib64 aliases",
+      "candidate_revision": {
+        "previous_image_id": "sha256:985a4018308b458c05b20e6424fee06d0fa840d8f87a0a92567fb23dfaa39b45",
+        "previous_derived_fingerprints": [
+          {
+            "path": "compliance/upgrade/langflow-image.cdx.json",
+            "bytes": 509284,
+            "sha256": "e4efdfee885830c608fb1ea210074064d19a299b70902c428be6e2d3f96d179a"
+          },
+          {
+            "path": "compliance/upgrade/langflow-image.spdx.json",
+            "bytes": 512635,
+            "sha256": "d45bcb649c9bac14b16cd3d1f5eecaa10b9d1f742b11bb8db55776f56882ebc9"
+          },
+          {
+            "path": "compliance/upgrade/langflow-image-licenses.json",
+            "bytes": 340082,
+            "sha256": "e9250ff005ad955347c6ef47754a2d8e1025228f7c9fe527d53e2fda8bfd5d61"
+          }
+        ],
+        "current_derived_fingerprints": [
+          {
+            "path": "compliance/upgrade/langflow-image.cdx.json",
+            "bytes": 509284,
+            "sha256": "e3278086288b7a1e1b0b8cddbd7c9bd80fa6f654d3ec8d67dc39e6d4f7f5ab38"
+          },
+          {
+            "path": "compliance/upgrade/langflow-image.spdx.json",
+            "bytes": 512635,
+            "sha256": "512e8125152b720f13ccd8291b0b095981066c2bd3895238c15676fcac29e49b"
+          },
+          {
+            "path": "compliance/upgrade/langflow-image-licenses.json",
+            "bytes": 340082,
+            "sha256": "cd0e3f6601033f437221a930899347293be93a38a7e44c0a215c0913bf03f23c"
+          }
+        ],
+        "raw_metadata_preserved": true,
+        "historical_sbom_unchanged": true
+      },
+      "os_metadata_exit_code": 0,
+      "python_metadata_exit_code": 0,
+      "cve_scan_exit_code": null,
+      "sarif_findings": null,
+      "vulnerability_state": "not_scanned_external_authorization",
+      "inventory_scope": "installed package-manager metadata only; excludes undiscovered/static binaries and full file tree",
+      "service": "Docker Scout vulnerability service",
+      "database_snapshot_date": "not exposed by service"
+    },
+    "web": {
+      "identity": {
+        "id": "sha256:1c74f907504a137f7348ee3bd845eda464dfeb6335952de4fcb9623a2c41e325",
+        "created": "2026-10-09T05:50:30.087171972Z",
+        "size": 24547814,
+        "os": "linux",
+        "architecture": "arm64",
+        "repo_digests": [
+          "ai-review-console-upgrade-web@sha256:1c74f907504a137f7348ee3bd845eda464dfeb6335952de4fcb9623a2c41e325"
+        ],
+        "layers": [
+          "sha256:0b83d017db6efafadf6b3f18d087d2ce1d67d8f0e927dc7254b0ad088074cd3a",
+          "sha256:488c372ba3256e07c09fa9b9510c4f24baeb7352b68006ac328bef4d32d299d8",
+          "sha256:d634c83098bad4821d491c5653e71b0ea0495cd5a7e928ad5259b0bb231aeebd",
+          "sha256:14856caa7722df4d3603e97a5b3de9cdadeb7f2f2ab8d98b5c51f0274ad6da2c",
+          "sha256:825ba0c5d54f44d970dff1caeb5ee4407dcf68ae00272a0a255534f05de8bef3",
+          "sha256:cdedf5a93bd73ca4de0fead6c4ac445a2fbec78dd6545e4fdf07488a548bcac4",
+          "sha256:5eb2b5468732ecb9fccb799d91f630da80fcd8093971350b619f31f841b8ea0d",
+          "sha256:52525aad6e4f256604bb6568ccc6c218142e37f993a3caf3c4cbe9947944bdb2",
+          "sha256:d674f43dd85d99f59798c0c49eb648e35857e01ee2cb5c0b4ccc0d3d96ccdcc9",
+          "sha256:3a0c41ed543ee6a250b3016cbc7d5c3185bfeea1c82f759e0f3facf3479763ca"
+        ]
+      },
+      "os_release": {
+        "NAME": "Alpine Linux",
+        "ID": "alpine",
+        "VERSION_ID": "3.22.1",
+        "PRETTY_NAME": "Alpine Linux v3.22",
+        "HOME_URL": "https://alpinelinux.org/",
+        "BUG_REPORT_URL": "https://gitlab.alpinelinux.org/alpine/aports/-/issues"
+      },
+      "packages": 70,
+      "python_distributions_raw": 0,
+      "python_distributions_unique": 0,
+      "deduplication_method": "Python normalized name/version dedup; lib/lib64 aliases",
+      "candidate_revision": {
+        "previous_image_id": "sha256:1c74f907504a137f7348ee3bd845eda464dfeb6335952de4fcb9623a2c41e325",
+        "previous_derived_fingerprints": [
+          {
+            "path": "compliance/upgrade/web-image.cdx.json",
+            "bytes": 44892,
+            "sha256": "fe0ee0192c8b9ea70a54f53f5a6f8c2481310308296f0744416c0cd7f09a0889"
+          },
+          {
+            "path": "compliance/upgrade/web-image.spdx.json",
+            "bytes": 49792,
+            "sha256": "bf2d4bd196175d86aff62e0531400b1d61bbce3d14165885e50c8624b8356e9f"
+          },
+          {
+            "path": "compliance/upgrade/web-image-licenses.json",
+            "bytes": 23734,
+            "sha256": "10cb7bced131d5fc7a61ce3802bcc8cbaaac52eae0521a368853af6d57739537"
+          }
+        ],
+        "current_derived_fingerprints": [
+          {
+            "path": "compliance/upgrade/web-image.cdx.json",
+            "bytes": 44892,
+            "sha256": "47c2246f9a8a76a73ebd5e0ae6504f0bf0586f8f9f170f5f9cb245950b01d269"
+          },
+          {
+            "path": "compliance/upgrade/web-image.spdx.json",
+            "bytes": 49792,
+            "sha256": "b7f4e77305d27077de174df98ab8ce080835a7a42f4e48ad0b9e51c82b3f146e"
+          },
+          {
+            "path": "compliance/upgrade/web-image-licenses.json",
+            "bytes": 23734,
+            "sha256": "b81fa65529466957d45679ba579e1486dfb3cdc3e0ba957ad435eac015f1d487"
+          }
+        ],
+        "raw_metadata_preserved": true,
+        "historical_sbom_unchanged": true
+      },
+      "os_metadata_exit_code": 0,
+      "python_metadata_exit_code": null,
+      "cve_scan_exit_code": null,
+      "sarif_findings": null,
+      "vulnerability_state": "not_scanned_external_authorization",
+      "inventory_scope": "installed package-manager metadata only; excludes undiscovered/static binaries and full file tree",
+      "service": "Docker Scout vulnerability service",
+      "database_snapshot_date": "not exposed by service"
+    }
+  },
+  "limitations": [
+    "Remote vulnerability services do not expose reproducible database snapshot dates.",
+    "Metadata SBOM is not a complete filesystem/static-binary scan.",
+    "License metadata is not legal approval; unknown/restricted licenses need review.",
+    "P0/P1 local release evidence does not establish production readiness."
+  ],
+  "files": [
+    {
+      "path": "compliance/upgrade/README.md",
+      "bytes": 4676,
+      "sha256": "b79d9eb577a01733f1b7ea5a65286c29d582bdffd35526c9f695cd768cba79eb"
+    },
+    {
+      "path": "compliance/upgrade/api-image-licenses.json",
+      "bytes": 68043,
+      "sha256": "094a504a7a754d0d97a06ab70e0b42380e22c879e6baa9a5a344b6a6e22685f3"
+    },
+    {
+      "path": "compliance/upgrade/api-image.cdx.json",
+      "bytes": 96043,
+      "sha256": "3f1b73255f98607499f65078909e1c0c5823a8ed1211a5f75c2166a005bb459f"
+    },
+    {
+      "path": "compliance/upgrade/api-image.spdx.json",
+      "bytes": 96649,
+      "sha256": "d27aa9e2b370d7c847a2ddab4c223f8f6764ffebc5bdcc522bfc6873322624ce"
+    },
+    {
+      "path": "compliance/upgrade/dependencies-summary.json",
+      "bytes": 529,
+      "sha256": "33dc6dafa83b2f11052f16498d7f0163ae8a47ce14f60f13f858e30d29f95c60"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-api-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-api-identity.stdout",
+      "bytes": 1411,
+      "sha256": "737fad19abcd8d144d9dfdd0a6ec2b2aad15d46158b3cdef3c72be4999bcf591"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-api-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-api-os-metadata.stdout",
+      "bytes": 44621,
+      "sha256": "8c189f7fa549554b83a06de3feec20f91473d6b90fbc1b0f2b14110e32238351"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-api-python-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-api-python-metadata.stdout",
+      "bytes": 28391,
+      "sha256": "57774de0e795c310cd06847dc3f0218ed39aea5986a136472cc955632566b582"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-langflow-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-langflow-identity.stdout",
+      "bytes": 1786,
+      "sha256": "93eaeb05b32ffc3af7d23a0bdb8e75845274122239f3bbaf9b8309e50dae4e15"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-langflow-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-langflow-os-metadata.stdout",
+      "bytes": 21552,
+      "sha256": "259d88c4d6b98653650e070b44fff7faca30eb3a48fd55bb0982db3ab15bd4fa"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-langflow-python-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-langflow-python-metadata.stdout",
+      "bytes": 771566,
+      "sha256": "127497e8e86bf9bc92f9d1e8ca7c5a7c82ed7b3ea2222afc2518698882fc221e"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-summary.json",
+      "bytes": 12302,
+      "sha256": "fc879976f1f20217d1ae9c05482c2761d365858565ae3f27a5a55d3ae2f37fa2"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-web-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-web-identity.stdout",
+      "bytes": 1048,
+      "sha256": "1a193ef95137ad426b5bd3091e77e96006f5eafd49f9ebc2ac945c5b0062e1fc"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-web-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-web-os-metadata.stdout",
+      "bytes": 103859,
+      "sha256": "5cafa2c6ffdaea8eadf564daf30fcc0e9fee4e52b18416d65be0048e5f91cf78"
+    },
+    {
+      "path": "compliance/upgrade/langflow-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/langflow-identity.stdout",
+      "bytes": 1786,
+      "sha256": "93eaeb05b32ffc3af7d23a0bdb8e75845274122239f3bbaf9b8309e50dae4e15"
+    },
+    {
+      "path": "compliance/upgrade/langflow-image-licenses.json",
+      "bytes": 340082,
+      "sha256": "cd0e3f6601033f437221a930899347293be93a38a7e44c0a215c0913bf03f23c"
+    },
+    {
+      "path": "compliance/upgrade/langflow-image.cdx.json",
+      "bytes": 509284,
+      "sha256": "e3278086288b7a1e1b0b8cddbd7c9bd80fa6f654d3ec8d67dc39e6d4f7f5ab38"
+    },
+    {
+      "path": "compliance/upgrade/langflow-image.spdx.json",
+      "bytes": 512635,
+      "sha256": "512e8125152b720f13ccd8291b0b095981066c2bd3895238c15676fcac29e49b"
+    },
+    {
+      "path": "compliance/upgrade/langflow-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/langflow-os-metadata.stdout",
+      "bytes": 21552,
+      "sha256": "259d88c4d6b98653650e070b44fff7faca30eb3a48fd55bb0982db3ab15bd4fa"
+    },
+    {
+      "path": "compliance/upgrade/langflow-python-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/langflow-python-metadata.stdout",
+      "bytes": 771566,
+      "sha256": "127497e8e86bf9bc92f9d1e8ca7c5a7c82ed7b3ea2222afc2518698882fc221e"
+    },
+    {
+      "path": "compliance/upgrade/langflow-web-summary.json",
+      "bytes": 5461,
+      "sha256": "68b3bc9fac7a4e8cf185c705c1e5c532570e3b10ff14d5fceb29ee66b9204439"
+    },
+    {
+      "path": "compliance/upgrade/node-licenses.json",
+      "bytes": 67670,
+      "sha256": "973a1ba7a3e74fb2b526cd164fb9677447d90019b6e0e3f2952ca5bebc98b398"
+    },
+    {
+      "path": "compliance/upgrade/node-sbom.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/node-sbom.stdout",
+      "bytes": 200772,
+      "sha256": "4983cdedf93db833f76f7581e651d910faad36643c4996a0e4ef2743c0f9444e"
+    },
+    {
+      "path": "compliance/upgrade/node.cdx.json",
+      "bytes": 197367,
+      "sha256": "ead90d679e41ef96aaa07f1fe9e7f65c49d8ac51ec2804f85e721978de312fa2"
+    },
+    {
+      "path": "compliance/upgrade/python-licenses.json",
+      "bytes": 14151,
+      "sha256": "eebf00ea7e1a6cacf9ad65aba0e459482cf24a7b5fb72e6f53d049d60e24ad22"
+    },
+    {
+      "path": "compliance/upgrade/python.cdx.json",
+      "bytes": 5007,
+      "sha256": "4dd05fde1947850a7f1e663719832de50a1324210e5eba253f04390a17c44a8b"
+    },
+    {
+      "path": "compliance/upgrade/sbom-validation.json",
+      "bytes": 3950,
+      "sha256": "e0cd2f7e814f16b7d37d86f0a10594f7f19facf6840952c3835f0473d0e5637d"
+    },
+    {
+      "path": "compliance/upgrade/verified-node-sbom.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-node-sbom.stdout",
+      "bytes": 200772,
+      "sha256": "429ac34642f15d818920e9835120c3c3aa38be2260c62a45762bee2d2108d21a"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-api-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-api-identity.stdout",
+      "bytes": 1411,
+      "sha256": "2e04a0fdbc49a076f788c4411cd4c02a001683f915ad8a611e991e34f963cbcf"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-api-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-api-os-metadata.stdout",
+      "bytes": 44621,
+      "sha256": "8c189f7fa549554b83a06de3feec20f91473d6b90fbc1b0f2b14110e32238351"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-api-python-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-api-python-metadata.stdout",
+      "bytes": 28391,
+      "sha256": "57774de0e795c310cd06847dc3f0218ed39aea5986a136472cc955632566b582"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-langflow-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-langflow-identity.stdout",
+      "bytes": 1786,
+      "sha256": "85c0b3c859b48c8f2f19cb83162c783a65289051ed759ecb1b6a6a93388dd0c1"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-langflow-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-langflow-os-metadata.stdout",
+      "bytes": 21552,
+      "sha256": "259d88c4d6b98653650e070b44fff7faca30eb3a48fd55bb0982db3ab15bd4fa"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-langflow-python-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-langflow-python-metadata.stdout",
+      "bytes": 771566,
+      "sha256": "127497e8e86bf9bc92f9d1e8ca7c5a7c82ed7b3ea2222afc2518698882fc221e"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-summary.json",
+      "bytes": 12926,
+      "sha256": "8c954f5f689a545748eec5df21cd75ab2c1c1ed8a179cc825cd3ca521d959234"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-web-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-web-identity.stdout",
+      "bytes": 1048,
+      "sha256": "1a193ef95137ad426b5bd3091e77e96006f5eafd49f9ebc2ac945c5b0062e1fc"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-web-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-web-os-metadata.stdout",
+      "bytes": 103859,
+      "sha256": "5cafa2c6ffdaea8eadf564daf30fcc0e9fee4e52b18416d65be0048e5f91cf78"
+    },
+    {
+      "path": "compliance/upgrade/web-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/web-identity.stdout",
+      "bytes": 1047,
+      "sha256": "af47ee1e0e05071e9f80c36513db1de26bc4d45836d640f3db7886cf9b11e982"
+    },
+    {
+      "path": "compliance/upgrade/web-image-licenses.json",
+      "bytes": 23734,
+      "sha256": "b81fa65529466957d45679ba579e1486dfb3cdc3e0ba957ad435eac015f1d487"
+    },
+    {
+      "path": "compliance/upgrade/web-image.cdx.json",
+      "bytes": 44892,
+      "sha256": "47c2246f9a8a76a73ebd5e0ae6504f0bf0586f8f9f170f5f9cb245950b01d269"
+    },
+    {
+      "path": "compliance/upgrade/web-image.spdx.json",
+      "bytes": 49792,
+      "sha256": "b7f4e77305d27077de174df98ab8ce080835a7a42f4e48ad0b9e51c82b3f146e"
+    },
+    {
+      "path": "compliance/upgrade/web-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/web-os-metadata.stdout",
+      "bytes": 103859,
+      "sha256": "5cafa2c6ffdaea8eadf564daf30fcc0e9fee4e52b18416d65be0048e5f91cf78"
+    }
+  ],
+  "candidate_state": "unsealed_candidate_reviewed",
+  "candidate_revisions": [
+    {
+      "file": "node.cdx.json",
+      "before": {
+        "path": "compliance/upgrade/node.cdx.json",
+        "bytes": 197367,
+        "sha256": "ead90d679e41ef96aaa07f1fe9e7f65c49d8ac51ec2804f85e721978de312fa2"
+      },
+      "after": {
+        "path": "compliance/upgrade/node.cdx.json",
+        "bytes": 197367,
+        "sha256": "ead90d679e41ef96aaa07f1fe9e7f65c49d8ac51ec2804f85e721978de312fa2"
+      },
+      "raw_source": {
+        "path": "compliance/upgrade/verified-node-sbom.stdout",
+        "bytes": 200772,
+        "sha256": "429ac34642f15d818920e9835120c3c3aa38be2260c62a45762bee2d2108d21a"
+      },
+      "method": "dedup duplicate npm bom-ref; union dependsOn edges per ref",
+      "components_before": 237,
+      "components_after": 237,
+      "dependencies_before": 238,
+      "dependencies_after": 238
+    },
+    {
+      "file": "python-licenses.json",
+      "before": {
+        "path": "compliance/upgrade/python-licenses.json",
+        "bytes": 14151,
+        "sha256": "eebf00ea7e1a6cacf9ad65aba0e459482cf24a7b5fb72e6f53d049d60e24ad22"
+      },
+      "after": {
+        "path": "compliance/upgrade/python-licenses.json",
+        "bytes": 14151,
+        "sha256": "6ccf616fce610dc7a0a1848732d3636298d1ac427ad1698ea85cabe9ddf80657"
+      },
+      "raw_source": {
+        "path": "compliance/upgrade/verified-runtime-api-python-metadata.stdout",
+        "bytes": 28391,
+        "sha256": "57774de0e795c310cd06847dc3f0218ed39aea5986a136472cc955632566b582"
+      },
+      "method": "fill missing license using exact locked package version in final API image"
+    }
+  ],
+  "current_file_fingerprints": [
+    {
+      "path": "compliance/upgrade/README.md",
+      "bytes": 4676,
+      "sha256": "b79d9eb577a01733f1b7ea5a65286c29d582bdffd35526c9f695cd768cba79eb"
+    },
+    {
+      "path": "compliance/upgrade/api-image-licenses.json",
+      "bytes": 68043,
+      "sha256": "094a504a7a754d0d97a06ab70e0b42380e22c879e6baa9a5a344b6a6e22685f3"
+    },
+    {
+      "path": "compliance/upgrade/api-image.cdx.json",
+      "bytes": 96043,
+      "sha256": "3f1b73255f98607499f65078909e1c0c5823a8ed1211a5f75c2166a005bb459f"
+    },
+    {
+      "path": "compliance/upgrade/api-image.spdx.json",
+      "bytes": 96649,
+      "sha256": "d27aa9e2b370d7c847a2ddab4c223f8f6764ffebc5bdcc522bfc6873322624ce"
+    },
+    {
+      "path": "compliance/upgrade/dependencies-summary.json",
+      "bytes": 529,
+      "sha256": "33dc6dafa83b2f11052f16498d7f0163ae8a47ce14f60f13f858e30d29f95c60"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-api-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-api-identity.stdout",
+      "bytes": 1411,
+      "sha256": "737fad19abcd8d144d9dfdd0a6ec2b2aad15d46158b3cdef3c72be4999bcf591"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-api-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-api-os-metadata.stdout",
+      "bytes": 44621,
+      "sha256": "8c189f7fa549554b83a06de3feec20f91473d6b90fbc1b0f2b14110e32238351"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-api-python-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-api-python-metadata.stdout",
+      "bytes": 28391,
+      "sha256": "57774de0e795c310cd06847dc3f0218ed39aea5986a136472cc955632566b582"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-langflow-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-langflow-identity.stdout",
+      "bytes": 1786,
+      "sha256": "93eaeb05b32ffc3af7d23a0bdb8e75845274122239f3bbaf9b8309e50dae4e15"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-langflow-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-langflow-os-metadata.stdout",
+      "bytes": 21552,
+      "sha256": "259d88c4d6b98653650e070b44fff7faca30eb3a48fd55bb0982db3ab15bd4fa"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-langflow-python-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-langflow-python-metadata.stdout",
+      "bytes": 771566,
+      "sha256": "127497e8e86bf9bc92f9d1e8ca7c5a7c82ed7b3ea2222afc2518698882fc221e"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-summary.json",
+      "bytes": 12302,
+      "sha256": "fc879976f1f20217d1ae9c05482c2761d365858565ae3f27a5a55d3ae2f37fa2"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-web-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-web-identity.stdout",
+      "bytes": 1048,
+      "sha256": "1a193ef95137ad426b5bd3091e77e96006f5eafd49f9ebc2ac945c5b0062e1fc"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-web-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/final-runtime-web-os-metadata.stdout",
+      "bytes": 103859,
+      "sha256": "5cafa2c6ffdaea8eadf564daf30fcc0e9fee4e52b18416d65be0048e5f91cf78"
+    },
+    {
+      "path": "compliance/upgrade/langflow-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/langflow-identity.stdout",
+      "bytes": 1786,
+      "sha256": "93eaeb05b32ffc3af7d23a0bdb8e75845274122239f3bbaf9b8309e50dae4e15"
+    },
+    {
+      "path": "compliance/upgrade/langflow-image-licenses.json",
+      "bytes": 340082,
+      "sha256": "cd0e3f6601033f437221a930899347293be93a38a7e44c0a215c0913bf03f23c"
+    },
+    {
+      "path": "compliance/upgrade/langflow-image.cdx.json",
+      "bytes": 509284,
+      "sha256": "e3278086288b7a1e1b0b8cddbd7c9bd80fa6f654d3ec8d67dc39e6d4f7f5ab38"
+    },
+    {
+      "path": "compliance/upgrade/langflow-image.spdx.json",
+      "bytes": 512635,
+      "sha256": "512e8125152b720f13ccd8291b0b095981066c2bd3895238c15676fcac29e49b"
+    },
+    {
+      "path": "compliance/upgrade/langflow-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/langflow-os-metadata.stdout",
+      "bytes": 21552,
+      "sha256": "259d88c4d6b98653650e070b44fff7faca30eb3a48fd55bb0982db3ab15bd4fa"
+    },
+    {
+      "path": "compliance/upgrade/langflow-python-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/langflow-python-metadata.stdout",
+      "bytes": 771566,
+      "sha256": "127497e8e86bf9bc92f9d1e8ca7c5a7c82ed7b3ea2222afc2518698882fc221e"
+    },
+    {
+      "path": "compliance/upgrade/langflow-web-summary.json",
+      "bytes": 5461,
+      "sha256": "68b3bc9fac7a4e8cf185c705c1e5c532570e3b10ff14d5fceb29ee66b9204439"
+    },
+    {
+      "path": "compliance/upgrade/node-licenses.json",
+      "bytes": 67670,
+      "sha256": "973a1ba7a3e74fb2b526cd164fb9677447d90019b6e0e3f2952ca5bebc98b398"
+    },
+    {
+      "path": "compliance/upgrade/node-sbom.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/node-sbom.stdout",
+      "bytes": 200772,
+      "sha256": "4983cdedf93db833f76f7581e651d910faad36643c4996a0e4ef2743c0f9444e"
+    },
+    {
+      "path": "compliance/upgrade/node.cdx.json",
+      "bytes": 197367,
+      "sha256": "ead90d679e41ef96aaa07f1fe9e7f65c49d8ac51ec2804f85e721978de312fa2"
+    },
+    {
+      "path": "compliance/upgrade/python-licenses.json",
+      "bytes": 14151,
+      "sha256": "6ccf616fce610dc7a0a1848732d3636298d1ac427ad1698ea85cabe9ddf80657"
+    },
+    {
+      "path": "compliance/upgrade/python.cdx.json",
+      "bytes": 5007,
+      "sha256": "4dd05fde1947850a7f1e663719832de50a1324210e5eba253f04390a17c44a8b"
+    },
+    {
+      "path": "compliance/upgrade/sbom-validation.json",
+      "bytes": 3950,
+      "sha256": "e0cd2f7e814f16b7d37d86f0a10594f7f19facf6840952c3835f0473d0e5637d"
+    },
+    {
+      "path": "compliance/upgrade/verified-node-sbom.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-node-sbom.stdout",
+      "bytes": 200772,
+      "sha256": "429ac34642f15d818920e9835120c3c3aa38be2260c62a45762bee2d2108d21a"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-api-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-api-identity.stdout",
+      "bytes": 1411,
+      "sha256": "2e04a0fdbc49a076f788c4411cd4c02a001683f915ad8a611e991e34f963cbcf"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-api-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-api-os-metadata.stdout",
+      "bytes": 44621,
+      "sha256": "8c189f7fa549554b83a06de3feec20f91473d6b90fbc1b0f2b14110e32238351"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-api-python-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-api-python-metadata.stdout",
+      "bytes": 28391,
+      "sha256": "57774de0e795c310cd06847dc3f0218ed39aea5986a136472cc955632566b582"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-langflow-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-langflow-identity.stdout",
+      "bytes": 1786,
+      "sha256": "85c0b3c859b48c8f2f19cb83162c783a65289051ed759ecb1b6a6a93388dd0c1"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-langflow-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-langflow-os-metadata.stdout",
+      "bytes": 21552,
+      "sha256": "259d88c4d6b98653650e070b44fff7faca30eb3a48fd55bb0982db3ab15bd4fa"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-langflow-python-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-langflow-python-metadata.stdout",
+      "bytes": 771566,
+      "sha256": "127497e8e86bf9bc92f9d1e8ca7c5a7c82ed7b3ea2222afc2518698882fc221e"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-summary.json",
+      "bytes": 12926,
+      "sha256": "8c954f5f689a545748eec5df21cd75ab2c1c1ed8a179cc825cd3ca521d959234"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-web-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-web-identity.stdout",
+      "bytes": 1048,
+      "sha256": "1a193ef95137ad426b5bd3091e77e96006f5eafd49f9ebc2ac945c5b0062e1fc"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-web-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/verified-runtime-web-os-metadata.stdout",
+      "bytes": 103859,
+      "sha256": "5cafa2c6ffdaea8eadf564daf30fcc0e9fee4e52b18416d65be0048e5f91cf78"
+    },
+    {
+      "path": "compliance/upgrade/web-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/web-identity.stdout",
+      "bytes": 1047,
+      "sha256": "af47ee1e0e05071e9f80c36513db1de26bc4d45836d640f3db7886cf9b11e982"
+    },
+    {
+      "path": "compliance/upgrade/web-image-licenses.json",
+      "bytes": 23734,
+      "sha256": "b81fa65529466957d45679ba579e1486dfb3cdc3e0ba957ad435eac015f1d487"
+    },
+    {
+      "path": "compliance/upgrade/web-image.cdx.json",
+      "bytes": 44892,
+      "sha256": "47c2246f9a8a76a73ebd5e0ae6504f0bf0586f8f9f170f5f9cb245950b01d269"
+    },
+    {
+      "path": "compliance/upgrade/web-image.spdx.json",
+      "bytes": 49792,
+      "sha256": "b7f4e77305d27077de174df98ab8ce080835a7a42f4e48ad0b9e51c82b3f146e"
+    },
+    {
+      "path": "compliance/upgrade/web-os-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compliance/upgrade/web-os-metadata.stdout",
+      "bytes": 103859,
+      "sha256": "5cafa2c6ffdaea8eadf564daf30fcc0e9fee4e52b18416d65be0048e5f91cf78"
+    }
+  ],
+  "current_runtime_record": "verified-runtime-manifest.json",
+  "historical_file_fingerprints_preserved": true
+}

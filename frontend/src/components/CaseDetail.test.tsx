@@ -27,6 +27,7 @@ test("a complete zero rule score still requires a version-bound human decision",
   expect(screen.getByRole("button", { name: "记录决定" })).toBeEnabled();
   expect(screen.getByRole("button", { name: "下载 PDF" })).toBeDisabled();
   fireEvent.click(screen.getByRole("button", { name: "记录决定" }));
+  expect(screen.getByLabelText("决定理由")).toHaveFocus();
   fireEvent.change(screen.getByLabelText("决定理由"), { target: { value: "   1234567   " } });
   expect(screen.getByRole("button", { name: "确认决定" })).toBeDisabled();
   fireEvent.change(screen.getByLabelText("决定理由"), { target: { value: "  已核验虚构条款并确认。  " } });

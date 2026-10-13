@@ -2,7 +2,7 @@ FROM langflowai/langflow:1.11.6@sha256:5338f6851fbab3d0476f7701dacbe749f58fa81a4
 
 USER root
 WORKDIR /app
-RUN pip install --no-cache-dir --timeout 120 --retries 10 pypdf==6.15.0 python-docx==1.2.0 reportlab==4.4.3
+RUN pip install --no-cache-dir --timeout 120 --retries 10 pypdf==6.16.2 python-docx==1.2.0 reportlab==4.5.1
 COPY review_core /app/review_core
 COPY custom_components /app/custom_components
 COPY flows /app/flows
