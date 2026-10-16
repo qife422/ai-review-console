@@ -2,7 +2,7 @@
 
 ## 备份范围
 
-当前源码仓库：`qife422/ai-review-console`。按私有仓库保存，通过本人账号或获授权协作者访问。源码版本以 Git commit SHA 为准，不以压缩包文件名判断。
+当前源码仓库：`qife422/ai-review-console`。经负责人明确授权公开，任何人均可查看和克隆；推送仍须仓库写权限。源码版本以 Git commit SHA 为准，不以压缩包文件名判断。
 
 包含源码、Docker 配置、依赖锁、迁移/验证脚本、测试、固定虚构样本、示例报告、展示截图、许可证、文档与已有提交历史。`.env.example` 只含演示占位配置，不是可恢复的真实凭据。
 
@@ -10,11 +10,10 @@
 
 ## 新电脑恢复源码
 
-先安装 Git、GitHub CLI、Python 3.12、Node.js 22 和兼容的 Docker / Compose。使用自己的 GitHub 账号登录，不把 token 写进命令、仓库或 README。
+先安装 Git、Python 3.12、Node.js 22 和兼容的 Docker / Compose。公开仓库读取不需要登录；后续推送更新才需要使用自己的 GitHub 账号认证，不把 token 写进命令、仓库或 README。
 
 ```bash
-gh auth login
-gh repo clone qife422/ai-review-console
+git clone https://github.com/qife422/ai-review-console.git
 cd ai-review-console
 git status
 git log -5 --oneline
@@ -53,6 +52,6 @@ git show <commit-sha>:README.md
 
 ## 展示与分享
 
-README 包含功能说明及历史虚构截图，`demo/` 和 `examples/reports/` 可用于演示。私有仓库的链接只对本人及获授权协作者可见；要公开分享，需另行确认公开权限，并复查文档/历史提交中的本机路径、候选证据与隐私内容。无需公开数据库或部署服务才能展示源码。
+README 包含功能说明及历史虚构截图，`demo/` 和 `examples/reports/` 可用于演示。仓库链接现可直接分享，无需公开数据库或部署服务。历史提交及候选记录中保留了原机器路径和作者元数据，这些不是新电脑上的有效恢复路径；展示时不要把历史演示、离线扫描候选或源码公开等同于生产验收。
 
 GitHub Actions 可能由推送自动触发。其运行记录与提交绑定；测试通过、技术验收、用户最终接受、生产部署授权仍是不同事项。
