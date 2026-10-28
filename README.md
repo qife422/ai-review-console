@@ -1,6 +1,6 @@
 # AI Review Console
 
-[GitHub 仓库](https://github.com/qife422/ai-review-console) · [更新记录](CHANGELOG.md) · [恢复与更新](docs/RESTORE.md)
+[在线体验](https://ai-review-console-demo.adeptbread257.chatgpt.site) · [GitHub 仓库](https://github.com/qife422/ai-review-console) · [更新记录](CHANGELOG.md) · [恢复与更新](docs/RESTORE.md)
 
 AI Review Console 是一个基于 Langflow 的 AI 文档审查与决策中心参考实现。它使用完全虚构的数据演示文档解析、确定性脱敏、可解释风险评分、人工审批与 JSON/HTML/PDF 报告导出。
 
@@ -8,6 +8,12 @@ Langflow-powered document review console with deterministic redaction, explainab
 
 > **SYNTHETIC DEMO DATA ONLY / 演示仅使用虚构数据**  
 > 本项目不包含任何公司机密、客户数据、真实合同、生产凭据或真实决策记录。
+
+## 在线体验
+
+打开 [公开演示站](https://ai-review-console-demo.adeptbread257.chatgpt.site)，点击“载入虚构样本”，即可体验脱敏对照、风险证据、人工决定和 JSON/HTML 报告下载。支持手机访问及浅/深色主题。
+
+在线版是独立的纯前端沙盒：只有四个预置虚构样本，不接受本机文件上传；流程与分数为演示预设，不连接真实 AI、Langflow、API 或数据库。决定和报告只保留在当前页面内存，刷新或“重置演示”即恢复初始状态。HTML 报告可通过浏览器打印另存 PDF。在线部署及源码恢复方法见 [在线演示说明](docs/ONLINE_DEMO.md)。
 
 ## 项目定位与当前状态
 

@@ -2,6 +2,7 @@ import { DocumentTasks, Flow, Home, Moon, Sun } from "@carbon/icons-react";
 import { Button, Content, Header, HeaderGlobalAction, HeaderGlobalBar, HeaderName, SideNav, SideNavItems, SideNavLink, SkipToContent } from "@carbon/react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { api } from "./api";
+import { isPublicDemo } from "./demoMode";
 import { CaseDetail } from "./components/CaseDetail";
 import { Dashboard } from "./components/Dashboard";
 import { ReviewQueue } from "./components/ReviewQueue";
@@ -126,7 +127,7 @@ export default function App() {
 
   function handleUploaded(task: AcceptedTask) {
     setUploadOpen(false);
-    setUploadNotice(task.duplicate_of ? `文档已提交。相同内容曾用于案件 ${task.duplicate_of}，本次将独立审查。` : "文档已接受，后台正在处理。刷新或关闭页面不会取消任务。");
+    setUploadNotice(isPublicDemo ? "预置虚构样本已载入，当前为浏览器内模拟处理；不调用真实 AI 或 Langflow。刷新页面将重置本次体验。" : task.duplicate_of ? `文档已提交。相同内容曾用于案件 ${task.duplicate_of}，本次将独立审查。` : "文档已接受，后台正在处理。刷新或关闭页面不会取消任务。");
     navigate("detail", task.case_id);
     void loadData(false);
   }
@@ -136,24 +137,28 @@ export default function App() {
       <Header aria-label="AI Review Console">
         <SkipToContent />
         <HeaderName prefix="AI">Review Console</HeaderName>
-        <span className="header-attribution">Built on Langflow</span>
+        <span className="header-attribution">{isPublicDemo ? "浏览器流程模拟" : "Built on Langflow"}</span>
         <HeaderGlobalBar><HeaderGlobalAction aria-label={dark ? "切换到浅色模式" : "切换到深色模式"} onClick={() => setDark((value) => !value)}>{dark ? <Sun size={20} /> : <Moon size={20} />}</HeaderGlobalAction></HeaderGlobalBar>
       </Header>
       <SideNav aria-label="主导航" isFixedNav expanded isChildOfHeader={false}>
         <SideNavItems>
           <SideNavLink href="#dashboard" isActive={view === "dashboard"} renderIcon={Home} onClick={(event) => { event.preventDefault(); navigate("dashboard"); }}>总览</SideNavLink>
           <SideNavLink href="#queue" isActive={view === "queue" || view === "detail"} renderIcon={DocumentTasks} onClick={(event) => { event.preventDefault(); navigate("queue"); }}>审查队列</SideNavLink>
-          <SideNavLink renderIcon={Flow} href="http://localhost:7860" target="_blank" rel="noreferrer">Langflow 管理</SideNavLink>
+          <SideNavLink renderIcon={Flow} href={isPublicDemo ? "https://github.com/qife422/ai-review-console" : "http://localhost:7860"} target="_blank" rel="noreferrer">{isPublicDemo ? "项目源代码" : "Langflow 管理"}</SideNavLink>
         </SideNavItems>
         <div className="side-notice"><strong>SYNTHETIC</strong><span>仅使用虚构演示数据</span><span>演示身份：demo-reviewer</span></div>
       </SideNav>
       <Content id="main-content" className="main-content">
         <nav className="mobile-navigation" aria-label="移动主导航"><Button size="sm" kind={view === "dashboard" ? "primary" : "ghost"} onClick={() => navigate("dashboard")}>总览</Button><Button size="sm" kind={view !== "dashboard" ? "primary" : "ghost"} onClick={() => navigate("queue")}>审查队列</Button></nav>
+        {isPublicDemo && <aside className="demo-banner" aria-label="在线演示说明">
+          <div><strong>公开交互演示 · 仅虚构数据</strong><p>选择预置样本，体验脱敏、风险证据、人工决定与报告。流程和分数为演示预设，不连接真实 AI、Langflow 或数据库；不能上传本机文件，所有操作仅保留于本页，刷新即重置。</p></div>
+          <div className="demo-banner-actions"><Button size="sm" onClick={() => setUploadOpen(true)}>载入虚构样本</Button><Button size="sm" kind="ghost" onClick={() => { history.replaceState(null, "", "#dashboard"); window.location.reload(); }}>重置演示</Button></div>
+        </aside>}
         {view === "dashboard" && <Dashboard summary={summary} systemStatus={systemStatus} cases={cases.filter((item) => item.status === "pending_approval" || (item.risk_level !== null && ["high", "critical"].includes(item.risk_level)))} loading={loading} error={error} onRetry={() => void loadData()} onSelectCase={(id) => navigate("detail", id)} onOpenQueue={() => navigate("queue")} />}
         {view === "queue" && <ReviewQueue cases={cases} loading={loading} error={error} onRetry={() => void loadData()} onSelectCase={(id) => navigate("detail", id)} onUpload={() => setUploadOpen(true)} />}
         {view === "detail" && <CaseDetail key={selectedCaseId} detail={detail} loading={detailLoading} error={detailError} notice={uploadNotice} onDismissNotice={() => setUploadNotice(null)} onBack={() => navigate("queue")} onReload={() => void loadDetail()} onRefresh={() => loadDetail(false)} onDecided={handleDecided} />}
       </Content>
-      <footer><span>仅使用虚构数据。演示身份：demo-reviewer。不构成法律意见。</span><span>基于 Langflow / Built on Langflow</span></footer>
+      <footer><span>仅使用虚构数据。演示身份：demo-reviewer。不构成法律意见。</span><span>{isPublicDemo ? "前端沙盒，不代表真实工作流执行" : "基于 Langflow / Built on Langflow"}</span></footer>
       {uploadOpen && <UploadDialog onClose={() => setUploadOpen(false)} onAccepted={handleUploaded} />}
     </div>
   );

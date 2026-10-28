@@ -2,6 +2,7 @@ import { Renew } from "@carbon/icons-react";
 import { Button, InlineNotification, Tag, Tile } from "@carbon/react";
 import { useEffect, useRef, useState } from "react";
 import { api } from "../api";
+import { isPublicDemo } from "../demoMode";
 import type { CaseDetail } from "../types";
 import { errorMessage, jobError, phaseLabels } from "../workflow";
 
@@ -35,7 +36,7 @@ export function WorkflowPanel({ detail, onRefresh }: { detail: CaseDetail; onRef
   return (
     <Tile className="workflow-panel">
       <div className="workflow-panel-heading"><h2>文档处理</h2><Tag type={state === "failed" ? "red" : complete ? "green" : "blue"}>{state ? labels[state] : complete ? "审查结果已保存" : "状态待确认"}</Tag></div>
-      {detail.source_kind === "seed_demo" ? <p className="workflow-copy">历史虚构种子案例，结果用于演示；不表示已执行真实 Intake Flow。</p> :
+      {isPublicDemo ? <p className="workflow-copy">浏览器内模拟解析、脱敏与评分进度；预设结果仅供体验，不是实时规则执行或真实 Intake Flow。</p> : detail.source_kind === "seed_demo" ? <p className="workflow-copy">历史虚构种子案例，结果用于演示；不表示已执行真实 Intake Flow。</p> :
         <p className="workflow-copy">{complete ? "解析、脱敏和规则评估已持久化，等待或保留人工决定。" : "后台执行解析、脱敏与规则评估，当前没有完整风险评分。"}</p>}
       {job && <div className="job-progress" role="status"><span>{phaseLabels[job.phase] ?? (state ? labels[state] : "工作流处理")}</span><small>{job.attempt ? `第 ${job.attempt} 次执行` : "尚未开始执行"}{state === "retry_wait" ? "，系统将按策略自动重试" : ""}</small></div>}
       {state === "failed" && job && <InlineNotification kind="error" lowContrast hideCloseButton title="文档处理未完成" subtitle={jobError(job)} />}

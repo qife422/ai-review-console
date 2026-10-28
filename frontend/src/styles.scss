@@ -37,6 +37,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .main-content { margin-left: 16rem; margin-inline-start: 16rem; min-height: calc(100dvh - 7rem); padding: 3rem; background: var(--surface-page); }
 .main-content > * { min-width: 0; }
 .mobile-navigation { display: none; }
+.demo-banner { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; padding: 1rem; margin-bottom: 2rem; border-left: 4px solid var(--accent); background: var(--surface-panel); }
+.demo-banner strong { color: var(--text-primary); font-size: 1rem; }
+.demo-banner p { margin-top: .5rem; line-height: 1.6; color: var(--text-secondary); max-width: 65rem; }
+.demo-banner-actions { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+@media (max-width: 767px) { .demo-banner { grid-template-columns: 1fr; } .demo-banner-actions { justify-content: flex-start; } }
 .page-heading { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 2.5rem; }
 .page-heading.compact { margin-bottom: 1.5rem; }
 .page-heading h1, .detail-header h1 { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 300; letter-spacing: -.03em; line-height: 1.05; margin: .5rem 0 1rem; }

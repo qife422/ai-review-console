@@ -19,6 +19,7 @@ import {
 import { useMemo, useState } from "react";
 import type { CaseSummary } from "../types";
 import { RiskTag, StatusTag } from "./StatusTag";
+import { isPublicDemo } from "../demoMode";
 
 interface ReviewQueueProps {
   cases: CaseSummary[];
@@ -58,7 +59,7 @@ export function ReviewQueue({ cases, loading, error, onRetry, onSelectCase, onUp
 
   return (
     <>
-      <section className="page-heading compact"><div><p className="section-label">人工决策工作区</p><h1 tabIndex={-1}>审查队列</h1><p>上传虚构文档、查看处理结果并记录人工决定。</p></div><Button renderIcon={Upload} onClick={onUpload}>上传虚构文档</Button></section>
+      <section className="page-heading compact"><div><p className="section-label">人工决策工作区</p><h1 tabIndex={-1}>审查队列</h1><p>{isPublicDemo ? "载入预置虚构样本，体验审查与人工决定。" : "上传虚构文档、查看处理结果并记录人工决定。"}</p></div><Button renderIcon={Upload} onClick={onUpload}>{isPublicDemo ? "载入虚构样本" : "上传虚构文档"}</Button></section>
       {error && <div className="queue-error"><InlineNotification kind="error" lowContrast hideCloseButton title="队列更新失败" subtitle={error} /><Button kind="tertiary" size="sm" onClick={onRetry}>重新加载</Button></div>}
       {loading ? <DataTableSkeleton columnCount={5} rowCount={8} /> : (
         <DataTable rows={rows} headers={headers}>

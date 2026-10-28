@@ -3,6 +3,7 @@ import { Button, ClickableTile, InlineNotification, SkeletonText, Tag, Tile } fr
 import type { CaseSummary, DashboardSummary, SystemStatus } from "../types";
 import { formatDate } from "../workflow";
 import { RiskTag, StatusTag } from "./StatusTag";
+import { isPublicDemo } from "../demoMode";
 
 interface DashboardProps {
   summary: DashboardSummary | null;
@@ -32,7 +33,7 @@ export function Dashboard({ summary, systemStatus, cases, loading, error, onRetr
   }
 
   const metrics = [
-    { label: "全部案件", value: summary.total_cases, icon: Document, meta: "历史演示及新增虚构文档" },
+    { label: "全部案件", value: summary.total_cases, icon: Document, meta: isPublicDemo ? "当前浏览器中的虚构样本" : "历史演示及新增虚构文档" },
     { label: "待人工审批", value: summary.pending_approval, icon: Pending, meta: "需要审查员决定" },
     { label: "高风险案件", value: summary.high_risk, icon: WarningAlt, meta: "高或严重风险" },
     { label: "已形成决定", value: summary.completed, icon: CheckmarkOutline, meta: "包含三种决定类型" },
@@ -44,7 +45,7 @@ export function Dashboard({ summary, systemStatus, cases, loading, error, onRetr
         <div>
           <p className="section-label">审查运营总览</p>
           <h1 tabIndex={-1}>文档风险与决策</h1>
-          <p>确定性规则负责解释风险，最终决定始终由人工完成。</p>
+          <p>{isPublicDemo ? "体验预置风险证据与人工审批，所有数字均为虚构演示数据。" : "确定性规则负责解释风险，最终决定始终由人工完成。"}</p>
         </div>
         <Button renderIcon={ArrowRight} onClick={onOpenQueue}>打开审查队列</Button>
       </section>

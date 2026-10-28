@@ -1,16 +1,11 @@
 import type { AcceptedTask, CaseDetail, CaseSummary, DashboardSummary, Decision, ReportFormat, SystemStatus, WorkflowJob } from "./types";
+import { ApiError } from "./apiError";
+import { demoApi } from "./demo";
+import { isPublicDemo } from "./demoMode";
+
+export { ApiError } from "./apiError";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "/api";
-
-export class ApiError extends Error {
-  constructor(
-    message: string,
-    public readonly status: number,
-    public readonly code: string,
-    public readonly requestId: string | null,
-    public readonly retryable: boolean,
-  ) { super(message); }
-}
 
 async function responseRequest(path: string, init?: RequestInit): Promise<Response> {
   const response = await fetch(`${API_BASE}${path}`, init);
@@ -26,7 +21,7 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
   return (await responseRequest(path, init)).json() as Promise<T>;
 }
 
-export const api = {
+const liveApi = {
   summary: (signal?: AbortSignal) => request<DashboardSummary>("/summary", { signal }),
   cases: (signal?: AbortSignal) => request<CaseSummary[]>("/cases", { signal }),
   case: (caseId: string, signal?: AbortSignal) => request<CaseDetail>(`/cases/${encodeURIComponent(caseId)}`, { signal }),
@@ -60,3 +55,5 @@ export const api = {
   downloadReport: async (caseId: string, format: ReportFormat, reportId: string, signal?: AbortSignal) =>
     (await responseRequest(`/cases/${encodeURIComponent(caseId)}/report/${format}?report_id=${encodeURIComponent(reportId)}`, { signal })).blob(),
 };
+
+export const api: typeof liveApi = isPublicDemo ? demoApi : liveApi;

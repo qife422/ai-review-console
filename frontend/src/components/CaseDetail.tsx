@@ -2,6 +2,7 @@ import { ArrowLeft, Checkmark, Renew, WarningAlt } from "@carbon/icons-react";
 import { Button, CodeSnippet, InlineNotification, Modal, SkeletonText, Tab, TabList, TabPanel, TabPanels, Tabs, TextArea, Tile } from "@carbon/react";
 import { useEffect, useRef, useState } from "react";
 import { api, ApiError } from "../api";
+import { isPublicDemo } from "../demoMode";
 import type { CaseDetail as CaseDetailType, Decision, DocumentSection, Finding } from "../types";
 import { errorMessage, formatDate } from "../workflow";
 import { ReportPanel } from "./ReportPanel";
@@ -109,12 +110,12 @@ export function CaseDetail({ detail, loading, error, notice, onDismissNotice, on
         <div className="decision-actions"><Button kind="tertiary" onClick={onReload}>刷新状态</Button><Button ref={decisionLauncher} disabled={!canDecide} renderIcon={Checkmark} onClick={() => selectDecision("approved")}>记录决定</Button></div>
       </section>
 
-      <div className="source-notice"><strong>{detail.source_kind === "seed_demo" ? "历史种子演示" : detail.source_kind === "uploaded_demo" ? "新增虚构文档" : "来源未标识"}</strong><span>{detail.source_kind === "seed_demo" ? "示例字段不能作为真实 Langflow 执行证据。" : "实际工作流完成且结果入库后，才允许人工决定。"}</span></div>
+      <div className="source-notice"><strong>{isPublicDemo ? "浏览器虚构样本" : detail.source_kind === "seed_demo" ? "历史种子演示" : detail.source_kind === "uploaded_demo" ? "新增虚构文档" : "来源未标识"}</strong><span>{isPublicDemo ? "所有进度、分数与发现均为演示预设；本页不调用真实 AI 或 Langflow。" : detail.source_kind === "seed_demo" ? "示例字段不能作为真实 Langflow 执行证据。" : "实际工作流完成且结果入库后，才允许人工决定。"}</span></div>
       <section className="detail-summary">
         <Tile className="score-tile"><span>规则风险分数</span><strong>{detail.risk_score ?? "未评分"}</strong><small>{detail.risk_score !== null ? "/ 100，辅助审查指标" : "处理尚未完成，不代表零风险"}</small></Tile>
         <Tile><span>负责人</span><strong>{detail.owner}</strong><small>{hasAssessment ? `${detail.pii_count} 个脱敏命中` : "脱敏结果尚未完成"}</small></Tile>
         <Tile><span>规则版本</span><strong>{hasAssessment ? detail.ruleset_version : "尚未评估"}</strong><small>确定性规则，未调用语义模型</small></Tile>
-        <Tile><span>Langflow 运行</span><strong>{liveRunId ?? (detail.source_kind === "seed_demo" ? "历史演示结果" : "尚未取得运行编号")}</strong><small>{liveRunId ? "真实上游运行记录" : "不表示工作流已完成"}</small></Tile>
+        <Tile><span>Langflow 运行</span><strong>{isPublicDemo ? "未连接，前端模拟" : liveRunId ?? (detail.source_kind === "seed_demo" ? "历史演示结果" : "尚未取得运行编号")}</strong><small>{isPublicDemo ? "不存在真实上游运行记录" : liveRunId ? "真实上游运行记录" : "不表示工作流已完成"}</small></Tile>
       </section>
 
       <div className="review-workflow-grid">

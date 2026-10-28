@@ -1,7 +1,8 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vitest/config";
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  envDir: mode === "public-demo" ? false : undefined,
   plugins: [react()],
   server: {
     port: 5173,
@@ -14,4 +15,4 @@ export default defineConfig({
     globals: true,
     setupFiles: "./src/test/setup.ts",
   },
-});
+}));
