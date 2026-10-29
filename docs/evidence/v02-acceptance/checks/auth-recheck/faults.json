@@ -1,0 +1,81 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "AC-06",
+    "AC-07"
+  ],
+  "producer": "scripts/verify_faults.py",
+  "producer_sha256": "8350bff4485a554a6ebb11dd55807d6ffadd6e393d868702a4e9182c3d039733",
+  "checked_at": "2026-10-29T04:26:57.265989+00:00",
+  "project": "ai-review-console-upgrade",
+  "selected_modes": [
+    "langflow_401"
+  ],
+  "cases": [
+    {
+      "mode": "langflow_401",
+      "case_id": "RC-e23a2827cfa44a8a8851cf20f0eadbf0",
+      "job_id": "JB-4cd46c73a8504f3a937b230e412ede8a",
+      "retry_job_id": "JB-c7a8007349c44236b984612e6c2bf889",
+      "source_sha256": "583234f1d5de08dd65875b108cbd1b361cfe103648fb4c915ada64697e683bcc",
+      "container": {
+        "container": "arc-fault-langflow-401-293dc7f2",
+        "container_id": "1dc75ecefed6361927d1c5afdee726d5dee997ae7651534f368ffc9b0ad43db7",
+        "image_id": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+        "exit_code": 137
+      },
+      "interrupted_or_failed": {
+        "state": "failed",
+        "phase": "failed",
+        "attempt": 1,
+        "retry_generation": 0,
+        "langflow_job_id": null,
+        "error_code": "langflow_auth_failed",
+        "lease_until": null,
+        "result_hash": null,
+        "execution_token_sha256": "6e892cc49c41749df719449fdab438ccd1c9139c6f87e7143ebb3fa11451b596",
+        "assessment_count": 0,
+        "scored_audit_count": 0,
+        "job_count": 1
+      },
+      "recovered": {
+        "state": "succeeded",
+        "phase": "persisted",
+        "attempt": 1,
+        "retry_generation": 1,
+        "langflow_job_id": "98264c99-b329-4844-86ae-82d77597f22e",
+        "error_code": null,
+        "lease_until": "2026-10-29 04:28:34.248240+00:00",
+        "result_hash": "150424837407fd48679ddcdbfb46bbf0b2c4350bf533cce02f69cec7085c76e7",
+        "execution_token_sha256": "b61cac9b7c9d873b05be44d4a1cf38a350c58212b00d5bd53380177984c88eff",
+        "assessment_count": 1,
+        "scored_audit_count": 1,
+        "job_count": 2
+      },
+      "original_job_after_recovery": {
+        "state": "failed",
+        "phase": "failed",
+        "attempt": 1,
+        "retry_generation": 0,
+        "langflow_job_id": null,
+        "error_code": "langflow_auth_failed",
+        "lease_until": null,
+        "result_hash": null,
+        "execution_token_sha256": "6e892cc49c41749df719449fdab438ccd1c9139c6f87e7143ebb3fa11451b596",
+        "assessment_count": 1,
+        "scored_audit_count": 1,
+        "job_count": 2
+      },
+      "elapsed_seconds": 9.316,
+      "result": "passed"
+    }
+  ],
+  "limitations": "Transport failures use real refused TCP connections in isolated one-shot workers; they do not stop the shared API/Langflow services. Timeout/429 mappings are separate contract tests. A recovered manual retry may encounter a real transient 429 and use up to three attempts in its new generation. Only selected modes are covered by this manifest. No existing case or business data is overwritten.",
+  "retention": "Fault containers and synthetic cases retained; no cleanup authorization",
+  "final_health": {
+    "status": "ok",
+    "data_mode": "synthetic-only",
+    "workflow_engine": "Langflow"
+  },
+  "result": "passed"
+}

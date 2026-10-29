@@ -1,0 +1,29 @@
+{
+  "goal": "v0.2 acceptance",
+  "source_revision": "14d44b1210cff67b6f2bdd60de4523cc56bcb1e8",
+  "contract": "ARC-UPGRADE@0.1.0",
+  "contract_sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753",
+  "source_bytes": 638871,
+  "temporary_root": "/private/tmp/arc-v02-acceptance.UYLZxy",
+  "candidate_root": "artifacts/evidence-candidates/v02-acceptance",
+  "sealed_root": "docs/evidence/v02-acceptance",
+  "thresholds": {
+    "temporary_bytes": 268435456,
+    "temporary_files": 10000,
+    "evidence_bytes": 104857600,
+    "evidence_files": 1000,
+    "runtime_bytes": 1073741824,
+    "runtime_files": 5000,
+    "docker_project_bytes": 12884901888,
+    "docker_growth_bytes": 3221225472,
+    "amplification_gate": "derived >1GiB and >100x author source"
+  },
+  "cleanup_authorized": false,
+  "protected_sqlite_sha256": "980ad5d23d866a52e4101966594e5a24ee67edef08475afc63ff9c3e1f6fca1f",
+  "protected": [
+    "historical ai-review-console containers/volumes",
+    "fixed Spec and baseline",
+    "fixtures/examples/history"
+  ],
+  "checked_at": "2026-10-29T04:17:39.240013+00:00"
+}

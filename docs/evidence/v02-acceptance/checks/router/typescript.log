@@ -1,0 +1,5 @@
+
+> ai-review-console-web@0.2.0 lint
+> tsc --noEmit -p tsconfig.app.json --pretty false && tsc --noEmit -p tsconfig.node.json --pretty false
+
+src/App.test.tsx(109,21): error TS2339: Property 'aborted' does not exist on type 'never'.

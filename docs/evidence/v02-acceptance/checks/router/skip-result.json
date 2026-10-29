@@ -1,0 +1,235 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "AC-15"
+  ],
+  "checked_at": "2026-10-29T04:44:57.370936+00:00",
+  "change": "SkipToContent click prevents hash navigation and explicitly focuses main; main has tabIndex=-1. Existing route synchronization is unchanged.",
+  "source_files": [
+    {
+      "path": "frontend/src/App.tsx",
+      "sha256": "6e1573b83fae0e11477ed54af2cf6508e22c1438a229409b8c0c3d10925c263c"
+    },
+    {
+      "path": "frontend/src/App.test.tsx",
+      "sha256": "c64e7a1ceaa13f419db0e326945c7fb05023f3a585a5d52b7a1d60acf05088f2"
+    }
+  ],
+  "tests": [
+    {
+      "argv": [
+        "npm",
+        "--prefix",
+        "frontend",
+        "test",
+        "--",
+        "--run"
+      ],
+      "result": "29 passed, 5 files",
+      "log": "skip-frontend-tests.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "--prefix",
+        "frontend",
+        "run",
+        "lint"
+      ],
+      "result": "passed",
+      "log": "skip-typescript.log"
+    }
+  ],
+  "browser": {
+    "session": "arc-v02-skip",
+    "base_url": "http://127.0.0.1:4183",
+    "api_source": "Explicit Playwright CLI route mocks from current frontend/src/test/fixtures.ts; mock case marked seed_demo, not real Flow evidence",
+    "mock_payload": "skip/mock-responses.json",
+    "keyboard_steps": [
+      "Case H1 initially focused",
+      "Shift+Tab six times to reach the native Skip to main content link",
+      "Enter"
+    ],
+    "before": {
+      "url": "http://127.0.0.1:4183/#case/RC-SKIP-B",
+      "focusTag": "A",
+      "focusText": "Skip to main content",
+      "href": "#main-content",
+      "mainTabIndex": -1
+    },
+    "after": {
+      "url": "http://127.0.0.1:4183/#case/RC-SKIP-B",
+      "hash": "#case/RC-SKIP-B",
+      "heading": "虚构键盘焦点验证 B",
+      "focusTag": "MAIN",
+      "focusId": "main-content",
+      "mainFocused": true,
+      "mainTabIndex": -1,
+      "caseContentPresent": true
+    },
+    "checks": {
+      "keyboard_reached_skip_link": true,
+      "keyboard_enter_kept_case_url": true,
+      "case_content_remains": true,
+      "main_is_programmatically_focusable": true,
+      "keyboard_enter_focused_main": true
+    },
+    "closed": true,
+    "server_stopped": true,
+    "server_command": [
+      "npm",
+      "--prefix",
+      "frontend",
+      "run",
+      "dev",
+      "--",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "4183",
+      "--strictPort"
+    ]
+  },
+  "limitations": [
+    "Focus and case-route preservation only; no real backend/Flow or business write performed",
+    "No packaged build or public demo update performed"
+  ],
+  "old_selected_evidence_overwritten": false,
+  "skills": [
+    "design-taste-frontend (existing Carbon preserved; no visual changes)",
+    "playwright (cached CLI only)"
+  ],
+  "result": "passed",
+  "files": [
+    {
+      "path": "skip-frontend-tests.log",
+      "bytes": 312,
+      "sha256": "11f682b6fffd7c458695e90dc668ffbf833db192360084b373b6b16d8449e664"
+    },
+    {
+      "path": "skip-typescript.log",
+      "bytes": 141,
+      "sha256": "8ea0103cc704725503eb7ce55ee6de5e170808ab42861f9c7e99f34b9b325603"
+    },
+    {
+      "path": "skip/01-open-blank.log",
+      "bytes": 226,
+      "sha256": "9e606bafee4409d90c8d42fb69fc702e1f66574be7549b48109e0cc762a49ec3"
+    },
+    {
+      "path": "skip/01-open-blank.yml",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "skip/02-summary.log",
+      "bytes": 171,
+      "sha256": "f445e5692ad7dec837b973417484ad53aedfda5923daf018c70620085656ff72"
+    },
+    {
+      "path": "skip/03-case-list.log",
+      "bytes": 167,
+      "sha256": "6ac37111a7e433228f36f94f42ec00123d9548721db820c388d4c60ce35129f3"
+    },
+    {
+      "path": "skip/04-status.log",
+      "bytes": 183,
+      "sha256": "88452cd45d6eea88067d4a4ce39770a1afc0a412d1ef765d23186ca04785048c"
+    },
+    {
+      "path": "skip/05-case-detail.log",
+      "bytes": 187,
+      "sha256": "1e2c1666b86e6e070408a213c2cd5d96497d2c6d9f169c42066a25401579dd8c"
+    },
+    {
+      "path": "skip/06-open-case.log",
+      "bytes": 353,
+      "sha256": "85dbb2f428159aedc783d5d2d99b460c6286cdde2af06f620ae10d34b309f225"
+    },
+    {
+      "path": "skip/06-open-case.yml",
+      "bytes": 5850,
+      "sha256": "421f0dec952fa030ba8b44402f923933a76884c7cc8f47cb7bdb4aab16cb4c16"
+    },
+    {
+      "path": "skip/07-case-ready.log",
+      "bytes": 504,
+      "sha256": "5bd7d74663a6dc3128bb12c66dfb96f2d43d5cd51d65e3548b8b7b8fb88108d8"
+    },
+    {
+      "path": "skip/08-shifttab-1.log",
+      "bytes": 93,
+      "sha256": "989067ddf658a72d1541696581e4e9cffc6c23fa863aed0e4935ca15863ad85f"
+    },
+    {
+      "path": "skip/08-shifttab-2.log",
+      "bytes": 93,
+      "sha256": "989067ddf658a72d1541696581e4e9cffc6c23fa863aed0e4935ca15863ad85f"
+    },
+    {
+      "path": "skip/08-shifttab-3.log",
+      "bytes": 93,
+      "sha256": "989067ddf658a72d1541696581e4e9cffc6c23fa863aed0e4935ca15863ad85f"
+    },
+    {
+      "path": "skip/08-shifttab-4.log",
+      "bytes": 93,
+      "sha256": "989067ddf658a72d1541696581e4e9cffc6c23fa863aed0e4935ca15863ad85f"
+    },
+    {
+      "path": "skip/08-shifttab-5.log",
+      "bytes": 93,
+      "sha256": "989067ddf658a72d1541696581e4e9cffc6c23fa863aed0e4935ca15863ad85f"
+    },
+    {
+      "path": "skip/08-shifttab-6.log",
+      "bytes": 93,
+      "sha256": "989067ddf658a72d1541696581e4e9cffc6c23fa863aed0e4935ca15863ad85f"
+    },
+    {
+      "path": "skip/09-skip-focused.log",
+      "bytes": 453,
+      "sha256": "fb1d177d37d45162da125822696db807a50c3705e4e5a470c1b76a9995b4de5e"
+    },
+    {
+      "path": "skip/10-keyboard-enter.log",
+      "bytes": 253,
+      "sha256": "8123a5d577884266a7269bc0a84e94bd103449a764ea417539bc4a39aee41ca0"
+    },
+    {
+      "path": "skip/10-keyboard-enter.yml",
+      "bytes": 5850,
+      "sha256": "ced5f48d09ef1483f5259aea54a05d88e1096cde13c264b80e8d9261ce5640e8"
+    },
+    {
+      "path": "skip/11-skip-result-dom.log",
+      "bytes": 695,
+      "sha256": "360e82f5ee4e3f569addf4a044d53cd688864ae4323e3d33d06276bf1e544246"
+    },
+    {
+      "path": "skip/12-browser-close.log",
+      "bytes": 31,
+      "sha256": "52bb303c6da48b3fdaaf946becfec889831b1ea66bc8773fccde9ca46d7883b7"
+    },
+    {
+      "path": "skip/commands.json",
+      "bytes": 11801,
+      "sha256": "6ad788512db99cf5454c707649df3742b2f9154ad7edd739c40fdaa8c32d142f"
+    },
+    {
+      "path": "skip/mock-responses.json",
+      "bytes": 5825,
+      "sha256": "863ad361baebb6fb314f95a466d13f2d745ebe292e24f24870a1e4713db56777"
+    },
+    {
+      "path": "skip/record_cli.py",
+      "bytes": 872,
+      "sha256": "6e7318f0d05c0f27747464d0e329fd9b9033841344a49552d956a5b59aecb80b"
+    },
+    {
+      "path": "skip/server-stopped.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

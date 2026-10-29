@@ -1,0 +1,1319 @@
+{
+  "schema": "arc-v02-dependency-triage-1",
+  "queried_at_utc": "2026-10-29T04:17:46.939586+00:00",
+  "source_commit": "14d44b1210cff67b6f2bdd60de4523cc56bcb1e8",
+  "input_fingerprints": [
+    {
+      "path": "requirements.lock",
+      "bytes": 1989,
+      "sha256": "3e922f3cd862294cc26dc83d6376415baed2ca8536bbb95a7aa67a475934078e"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "bytes": 89629,
+      "sha256": "4333ef73332a46fc299d162478978aed269a99952bb88c60f1eed1b43200d96e"
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 914,
+      "sha256": "ac221a6e3e73079eb59e2e5cbac09c7982b40b780290ff7c1ab47fe9c974f7e2"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 4424,
+      "sha256": "4dc92eb01d757440b7eabe1a786575850b1148e4031f4f4583e8dea69dda8b3c"
+    },
+    {
+      "path": "scripts/scan_release.py",
+      "bytes": 38339,
+      "sha256": "f3f353ff9a50651aa864aa75dbb480da9481dc78aaacaac2b74a90616558ea0c"
+    }
+  ],
+  "services": [
+    "PyPI/PyPA vulnerability JSON API",
+    "https://registry.npmjs.org audit API"
+  ],
+  "database_snapshot_date": null,
+  "database_note": "provider snapshots not exposed; record actual query time only",
+  "python_affected": [
+    {
+      "package": "certifi",
+      "version": "2026.7.22",
+      "direct_in_pyproject": false,
+      "scope": "locked Python application runtime",
+      "raw_findings": 2,
+      "unique_alias_groups": 1,
+      "advisories": [
+        {
+          "ids": [
+            "GHSA-6q48-6c7w-9gw2",
+            "PYSEC-2026-4320"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-6q48-6c7w-9gw2"
+          ],
+          "fix_versions": [
+            "2026.10.18",
+            "2026.10.19"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 2
+        }
+      ]
+    },
+    {
+      "package": "pillow",
+      "version": "12.3.0",
+      "direct_in_pyproject": false,
+      "scope": "locked Python application runtime",
+      "raw_findings": 39,
+      "unique_alias_groups": 39,
+      "advisories": [
+        {
+          "ids": [
+            "CVE-2026-112394",
+            "GHSA-4558-3h8r-v8xp",
+            "PYSEC-2026-4327"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-4558-3h8r-v8xp"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112396",
+            "GHSA-4rr5-89j8-mwwm",
+            "PYSEC-2026-4328"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-4rr5-89j8-mwwm"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112392",
+            "GHSA-27h8-gf7j-v5hc",
+            "PYSEC-2026-4326"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-27h8-gf7j-v5hc"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-96639",
+            "GHSA-v9pv-5gc8-w2m6",
+            "PYSEC-2026-4339"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-v9pv-5gc8-w2m6"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-96641",
+            "GHSA-4rm8-3hmm-39fg",
+            "PYSEC-2026-4340"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-4rm8-3hmm-39fg"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-96644",
+            "GHSA-9v9v-9qvf-h2hj",
+            "PYSEC-2026-4343"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-9v9v-9qvf-h2hj"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112896",
+            "GHSA-pchr-8j38-3x4p",
+            "PYSEC-2026-4334"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-pchr-8j38-3x4p"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-96636",
+            "GHSA-p8hx-v2p6-rp84",
+            "PYSEC-2026-4337"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-p8hx-v2p6-rp84"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-96642",
+            "GHSA-3j72-p6qg-6xp7",
+            "PYSEC-2026-4341"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-3j72-p6qg-6xp7"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112398",
+            "GHSA-5x8w-8jj5-q52h",
+            "PYSEC-2026-4330"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-5x8w-8jj5-q52h"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-96637",
+            "GHSA-g842-9rc4-69pw",
+            "PYSEC-2026-4338"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-g842-9rc4-69pw"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112901",
+            "GHSA-xgh8-jp6q-p5x8",
+            "PYSEC-2026-4335"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-xgh8-jp6q-p5x8"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-114501",
+            "GHSA-654x-cwwv-5j9c",
+            "PYSEC-2026-4336"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-654x-cwwv-5j9c"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112402",
+            "GHSA-7mwm-ghpf-9vrm",
+            "PYSEC-2026-4331"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-7mwm-ghpf-9vrm"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112403",
+            "GHSA-8g5g-8vmr-9782",
+            "PYSEC-2026-4332"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-8g5g-8vmr-9782"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112397",
+            "GHSA-58r4-6rv3-gfh8",
+            "PYSEC-2026-4329"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-58r4-6rv3-gfh8"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112405",
+            "GHSA-cp9v-662q-vvx9",
+            "PYSEC-2026-4333"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-cp9v-662q-vvx9"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-96643",
+            "GHSA-g4qv-2jxx-769h",
+            "PYSEC-2026-4342"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-g4qv-2jxx-769h"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112895",
+            "GHSA-p4wg-p73j-c528"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-p4wg-p73j-c528"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112400",
+            "GHSA-65qm-jvmh-6pqg"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-65qm-jvmh-6pqg"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112897",
+            "GHSA-q45j-58j2-45rg"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-q45j-58j2-45rg"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112395",
+            "GHSA-462x-pgg6-55fp"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-462x-pgg6-55fp"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112404",
+            "GHSA-c6hw-5grf-ff96"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-c6hw-5grf-ff96"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112899",
+            "GHSA-vx6w-vv9f-6gvg"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-vx6w-vv9f-6gvg"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112900",
+            "GHSA-w889-685w-c8fh"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-w889-685w-c8fh"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112893",
+            "GHSA-j4m9-6w36-pw47"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-j4m9-6w36-pw47"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112891",
+            "GHSA-fc9g-5qg7-mf45"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-fc9g-5qg7-mf45"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112390",
+            "GHSA-22hg-r758-rrw9"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-22hg-r758-rrw9"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112401",
+            "GHSA-74r2-7ff9-mjj2"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-74r2-7ff9-mjj2"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112391",
+            "GHSA-254f-3936-288h"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-254f-3936-288h"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112894",
+            "GHSA-jg86-v3jv-hrpm"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-jg86-v3jv-hrpm"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112406",
+            "GHSA-f2g6-542v-9j58"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-f2g6-542v-9j58"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112399",
+            "GHSA-5xm2-6676-qcp9"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-5xm2-6676-qcp9"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112892",
+            "GHSA-gg2r-wvfm-q9rx"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-gg2r-wvfm-q9rx"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-112393",
+            "GHSA-332p-7hrc-92wf"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-332p-7hrc-92wf"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-96638",
+            "GHSA-24rc-8hj2-v98c"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-24rc-8hj2-v98c"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-96640",
+            "GHSA-mrfp-p49p-3hf2"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-mrfp-p49p-3hf2"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-96778",
+            "GHSA-g7cr-3p24-7wf7"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-g7cr-3p24-7wf7"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "GHSA-78g4-xqwv-q3g8"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-78g4-xqwv-q3g8"
+          ],
+          "fix_versions": [
+            "13.0.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        }
+      ]
+    },
+    {
+      "package": "pypdf",
+      "version": "6.16.2",
+      "direct_in_pyproject": true,
+      "scope": "locked Python application runtime",
+      "raw_findings": 19,
+      "unique_alias_groups": 19,
+      "advisories": [
+        {
+          "ids": [
+            "CVE-2026-102994",
+            "GHSA-5jq2-8x83-x246",
+            "PYSEC-2026-4153"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-5jq2-8x83-x246"
+          ],
+          "fix_versions": [
+            "6.18.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-102995",
+            "GHSA-fp3h-c4fm-7vvf",
+            "PYSEC-2026-4154"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-fp3h-c4fm-7vvf"
+          ],
+          "fix_versions": [
+            "6.18.1"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-103000",
+            "GHSA-w23x-9jrw-r45c",
+            "PYSEC-2026-4160"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-w23x-9jrw-r45c"
+          ],
+          "fix_versions": [
+            "6.19.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-102999",
+            "GHSA-v247-6f48-mgcj",
+            "PYSEC-2026-4159"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-v247-6f48-mgcj"
+          ],
+          "fix_versions": [
+            "6.19.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-102997",
+            "GHSA-jw7q-gvrg-4vj3",
+            "PYSEC-2026-4156"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-jw7q-gvrg-4vj3"
+          ],
+          "fix_versions": [
+            "6.18.1"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-102996",
+            "GHSA-g9cg-prrw-2r8q",
+            "PYSEC-2026-4155"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-g9cg-prrw-2r8q"
+          ],
+          "fix_versions": [
+            "6.18.1"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-102993",
+            "GHSA-qv6h-rv94-w285",
+            "PYSEC-2026-4158"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-qv6h-rv94-w285"
+          ],
+          "fix_versions": [
+            "6.17.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-102998",
+            "GHSA-php9-fj8v-98fj",
+            "PYSEC-2026-4157"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-php9-fj8v-98fj"
+          ],
+          "fix_versions": [
+            "6.19.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-113792",
+            "GHSA-qfv9-64jg-mh7p"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-qfv9-64jg-mh7p"
+          ],
+          "fix_versions": [
+            "6.20.1"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-113795",
+            "GHSA-7mh2-4gg2-979f"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-7mh2-4gg2-979f"
+          ],
+          "fix_versions": [
+            "6.20.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-113793",
+            "GHSA-9mx8-4j7g-633p"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-9mx8-4j7g-633p"
+          ],
+          "fix_versions": [
+            "6.20.1"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-113794",
+            "GHSA-39mj-jf6j-2qj3"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-39mj-jf6j-2qj3"
+          ],
+          "fix_versions": [
+            "6.20.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-113786",
+            "GHSA-5hx5-vpf9-5wcv"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-5hx5-vpf9-5wcv"
+          ],
+          "fix_versions": [
+            "6.21.1"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-113791",
+            "GHSA-cgf9-327m-v77c"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-cgf9-327m-v77c"
+          ],
+          "fix_versions": [
+            "6.21.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-113790",
+            "GHSA-f54x-cmq8-qg57"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-f54x-cmq8-qg57"
+          ],
+          "fix_versions": [
+            "6.21.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-113789",
+            "GHSA-6vvc-x485-93v7"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-6vvc-x485-93v7"
+          ],
+          "fix_versions": [
+            "6.21.0"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-115572",
+            "GHSA-6c7f-9265-g8fw"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-6c7f-9265-g8fw"
+          ],
+          "fix_versions": [
+            "6.21.2"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-115585",
+            "GHSA-jr96-gvgh-j3r4"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-jr96-gvgh-j3r4"
+          ],
+          "fix_versions": [
+            "6.21.2"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        },
+        {
+          "ids": [
+            "CVE-2026-115580",
+            "GHSA-gmh7-3g9r-mjh5"
+          ],
+          "primary_source_urls": [
+            "https://github.com/advisories/GHSA-gmh7-3g9r-mjh5"
+          ],
+          "fix_versions": [
+            "6.21.2"
+          ],
+          "severity": null,
+          "severity_note": "pip-audit JSON does not provide severity; no score invented",
+          "raw_records": 1
+        }
+      ]
+    }
+  ],
+  "python_dependency_parent_metadata": {
+    "certifi": [
+      {
+        "name": "requests",
+        "version": "2.34.2",
+        "requires": [
+          "certifi>=2023.5.7"
+        ]
+      },
+      {
+        "name": "httpcore",
+        "version": "1.0.9",
+        "requires": [
+          "certifi"
+        ]
+      },
+      {
+        "name": "httpx",
+        "version": "0.28.1",
+        "requires": [
+          "certifi"
+        ]
+      }
+    ],
+    "pillow": [
+      {
+        "name": "reportlab",
+        "version": "4.5.1",
+        "requires": [
+          "pillow>=9.0.0"
+        ]
+      },
+      {
+        "name": "pypdf",
+        "version": "6.16.2",
+        "requires": [
+          "Pillow>=8.0.0 ; extra == \"full\"",
+          "Pillow>=8.0.0 ; extra == \"image\""
+        ]
+      }
+    ]
+  },
+  "python_raw_findings": 60,
+  "python_unique_alias_groups": 59,
+  "node_affected": [
+    {
+      "package": "@vitest/mocker",
+      "version": "4.1.11",
+      "is_direct": false,
+      "lock_dev_flag": true,
+      "scope": "development/test tooling",
+      "max_reported_severity": "moderate",
+      "affected_range": "<=4.1.11",
+      "fix_available": {
+        "name": "vitest",
+        "version": "4.1.12",
+        "isSemVerMajor": false
+      },
+      "advisories": [
+        {
+          "id": 1242767,
+          "url": "https://github.com/advisories/GHSA-qxg6-89mg-rqv8",
+          "title": "Vitest: Code injection via unauthenticated manual mock registration",
+          "severity": "moderate",
+          "affected_range": ">=2.1.0-beta.7 <4.1.12"
+        },
+        {
+          "id": 1242769,
+          "url": "https://github.com/advisories/GHSA-xp26-3454-mjgp",
+          "title": "Vitest: Windows backslash traversal bypasses the @vitest/mocker redirect allowlist fix",
+          "severity": "moderate",
+          "affected_range": ">=4.1.11 <4.1.12"
+        }
+      ],
+      "via_packages": []
+    },
+    {
+      "package": "source-map-js",
+      "version": "1.2.1",
+      "is_direct": false,
+      "lock_dev_flag": false,
+      "scope": "npm production-flagged transitive dependency, including Sass peer/build chain; browser bundle exploitability not established",
+      "max_reported_severity": "high",
+      "affected_range": "1.0.0 - 1.2.1",
+      "fix_available": true,
+      "advisories": [
+        {
+          "id": 1241209,
+          "url": "https://github.com/advisories/GHSA-68fv-2mgg-jv7q",
+          "title": "source-map-js allows event-loop denial of service through indexed source-map section offsets",
+          "severity": "high",
+          "affected_range": ">=1.0.0 <1.2.2"
+        }
+      ],
+      "via_packages": []
+    },
+    {
+      "package": "undici",
+      "version": "7.29.0",
+      "is_direct": false,
+      "lock_dev_flag": true,
+      "scope": "development/test tooling",
+      "max_reported_severity": "high",
+      "affected_range": "7.0.0 - 7.30.0",
+      "fix_available": true,
+      "advisories": [
+        {
+          "id": 1239933,
+          "url": "https://github.com/advisories/GHSA-3wwx-pv8p-q78v",
+          "title": "undici vulnerable to Denial of Service via unhandled error in WebSocket permessage-deflate decompression",
+          "severity": "moderate",
+          "affected_range": ">=7.28.0 <7.29.1"
+        },
+        {
+          "id": 1240036,
+          "url": "https://github.com/advisories/GHSA-pmjh-fq2x-6v4x",
+          "title": "undici vulnerable to Denial of Service via orphaned RetryHandler response body",
+          "severity": "moderate",
+          "affected_range": ">=7.11.0 <7.29.1"
+        },
+        {
+          "id": 1240038,
+          "url": "https://github.com/advisories/GHSA-r53p-7pc4-xj5r",
+          "title": "undici vulnerable to downstream response splitting via retry interceptor",
+          "severity": "low",
+          "affected_range": ">=7.0.0 <7.29.1"
+        },
+        {
+          "id": 1240041,
+          "url": "https://github.com/advisories/GHSA-rfgv-xxqx-mfg5",
+          "title": "undici vulnerable to Denial of Service via unrequested WebSocket subprotocol",
+          "severity": "high",
+          "affected_range": ">=7.0.0 <7.29.1"
+        },
+        {
+          "id": 1240044,
+          "url": "https://github.com/advisories/GHSA-3xpg-4rpp-hhhm",
+          "title": "undici vulnerable to Denial of Service via unbounded decompression of compressed responses",
+          "severity": "moderate",
+          "affected_range": ">=7.15.0 <7.29.1"
+        },
+        {
+          "id": 1240046,
+          "url": "https://github.com/advisories/GHSA-2jfj-6hjv-fm6j",
+          "title": "undici vulnerable to cross-user cookie disclosure via Set-Cookie caching in shared caches",
+          "severity": "moderate",
+          "affected_range": ">=7.0.0 <7.29.1"
+        },
+        {
+          "id": 1240048,
+          "url": "https://github.com/advisories/GHSA-2gqq-gqf2-x968",
+          "title": "undici vulnerable to response truncation via oversized chunked responses in the dump interceptor",
+          "severity": "low",
+          "affected_range": ">=7.1.0 <7.29.1"
+        },
+        {
+          "id": 1240050,
+          "url": "https://github.com/advisories/GHSA-w293-vg96-wgc3",
+          "title": "undici vulnerable to TLS certificate validation bypass via dropped connect options in BalancedPool",
+          "severity": "high",
+          "affected_range": ">=7.24.1 <7.29.1"
+        },
+        {
+          "id": 1240052,
+          "url": "https://github.com/advisories/GHSA-8436-99hf-9mmv",
+          "title": "undici vulnerable to caching and replay of unsafe HTTP method responses",
+          "severity": "low",
+          "affected_range": ">=7.0.0 <7.29.1"
+        },
+        {
+          "id": 1240055,
+          "url": "https://github.com/advisories/GHSA-rx4f-c7p8-82vq",
+          "title": "undici vulnerable to Denial of Service via WebSocketStream unclean close",
+          "severity": "moderate",
+          "affected_range": ">=7.0.0 <7.29.1"
+        },
+        {
+          "id": 1243078,
+          "url": "https://github.com/advisories/GHSA-4qv8-2p9j-2685",
+          "title": "undici vulnerable to Denial of Service via unbounded memory in the EventSource parser",
+          "severity": "moderate",
+          "affected_range": ">=7.0.0 <7.30.1"
+        },
+        {
+          "id": 1243081,
+          "url": "https://github.com/advisories/GHSA-f72v-6w45-q472",
+          "title": "undici vulnerable to Subresource Integrity bypass via non-lowercase algorithm tokens",
+          "severity": "moderate",
+          "affected_range": ">=7.15.0 <7.30.1"
+        },
+        {
+          "id": 1243113,
+          "url": "https://github.com/advisories/GHSA-xjj6-f33q-929c",
+          "title": "undici vulnerable to Denial of Service via unhandled error on excessive content-encodings",
+          "severity": "high",
+          "affected_range": ">=7.18.0 <7.30.1"
+        },
+        {
+          "id": 1243473,
+          "url": "https://github.com/advisories/GHSA-4w7w-5xrc-9h26",
+          "title": "undici vulnerable to cache poisoning and cross-user disclosure via cross-origin redirects",
+          "severity": "high",
+          "affected_range": ">=7.0.0 <7.30.1"
+        },
+        {
+          "id": 1243475,
+          "url": "https://github.com/advisories/GHSA-2m5v-pch6-74hx",
+          "title": "undici vulnerable to TLS certificate validation bypass via dropped tls options in Agent",
+          "severity": "high",
+          "affected_range": ">=7.0.0 <7.30.1"
+        },
+        {
+          "id": 1243478,
+          "url": "https://github.com/advisories/GHSA-qrxm-fqhp-jwvm",
+          "title": "undici vulnerable to Denial of Service via TLS 1.2 certificate-changing renegotiation",
+          "severity": "high",
+          "affected_range": ">=7.0.0 <7.30.1"
+        },
+        {
+          "id": 1243481,
+          "url": "https://github.com/advisories/GHSA-9fm3-97px-rjf6",
+          "title": "undici WebSocket client vulnerable to Denial of Service via unbounded automatic PONG buffering",
+          "severity": "moderate",
+          "affected_range": ">=7.0.0 <7.30.1"
+        },
+        {
+          "id": 1243484,
+          "url": "https://github.com/advisories/GHSA-55wc-3pg8-jfw6",
+          "title": "undici vulnerable to Denial of Service via unhandled exception in the decompress interceptor",
+          "severity": "moderate",
+          "affected_range": ">=7.15.0 <7.30.1"
+        }
+      ],
+      "via_packages": []
+    },
+    {
+      "package": "vite",
+      "version": "8.2.2",
+      "is_direct": true,
+      "lock_dev_flag": true,
+      "scope": "development/test tooling",
+      "max_reported_severity": "high",
+      "affected_range": "8.2.0 - 8.2.2",
+      "fix_available": {
+        "name": "vite",
+        "version": "8.3.5",
+        "isSemVerMajor": false
+      },
+      "advisories": [
+        {
+          "id": 1242625,
+          "url": "https://github.com/advisories/GHSA-698v-4r3x-3vcv",
+          "title": "launch-editor: escapeCmdArgs() omits % escaping on Windows",
+          "severity": "moderate",
+          "affected_range": ">=8.2.0 <=8.2.3"
+        },
+        {
+          "id": 1242654,
+          "url": "https://github.com/advisories/GHSA-r825-w8mm-5pxw",
+          "title": "launch-editor: Editor CLI flag misinterpretation causing arbitrary command execution for some editors",
+          "severity": "moderate",
+          "affected_range": ">=8.2.0 <=8.2.3"
+        },
+        {
+          "id": 1242661,
+          "url": "https://github.com/advisories/GHSA-587h-7wmj-h5pm",
+          "title": "launch-editor: `fs.existsSync()` existence check can be bypassed on Windows",
+          "severity": "high",
+          "affected_range": ">=8.2.0 <=8.2.3"
+        },
+        {
+          "id": 1242727,
+          "url": "https://github.com/advisories/GHSA-9jrq-w75r-8gcw",
+          "title": "Vite: Cross origin script execution through Vite custom middleware",
+          "severity": "low",
+          "affected_range": ">=8.2.0 <=8.2.3"
+        },
+        {
+          "id": 1242733,
+          "url": "https://github.com/advisories/GHSA-rq7h-c2jc-7f22",
+          "title": "Vite: Files outside `server.fs.allow` could be served when project paths match system paths on non-Windows machine",
+          "severity": "moderate",
+          "affected_range": ">=8.2.0 <=8.2.3"
+        },
+        {
+          "id": 1242736,
+          "url": "https://github.com/advisories/GHSA-vfpm-58rq-9qcg",
+          "title": "Vite: First 4 bytes of files outside of `server.fs` setting is exposed by `?vite-wasm-instance`",
+          "severity": "moderate",
+          "affected_range": ">=8.2.0 <=8.2.3"
+        }
+      ],
+      "via_packages": []
+    },
+    {
+      "package": "vitest",
+      "version": "4.1.11",
+      "is_direct": true,
+      "lock_dev_flag": true,
+      "scope": "development/test tooling",
+      "max_reported_severity": "moderate",
+      "affected_range": "2.1.0-beta.1 - 4.1.11",
+      "fix_available": {
+        "name": "vitest",
+        "version": "4.1.12",
+        "isSemVerMajor": false
+      },
+      "advisories": [],
+      "via_packages": [
+        "@vitest/mocker"
+      ]
+    }
+  ],
+  "node_audit_all_counts": {
+    "info": 0,
+    "low": 0,
+    "moderate": 2,
+    "high": 3,
+    "critical": 0,
+    "total": 5
+  },
+  "node_audit_runtime_counts": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 1,
+    "critical": 0,
+    "total": 1
+  },
+  "qualification": "upstream advisory matches; affected reachability and residual-risk acceptance remain unverified; no dependency changes applied",
+  "ci_visual_finding": {
+    "artifacts": [
+      "reports-ready-1440-light.png",
+      "reports-ready-390-dark.png"
+    ],
+    "observation": "Chinese labels render as missing-glyph boxes in current CI screenshots; UI automation outcome alone does not prove CJK readability",
+    "repair": ".github/workflows/ci.yml now installs fonts-noto-cjk and checks fc-match; new CI required"
+  }
+}

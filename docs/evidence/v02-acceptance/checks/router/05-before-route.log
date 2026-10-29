@@ -1,0 +1,18 @@
+### Result
+{
+  "url": "http://127.0.0.1:4182/#case/RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+  "timeOrigin": 1793248488294.1,
+  "heading": "真实工作流虚构验证 rejected",
+  "selectedTab": "文档对照",
+  "focusId": "evidence-section-section-0004",
+  "highlights": [
+    {
+      "id": "evidence-section-section-0004",
+      "locator": "table:1/row:1/cell:1"
+    }
+  ]
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => ({url:location.href,timeOrigin:performance.timeOrigin,heading:document.querySelector("h1").textContent,selectedTab:document.querySelector("[role=tab][aria-selected=true]").textContent,focusId:document.activeElement.id,highlights:[...document.querySelectorAll(".highlighted-section")].map(s=>({id:s.id,locator:s.querySelector("small").textContent}))})');
+```

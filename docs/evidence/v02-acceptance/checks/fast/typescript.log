@@ -1,0 +1,4 @@
+
+> ai-review-console-web@0.2.0 lint
+> tsc --noEmit -p tsconfig.app.json --pretty false && tsc --noEmit -p tsconfig.node.json --pretty false
+

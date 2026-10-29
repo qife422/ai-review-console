@@ -1,0 +1,12 @@
+### Result
+{
+  "url": "http://127.0.0.1:4183/#case/RC-SKIP-B",
+  "focusTag": "A",
+  "focusText": "Skip to main content",
+  "href": "#main-content",
+  "mainTabIndex": -1
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => ({url:location.href,focusTag:document.activeElement.tagName,focusText:document.activeElement.textContent,href:document.activeElement.getAttribute("href"),mainTabIndex:document.getElementById("main-content").tabIndex})');
+```

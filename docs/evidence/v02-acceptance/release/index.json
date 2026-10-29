@@ -1,0 +1,733 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "contract_sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753",
+  "created_at": "2026-10-29T04:32:10.502579+00:00",
+  "producer": "internal release/CI verification agent; source candidate manifests checked before copying",
+  "purpose": "minimal evidence selected for root acceptance packet",
+  "results": {
+    "AC-15": "passed_in_final_source_CI40819513529; two native report screenshots manually reviewed",
+    "AC-18": "passed_in_final_source_CI40819513529",
+    "AC-19": "not_passed: dependency_advisories_and_license_review_remain; image_vulnerability_queries_blocked_by_Docker_authentication"
+  },
+  "final_v02_acceptance": "not_implied; see outer acceptance matrix",
+  "source_commits": {
+    "original_dependency_inputs_and_baseline_CI": "14d44b1210cff67b6f2bdd60de4523cc56bcb1e8",
+    "font_repair_CI": "85dddfd43fa51abfa53c5291177dda818397139d",
+    "final_application_test_and_ci_checkpoint": "540fd4c07cc3ad1b1ce017d3957f06fa0732e5ba"
+  },
+  "safety_review": {
+    "common_credential_markers": "no matches in selected text files",
+    "excluded": [
+      "npm/pip/Scout caches",
+      "unfiltered image inspect output and image environment",
+      "old screenshot tree",
+      "other unselected temporary outputs"
+    ],
+    "png_review": "new report screenshots viewed; contain synthetic cases only"
+  },
+  "capacity": {
+    "max_bytes": 10485760,
+    "max_files": 100,
+    "selected_bytes_without_index": 2834004,
+    "selected_files_without_index": 54
+  },
+  "source_temporary_roots_preserved": true,
+  "files": [
+    {
+      "bytes": 305445,
+      "sha256": "74ff50942963384e0b35008c1403914c4acfcfbbd1ecf14a9142101b3760c520",
+      "producer": "pip-audit PyPI/PyPA JSON API",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "completed_with_upstream_advisory_matches",
+      "limitations": "Advisory matches; reachability/residual risk not accepted; no version changes; provider DB date unavailable",
+      "path": "dependencies/python-audit.stdout",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/python-audit.stdout"
+    },
+    {
+      "bytes": 279,
+      "sha256": "198c38d479c4cf2f0e7deb47d97f3a23df29db55291d49de2fac546c27dec565",
+      "producer": "pip-audit PyPI/PyPA JSON API",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "completed_with_upstream_advisory_matches",
+      "limitations": "Advisory matches; reachability/residual risk not accepted; no version changes; provider DB date unavailable",
+      "path": "dependencies/python-audit.stderr",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/python-audit.stderr"
+    },
+    {
+      "bytes": 752,
+      "sha256": "a01747a6c6524dbe2da711ba99f558baf4846695deed23bf43083ec9694f5f5f",
+      "producer": "pip-audit PyPI/PyPA JSON API",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "completed_with_upstream_advisory_matches",
+      "limitations": "Advisory matches; reachability/residual risk not accepted; no version changes; provider DB date unavailable",
+      "path": "dependencies/python-audit.record.json",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/python-audit.record.json"
+    },
+    {
+      "bytes": 16888,
+      "sha256": "f207f32c38dadf702acff923c213656925f345d880fc0ce6b9559693f533c31c",
+      "producer": "npm official registry audit API",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "completed_with_upstream_advisory_matches",
+      "limitations": "Advisory matches; reachability/residual risk not accepted; no version changes; provider DB date unavailable",
+      "path": "dependencies/node-audit-all.stdout",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/node-audit-all.stdout"
+    },
+    {
+      "bytes": 208,
+      "sha256": "3dd7fedf3650828f31bc4fb8fdb5fef5b09af9af69a1536d5b917e21d0260976",
+      "producer": "npm official registry audit API",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "completed_with_upstream_advisory_matches",
+      "limitations": "Advisory matches; reachability/residual risk not accepted; no version changes; provider DB date unavailable",
+      "path": "dependencies/node-audit-all.stderr",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/node-audit-all.stderr"
+    },
+    {
+      "bytes": 456,
+      "sha256": "0576cc1226ce7f9d0e6e70c29eb2d1ca0e60a73aa52b4b52178301c8ed7bd391",
+      "producer": "npm official registry audit API",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "completed_with_upstream_advisory_matches",
+      "limitations": "Advisory matches; reachability/residual risk not accepted; no version changes; provider DB date unavailable",
+      "path": "dependencies/node-audit-all.record.json",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/node-audit-all.record.json"
+    },
+    {
+      "bytes": 1211,
+      "sha256": "c0b76a48baddd195a17ce2e60a26e8fa80ffdcd72135d718ab96b013d30e1168",
+      "producer": "npm official registry audit API",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "completed_with_upstream_advisory_matches",
+      "limitations": "Advisory matches; reachability/residual risk not accepted; no version changes; provider DB date unavailable",
+      "path": "dependencies/node-audit-runtime.stdout",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/node-audit-runtime.stdout"
+    },
+    {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "producer": "npm official registry audit API",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "completed_with_upstream_advisory_matches",
+      "limitations": "Advisory matches; reachability/residual risk not accepted; no version changes; provider DB date unavailable",
+      "path": "dependencies/node-audit-runtime.stderr",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/node-audit-runtime.stderr"
+    },
+    {
+      "bytes": 482,
+      "sha256": "5a24c035504e05e26677c50f83be5e940b4ca2b89896ca2274474ff99742b48b",
+      "producer": "npm official registry audit API",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "completed_with_upstream_advisory_matches",
+      "limitations": "Advisory matches; reachability/residual risk not accepted; no version changes; provider DB date unavailable",
+      "path": "dependencies/node-audit-runtime.record.json",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/node-audit-runtime.record.json"
+    },
+    {
+      "bytes": 40477,
+      "sha256": "f4a8083c654170728d1f64bfcb8ea938a29908fe37128b9c07bddd4272d7705c",
+      "producer": "locked-input triage / scripts/scan_release.py license metadata functions",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "vulnerability_findings_require_triage; metadata_license_inventory_recorded",
+      "limitations": "Not a clean release, exploitability proof, full image license review or distribution approval",
+      "path": "dependencies/dependency-triage.json",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/dependency-triage.json"
+    },
+    {
+      "bytes": 740,
+      "sha256": "6c74ce45bac600718077c6d64ec171a10bcd2baab5d13d102fee32a0fce7d138",
+      "producer": "locked-input triage / scripts/scan_release.py license metadata functions",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "vulnerability_findings_require_triage; metadata_license_inventory_recorded",
+      "limitations": "Not a clean release, exploitability proof, full image license review or distribution approval",
+      "path": "dependencies/inputs.json",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/inputs.json"
+    },
+    {
+      "bytes": 2687,
+      "sha256": "9aaeee027c3f9724bb008e9a449a1d49a1b6bcd6c39ffead396b273c51862d9d",
+      "producer": "locked-input triage / scripts/scan_release.py license metadata functions",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "vulnerability_findings_require_triage; metadata_license_inventory_recorded",
+      "limitations": "Not a clean release, exploitability proof, full image license review or distribution approval",
+      "path": "dependencies/summary.json",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/summary.json"
+    },
+    {
+      "bytes": 65742,
+      "sha256": "da3fffac4fe47b8a5c9936f5147f3f7c0b77ba1914ce3f627f9d12477ea36477",
+      "producer": "locked-input triage / scripts/scan_release.py license metadata functions",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "vulnerability_findings_require_triage; metadata_license_inventory_recorded",
+      "limitations": "Not a clean release, exploitability proof, full image license review or distribution approval",
+      "path": "dependencies/node-licenses-current.json",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/node-licenses-current.json"
+    },
+    {
+      "bytes": 6114,
+      "sha256": "0c0610c4efc77b4ffd42513fee97c2a1a92d81c0ac725e69eb429c2578b3c2af",
+      "producer": "fresh read-only no-network package-manager metadata inventory; scripts/scan_release.py functions",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "current_immutable_image_metadata_recorded; license_unknown_or_review_items_remain",
+      "limitations": "Package-manager metadata only, excludes full filesystem/vendored/static binaries; not distribution approval",
+      "path": "images/inventory-summary.json",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/inventory-summary.json"
+    },
+    {
+      "bytes": 1248,
+      "sha256": "d4532527733f1bc37d1f8a2a21ceb78ebfb25852e3afeb0a7f3cd1f5577c2705",
+      "producer": "fresh read-only no-network package-manager metadata inventory; scripts/scan_release.py functions",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "current_immutable_image_metadata_recorded; license_unknown_or_review_items_remain",
+      "limitations": "Package-manager metadata only, excludes full filesystem/vendored/static binaries; not distribution approval",
+      "path": "images/license-summary.json",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/license-summary.json"
+    },
+    {
+      "bytes": 12448,
+      "sha256": "dd3bc1d7d9559d7933d210af0d36551670b4f1033f5be507c155994eef07fac6",
+      "producer": "fresh read-only no-network package-manager metadata inventory; scripts/scan_release.py functions",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "current_immutable_image_metadata_recorded; license_unknown_or_review_items_remain",
+      "limitations": "Package-manager metadata only, excludes full filesystem/vendored/static binaries; not distribution approval",
+      "path": "images/python-licenses-current.json",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/python-licenses-current.json"
+    },
+    {
+      "bytes": 96043,
+      "sha256": "1e6cde6514cb575a72fe7ea5dec09fe8f33c693e2b7e50bccfe38d9bede87475",
+      "producer": "fresh current-image package-manager metadata converted by scripts/scan_release.py image_bom",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "inventory_created_for_exact_immutable_image",
+      "limitations": "Metadata-based candidate SBOM; no new full-schema validation claimed; no clean vulnerability result",
+      "path": "images/api.cdx.json",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/api.cdx.json"
+    },
+    {
+      "bytes": 96649,
+      "sha256": "07fd2d3078ec09f4b8ccc0b5503e44cf713b6aef2a667dbf9c70fc6a772a115a",
+      "producer": "fresh current-image package-manager metadata converted by scripts/scan_release.py image_bom",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "inventory_created_for_exact_immutable_image",
+      "limitations": "Metadata-based candidate SBOM; no new full-schema validation claimed; no clean vulnerability result",
+      "path": "images/api.spdx.json",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/api.spdx.json"
+    },
+    {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "producer": "Docker Scout cves with fresh exact-image SPDX input",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "blocked_docker_login_required; findings=null",
+      "limitations": "No valid SARIF and no vulnerability count; no login/config changes or further attempts",
+      "path": "images/api-scout.stdout",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/api-scout.stdout"
+    },
+    {
+      "bytes": 433,
+      "sha256": "5c056083dbcb6f456569eeaba8578a4778a879d69d3153982946b99f7f1fac1d",
+      "producer": "Docker Scout cves with fresh exact-image SPDX input",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "blocked_docker_login_required; findings=null",
+      "limitations": "No valid SARIF and no vulnerability count; no login/config changes or further attempts",
+      "path": "images/api-scout.stderr",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/api-scout.stderr"
+    },
+    {
+      "bytes": 392,
+      "sha256": "de5bef8e9bd4bb5db353a373bb66274a93717f050207ecc876586fbf43c68e9f",
+      "producer": "Docker Scout cves with fresh exact-image SPDX input",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "blocked_docker_login_required; findings=null",
+      "limitations": "No valid SARIF and no vulnerability count; no login/config changes or further attempts",
+      "path": "images/api-scout.record.json",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/api-scout.record.json"
+    },
+    {
+      "bytes": 509284,
+      "sha256": "5cc3c1c2c244dcd128c603378c9ead990499e7e0ff5d3e06cb2d6ee8bfdf9c30",
+      "producer": "fresh current-image package-manager metadata converted by scripts/scan_release.py image_bom",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "inventory_created_for_exact_immutable_image",
+      "limitations": "Metadata-based candidate SBOM; no new full-schema validation claimed; no clean vulnerability result",
+      "path": "images/langflow.cdx.json",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/langflow.cdx.json"
+    },
+    {
+      "bytes": 512635,
+      "sha256": "83bcfa2772f6e3d648752431bee6d22f59bf0ab1b9a43931fd8af5b8a5043c86",
+      "producer": "fresh current-image package-manager metadata converted by scripts/scan_release.py image_bom",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "inventory_created_for_exact_immutable_image",
+      "limitations": "Metadata-based candidate SBOM; no new full-schema validation claimed; no clean vulnerability result",
+      "path": "images/langflow.spdx.json",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/langflow.spdx.json"
+    },
+    {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "producer": "Docker Scout cves with fresh exact-image SPDX input",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "blocked_docker_login_required; findings=null",
+      "limitations": "No valid SARIF and no vulnerability count; no login/config changes or further attempts",
+      "path": "images/langflow-scout.stdout",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/langflow-scout.stdout"
+    },
+    {
+      "bytes": 433,
+      "sha256": "5c056083dbcb6f456569eeaba8578a4778a879d69d3153982946b99f7f1fac1d",
+      "producer": "Docker Scout cves with fresh exact-image SPDX input",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "blocked_docker_login_required; findings=null",
+      "limitations": "No valid SARIF and no vulnerability count; no login/config changes or further attempts",
+      "path": "images/langflow-scout.stderr",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/langflow-scout.stderr"
+    },
+    {
+      "bytes": 412,
+      "sha256": "a090382ab4692cac2b24cba36c533c872ad9dd080dfb01956b8fd001d1ffd5a6",
+      "producer": "Docker Scout cves with fresh exact-image SPDX input",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "blocked_docker_login_required; findings=null",
+      "limitations": "No valid SARIF and no vulnerability count; no login/config changes or further attempts",
+      "path": "images/langflow-scout.record.json",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/langflow-scout.record.json"
+    },
+    {
+      "bytes": 44892,
+      "sha256": "b8f00c89ebb34fc58ef7e9cc84355ef87944bbe3a86c308c2877bb050214a135",
+      "producer": "fresh current-image package-manager metadata converted by scripts/scan_release.py image_bom",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "inventory_created_for_exact_immutable_image",
+      "limitations": "Metadata-based candidate SBOM; no new full-schema validation claimed; no clean vulnerability result",
+      "path": "images/web.cdx.json",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/web.cdx.json"
+    },
+    {
+      "bytes": 49792,
+      "sha256": "ce2d9317ae6e66daf46f99f6fc8aa3d4a38b5107eb3b60eafb918e2717791cd4",
+      "producer": "fresh current-image package-manager metadata converted by scripts/scan_release.py image_bom",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "inventory_created_for_exact_immutable_image",
+      "limitations": "Metadata-based candidate SBOM; no new full-schema validation claimed; no clean vulnerability result",
+      "path": "images/web.spdx.json",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/web.spdx.json"
+    },
+    {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "producer": "Docker Scout cves with fresh exact-image SPDX input",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "blocked_docker_login_required; findings=null",
+      "limitations": "No valid SARIF and no vulnerability count; no login/config changes or further attempts",
+      "path": "images/web-scout.stdout",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/web-scout.stdout"
+    },
+    {
+      "bytes": 433,
+      "sha256": "5c056083dbcb6f456569eeaba8578a4778a879d69d3153982946b99f7f1fac1d",
+      "producer": "Docker Scout cves with fresh exact-image SPDX input",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "blocked_docker_login_required; findings=null",
+      "limitations": "No valid SARIF and no vulnerability count; no login/config changes or further attempts",
+      "path": "images/web-scout.stderr",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/web-scout.stderr"
+    },
+    {
+      "bytes": 392,
+      "sha256": "44288eb4de283105773a4dde1f2e8e26fe329cb4eb2aebc365c3610afa100e8c",
+      "producer": "Docker Scout cves with fresh exact-image SPDX input",
+      "acceptance": [
+        "AC-19"
+      ],
+      "actual_result": "blocked_docker_login_required; findings=null",
+      "limitations": "No valid SARIF and no vulnerability count; no login/config changes or further attempts",
+      "path": "images/web-scout.record.json",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/web-scout.record.json"
+    },
+    {
+      "bytes": 7728,
+      "sha256": "1ce718782d9e1012e0f23d608814fc82c10206615c8f01e33cfc67edbd9b605b",
+      "producer": "GitHub Actions run 40817201951 native artifact/readback; gh CLI; internal visual review",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "actual_result": "passed; commit85dddfd43fa51abfa53c5291177dda818397139d",
+      "limitations": "CI environment result; browser offline/loading/integrity/partial retry use explicit response simulation, not real container fault injection; original result lists some ephemeral runner paths not packaged here",
+      "path": "ci-font/ci-run.json",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/font-ci/ci-run.json"
+    },
+    {
+      "bytes": 1434,
+      "sha256": "d658f815ed608ff8fdedc578a0c6938b18650f719aaf9a5b0b920ea7332cd09e",
+      "producer": "GitHub Actions run 40817201951 native artifact/readback; gh CLI; internal visual review",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "actual_result": "passed; commit85dddfd43fa51abfa53c5291177dda818397139d",
+      "limitations": "CI environment result; browser offline/loading/integrity/partial retry use explicit response simulation, not real container fault injection; original result lists some ephemeral runner paths not packaged here",
+      "path": "ci-font/ci-artifacts.json",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/font-ci/ci-artifacts.json"
+    },
+    {
+      "bytes": 8206,
+      "sha256": "b676a829b670050fa6326840b08ba184b43ac8c260983e70ade14af17492cb5d",
+      "producer": "GitHub Actions run 40817201951 native artifact/readback; gh CLI; internal visual review",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "actual_result": "passed; commit85dddfd43fa51abfa53c5291177dda818397139d",
+      "limitations": "CI environment result; browser offline/loading/integrity/partial retry use explicit response simulation, not real container fault injection; original result lists some ephemeral runner paths not packaged here",
+      "path": "ci-font/visual-review.json",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/font-ci/visual-review.json"
+    },
+    {
+      "bytes": 7093,
+      "sha256": "ae09f2f84ea564a5fecb0eb74a1329f29664658462e04a26f1d826f655003d96",
+      "producer": "GitHub Actions run 40817201951 native artifact/readback; gh CLI; internal visual review",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "actual_result": "passed; commit85dddfd43fa51abfa53c5291177dda818397139d",
+      "limitations": "CI environment result; browser offline/loading/integrity/partial retry use explicit response simulation, not real container fault injection; original result lists some ephemeral runner paths not packaged here",
+      "path": "ci-font/workflow.json",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/font-ci/artifacts/workflow-browser-verification/workflow.json"
+    },
+    {
+      "bytes": 17125,
+      "sha256": "881fb5240a44eb258e51827ed3014a0cd150a4ee961643769ba85d0e68c01439",
+      "producer": "GitHub Actions run 40817201951 native artifact/readback; gh CLI; internal visual review",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "actual_result": "passed; commit85dddfd43fa51abfa53c5291177dda818397139d",
+      "limitations": "CI environment result; browser offline/loading/integrity/partial retry use explicit response simulation, not real container fault injection; original result lists some ephemeral runner paths not packaged here",
+      "path": "ci-font/browser-result.json",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/font-ci/artifacts/workflow-browser-verification/browser/result.json"
+    },
+    {
+      "bytes": 17,
+      "sha256": "78572185058acad7bd988f2a72e09dfd015a23a9a9f2622a5616fb14941ab725",
+      "producer": "GitHub Actions run 40817201951 native artifact/readback; gh CLI; internal visual review",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "actual_result": "passed; commit85dddfd43fa51abfa53c5291177dda818397139d",
+      "limitations": "CI environment result; browser offline/loading/integrity/partial retry use explicit response simulation, not real container fault injection; original result lists some ephemeral runner paths not packaged here",
+      "path": "ci-font/chinese-browser-font.txt",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/font-ci/artifacts/workflow-browser-verification/chinese-browser-font.txt"
+    },
+    {
+      "bytes": 21,
+      "sha256": "1fd0a5aab5f16129c1a7882b2a442a30e3ad625c79dbe44376881de72c230d80",
+      "producer": "GitHub Actions run 40817201951 native artifact/readback; gh CLI; internal visual review",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "actual_result": "passed; commit85dddfd43fa51abfa53c5291177dda818397139d",
+      "limitations": "CI environment result; browser offline/loading/integrity/partial retry use explicit response simulation, not real container fault injection; original result lists some ephemeral runner paths not packaged here",
+      "path": "ci-font/chinese-browser-font-version.txt",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/font-ci/artifacts/workflow-browser-verification/chinese-browser-font-version.txt"
+    },
+    {
+      "bytes": 17556,
+      "sha256": "ab8e9d40723f79f0de3d469ae5320c153e852333a2ce15fec2035e98ae0f1083",
+      "producer": "GitHub Actions run 40817201951 native artifact/readback; gh CLI; internal visual review",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "actual_result": "passed; commit85dddfd43fa51abfa53c5291177dda818397139d",
+      "limitations": "CI environment result; browser offline/loading/integrity/partial retry use explicit response simulation, not real container fault injection; original result lists some ephemeral runner paths not packaged here",
+      "path": "ci-font/arc-unit.xml",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/font-ci/artifacts/unit-verification/arc-unit.xml"
+    },
+    {
+      "bytes": 218256,
+      "sha256": "77fa3faef3f87406685d54f32b78924fb75b5c9abe348d59b3e957362ca91ff1",
+      "producer": "GitHub Actions native browser screenshot; manually inspected with view_image",
+      "acceptance": [
+        "AC-15"
+      ],
+      "actual_result": "passed_internal_visual_review; CJK_text_readable",
+      "limitations": "Representative report pages; used with native keyboard/viewport/theme/state checks, not a full accessibility audit",
+      "path": "ci-font/reports-ready-1440-light.png",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/font-ci/artifacts/workflow-browser-verification/browser/reports-ready-1440-light.png"
+    },
+    {
+      "bytes": 206390,
+      "sha256": "7db4c32080cf6441d24f5b5f0f83003f658288a61f42e49b43db72a6ca2b7df7",
+      "producer": "GitHub Actions native browser screenshot; manually inspected with view_image",
+      "acceptance": [
+        "AC-15"
+      ],
+      "actual_result": "passed_internal_visual_review; CJK_text_readable",
+      "limitations": "Representative report pages; used with native keyboard/viewport/theme/state checks, not a full accessibility audit",
+      "path": "ci-font/reports-ready-390-dark.png",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/font-ci/artifacts/workflow-browser-verification/browser/reports-ready-390-dark.png"
+    },
+    {
+      "bytes": 7380,
+      "sha256": "d6dc6632533b3017efcd2a1460773dda07830623cbedc92d97172198f0923432",
+      "producer": "GitHub Actions run40776278359 native readback",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "actual_result": "automation_passed_but_CJK_glyphs_missing_in_reviewed_old_screenshots",
+      "limitations": "Baseline run retained for repair history; superseded for visual font readiness by run40817201951; observation preserved in dependency-triage.json ci_visual_finding",
+      "path": "ci-baseline/ci-run.json",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/ci-run.json"
+    },
+    {
+      "path": "final-ci/ci-run.json",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/ci-run.json",
+      "producer": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "source_commit": "540fd4c07cc3ad1b1ce017d3957f06fa0732e5ba",
+      "bytes": 7728,
+      "sha256": "859dcf231b5d33c2f8332509144e0595bad1211e86efc4b6825ada38a8ce27c5",
+      "actual_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful",
+      "limitations": "CI-specific result and representative internal screenshot review; explicit browser response simulations do not substitute for container fault tests; browser result references some original ephemeral runner files outside this selected package"
+    },
+    {
+      "path": "final-ci/ci-artifacts.json",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/ci-artifacts.json",
+      "producer": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "source_commit": "540fd4c07cc3ad1b1ce017d3957f06fa0732e5ba",
+      "bytes": 1434,
+      "sha256": "f7db9aaded5973e762bb2f1701559aafd87c7096d700447e28a75508b13f7c73",
+      "actual_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful",
+      "limitations": "CI-specific result and representative internal screenshot review; explicit browser response simulations do not substitute for container fault tests; browser result references some original ephemeral runner files outside this selected package"
+    },
+    {
+      "path": "final-ci/verify-job-ansi.log",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/verify-job-ansi.log",
+      "producer": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "source_commit": "540fd4c07cc3ad1b1ce017d3957f06fa0732e5ba",
+      "bytes": 95896,
+      "sha256": "f1b92838a9082b5c69dd8eb30c426559f59324d3677cff7f38a116d66ba656e5",
+      "actual_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful",
+      "limitations": "CI-specific result and representative internal screenshot review; explicit browser response simulations do not substitute for container fault tests; browser result references some original ephemeral runner files outside this selected package"
+    },
+    {
+      "path": "final-ci/verify-test-summary.txt",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/verify-test-summary.txt",
+      "producer": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "source_commit": "540fd4c07cc3ad1b1ce017d3957f06fa0732e5ba",
+      "bytes": 220,
+      "sha256": "3d64484f467cee16124a207d0b134be3ab36ee4afed92b50e9f84134dffb812a",
+      "actual_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful",
+      "limitations": "CI-specific result and representative internal screenshot review; explicit browser response simulations do not substitute for container fault tests; browser result references some original ephemeral runner files outside this selected package"
+    },
+    {
+      "path": "final-ci/visual-review.json",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/visual-review.json",
+      "producer": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "source_commit": "540fd4c07cc3ad1b1ce017d3957f06fa0732e5ba",
+      "bytes": 1544,
+      "sha256": "62fe0aaebdcccd40bb5793a30220d8151e95a964e7e3783048a5e554a2e9f1fc",
+      "actual_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful",
+      "limitations": "CI-specific result and representative internal screenshot review; explicit browser response simulations do not substitute for container fault tests; browser result references some original ephemeral runner files outside this selected package"
+    },
+    {
+      "path": "final-ci/arc-unit.xml",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/artifacts/unit-verification/arc-unit.xml",
+      "producer": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "source_commit": "540fd4c07cc3ad1b1ce017d3957f06fa0732e5ba",
+      "bytes": 17556,
+      "sha256": "934b6289dcdbcf0f194caae07e473e94f0ee3696379819823bee3cf739d7669c",
+      "actual_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful",
+      "limitations": "CI-specific result and representative internal screenshot review; explicit browser response simulations do not substitute for container fault tests; browser result references some original ephemeral runner files outside this selected package"
+    },
+    {
+      "path": "final-ci/workflow.json",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/artifacts/workflow-browser-verification/workflow.json",
+      "producer": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "source_commit": "540fd4c07cc3ad1b1ce017d3957f06fa0732e5ba",
+      "bytes": 7093,
+      "sha256": "c3cf708f45763df063b807151e5b8c588adb22390b6225e7c537a4918a435c18",
+      "actual_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful",
+      "limitations": "CI-specific result and representative internal screenshot review; explicit browser response simulations do not substitute for container fault tests; browser result references some original ephemeral runner files outside this selected package"
+    },
+    {
+      "path": "final-ci/browser-result.json",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/artifacts/workflow-browser-verification/browser/result.json",
+      "producer": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "source_commit": "540fd4c07cc3ad1b1ce017d3957f06fa0732e5ba",
+      "bytes": 17125,
+      "sha256": "af103aa2d34c4b41517edb201860f71dd2d7ac319e2e40c61f4aa4f1a34fd57b",
+      "actual_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful",
+      "limitations": "CI-specific result and representative internal screenshot review; explicit browser response simulations do not substitute for container fault tests; browser result references some original ephemeral runner files outside this selected package"
+    },
+    {
+      "path": "final-ci/chinese-browser-font.txt",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/artifacts/workflow-browser-verification/chinese-browser-font.txt",
+      "producer": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "source_commit": "540fd4c07cc3ad1b1ce017d3957f06fa0732e5ba",
+      "bytes": 17,
+      "sha256": "78572185058acad7bd988f2a72e09dfd015a23a9a9f2622a5616fb14941ab725",
+      "actual_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful",
+      "limitations": "CI-specific result and representative internal screenshot review; explicit browser response simulations do not substitute for container fault tests; browser result references some original ephemeral runner files outside this selected package"
+    },
+    {
+      "path": "final-ci/chinese-browser-font-version.txt",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/artifacts/workflow-browser-verification/chinese-browser-font-version.txt",
+      "producer": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "source_commit": "540fd4c07cc3ad1b1ce017d3957f06fa0732e5ba",
+      "bytes": 21,
+      "sha256": "1fd0a5aab5f16129c1a7882b2a442a30e3ad625c79dbe44376881de72c230d80",
+      "actual_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful",
+      "limitations": "CI-specific result and representative internal screenshot review; explicit browser response simulations do not substitute for container fault tests; browser result references some original ephemeral runner files outside this selected package"
+    },
+    {
+      "path": "final-ci/reports-ready-1440-light.png",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/artifacts/workflow-browser-verification/browser/reports-ready-1440-light.png",
+      "producer": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "source_commit": "540fd4c07cc3ad1b1ce017d3957f06fa0732e5ba",
+      "bytes": 219148,
+      "sha256": "8364d9a8f432f9f00157c9ed98205d4e2778bd4e867cf518dfb028d6fce99f5c",
+      "actual_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful",
+      "limitations": "CI-specific result and representative internal screenshot review; explicit browser response simulations do not substitute for container fault tests; browser result references some original ephemeral runner files outside this selected package"
+    },
+    {
+      "path": "final-ci/reports-ready-390-dark.png",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/artifacts/workflow-browser-verification/browser/reports-ready-390-dark.png",
+      "producer": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "source_commit": "540fd4c07cc3ad1b1ce017d3957f06fa0732e5ba",
+      "bytes": 208049,
+      "sha256": "dd371c90e7f32d52ab9d096babdd9f63cdd173882b2f22621444f6b83d6befe3",
+      "actual_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful",
+      "limitations": "CI-specific result and representative internal screenshot review; explicit browser response simulations do not substitute for container fault tests; browser result references some original ephemeral runner files outside this selected package"
+    }
+  ],
+  "latest_ci": {
+    "run_id": 40819513529,
+    "url": "https://github.com/qife422/ai-review-console/actions/runs/40819513529",
+    "head_sha": "540fd4c07cc3ad1b1ce017d3957f06fa0732e5ba",
+    "status": "completed",
+    "conclusion": "success",
+    "unit_tests": 128,
+    "unit_skipped": 0,
+    "frontend_tests": 29,
+    "evidence_directory": "final-ci/",
+    "note": "Earlier ci-font run retained as repair history; final source acceptance uses this run. Subsequent documentation-only commits require unchanged relevant input fingerprints, not inherited approval for code changes."
+  },
+  "updated_at_utc": "2026-10-29T04:52:03.596051+00:00",
+  "classification": "sealed_evidence_selection_index",
+  "sealed_at": "2026-10-29T04:53:20.264223+00:00"
+}

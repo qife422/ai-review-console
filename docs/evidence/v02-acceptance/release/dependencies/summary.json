@@ -1,0 +1,126 @@
+{
+  "python": [
+    {
+      "name": "certifi",
+      "version": "2026.7.22",
+      "raw_findings": 2,
+      "unique_ids": 1,
+      "fix_versions": [
+        "2026.10.18",
+        "2026.10.19"
+      ]
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0",
+      "raw_findings": 39,
+      "unique_ids": 39,
+      "fix_versions": [
+        "13.0.0"
+      ]
+    },
+    {
+      "name": "pypdf",
+      "version": "6.16.2",
+      "raw_findings": 19,
+      "unique_ids": 19,
+      "fix_versions": [
+        "6.17.0",
+        "6.18.0",
+        "6.18.1",
+        "6.19.0",
+        "6.20.0",
+        "6.20.1",
+        "6.21.0",
+        "6.21.1",
+        "6.21.2"
+      ]
+    }
+  ],
+  "python_raw_findings": 60,
+  "python_unique_package_advisory_ids": 59,
+  "node": [
+    {
+      "scope": "all",
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "moderate": 2,
+        "high": 3,
+        "critical": 0,
+        "total": 5
+      },
+      "packages": [
+        {
+          "name": "@vitest/mocker",
+          "severity": "moderate",
+          "isDirect": false,
+          "fixAvailable": {
+            "name": "vitest",
+            "version": "4.1.12",
+            "isSemVerMajor": false
+          }
+        },
+        {
+          "name": "source-map-js",
+          "severity": "high",
+          "isDirect": false,
+          "fixAvailable": true
+        },
+        {
+          "name": "undici",
+          "severity": "high",
+          "isDirect": false,
+          "fixAvailable": true
+        },
+        {
+          "name": "vite",
+          "severity": "high",
+          "isDirect": true,
+          "fixAvailable": {
+            "name": "vite",
+            "version": "8.3.5",
+            "isSemVerMajor": false
+          }
+        },
+        {
+          "name": "vitest",
+          "severity": "moderate",
+          "isDirect": true,
+          "fixAvailable": {
+            "name": "vitest",
+            "version": "4.1.12",
+            "isSemVerMajor": false
+          }
+        }
+      ]
+    },
+    {
+      "scope": "runtime",
+      "counts": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 1,
+        "critical": 0,
+        "total": 1
+      },
+      "packages": [
+        {
+          "name": "source-map-js",
+          "severity": "high",
+          "isDirect": false,
+          "fixAvailable": true
+        }
+      ]
+    }
+  ],
+  "ci_producer_source_sha_matches": true,
+  "limits": {
+    "temporary_absolute_bytes": 10485760,
+    "temporary_actual_bytes": 8615262
+  },
+  "database_snapshot": "not exposed by providers",
+  "source_commit": "14d44b1210cff67b6f2bdd60de4523cc56bcb1e8",
+  "status": "findings_require_triage_not_approved_release"
+}

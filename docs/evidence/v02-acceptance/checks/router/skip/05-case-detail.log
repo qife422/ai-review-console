@@ -1,0 +1,6 @@
+### Result
+Route added for pattern: **/api/cases/RC-SKIP-B
+### Ran Playwright code
+```js
+await page.context().route('**/api/cases/RC-SKIP-B', async route => { /* route handler */ });
+```

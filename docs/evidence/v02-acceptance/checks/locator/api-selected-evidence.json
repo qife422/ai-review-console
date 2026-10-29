@@ -1,0 +1,50 @@
+{
+  "docx": {
+    "case_id": "RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+    "http_status": 200,
+    "response_sha256": "ca4cf86b3b6dadd104cd5570ac5b5a1ca66f45c9c550020e2c926de80f26c860",
+    "finding": {
+      "rule_id": "FIN-003",
+      "category": "financial",
+      "title": "异常预付款比例",
+      "severity": "high",
+      "points": 20,
+      "evidence": "客户预付款90%，服务方可单方变更结算规则。",
+      "recommendation": "改为按里程碑分期付款并绑定验收条件。",
+      "section_id": "section-0004",
+      "locator": "table:1/row:1/cell:1",
+      "start": 0,
+      "end": 22,
+      "offset_basis": "unicode_code_points"
+    },
+    "matching_redacted_section": {
+      "locator": "table:1/row:1/cell:1",
+      "section_id": "section-0004",
+      "text": "客户预付款90%，服务方可单方变更结算规则。"
+    }
+  },
+  "pdf": {
+    "case_id": "RC-98aacae843754218bfe76ffba1a2a0b0",
+    "http_status": 200,
+    "response_sha256": "64e50c627e044fa9eaec44f0d00de397a3d697a9fa73e0aa7e75e52d45915c73",
+    "finding": {
+      "rule_id": "PRIV-001",
+      "category": "privacy",
+      "title": "检测到个人信息字段",
+      "severity": "high",
+      "points": 24,
+      "evidence": "0c3436af61de10e\n[PERSON_01]，个人手机号[PHONE_01]。使用共享账号和明文密码。",
+      "recommendation": "在分发前完成个人信息最小化和脱敏复核。",
+      "section_id": "section-0001",
+      "locator": "page:1",
+      "start": 64,
+      "end": 120,
+      "offset_basis": "unicode_code_points"
+    },
+    "matching_redacted_section": {
+      "locator": "page:1",
+      "section_id": "section-0001",
+      "text": "SYNTHETIC DEMO DOCUMENT\nBuilt on Langflow\n执行验证 7aea71efd5ec4cec80c3436af61de10e\n[PERSON_01]，个人手机号[PHONE_01]。使用共享账号和明文密码。"
+    }
+  }
+}

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>本次修订意见报告</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>body{font-family:Arial,"Noto Sans SC",sans-serif;color:#161616;margin:32px auto;
+max-width:960px;padding:0 24px;line-height:1.65;overflow-wrap:anywhere}
+h1{font-size:28px}h2{font-size:20px;margin-top:28px}
+.notice{padding:12px;background:#edf5ff;border-left:4px solid #0f62fe}
+dl{display:grid;grid-template-columns:150px 1fr;gap:8px}dt{color:#525252}dd{margin:0}
+blockquote{border-left:3px solid #c6c6c6;margin:12px 0;padding:8px 16px;white-space:pre-wrap}
+article{border-top:1px solid #e0e0e0;padding:12px 0}pre{white-space:pre-wrap;font-size:12px}
+@media(max-width:600px){dl{grid-template-columns:1fr}dd{margin-bottom:10px}}
+</style></head><body><p class="notice">SYNTHETIC DEMO DATA ONLY / 演示仅使用虚构数据</p>
+<h1>本次修订意见报告</h1><p>基于 Langflow / Built on Langflow</p>
+<h2>人工决定</h2><p>决定：要求修改<br>
+风险分数：28 / 100；风险等级：中<br>
+审查员：synthetic-report-validator<br>决定时间：2026-10-29T04:33:36.833794+00:00</p>
+<p>决定理由：仅用虚构资料验证报告部分失败，人工决定应保留且现有报告不得被重写。</p>
+<h2>版本与来源</h2><dl><dt>案件</dt><dd>虚构PDF部分失败与专用重试验收</dd><dt>案件 ID</dt><dd>RC-4eb0d6e1713543cea8688013dd7509de</dd><dt>文档版本</dt><dd>DV-cfae49c0276f4b9e902233d222649916</dd><dt>评估 ID</dt><dd>AS-4d92c8c14824448581c6ec5c7a74ddd4</dd><dt>决定 ID</dt><dd>DC-feeffd0c4ac344948cccdf1b0fb0b948</dd><dt>来源</dt><dd>uploaded_demo</dd><dt>文档哈希类型</dt><dd>source_bytes_sha256</dd><dt>文档 SHA-256</dt><dd>90fa93a046d44f47181fec2ae2fd7cbe25b36ee8d21a665e836f821fc9eb39d6</dd><dt>快照 SHA-256</dt><dd>d6a039f2b4ada16b3a82fb7b464cc4699bf2ae2265523fb989a53ec69faeaf98</dd><dt>规则版本</dt><dd>2026.10.1</dd><dt>规则 SHA-256</dt><dd>aa7f3162c2a2ef59093c477689a639952a8e2705ed892b233dbda3791f378d76</dd><dt>脱敏策略版本</dt><dd>2026.10.1</dd><dt>脱敏策略 SHA-256</dt><dd>fce85e9628300408945cfb77914f6d6d9fdfacc5ea6701e8e55a7443ef9f460e</dd><dt>生成时间</dt><dd>2026-10-29T04:33:36.833794+00:00</dd><dt>报告模板</dt><dd>2026.10.1</dd></dl><h2>风险发现</h2>
+<article><h3>LEGAL-002 · 责任上限缺失或无限责任</h3><p>等级：critical；定位：block:1 [61:104]</p><blockquote>920d493486f3af7b78dc2e61
+供应方承担全部损失，且不设责任上限。</blockquote><p>建议：增加明确、对等且可量化的责任上限。</p></article>
+<h2>审计摘要</h2><p>截至点：196</p>
+<ul><li>2026-10-29T04:33:34.696620+00:00 · document_received · Review API · 接收虚构文档；字节指纹已固定，等待真实 Intake。</li><li>2026-10-29T04:33:36.226586+00:00 · case_scored · Langflow Intake Flow · 真实 Intake 结果已入库；规则分 28，待人工决定。</li><li>2026-10-29T04:33:36.840625+00:00 · decision_recorded · synthetic-report-validator · 决定：changes_requested。理由：仅用虚构资料验证报告部分失败，人工决定应保留且现有报告不得被重写。</li></ul>
+<details><summary>完整报告数据</summary><pre>{
+  &quot;assessment_id&quot;: &quot;AS-4d92c8c14824448581c6ec5c7a74ddd4&quot;,
+  &quot;audit_events&quot;: [
+    {
+      &quot;actor&quot;: &quot;Review API&quot;,
+      &quot;detail&quot;: &quot;接收虚构文档；字节指纹已固定，等待真实 Intake。&quot;,
+      &quot;event_type&quot;: &quot;document_received&quot;,
+      &quot;id&quot;: 194,
+      &quot;occurred_at&quot;: &quot;2026-10-29T04:33:34.696620+00:00&quot;
+    },
+    {
+      &quot;actor&quot;: &quot;Langflow Intake Flow&quot;,
+      &quot;detail&quot;: &quot;真实 Intake 结果已入库；规则分 28，待人工决定。&quot;,
+      &quot;event_type&quot;: &quot;case_scored&quot;,
+      &quot;id&quot;: 195,
+      &quot;occurred_at&quot;: &quot;2026-10-29T04:33:36.226586+00:00&quot;
+    },
+    {
+      &quot;actor&quot;: &quot;synthetic-report-validator&quot;,
+      &quot;detail&quot;: &quot;决定：changes_requested。理由：仅用虚构资料验证报告部分失败，人工决定应保留且现有报告不得被重写。&quot;,
+      &quot;event_type&quot;: &quot;decision_recorded&quot;,
+      &quot;id&quot;: 196,
+      &quot;occurred_at&quot;: &quot;2026-10-29T04:33:36.840625+00:00&quot;
+    }
+  ],
+  &quot;audit_through_id&quot;: 196,
+  &quot;case_id&quot;: &quot;RC-4eb0d6e1713543cea8688013dd7509de&quot;,
+  &quot;data_classification&quot;: &quot;SYNTHETIC_DEMO_ONLY&quot;,
+  &quot;decided_at&quot;: &quot;2026-10-29T04:33:36.833794+00:00&quot;,
+  &quot;decided_by&quot;: &quot;synthetic-report-validator&quot;,
+  &quot;decision&quot;: &quot;changes_requested&quot;,
+  &quot;decision_id&quot;: &quot;DC-feeffd0c4ac344948cccdf1b0fb0b948&quot;,
+  &quot;decision_reason&quot;: &quot;仅用虚构资料验证报告部分失败，人工决定应保留且现有报告不得被重写。&quot;,
+  &quot;dimensions&quot;: {
+    &quot;financial&quot;: 0,
+    &quot;legal&quot;: 84,
+    &quot;policy&quot;: 0,
+    &quot;privacy&quot;: 0,
+    &quot;security&quot;: 0
+  },
+  &quot;document_hash&quot;: &quot;90fa93a046d44f47181fec2ae2fd7cbe25b36ee8d21a665e836f821fc9eb39d6&quot;,
+  &quot;document_name&quot;: &quot;report-font-188be9d6920d493486f3af7b78dc2e61.txt&quot;,
+  &quot;document_version_id&quot;: &quot;DV-cfae49c0276f4b9e902233d222649916&quot;,
+  &quot;findings&quot;: [
+    {
+      &quot;category&quot;: &quot;legal&quot;,
+      &quot;end&quot;: 104,
+      &quot;evidence&quot;: &quot;920d493486f3af7b78dc2e61\n供应方承担全部损失，且不设责任上限。&quot;,
+      &quot;locator&quot;: &quot;block:1&quot;,
+      &quot;offset_basis&quot;: &quot;unicode_code_points&quot;,
+      &quot;points&quot;: 28,
+      &quot;recommendation&quot;: &quot;增加明确、对等且可量化的责任上限。&quot;,
+      &quot;rule_id&quot;: &quot;LEGAL-002&quot;,
+      &quot;section_id&quot;: &quot;section-0001&quot;,
+      &quot;severity&quot;: &quot;critical&quot;,
+      &quot;start&quot;: 61,
+      &quot;title&quot;: &quot;责任上限缺失或无限责任&quot;
+    }
+  ],
+  &quot;generated_at&quot;: &quot;2026-10-29T04:33:36.833794+00:00&quot;,
+  &quot;hash_kind&quot;: &quot;source_bytes_sha256&quot;,
+  &quot;redaction_policy_hash&quot;: &quot;fce85e9628300408945cfb77914f6d6d9fdfacc5ea6701e8e55a7443ef9f460e&quot;,
+  &quot;redaction_policy_version&quot;: &quot;2026.10.1&quot;,
+  &quot;risk_level&quot;: &quot;medium&quot;,
+  &quot;risk_score&quot;: 28,
+  &quot;ruleset_hash&quot;: &quot;aa7f3162c2a2ef59093c477689a639952a8e2705ed892b233dbda3791f378d76&quot;,
+  &quot;ruleset_version&quot;: &quot;2026.10.1&quot;,
+  &quot;snapshot_hash&quot;: &quot;d6a039f2b4ada16b3a82fb7b464cc4699bf2ae2265523fb989a53ec69faeaf98&quot;,
+  &quot;source_kind&quot;: &quot;uploaded_demo&quot;,
+  &quot;title&quot;: &quot;虚构PDF部分失败与专用重试验收&quot;,
+  &quot;workflow_engine&quot;: &quot;Langflow&quot;,
+  &quot;attribution&quot;: &quot;基于 Langflow / Built on Langflow&quot;,
+  &quot;synthetic_notice&quot;: &quot;SYNTHETIC DEMO DATA ONLY / 演示仅使用虚构数据&quot;,
+  &quot;report_template_version&quot;: &quot;2026.10.1&quot;,
+  &quot;font_resource&quot;: {
+    &quot;name&quot;: &quot;Noto Sans SC Regular&quot;,
+    &quot;license&quot;: &quot;SIL Open Font License 1.1&quot;,
+    &quot;sha256&quot;: &quot;e3b799e4230233500ff152d1cc81ade6c64acb34958c90cd6b6e02927a2923a9&quot;
+  },
+  &quot;report_title&quot;: &quot;本次修订意见报告&quot;
+}</pre></details>
+<p>本报告仅用于虚构数据演示和辅助决策，不构成法律意见。</p></body></html>

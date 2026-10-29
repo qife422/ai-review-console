@@ -1,0 +1,47 @@
+{
+  "python_locked_license_summary": {
+    "recorded": 31,
+    "unknown": 0,
+    "review_required_copyleft_or_restricted_match": 2
+  },
+  "needs_review": [
+    {
+      "name": "psycopg",
+      "version": "3.3.5",
+      "identifiers": [
+        "LGPL-3.0-only"
+      ]
+    },
+    {
+      "name": "psycopg-binary",
+      "version": "3.3.5",
+      "identifiers": [
+        "LGPL-3.0-only"
+      ]
+    }
+  ],
+  "third_party_fixed_files": [
+    {
+      "path": "review_core/assets/NotoSansSC-Regular.ttf",
+      "bytes": 10595932,
+      "sha256": "e3b799e4230233500ff152d1cc81ade6c64acb34958c90cd6b6e02927a2923a9"
+    },
+    {
+      "path": "review_core/assets/OFL.txt",
+      "bytes": 4387,
+      "sha256": "babcfe66c8a098b2fa279bc724a3a342f8124f77ce18941fbcc1bbb39823cded"
+    },
+    {
+      "path": "licenses/Langflow-LICENSE.txt",
+      "bytes": 1066,
+      "sha256": "2f6f90f0641ad822aec5d2bccd1f97c569cc0cbaf0ec3754d10290808f3b1f1b"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1397,
+      "sha256": "de363a619856afe3480aead03abfce454a51f85a2ba8b83d89d20f7c5dafb8fe"
+    }
+  ],
+  "font_matches_notice": true,
+  "qualification": "exact-version license metadata; neither full image coverage nor legal/distribution approval"
+}

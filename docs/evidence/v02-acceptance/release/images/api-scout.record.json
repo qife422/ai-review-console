@@ -1,0 +1,18 @@
+{
+  "name": "api",
+  "command": [
+    "docker",
+    "scout",
+    "cves",
+    "sbom:///private/tmp/arc-v02-scout.t8QHbF/api.spdx.json",
+    "--format",
+    "sarif",
+    "--exit-code"
+  ],
+  "started": "2026-10-29T04:21:21.002416+00:00",
+  "finished": "2026-10-29T04:21:22.323455+00:00",
+  "exit_code": 1,
+  "stop_reason": null,
+  "stdout": "api-scout.stdout",
+  "stderr": "api-scout.stderr"
+}

@@ -1,0 +1,75 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "AC-17"
+  ],
+  "producer": "scripts/verify_restore.py",
+  "producer_sha256": "88d77ab4e5cad159f843cd80d1777a2c47b5c448d6966784016de081a673d4d8",
+  "checked_at": "2026-10-29T04:26:03.479839+00:00",
+  "sqlite": {
+    "source": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/review_console.sqlite3",
+    "source_bytes": 57344,
+    "source_sha256_before_and_after": "980ad5d23d866a52e4101966594e5a24ee67edef08475afc63ff9c3e1f6fca1f",
+    "isolated_migrated_copy": "/private/tmp/arc-v02-acceptance.UYLZxy/sqlite-migrated.sqlite3",
+    "copy_sha256": "6f3885e98e582d0fc5a0f8e370d7eb04aab73afa3455dad44c4b7fe772d44b53",
+    "original_case_count": 12,
+    "original_audit_count": 17,
+    "active_case_count": 12,
+    "active_audit_count": 19,
+    "preserved_decision_count": 5,
+    "legacy_rows_exactly_match": true,
+    "original_cases_content_hash": "dddebc85d5ea142c7e6217fd75071b0a8b9dba21b0e1db9282debf9ecf1dab7d",
+    "original_audits_content_hash": "ebfdaea0acda717071f11ed2994c603562a9b3bb7a57483eb01406702363a68b",
+    "method": "SQLite native .backup to isolated target; explicit v2 --allow-existing migration; readonly equality verification",
+    "result": "passed; original source not changed"
+  },
+  "postgresql": {
+    "project": "ai-review-console-upgrade",
+    "container": "ai-review-console-upgrade-postgres-1",
+    "source_database": "review_console",
+    "source_database_bytes": 25883107,
+    "scope": "public schema business records only; excludes Langflow database and test schemas",
+    "restored_database": "arc_restore_2ed4123efdbb",
+    "application_cutover": false,
+    "backup": "/private/tmp/arc-v02-acceptance.UYLZxy/review-console.dump",
+    "backup_bytes": 667277,
+    "backup_sha256": "4c42b9352e99f8323afd77dddda906a881ee8741af50a2ac5cab36d4f047d964",
+    "schema_version": 2,
+    "source_and_restored_tables": {
+      "review_cases": {
+        "rows": 73,
+        "content_sha256": "e07f201584424c3025ef3ae7d4cddf73ecb16ab0b67399bcd8bc64c964344753"
+      },
+      "document_versions": {
+        "rows": 73,
+        "content_sha256": "756d93fca77ff6d1da2cd6dfd9439de1f370ac5e94bc4547a0914ce9c466246b"
+      },
+      "assessments": {
+        "rows": 71,
+        "content_sha256": "6578e6f02b401a0e90306aa9d4e8e92901373c9906ff5e85cb9fbbf9f007df29"
+      },
+      "decisions": {
+        "rows": 15,
+        "content_sha256": "2cb54aa984364791c9c8e64d4cf31d90334bc74806fd61ab0f0f9ffd46f1621b"
+      },
+      "audit_events": {
+        "rows": 189,
+        "content_sha256": "d4caec367a30e6be63c7b8a8e62bb1423f9e4f0cc4a0bb758476b0af1c0d59e2"
+      },
+      "workflow_jobs": {
+        "rows": 75,
+        "content_sha256": "ec24dc72e40ce8564aa9300a48f2276907133f631272aecb7bd42055354ce7e4"
+      },
+      "report_artifacts": {
+        "rows": 45,
+        "content_sha256": "032b9b004a53c735b8e4cfcceed64e471d049ad0bb5bef988980c1843a0f5808"
+      }
+    },
+    "all_counts_and_content_hashes_equal": true,
+    "method": "native PostgreSQL logical dump/restore into a new isolated database",
+    "toc_filter": "skip only CREATE SCHEMA public, already present in empty target; no table/data filtered",
+    "retention": "restore database and exact backup retained; no cleanup/drop authorization",
+    "result": "passed"
+  },
+  "limitations": "PostgreSQL legacy preservation is a separate fixture-based migration test; the original historical PostgreSQL volume was not started or changed."
+}

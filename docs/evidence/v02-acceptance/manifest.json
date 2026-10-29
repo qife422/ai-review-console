@@ -1,0 +1,2495 @@
+{
+  "evidence_id": "v02-acceptance",
+  "classification": "sealed_evidence",
+  "sealed_at": "2026-10-29T04:55:17.528572+00:00",
+  "client_date": "2026-10-28 America/Los_Angeles",
+  "contract": {
+    "id": "ARC-UPGRADE",
+    "version": "0.1.0",
+    "status": "approved",
+    "path": "docs/UPGRADE_SPEC.md",
+    "sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753"
+  },
+  "source_code_revision": "540fd4c07cc3ad1b1ce017d3957f06fa0732e5ba",
+  "source_inputs": "source-inputs.json",
+  "source_input_fingerprint_sha256": "d15dc66acf8ce799ca15749939df0e88fcec53e08edf404f47b16654b9f1dba0",
+  "environment": {
+    "host_platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "node": "v22.17.1",
+    "benchmark_environment": {
+      "host_platform": "macOS-26.5.2-arm64-arm-64bit",
+      "host_machine": "arm64",
+      "docker_server_version": "28.3.2",
+      "docker_cpu_count": 8,
+      "docker_memory_bytes": 4109803520
+    },
+    "runtime_identity": "checks/runtime/runtime-source-identity-current.json",
+    "latest_ci": {
+      "run_id": 40819513529,
+      "url": "https://github.com/qife422/ai-review-console/actions/runs/40819513529",
+      "head_sha": "540fd4c07cc3ad1b1ce017d3957f06fa0732e5ba",
+      "status": "completed",
+      "conclusion": "success",
+      "unit_tests": 128,
+      "unit_skipped": 0,
+      "frontend_tests": 29,
+      "evidence_directory": "final-ci/",
+      "note": "Earlier ci-font run retained as repair history; final source acceptance uses this run. Subsequent documentation-only commits require unchanged relevant input fingerprints, not inherited approval for code changes."
+    }
+  },
+  "acceptance_results": [
+    {
+      "id": "AC-01",
+      "result": "passed_with_recorded_scope",
+      "detail": "README.md#AC-结果"
+    },
+    {
+      "id": "AC-02",
+      "result": "passed_with_recorded_scope",
+      "detail": "README.md#AC-结果"
+    },
+    {
+      "id": "AC-03",
+      "result": "passed_with_recorded_scope",
+      "detail": "README.md#AC-结果"
+    },
+    {
+      "id": "AC-04",
+      "result": "passed_with_recorded_scope",
+      "detail": "README.md#AC-结果"
+    },
+    {
+      "id": "AC-05",
+      "result": "passed_with_recorded_scope",
+      "detail": "README.md#AC-结果"
+    },
+    {
+      "id": "AC-06",
+      "result": "passed_with_recorded_scope",
+      "detail": "README.md#AC-结果"
+    },
+    {
+      "id": "AC-07",
+      "result": "passed_with_recorded_scope",
+      "detail": "README.md#AC-结果"
+    },
+    {
+      "id": "AC-08",
+      "result": "passed_with_recorded_scope",
+      "detail": "README.md#AC-结果"
+    },
+    {
+      "id": "AC-09",
+      "result": "passed_with_recorded_scope",
+      "detail": "README.md#AC-结果"
+    },
+    {
+      "id": "AC-10",
+      "result": "passed_with_recorded_scope",
+      "detail": "README.md#AC-结果"
+    },
+    {
+      "id": "AC-11",
+      "result": "passed_with_recorded_scope",
+      "detail": "README.md#AC-结果"
+    },
+    {
+      "id": "AC-12",
+      "result": "passed_with_recorded_scope",
+      "detail": "README.md#AC-结果"
+    },
+    {
+      "id": "AC-13",
+      "result": "passed_with_recorded_scope",
+      "detail": "README.md#AC-结果"
+    },
+    {
+      "id": "AC-14",
+      "result": "passed_with_recorded_scope",
+      "detail": "README.md#AC-结果"
+    },
+    {
+      "id": "AC-15",
+      "result": "passed_with_recorded_scope",
+      "detail": "README.md#AC-结果"
+    },
+    {
+      "id": "AC-16",
+      "result": "passed_with_recorded_scope",
+      "detail": "README.md#AC-结果"
+    },
+    {
+      "id": "AC-17",
+      "result": "passed_with_recorded_scope",
+      "detail": "README.md#AC-结果"
+    },
+    {
+      "id": "AC-18",
+      "result": "passed_with_recorded_scope",
+      "detail": "README.md#AC-结果"
+    },
+    {
+      "id": "AC-19",
+      "result": "failed_and_blocked",
+      "detail": "README.md#AC-结果"
+    }
+  ],
+  "out_of_scope_acceptance": [
+    "AC-20",
+    "AC-21",
+    "AC-22",
+    "AC-23",
+    "AC-24"
+  ],
+  "project_delivery_state": "implementing",
+  "complete_v02_technically_verified": false,
+  "final_human_acceptance": "pending",
+  "applicability_notes": [
+    "Earlier backend evidence applies to unchanged API/core/component/Flow/locked dependencies; diagnostic producer hashes are checked separately.",
+    "Earlier UI evidence is limited to unchanged locator/layout behavior; current route/skip behavior and the final production frontend are covered by focused proofs plus final code CI.",
+    "Local Web image inventory predates route-only changes; it is not presented as the final frontend release image.",
+    "Dependency audit input lock/package files are byte-identical to the final source; advisory database date was not supplied.",
+    "Full public database restore was fingerprinted; runtime file proof covers only explicitly selected three cases, twelve files and nine report downloads.",
+    "Failed prechecks and superseded observations remain diagnostic evidence, not passing results.",
+    "Subsequent documentation-only commits do not change these application/test/dependency/CI input fingerprints."
+  ],
+  "producer": "Root assembled exact selected payloads using Python hashlib, checked child indexes and current producer/input hashes; CI and raw run methods retained in payloads.",
+  "capacity": {
+    "files": 187,
+    "payload_bytes": 5181623,
+    "max_files": 1000,
+    "max_bytes": 104857600,
+    "source_author_baseline_bytes": 638871,
+    "inventory": "final-inventory.json"
+  },
+  "artifact_disposition": {
+    "selected_payloads": "retain-active, immutable after this manifest",
+    "temporary_roots_and_runtime_targets": "retain; services stopped and data retained; see final-inventory and teardown",
+    "historical_artifacts": "untouched; not inherited as current verification",
+    "cleanup_authorized": false,
+    "pending_cleanup": true
+  },
+  "self_identity": "Manifest excludes its own hash; Git commit identity and all payload hashes bind the packet.",
+  "files": [
+    {
+      "path": "README.md",
+      "classification": "sealed_evidence",
+      "bytes": 11549,
+      "sha256": "25446068e232babd160b4fd18c217eea9a2c1e3c379cfc56b2c37acd9c890963",
+      "acceptance": [],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": null,
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/auth-recheck/faults.json",
+      "classification": "sealed_evidence",
+      "bytes": 3208,
+      "sha256": "07ab59ab5f153dbcf0a4cebf26772330a47fbc2c14496db0714d808fc1a8d3ef",
+      "acceptance": [
+        "AC-07"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-v02-auth-recheck.a2puEa/faults.json",
+      "observed_result": "Selected auth recovery scenario passed with generation/token/unique-result constraints"
+    },
+    {
+      "path": "checks/auth-recheck/run.stderr",
+      "classification": "sealed_evidence",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "acceptance": [
+        "AC-07"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-v02-auth-recheck.a2puEa/run.stderr",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/auth-recheck/run.stdout",
+      "classification": "sealed_evidence",
+      "bytes": 260,
+      "sha256": "38ffd1f6f2a981fdd1a023b83157f08dcb8641f79636b46eee03b2c69ffeef45",
+      "acceptance": [
+        "AC-07"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-v02-auth-recheck.a2puEa/run.stdout",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/fast/frontend-tests.log",
+      "classification": "sealed_evidence",
+      "bytes": 313,
+      "sha256": "9132d5ceabb7fbc7cbda9b079fa4a664b80d083d977897ce80d340a30eb11044",
+      "acceptance": [
+        "AC-10",
+        "AC-15",
+        "AC-16"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/frontend-tests.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/fast/postgres-results.json",
+      "classification": "sealed_evidence",
+      "bytes": 955,
+      "sha256": "02c3dc7d7161a06c5015032d190ec871642c16e679ea142f7a5c212e879e21b9",
+      "acceptance": [
+        "AC-05",
+        "AC-09",
+        "AC-17"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/postgres-results.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/fast/postgres-tests.log",
+      "classification": "sealed_evidence",
+      "bytes": 627,
+      "sha256": "c9bea457956da2ad6368e29b9025ccfb8e81393ae92341936c58d152635bbe78",
+      "acceptance": [
+        "AC-05",
+        "AC-09",
+        "AC-17"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/postgres-tests.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/fast/python-tests.log",
+      "classification": "sealed_evidence",
+      "bytes": 1065,
+      "sha256": "a0a1b88d92c933ec6996c02a303d41fbea44c714c7aa59f07c8459c69227b0d6",
+      "acceptance": [
+        "AC-02",
+        "AC-03",
+        "AC-05",
+        "AC-08",
+        "AC-09",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-14",
+        "AC-16",
+        "AC-17"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/python-tests.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/fast/results.json",
+      "classification": "sealed_evidence",
+      "bytes": 3410,
+      "sha256": "52de4005571cd8a978f93cdc11956917de06519da77b516bf1cc68059ae9a949",
+      "acceptance": [
+        "AC-02",
+        "AC-03",
+        "AC-05",
+        "AC-08",
+        "AC-09",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-14",
+        "AC-16",
+        "AC-17"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/results.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/fast/ruff.log",
+      "classification": "sealed_evidence",
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "acceptance": [],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/ruff.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/fast/typescript.log",
+      "classification": "sealed_evidence",
+      "bytes": 141,
+      "sha256": "8ea0103cc704725503eb7ce55ee6de5e170808ab42861f9c7e99f34b9b325603",
+      "acceptance": [
+        "AC-10",
+        "AC-15",
+        "AC-16"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/typescript.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/01-open-docx.log",
+      "classification": "sealed_evidence",
+      "bytes": 458,
+      "sha256": "aeb7079cabc0136bb96f188df0948c4b9949e709f386fceca920bac81e87c251",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/01-open-docx.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/02-docx-snapshot.log",
+      "classification": "sealed_evidence",
+      "bytes": 8187,
+      "sha256": "4e5e1f29c5389167756287c518f38b05fad3cec9a4133bf567416fad9053ad3b",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/02-docx-snapshot.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/03-resize.log",
+      "classification": "sealed_evidence",
+      "bytes": 93,
+      "sha256": "6d71f9f29bc176b37c24390dad8dd251ee3eb35546959ebd2e26720302a96a20",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/03-resize.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/04-docx-click.log",
+      "classification": "sealed_evidence",
+      "bytes": 324,
+      "sha256": "6eca8c6362c50d06767534ab7fcb0853745c5e843aa96fea44f3443dcdb534b3",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/04-docx-click.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/05-docx-after.log",
+      "classification": "sealed_evidence",
+      "bytes": 7298,
+      "sha256": "960a4577adb7431db886c274f71dad3cb98d66d22e3e41da650a2cf647c9ca3d",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/05-docx-after.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/06-docx-dom.log",
+      "classification": "sealed_evidence",
+      "bytes": 1247,
+      "sha256": "5f4c43df03066e1aba99faa0a506ac297bc86e032f132cd989627c8dba756e85",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/06-docx-dom.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/07-docx-image.log",
+      "classification": "sealed_evidence",
+      "bytes": 510,
+      "sha256": "47f6d5a89f3c1ef00d59cf6dde4526a164b68f3a7c532be2e2fb9797373cde45",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/07-docx-image.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/08-pdf-open.log",
+      "classification": "sealed_evidence",
+      "bytes": 312,
+      "sha256": "a1b3caef3df55da88f10490c15391a067d4414630782bb13fe6814f8bf747858",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/08-pdf-open.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/09-pdf-snapshot.log",
+      "classification": "sealed_evidence",
+      "bytes": 7298,
+      "sha256": "1bbf6c36a69813cef6ba2cb46dac30579c0835d8d23c798f1ebf0e61894ea95b",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/09-pdf-snapshot.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/10-pdf-wait.log",
+      "classification": "sealed_evidence",
+      "bytes": 72,
+      "sha256": "f90995d5f7c9f5464b5f36635b9ed81bf9a44184587c2e17f1d13c91070cb25e",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/10-pdf-wait.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/11-pdf-ready.log",
+      "classification": "sealed_evidence",
+      "bytes": 7298,
+      "sha256": "1bbf6c36a69813cef6ba2cb46dac30579c0835d8d23c798f1ebf0e61894ea95b",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/11-pdf-ready.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/12-pdf-reload.log",
+      "classification": "sealed_evidence",
+      "bytes": 342,
+      "sha256": "c9f81218c3789ebf3b1ef5697cf137408cd2a358a7682421c19c95b122e17cbd",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/12-pdf-reload.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/13-pdf-loaded.log",
+      "classification": "sealed_evidence",
+      "bytes": 8589,
+      "sha256": "209bc477a3ed04bec1ec8733e2f3af9381be2c60b30307259e6973efe12a1e26",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/13-pdf-loaded.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/14-pdf-click.log",
+      "classification": "sealed_evidence",
+      "bytes": 310,
+      "sha256": "46e4421abf1564f7ba43810faa67acfcba07d88f7d0d9a22a4ff64c49664d64a",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/14-pdf-click.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/15-pdf-dom.log",
+      "classification": "sealed_evidence",
+      "bytes": 1342,
+      "sha256": "fe982bc9f43073405120af8dd1f7668154f894f871b542678820d9f2b5beac2f",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/15-pdf-dom.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/16-pdf-image.log",
+      "classification": "sealed_evidence",
+      "bytes": 507,
+      "sha256": "91ac8f934ef31ef949601a75c69c79d62a38aed4b78491758248be9e1af2e3e8",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/16-pdf-image.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/17-browser-network.log",
+      "classification": "sealed_evidence",
+      "bytes": 7518,
+      "sha256": "3d95394728ff32ccd781c56185e3abc27bfe898ce2d37d39a36d5c3070311852",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/17-browser-network.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/18-browser-close.log",
+      "classification": "sealed_evidence",
+      "bytes": 34,
+      "sha256": "707472014dbc2aeb1c088724e983720aa9a6ded8367a7198957cd3076dad3636",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/18-browser-close.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/api-selected-evidence.json",
+      "classification": "sealed_evidence",
+      "bytes": 1867,
+      "sha256": "bbce93d7dcdb77d9dbcb945cfa42c07272959bf9f408f42cac50819c4ecd17af",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/api-selected-evidence.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/commands.json",
+      "classification": "sealed_evidence",
+      "bytes": 7384,
+      "sha256": "255b2e41da7bfdbce4d212d727644a45fc02bd74aa4f35b353798003a9201270",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/commands.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/docx-locator.png",
+      "classification": "sealed_evidence",
+      "bytes": 91260,
+      "sha256": "2060c0d93c5a744d2b0920e7e18d621e3fa5490345a2ea7165d5d12aebe16c29",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/docx-locator.png",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/pdf-locator.png",
+      "classification": "sealed_evidence",
+      "bytes": 113741,
+      "sha256": "443bf2aa89d61223966fe8b0ce952a6e10991665598b788b0fd4911188368de2",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/pdf-locator.png",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/record_cli.py",
+      "classification": "sealed_evidence",
+      "bytes": 875,
+      "sha256": "9be62e4de6d1d12867b15cdd8ebfca33d6d349a3273612beb93f48a1ac0220ba",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/record_cli.py",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/result.json",
+      "classification": "sealed_evidence",
+      "bytes": 9624,
+      "sha256": "3cbe45d9d5bf31338c155eb10646019a369cc6fe70f38aa0549b7c7c2bca836e",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/result.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/locator/selected-cases.json",
+      "classification": "sealed_evidence",
+      "bytes": 99,
+      "sha256": "124b0eade3468619807acd08a18c949428d2092d421dd31a3427ff9bdade3017",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/selected-cases.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/pdf/checks.json",
+      "classification": "sealed_evidence",
+      "bytes": 4698,
+      "sha256": "478da29ff6dbf093e329515259ceb20ef91206a6e80d3f188927118ab5a74744",
+      "acceptance": [
+        "AC-12"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/checks.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/pdf/extracted-pages.json",
+      "classification": "sealed_evidence",
+      "bytes": 19313,
+      "sha256": "a4d44e2a2c40630075e7873c58ca4b1cd7e24603a231533de1520b82c51f15b3",
+      "acceptance": [
+        "AC-12"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/extracted-pages.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/pdf/page-1.png",
+      "classification": "sealed_evidence",
+      "bytes": 228317,
+      "sha256": "0ba6f5fb6c26bba609a20e8f70ed2460aa9f0c4782db3037c27abb84fa961afd",
+      "acceptance": [
+        "AC-12"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/page-1.png",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/pdf/page-2.png",
+      "classification": "sealed_evidence",
+      "bytes": 395238,
+      "sha256": "915650ef2dc8289429eb73796d28fc967345f9cd4a1e4ba0094c7d4b7869d4e0",
+      "acceptance": [
+        "AC-12"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/page-2.png",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/pdf/page-3.png",
+      "classification": "sealed_evidence",
+      "bytes": 394813,
+      "sha256": "f80ec043709f5eda6692a626c3914229d9039a796526679f78aea870ff95e164",
+      "acceptance": [
+        "AC-12"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/page-3.png",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/pdf/page-4.png",
+      "classification": "sealed_evidence",
+      "bytes": 348115,
+      "sha256": "81fdf552b3ea4b1ff0081078846a0b75eb1c68a90cec6c6930bafde46f0f13cb",
+      "acceptance": [
+        "AC-12"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/page-4.png",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/pdf/report.html",
+      "classification": "sealed_evidence",
+      "bytes": 42338,
+      "sha256": "b1264a4be239e91e758ccf63ceb92ed4713c8b011da529631652b4ff50c9a92c",
+      "acceptance": [
+        "AC-12"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/report.html",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/pdf/report.json",
+      "classification": "sealed_evidence",
+      "bytes": 20352,
+      "sha256": "3ac88095d42bc87979b7d3344866709c945d88c653647cea3481829631b771d7",
+      "acceptance": [
+        "AC-12"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/report.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/pdf/report.pdf",
+      "classification": "sealed_evidence",
+      "bytes": 38154,
+      "sha256": "d9367bc5e02873e39889a40f94df490932c7f7d92cd41249742599971a764e30",
+      "acceptance": [
+        "AC-12"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/report.pdf",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/pdf/snapshot.json",
+      "classification": "sealed_evidence",
+      "bytes": 19860,
+      "sha256": "81db1f2ce07f46821d01fd39ece98be0ecdd94bf11fa3dd1b3fec7751221c207",
+      "acceptance": [
+        "AC-12"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/snapshot.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/pdf/verify-pdf.py",
+      "classification": "sealed_evidence",
+      "bytes": 1186,
+      "sha256": "6e31eecc62c5bda1ee8f4309472a886de141df58d94c6f680472a6007abbad10",
+      "acceptance": [
+        "AC-12"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/verify-pdf.py",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/report-retry/final-report.json",
+      "classification": "sealed_evidence",
+      "bytes": 3943,
+      "sha256": "39a29d1ec02a4c3dd64cb63b1ef87d3552745861ffd467b84ecdb0f50d40fa80",
+      "acceptance": [
+        "AC-14"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-report-retry-pDaMDE/final-report.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/report-retry/first-partial.json",
+      "classification": "sealed_evidence",
+      "bytes": 3204,
+      "sha256": "3b5dca5fa283d89cf2ecc6521e50a29572ce28b58592d63d7427abbf3197d83a",
+      "acceptance": [
+        "AC-14"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-report-retry-pDaMDE/first-partial.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/report-retry/first-report.html",
+      "classification": "sealed_evidence",
+      "bytes": 7764,
+      "sha256": "2bacfae2fa73c163a583dee09cf5e9ba8130020027b9d88dba225ed702fd4a65",
+      "acceptance": [
+        "AC-14"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-report-retry-pDaMDE/first-report.html",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/report-retry/first-report.json",
+      "classification": "sealed_evidence",
+      "bytes": 3212,
+      "sha256": "de9eab7fb3a9ec52858a825f9544e6c998349fd9189f7cab76a0cd623becbbfc",
+      "acceptance": [
+        "AC-14"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-report-retry-pDaMDE/first-report.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/report-retry/font-fault.compose.json",
+      "classification": "sealed_evidence",
+      "bytes": 175,
+      "sha256": "2da2f06ec3c1b4c7713fa8b7086aedeec6d11cb977b055d47dbc4a71c022e75f",
+      "acceptance": [
+        "AC-14"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-report-retry-pDaMDE/font-fault.compose.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/report-retry/initial-preflight-failure.json",
+      "classification": "sealed_evidence",
+      "bytes": 7729,
+      "sha256": "606a5ebe90146b149ce34db3feb7f53877581342f6238f69db4ae6c007dfe122",
+      "acceptance": [
+        "AC-14"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-report-retry-D6KKKO/report-retry.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/report-retry/recovered-report.pdf",
+      "classification": "sealed_evidence",
+      "bytes": 39728,
+      "sha256": "db76ca99d10a53c88874cc8d9cd67e4559a253664f6bef7010da06ffd952e260",
+      "acceptance": [
+        "AC-14"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-report-retry-pDaMDE/recovered-report.pdf",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/report-retry/report-retry.json",
+      "classification": "sealed_evidence",
+      "bytes": 65753,
+      "sha256": "f23adf679c1a5a42cb85a8fae7aa2b5d02b590eb3fbb23e988afb79a1122c3fc",
+      "acceptance": [
+        "AC-14"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-report-retry-pDaMDE/report-retry.json",
+      "observed_result": "Real PDF-only failure and dedicated retry passed; original ready JSON/HTML and decision unchanged"
+    },
+    {
+      "path": "checks/report-retry/restoration.json",
+      "classification": "sealed_evidence",
+      "bytes": 1247,
+      "sha256": "9d47ac89bbdc13e01ab248c773e9430ffd5941f871bae3f8e819b62949256a3d",
+      "acceptance": [
+        "AC-14"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-report-retry-pDaMDE/restoration.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/report-retry/terminal-failed.json",
+      "classification": "sealed_evidence",
+      "bytes": 3193,
+      "sha256": "6b5a8286988a4545da7c54fe6948be09be8fb35f9bfa2d79c8dca2096aecf963",
+      "acceptance": [
+        "AC-14"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-report-retry-pDaMDE/terminal-failed.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/restore-runtime/first-selected-files.json",
+      "classification": "sealed_evidence",
+      "bytes": 4786,
+      "sha256": "13a9d0e2d6682d3198c6df948ad450c113e7dafd1a23797d82a662656a94dc65",
+      "acceptance": [
+        "AC-17"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-restore-runtime.N25J1M/selected-files.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/restore-runtime/manifest.json",
+      "classification": "sealed_evidence",
+      "bytes": 51304,
+      "sha256": "187c61f52c37666dd76fa1ba5c839a143b4a0e04cbdeb1a0c639654ee05b63d5",
+      "acceptance": [
+        "AC-17"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-restore-runtime.dFa60B/manifest.json",
+      "observed_result": "Read-only restored API and selected three-case/twelve-file runtime proof passed; unselected files not claimed"
+    },
+    {
+      "path": "checks/restore-runtime/selected-files.json",
+      "classification": "sealed_evidence",
+      "bytes": 4786,
+      "sha256": "13a9d0e2d6682d3198c6df948ad450c113e7dafd1a23797d82a662656a94dc65",
+      "acceptance": [
+        "AC-17"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-restore-runtime.dFa60B/selected-files.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/01-open-docx.log",
+      "classification": "sealed_evidence",
+      "bytes": 457,
+      "sha256": "ac00a4e4b8c45eae1719ada2f0614a263254c7db8c8824f81cd1f1d54d7f21f0",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/01-open-docx.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/02-docx-ready.log",
+      "classification": "sealed_evidence",
+      "bytes": 582,
+      "sha256": "67a65f897a5940cdaaa2ee48a2d4a8e01ec43d69e95226a53b5cad5ba839961f",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/02-docx-ready.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/03-resize.log",
+      "classification": "sealed_evidence",
+      "bytes": 93,
+      "sha256": "6d71f9f29bc176b37c24390dad8dd251ee3eb35546959ebd2e26720302a96a20",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/03-resize.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/04-docx-locator.log",
+      "classification": "sealed_evidence",
+      "bytes": 324,
+      "sha256": "a0aeced4f8c1712b9057896cf64549b24d5c27c0bd758b979f344cb70a4dde80",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/04-docx-locator.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/05-before-route.log",
+      "classification": "sealed_evidence",
+      "bytes": 790,
+      "sha256": "13a734be2cba6a2f5eda31e72f41ef5e01cbf64929a672fa0681b38118b038dd",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/05-before-route.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/06-pdf-hash.log",
+      "classification": "sealed_evidence",
+      "bytes": 312,
+      "sha256": "94842577204b79134480f07897055f9a8c16df3569434dfa3fa7183bad77d700",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/06-pdf-hash.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/07-pdf-updated.log",
+      "classification": "sealed_evidence",
+      "bytes": 973,
+      "sha256": "01bd98e3ca506802e6980a446c58fa4b3e82c1840efb4b68beb3891bc7833660",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/07-pdf-updated.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/08-pdf-ready.log",
+      "classification": "sealed_evidence",
+      "bytes": 8224,
+      "sha256": "d2eab9b37672386daddb0cccc7b4eb1d811457782a897ccd98f6dc9ad2256e11",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/08-pdf-ready.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/09-pdf-locator.log",
+      "classification": "sealed_evidence",
+      "bytes": 310,
+      "sha256": "e4766e7f0c9c2475e2c7bb6ee3cb1136f7c74f842d4effe9a250270577d1980b",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/09-pdf-locator.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/10-pdf-locator-dom.log",
+      "classification": "sealed_evidence",
+      "bytes": 967,
+      "sha256": "3a4eb935328e4e90b7f1d7d292023b8f42e16c607c3a3137dcb145eb09afa19a",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/10-pdf-locator-dom.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/11-pdf-locator-image.log",
+      "classification": "sealed_evidence",
+      "bytes": 540,
+      "sha256": "b968d347d8631b758a11b4c33d1702c9d37cc9d59cbaccc42bd13928cb1153da",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/11-pdf-locator-image.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/12-request-methods.log",
+      "classification": "sealed_evidence",
+      "bytes": 171,
+      "sha256": "722d7262da1b2dd48ce3137e5ac2d260c79c88ac5143a15d1ae350876de00c32",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/12-request-methods.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/13-back-docx.log",
+      "classification": "sealed_evidence",
+      "bytes": 249,
+      "sha256": "42b6649c9c61442fd1039e5cb3b8cedf5bca0e350dd8e0cdf090e12f2ec73845",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/13-back-docx.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/14-back-confirmed.log",
+      "classification": "sealed_evidence",
+      "bytes": 868,
+      "sha256": "3ec0901fdec9353fd55adc68b7385283785cc711a1c779b31c14aab2f61c06f6",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/14-back-confirmed.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/15-unknown-hash.log",
+      "classification": "sealed_evidence",
+      "bytes": 339,
+      "sha256": "64fd18ada39783c575e83a542ca62552befc25d4ed8850bfdddeadd52b11d977",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/15-unknown-hash.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/16-unknown-fallback.log",
+      "classification": "sealed_evidence",
+      "bytes": 574,
+      "sha256": "70842b711821fceb3233fa184061654a05ff9f7adb98e7d23c68cd5da9128a70",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/16-unknown-fallback.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/17-browser-close.log",
+      "classification": "sealed_evidence",
+      "bytes": 33,
+      "sha256": "81020ca3b70cfeb95707fa10585808264a8747a41df550b0de45d80a1b27fc9b",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/17-browser-close.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/app-tests.log",
+      "classification": "sealed_evidence",
+      "bytes": 325,
+      "sha256": "8ef93471963a1580a0f066b93d864619fde0e5798c691521fa9bc2655f55aaf5",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/app-tests.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/commands.json",
+      "classification": "sealed_evidence",
+      "bytes": 8280,
+      "sha256": "9bc6d7acb62bd4afc49a3feb597dcb383fd166480e8478c7529c0d2d5d8333af",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/commands.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/frontend-tests-final.log",
+      "classification": "sealed_evidence",
+      "bytes": 312,
+      "sha256": "7268872e9016f7ac369339f39e1aa3d913635c70d8edb70b66c347170900a067",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/frontend-tests-final.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/pdf-locator-after-route.png",
+      "classification": "sealed_evidence",
+      "bytes": 113741,
+      "sha256": "443bf2aa89d61223966fe8b0ce952a6e10991665598b788b0fd4911188368de2",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/pdf-locator-after-route.png",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/result.json",
+      "classification": "sealed_evidence",
+      "bytes": 9341,
+      "sha256": "2ff3f8326f693aefe45d08e50f4d8b21726237e0c7e72e7acf65a8b5b4a16da7",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/result.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/server-stopped.log",
+      "classification": "sealed_evidence",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/server-stopped.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/01-open-blank.log",
+      "classification": "sealed_evidence",
+      "bytes": 226,
+      "sha256": "9e606bafee4409d90c8d42fb69fc702e1f66574be7549b48109e0cc762a49ec3",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/01-open-blank.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/01-open-blank.yml",
+      "classification": "sealed_evidence",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/01-open-blank.yml",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/02-summary.log",
+      "classification": "sealed_evidence",
+      "bytes": 171,
+      "sha256": "f445e5692ad7dec837b973417484ad53aedfda5923daf018c70620085656ff72",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/02-summary.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/03-case-list.log",
+      "classification": "sealed_evidence",
+      "bytes": 167,
+      "sha256": "6ac37111a7e433228f36f94f42ec00123d9548721db820c388d4c60ce35129f3",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/03-case-list.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/04-status.log",
+      "classification": "sealed_evidence",
+      "bytes": 183,
+      "sha256": "88452cd45d6eea88067d4a4ce39770a1afc0a412d1ef765d23186ca04785048c",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/04-status.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/05-case-detail.log",
+      "classification": "sealed_evidence",
+      "bytes": 187,
+      "sha256": "1e2c1666b86e6e070408a213c2cd5d96497d2c6d9f169c42066a25401579dd8c",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/05-case-detail.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/06-open-case.log",
+      "classification": "sealed_evidence",
+      "bytes": 353,
+      "sha256": "85dbb2f428159aedc783d5d2d99b460c6286cdde2af06f620ae10d34b309f225",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/06-open-case.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/06-open-case.yml",
+      "classification": "sealed_evidence",
+      "bytes": 5850,
+      "sha256": "421f0dec952fa030ba8b44402f923933a76884c7cc8f47cb7bdb4aab16cb4c16",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/06-open-case.yml",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/07-case-ready.log",
+      "classification": "sealed_evidence",
+      "bytes": 504,
+      "sha256": "5bd7d74663a6dc3128bb12c66dfb96f2d43d5cd51d65e3548b8b7b8fb88108d8",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/07-case-ready.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/08-shifttab-1.log",
+      "classification": "sealed_evidence",
+      "bytes": 93,
+      "sha256": "989067ddf658a72d1541696581e4e9cffc6c23fa863aed0e4935ca15863ad85f",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/08-shifttab-1.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/08-shifttab-2.log",
+      "classification": "sealed_evidence",
+      "bytes": 93,
+      "sha256": "989067ddf658a72d1541696581e4e9cffc6c23fa863aed0e4935ca15863ad85f",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/08-shifttab-2.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/08-shifttab-3.log",
+      "classification": "sealed_evidence",
+      "bytes": 93,
+      "sha256": "989067ddf658a72d1541696581e4e9cffc6c23fa863aed0e4935ca15863ad85f",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/08-shifttab-3.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/08-shifttab-4.log",
+      "classification": "sealed_evidence",
+      "bytes": 93,
+      "sha256": "989067ddf658a72d1541696581e4e9cffc6c23fa863aed0e4935ca15863ad85f",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/08-shifttab-4.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/08-shifttab-5.log",
+      "classification": "sealed_evidence",
+      "bytes": 93,
+      "sha256": "989067ddf658a72d1541696581e4e9cffc6c23fa863aed0e4935ca15863ad85f",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/08-shifttab-5.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/08-shifttab-6.log",
+      "classification": "sealed_evidence",
+      "bytes": 93,
+      "sha256": "989067ddf658a72d1541696581e4e9cffc6c23fa863aed0e4935ca15863ad85f",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/08-shifttab-6.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/09-skip-focused.log",
+      "classification": "sealed_evidence",
+      "bytes": 453,
+      "sha256": "fb1d177d37d45162da125822696db807a50c3705e4e5a470c1b76a9995b4de5e",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/09-skip-focused.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/10-keyboard-enter.log",
+      "classification": "sealed_evidence",
+      "bytes": 253,
+      "sha256": "8123a5d577884266a7269bc0a84e94bd103449a764ea417539bc4a39aee41ca0",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/10-keyboard-enter.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/10-keyboard-enter.yml",
+      "classification": "sealed_evidence",
+      "bytes": 5850,
+      "sha256": "ced5f48d09ef1483f5259aea54a05d88e1096cde13c264b80e8d9261ce5640e8",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/10-keyboard-enter.yml",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/11-skip-result-dom.log",
+      "classification": "sealed_evidence",
+      "bytes": 695,
+      "sha256": "360e82f5ee4e3f569addf4a044d53cd688864ae4323e3d33d06276bf1e544246",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/11-skip-result-dom.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/12-browser-close.log",
+      "classification": "sealed_evidence",
+      "bytes": 31,
+      "sha256": "52bb303c6da48b3fdaaf946becfec889831b1ea66bc8773fccde9ca46d7883b7",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/12-browser-close.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/commands.json",
+      "classification": "sealed_evidence",
+      "bytes": 11801,
+      "sha256": "6ad788512db99cf5454c707649df3742b2f9154ad7edd739c40fdaa8c32d142f",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/commands.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/mock-responses.json",
+      "classification": "sealed_evidence",
+      "bytes": 5825,
+      "sha256": "863ad361baebb6fb314f95a466d13f2d745ebe292e24f24870a1e4713db56777",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/mock-responses.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/record_cli.py",
+      "classification": "sealed_evidence",
+      "bytes": 872,
+      "sha256": "6e7318f0d05c0f27747464d0e329fd9b9033841344a49552d956a5b59aecb80b",
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/record_cli.py",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip/server-stopped.log",
+      "classification": "sealed_evidence",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/server-stopped.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip-frontend-tests.log",
+      "classification": "sealed_evidence",
+      "bytes": 312,
+      "sha256": "11f682b6fffd7c458695e90dc668ffbf833db192360084b373b6b16d8449e664",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip-frontend-tests.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip-result.json",
+      "classification": "sealed_evidence",
+      "bytes": 6872,
+      "sha256": "7289d535f5e5363c1fd289116bc80affaca4336ce057b37c1844a0eddfc674c0",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip-result.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/skip-typescript.log",
+      "classification": "sealed_evidence",
+      "bytes": 141,
+      "sha256": "8ea0103cc704725503eb7ce55ee6de5e170808ab42861f9c7e99f34b9b325603",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip-typescript.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/typescript-final.log",
+      "classification": "sealed_evidence",
+      "bytes": 141,
+      "sha256": "8ea0103cc704725503eb7ce55ee6de5e170808ab42861f9c7e99f34b9b325603",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/typescript-final.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/router/typescript.log",
+      "classification": "sealed_evidence",
+      "bytes": 232,
+      "sha256": "d02c65abafa7a6678efea56532028f8f339db2b73404a947e7c833a6a0afbde9",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/typescript.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/runtime/empty-volume-precheck.stdout",
+      "classification": "sealed_evidence",
+      "bytes": 32,
+      "sha256": "5733f6cbbfc7c637ae803ee8f1b895056fa82679128bd045417763032b259f54",
+      "acceptance": [
+        "AC-17"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-v02-acceptance.UYLZxy/empty-volume-precheck.stdout",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/runtime/faults-429-recovery.log",
+      "classification": "sealed_evidence",
+      "bytes": 1316,
+      "sha256": "759cd6ae0f40bc454b28f9125124c139b27447349e732075af57467a631696cb",
+      "acceptance": [
+        "AC-07"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-v02-acceptance.UYLZxy/faults-429-recovery.log",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/runtime/faults.json",
+      "classification": "sealed_evidence",
+      "bytes": 7394,
+      "sha256": "99b13319226bb4ce1d26d5d59b2a8e1d288756ef00cee1701ead83da15f97c5c",
+      "acceptance": [
+        "AC-06",
+        "AC-07"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-v02-acceptance.UYLZxy/faults.json",
+      "observed_result": "First run failed after four scenarios passed; actual 429 recovered; overly strict assertion corrected and only auth scenario rechecked"
+    },
+    {
+      "path": "checks/runtime/faults.stderr",
+      "classification": "sealed_evidence",
+      "bytes": 648,
+      "sha256": "4f60b50ae3a2f45ab2a86c2e77be7205cdaf52c207e014ed4e2590c4ed565818",
+      "acceptance": [
+        "AC-06",
+        "AC-07"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-v02-acceptance.UYLZxy/faults.stderr",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/runtime/faults.stdout",
+      "classification": "sealed_evidence",
+      "bytes": 622,
+      "sha256": "6426289bc84ef4d5b431e66ee7891b1ab7097e0f7f0fc2ff4f0764d6b56e7ecc",
+      "acceptance": [
+        "AC-06",
+        "AC-07"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-v02-acceptance.UYLZxy/faults.stdout",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/runtime/inventory.json",
+      "classification": "sealed_evidence",
+      "bytes": 8666,
+      "sha256": "dad641246f9a4887c0ad6ef36d0f37d45c52a5a1a1872f6e1320281c531ea4a8",
+      "acceptance": [
+        "AC-17",
+        "AC-19"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-v02-acceptance.UYLZxy/inventory.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/runtime/plan.json",
+      "classification": "sealed_evidence",
+      "bytes": 1099,
+      "sha256": "0a009d65ab7bb6d6c45aea892712b95c38bde1dc62ccb3d4d0d2bcc19f6c7570",
+      "acceptance": [],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-v02-acceptance.UYLZxy/plan.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/runtime/restore-runtime-recheck.stdout",
+      "classification": "sealed_evidence",
+      "bytes": 237,
+      "sha256": "0e1790b2e9be6bc4d7f0e316b58bff9c308b24cd42a7b6e5281d3cffe4c2c786",
+      "acceptance": [
+        "AC-17"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-v02-acceptance.UYLZxy/restore-runtime-recheck.stdout",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/runtime/restore-runtime.stderr",
+      "classification": "sealed_evidence",
+      "bytes": 827,
+      "sha256": "c26cc66ef793a8cff0af2d0bee3dd506074da5ae831fb04c862ec3c06bc2b46e",
+      "acceptance": [
+        "AC-17"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-v02-acceptance.UYLZxy/restore-runtime.stderr",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/runtime/restore.json",
+      "classification": "sealed_evidence",
+      "bytes": 3479,
+      "sha256": "a63e9915ba383f9e8dff55980ade380128984af10ac1d01425c8f7ad4eddb576",
+      "acceptance": [
+        "AC-17"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-v02-acceptance.UYLZxy/restore.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/runtime/runtime-source-identity-current.json",
+      "classification": "sealed_evidence",
+      "bytes": 131,
+      "sha256": "01470b55c937298e19a16249469e73155793f2da8598612c39c8ae9a96512fda",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-v02-acceptance.UYLZxy/runtime-source-identity-current.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/runtime/runtime-source-identity.json",
+      "classification": "sealed_evidence",
+      "bytes": 533,
+      "sha256": "4dbb9075ea7cbea02cad3f4742f55bfc6a2cefe440dfba5b78bd16c3c7dd0f59",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-v02-acceptance.UYLZxy/runtime-source-identity.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/runtime/status-readback.json",
+      "classification": "sealed_evidence",
+      "bytes": 1217,
+      "sha256": "fec648013d76a9dabd951733868c5334114ccb8d81865598c5e9ba50ae7e801a",
+      "acceptance": [
+        "AC-16"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-v02-acceptance.UYLZxy/status-readback.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/runtime/teardown.json",
+      "classification": "sealed_evidence",
+      "bytes": 1864,
+      "sha256": "ccdb207fb5f958fb2f1f069b2ab4649d5c48d58d3fc1fe11e90de440a0bcf7c4",
+      "acceptance": [
+        "AC-17",
+        "AC-19"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-v02-acceptance.UYLZxy/teardown.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/runtime/workflow-run2.stderr",
+      "classification": "sealed_evidence",
+      "bytes": 1129,
+      "sha256": "6389c1390f9a0aa739a0f5e3882d9413814b3e8feefc24ee656a636567867283",
+      "acceptance": [
+        "AC-04"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-v02-acceptance.UYLZxy/workflow-run2.stderr",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/runtime/workflow.json",
+      "classification": "sealed_evidence",
+      "bytes": 16647,
+      "sha256": "8867c532470cd851fd35f981968779a030915270d201f9311083912233d921bb",
+      "acceptance": [
+        "AC-01",
+        "AC-04",
+        "AC-05",
+        "AC-08",
+        "AC-10",
+        "AC-13",
+        "AC-18"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-v02-acceptance.UYLZxy/workflow.json",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks/runtime/workflow.stderr",
+      "classification": "sealed_evidence",
+      "bytes": 845,
+      "sha256": "105151675ef396be4621b2c8d7ae13bcb87e9d60f9a7e9fd21a28eb7c63564a9",
+      "acceptance": [
+        "AC-04"
+      ],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": "/private/tmp/arc-v02-acceptance.UYLZxy/workflow.stderr",
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "checks-index.json",
+      "classification": "sealed_evidence",
+      "bytes": 42367,
+      "sha256": "ab2dd8e34659d7c709b802086e599ac9bacfa11040880c72b478f0953804e09d",
+      "acceptance": [],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": null,
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "final-inventory.json",
+      "classification": "sealed_evidence",
+      "bytes": 3744,
+      "sha256": "d5239185437f6c6b5a3999a0b9f8129c6d81431a16ea37087861f3a78583e137",
+      "acceptance": [],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": null,
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "release/ci-baseline/ci-run.json",
+      "classification": "sealed_evidence",
+      "bytes": 7380,
+      "sha256": "d6dc6632533b3017efcd2a1460773dda07830623cbedc92d97172198f0923432",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run40776278359 native readback",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/ci-run.json",
+      "observed_result": "automation_passed_but_CJK_glyphs_missing_in_reviewed_old_screenshots"
+    },
+    {
+      "path": "release/ci-font/arc-unit.xml",
+      "classification": "sealed_evidence",
+      "bytes": 17556,
+      "sha256": "ab8e9d40723f79f0de3d469ae5320c153e852333a2ce15fec2035e98ae0f1083",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run 40817201951 native artifact/readback; gh CLI; internal visual review",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/font-ci/artifacts/unit-verification/arc-unit.xml",
+      "observed_result": "passed; commit85dddfd43fa51abfa53c5291177dda818397139d"
+    },
+    {
+      "path": "release/ci-font/browser-result.json",
+      "classification": "sealed_evidence",
+      "bytes": 17125,
+      "sha256": "881fb5240a44eb258e51827ed3014a0cd150a4ee961643769ba85d0e68c01439",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run 40817201951 native artifact/readback; gh CLI; internal visual review",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/font-ci/artifacts/workflow-browser-verification/browser/result.json",
+      "observed_result": "passed; commit85dddfd43fa51abfa53c5291177dda818397139d"
+    },
+    {
+      "path": "release/ci-font/chinese-browser-font-version.txt",
+      "classification": "sealed_evidence",
+      "bytes": 21,
+      "sha256": "1fd0a5aab5f16129c1a7882b2a442a30e3ad625c79dbe44376881de72c230d80",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run 40817201951 native artifact/readback; gh CLI; internal visual review",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/font-ci/artifacts/workflow-browser-verification/chinese-browser-font-version.txt",
+      "observed_result": "passed; commit85dddfd43fa51abfa53c5291177dda818397139d"
+    },
+    {
+      "path": "release/ci-font/chinese-browser-font.txt",
+      "classification": "sealed_evidence",
+      "bytes": 17,
+      "sha256": "78572185058acad7bd988f2a72e09dfd015a23a9a9f2622a5616fb14941ab725",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run 40817201951 native artifact/readback; gh CLI; internal visual review",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/font-ci/artifacts/workflow-browser-verification/chinese-browser-font.txt",
+      "observed_result": "passed; commit85dddfd43fa51abfa53c5291177dda818397139d"
+    },
+    {
+      "path": "release/ci-font/ci-artifacts.json",
+      "classification": "sealed_evidence",
+      "bytes": 1434,
+      "sha256": "d658f815ed608ff8fdedc578a0c6938b18650f719aaf9a5b0b920ea7332cd09e",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run 40817201951 native artifact/readback; gh CLI; internal visual review",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/font-ci/ci-artifacts.json",
+      "observed_result": "passed; commit85dddfd43fa51abfa53c5291177dda818397139d"
+    },
+    {
+      "path": "release/ci-font/ci-run.json",
+      "classification": "sealed_evidence",
+      "bytes": 7728,
+      "sha256": "1ce718782d9e1012e0f23d608814fc82c10206615c8f01e33cfc67edbd9b605b",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run 40817201951 native artifact/readback; gh CLI; internal visual review",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/font-ci/ci-run.json",
+      "observed_result": "passed; commit85dddfd43fa51abfa53c5291177dda818397139d"
+    },
+    {
+      "path": "release/ci-font/reports-ready-1440-light.png",
+      "classification": "sealed_evidence",
+      "bytes": 218256,
+      "sha256": "77fa3faef3f87406685d54f32b78924fb75b5c9abe348d59b3e957362ca91ff1",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "GitHub Actions native browser screenshot; manually inspected with view_image",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/font-ci/artifacts/workflow-browser-verification/browser/reports-ready-1440-light.png",
+      "observed_result": "passed_internal_visual_review; CJK_text_readable"
+    },
+    {
+      "path": "release/ci-font/reports-ready-390-dark.png",
+      "classification": "sealed_evidence",
+      "bytes": 206390,
+      "sha256": "7db4c32080cf6441d24f5b5f0f83003f658288a61f42e49b43db72a6ca2b7df7",
+      "acceptance": [
+        "AC-15"
+      ],
+      "producer_or_method": "GitHub Actions native browser screenshot; manually inspected with view_image",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/font-ci/artifacts/workflow-browser-verification/browser/reports-ready-390-dark.png",
+      "observed_result": "passed_internal_visual_review; CJK_text_readable"
+    },
+    {
+      "path": "release/ci-font/visual-review.json",
+      "classification": "sealed_evidence",
+      "bytes": 8206,
+      "sha256": "b676a829b670050fa6326840b08ba184b43ac8c260983e70ade14af17492cb5d",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run 40817201951 native artifact/readback; gh CLI; internal visual review",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/font-ci/visual-review.json",
+      "observed_result": "passed; commit85dddfd43fa51abfa53c5291177dda818397139d"
+    },
+    {
+      "path": "release/ci-font/workflow.json",
+      "classification": "sealed_evidence",
+      "bytes": 7093,
+      "sha256": "ae09f2f84ea564a5fecb0eb74a1329f29664658462e04a26f1d826f655003d96",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run 40817201951 native artifact/readback; gh CLI; internal visual review",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/font-ci/artifacts/workflow-browser-verification/workflow.json",
+      "observed_result": "passed; commit85dddfd43fa51abfa53c5291177dda818397139d"
+    },
+    {
+      "path": "release/dependencies/dependency-triage.json",
+      "classification": "sealed_evidence",
+      "bytes": 40477,
+      "sha256": "f4a8083c654170728d1f64bfcb8ea938a29908fe37128b9c07bddd4272d7705c",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "locked-input triage / scripts/scan_release.py license metadata functions",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/dependency-triage.json",
+      "observed_result": "vulnerability_findings_require_triage; metadata_license_inventory_recorded"
+    },
+    {
+      "path": "release/dependencies/inputs.json",
+      "classification": "sealed_evidence",
+      "bytes": 740,
+      "sha256": "6c74ce45bac600718077c6d64ec171a10bcd2baab5d13d102fee32a0fce7d138",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "locked-input triage / scripts/scan_release.py license metadata functions",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/inputs.json",
+      "observed_result": "vulnerability_findings_require_triage; metadata_license_inventory_recorded"
+    },
+    {
+      "path": "release/dependencies/node-audit-all.record.json",
+      "classification": "sealed_evidence",
+      "bytes": 456,
+      "sha256": "0576cc1226ce7f9d0e6e70c29eb2d1ca0e60a73aa52b4b52178301c8ed7bd391",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "npm official registry audit API",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/node-audit-all.record.json",
+      "observed_result": "completed_with_upstream_advisory_matches"
+    },
+    {
+      "path": "release/dependencies/node-audit-all.stderr",
+      "classification": "sealed_evidence",
+      "bytes": 208,
+      "sha256": "3dd7fedf3650828f31bc4fb8fdb5fef5b09af9af69a1536d5b917e21d0260976",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "npm official registry audit API",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/node-audit-all.stderr",
+      "observed_result": "completed_with_upstream_advisory_matches"
+    },
+    {
+      "path": "release/dependencies/node-audit-all.stdout",
+      "classification": "sealed_evidence",
+      "bytes": 16888,
+      "sha256": "f207f32c38dadf702acff923c213656925f345d880fc0ce6b9559693f533c31c",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "npm official registry audit API",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/node-audit-all.stdout",
+      "observed_result": "completed_with_upstream_advisory_matches"
+    },
+    {
+      "path": "release/dependencies/node-audit-runtime.record.json",
+      "classification": "sealed_evidence",
+      "bytes": 482,
+      "sha256": "5a24c035504e05e26677c50f83be5e940b4ca2b89896ca2274474ff99742b48b",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "npm official registry audit API",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/node-audit-runtime.record.json",
+      "observed_result": "completed_with_upstream_advisory_matches"
+    },
+    {
+      "path": "release/dependencies/node-audit-runtime.stderr",
+      "classification": "sealed_evidence",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "npm official registry audit API",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/node-audit-runtime.stderr",
+      "observed_result": "completed_with_upstream_advisory_matches"
+    },
+    {
+      "path": "release/dependencies/node-audit-runtime.stdout",
+      "classification": "sealed_evidence",
+      "bytes": 1211,
+      "sha256": "c0b76a48baddd195a17ce2e60a26e8fa80ffdcd72135d718ab96b013d30e1168",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "npm official registry audit API",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/node-audit-runtime.stdout",
+      "observed_result": "completed_with_upstream_advisory_matches"
+    },
+    {
+      "path": "release/dependencies/node-licenses-current.json",
+      "classification": "sealed_evidence",
+      "bytes": 65742,
+      "sha256": "da3fffac4fe47b8a5c9936f5147f3f7c0b77ba1914ce3f627f9d12477ea36477",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "locked-input triage / scripts/scan_release.py license metadata functions",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/node-licenses-current.json",
+      "observed_result": "vulnerability_findings_require_triage; metadata_license_inventory_recorded"
+    },
+    {
+      "path": "release/dependencies/python-audit.record.json",
+      "classification": "sealed_evidence",
+      "bytes": 752,
+      "sha256": "a01747a6c6524dbe2da711ba99f558baf4846695deed23bf43083ec9694f5f5f",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "pip-audit PyPI/PyPA JSON API",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/python-audit.record.json",
+      "observed_result": "completed_with_upstream_advisory_matches"
+    },
+    {
+      "path": "release/dependencies/python-audit.stderr",
+      "classification": "sealed_evidence",
+      "bytes": 279,
+      "sha256": "198c38d479c4cf2f0e7deb47d97f3a23df29db55291d49de2fac546c27dec565",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "pip-audit PyPI/PyPA JSON API",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/python-audit.stderr",
+      "observed_result": "completed_with_upstream_advisory_matches"
+    },
+    {
+      "path": "release/dependencies/python-audit.stdout",
+      "classification": "sealed_evidence",
+      "bytes": 305445,
+      "sha256": "74ff50942963384e0b35008c1403914c4acfcfbbd1ecf14a9142101b3760c520",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "pip-audit PyPI/PyPA JSON API",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/python-audit.stdout",
+      "observed_result": "completed_with_upstream_advisory_matches"
+    },
+    {
+      "path": "release/dependencies/summary.json",
+      "classification": "sealed_evidence",
+      "bytes": 2687,
+      "sha256": "9aaeee027c3f9724bb008e9a449a1d49a1b6bcd6c39ffead396b273c51862d9d",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "locked-input triage / scripts/scan_release.py license metadata functions",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/summary.json",
+      "observed_result": "vulnerability_findings_require_triage; metadata_license_inventory_recorded"
+    },
+    {
+      "path": "release/final-ci/arc-unit.xml",
+      "classification": "sealed_evidence",
+      "bytes": 17556,
+      "sha256": "934b6289dcdbcf0f194caae07e473e94f0ee3696379819823bee3cf739d7669c",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/artifacts/unit-verification/arc-unit.xml",
+      "observed_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful"
+    },
+    {
+      "path": "release/final-ci/browser-result.json",
+      "classification": "sealed_evidence",
+      "bytes": 17125,
+      "sha256": "af103aa2d34c4b41517edb201860f71dd2d7ac319e2e40c61f4aa4f1a34fd57b",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/artifacts/workflow-browser-verification/browser/result.json",
+      "observed_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful"
+    },
+    {
+      "path": "release/final-ci/chinese-browser-font-version.txt",
+      "classification": "sealed_evidence",
+      "bytes": 21,
+      "sha256": "1fd0a5aab5f16129c1a7882b2a442a30e3ad625c79dbe44376881de72c230d80",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/artifacts/workflow-browser-verification/chinese-browser-font-version.txt",
+      "observed_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful"
+    },
+    {
+      "path": "release/final-ci/chinese-browser-font.txt",
+      "classification": "sealed_evidence",
+      "bytes": 17,
+      "sha256": "78572185058acad7bd988f2a72e09dfd015a23a9a9f2622a5616fb14941ab725",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/artifacts/workflow-browser-verification/chinese-browser-font.txt",
+      "observed_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful"
+    },
+    {
+      "path": "release/final-ci/ci-artifacts.json",
+      "classification": "sealed_evidence",
+      "bytes": 1434,
+      "sha256": "f7db9aaded5973e762bb2f1701559aafd87c7096d700447e28a75508b13f7c73",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/ci-artifacts.json",
+      "observed_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful"
+    },
+    {
+      "path": "release/final-ci/ci-run.json",
+      "classification": "sealed_evidence",
+      "bytes": 7728,
+      "sha256": "859dcf231b5d33c2f8332509144e0595bad1211e86efc4b6825ada38a8ce27c5",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/ci-run.json",
+      "observed_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful"
+    },
+    {
+      "path": "release/final-ci/reports-ready-1440-light.png",
+      "classification": "sealed_evidence",
+      "bytes": 219148,
+      "sha256": "8364d9a8f432f9f00157c9ed98205d4e2778bd4e867cf518dfb028d6fce99f5c",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/artifacts/workflow-browser-verification/browser/reports-ready-1440-light.png",
+      "observed_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful"
+    },
+    {
+      "path": "release/final-ci/reports-ready-390-dark.png",
+      "classification": "sealed_evidence",
+      "bytes": 208049,
+      "sha256": "dd371c90e7f32d52ab9d096babdd9f63cdd173882b2f22621444f6b83d6befe3",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/artifacts/workflow-browser-verification/browser/reports-ready-390-dark.png",
+      "observed_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful"
+    },
+    {
+      "path": "release/final-ci/verify-job-ansi.log",
+      "classification": "sealed_evidence",
+      "bytes": 95896,
+      "sha256": "f1b92838a9082b5c69dd8eb30c426559f59324d3677cff7f38a116d66ba656e5",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/verify-job-ansi.log",
+      "observed_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful"
+    },
+    {
+      "path": "release/final-ci/verify-test-summary.txt",
+      "classification": "sealed_evidence",
+      "bytes": 220,
+      "sha256": "3d64484f467cee16124a207d0b134be3ab36ee4afed92b50e9f84134dffb812a",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/verify-test-summary.txt",
+      "observed_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful"
+    },
+    {
+      "path": "release/final-ci/visual-review.json",
+      "classification": "sealed_evidence",
+      "bytes": 1544,
+      "sha256": "62fe0aaebdcccd40bb5793a30220d8151e95a964e7e3783048a5e554a2e9f1fc",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/visual-review.json",
+      "observed_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful"
+    },
+    {
+      "path": "release/final-ci/workflow.json",
+      "classification": "sealed_evidence",
+      "bytes": 7093,
+      "sha256": "c3cf708f45763df063b807151e5b8c588adb22390b6225e7c537a4918a435c18",
+      "acceptance": [
+        "AC-15",
+        "AC-18"
+      ],
+      "producer_or_method": "GitHub Actions run40819513529 native gh readback/artifact; internal visual review; verify-test-summary strips ANSI and selects native test summary lines",
+      "original_source": "/private/tmp/arc-v02-release.Emuo3s/final-ci/run-40819513529/artifacts/workflow-browser-verification/workflow.json",
+      "observed_result": "passed: final application/test/CI source checkpoint; 128 Python with PostgreSQL and 29 frontend tests; real workflow/browser successful"
+    },
+    {
+      "path": "release/images/api-scout.record.json",
+      "classification": "sealed_evidence",
+      "bytes": 392,
+      "sha256": "de5bef8e9bd4bb5db353a373bb66274a93717f050207ecc876586fbf43c68e9f",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "Docker Scout cves with fresh exact-image SPDX input",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/api-scout.record.json",
+      "observed_result": "blocked_docker_login_required; findings=null"
+    },
+    {
+      "path": "release/images/api-scout.stderr",
+      "classification": "sealed_evidence",
+      "bytes": 433,
+      "sha256": "5c056083dbcb6f456569eeaba8578a4778a879d69d3153982946b99f7f1fac1d",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "Docker Scout cves with fresh exact-image SPDX input",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/api-scout.stderr",
+      "observed_result": "blocked_docker_login_required; findings=null"
+    },
+    {
+      "path": "release/images/api-scout.stdout",
+      "classification": "sealed_evidence",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "Docker Scout cves with fresh exact-image SPDX input",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/api-scout.stdout",
+      "observed_result": "blocked_docker_login_required; findings=null"
+    },
+    {
+      "path": "release/images/api.cdx.json",
+      "classification": "sealed_evidence",
+      "bytes": 96043,
+      "sha256": "1e6cde6514cb575a72fe7ea5dec09fe8f33c693e2b7e50bccfe38d9bede87475",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "fresh current-image package-manager metadata converted by scripts/scan_release.py image_bom",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/api.cdx.json",
+      "observed_result": "inventory_created_for_exact_immutable_image"
+    },
+    {
+      "path": "release/images/api.spdx.json",
+      "classification": "sealed_evidence",
+      "bytes": 96649,
+      "sha256": "07fd2d3078ec09f4b8ccc0b5503e44cf713b6aef2a667dbf9c70fc6a772a115a",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "fresh current-image package-manager metadata converted by scripts/scan_release.py image_bom",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/api.spdx.json",
+      "observed_result": "inventory_created_for_exact_immutable_image"
+    },
+    {
+      "path": "release/images/inventory-summary.json",
+      "classification": "sealed_evidence",
+      "bytes": 6114,
+      "sha256": "0c0610c4efc77b4ffd42513fee97c2a1a92d81c0ac725e69eb429c2578b3c2af",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "fresh read-only no-network package-manager metadata inventory; scripts/scan_release.py functions",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/inventory-summary.json",
+      "observed_result": "current_immutable_image_metadata_recorded; license_unknown_or_review_items_remain"
+    },
+    {
+      "path": "release/images/langflow-scout.record.json",
+      "classification": "sealed_evidence",
+      "bytes": 412,
+      "sha256": "a090382ab4692cac2b24cba36c533c872ad9dd080dfb01956b8fd001d1ffd5a6",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "Docker Scout cves with fresh exact-image SPDX input",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/langflow-scout.record.json",
+      "observed_result": "blocked_docker_login_required; findings=null"
+    },
+    {
+      "path": "release/images/langflow-scout.stderr",
+      "classification": "sealed_evidence",
+      "bytes": 433,
+      "sha256": "5c056083dbcb6f456569eeaba8578a4778a879d69d3153982946b99f7f1fac1d",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "Docker Scout cves with fresh exact-image SPDX input",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/langflow-scout.stderr",
+      "observed_result": "blocked_docker_login_required; findings=null"
+    },
+    {
+      "path": "release/images/langflow-scout.stdout",
+      "classification": "sealed_evidence",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "Docker Scout cves with fresh exact-image SPDX input",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/langflow-scout.stdout",
+      "observed_result": "blocked_docker_login_required; findings=null"
+    },
+    {
+      "path": "release/images/langflow.cdx.json",
+      "classification": "sealed_evidence",
+      "bytes": 509284,
+      "sha256": "5cc3c1c2c244dcd128c603378c9ead990499e7e0ff5d3e06cb2d6ee8bfdf9c30",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "fresh current-image package-manager metadata converted by scripts/scan_release.py image_bom",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/langflow.cdx.json",
+      "observed_result": "inventory_created_for_exact_immutable_image"
+    },
+    {
+      "path": "release/images/langflow.spdx.json",
+      "classification": "sealed_evidence",
+      "bytes": 512635,
+      "sha256": "83bcfa2772f6e3d648752431bee6d22f59bf0ab1b9a43931fd8af5b8a5043c86",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "fresh current-image package-manager metadata converted by scripts/scan_release.py image_bom",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/langflow.spdx.json",
+      "observed_result": "inventory_created_for_exact_immutable_image"
+    },
+    {
+      "path": "release/images/license-summary.json",
+      "classification": "sealed_evidence",
+      "bytes": 1248,
+      "sha256": "d4532527733f1bc37d1f8a2a21ceb78ebfb25852e3afeb0a7f3cd1f5577c2705",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "fresh read-only no-network package-manager metadata inventory; scripts/scan_release.py functions",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/license-summary.json",
+      "observed_result": "current_immutable_image_metadata_recorded; license_unknown_or_review_items_remain"
+    },
+    {
+      "path": "release/images/python-licenses-current.json",
+      "classification": "sealed_evidence",
+      "bytes": 12448,
+      "sha256": "dd3bc1d7d9559d7933d210af0d36551670b4f1033f5be507c155994eef07fac6",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "fresh read-only no-network package-manager metadata inventory; scripts/scan_release.py functions",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/python-licenses-current.json",
+      "observed_result": "current_immutable_image_metadata_recorded; license_unknown_or_review_items_remain"
+    },
+    {
+      "path": "release/images/web-scout.record.json",
+      "classification": "sealed_evidence",
+      "bytes": 392,
+      "sha256": "44288eb4de283105773a4dde1f2e8e26fe329cb4eb2aebc365c3610afa100e8c",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "Docker Scout cves with fresh exact-image SPDX input",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/web-scout.record.json",
+      "observed_result": "blocked_docker_login_required; findings=null"
+    },
+    {
+      "path": "release/images/web-scout.stderr",
+      "classification": "sealed_evidence",
+      "bytes": 433,
+      "sha256": "5c056083dbcb6f456569eeaba8578a4778a879d69d3153982946b99f7f1fac1d",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "Docker Scout cves with fresh exact-image SPDX input",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/web-scout.stderr",
+      "observed_result": "blocked_docker_login_required; findings=null"
+    },
+    {
+      "path": "release/images/web-scout.stdout",
+      "classification": "sealed_evidence",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "Docker Scout cves with fresh exact-image SPDX input",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/web-scout.stdout",
+      "observed_result": "blocked_docker_login_required; findings=null"
+    },
+    {
+      "path": "release/images/web.cdx.json",
+      "classification": "sealed_evidence",
+      "bytes": 44892,
+      "sha256": "b8f00c89ebb34fc58ef7e9cc84355ef87944bbe3a86c308c2877bb050214a135",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "fresh current-image package-manager metadata converted by scripts/scan_release.py image_bom",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/web.cdx.json",
+      "observed_result": "inventory_created_for_exact_immutable_image"
+    },
+    {
+      "path": "release/images/web.spdx.json",
+      "classification": "sealed_evidence",
+      "bytes": 49792,
+      "sha256": "ce2d9317ae6e66daf46f99f6fc8aa3d4a38b5107eb3b60eafb918e2717791cd4",
+      "acceptance": [
+        "AC-19"
+      ],
+      "producer_or_method": "fresh current-image package-manager metadata converted by scripts/scan_release.py image_bom",
+      "original_source": "/private/tmp/arc-v02-scout.t8QHbF/web.spdx.json",
+      "observed_result": "inventory_created_for_exact_immutable_image"
+    },
+    {
+      "path": "release/index.json",
+      "classification": "sealed_evidence",
+      "bytes": 40675,
+      "sha256": "274ccce6ddf5b111bc93906b1835930ff92d20ffffd24ed4bb719d7c46383321",
+      "acceptance": [],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": null,
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    },
+    {
+      "path": "source-inputs.json",
+      "classification": "sealed_evidence",
+      "bytes": 17321,
+      "sha256": "a308f88dbfc3c66af0d38353226a5b28ed5820bd1f4023d5922eeea4d4933c36",
+      "acceptance": [],
+      "producer_or_method": "Actual command/method and original source recorded in selected checks index or embedded result; aggregation uses Python hashlib SHA-256",
+      "original_source": null,
+      "observed_result": "See the acceptance matrix and bound raw result; presence alone is not a pass"
+    }
+  ]
+}

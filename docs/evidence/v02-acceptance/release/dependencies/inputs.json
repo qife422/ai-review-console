@@ -1,0 +1,27 @@
+[
+  {
+    "path": "requirements.lock",
+    "bytes": 1989,
+    "sha256": "3e922f3cd862294cc26dc83d6376415baed2ca8536bbb95a7aa67a475934078e"
+  },
+  {
+    "path": "frontend/package-lock.json",
+    "bytes": 89629,
+    "sha256": "4333ef73332a46fc299d162478978aed269a99952bb88c60f1eed1b43200d96e"
+  },
+  {
+    "path": "frontend/package.json",
+    "bytes": 914,
+    "sha256": "ac221a6e3e73079eb59e2e5cbac09c7982b40b780290ff7c1ab47fe9c974f7e2"
+  },
+  {
+    "path": ".github/workflows/ci.yml",
+    "bytes": 4424,
+    "sha256": "4dc92eb01d757440b7eabe1a786575850b1148e4031f4f4583e8dea69dda8b3c"
+  },
+  {
+    "path": "scripts/scan_release.py",
+    "bytes": 38339,
+    "sha256": "f3f353ff9a50651aa864aa75dbb480da9481dc78aaacaac2b74a90616558ea0c"
+  }
+]

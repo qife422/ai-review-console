@@ -1,0 +1,10 @@
+### Ran Playwright code
+```js
+// Press Enter
+await page.keyboard.press('Enter');
+```
+### Page
+- Page URL: http://127.0.0.1:4183/#case/RC-SKIP-B
+- Page Title: AI Review Console
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-10-29T04-44-36-113Z.yml)

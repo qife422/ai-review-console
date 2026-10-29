@@ -1,0 +1,130 @@
+- generic [ref=e3]:
+  - banner "AI Review Console" [ref=e4]:
+    - link "Skip to main content" [ref=e5] [cursor=pointer]:
+      - /url: "#main-content"
+    - generic [ref=e6]:
+      - generic [ref=e7]: AI
+      - generic [ref=e8]: Review Console
+    - generic [ref=e9]: Built on Langflow
+    - generic [ref=e11]:
+      - button "切换到深色模式" [ref=e13] [cursor=pointer]
+      - tooltip [aria-hidden]
+  - navigation "主导航" [ref=e16]:
+    - list [ref=e17]:
+      - listitem [ref=e18]:
+        - link "总览" [ref=e19] [cursor=pointer]:
+          - /url: "#dashboard"
+      - listitem [ref=e24]:
+        - link "审查队列" [ref=e25] [cursor=pointer]:
+          - /url: "#queue"
+      - listitem [ref=e31]:
+        - link "Langflow 管理" [ref=e32] [cursor=pointer]:
+          - /url: http://localhost:7860
+    - generic [ref=e37]:
+      - strong [ref=e38]: SYNTHETIC
+      - generic [ref=e39]: 仅使用虚构演示数据
+      - generic [ref=e40]: 演示身份：demo-reviewer
+  - main [ref=e41]:
+    - button "返回审查队列" [ref=e42] [cursor=pointer]
+    - generic [ref=e45]:
+      - generic [ref=e46]:
+        - text: RC-SKIP-B
+        - heading "虚构键盘焦点验证 B" [active] [level=1] [ref=e47]
+        - generic [ref=e48]:
+          - generic "待人工审批" [ref=e50]
+          - generic [ref=e51]: 高风险
+      - generic [ref=e53]:
+        - button "刷新状态" [ref=e54] [cursor=pointer]
+        - button "记录决定" [ref=e55] [cursor=pointer]
+    - generic [ref=e58]:
+      - strong [ref=e59]: 历史种子演示
+      - generic [ref=e60]: 示例字段不能作为真实 Langflow 执行证据。
+    - generic [ref=e61]:
+      - generic [ref=e62]:
+        - generic [ref=e63]: 规则风险分数
+        - strong [ref=e64]: "57"
+        - generic [ref=e65]: / 100，辅助审查指标
+      - generic [ref=e66]:
+        - generic [ref=e67]: 负责人
+        - strong [ref=e68]: 林澈
+        - generic [ref=e69]: 1 个脱敏命中
+      - generic [ref=e70]:
+        - generic [ref=e71]: 规则版本
+        - strong [ref=e72]: 2026.09-demo.1
+        - generic [ref=e73]: 确定性规则，未调用语义模型
+      - generic [ref=e74]:
+        - generic [ref=e75]: Langflow 运行
+        - strong [ref=e76]: 历史演示结果
+        - generic [ref=e77]: 不表示工作流已完成
+    - generic [ref=e78]:
+      - generic [ref=e79]:
+        - generic [ref=e80]:
+          - heading "文档处理" [level=2] [ref=e81]
+          - generic "审查结果已保存" [ref=e83]
+        - paragraph [ref=e84]: 历史虚构种子案例，结果用于演示；不表示已执行真实 Intake Flow。
+      - generic [ref=e85]:
+        - generic [ref=e86]:
+          - heading "人工决定" [level=2] [ref=e87]
+          - generic "待人工审批" [ref=e89]
+        - paragraph [ref=e90]: 已保存规则结果，请核验文档对照与风险证据后记录决定。零分案件同样需要人工决定。
+        - generic [ref=e91]: 演示身份：demo-reviewer
+        - generic [ref=e92]:
+          - term [ref=e93]: 当前文档版本
+          - definition [ref=e94]: version-1
+    - generic [ref=e95]:
+      - generic [ref=e96]:
+        - heading "报告生成" [level=2] [ref=e97]
+        - generic "等待人工决定" [ref=e99]
+      - paragraph [ref=e100]: 人工决定记录后，系统才会生成该版本的决定报告。
+      - generic [ref=e101]:
+        - generic [ref=e102]:
+          - generic [ref=e103]:
+            - strong [ref=e104]: JSON
+            - generic "未开放" [ref=e106]
+          - generic [ref=e107]: 尚无可下载产物
+          - button "下载 JSON" [disabled] [ref=e108]
+        - generic [ref=e109]:
+          - generic [ref=e110]:
+            - strong [ref=e111]: HTML
+            - generic "未开放" [ref=e113]
+          - generic [ref=e114]: 尚无可下载产物
+          - button "下载 HTML" [disabled] [ref=e115]
+        - generic [ref=e116]:
+          - generic [ref=e117]:
+            - strong [ref=e118]: PDF
+            - generic "未开放" [ref=e120]
+          - generic [ref=e121]: 尚无可下载产物
+          - button "下载 PDF" [disabled] [ref=e122]
+    - generic [ref=e123]:
+      - tablist "案件详情栏目" [ref=e125]:
+        - tab "规则发现" [selected] [ref=e126] [cursor=pointer]
+        - button [aria-hidden] [ref=e130]
+        - tab "文档对照" [ref=e133] [cursor=pointer]
+        - button [aria-hidden] [ref=e137]
+        - tab "审计记录" [ref=e140] [cursor=pointer]
+        - button [aria-hidden] [ref=e144]
+        - tab "文档来源" [ref=e147] [cursor=pointer]
+        - button [aria-hidden] [ref=e151]
+      - tabpanel "规则发现" [ref=e154]:
+        - generic [ref=e155]:
+          - generic [ref=e157]:
+            - generic [ref=e158]:
+              - generic [ref=e159]:
+                - generic [ref=e160]:
+                  - button "Copy to clipboard" [ref=e162] [cursor=pointer]:
+                    - code [ref=e163]: LEGAL-002
+                  - tooltip [aria-hidden]
+                - heading "责任上限缺失" [level=3] [ref=e164]
+              - generic [ref=e165]: 严重风险
+            - blockquote [ref=e167]: 承担全部损失。
+            - paragraph [ref=e168]: 补充责任上限。
+            - button "查看证据：block:1" [ref=e169] [cursor=pointer]
+          - generic [ref=e170]:
+            - heading "维度规则指标" [level=2] [ref=e171]
+            - paragraph [ref=e172]: 规则点数的派生指标，不是风险概率。
+            - generic [ref=e173]:
+              - generic [ref=e174]: 法律条款
+              - generic [ref=e175]: "84"
+  - contentinfo [ref=e176]:
+    - generic [ref=e177]: 仅使用虚构数据。演示身份：demo-reviewer。不构成法律意见。
+    - generic [ref=e178]: 基于 Langflow / Built on Langflow

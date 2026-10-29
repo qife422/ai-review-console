@@ -1,0 +1,2904 @@
+{
+  "generated_at": "2026-10-29T04:18:37.310493+00:00",
+  "method": "metadata identifier inventory; conservative text matching",
+  "legal_conclusion": "none; unknown/restricted metadata requires distribution review",
+  "summary": {
+    "recorded": 241,
+    "unknown": 0,
+    "review_required_copyleft_or_restricted_match": 0
+  },
+  "packages": [
+    {
+      "name": "@adobe/css-tools",
+      "version": "4.5.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@asamuzakjp/css-color",
+      "version": "5.1.11",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@asamuzakjp/dom-selector",
+      "version": "7.1.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@asamuzakjp/generational-cache",
+      "version": "1.0.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@asamuzakjp/nwsapi",
+      "version": "2.3.9",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@babel/code-frame",
+      "version": "7.29.7",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@babel/helper-validator-identifier",
+      "version": "7.29.7",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@babel/runtime",
+      "version": "8.0.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@bramus/specificity",
+      "version": "2.4.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@carbon/colors",
+      "version": "11.57.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@carbon/feature-flags",
+      "version": "1.8.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@carbon/icon-helpers",
+      "version": "10.81.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@carbon/icons-react",
+      "version": "11.87.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@carbon/layout",
+      "version": "11.58.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@carbon/motion",
+      "version": "11.51.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@carbon/react",
+      "version": "1.115.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@carbon/styles",
+      "version": "1.114.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@carbon/grid",
+      "version": "11.61.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@carbon/type",
+      "version": "11.66.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@carbon/themes",
+      "version": "11.80.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@carbon/grid",
+      "version": "11.61.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@carbon/type",
+      "version": "11.66.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@carbon/utilities",
+      "version": "0.25.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@csstools/color-helpers",
+      "version": "6.1.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT-0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@csstools/css-calc",
+      "version": "3.3.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@csstools/css-color-parser",
+      "version": "4.2.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@csstools/css-parser-algorithms",
+      "version": "4.0.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@csstools/css-syntax-patches-for-csstree",
+      "version": "1.1.12",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT-0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@csstools/css-tokenizer",
+      "version": "4.0.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@exodus/bytes",
+      "version": "1.15.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@floating-ui/core",
+      "version": "1.8.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@floating-ui/dom",
+      "version": "1.8.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@floating-ui/react",
+      "version": "0.27.20",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@floating-ui/react-dom",
+      "version": "2.1.9",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@floating-ui/utils",
+      "version": "0.2.12",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@ibm/plex",
+      "version": "6.4.1",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "OFL-1.1"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@ibm/plex-mono",
+      "version": "2.5.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "OFL-1.1"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@ibm/plex-sans",
+      "version": "1.1.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "OFL-1.1"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@ibm/plex-sans-arabic",
+      "version": "1.1.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "OFL-1.1"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@ibm/plex-sans-devanagari",
+      "version": "1.1.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "OFL-1.1"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@ibm/plex-sans-hebrew",
+      "version": "1.1.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "OFL-1.1"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@ibm/plex-sans-thai",
+      "version": "1.1.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "OFL-1.1"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@ibm/plex-sans-thai-looped",
+      "version": "1.1.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "OFL-1.1"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@ibm/plex-serif",
+      "version": "2.0.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "OFL-1.1"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@ibm/telemetry-js",
+      "version": "1.11.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@internationalized/number",
+      "version": "3.6.7",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@jridgewell/sourcemap-codec",
+      "version": "1.6.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@oxc-project/types",
+      "version": "0.147.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@parcel/watcher",
+      "version": "2.6.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@parcel/watcher-darwin-arm64",
+      "version": "2.6.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@parcel/watcher-android-arm64",
+      "version": "2.6.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@parcel/watcher-darwin-x64",
+      "version": "2.6.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@parcel/watcher-freebsd-x64",
+      "version": "2.6.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@parcel/watcher-linux-arm-glibc",
+      "version": "2.6.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@parcel/watcher-linux-arm-musl",
+      "version": "2.6.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@parcel/watcher-linux-arm64-glibc",
+      "version": "2.6.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@parcel/watcher-linux-arm64-musl",
+      "version": "2.6.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@parcel/watcher-linux-x64-glibc",
+      "version": "2.6.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@parcel/watcher-linux-x64-musl",
+      "version": "2.6.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@parcel/watcher-win32-arm64",
+      "version": "2.6.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@parcel/watcher-win32-x64",
+      "version": "2.6.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@rolldown/binding-darwin-arm64",
+      "version": "1.2.6",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@rolldown/pluginutils",
+      "version": "1.0.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@standard-schema/spec",
+      "version": "1.1.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@swc/helpers",
+      "version": "0.5.23",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@testing-library/dom",
+      "version": "10.4.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@babel/runtime",
+      "version": "7.29.7",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@testing-library/jest-dom",
+      "version": "7.0.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "dom-accessibility-api",
+      "version": "0.6.3",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@testing-library/react",
+      "version": "16.3.3",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@babel/runtime",
+      "version": "7.29.7",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@types/aria-query",
+      "version": "5.0.4",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@types/chai",
+      "version": "5.2.3",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@types/deep-eql",
+      "version": "4.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@types/estree",
+      "version": "1.0.9",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@types/react",
+      "version": "19.2.14",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@types/react-dom",
+      "version": "19.2.3",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@typescript/typescript-darwin-arm64",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@vitejs/plugin-react",
+      "version": "6.1.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@vitest/expect",
+      "version": "4.1.11",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@vitest/mocker",
+      "version": "4.1.11",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@vitest/pretty-format",
+      "version": "4.1.11",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@vitest/runner",
+      "version": "4.1.11",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@vitest/snapshot",
+      "version": "4.1.11",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@vitest/spy",
+      "version": "4.1.11",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@vitest/utils",
+      "version": "4.1.11",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "ansi-regex",
+      "version": "5.0.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "ansi-styles",
+      "version": "5.2.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "aria-query",
+      "version": "5.3.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "assertion-error",
+      "version": "2.0.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "bidi-js",
+      "version": "1.0.3",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "chai",
+      "version": "6.2.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "chokidar",
+      "version": "4.0.3",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "classnames",
+      "version": "2.5.1",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "color",
+      "version": "4.2.3",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "color-convert",
+      "version": "2.0.1",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "color-name",
+      "version": "1.1.4",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "color-string",
+      "version": "1.9.1",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "compute-scroll-into-view",
+      "version": "3.1.1",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "convert-source-map",
+      "version": "2.0.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "copy-to-clipboard",
+      "version": "4.0.2",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "css-tree",
+      "version": "3.2.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "css.escape",
+      "version": "1.5.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "csstype",
+      "version": "3.2.3",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "data-urls",
+      "version": "7.0.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "decimal.js",
+      "version": "10.6.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "dequal",
+      "version": "2.0.3",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "detect-libc",
+      "version": "2.1.2",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "dom-accessibility-api",
+      "version": "0.5.16",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "downshift",
+      "version": "9.4.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@babel/runtime",
+      "version": "7.29.7",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "react-is",
+      "version": "18.3.1",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "entities",
+      "version": "8.0.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "BSD-2-Clause"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "es-module-lexer",
+      "version": "2.3.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "es-toolkit",
+      "version": "1.52.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "estree-walker",
+      "version": "3.0.3",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "expect-type",
+      "version": "1.4.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "fdir",
+      "version": "6.5.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "flatpickr",
+      "version": "4.6.13",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "framer-motion",
+      "version": "13.1.1",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "fsevents",
+      "version": "2.3.3",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "html-encoding-sniffer",
+      "version": "6.0.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "immutable",
+      "version": "5.1.9",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "indent-string",
+      "version": "4.0.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "invariant",
+      "version": "2.2.4",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "is-arrayish",
+      "version": "0.3.4",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "is-extglob",
+      "version": "2.1.1",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "is-glob",
+      "version": "4.0.3",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "is-potential-custom-element-name",
+      "version": "1.0.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "js-tokens",
+      "version": "4.0.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "jsdom",
+      "version": "29.1.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "lightningcss",
+      "version": "1.33.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MPL-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "lightningcss-darwin-arm64",
+      "version": "1.33.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MPL-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "lightningcss-android-arm64",
+      "version": "1.33.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MPL-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "lightningcss-darwin-x64",
+      "version": "1.33.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MPL-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "lightningcss-freebsd-x64",
+      "version": "1.33.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MPL-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "lightningcss-linux-arm-gnueabihf",
+      "version": "1.33.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MPL-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "lightningcss-linux-arm64-gnu",
+      "version": "1.33.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MPL-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "lightningcss-linux-arm64-musl",
+      "version": "1.33.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MPL-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "lightningcss-linux-x64-gnu",
+      "version": "1.33.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MPL-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "lightningcss-linux-x64-musl",
+      "version": "1.33.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MPL-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "lightningcss-win32-arm64-msvc",
+      "version": "1.33.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MPL-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "lightningcss-win32-x64-msvc",
+      "version": "1.33.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MPL-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "loose-envify",
+      "version": "1.4.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "lru-cache",
+      "version": "11.5.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "BlueOak-1.0.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "lz-string",
+      "version": "1.5.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "magic-string",
+      "version": "0.30.21",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "mdn-data",
+      "version": "2.27.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "CC0-1.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "min-indent",
+      "version": "1.0.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "motion",
+      "version": "13.1.1",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "motion-dom",
+      "version": "13.1.1",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "motion-utils",
+      "version": "13.0.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "nanoid",
+      "version": "3.3.18",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "node-addon-api",
+      "version": "7.1.1",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "object-assign",
+      "version": "4.1.1",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "obug",
+      "version": "2.1.4",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "parse5",
+      "version": "8.0.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "pathe",
+      "version": "2.0.3",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "picocolors",
+      "version": "1.1.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "ISC"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "picomatch",
+      "version": "4.0.7",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "postcss",
+      "version": "8.5.26",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "pretty-format",
+      "version": "27.5.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "react-is",
+      "version": "17.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "prop-types",
+      "version": "15.8.1",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "react-is",
+      "version": "16.13.1",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "punycode",
+      "version": "2.3.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "react",
+      "version": "19.2.8",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "react-dom",
+      "version": "19.2.8",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "react-fast-compare",
+      "version": "3.2.2",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "react-is",
+      "version": "19.2.8",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "readdirp",
+      "version": "4.1.2",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "redent",
+      "version": "3.0.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "require-from-string",
+      "version": "2.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "rolldown",
+      "version": "1.2.6",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@rolldown/binding-android-arm-eabi",
+      "version": "1.2.6",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@rolldown/binding-android-arm64",
+      "version": "1.2.6",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@rolldown/binding-darwin-x64",
+      "version": "1.2.6",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@rolldown/binding-freebsd-x64",
+      "version": "1.2.6",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@rolldown/binding-linux-arm-gnueabihf",
+      "version": "1.2.6",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@rolldown/binding-linux-arm64-gnu",
+      "version": "1.2.6",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@rolldown/binding-linux-arm64-musl",
+      "version": "1.2.6",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@rolldown/binding-linux-ppc64-gnu",
+      "version": "1.2.6",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@rolldown/binding-linux-s390x-gnu",
+      "version": "1.2.6",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@rolldown/binding-linux-x64-gnu",
+      "version": "1.2.6",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@rolldown/binding-linux-x64-musl",
+      "version": "1.2.6",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@rolldown/binding-openharmony-arm64",
+      "version": "1.2.6",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@rolldown/binding-win32-arm64-msvc",
+      "version": "1.2.6",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@rolldown/binding-win32-x64-msvc",
+      "version": "1.2.6",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "sass",
+      "version": "1.92.1",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "saxes",
+      "version": "6.0.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "ISC"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.27.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "siginfo",
+      "version": "2.0.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "ISC"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "simple-swizzle",
+      "version": "0.2.4",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "source-map-js",
+      "version": "1.2.1",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "stackback",
+      "version": "0.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "std-env",
+      "version": "4.2.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "strip-indent",
+      "version": "3.0.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "symbol-tree",
+      "version": "3.2.4",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "tabbable",
+      "version": "6.5.0",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "temporal-polyfill",
+      "version": "1.0.4",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "temporal-spec",
+      "version": "1.0.1",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "temporal-utils",
+      "version": "1.0.2",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "tinybench",
+      "version": "2.9.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "tinyexec",
+      "version": "1.3.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "tinyglobby",
+      "version": "0.2.17",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "tinyrainbow",
+      "version": "3.1.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "tldts",
+      "version": "7.4.11",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "tldts-core",
+      "version": "7.4.11",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "tough-cookie",
+      "version": "6.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "tr46",
+      "version": "6.0.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "tslib",
+      "version": "2.8.1",
+      "dev": false,
+      "license": {
+        "identifiers": [
+          "0BSD"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "typescript",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@typescript/typescript-aix-ppc64",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@typescript/typescript-darwin-x64",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@typescript/typescript-freebsd-arm64",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@typescript/typescript-freebsd-x64",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@typescript/typescript-linux-arm",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@typescript/typescript-linux-arm64",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@typescript/typescript-linux-loong64",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@typescript/typescript-linux-mips64el",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@typescript/typescript-linux-ppc64",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@typescript/typescript-linux-riscv64",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@typescript/typescript-linux-s390x",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@typescript/typescript-linux-x64",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@typescript/typescript-netbsd-arm64",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@typescript/typescript-netbsd-x64",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@typescript/typescript-openbsd-arm64",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@typescript/typescript-openbsd-x64",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@typescript/typescript-sunos-x64",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@typescript/typescript-win32-arm64",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "@typescript/typescript-win32-x64",
+      "version": "7.0.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "undici",
+      "version": "7.29.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "vite",
+      "version": "8.2.2",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "vitest",
+      "version": "4.1.11",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "w3c-xmlserializer",
+      "version": "5.0.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "webidl-conversions",
+      "version": "8.0.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "BSD-2-Clause"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "whatwg-mimetype",
+      "version": "5.0.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "whatwg-url",
+      "version": "16.0.1",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "why-is-node-running",
+      "version": "2.3.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "xml-name-validator",
+      "version": "5.0.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "xmlchars",
+      "version": "2.2.0",
+      "dev": true,
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "frontend/package-lock.json license field"
+      },
+      "license_check": "recorded"
+    }
+  ]
+}

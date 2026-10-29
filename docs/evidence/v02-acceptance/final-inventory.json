@@ -1,0 +1,123 @@
+{
+  "checked_at": "2026-10-29T04:54:04.058883+00:00",
+  "cache": [
+    {
+      "root": ".venv",
+      "files": 9467,
+      "reported_bytes": 270681203,
+      "method": "os.walk without following directory symlinks; lstat bytes"
+    },
+    {
+      "root": "frontend/node_modules",
+      "files": 36045,
+      "reported_bytes": 380011278,
+      "method": "os.walk without following directory symlinks; lstat bytes"
+    },
+    {
+      "root": "frontend/dist",
+      "files": 94,
+      "reported_bytes": 2839030,
+      "method": "os.walk without following directory symlinks; lstat bytes"
+    },
+    {
+      "root": "online-demo",
+      "files": 516,
+      "reported_bytes": 13205331,
+      "method": "os.walk without following directory symlinks; lstat bytes"
+    }
+  ],
+  "temporary": [
+    {
+      "root": "/private/tmp/arc-v02-acceptance.UYLZxy",
+      "bytes": 6716219,
+      "files": 217,
+      "disposition": "retain; cleanup not authorized"
+    },
+    {
+      "root": "/private/tmp/arc-v02-release.Emuo3s",
+      "bytes": 15690442,
+      "files": 243,
+      "disposition": "retain; cleanup not authorized"
+    },
+    {
+      "root": "/private/tmp/arc-v02-scout.t8QHbF",
+      "bytes": 2766072,
+      "files": 40,
+      "disposition": "retain; cleanup not authorized"
+    },
+    {
+      "root": "/private/tmp/arc-v02-auth-recheck.a2puEa",
+      "bytes": 3468,
+      "files": 3,
+      "disposition": "retain; cleanup not authorized"
+    },
+    {
+      "root": "/private/tmp/arc-restore-runtime.N25J1M",
+      "bytes": 13850,
+      "files": 17,
+      "disposition": "retain; cleanup not authorized"
+    },
+    {
+      "root": "/private/tmp/arc-restore-runtime.dFa60B",
+      "bytes": 75722,
+      "files": 22,
+      "disposition": "retain; cleanup not authorized"
+    },
+    {
+      "root": "/private/tmp/arc-report-retry-D6KKKO",
+      "bytes": 7729,
+      "files": 1,
+      "disposition": "retain; cleanup not authorized"
+    },
+    {
+      "root": "/private/tmp/arc-report-retry-pDaMDE",
+      "bytes": 128219,
+      "files": 9,
+      "disposition": "retain; cleanup not authorized"
+    },
+    {
+      "root": "/private/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm",
+      "bytes": 2047014,
+      "files": 106,
+      "disposition": "retain; cleanup not authorized"
+    }
+  ],
+  "cache_bytes": 666736842,
+  "cache_files": 46122,
+  "temporary_bytes": 27448735,
+  "temporary_files": 658,
+  "cleanup_authorized": false,
+  "source_author_baseline_bytes": 638871,
+  "protected_sqlite_sha256": "980ad5d23d866a52e4101966594e5a24ee67edef08475afc63ff9c3e1f6fca1f",
+  "docker_attribution_limit": "Earlier runtime inventory retained. Five historical image IDs unresolved; do not infer complete project physical size from global Docker totals.",
+  "runtime_storage": {
+    "/documents": {
+      "files": 63,
+      "bytes": 42102498
+    },
+    "/reports": {
+      "files": 33,
+      "bytes": 568953
+    }
+  },
+  "runtime_inventory_command": [
+    "docker",
+    "run",
+    "--name",
+    "arc-v02-storage-inventory",
+    "--network",
+    "none",
+    "--read-only",
+    "--cap-drop",
+    "ALL",
+    "--mount",
+    "type=volume,source=ai-review-console-upgrade_source-documents,target=/documents,readonly,volume-nocopy",
+    "--mount",
+    "type=volume,source=ai-review-console-upgrade_report-artifacts,target=/reports,readonly,volume-nocopy",
+    "--entrypoint",
+    "python",
+    "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+    "-c",
+    "import json,pathlib; result={};\nfor name in [\"/documents\",\"/reports\"]:\n paths=[p for p in pathlib.Path(name).rglob(\"*\") if p.is_file()];result[name]={\"files\":len(paths),\"bytes\":sum(p.stat().st_size for p in paths)}\nprint(json.dumps(result))"
+  ]
+}

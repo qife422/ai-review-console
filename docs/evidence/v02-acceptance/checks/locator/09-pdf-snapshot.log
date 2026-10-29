@@ -1,0 +1,161 @@
+### Page
+- Page URL: http://127.0.0.1:8080/#case/RC-98aacae843754218bfe76ffba1a2a0b0
+- Page Title: AI Review Console
+### Snapshot
+```yaml
+- generic [ref=e3]:
+  - banner "AI Review Console" [ref=e4]:
+    - link "Skip to main content" [ref=e5] [cursor=pointer]:
+      - /url: "#main-content"
+    - generic [ref=e6]:
+      - generic [ref=e7]: AI
+      - generic [ref=e8]: Review Console
+    - generic [ref=e9]: Built on Langflow
+    - generic [ref=e11]:
+      - button "切换到深色模式" [ref=e13] [cursor=pointer]
+      - tooltip [aria-hidden]
+  - navigation "主导航" [ref=e16]:
+    - list [ref=e17]:
+      - listitem [ref=e18]:
+        - link "总览" [ref=e19] [cursor=pointer]:
+          - /url: "#dashboard"
+      - listitem [ref=e24]:
+        - link "审查队列" [ref=e25] [cursor=pointer]:
+          - /url: "#queue"
+      - listitem [ref=e31]:
+        - link "Langflow 管理" [ref=e32] [cursor=pointer]:
+          - /url: http://localhost:7860
+    - generic [ref=e37]:
+      - strong [ref=e38]: SYNTHETIC
+      - generic [ref=e39]: 仅使用虚构演示数据
+      - generic [ref=e40]: 演示身份：demo-reviewer
+  - main [ref=e41]:
+    - button "返回审查队列" [ref=e47] [cursor=pointer]
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - text: RC-5f3e993cc1b54903a06ee1dcef7a0ecc
+        - heading "真实工作流虚构验证 rejected" [level=1] [ref=e52]
+        - generic [ref=e53]:
+          - generic "已驳回" [ref=e55]
+          - generic [ref=e56]: 中风险
+      - generic [ref=e58]:
+        - button "刷新状态" [ref=e59] [cursor=pointer]
+        - button "记录决定" [disabled] [ref=e60]
+    - generic [ref=e63]:
+      - strong [ref=e64]: 新增虚构文档
+      - generic [ref=e65]: 实际工作流完成且结果入库后，才允许人工决定。
+    - generic [ref=e66]:
+      - generic [ref=e67]:
+        - generic [ref=e68]: 规则风险分数
+        - strong [ref=e69]: "35"
+        - generic [ref=e70]: / 100，辅助审查指标
+      - generic [ref=e71]:
+        - generic [ref=e72]: 负责人
+        - strong [ref=e73]: 演示提交者
+        - generic [ref=e74]: 0 个脱敏命中
+      - generic [ref=e75]:
+        - generic [ref=e76]: 规则版本
+        - strong [ref=e77]: 2026.10.1
+        - generic [ref=e78]: 确定性规则，未调用语义模型
+      - generic [ref=e79]:
+        - generic [ref=e80]: Langflow 运行
+        - strong [ref=e81]: f027d5e8-0d54-4aeb-8b0d-4af54f72186d
+        - generic [ref=e82]: 真实上游运行记录
+    - generic [ref=e83]:
+      - generic [ref=e84]:
+        - generic [ref=e85]:
+          - heading "文档处理" [level=2] [ref=e86]
+          - generic "已保存结果" [ref=e88]
+        - paragraph [ref=e89]: 解析、脱敏和规则评估已持久化，等待或保留人工决定。
+        - status [ref=e90]:
+          - generic [ref=e91]: 已保存结果
+          - generic [ref=e92]: 第 1 次执行
+        - group [ref=e93]:
+          - generic "任务运行记录" [ref=e94] [cursor=pointer]
+      - generic [ref=e95]:
+        - generic [ref=e96]:
+          - heading "人工决定" [level=2] [ref=e97]
+          - generic "已驳回" [ref=e99]
+        - paragraph [ref=e100]: 驳回
+        - paragraph [ref=e101]: 虚构验证完成：审查员依据规则证据记录rejected，并核对中文报告。
+        - generic [ref=e102]: synthetic-flow-validator，2026年10月28日 21:20
+        - paragraph [ref=e103]: 决定已绑定该次文档和评估，不能原地覆盖。
+        - generic [ref=e104]:
+          - term [ref=e105]: 当前文档版本
+          - definition [ref=e106]: DV-7572577550204dc8a690f828b56d456f
+    - generic [ref=e107]:
+      - generic [ref=e108]:
+        - heading "报告生成" [level=2] [ref=e109]
+        - generic "三种格式均可下载" [ref=e111]
+      - paragraph [ref=e112]: 人工决定已保存。报告通过 Decision Flow 独立生成，失败不会改变决定。
+      - generic [ref=e113]:
+        - generic [ref=e114]:
+          - generic [ref=e115]:
+            - strong [ref=e116]: JSON
+            - generic "可下载" [ref=e118]
+          - generic [ref=e119]: 3.5 KiB，2026年10月28日 21:20
+          - button "下载 JSON" [ref=e121] [cursor=pointer]
+          - group [ref=e125]:
+            - generic "文件指纹" [ref=e126] [cursor=pointer]
+        - generic [ref=e127]:
+          - generic [ref=e128]:
+            - strong [ref=e129]: HTML
+            - generic "可下载" [ref=e131]
+          - generic [ref=e132]: 8.4 KiB，2026年10月28日 21:20
+          - button "下载 HTML" [ref=e134] [cursor=pointer]
+          - group [ref=e138]:
+            - generic "文件指纹" [ref=e139] [cursor=pointer]
+        - generic [ref=e140]:
+          - generic [ref=e141]:
+            - strong [ref=e142]: PDF
+            - generic "可下载" [ref=e144]
+          - generic [ref=e145]: 39.8 KiB，2026年10月28日 21:20
+          - button "下载 PDF" [ref=e147] [cursor=pointer]
+          - group [ref=e151]:
+            - generic "文件指纹" [ref=e152] [cursor=pointer]
+    - generic [ref=e153]:
+      - tablist "案件详情栏目" [ref=e155]:
+        - tab "规则发现" [ref=e156] [cursor=pointer]
+        - button [aria-hidden] [ref=e160]
+        - tab "文档对照" [selected] [ref=e163] [cursor=pointer]
+        - button [aria-hidden] [ref=e167]
+        - tab "审计记录" [ref=e170] [cursor=pointer]
+        - button [aria-hidden] [ref=e174]
+        - tab "文档来源" [ref=e177] [cursor=pointer]
+        - button [aria-hidden] [ref=e181]
+      - tabpanel "文档对照" [ref=e231]:
+        - generic [ref=e232]:
+          - generic [ref=e233]:
+            - heading "原始虚构文档" [level=2] [ref=e234]
+            - generic [ref=e235]:
+              - generic [ref=e236]:
+                - text: paragraph:1
+                - generic [ref=e237]: SYNTHETIC DEMO DOCUMENT
+              - generic [ref=e238]:
+                - text: paragraph:2
+                - generic [ref=e239]: Built on Langflow
+              - generic [ref=e240]:
+                - text: paragraph:3
+                - generic [ref=e241]: 执行验证 ed5e22f3231c4a239ace74e006e2239a
+              - generic [ref=e242]:
+                - text: table:1/row:1/cell:1
+                - generic [ref=e243]: 客户预付款90%，服务方可单方变更结算规则。
+          - generic [ref=e244]:
+            - heading "脱敏后文本" [level=2] [ref=e245]
+            - generic [ref=e246]:
+              - generic [ref=e247]:
+                - text: paragraph:1
+                - generic [ref=e248]: SYNTHETIC DEMO DOCUMENT
+              - generic [ref=e249]:
+                - text: paragraph:2
+                - generic [ref=e250]: Built on Langflow
+              - generic [ref=e251]:
+                - text: paragraph:3
+                - generic [ref=e252]: 执行验证 ed5e22f3231c4a239ace74e006e2239a
+              - generic [active] [ref=e253]:
+                - text: table:1/row:1/cell:1
+                - generic [ref=e254]: 客户预付款90%，服务方可单方变更结算规则。
+  - contentinfo [ref=e44]:
+    - generic [ref=e45]: 仅使用虚构数据。演示身份：demo-reviewer。不构成法律意见。
+    - generic [ref=e46]: 基于 Langflow / Built on Langflow
+```

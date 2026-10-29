@@ -1,0 +1,214 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "AC-14"
+  ],
+  "producer": "scripts/verify_report_retry.py",
+  "producer_sha256": "2bbd3e93ed4e82f476b2cf435bf04a1b1583f6b0fd55d710198ee38d96c88a01",
+  "spec_sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753",
+  "started_at": "2026-10-29T04:31:57.230838+00:00",
+  "project": "ai-review-console-upgrade",
+  "api": "http://127.0.0.1:8000",
+  "case_limit": 1,
+  "result": "failed",
+  "restoration": {
+    "required": false
+  },
+  "retention": "Synthetic case, reports and temporary proof retained; no cleanup.",
+  "limitations": "Only missing-font PDF failure and failed-format manual retry are covered.",
+  "git_head": "85dddfd43fa51abfa53c5291177dda818397139d",
+  "error": {
+    "type": "RuntimeError",
+    "detail": "database-counts failed with exit code 1"
+  },
+  "ended_at": "2026-10-29T04:31:58.331422+00:00",
+  "commands": [
+    {
+      "label": "git-head",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "started_at": "2026-10-29T04:31:57.231097+00:00",
+      "ended_at": "2026-10-29T04:31:57.241664+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "6f5e3c0fe669132dfa0e1695b6b451203ca19a4a6d2698aa32d451a8e4b66b5c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:31:57.241718+00:00",
+      "ended_at": "2026-10-29T04:31:57.577395+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "b3fff6c8b505e1cba6bbf0e2810d0e9c9e36d50d58707056c24c0cbf13d61960",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "4be5695624a1d87723653647478f120773bec9c57d82532509c3330a0bd1c878"
+      ],
+      "started_at": "2026-10-29T04:31:57.577450+00:00",
+      "ended_at": "2026-10-29T04:31:57.598042+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "2e0fa578ce1fde37f2f6b4a534c7eabe258a18b2e23ff2380fd23f237d398ef9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "compose-config",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "config",
+        "--format",
+        "json"
+      ],
+      "started_at": "2026-10-29T04:31:57.598274+00:00",
+      "ended_at": "2026-10-29T04:31:57.666259+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "647d6b2d2a865e917a8f4e425846cf2a2d9edcf98ecf6d10b48716ba8beee22e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "local-image-id",
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "--format",
+        "{{.Id}}",
+        "ai-review-console-langflow:latest"
+      ],
+      "started_at": "2026-10-29T04:31:57.666409+00:00",
+      "ended_at": "2026-10-29T04:31:57.698495+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "165b3ddc6f54d57bd9859bd15025a90a6d8bf5e7740a5f934abb72fe080ab427",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "api-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "api"
+      ],
+      "started_at": "2026-10-29T04:31:57.698659+00:00",
+      "ended_at": "2026-10-29T04:31:57.775486+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "69613223a825258dbad93f79741736ec8c7fdf01708e5520d28328570cff402c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "api-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "9e798c9a186f57f7b11a1b64cd9a20d65513353bbf2da633df5c42a0c05c3b23"
+      ],
+      "started_at": "2026-10-29T04:31:57.775533+00:00",
+      "ended_at": "2026-10-29T04:31:57.790417+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "4e2017fa53eff430f34ed662c910e74ef63686e7bf94aa37c6118258fbf197e8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "worker-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "worker"
+      ],
+      "started_at": "2026-10-29T04:31:57.790563+00:00",
+      "ended_at": "2026-10-29T04:31:57.873715+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "776682c074a7a97272aa4c6293201c5b86401dff0fc8ca36c04206ebee007ad4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "worker-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "5a2e6b06d1995c3c218ca33c4ff2513ba28a107b92b1253ccb9ae62018709805"
+      ],
+      "started_at": "2026-10-29T04:31:57.873761+00:00",
+      "ended_at": "2026-10-29T04:31:57.887805+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "fe5c4942b55dc94336a1066c0637ca51007992aa4dde187e9efcf22e90375fdc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "database-counts",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "exec",
+        "-T",
+        "api",
+        "python",
+        "-c",
+        "import json; from sqlalchemy import text; from api.app.db import engine; c=engine.connect(); r={'active_jobs':c.execute(text(\"SELECT count(*) FROM workflow_jobs WHERE state IN ('queued','running','retry_wait')\")).scalar_one(),'case_count':c.execute(text('SELECT count(*) FROM review_cases')).scalar_one()}; print(json.dumps(r)); c.close()"
+      ],
+      "started_at": "2026-10-29T04:31:57.887941+00:00",
+      "ended_at": "2026-10-29T04:31:58.331301+00:00",
+      "exit_code": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "0d370740b33955a9451011a5e61d5ae5732504b25030f04ecf5a804639a1e41a",
+      "raw_output_recorded": false
+    }
+  ],
+  "files": []
+}

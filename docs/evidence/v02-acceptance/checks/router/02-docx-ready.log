@@ -1,0 +1,6 @@
+### Result
+{"heading":"真实工作流虚构验证 rejected","url":"http://127.0.0.1:4182/#case/RC-5f3e993cc1b54903a06ee1dcef7a0ecc","focus":{"tag":"H1","text":"真实工作流虚构验证 rejected"}}
+### Ran Playwright code
+```js
+await (async page => {await page.waitForFunction(()=>document.querySelector("h1")?.textContent==="真实工作流虚构验证 rejected",null,{timeout:15000});return {heading:await page.locator("h1").innerText(),url:page.url(),focus:await page.evaluate(()=>({tag:document.activeElement.tagName,text:document.activeElement.textContent}))};})(page);
+```

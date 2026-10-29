@@ -1,0 +1,15 @@
+### Result
+{
+  "url": "http://127.0.0.1:4183/#case/RC-SKIP-B",
+  "hash": "#case/RC-SKIP-B",
+  "heading": "虚构键盘焦点验证 B",
+  "focusTag": "MAIN",
+  "focusId": "main-content",
+  "mainFocused": true,
+  "mainTabIndex": -1,
+  "caseContentPresent": true
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => ({url:location.href,hash:location.hash,heading:document.querySelector("h1").textContent,focusTag:document.activeElement.tagName,focusId:document.activeElement.id,mainFocused:document.activeElement===document.querySelector("main"),mainTabIndex:document.querySelector("main").tabIndex,caseContentPresent:document.querySelector("main").textContent.includes("RC-SKIP-B")})');
+```

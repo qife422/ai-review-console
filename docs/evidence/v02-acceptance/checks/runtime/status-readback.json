@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-10-29T04:34:10.324913+00:00",
+  "method": "actual GET /api/system/status and one seed case detail; probe failures covered by unit/browser responses",
+  "system_status": {
+    "checked_at": "2026-10-29T04:34:08.988107+00:00",
+    "services": {
+      "api": {
+        "state": "healthy",
+        "checked_at": "2026-10-29T04:34:08.988107+00:00",
+        "detail": "This API request completed"
+      },
+      "database": {
+        "state": "healthy",
+        "checked_at": "2026-10-29T04:34:08.988107+00:00",
+        "detail": "SELECT 1 completed"
+      },
+      "worker": {
+        "state": "healthy",
+        "checked_at": "2026-10-29T04:34:08.988107+00:00",
+        "detail": "Last heartbeat: 2026-10-29T04:34:08.899759+00:00"
+      },
+      "langflow": {
+        "state": "healthy",
+        "checked_at": "2026-10-29T04:34:08.988107+00:00",
+        "detail": "Health probe HTTP 200"
+      }
+    }
+  },
+  "seed_provenance": {
+    "id": "RC-260901-001",
+    "source_kind": "seed_demo",
+    "flow_run_id": null,
+    "legacy_flow_label": null,
+    "hash_kind": "synthetic_text"
+  },
+  "limitations": [
+    "This is current endpoint observation, not full failure injection for health probes"
+  ]
+}

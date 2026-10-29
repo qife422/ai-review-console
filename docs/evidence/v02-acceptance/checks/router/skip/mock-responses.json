@@ -1,0 +1,205 @@
+{
+  "source": "Current frontend/src/test/fixtures.ts via Node strip-types; mocked API responses for focus-only browser check, not real workflow",
+  "detail": {
+    "id": "RC-SKIP-B",
+    "title": "虚构键盘焦点验证 B",
+    "document_name": "synthetic.txt",
+    "document_type": "TXT",
+    "status": "pending_approval",
+    "risk_score": 57,
+    "risk_level": "high",
+    "owner": "林澈",
+    "submitted_at": "2026-10-08T12:00:00Z",
+    "due_at": "2026-10-09T12:00:00Z",
+    "pii_count": 1,
+    "decision": null,
+    "source_kind": "seed_demo",
+    "current_document_version_id": "version-1",
+    "assessment_id": "assessment-1",
+    "row_version": 3,
+    "document_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "hash_kind": "synthetic_text",
+    "original_text": "SYNTHETIC DEMO DOCUMENT\n承担全部损失。",
+    "redacted_text": "SYNTHETIC DEMO DOCUMENT\n承担全部损失。",
+    "findings": [
+      {
+        "rule_id": "LEGAL-002",
+        "category": "legal",
+        "title": "责任上限缺失",
+        "severity": "critical",
+        "points": 28,
+        "evidence": "承担全部损失。",
+        "recommendation": "补充责任上限。",
+        "section_id": "section-1",
+        "locator": "block:1",
+        "start": 0,
+        "end": 7,
+        "offset_basis": "redacted_unicode_codepoints"
+      }
+    ],
+    "dimensions": {
+      "legal": 84
+    },
+    "warnings": [],
+    "decision_reason": null,
+    "decided_by": null,
+    "decided_at": null,
+    "flow_run_id": null,
+    "ruleset_version": "2026.09-demo.1",
+    "audit_events": [],
+    "jobs": [],
+    "reports": [],
+    "parsed_sections": [
+      {
+        "section_id": "section-1",
+        "locator": "block:1",
+        "text": "SYNTHETIC DEMO DOCUMENT\n承担全部损失。"
+      }
+    ],
+    "redacted_sections": [
+      {
+        "section_id": "section-1",
+        "locator": "block:1",
+        "text": "SYNTHETIC DEMO DOCUMENT\n承担全部损失。"
+      }
+    ],
+    "source": {
+      "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "hash_kind": "synthetic_text",
+      "bytes": 200,
+      "mime_type": "text/plain",
+      "source_kind": "seed_demo",
+      "legacy_flow_label": null,
+      "langflow_job_id": null,
+      "flow_id": null,
+      "flow_hash": null
+    }
+  },
+  "summary": {
+    "total_cases": 1,
+    "pending_approval": 1,
+    "high_risk": 1,
+    "completed": 0,
+    "average_score": 57,
+    "scored_cases": 1,
+    "risk_distribution": {
+      "low": 0,
+      "medium": 0,
+      "high": 1,
+      "critical": 0
+    },
+    "category_distribution": {
+      "privacy": 1,
+      "legal": 1,
+      "financial": 0,
+      "security": 0,
+      "policy": 0
+    },
+    "system_status": {
+      "api": "healthy",
+      "database": "healthy",
+      "worker": "healthy",
+      "langflow": "healthy"
+    },
+    "ruleset_version": "2026.09-demo.1"
+  },
+  "cases": [
+    {
+      "id": "RC-SKIP-B",
+      "title": "虚构键盘焦点验证 B",
+      "document_name": "synthetic.txt",
+      "document_type": "TXT",
+      "status": "pending_approval",
+      "risk_score": 57,
+      "risk_level": "high",
+      "owner": "林澈",
+      "submitted_at": "2026-10-08T12:00:00Z",
+      "due_at": "2026-10-09T12:00:00Z",
+      "pii_count": 1,
+      "decision": null,
+      "source_kind": "seed_demo",
+      "current_document_version_id": "version-1",
+      "assessment_id": "assessment-1",
+      "row_version": 3,
+      "document_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "hash_kind": "synthetic_text",
+      "original_text": "SYNTHETIC DEMO DOCUMENT\n承担全部损失。",
+      "redacted_text": "SYNTHETIC DEMO DOCUMENT\n承担全部损失。",
+      "findings": [
+        {
+          "rule_id": "LEGAL-002",
+          "category": "legal",
+          "title": "责任上限缺失",
+          "severity": "critical",
+          "points": 28,
+          "evidence": "承担全部损失。",
+          "recommendation": "补充责任上限。",
+          "section_id": "section-1",
+          "locator": "block:1",
+          "start": 0,
+          "end": 7,
+          "offset_basis": "redacted_unicode_codepoints"
+        }
+      ],
+      "dimensions": {
+        "legal": 84
+      },
+      "warnings": [],
+      "decision_reason": null,
+      "decided_by": null,
+      "decided_at": null,
+      "flow_run_id": null,
+      "ruleset_version": "2026.09-demo.1",
+      "audit_events": [],
+      "jobs": [],
+      "reports": [],
+      "parsed_sections": [
+        {
+          "section_id": "section-1",
+          "locator": "block:1",
+          "text": "SYNTHETIC DEMO DOCUMENT\n承担全部损失。"
+        }
+      ],
+      "redacted_sections": [
+        {
+          "section_id": "section-1",
+          "locator": "block:1",
+          "text": "SYNTHETIC DEMO DOCUMENT\n承担全部损失。"
+        }
+      ],
+      "source": {
+        "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "hash_kind": "synthetic_text",
+        "bytes": 200,
+        "mime_type": "text/plain",
+        "source_kind": "seed_demo",
+        "legacy_flow_label": null,
+        "langflow_job_id": null,
+        "flow_id": null,
+        "flow_hash": null
+      }
+    }
+  ],
+  "status": {
+    "checked_at": "2026-10-08T12:00:00Z",
+    "services": {
+      "api": {
+        "state": "healthy",
+        "checked_at": "2026-10-08T12:00:00Z"
+      },
+      "database": {
+        "state": "healthy",
+        "checked_at": "2026-10-08T12:00:00Z"
+      },
+      "worker": {
+        "state": "healthy",
+        "checked_at": "2026-10-08T12:00:00Z"
+      },
+      "langflow": {
+        "state": "unavailable",
+        "checked_at": "2026-10-08T12:00:00Z",
+        "detail": "未取得上游响应"
+      }
+    }
+  }
+}

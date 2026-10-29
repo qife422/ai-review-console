@@ -1,0 +1,174 @@
+### Page
+- Page URL: http://127.0.0.1:4182/#case/RC-98aacae843754218bfe76ffba1a2a0b0
+- Page Title: AI Review Console
+### Snapshot
+```yaml
+- generic [ref=e3]:
+  - banner "AI Review Console" [ref=e4]:
+    - link "Skip to main content" [ref=e5] [cursor=pointer]:
+      - /url: "#main-content"
+    - generic [ref=e6]:
+      - generic [ref=e7]: AI
+      - generic [ref=e8]: Review Console
+    - generic [ref=e9]: Built on Langflow
+    - generic [ref=e11]:
+      - button "切换到深色模式" [ref=e13] [cursor=pointer]
+      - tooltip [aria-hidden]
+  - navigation "主导航" [ref=e16]:
+    - list [ref=e17]:
+      - listitem [ref=e18]:
+        - link "总览" [ref=e19] [cursor=pointer]:
+          - /url: "#dashboard"
+      - listitem [ref=e24]:
+        - link "审查队列" [ref=e25] [cursor=pointer]:
+          - /url: "#queue"
+      - listitem [ref=e31]:
+        - link "Langflow 管理" [ref=e32] [cursor=pointer]:
+          - /url: http://localhost:7860
+    - generic [ref=e37]:
+      - strong [ref=e38]: SYNTHETIC
+      - generic [ref=e39]: 仅使用虚构演示数据
+      - generic [ref=e40]: 演示身份：demo-reviewer
+  - main [ref=e41]:
+    - button "返回审查队列" [ref=e253] [cursor=pointer]
+    - generic [ref=e256]:
+      - generic [ref=e257]:
+        - text: RC-98aacae843754218bfe76ffba1a2a0b0
+        - heading "真实工作流虚构验证 changes_requested" [active] [level=1] [ref=e258]
+        - generic [ref=e259]:
+          - generic "要求修改" [ref=e261]
+          - generic [ref=e262]: 高风险
+      - generic [ref=e264]:
+        - button "刷新状态" [ref=e265] [cursor=pointer]
+        - button "记录决定" [disabled] [ref=e266]
+    - generic [ref=e269]:
+      - strong [ref=e270]: 新增虚构文档
+      - generic [ref=e271]: 实际工作流完成且结果入库后，才允许人工决定。
+    - generic [ref=e272]:
+      - generic [ref=e273]:
+        - generic [ref=e274]: 规则风险分数
+        - strong [ref=e275]: "50"
+        - generic [ref=e276]: / 100，辅助审查指标
+      - generic [ref=e277]:
+        - generic [ref=e278]: 负责人
+        - strong [ref=e279]: 演示提交者
+        - generic [ref=e280]: 2 个脱敏命中
+      - generic [ref=e281]:
+        - generic [ref=e282]: 规则版本
+        - strong [ref=e283]: 2026.10.1
+        - generic [ref=e284]: 确定性规则，未调用语义模型
+      - generic [ref=e285]:
+        - generic [ref=e286]: Langflow 运行
+        - strong [ref=e287]: 02304e32-b5f0-446c-8fef-c0534e6adc76
+        - generic [ref=e288]: 真实上游运行记录
+    - generic [ref=e289]:
+      - generic [ref=e290]:
+        - generic [ref=e291]:
+          - heading "文档处理" [level=2] [ref=e292]
+          - generic "已保存结果" [ref=e294]
+        - paragraph [ref=e295]: 解析、脱敏和规则评估已持久化，等待或保留人工决定。
+        - status [ref=e296]:
+          - generic [ref=e297]: 已保存结果
+          - generic [ref=e298]: 第 1 次执行
+        - group [ref=e299]:
+          - generic "任务运行记录" [ref=e300] [cursor=pointer]
+      - generic [ref=e301]:
+        - generic [ref=e302]:
+          - heading "人工决定" [level=2] [ref=e303]
+          - generic "要求修改" [ref=e305]
+        - paragraph [ref=e306]: 要求修改
+        - paragraph [ref=e307]: 虚构验证完成：审查员依据规则证据记录changes_requested，并核对中文报告。
+        - generic [ref=e308]: synthetic-flow-validator，2026年10月28日 21:20
+        - paragraph [ref=e309]: 决定已绑定该次文档和评估，不能原地覆盖。
+        - generic [ref=e310]:
+          - term [ref=e311]: 当前文档版本
+          - definition [ref=e312]: DV-6447f1f4640146f6a08de0242163ae40
+    - generic [ref=e313]:
+      - generic [ref=e314]:
+        - heading "报告生成" [level=2] [ref=e315]
+        - generic "三种格式均可下载" [ref=e317]
+      - paragraph [ref=e318]: 本次修订意见已保存，报告记录该版本需要修改的事项。
+      - generic [ref=e319]:
+        - generic [ref=e320]:
+          - generic [ref=e321]:
+            - strong [ref=e322]: JSON
+            - generic "可下载" [ref=e324]
+          - generic [ref=e325]: 3.6 KiB，2026年10月28日 21:20
+          - button "下载 JSON" [ref=e327] [cursor=pointer]
+          - group [ref=e331]:
+            - generic "文件指纹" [ref=e332] [cursor=pointer]
+        - generic [ref=e333]:
+          - generic [ref=e334]:
+            - strong [ref=e335]: HTML
+            - generic "可下载" [ref=e337]
+          - generic [ref=e338]: 8.6 KiB，2026年10月28日 21:20
+          - button "下载 HTML" [ref=e340] [cursor=pointer]
+          - group [ref=e344]:
+            - generic "文件指纹" [ref=e345] [cursor=pointer]
+        - generic [ref=e346]:
+          - generic [ref=e347]:
+            - strong [ref=e348]: PDF
+            - generic "可下载" [ref=e350]
+          - generic [ref=e351]: 40.5 KiB，2026年10月28日 21:20
+          - button "下载 PDF" [ref=e353] [cursor=pointer]
+          - group [ref=e357]:
+            - generic "文件指纹" [ref=e358] [cursor=pointer]
+    - generic [ref=e359]:
+      - tablist "案件详情栏目" [ref=e361]:
+        - tab "规则发现" [selected] [ref=e362] [cursor=pointer]
+        - button [aria-hidden] [ref=e366]
+        - tab "文档对照" [ref=e369] [cursor=pointer]
+        - button [aria-hidden] [ref=e373]
+        - tab "审计记录" [ref=e376] [cursor=pointer]
+        - button [aria-hidden] [ref=e380]
+        - tab "文档来源" [ref=e383] [cursor=pointer]
+        - button [aria-hidden] [ref=e387]
+      - tabpanel "规则发现" [ref=e390]:
+        - generic [ref=e391]:
+          - generic [ref=e392]:
+            - generic [ref=e393]:
+              - generic [ref=e394]:
+                - generic [ref=e395]:
+                  - generic [ref=e396]:
+                    - button "Copy to clipboard" [ref=e398] [cursor=pointer]:
+                      - code [ref=e399]: PRIV-001
+                    - tooltip [aria-hidden]
+                  - heading "检测到个人信息字段" [level=3] [ref=e400]
+                - generic [ref=e401]: 高风险
+              - blockquote [ref=e403]: 0c3436af61de10e [PERSON_01]，个人手机号[PHONE_01]。使用共享账号和明文密码。
+              - paragraph [ref=e404]: 在分发前完成个人信息最小化和脱敏复核。
+              - button "查看证据：page:1" [ref=e405] [cursor=pointer]
+            - generic [ref=e406]:
+              - generic [ref=e407]:
+                - generic [ref=e408]:
+                  - generic [ref=e409]:
+                    - button "Copy to clipboard" [ref=e411] [cursor=pointer]:
+                      - code [ref=e412]: SEC-004
+                    - tooltip [aria-hidden]
+                  - heading "允许共享账号或明文凭据" [level=3] [ref=e413]
+                - generic [ref=e414]: 严重风险
+              - blockquote [ref=e416]: "[PERSON_01]，个人手机号[PHONE_01]。使用共享账号和明文密码。"
+              - paragraph [ref=e417]: 要求独立身份、最小权限和凭据安全存储。
+              - button "查看证据：page:1" [ref=e418] [cursor=pointer]
+          - generic [ref=e419]:
+            - heading "维度规则指标" [level=2] [ref=e420]
+            - paragraph [ref=e421]: 规则点数的派生指标，不是风险概率。
+            - generic [ref=e422]:
+              - generic [ref=e423]: 财务
+              - generic [ref=e424]: "0"
+            - generic [ref=e425]:
+              - generic [ref=e426]: 法律条款
+              - generic [ref=e427]: "0"
+            - generic [ref=e428]:
+              - generic [ref=e429]: 内部政策
+              - generic [ref=e430]: "0"
+            - generic [ref=e431]:
+              - generic [ref=e432]: 隐私
+              - generic [ref=e433]: "72"
+            - generic [ref=e434]:
+              - generic [ref=e435]: 信息安全
+              - generic [ref=e436]: "78"
+  - contentinfo [ref=e226]:
+    - generic [ref=e227]: 仅使用虚构数据。演示身份：demo-reviewer。不构成法律意见。
+    - generic [ref=e228]: 基于 Langflow / Built on Langflow
+```

@@ -1,0 +1,422 @@
+{
+  "generated_at": "2026-10-29T04:21:36.508284+00:00",
+  "method": "metadata identifier inventory; conservative text matching",
+  "legal_conclusion": "none; unknown/restricted metadata requires distribution review",
+  "summary": {
+    "recorded": 31,
+    "unknown": 0,
+    "review_required_copyleft_or_restricted_match": 2
+  },
+  "packages": [
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/annotated_doc-0.0.5.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/annotated_types-0.8.0.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "anyio",
+      "version": "4.14.2",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/anyio-4.14.2.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22",
+      "license": {
+        "identifiers": [
+          "MPL-2.0",
+          "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/certifi-2026.7.22.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.1",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/charset_normalizer-3.5.1.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/click-8.5.0.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "fastapi",
+      "version": "0.141.1",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/fastapi-0.141.1.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "greenlet",
+      "version": "3.5.5",
+      "license": {
+        "identifiers": [
+          "MIT AND PSF-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/greenlet-3.5.5.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/h11-0.16.0.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/httpcore-1.0.9.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "httptools",
+      "version": "0.8.0",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/httptools-0.8.0.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/httpx-0.28.1.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "idna",
+      "version": "3.19",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/idna-3.19.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "lxml",
+      "version": "6.1.2",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/lxml-6.1.2.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0",
+      "license": {
+        "identifiers": [
+          "MIT-CMU"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pillow-12.3.0.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "psycopg",
+      "version": "3.3.5",
+      "license": {
+        "identifiers": [
+          "LGPL-3.0-only"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/psycopg-3.3.5.dist-info"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "psycopg-binary",
+      "version": "3.3.5",
+      "license": {
+        "identifiers": [
+          "LGPL-3.0-only"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/psycopg_binary-3.3.5.dist-info"
+      },
+      "license_check": "review_required_copyleft_or_restricted_match"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.13.5",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pydantic-2.13.5.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "pydantic-core",
+      "version": "2.46.5",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pydantic_core-2.46.5.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "pypdf",
+      "version": "6.16.2",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pypdf-6.16.2.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "python-docx",
+      "version": "1.2.0",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/python_docx-1.2.0.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.2.3",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/python_dotenv-1.2.3.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "python-multipart",
+      "version": "0.0.32",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/python_multipart-0.0.32.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "pyyaml",
+      "version": "6.0.3",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pyyaml-6.0.3.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "reportlab",
+      "version": "4.5.1",
+      "license": {
+        "identifiers": [
+          "BSD license (see license.txt for details), Copyright (c) 2000-2025, ReportLab Inc.",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/reportlab-4.5.1.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "sqlalchemy",
+      "version": "2.0.52",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/sqlalchemy-2.0.52.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "starlette",
+      "version": "1.6.0",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/starlette-1.6.0.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "license": {
+        "identifiers": [
+          "PSF-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/typing_extensions-4.16.0.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/typing_inspection-0.4.4.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.52.4",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/uvicorn-0.52.4.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "uvloop",
+      "version": "0.22.1",
+      "license": {
+        "identifiers": [
+          "MIT License",
+          "License :: OSI Approved :: Apache Software License",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/uvloop-0.22.1.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "watchfiles",
+      "version": "1.2.0",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/watchfiles-1.2.0.dist-info"
+      },
+      "license_check": "recorded"
+    },
+    {
+      "name": "websockets",
+      "version": "17.1",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/websockets-17.1.dist-info"
+      },
+      "license_check": "recorded"
+    }
+  ],
+  "source_image_id": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+  "input_lock_sha256": "3e922f3cd862294cc26dc83d6376415baed2ca8536bbb95a7aa67a475934078e"
+}

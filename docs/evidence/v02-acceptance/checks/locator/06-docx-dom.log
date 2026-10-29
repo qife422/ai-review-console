@@ -1,0 +1,25 @@
+### Result
+{
+  "caseUrl": "http://127.0.0.1:8080/#case/RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+  "selectedTab": "文档对照",
+  "highlighted": true,
+  "highlightedCount": 1,
+  "focusId": "evidence-section-section-0004",
+  "targetId": "evidence-section-section-0004",
+  "locator": "table:1/row:1/cell:1",
+  "text": "客户预付款90%，服务方可单方变更结算规则。",
+  "rect": {
+    "top": 765.3125,
+    "bottom": 848.109375
+  },
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "visible": true,
+  "scrollY": 716.5
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const section=document.getElementById("evidence-section-section-0004");const r=section.getBoundingClientRect();return {caseUrl:location.href,selectedTab:document.querySelector("[role=tab][aria-selected=true]").textContent,highlighted:section.classList.contains("highlighted-section"),highlightedCount:document.querySelectorAll(".highlighted-section").length,focusId:document.activeElement.id,targetId:section.id,locator:section.querySelector("small").textContent,text:section.querySelector("pre").textContent,rect:{top:r.top,bottom:r.bottom},viewport:{width:innerWidth,height:innerHeight},visible:r.top>=0&&r.bottom<=innerHeight,scrollY}; }');
+```

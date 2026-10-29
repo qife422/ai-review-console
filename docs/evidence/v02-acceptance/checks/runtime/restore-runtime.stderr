@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/scripts/verify_restore_runtime.py", line 701, in <module>
+    main()
+  File "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/scripts/verify_restore_runtime.py", line 443, in main
+    commands.run(
+  File "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/scripts/verify_restore_runtime.py", line 144, in run
+    raise RuntimeError(label + ": " + result.stderr.decode(errors="replace")[:2000])
+RuntimeError: selected-file-copy: Traceback (most recent call last):
+  File "<string>", line 39, in <module>
+  File "/usr/local/lib/python3.12/pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/restore-documents/DV-1056f732a4d04cb6a0256b58500ae874'
+

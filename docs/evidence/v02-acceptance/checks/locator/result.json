@@ -1,0 +1,288 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "AC-03"
+  ],
+  "checked_at": "2026-10-29T04:29:29.533103+00:00",
+  "method": "Playwright cached CLI, dedicated headed session arc-v02-locator; real local Web, existing actual workflow DOCX/PDF cases; GET reads and evidence button UI switching only; no creation/decisions",
+  "browser_session_closed": true,
+  "workflow_manifest": "/private/tmp/arc-v02-acceptance.UYLZxy/workflow.json",
+  "workflow_sha256": "8867c532470cd851fd35f981968779a030915270d201f9311083912233d921bb",
+  "source_inputs": [
+    {
+      "path": "frontend/src/App.tsx",
+      "sha256": "a27cb75f6616a5e5008b91163ad2cea8494d616ee2bdf401184c0494916ec5cc"
+    },
+    {
+      "path": "frontend/src/components/CaseDetail.tsx",
+      "sha256": "d9c322b1b609fa35aea90c054c83a217c4a757da3da3858cbbbf82b745fc9289"
+    },
+    {
+      "path": "frontend/src/styles.scss",
+      "sha256": "eede30d229947aced59b3f8a7d951e8d22d01fec0e153bb06732a7c5d220a8a8"
+    }
+  ],
+  "results": {
+    "docx": {
+      "case_id": "RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+      "finding": {
+        "rule_id": "FIN-003",
+        "category": "financial",
+        "title": "异常预付款比例",
+        "severity": "high",
+        "points": 20,
+        "evidence": "客户预付款90%，服务方可单方变更结算规则。",
+        "recommendation": "改为按里程碑分期付款并绑定验收条件。",
+        "section_id": "section-0004",
+        "locator": "table:1/row:1/cell:1",
+        "start": 0,
+        "end": 22,
+        "offset_basis": "unicode_code_points"
+      },
+      "dom": {
+        "caseUrl": "http://127.0.0.1:8080/#case/RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+        "selectedTab": "文档对照",
+        "highlighted": true,
+        "highlightedCount": 1,
+        "focusId": "evidence-section-section-0004",
+        "targetId": "evidence-section-section-0004",
+        "locator": "table:1/row:1/cell:1",
+        "text": "客户预付款90%，服务方可单方变更结算规则。",
+        "rect": {
+          "top": 765.3125,
+          "bottom": 848.109375
+        },
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "visible": true,
+        "scrollY": 716.5
+      },
+      "checks": {
+        "correct_case": true,
+        "compare_tab": true,
+        "one_highlight": true,
+        "correct_focus": true,
+        "locator": true,
+        "text_matches_api": true,
+        "evidence_exact_slice": true,
+        "target_fully_visible": true
+      },
+      "passed": true,
+      "screenshot": "docx-locator.png",
+      "screenshot_visually_reviewed": true
+    },
+    "pdf": {
+      "case_id": "RC-98aacae843754218bfe76ffba1a2a0b0",
+      "finding": {
+        "rule_id": "PRIV-001",
+        "category": "privacy",
+        "title": "检测到个人信息字段",
+        "severity": "high",
+        "points": 24,
+        "evidence": "0c3436af61de10e\n[PERSON_01]，个人手机号[PHONE_01]。使用共享账号和明文密码。",
+        "recommendation": "在分发前完成个人信息最小化和脱敏复核。",
+        "section_id": "section-0001",
+        "locator": "page:1",
+        "start": 64,
+        "end": 120,
+        "offset_basis": "unicode_code_points"
+      },
+      "dom": {
+        "caseUrl": "http://127.0.0.1:8080/#case/RC-98aacae843754218bfe76ffba1a2a0b0",
+        "selectedTab": "文档对照",
+        "highlighted": true,
+        "highlightedCount": 1,
+        "focusId": "evidence-section-section-0001",
+        "targetId": "evidence-section-section-0001",
+        "locator": "page:1",
+        "text": "SYNTHETIC DEMO DOCUMENT\nBuilt on Langflow\n执行验证 7aea71efd5ec4cec80c3436af61de10e\n[PERSON_01]，个人手机号[PHONE_01]。使用共享账号和明文密码。",
+        "rect": {
+          "top": 694.015625,
+          "bottom": 848.203125
+        },
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "visible": true,
+        "scrollY": 623
+      },
+      "checks": {
+        "correct_case": true,
+        "compare_tab": true,
+        "one_highlight": true,
+        "correct_focus": true,
+        "locator": true,
+        "text_matches_api": true,
+        "evidence_exact_slice": true,
+        "target_fully_visible": true
+      },
+      "passed": true,
+      "screenshot": "pdf-locator.png",
+      "screenshot_visually_reviewed": true
+    }
+  },
+  "result": "passed",
+  "additional_finding": {
+    "title": "Hash-only navigation does not update mounted App route",
+    "observed": "After goto to PDF #case URL in existing DOCX page, URL changed but DOCX heading/details remained for 10 seconds. Full reload correctly loaded PDF; both locator checks then passed.",
+    "source": "App reads location only in useState initializers and has no hashchange/popstate listener. Internal navigation uses replaceState.",
+    "evidence": [
+      "08-pdf-open.log",
+      "09-pdf-snapshot.log",
+      "10-pdf-wait.log",
+      "11-pdf-ready.log",
+      "12-pdf-reload.log",
+      "13-pdf-loaded.log"
+    ],
+    "product_code_changed": false
+  },
+  "diagnostic_limitations": [
+    "CLI network command was unsupported in cached version; its usage/error retained. No complete network-method trace claimed.",
+    "Locator check is 1440x1000 light theme only; other responsive/theme coverage belongs to separate UI acceptance."
+  ],
+  "files": [
+    {
+      "name": "01-open-docx.log",
+      "bytes": 458,
+      "sha256": "aeb7079cabc0136bb96f188df0948c4b9949e709f386fceca920bac81e87c251"
+    },
+    {
+      "name": "02-docx-snapshot.log",
+      "bytes": 8187,
+      "sha256": "4e5e1f29c5389167756287c518f38b05fad3cec9a4133bf567416fad9053ad3b"
+    },
+    {
+      "name": "03-resize.log",
+      "bytes": 93,
+      "sha256": "6d71f9f29bc176b37c24390dad8dd251ee3eb35546959ebd2e26720302a96a20"
+    },
+    {
+      "name": "04-docx-click.log",
+      "bytes": 324,
+      "sha256": "6eca8c6362c50d06767534ab7fcb0853745c5e843aa96fea44f3443dcdb534b3"
+    },
+    {
+      "name": "04-docx-click.yml",
+      "bytes": 7155,
+      "sha256": "df21f6f31825cbd4384bf91a697decc806ae52a30f4f2272a4c39d0fc2751efa"
+    },
+    {
+      "name": "05-docx-after.log",
+      "bytes": 7298,
+      "sha256": "960a4577adb7431db886c274f71dad3cb98d66d22e3e41da650a2cf647c9ca3d"
+    },
+    {
+      "name": "06-docx-dom.log",
+      "bytes": 1247,
+      "sha256": "5f4c43df03066e1aba99faa0a506ac297bc86e032f132cd989627c8dba756e85"
+    },
+    {
+      "name": "07-docx-image.log",
+      "bytes": 510,
+      "sha256": "47f6d5a89f3c1ef00d59cf6dde4526a164b68f3a7c532be2e2fb9797373cde45"
+    },
+    {
+      "name": "08-pdf-open.log",
+      "bytes": 312,
+      "sha256": "a1b3caef3df55da88f10490c15391a067d4414630782bb13fe6814f8bf747858"
+    },
+    {
+      "name": "08-pdf-open.yml",
+      "bytes": 7155,
+      "sha256": "df21f6f31825cbd4384bf91a697decc806ae52a30f4f2272a4c39d0fc2751efa"
+    },
+    {
+      "name": "09-pdf-snapshot.log",
+      "bytes": 7298,
+      "sha256": "1bbf6c36a69813cef6ba2cb46dac30579c0835d8d23c798f1ebf0e61894ea95b"
+    },
+    {
+      "name": "10-pdf-wait.log",
+      "bytes": 72,
+      "sha256": "f90995d5f7c9f5464b5f36635b9ed81bf9a44184587c2e17f1d13c91070cb25e"
+    },
+    {
+      "name": "11-pdf-ready.log",
+      "bytes": 7298,
+      "sha256": "1bbf6c36a69813cef6ba2cb46dac30579c0835d8d23c798f1ebf0e61894ea95b"
+    },
+    {
+      "name": "12-pdf-reload.log",
+      "bytes": 342,
+      "sha256": "c9f81218c3789ebf3b1ef5697cf137408cd2a358a7682421c19c95b122e17cbd"
+    },
+    {
+      "name": "12-pdf-reload.yml",
+      "bytes": 1511,
+      "sha256": "40d4b695bb2c26ab4fddd924963cabbb30cc8a99daba10011a8e47a9f9076136"
+    },
+    {
+      "name": "13-pdf-loaded.log",
+      "bytes": 8589,
+      "sha256": "209bc477a3ed04bec1ec8733e2f3af9381be2c60b30307259e6973efe12a1e26"
+    },
+    {
+      "name": "14-pdf-click.log",
+      "bytes": 310,
+      "sha256": "46e4421abf1564f7ba43810faa67acfcba07d88f7d0d9a22a4ff64c49664d64a"
+    },
+    {
+      "name": "14-pdf-click.yml",
+      "bytes": 6697,
+      "sha256": "9789504dd6b3d4085f93db9527fc97b290baee4557f0cb713377eea71c0504d0"
+    },
+    {
+      "name": "15-pdf-dom.log",
+      "bytes": 1342,
+      "sha256": "fe982bc9f43073405120af8dd1f7668154f894f871b542678820d9f2b5beac2f"
+    },
+    {
+      "name": "16-pdf-image.log",
+      "bytes": 507,
+      "sha256": "91ac8f934ef31ef949601a75c69c79d62a38aed4b78491758248be9e1af2e3e8"
+    },
+    {
+      "name": "17-browser-network.log",
+      "bytes": 7518,
+      "sha256": "3d95394728ff32ccd781c56185e3abc27bfe898ce2d37d39a36d5c3070311852"
+    },
+    {
+      "name": "18-browser-close.log",
+      "bytes": 34,
+      "sha256": "707472014dbc2aeb1c088724e983720aa9a6ded8367a7198957cd3076dad3636"
+    },
+    {
+      "name": "api-selected-evidence.json",
+      "bytes": 1867,
+      "sha256": "bbce93d7dcdb77d9dbcb945cfa42c07272959bf9f408f42cac50819c4ecd17af"
+    },
+    {
+      "name": "commands.json",
+      "bytes": 7384,
+      "sha256": "255b2e41da7bfdbce4d212d727644a45fc02bd74aa4f35b353798003a9201270"
+    },
+    {
+      "name": "docx-locator.png",
+      "bytes": 91260,
+      "sha256": "2060c0d93c5a744d2b0920e7e18d621e3fa5490345a2ea7165d5d12aebe16c29"
+    },
+    {
+      "name": "pdf-locator.png",
+      "bytes": 113741,
+      "sha256": "443bf2aa89d61223966fe8b0ce952a6e10991665598b788b0fd4911188368de2"
+    },
+    {
+      "name": "record_cli.py",
+      "bytes": 875,
+      "sha256": "9be62e4de6d1d12867b15cdd8ebfca33d6d349a3273612beb93f48a1ac0220ba"
+    },
+    {
+      "name": "selected-cases.json",
+      "bytes": 99,
+      "sha256": "124b0eade3468619807acd08a18c949428d2092d421dd31a3427ff9bdade3017"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+2026-10-29 04:24:32,127 INFO Worker worker-1781e7506fa94a26 started
+2026-10-29 04:24:32,146 INFO HTTP Request: POST http://api:8000/api/integrations/langflow/jobs/JB-996e4c17c5fc4871a73d628f60bec311/started "HTTP/1.1 200 OK"
+2026-10-29 04:24:32,461 INFO HTTP Request: POST http://langflow:7860/api/v1/login "HTTP/1.1 429 Too Many Requests"
+2026-10-29 04:24:32,485 INFO HTTP Request: POST http://api:8000/api/integrations/langflow/jobs/JB-996e4c17c5fc4871a73d628f60bec311/failure "HTTP/1.1 200 OK"
+2026-10-29 04:24:32,486 WARNING Job JB-996e4c17c5fc4871a73d628f60bec311 attempt 1: langflow_rate_limited (retry_wait)
+2026-10-29 04:24:42,742 INFO HTTP Request: POST http://api:8000/api/integrations/langflow/jobs/JB-996e4c17c5fc4871a73d628f60bec311/started "HTTP/1.1 200 OK"
+2026-10-29 04:24:43,025 INFO HTTP Request: POST http://langflow:7860/api/v1/login "HTTP/1.1 200 OK"
+2026-10-29 04:24:43,036 INFO HTTP Request: GET http://langflow:7860/api/v1/flows/75cbcd63-8493-46d0-9feb-b6d757ca7ce9 "HTTP/1.1 200 OK"
+2026-10-29 04:24:43,071 INFO HTTP Request: POST http://langflow:7860/api/v1/build/75cbcd63-8493-46d0-9feb-b6d757ca7ce9/flow?event_delivery=polling "HTTP/1.1 200 OK"
+2026-10-29 04:24:43,091 INFO HTTP Request: GET http://langflow:7860/api/v1/build/f7ca5e45-b272-4071-92dd-5a38be67bf33/events "HTTP/1.1 200 OK"

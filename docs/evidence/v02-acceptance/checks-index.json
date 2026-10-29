@@ -1,0 +1,1227 @@
+{
+  "classification": "sealed_evidence_selection_index",
+  "created_at": "2026-10-29T04:31:24.174840+00:00",
+  "files": [
+    {
+      "path": "checks/fast/typescript.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/typescript.log",
+      "sha256": "8ea0103cc704725503eb7ce55ee6de5e170808ab42861f9c7e99f34b9b325603",
+      "bytes": 141,
+      "acceptance": [
+        "AC-10",
+        "AC-15",
+        "AC-16"
+      ]
+    },
+    {
+      "path": "checks/fast/results.json",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/results.json",
+      "sha256": "52de4005571cd8a978f93cdc11956917de06519da77b516bf1cc68059ae9a949",
+      "bytes": 3410,
+      "acceptance": [
+        "AC-02",
+        "AC-03",
+        "AC-05",
+        "AC-08",
+        "AC-09",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-14",
+        "AC-16",
+        "AC-17"
+      ]
+    },
+    {
+      "path": "checks/fast/python-tests.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/python-tests.log",
+      "sha256": "a0a1b88d92c933ec6996c02a303d41fbea44c714c7aa59f07c8459c69227b0d6",
+      "bytes": 1065,
+      "acceptance": [
+        "AC-02",
+        "AC-03",
+        "AC-05",
+        "AC-08",
+        "AC-09",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-14",
+        "AC-16",
+        "AC-17"
+      ]
+    },
+    {
+      "path": "checks/fast/ruff.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/ruff.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19,
+      "acceptance": []
+    },
+    {
+      "path": "checks/fast/postgres-results.json",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/postgres-results.json",
+      "sha256": "02c3dc7d7161a06c5015032d190ec871642c16e679ea142f7a5c212e879e21b9",
+      "bytes": 955,
+      "acceptance": [
+        "AC-05",
+        "AC-09",
+        "AC-17"
+      ]
+    },
+    {
+      "path": "checks/fast/frontend-tests.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/frontend-tests.log",
+      "sha256": "9132d5ceabb7fbc7cbda9b079fa4a664b80d083d977897ce80d340a30eb11044",
+      "bytes": 313,
+      "acceptance": [
+        "AC-10",
+        "AC-15",
+        "AC-16"
+      ]
+    },
+    {
+      "path": "checks/fast/postgres-tests.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/postgres-tests.log",
+      "sha256": "c9bea457956da2ad6368e29b9025ccfb8e81393ae92341936c58d152635bbe78",
+      "bytes": 627,
+      "acceptance": [
+        "AC-05",
+        "AC-09",
+        "AC-17"
+      ]
+    },
+    {
+      "path": "checks/pdf/report.json",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/report.json",
+      "sha256": "3ac88095d42bc87979b7d3344866709c945d88c653647cea3481829631b771d7",
+      "bytes": 20352,
+      "acceptance": [
+        "AC-12"
+      ]
+    },
+    {
+      "path": "checks/pdf/verify-pdf.py",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/verify-pdf.py",
+      "sha256": "6e31eecc62c5bda1ee8f4309472a886de141df58d94c6f680472a6007abbad10",
+      "bytes": 1186,
+      "acceptance": [
+        "AC-12"
+      ]
+    },
+    {
+      "path": "checks/pdf/page-1.png",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/page-1.png",
+      "sha256": "0ba6f5fb6c26bba609a20e8f70ed2460aa9f0c4782db3037c27abb84fa961afd",
+      "bytes": 228317,
+      "acceptance": [
+        "AC-12"
+      ]
+    },
+    {
+      "path": "checks/pdf/page-3.png",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/page-3.png",
+      "sha256": "f80ec043709f5eda6692a626c3914229d9039a796526679f78aea870ff95e164",
+      "bytes": 394813,
+      "acceptance": [
+        "AC-12"
+      ]
+    },
+    {
+      "path": "checks/pdf/page-2.png",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/page-2.png",
+      "sha256": "915650ef2dc8289429eb73796d28fc967345f9cd4a1e4ba0094c7d4b7869d4e0",
+      "bytes": 395238,
+      "acceptance": [
+        "AC-12"
+      ]
+    },
+    {
+      "path": "checks/pdf/snapshot.json",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/snapshot.json",
+      "sha256": "81db1f2ce07f46821d01fd39ece98be0ecdd94bf11fa3dd1b3fec7751221c207",
+      "bytes": 19860,
+      "acceptance": [
+        "AC-12"
+      ]
+    },
+    {
+      "path": "checks/pdf/page-4.png",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/page-4.png",
+      "sha256": "81fdf552b3ea4b1ff0081078846a0b75eb1c68a90cec6c6930bafde46f0f13cb",
+      "bytes": 348115,
+      "acceptance": [
+        "AC-12"
+      ]
+    },
+    {
+      "path": "checks/pdf/checks.json",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/checks.json",
+      "sha256": "478da29ff6dbf093e329515259ceb20ef91206a6e80d3f188927118ab5a74744",
+      "bytes": 4698,
+      "acceptance": [
+        "AC-12"
+      ]
+    },
+    {
+      "path": "checks/pdf/report.html",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/report.html",
+      "sha256": "b1264a4be239e91e758ccf63ceb92ed4713c8b011da529631652b4ff50c9a92c",
+      "bytes": 42338,
+      "acceptance": [
+        "AC-12"
+      ]
+    },
+    {
+      "path": "checks/pdf/extracted-pages.json",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/extracted-pages.json",
+      "sha256": "a4d44e2a2c40630075e7873c58ca4b1cd7e24603a231533de1520b82c51f15b3",
+      "bytes": 19313,
+      "acceptance": [
+        "AC-12"
+      ]
+    },
+    {
+      "path": "checks/pdf/report.pdf",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/report.pdf",
+      "sha256": "d9367bc5e02873e39889a40f94df490932c7f7d92cd41249742599971a764e30",
+      "bytes": 38154,
+      "acceptance": [
+        "AC-12"
+      ]
+    },
+    {
+      "path": "checks/locator/11-pdf-ready.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/11-pdf-ready.log",
+      "sha256": "1bbf6c36a69813cef6ba2cb46dac30579c0835d8d23c798f1ebf0e61894ea95b",
+      "bytes": 7298,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/07-docx-image.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/07-docx-image.log",
+      "sha256": "47f6d5a89f3c1ef00d59cf6dde4526a164b68f3a7c532be2e2fb9797373cde45",
+      "bytes": 510,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/13-pdf-loaded.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/13-pdf-loaded.log",
+      "sha256": "209bc477a3ed04bec1ec8733e2f3af9381be2c60b30307259e6973efe12a1e26",
+      "bytes": 8589,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/result.json",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/result.json",
+      "sha256": "3cbe45d9d5bf31338c155eb10646019a369cc6fe70f38aa0549b7c7c2bca836e",
+      "bytes": 9624,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/17-browser-network.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/17-browser-network.log",
+      "sha256": "3d95394728ff32ccd781c56185e3abc27bfe898ce2d37d39a36d5c3070311852",
+      "bytes": 7518,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/04-docx-click.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/04-docx-click.log",
+      "sha256": "6eca8c6362c50d06767534ab7fcb0853745c5e843aa96fea44f3443dcdb534b3",
+      "bytes": 324,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/14-pdf-click.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/14-pdf-click.log",
+      "sha256": "46e4421abf1564f7ba43810faa67acfcba07d88f7d0d9a22a4ff64c49664d64a",
+      "bytes": 310,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/02-docx-snapshot.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/02-docx-snapshot.log",
+      "sha256": "4e5e1f29c5389167756287c518f38b05fad3cec9a4133bf567416fad9053ad3b",
+      "bytes": 8187,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/pdf-locator.png",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/pdf-locator.png",
+      "sha256": "443bf2aa89d61223966fe8b0ce952a6e10991665598b788b0fd4911188368de2",
+      "bytes": 113741,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/commands.json",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/commands.json",
+      "sha256": "255b2e41da7bfdbce4d212d727644a45fc02bd74aa4f35b353798003a9201270",
+      "bytes": 7384,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/selected-cases.json",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/selected-cases.json",
+      "sha256": "124b0eade3468619807acd08a18c949428d2092d421dd31a3427ff9bdade3017",
+      "bytes": 99,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/18-browser-close.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/18-browser-close.log",
+      "sha256": "707472014dbc2aeb1c088724e983720aa9a6ded8367a7198957cd3076dad3636",
+      "bytes": 34,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/record_cli.py",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/record_cli.py",
+      "sha256": "9be62e4de6d1d12867b15cdd8ebfca33d6d349a3273612beb93f48a1ac0220ba",
+      "bytes": 875,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/03-resize.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/03-resize.log",
+      "sha256": "6d71f9f29bc176b37c24390dad8dd251ee3eb35546959ebd2e26720302a96a20",
+      "bytes": 93,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/01-open-docx.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/01-open-docx.log",
+      "sha256": "aeb7079cabc0136bb96f188df0948c4b9949e709f386fceca920bac81e87c251",
+      "bytes": 458,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/docx-locator.png",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/docx-locator.png",
+      "sha256": "2060c0d93c5a744d2b0920e7e18d621e3fa5490345a2ea7165d5d12aebe16c29",
+      "bytes": 91260,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/05-docx-after.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/05-docx-after.log",
+      "sha256": "960a4577adb7431db886c274f71dad3cb98d66d22e3e41da650a2cf647c9ca3d",
+      "bytes": 7298,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/08-pdf-open.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/08-pdf-open.log",
+      "sha256": "a1b3caef3df55da88f10490c15391a067d4414630782bb13fe6814f8bf747858",
+      "bytes": 312,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/09-pdf-snapshot.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/09-pdf-snapshot.log",
+      "sha256": "1bbf6c36a69813cef6ba2cb46dac30579c0835d8d23c798f1ebf0e61894ea95b",
+      "bytes": 7298,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/12-pdf-reload.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/12-pdf-reload.log",
+      "sha256": "c9f81218c3789ebf3b1ef5697cf137408cd2a358a7682421c19c95b122e17cbd",
+      "bytes": 342,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/15-pdf-dom.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/15-pdf-dom.log",
+      "sha256": "fe982bc9f43073405120af8dd1f7668154f894f871b542678820d9f2b5beac2f",
+      "bytes": 1342,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/10-pdf-wait.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/10-pdf-wait.log",
+      "sha256": "f90995d5f7c9f5464b5f36635b9ed81bf9a44184587c2e17f1d13c91070cb25e",
+      "bytes": 72,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/api-selected-evidence.json",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/api-selected-evidence.json",
+      "sha256": "bbce93d7dcdb77d9dbcb945cfa42c07272959bf9f408f42cac50819c4ecd17af",
+      "bytes": 1867,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/16-pdf-image.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/16-pdf-image.log",
+      "sha256": "91ac8f934ef31ef949601a75c69c79d62a38aed4b78491758248be9e1af2e3e8",
+      "bytes": 507,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/locator/06-docx-dom.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/06-docx-dom.log",
+      "sha256": "5f4c43df03066e1aba99faa0a506ac297bc86e032f132cd989627c8dba756e85",
+      "bytes": 1247,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/runtime/plan.json",
+      "source": "/private/tmp/arc-v02-acceptance.UYLZxy/plan.json",
+      "sha256": "0a009d65ab7bb6d6c45aea892712b95c38bde1dc62ccb3d4d0d2bcc19f6c7570",
+      "bytes": 1099,
+      "acceptance": []
+    },
+    {
+      "path": "checks/runtime/runtime-source-identity.json",
+      "source": "/private/tmp/arc-v02-acceptance.UYLZxy/runtime-source-identity.json",
+      "sha256": "4dbb9075ea7cbea02cad3f4742f55bfc6a2cefe440dfba5b78bd16c3c7dd0f59",
+      "bytes": 533,
+      "acceptance": [
+        "AC-19"
+      ]
+    },
+    {
+      "path": "checks/runtime/runtime-source-identity-current.json",
+      "source": "/private/tmp/arc-v02-acceptance.UYLZxy/runtime-source-identity-current.json",
+      "sha256": "01470b55c937298e19a16249469e73155793f2da8598612c39c8ae9a96512fda",
+      "bytes": 131,
+      "acceptance": [
+        "AC-19"
+      ]
+    },
+    {
+      "path": "checks/runtime/workflow.json",
+      "source": "/private/tmp/arc-v02-acceptance.UYLZxy/workflow.json",
+      "sha256": "8867c532470cd851fd35f981968779a030915270d201f9311083912233d921bb",
+      "bytes": 16647,
+      "acceptance": [
+        "AC-01",
+        "AC-04",
+        "AC-05",
+        "AC-08",
+        "AC-10",
+        "AC-13",
+        "AC-18"
+      ]
+    },
+    {
+      "path": "checks/runtime/workflow.stderr",
+      "source": "/private/tmp/arc-v02-acceptance.UYLZxy/workflow.stderr",
+      "sha256": "105151675ef396be4621b2c8d7ae13bcb87e9d60f9a7e9fd21a28eb7c63564a9",
+      "bytes": 845,
+      "acceptance": [
+        "AC-04"
+      ]
+    },
+    {
+      "path": "checks/runtime/workflow-run2.stderr",
+      "source": "/private/tmp/arc-v02-acceptance.UYLZxy/workflow-run2.stderr",
+      "sha256": "6389c1390f9a0aa739a0f5e3882d9413814b3e8feefc24ee656a636567867283",
+      "bytes": 1129,
+      "acceptance": [
+        "AC-04"
+      ]
+    },
+    {
+      "path": "checks/runtime/faults.json",
+      "source": "/private/tmp/arc-v02-acceptance.UYLZxy/faults.json",
+      "sha256": "99b13319226bb4ce1d26d5d59b2a8e1d288756ef00cee1701ead83da15f97c5c",
+      "bytes": 7394,
+      "acceptance": [
+        "AC-06",
+        "AC-07"
+      ]
+    },
+    {
+      "path": "checks/runtime/faults.stdout",
+      "source": "/private/tmp/arc-v02-acceptance.UYLZxy/faults.stdout",
+      "sha256": "6426289bc84ef4d5b431e66ee7891b1ab7097e0f7f0fc2ff4f0764d6b56e7ecc",
+      "bytes": 622,
+      "acceptance": [
+        "AC-06",
+        "AC-07"
+      ]
+    },
+    {
+      "path": "checks/runtime/faults.stderr",
+      "source": "/private/tmp/arc-v02-acceptance.UYLZxy/faults.stderr",
+      "sha256": "4f60b50ae3a2f45ab2a86c2e77be7205cdaf52c207e014ed4e2590c4ed565818",
+      "bytes": 648,
+      "acceptance": [
+        "AC-06",
+        "AC-07"
+      ]
+    },
+    {
+      "path": "checks/runtime/faults-429-recovery.log",
+      "source": "/private/tmp/arc-v02-acceptance.UYLZxy/faults-429-recovery.log",
+      "sha256": "759cd6ae0f40bc454b28f9125124c139b27447349e732075af57467a631696cb",
+      "bytes": 1316,
+      "acceptance": [
+        "AC-07"
+      ]
+    },
+    {
+      "path": "checks/runtime/restore.json",
+      "source": "/private/tmp/arc-v02-acceptance.UYLZxy/restore.json",
+      "sha256": "a63e9915ba383f9e8dff55980ade380128984af10ac1d01425c8f7ad4eddb576",
+      "bytes": 3479,
+      "acceptance": [
+        "AC-17"
+      ]
+    },
+    {
+      "path": "checks/runtime/restore-runtime.stderr",
+      "source": "/private/tmp/arc-v02-acceptance.UYLZxy/restore-runtime.stderr",
+      "sha256": "c26cc66ef793a8cff0af2d0bee3dd506074da5ae831fb04c862ec3c06bc2b46e",
+      "bytes": 827,
+      "acceptance": [
+        "AC-17"
+      ]
+    },
+    {
+      "path": "checks/runtime/restore-runtime-recheck.stdout",
+      "source": "/private/tmp/arc-v02-acceptance.UYLZxy/restore-runtime-recheck.stdout",
+      "sha256": "0e1790b2e9be6bc4d7f0e316b58bff9c308b24cd42a7b6e5281d3cffe4c2c786",
+      "bytes": 237,
+      "acceptance": [
+        "AC-17"
+      ]
+    },
+    {
+      "path": "checks/runtime/empty-volume-precheck.stdout",
+      "source": "/private/tmp/arc-v02-acceptance.UYLZxy/empty-volume-precheck.stdout",
+      "sha256": "5733f6cbbfc7c637ae803ee8f1b895056fa82679128bd045417763032b259f54",
+      "bytes": 32,
+      "acceptance": [
+        "AC-17"
+      ]
+    },
+    {
+      "path": "checks/auth-recheck/faults.json",
+      "source": "/private/tmp/arc-v02-auth-recheck.a2puEa/faults.json",
+      "sha256": "07ab59ab5f153dbcf0a4cebf26772330a47fbc2c14496db0714d808fc1a8d3ef",
+      "bytes": 3208,
+      "acceptance": [
+        "AC-07"
+      ]
+    },
+    {
+      "path": "checks/auth-recheck/run.stdout",
+      "source": "/private/tmp/arc-v02-auth-recheck.a2puEa/run.stdout",
+      "sha256": "38ffd1f6f2a981fdd1a023b83157f08dcb8641f79636b46eee03b2c69ffeef45",
+      "bytes": 260,
+      "acceptance": [
+        "AC-07"
+      ]
+    },
+    {
+      "path": "checks/auth-recheck/run.stderr",
+      "source": "/private/tmp/arc-v02-auth-recheck.a2puEa/run.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "acceptance": [
+        "AC-07"
+      ]
+    },
+    {
+      "path": "checks/restore-runtime/manifest.json",
+      "source": "/private/tmp/arc-restore-runtime.dFa60B/manifest.json",
+      "sha256": "187c61f52c37666dd76fa1ba5c839a143b4a0e04cbdeb1a0c639654ee05b63d5",
+      "bytes": 51304,
+      "acceptance": [
+        "AC-17"
+      ]
+    },
+    {
+      "path": "checks/restore-runtime/selected-files.json",
+      "source": "/private/tmp/arc-restore-runtime.dFa60B/selected-files.json",
+      "sha256": "13a9d0e2d6682d3198c6df948ad450c113e7dafd1a23797d82a662656a94dc65",
+      "bytes": 4786,
+      "acceptance": [
+        "AC-17"
+      ]
+    },
+    {
+      "path": "checks/restore-runtime/first-selected-files.json",
+      "source": "/private/tmp/arc-restore-runtime.N25J1M/selected-files.json",
+      "sha256": "13a9d0e2d6682d3198c6df948ad450c113e7dafd1a23797d82a662656a94dc65",
+      "bytes": 4786,
+      "acceptance": [
+        "AC-17"
+      ]
+    },
+    {
+      "path": "checks/runtime/status-readback.json",
+      "source": "/private/tmp/arc-v02-acceptance.UYLZxy/status-readback.json",
+      "sha256": "fec648013d76a9dabd951733868c5334114ccb8d81865598c5e9ba50ae7e801a",
+      "bytes": 1217,
+      "acceptance": [
+        "AC-16"
+      ]
+    },
+    {
+      "path": "checks/report-retry/font-fault.compose.json",
+      "source": "/private/tmp/arc-report-retry-pDaMDE/font-fault.compose.json",
+      "sha256": "2da2f06ec3c1b4c7713fa8b7086aedeec6d11cb977b055d47dbc4a71c022e75f",
+      "bytes": 175,
+      "acceptance": [
+        "AC-14"
+      ]
+    },
+    {
+      "path": "checks/report-retry/recovered-report.pdf",
+      "source": "/private/tmp/arc-report-retry-pDaMDE/recovered-report.pdf",
+      "sha256": "db76ca99d10a53c88874cc8d9cd67e4559a253664f6bef7010da06ffd952e260",
+      "bytes": 39728,
+      "acceptance": [
+        "AC-14"
+      ]
+    },
+    {
+      "path": "checks/report-retry/first-report.html",
+      "source": "/private/tmp/arc-report-retry-pDaMDE/first-report.html",
+      "sha256": "2bacfae2fa73c163a583dee09cf5e9ba8130020027b9d88dba225ed702fd4a65",
+      "bytes": 7764,
+      "acceptance": [
+        "AC-14"
+      ]
+    },
+    {
+      "path": "checks/report-retry/terminal-failed.json",
+      "source": "/private/tmp/arc-report-retry-pDaMDE/terminal-failed.json",
+      "sha256": "6b5a8286988a4545da7c54fe6948be09be8fb35f9bfa2d79c8dca2096aecf963",
+      "bytes": 3193,
+      "acceptance": [
+        "AC-14"
+      ]
+    },
+    {
+      "path": "checks/report-retry/restoration.json",
+      "source": "/private/tmp/arc-report-retry-pDaMDE/restoration.json",
+      "sha256": "9d47ac89bbdc13e01ab248c773e9430ffd5941f871bae3f8e819b62949256a3d",
+      "bytes": 1247,
+      "acceptance": [
+        "AC-14"
+      ]
+    },
+    {
+      "path": "checks/report-retry/report-retry.json",
+      "source": "/private/tmp/arc-report-retry-pDaMDE/report-retry.json",
+      "sha256": "f23adf679c1a5a42cb85a8fae7aa2b5d02b590eb3fbb23e988afb79a1122c3fc",
+      "bytes": 65753,
+      "acceptance": [
+        "AC-14"
+      ]
+    },
+    {
+      "path": "checks/report-retry/first-partial.json",
+      "source": "/private/tmp/arc-report-retry-pDaMDE/first-partial.json",
+      "sha256": "3b5dca5fa283d89cf2ecc6521e50a29572ce28b58592d63d7427abbf3197d83a",
+      "bytes": 3204,
+      "acceptance": [
+        "AC-14"
+      ]
+    },
+    {
+      "path": "checks/report-retry/final-report.json",
+      "source": "/private/tmp/arc-report-retry-pDaMDE/final-report.json",
+      "sha256": "39a29d1ec02a4c3dd64cb63b1ef87d3552745861ffd467b84ecdb0f50d40fa80",
+      "bytes": 3943,
+      "acceptance": [
+        "AC-14"
+      ]
+    },
+    {
+      "path": "checks/report-retry/first-report.json",
+      "source": "/private/tmp/arc-report-retry-pDaMDE/first-report.json",
+      "sha256": "de9eab7fb3a9ec52858a825f9544e6c998349fd9189f7cab76a0cd623becbbfc",
+      "bytes": 3212,
+      "acceptance": [
+        "AC-14"
+      ]
+    },
+    {
+      "path": "checks/report-retry/initial-preflight-failure.json",
+      "source": "/private/tmp/arc-report-retry-D6KKKO/report-retry.json",
+      "sha256": "606a5ebe90146b149ce34db3feb7f53877581342f6238f69db4ae6c007dfe122",
+      "bytes": 7729,
+      "acceptance": [
+        "AC-14"
+      ]
+    },
+    {
+      "path": "checks/router/17-browser-close.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/17-browser-close.log",
+      "sha256": "81020ca3b70cfeb95707fa10585808264a8747a41df550b0de45d80a1b27fc9b",
+      "bytes": 33,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/pdf-locator-after-route.png",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/pdf-locator-after-route.png",
+      "sha256": "443bf2aa89d61223966fe8b0ce952a6e10991665598b788b0fd4911188368de2",
+      "bytes": 113741,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/typescript.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/typescript.log",
+      "sha256": "d02c65abafa7a6678efea56532028f8f339db2b73404a947e7c833a6a0afbde9",
+      "bytes": 232,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/09-pdf-locator.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/09-pdf-locator.log",
+      "sha256": "e4766e7f0c9c2475e2c7bb6ee3cb1136f7c74f842d4effe9a250270577d1980b",
+      "bytes": 310,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/05-before-route.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/05-before-route.log",
+      "sha256": "13a734be2cba6a2f5eda31e72f41ef5e01cbf64929a672fa0681b38118b038dd",
+      "bytes": 790,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/result.json",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/result.json",
+      "sha256": "2ff3f8326f693aefe45d08e50f4d8b21726237e0c7e72e7acf65a8b5b4a16da7",
+      "bytes": 9341,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/12-request-methods.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/12-request-methods.log",
+      "sha256": "722d7262da1b2dd48ce3137e5ac2d260c79c88ac5143a15d1ae350876de00c32",
+      "bytes": 171,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/app-tests.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/app-tests.log",
+      "sha256": "8ef93471963a1580a0f066b93d864619fde0e5798c691521fa9bc2655f55aaf5",
+      "bytes": 325,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/frontend-tests-final.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/frontend-tests-final.log",
+      "sha256": "7268872e9016f7ac369339f39e1aa3d913635c70d8edb70b66c347170900a067",
+      "bytes": 312,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/13-back-docx.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/13-back-docx.log",
+      "sha256": "42b6649c9c61442fd1039e5cb3b8cedf5bca0e350dd8e0cdf090e12f2ec73845",
+      "bytes": 249,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/08-pdf-ready.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/08-pdf-ready.log",
+      "sha256": "d2eab9b37672386daddb0cccc7b4eb1d811457782a897ccd98f6dc9ad2256e11",
+      "bytes": 8224,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/commands.json",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/commands.json",
+      "sha256": "9bc6d7acb62bd4afc49a3feb597dcb383fd166480e8478c7529c0d2d5d8333af",
+      "bytes": 8280,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/server-stopped.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/server-stopped.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/14-back-confirmed.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/14-back-confirmed.log",
+      "sha256": "3ec0901fdec9353fd55adc68b7385283785cc711a1c779b31c14aab2f61c06f6",
+      "bytes": 868,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/04-docx-locator.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/04-docx-locator.log",
+      "sha256": "a0aeced4f8c1712b9057896cf64549b24d5c27c0bd758b979f344cb70a4dde80",
+      "bytes": 324,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/03-resize.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/03-resize.log",
+      "sha256": "6d71f9f29bc176b37c24390dad8dd251ee3eb35546959ebd2e26720302a96a20",
+      "bytes": 93,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/01-open-docx.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/01-open-docx.log",
+      "sha256": "ac00a4e4b8c45eae1719ada2f0614a263254c7db8c8824f81cd1f1d54d7f21f0",
+      "bytes": 457,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/15-unknown-hash.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/15-unknown-hash.log",
+      "sha256": "64fd18ada39783c575e83a542ca62552befc25d4ed8850bfdddeadd52b11d977",
+      "bytes": 339,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/02-docx-ready.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/02-docx-ready.log",
+      "sha256": "67a65f897a5940cdaaa2ee48a2d4a8e01ec43d69e95226a53b5cad5ba839961f",
+      "bytes": 582,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/10-pdf-locator-dom.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/10-pdf-locator-dom.log",
+      "sha256": "3a4eb935328e4e90b7f1d7d292023b8f42e16c607c3a3137dcb145eb09afa19a",
+      "bytes": 967,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/11-pdf-locator-image.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/11-pdf-locator-image.log",
+      "sha256": "b968d347d8631b758a11b4c33d1702c9d37cc9d59cbaccc42bd13928cb1153da",
+      "bytes": 540,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/06-pdf-hash.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/06-pdf-hash.log",
+      "sha256": "94842577204b79134480f07897055f9a8c16df3569434dfa3fa7183bad77d700",
+      "bytes": 312,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/16-unknown-fallback.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/16-unknown-fallback.log",
+      "sha256": "70842b711821fceb3233fa184061654a05ff9f7adb98e7d23c68cd5da9128a70",
+      "bytes": 574,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/07-pdf-updated.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/07-pdf-updated.log",
+      "sha256": "01bd98e3ca506802e6980a446c58fa4b3e82c1840efb4b68beb3891bc7833660",
+      "bytes": 973,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/typescript-final.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/typescript-final.log",
+      "sha256": "8ea0103cc704725503eb7ce55ee6de5e170808ab42861f9c7e99f34b9b325603",
+      "bytes": 141,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/runtime/inventory.json",
+      "source": "/private/tmp/arc-v02-acceptance.UYLZxy/inventory.json",
+      "sha256": "dad641246f9a4887c0ad6ef36d0f37d45c52a5a1a1872f6e1320281c531ea4a8",
+      "bytes": 8666,
+      "acceptance": [
+        "AC-17",
+        "AC-19"
+      ]
+    },
+    {
+      "path": "checks/runtime/teardown.json",
+      "source": "/private/tmp/arc-v02-acceptance.UYLZxy/teardown.json",
+      "sha256": "ccdb207fb5f958fb2f1f069b2ab4649d5c48d58d3fc1fe11e90de440a0bcf7c4",
+      "bytes": 1864,
+      "acceptance": [
+        "AC-17",
+        "AC-19"
+      ]
+    },
+    {
+      "path": "checks/router/skip-result.json",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip-result.json",
+      "sha256": "7289d535f5e5363c1fd289116bc80affaca4336ce057b37c1844a0eddfc674c0",
+      "bytes": 6872,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip-frontend-tests.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip-frontend-tests.log",
+      "sha256": "11f682b6fffd7c458695e90dc668ffbf833db192360084b373b6b16d8449e664",
+      "bytes": 312,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip-typescript.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip-typescript.log",
+      "sha256": "8ea0103cc704725503eb7ce55ee6de5e170808ab42861f9c7e99f34b9b325603",
+      "bytes": 141,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/mock-responses.json",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/mock-responses.json",
+      "sha256": "863ad361baebb6fb314f95a466d13f2d745ebe292e24f24870a1e4713db56777",
+      "bytes": 5825,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/09-skip-focused.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/09-skip-focused.log",
+      "sha256": "fb1d177d37d45162da125822696db807a50c3705e4e5a470c1b76a9995b4de5e",
+      "bytes": 453,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/12-browser-close.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/12-browser-close.log",
+      "sha256": "52bb303c6da48b3fdaaf946becfec889831b1ea66bc8773fccde9ca46d7883b7",
+      "bytes": 31,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/07-case-ready.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/07-case-ready.log",
+      "sha256": "5bd7d74663a6dc3128bb12c66dfb96f2d43d5cd51d65e3548b8b7b8fb88108d8",
+      "bytes": 504,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/10-keyboard-enter.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/10-keyboard-enter.log",
+      "sha256": "8123a5d577884266a7269bc0a84e94bd103449a764ea417539bc4a39aee41ca0",
+      "bytes": 253,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/05-case-detail.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/05-case-detail.log",
+      "sha256": "1e2c1666b86e6e070408a213c2cd5d96497d2c6d9f169c42066a25401579dd8c",
+      "bytes": 187,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/commands.json",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/commands.json",
+      "sha256": "6ad788512db99cf5454c707649df3742b2f9154ad7edd739c40fdaa8c32d142f",
+      "bytes": 11801,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/server-stopped.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/server-stopped.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/08-shifttab-5.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/08-shifttab-5.log",
+      "sha256": "989067ddf658a72d1541696581e4e9cffc6c23fa863aed0e4935ca15863ad85f",
+      "bytes": 93,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/08-shifttab-4.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/08-shifttab-4.log",
+      "sha256": "989067ddf658a72d1541696581e4e9cffc6c23fa863aed0e4935ca15863ad85f",
+      "bytes": 93,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/08-shifttab-6.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/08-shifttab-6.log",
+      "sha256": "989067ddf658a72d1541696581e4e9cffc6c23fa863aed0e4935ca15863ad85f",
+      "bytes": 93,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/08-shifttab-3.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/08-shifttab-3.log",
+      "sha256": "989067ddf658a72d1541696581e4e9cffc6c23fa863aed0e4935ca15863ad85f",
+      "bytes": 93,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/08-shifttab-2.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/08-shifttab-2.log",
+      "sha256": "989067ddf658a72d1541696581e4e9cffc6c23fa863aed0e4935ca15863ad85f",
+      "bytes": 93,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/11-skip-result-dom.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/11-skip-result-dom.log",
+      "sha256": "360e82f5ee4e3f569addf4a044d53cd688864ae4323e3d33d06276bf1e544246",
+      "bytes": 695,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/04-status.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/04-status.log",
+      "sha256": "88452cd45d6eea88067d4a4ce39770a1afc0a412d1ef765d23186ca04785048c",
+      "bytes": 183,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/08-shifttab-1.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/08-shifttab-1.log",
+      "sha256": "989067ddf658a72d1541696581e4e9cffc6c23fa863aed0e4935ca15863ad85f",
+      "bytes": 93,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/01-open-blank.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/01-open-blank.log",
+      "sha256": "9e606bafee4409d90c8d42fb69fc702e1f66574be7549b48109e0cc762a49ec3",
+      "bytes": 226,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/06-open-case.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/06-open-case.log",
+      "sha256": "85dbb2f428159aedc783d5d2d99b460c6286cdde2af06f620ae10d34b309f225",
+      "bytes": 353,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/03-case-list.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/03-case-list.log",
+      "sha256": "6ac37111a7e433228f36f94f42ec00123d9548721db820c388d4c60ce35129f3",
+      "bytes": 167,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/02-summary.log",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/02-summary.log",
+      "sha256": "f445e5692ad7dec837b973417484ad53aedfda5923daf018c70620085656ff72",
+      "bytes": 171,
+      "acceptance": [
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/01-open-blank.yml",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/01-open-blank.yml",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/06-open-case.yml",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/06-open-case.yml",
+      "sha256": "421f0dec952fa030ba8b44402f923933a76884c7cc8f47cb7bdb4aab16cb4c16",
+      "bytes": 5850,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/10-keyboard-enter.yml",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/10-keyboard-enter.yml",
+      "sha256": "ced5f48d09ef1483f5259aea54a05d88e1096cde13c264b80e8d9261ce5640e8",
+      "bytes": 5850,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    },
+    {
+      "path": "checks/router/skip/record_cli.py",
+      "source": "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/skip/record_cli.py",
+      "sha256": "6e7318f0d05c0f27747464d0e329fd9b9033841344a49552d956a5b59aecb80b",
+      "bytes": 872,
+      "acceptance": [
+        "AC-03",
+        "AC-15"
+      ]
+    }
+  ],
+  "notes": [
+    "No SQLite or PostgreSQL dump, caches, full build trees or credentials selected",
+    "Original failed fault/restore observations retained alongside bounded repairs"
+  ],
+  "sealed_at": "2026-10-29T04:53:20.264223+00:00"
+}

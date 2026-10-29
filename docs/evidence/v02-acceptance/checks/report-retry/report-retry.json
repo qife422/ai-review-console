@@ -1,0 +1,1807 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "AC-14"
+  ],
+  "producer": "scripts/verify_report_retry.py",
+  "producer_sha256": "d50fcfced207b9e76effd92a27c1a9b24c8efe0b4af0737cd90b58a2300e8d0e",
+  "spec_sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753",
+  "started_at": "2026-10-29T04:32:36.370382+00:00",
+  "project": "ai-review-console-upgrade",
+  "api": "http://127.0.0.1:8000",
+  "case_limit": 1,
+  "result": "passed",
+  "restoration": {
+    "required": true,
+    "result": "passed",
+    "langflow": {
+      "image_id": "sha256:ff0f5cc380743034c05b4bfcf587be0e714da1610799f0c7c41d45902a5267c4",
+      "environment_sha256": "01f7e3de3384012d19b3953b5d2445b80b1c3f4b9f36795e985151299d054026",
+      "mounts": [
+        {
+          "type": "volume",
+          "name": "ai-review-console-upgrade_report-artifacts",
+          "destination": "/app/artifacts",
+          "rw": true
+        },
+        {
+          "type": "volume",
+          "name": "ai-review-console-upgrade_source-documents",
+          "destination": "/app/documents",
+          "rw": false
+        }
+      ],
+      "networks": [
+        "ai-review-console-upgrade_backend"
+      ],
+      "health": "healthy",
+      "font_override_present": false
+    },
+    "flows": {
+      "intake": {
+        "config_hash": "d3747beed0b494091b59ad1407225968215e915149eb29c9d0e686e0ea8463fc",
+        "flow_hash": "e1b0cdcd3c26657da65069d0c344ec3fab87947b4e5cacb6bd1f15796e9dd7c7",
+        "id": "75cbcd63-8493-46d0-9feb-b6d757ca7ce9"
+      },
+      "report": {
+        "config_hash": "d3747beed0b494091b59ad1407225968215e915149eb29c9d0e686e0ea8463fc",
+        "flow_hash": "5c423209971c9d6263538e5ca15a4896f3505e2b5e084fbffbfccd2308e531d7",
+        "id": "d174caae-2495-45f4-92f5-d1c5c0caf916"
+      }
+    }
+  },
+  "retention": "Synthetic case, reports and temporary proof retained; no cleanup.",
+  "limitations": "Only missing-font PDF failure and failed-format manual retry are covered.",
+  "git_head": "85dddfd43fa51abfa53c5291177dda818397139d",
+  "before": {
+    "langflow": {
+      "image_id": "sha256:ff0f5cc380743034c05b4bfcf587be0e714da1610799f0c7c41d45902a5267c4",
+      "environment_sha256": "01f7e3de3384012d19b3953b5d2445b80b1c3f4b9f36795e985151299d054026",
+      "mounts": [
+        {
+          "type": "volume",
+          "name": "ai-review-console-upgrade_report-artifacts",
+          "destination": "/app/artifacts",
+          "rw": true
+        },
+        {
+          "type": "volume",
+          "name": "ai-review-console-upgrade_source-documents",
+          "destination": "/app/documents",
+          "rw": false
+        }
+      ],
+      "networks": [
+        "ai-review-console-upgrade_backend"
+      ],
+      "health": "healthy",
+      "font_override_present": false
+    },
+    "flows": {
+      "intake": {
+        "config_hash": "d3747beed0b494091b59ad1407225968215e915149eb29c9d0e686e0ea8463fc",
+        "flow_hash": "e1b0cdcd3c26657da65069d0c344ec3fab87947b4e5cacb6bd1f15796e9dd7c7",
+        "id": "75cbcd63-8493-46d0-9feb-b6d757ca7ce9"
+      },
+      "report": {
+        "config_hash": "d3747beed0b494091b59ad1407225968215e915149eb29c9d0e686e0ea8463fc",
+        "flow_hash": "5c423209971c9d6263538e5ca15a4896f3505e2b5e084fbffbfccd2308e531d7",
+        "id": "d174caae-2495-45f4-92f5-d1c5c0caf916"
+      }
+    },
+    "counts": {
+      "active_jobs": 0,
+      "case_count": 74
+    }
+  },
+  "case_id": "RC-4eb0d6e1713543cea8688013dd7509de",
+  "source_sha256": "90fa93a046d44f47181fec2ae2fd7cbe25b36ee8d21a665e836f821fc9eb39d6",
+  "accepted": {
+    "case_id": "RC-4eb0d6e1713543cea8688013dd7509de",
+    "document_version_id": "DV-cfae49c0276f4b9e902233d222649916",
+    "job_id": "JB-9d04bc4cf0294a108ad1646946f3cb54",
+    "status": "received",
+    "request_id": "f6d93d98-9a3f-411f-aa1d-b91a483eb5e5",
+    "duplicate_of": null
+  },
+  "decision_id": "DC-feeffd0c4ac344948cccdf1b0fb0b948",
+  "report_job_id": "JB-2d45896cb40b46a0b3a72785a45c2db2",
+  "retry_job_id": "JB-af0f8f40b7d84300ae5e969197b2dec7",
+  "downloaded": [
+    {
+      "format": "json",
+      "sha256": "de9eab7fb3a9ec52858a825f9544e6c998349fd9189f7cab76a0cd623becbbfc",
+      "bytes": 3212
+    },
+    {
+      "format": "pdf",
+      "sha256": "db76ca99d10a53c88874cc8d9cd67e4559a253664f6bef7010da06ffd952e260",
+      "bytes": 39728
+    },
+    {
+      "format": "html",
+      "sha256": "2bacfae2fa73c163a583dee09cf5e9ba8130020027b9d88dba225ed702fd4a65",
+      "bytes": 7764
+    }
+  ],
+  "ready_json_html_unchanged": true,
+  "after_counts": {
+    "active_jobs": 0,
+    "case_count": 75,
+    "decision_count": 1,
+    "decision_audit_count": 1
+  },
+  "ended_at": "2026-10-29T04:35:07.043235+00:00",
+  "commands": [
+    {
+      "label": "git-head",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "started_at": "2026-10-29T04:32:36.370523+00:00",
+      "ended_at": "2026-10-29T04:32:36.384753+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "6f5e3c0fe669132dfa0e1695b6b451203ca19a4a6d2698aa32d451a8e4b66b5c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:32:36.384825+00:00",
+      "ended_at": "2026-10-29T04:32:36.759135+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "b3fff6c8b505e1cba6bbf0e2810d0e9c9e36d50d58707056c24c0cbf13d61960",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "4be5695624a1d87723653647478f120773bec9c57d82532509c3330a0bd1c878"
+      ],
+      "started_at": "2026-10-29T04:32:36.759215+00:00",
+      "ended_at": "2026-10-29T04:32:36.782883+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "d00720d0f4113ccfc8aaec401cdafa56303d2505b8d1fb11b88aad0e68ec5e8c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "compose-config",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "config",
+        "--format",
+        "json"
+      ],
+      "started_at": "2026-10-29T04:32:36.783129+00:00",
+      "ended_at": "2026-10-29T04:32:36.851717+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "647d6b2d2a865e917a8f4e425846cf2a2d9edcf98ecf6d10b48716ba8beee22e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "local-image-id",
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "--format",
+        "{{.Id}}",
+        "ai-review-console-langflow:latest"
+      ],
+      "started_at": "2026-10-29T04:32:36.851901+00:00",
+      "ended_at": "2026-10-29T04:32:36.900486+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "165b3ddc6f54d57bd9859bd15025a90a6d8bf5e7740a5f934abb72fe080ab427",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "api-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "api"
+      ],
+      "started_at": "2026-10-29T04:32:36.900661+00:00",
+      "ended_at": "2026-10-29T04:32:36.983522+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "69613223a825258dbad93f79741736ec8c7fdf01708e5520d28328570cff402c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "api-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "9e798c9a186f57f7b11a1b64cd9a20d65513353bbf2da633df5c42a0c05c3b23"
+      ],
+      "started_at": "2026-10-29T04:32:36.983571+00:00",
+      "ended_at": "2026-10-29T04:32:37.002012+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "78368bf3d2a7a2f87acb2cffddce069df6fea9218da6a0ba178c07e4b98f6e06",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "worker-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "worker"
+      ],
+      "started_at": "2026-10-29T04:32:37.002183+00:00",
+      "ended_at": "2026-10-29T04:32:37.083069+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "776682c074a7a97272aa4c6293201c5b86401dff0fc8ca36c04206ebee007ad4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "worker-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "5a2e6b06d1995c3c218ca33c4ff2513ba28a107b92b1253ccb9ae62018709805"
+      ],
+      "started_at": "2026-10-29T04:32:37.083208+00:00",
+      "ended_at": "2026-10-29T04:32:37.109168+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "fe5c4942b55dc94336a1066c0637ca51007992aa4dde187e9efcf22e90375fdc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "database-counts",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "exec",
+        "-T",
+        "api",
+        "python",
+        "-c",
+        "import json; from sqlalchemy import text; from api.app.database import engine; c=engine.connect(); r={'active_jobs':c.execute(text(\"SELECT count(*) FROM workflow_jobs WHERE state IN ('queued','running','retry_wait')\")).scalar_one(),'case_count':c.execute(text('SELECT count(*) FROM review_cases')).scalar_one()}; print(json.dumps(r)); c.close()"
+      ],
+      "started_at": "2026-10-29T04:32:37.109384+00:00",
+      "ended_at": "2026-10-29T04:32:37.738687+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "f83106961e493bf06765c02e534d045357692861ebf115aaf5660de4047cdf23",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "published-flow-hashes",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "exec",
+        "-T",
+        "worker",
+        "python",
+        "-c",
+        "\nimport json\nfrom api.app.langflow_client import LangflowClient, flow_configuration, graph_hash\nclient=LangflowClient()\nresult={}\ntry:\n    for kind in ('intake','report'):\n        config=flow_configuration(kind)\n        graph=client.get_flow(config['id'],config['flow_hash'])\n        result[kind]={'id':config['id'],'flow_hash':graph_hash(graph),\n                      'config_hash':config['config_hash']}\n    print(json.dumps(result,sort_keys=True))\nfinally:\n    client.close()\n"
+      ],
+      "started_at": "2026-10-29T04:32:37.738888+00:00",
+      "ended_at": "2026-10-29T04:32:38.868857+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "0e6bc9c422a15ec1a78c2a7adef8827439e8a530f3316a83cbf8b43d2ec06032",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "confirm-missing-font",
+      "argv": [
+        "docker",
+        "exec",
+        "4be5695624a1d87723653647478f120773bec9c57d82532509c3330a0bd1c878",
+        "python",
+        "-c",
+        "from pathlib import Path; assert not Path('/app/arc-proof-missing-font-188be9d6920d493486f3af7b78dc2e61.ttf').exists()"
+      ],
+      "started_at": "2026-10-29T04:32:38.869294+00:00",
+      "ended_at": "2026-10-29T04:32:38.966242+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "local-image-id",
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "--format",
+        "{{.Id}}",
+        "ai-review-console-langflow:latest"
+      ],
+      "started_at": "2026-10-29T04:32:39.025061+00:00",
+      "ended_at": "2026-10-29T04:32:39.063833+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "165b3ddc6f54d57bd9859bd15025a90a6d8bf5e7740a5f934abb72fe080ab427",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "inject-font-failure",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "-f",
+        "/private/tmp/arc-report-retry-pDaMDE/font-fault.compose.json",
+        "up",
+        "-d",
+        "--no-deps",
+        "--no-build",
+        "--pull",
+        "never",
+        "--force-recreate",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:32:39.063926+00:00",
+      "ended_at": "2026-10-29T04:32:52.792644+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "dbd9be0a39773ef59cfa8fe0c32cdae713732d7b8d3c98e11500515abc6c10a5",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:32:52.793006+00:00",
+      "ended_at": "2026-10-29T04:32:52.876352+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7c3d1019aaab0faeefcc884a40abcd071829a3ee94808bfedd58f8ce1b3bdd98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "c565a77d5fa535beb40fcf621c12b83aeb0aa74d193b6137ec6a2399d1823f87"
+      ],
+      "started_at": "2026-10-29T04:32:52.876396+00:00",
+      "ended_at": "2026-10-29T04:32:52.892970+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "ec9a8d6f2c6485d869079077d7959be6ac5d3147940c560a5d9347cb8e678b7b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:32:54.903609+00:00",
+      "ended_at": "2026-10-29T04:32:55.012680+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7c3d1019aaab0faeefcc884a40abcd071829a3ee94808bfedd58f8ce1b3bdd98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "c565a77d5fa535beb40fcf621c12b83aeb0aa74d193b6137ec6a2399d1823f87"
+      ],
+      "started_at": "2026-10-29T04:32:55.012766+00:00",
+      "ended_at": "2026-10-29T04:32:55.029528+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "ec9a8d6f2c6485d869079077d7959be6ac5d3147940c560a5d9347cb8e678b7b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:32:57.039961+00:00",
+      "ended_at": "2026-10-29T04:32:57.183382+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7c3d1019aaab0faeefcc884a40abcd071829a3ee94808bfedd58f8ce1b3bdd98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "c565a77d5fa535beb40fcf621c12b83aeb0aa74d193b6137ec6a2399d1823f87"
+      ],
+      "started_at": "2026-10-29T04:32:57.183430+00:00",
+      "ended_at": "2026-10-29T04:32:57.203565+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "80e1e390960f816f74c809e5371f62427744cb1351ce67645393720434ffe486",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:32:59.213927+00:00",
+      "ended_at": "2026-10-29T04:32:59.328660+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7c3d1019aaab0faeefcc884a40abcd071829a3ee94808bfedd58f8ce1b3bdd98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "c565a77d5fa535beb40fcf621c12b83aeb0aa74d193b6137ec6a2399d1823f87"
+      ],
+      "started_at": "2026-10-29T04:32:59.328739+00:00",
+      "ended_at": "2026-10-29T04:32:59.347273+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "f42fceac7b8c4195e9d45246b80a47d10f2c5c6be01a3432bb8170b3b3a5c4b6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:33:01.357684+00:00",
+      "ended_at": "2026-10-29T04:33:01.496871+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7c3d1019aaab0faeefcc884a40abcd071829a3ee94808bfedd58f8ce1b3bdd98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "c565a77d5fa535beb40fcf621c12b83aeb0aa74d193b6137ec6a2399d1823f87"
+      ],
+      "started_at": "2026-10-29T04:33:01.496936+00:00",
+      "ended_at": "2026-10-29T04:33:01.513461+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "13081257d71f8df7b999d388a486ab03447dd4c0204eb9066d4ef4820e5f1783",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:33:03.524237+00:00",
+      "ended_at": "2026-10-29T04:33:03.666886+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7c3d1019aaab0faeefcc884a40abcd071829a3ee94808bfedd58f8ce1b3bdd98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "c565a77d5fa535beb40fcf621c12b83aeb0aa74d193b6137ec6a2399d1823f87"
+      ],
+      "started_at": "2026-10-29T04:33:03.666947+00:00",
+      "ended_at": "2026-10-29T04:33:03.685445+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "91b1ada6a562ae61fc82c21ed94d365683494318874371b62bf2ad4b9bc71542",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:33:05.691350+00:00",
+      "ended_at": "2026-10-29T04:33:05.835771+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7c3d1019aaab0faeefcc884a40abcd071829a3ee94808bfedd58f8ce1b3bdd98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "c565a77d5fa535beb40fcf621c12b83aeb0aa74d193b6137ec6a2399d1823f87"
+      ],
+      "started_at": "2026-10-29T04:33:05.835840+00:00",
+      "ended_at": "2026-10-29T04:33:05.854536+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "91b1ada6a562ae61fc82c21ed94d365683494318874371b62bf2ad4b9bc71542",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:33:07.855547+00:00",
+      "ended_at": "2026-10-29T04:33:08.000121+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7c3d1019aaab0faeefcc884a40abcd071829a3ee94808bfedd58f8ce1b3bdd98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "c565a77d5fa535beb40fcf621c12b83aeb0aa74d193b6137ec6a2399d1823f87"
+      ],
+      "started_at": "2026-10-29T04:33:08.000215+00:00",
+      "ended_at": "2026-10-29T04:33:08.019520+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "91b1ada6a562ae61fc82c21ed94d365683494318874371b62bf2ad4b9bc71542",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:33:10.030482+00:00",
+      "ended_at": "2026-10-29T04:33:10.174432+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7c3d1019aaab0faeefcc884a40abcd071829a3ee94808bfedd58f8ce1b3bdd98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "c565a77d5fa535beb40fcf621c12b83aeb0aa74d193b6137ec6a2399d1823f87"
+      ],
+      "started_at": "2026-10-29T04:33:10.174520+00:00",
+      "ended_at": "2026-10-29T04:33:10.193694+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "8b8be2ee1414859c50eebd592b87c1fecd43b6611658a7b136cd40c8ab895ca3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:33:12.194470+00:00",
+      "ended_at": "2026-10-29T04:33:12.417030+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7c3d1019aaab0faeefcc884a40abcd071829a3ee94808bfedd58f8ce1b3bdd98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "c565a77d5fa535beb40fcf621c12b83aeb0aa74d193b6137ec6a2399d1823f87"
+      ],
+      "started_at": "2026-10-29T04:33:12.417110+00:00",
+      "ended_at": "2026-10-29T04:33:12.451729+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "88eeb79e68803e6482056dac86432a4cadb593e7c66b88132f59193b9caaa267",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:33:14.458661+00:00",
+      "ended_at": "2026-10-29T04:33:14.608903+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7c3d1019aaab0faeefcc884a40abcd071829a3ee94808bfedd58f8ce1b3bdd98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "c565a77d5fa535beb40fcf621c12b83aeb0aa74d193b6137ec6a2399d1823f87"
+      ],
+      "started_at": "2026-10-29T04:33:14.609017+00:00",
+      "ended_at": "2026-10-29T04:33:14.629061+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "88eeb79e68803e6482056dac86432a4cadb593e7c66b88132f59193b9caaa267",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:33:16.639627+00:00",
+      "ended_at": "2026-10-29T04:33:16.755518+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7c3d1019aaab0faeefcc884a40abcd071829a3ee94808bfedd58f8ce1b3bdd98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "c565a77d5fa535beb40fcf621c12b83aeb0aa74d193b6137ec6a2399d1823f87"
+      ],
+      "started_at": "2026-10-29T04:33:16.755616+00:00",
+      "ended_at": "2026-10-29T04:33:16.774707+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "8f56f272bb310c7eec21390b885450b763ac0fb57f26768556285a305ab38d02",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:33:18.785163+00:00",
+      "ended_at": "2026-10-29T04:33:18.986880+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7c3d1019aaab0faeefcc884a40abcd071829a3ee94808bfedd58f8ce1b3bdd98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "c565a77d5fa535beb40fcf621c12b83aeb0aa74d193b6137ec6a2399d1823f87"
+      ],
+      "started_at": "2026-10-29T04:33:18.986938+00:00",
+      "ended_at": "2026-10-29T04:33:19.008575+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "8f56f272bb310c7eec21390b885450b763ac0fb57f26768556285a305ab38d02",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:33:21.012318+00:00",
+      "ended_at": "2026-10-29T04:33:21.217108+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7c3d1019aaab0faeefcc884a40abcd071829a3ee94808bfedd58f8ce1b3bdd98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "c565a77d5fa535beb40fcf621c12b83aeb0aa74d193b6137ec6a2399d1823f87"
+      ],
+      "started_at": "2026-10-29T04:33:21.217190+00:00",
+      "ended_at": "2026-10-29T04:33:21.238632+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "aee0561870e9e112e4efdf00ce7360c61d95d913ef9f0aace908f351e071ff1a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:33:23.249370+00:00",
+      "ended_at": "2026-10-29T04:33:23.431776+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7c3d1019aaab0faeefcc884a40abcd071829a3ee94808bfedd58f8ce1b3bdd98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "c565a77d5fa535beb40fcf621c12b83aeb0aa74d193b6137ec6a2399d1823f87"
+      ],
+      "started_at": "2026-10-29T04:33:23.431885+00:00",
+      "ended_at": "2026-10-29T04:33:23.453575+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "aee0561870e9e112e4efdf00ce7360c61d95d913ef9f0aace908f351e071ff1a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:33:25.463990+00:00",
+      "ended_at": "2026-10-29T04:33:25.595193+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7c3d1019aaab0faeefcc884a40abcd071829a3ee94808bfedd58f8ce1b3bdd98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "c565a77d5fa535beb40fcf621c12b83aeb0aa74d193b6137ec6a2399d1823f87"
+      ],
+      "started_at": "2026-10-29T04:33:25.595256+00:00",
+      "ended_at": "2026-10-29T04:33:25.616672+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "fdcecf1615097e96c47e25e252debdc2f67808b74120a2da6e99197cf058ecaf",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:33:27.622811+00:00",
+      "ended_at": "2026-10-29T04:33:27.782930+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7c3d1019aaab0faeefcc884a40abcd071829a3ee94808bfedd58f8ce1b3bdd98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "c565a77d5fa535beb40fcf621c12b83aeb0aa74d193b6137ec6a2399d1823f87"
+      ],
+      "started_at": "2026-10-29T04:33:27.783006+00:00",
+      "ended_at": "2026-10-29T04:33:27.803539+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "fdcecf1615097e96c47e25e252debdc2f67808b74120a2da6e99197cf058ecaf",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:33:29.814410+00:00",
+      "ended_at": "2026-10-29T04:33:29.946528+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7c3d1019aaab0faeefcc884a40abcd071829a3ee94808bfedd58f8ce1b3bdd98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "c565a77d5fa535beb40fcf621c12b83aeb0aa74d193b6137ec6a2399d1823f87"
+      ],
+      "started_at": "2026-10-29T04:33:29.946604+00:00",
+      "ended_at": "2026-10-29T04:33:29.968842+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "ab67d0c0fc6104f8bd914f6719ec62436dab09483ceea98b67a376c18f9d0a0f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:33:31.979509+00:00",
+      "ended_at": "2026-10-29T04:33:32.134955+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7c3d1019aaab0faeefcc884a40abcd071829a3ee94808bfedd58f8ce1b3bdd98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "c565a77d5fa535beb40fcf621c12b83aeb0aa74d193b6137ec6a2399d1823f87"
+      ],
+      "started_at": "2026-10-29T04:33:32.135012+00:00",
+      "ended_at": "2026-10-29T04:33:32.158362+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "ab67d0c0fc6104f8bd914f6719ec62436dab09483ceea98b67a376c18f9d0a0f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:33:34.169126+00:00",
+      "ended_at": "2026-10-29T04:33:34.330285+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7c3d1019aaab0faeefcc884a40abcd071829a3ee94808bfedd58f8ce1b3bdd98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "c565a77d5fa535beb40fcf621c12b83aeb0aa74d193b6137ec6a2399d1823f87"
+      ],
+      "started_at": "2026-10-29T04:33:34.330708+00:00",
+      "ended_at": "2026-10-29T04:33:34.352096+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "71e595c9a6c3841fa29af64473aac17cb6393c4f9d1c3c8fc4ed85bcb527cd6c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "local-image-id",
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "--format",
+        "{{.Id}}",
+        "ai-review-console-langflow:latest"
+      ],
+      "started_at": "2026-10-29T04:34:19.267652+00:00",
+      "ended_at": "2026-10-29T04:34:19.345619+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "165b3ddc6f54d57bd9859bd15025a90a6d8bf5e7740a5f934abb72fe080ab427",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "restore-langflow",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "up",
+        "-d",
+        "--no-deps",
+        "--no-build",
+        "--pull",
+        "never",
+        "--force-recreate",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:34:19.345965+00:00",
+      "ended_at": "2026-10-29T04:34:25.794415+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "cb5f7ec14999fd7fd9d0f9eb29cb4d97c4706c229a47fffc88e522ad2b274294",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:34:25.794660+00:00",
+      "ended_at": "2026-10-29T04:34:25.902753+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "841efdd7842e42006f0f23c3d65fa90670de563996c6574a609d272946f9024d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "16ad12371aac8710eb63a1145cbc6b824e80e9531f7e8de7a104d77cf87b98f1"
+      ],
+      "started_at": "2026-10-29T04:34:25.902818+00:00",
+      "ended_at": "2026-10-29T04:34:25.929915+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "320a42bafb858192c6782cebf9055eb81ef08fcf7b9210298c3956adf63e7e0e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:34:27.940707+00:00",
+      "ended_at": "2026-10-29T04:34:28.070066+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "841efdd7842e42006f0f23c3d65fa90670de563996c6574a609d272946f9024d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "16ad12371aac8710eb63a1145cbc6b824e80e9531f7e8de7a104d77cf87b98f1"
+      ],
+      "started_at": "2026-10-29T04:34:28.070136+00:00",
+      "ended_at": "2026-10-29T04:34:28.093301+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "0eb0dbc10b242f69f0d19a521821c3146c00483ba63a54cc00d1251e9ea36c85",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:34:30.103608+00:00",
+      "ended_at": "2026-10-29T04:34:30.205195+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "841efdd7842e42006f0f23c3d65fa90670de563996c6574a609d272946f9024d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "16ad12371aac8710eb63a1145cbc6b824e80e9531f7e8de7a104d77cf87b98f1"
+      ],
+      "started_at": "2026-10-29T04:34:30.205241+00:00",
+      "ended_at": "2026-10-29T04:34:30.221792+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "320a42bafb858192c6782cebf9055eb81ef08fcf7b9210298c3956adf63e7e0e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:34:32.232380+00:00",
+      "ended_at": "2026-10-29T04:34:32.331596+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "841efdd7842e42006f0f23c3d65fa90670de563996c6574a609d272946f9024d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "16ad12371aac8710eb63a1145cbc6b824e80e9531f7e8de7a104d77cf87b98f1"
+      ],
+      "started_at": "2026-10-29T04:34:32.331677+00:00",
+      "ended_at": "2026-10-29T04:34:32.348899+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "bc796693316e4855b8e40c29579dd02df0e5232e1a4088ab96852d1d9aae0ac9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:34:34.352617+00:00",
+      "ended_at": "2026-10-29T04:34:34.485045+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "841efdd7842e42006f0f23c3d65fa90670de563996c6574a609d272946f9024d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "16ad12371aac8710eb63a1145cbc6b824e80e9531f7e8de7a104d77cf87b98f1"
+      ],
+      "started_at": "2026-10-29T04:34:34.485123+00:00",
+      "ended_at": "2026-10-29T04:34:34.504476+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "4f6244b8b4c722ccd4254392bba6c585a2e1b6c712523c9d5341378275b1d59d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:34:36.510436+00:00",
+      "ended_at": "2026-10-29T04:34:36.628694+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "841efdd7842e42006f0f23c3d65fa90670de563996c6574a609d272946f9024d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "16ad12371aac8710eb63a1145cbc6b824e80e9531f7e8de7a104d77cf87b98f1"
+      ],
+      "started_at": "2026-10-29T04:34:36.628766+00:00",
+      "ended_at": "2026-10-29T04:34:36.647115+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "751d87150a86b0b376e07fd7bd92c1084a51ad96c2d239788d4d4f9a19723a2b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:34:38.657599+00:00",
+      "ended_at": "2026-10-29T04:34:38.873710+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "841efdd7842e42006f0f23c3d65fa90670de563996c6574a609d272946f9024d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "16ad12371aac8710eb63a1145cbc6b824e80e9531f7e8de7a104d77cf87b98f1"
+      ],
+      "started_at": "2026-10-29T04:34:38.873779+00:00",
+      "ended_at": "2026-10-29T04:34:38.892028+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "2dfc50fc9379e18a697ae5e234349c24f56599d6bdfa626f29daf89e9c8e3db8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:34:40.895602+00:00",
+      "ended_at": "2026-10-29T04:34:41.059320+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "841efdd7842e42006f0f23c3d65fa90670de563996c6574a609d272946f9024d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "16ad12371aac8710eb63a1145cbc6b824e80e9531f7e8de7a104d77cf87b98f1"
+      ],
+      "started_at": "2026-10-29T04:34:41.059426+00:00",
+      "ended_at": "2026-10-29T04:34:41.087226+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "213332b10c0d02995208ccda0aae9ded00e63befcd9cebfa7d33c54c9feb7309",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:34:43.095931+00:00",
+      "ended_at": "2026-10-29T04:34:44.839410+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "841efdd7842e42006f0f23c3d65fa90670de563996c6574a609d272946f9024d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "16ad12371aac8710eb63a1145cbc6b824e80e9531f7e8de7a104d77cf87b98f1"
+      ],
+      "started_at": "2026-10-29T04:34:44.839586+00:00",
+      "ended_at": "2026-10-29T04:34:44.885844+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "6ff4db7d8ec5a9abf425931fd7c42113aae3e26e0caa8a28dc674cfd57077d01",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:34:46.889647+00:00",
+      "ended_at": "2026-10-29T04:34:48.330582+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "841efdd7842e42006f0f23c3d65fa90670de563996c6574a609d272946f9024d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "16ad12371aac8710eb63a1145cbc6b824e80e9531f7e8de7a104d77cf87b98f1"
+      ],
+      "started_at": "2026-10-29T04:34:48.341256+00:00",
+      "ended_at": "2026-10-29T04:34:48.441845+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "c9ee2c8c63d5fd36b5d4f185e550463ac0f588e8a3269ac3bce5f57837f23095",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:34:50.453924+00:00",
+      "ended_at": "2026-10-29T04:34:51.802418+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "841efdd7842e42006f0f23c3d65fa90670de563996c6574a609d272946f9024d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "16ad12371aac8710eb63a1145cbc6b824e80e9531f7e8de7a104d77cf87b98f1"
+      ],
+      "started_at": "2026-10-29T04:34:51.810168+00:00",
+      "ended_at": "2026-10-29T04:34:51.880891+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "c9ee2c8c63d5fd36b5d4f185e550463ac0f588e8a3269ac3bce5f57837f23095",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:34:53.890978+00:00",
+      "ended_at": "2026-10-29T04:34:54.132424+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "841efdd7842e42006f0f23c3d65fa90670de563996c6574a609d272946f9024d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "16ad12371aac8710eb63a1145cbc6b824e80e9531f7e8de7a104d77cf87b98f1"
+      ],
+      "started_at": "2026-10-29T04:34:54.132542+00:00",
+      "ended_at": "2026-10-29T04:34:54.175033+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "48e6bf169cdc1361f2c77dfc6059455885c8c1ac3d3987e7a25f4063f0ee5b37",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:34:56.180517+00:00",
+      "ended_at": "2026-10-29T04:34:57.130653+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "841efdd7842e42006f0f23c3d65fa90670de563996c6574a609d272946f9024d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "16ad12371aac8710eb63a1145cbc6b824e80e9531f7e8de7a104d77cf87b98f1"
+      ],
+      "started_at": "2026-10-29T04:34:57.130817+00:00",
+      "ended_at": "2026-10-29T04:34:57.204481+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "1da43f5c4852ee03e7e75836ec42fab82be40c2e49fe953fe7260498c9c7d8cd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:34:59.207236+00:00",
+      "ended_at": "2026-10-29T04:34:59.638096+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "841efdd7842e42006f0f23c3d65fa90670de563996c6574a609d272946f9024d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "16ad12371aac8710eb63a1145cbc6b824e80e9531f7e8de7a104d77cf87b98f1"
+      ],
+      "started_at": "2026-10-29T04:34:59.638192+00:00",
+      "ended_at": "2026-10-29T04:34:59.672729+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "1da43f5c4852ee03e7e75836ec42fab82be40c2e49fe953fe7260498c9c7d8cd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-10-29T04:35:01.683204+00:00",
+      "ended_at": "2026-10-29T04:35:01.930023+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "841efdd7842e42006f0f23c3d65fa90670de563996c6574a609d272946f9024d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "16ad12371aac8710eb63a1145cbc6b824e80e9531f7e8de7a104d77cf87b98f1"
+      ],
+      "started_at": "2026-10-29T04:35:01.930096+00:00",
+      "ended_at": "2026-10-29T04:35:01.954148+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "2494a65da4d73cb5a630ddf222bfb6ff376cdd338f32120f588d18e35ef6a0da",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "published-flow-hashes",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "exec",
+        "-T",
+        "worker",
+        "python",
+        "-c",
+        "\nimport json\nfrom api.app.langflow_client import LangflowClient, flow_configuration, graph_hash\nclient=LangflowClient()\nresult={}\ntry:\n    for kind in ('intake','report'):\n        config=flow_configuration(kind)\n        graph=client.get_flow(config['id'],config['flow_hash'])\n        result[kind]={'id':config['id'],'flow_hash':graph_hash(graph),\n                      'config_hash':config['config_hash']}\n    print(json.dumps(result,sort_keys=True))\nfinally:\n    client.close()\n"
+      ],
+      "started_at": "2026-10-29T04:35:01.954809+00:00",
+      "ended_at": "2026-10-29T04:35:02.916248+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "0e6bc9c422a15ec1a78c2a7adef8827439e8a530f3316a83cbf8b43d2ec06032",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "database-counts",
+      "argv": [
+        "docker",
+        "compose",
+        "--project-directory",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发",
+        "-p",
+        "ai-review-console-upgrade",
+        "-f",
+        "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker-compose.yml",
+        "exec",
+        "-T",
+        "api",
+        "python",
+        "-c",
+        "import json; from sqlalchemy import text; from api.app.database import engine; c=engine.connect(); r={'active_jobs':c.execute(text(\"SELECT count(*) FROM workflow_jobs WHERE state IN ('queued','running','retry_wait')\")).scalar_one(),'case_count':c.execute(text('SELECT count(*) FROM review_cases')).scalar_one()}; p={'case_id':'RC-4eb0d6e1713543cea8688013dd7509de'}; r['decision_count']=c.execute(text('SELECT count(*) FROM decisions WHERE case_id=:case_id'),p).scalar_one(); r['decision_audit_count']=c.execute(text(\"SELECT count(*) FROM audit_events WHERE case_id=:case_id AND event_type='decision_recorded'\"),p).scalar_one(); print(json.dumps(r)); c.close()"
+      ],
+      "started_at": "2026-10-29T04:35:06.200722+00:00",
+      "ended_at": "2026-10-29T04:35:07.040172+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "290a7200d7f5ab98792d6c38100937adfadc376b3cec66aad8f19f580e91b14f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    }
+  ],
+  "files": [
+    {
+      "path": "final-report.json",
+      "bytes": 3943,
+      "sha256": "39a29d1ec02a4c3dd64cb63b1ef87d3552745861ffd467b84ecdb0f50d40fa80"
+    },
+    {
+      "path": "first-partial.json",
+      "bytes": 3204,
+      "sha256": "3b5dca5fa283d89cf2ecc6521e50a29572ce28b58592d63d7427abbf3197d83a"
+    },
+    {
+      "path": "first-report.html",
+      "bytes": 7764,
+      "sha256": "2bacfae2fa73c163a583dee09cf5e9ba8130020027b9d88dba225ed702fd4a65"
+    },
+    {
+      "path": "first-report.json",
+      "bytes": 3212,
+      "sha256": "de9eab7fb3a9ec52858a825f9544e6c998349fd9189f7cab76a0cd623becbbfc"
+    },
+    {
+      "path": "font-fault.compose.json",
+      "bytes": 175,
+      "sha256": "2da2f06ec3c1b4c7713fa8b7086aedeec6d11cb977b055d47dbc4a71c022e75f"
+    },
+    {
+      "path": "recovered-report.pdf",
+      "bytes": 39728,
+      "sha256": "db76ca99d10a53c88874cc8d9cd67e4559a253664f6bef7010da06ffd952e260"
+    },
+    {
+      "path": "restoration.json",
+      "bytes": 1247,
+      "sha256": "9d47ac89bbdc13e01ab248c773e9430ffd5941f871bae3f8e819b62949256a3d"
+    },
+    {
+      "path": "terminal-failed.json",
+      "bytes": 3193,
+      "sha256": "6b5a8286988a4545da7c54fe6948be09be8fb35f9bfa2d79c8dca2096aecf963"
+    }
+  ]
+}

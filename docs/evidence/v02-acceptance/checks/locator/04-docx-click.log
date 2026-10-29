@@ -1,0 +1,9 @@
+### Ran Playwright code
+```js
+await page.getByRole('button', { name: '查看证据：table:1/row:1/cell:' }).first().click();
+```
+### Page
+- Page URL: http://127.0.0.1:8080/#case/RC-5f3e993cc1b54903a06ee1dcef7a0ecc
+- Page Title: AI Review Console
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-10-29T04-28-14-270Z.yml)

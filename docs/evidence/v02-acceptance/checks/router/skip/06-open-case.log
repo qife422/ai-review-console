@@ -1,0 +1,11 @@
+### Ran Playwright code
+```js
+await page.goto('http://127.0.0.1:4183/#case/RC-SKIP-B');
+```
+### Page
+- Page URL: http://127.0.0.1:4183/#case/RC-SKIP-B
+- Page Title: AI Review Console
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-10-29T04-43-51-797Z.yml)
+### Events
+- New console entries: .playwright-cli/console-2026-10-29T04-43-45-319Z.log#L1-L7

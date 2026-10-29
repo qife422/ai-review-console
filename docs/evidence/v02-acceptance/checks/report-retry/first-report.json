@@ -1,0 +1,81 @@
+{
+  "assessment_id": "AS-4d92c8c14824448581c6ec5c7a74ddd4",
+  "audit_events": [
+    {
+      "actor": "Review API",
+      "detail": "接收虚构文档；字节指纹已固定，等待真实 Intake。",
+      "event_type": "document_received",
+      "id": 194,
+      "occurred_at": "2026-10-29T04:33:34.696620+00:00"
+    },
+    {
+      "actor": "Langflow Intake Flow",
+      "detail": "真实 Intake 结果已入库；规则分 28，待人工决定。",
+      "event_type": "case_scored",
+      "id": 195,
+      "occurred_at": "2026-10-29T04:33:36.226586+00:00"
+    },
+    {
+      "actor": "synthetic-report-validator",
+      "detail": "决定：changes_requested。理由：仅用虚构资料验证报告部分失败，人工决定应保留且现有报告不得被重写。",
+      "event_type": "decision_recorded",
+      "id": 196,
+      "occurred_at": "2026-10-29T04:33:36.840625+00:00"
+    }
+  ],
+  "audit_through_id": 196,
+  "case_id": "RC-4eb0d6e1713543cea8688013dd7509de",
+  "data_classification": "SYNTHETIC_DEMO_ONLY",
+  "decided_at": "2026-10-29T04:33:36.833794+00:00",
+  "decided_by": "synthetic-report-validator",
+  "decision": "changes_requested",
+  "decision_id": "DC-feeffd0c4ac344948cccdf1b0fb0b948",
+  "decision_reason": "仅用虚构资料验证报告部分失败，人工决定应保留且现有报告不得被重写。",
+  "dimensions": {
+    "financial": 0,
+    "legal": 84,
+    "policy": 0,
+    "privacy": 0,
+    "security": 0
+  },
+  "document_hash": "90fa93a046d44f47181fec2ae2fd7cbe25b36ee8d21a665e836f821fc9eb39d6",
+  "document_name": "report-font-188be9d6920d493486f3af7b78dc2e61.txt",
+  "document_version_id": "DV-cfae49c0276f4b9e902233d222649916",
+  "findings": [
+    {
+      "category": "legal",
+      "end": 104,
+      "evidence": "920d493486f3af7b78dc2e61\n供应方承担全部损失，且不设责任上限。",
+      "locator": "block:1",
+      "offset_basis": "unicode_code_points",
+      "points": 28,
+      "recommendation": "增加明确、对等且可量化的责任上限。",
+      "rule_id": "LEGAL-002",
+      "section_id": "section-0001",
+      "severity": "critical",
+      "start": 61,
+      "title": "责任上限缺失或无限责任"
+    }
+  ],
+  "generated_at": "2026-10-29T04:33:36.833794+00:00",
+  "hash_kind": "source_bytes_sha256",
+  "redaction_policy_hash": "fce85e9628300408945cfb77914f6d6d9fdfacc5ea6701e8e55a7443ef9f460e",
+  "redaction_policy_version": "2026.10.1",
+  "risk_level": "medium",
+  "risk_score": 28,
+  "ruleset_hash": "aa7f3162c2a2ef59093c477689a639952a8e2705ed892b233dbda3791f378d76",
+  "ruleset_version": "2026.10.1",
+  "snapshot_hash": "d6a039f2b4ada16b3a82fb7b464cc4699bf2ae2265523fb989a53ec69faeaf98",
+  "source_kind": "uploaded_demo",
+  "title": "虚构PDF部分失败与专用重试验收",
+  "workflow_engine": "Langflow",
+  "attribution": "基于 Langflow / Built on Langflow",
+  "synthetic_notice": "SYNTHETIC DEMO DATA ONLY / 演示仅使用虚构数据",
+  "report_template_version": "2026.10.1",
+  "font_resource": {
+    "name": "Noto Sans SC Regular",
+    "license": "SIL Open Font License 1.1",
+    "sha256": "e3b799e4230233500ff152d1cc81ade6c64acb34958c90cd6b6e02927a2923a9"
+  },
+  "report_title": "本次修订意见报告"
+}

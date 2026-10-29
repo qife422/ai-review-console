@@ -1,0 +1,12 @@
+### Browser `arc-v02-router` opened with pid 22347.
+### Ran Playwright code
+```js
+await page.goto('http://127.0.0.1:4182/#case/RC-5f3e993cc1b54903a06ee1dcef7a0ecc');
+```
+### Page
+- Page URL: http://127.0.0.1:4182/#case/RC-5f3e993cc1b54903a06ee1dcef7a0ecc
+- Page Title: AI Review Console
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-10-29T04-34-55-271Z.yml)
+### Events
+- New console entries: .playwright-cli/console-2026-10-29T04-34-48-274Z.log#L1-L7

@@ -1,0 +1,6 @@
+### Result
+{"url":"http://127.0.0.1:4182/#case/RC-98aacae843754218bfe76ffba1a2a0b0","timeOrigin":1793248488294.1,"heading":"真实工作流虚构验证 changes_requested","selectedTab":"规则发现","focus":{"tag":"H1","text":"真实工作流虚构验证 changes_requested"},"oldDocxTextPresent":false,"highlights":0}
+### Ran Playwright code
+```js
+await (async page => {await page.waitForFunction(()=>document.querySelector("h1")?.textContent==="真实工作流虚构验证 changes_requested",null,{timeout:10000});return await page.evaluate(()=>({url:location.href,timeOrigin:performance.timeOrigin,heading:document.querySelector("h1").textContent,selectedTab:document.querySelector("[role=tab][aria-selected=true]").textContent,focus:{tag:document.activeElement.tagName,text:document.activeElement.textContent},oldDocxTextPresent:document.body.innerText.includes("客户预付款90%"),highlights:document.querySelectorAll(".highlighted-section").length}));})(page);
+```

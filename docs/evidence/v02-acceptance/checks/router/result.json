@@ -1,0 +1,305 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "AC-15"
+  ],
+  "checked_at": "2026-10-29T04:36:33.718987+00:00",
+  "producer": "subagent CLI and Vitest/TypeScript regression",
+  "source_commit": "85dddfd43fa51abfa53c5291177dda818397139d",
+  "source_files": [
+    {
+      "path": "frontend/src/App.tsx",
+      "sha256": "0d2db9e25b3525c3733dc8ba924149da1b9c8dcbb7ca470cbb4ead4d760f954b"
+    },
+    {
+      "path": "frontend/src/App.test.tsx",
+      "sha256": "bef1a0178cbbd04f011ade5d47109e53d1be1c9a856979a9fdc13cdba47b234a"
+    }
+  ],
+  "change": "Synchronize hashchange/popstate once per route, abort and clear old detail, reject stale request results against current route. Existing internal navigation, approval and polling semantics retained.",
+  "tests": [
+    {
+      "argv": [
+        "npm",
+        "--prefix",
+        "frontend",
+        "test",
+        "--",
+        "--run"
+      ],
+      "result": "29 passed, 5 files",
+      "log": "frontend-tests-final.log"
+    },
+    {
+      "argv": [
+        "npm",
+        "--prefix",
+        "frontend",
+        "run",
+        "lint"
+      ],
+      "result": "passed",
+      "log": "typescript-final.log"
+    }
+  ],
+  "browser": {
+    "session": "arc-v02-router",
+    "base_url": "http://127.0.0.1:4182",
+    "server_command": [
+      "npm",
+      "--prefix",
+      "frontend",
+      "run",
+      "dev",
+      "--",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "4182",
+      "--strictPort"
+    ],
+    "checks": {
+      "same_document_without_reload": true,
+      "pdf_loaded": true,
+      "old_case_cleared": true,
+      "new_heading_focused": true,
+      "old_highlight_cleared": true,
+      "locator_tab": true,
+      "locator_focus": true,
+      "locator_highlight": true,
+      "locator_visible": true,
+      "real_browser_back": true,
+      "unknown_hash_dashboard": true,
+      "new_case_one_get": true
+    },
+    "docx_before": {
+      "url": "http://127.0.0.1:4182/#case/RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+      "timeOrigin": 1793248488294.1,
+      "heading": "真实工作流虚构验证 rejected",
+      "selectedTab": "文档对照",
+      "focusId": "evidence-section-section-0004",
+      "highlights": [
+        {
+          "id": "evidence-section-section-0004",
+          "locator": "table:1/row:1/cell:1"
+        }
+      ]
+    },
+    "pdf_after": {
+      "url": "http://127.0.0.1:4182/#case/RC-98aacae843754218bfe76ffba1a2a0b0",
+      "timeOrigin": 1793248488294.1,
+      "heading": "真实工作流虚构验证 changes_requested",
+      "selectedTab": "规则发现",
+      "focus": {
+        "tag": "H1",
+        "text": "真实工作流虚构验证 changes_requested"
+      },
+      "oldDocxTextPresent": false,
+      "highlights": 0
+    },
+    "pdf_locator": {
+      "url": "http://127.0.0.1:4182/#case/RC-98aacae843754218bfe76ffba1a2a0b0",
+      "selectedTab": "文档对照",
+      "focusId": "evidence-section-section-0001",
+      "targetId": "evidence-section-section-0001",
+      "locator": "page:1",
+      "highlighted": true,
+      "visible": true,
+      "text": "SYNTHETIC DEMO DOCUMENT\nBuilt on Langflow\n执行验证 7aea71efd5ec4cec80c3436af61de10e\n[PERSON_01]，个人手机号[PHONE_01]。使用共享账号和明文密码。"
+    },
+    "browser_back": {
+      "url": "http://127.0.0.1:4182/#case/RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+      "timeOrigin": 1793248488294.1,
+      "heading": "真实工作流虚构验证 rejected",
+      "selectedTab": "规则发现",
+      "focus": {
+        "tag": "H1",
+        "text": "真实工作流虚构验证 rejected"
+      },
+      "oldPdfTextPresent": false
+    },
+    "unknown_hash": {
+      "url": "http://127.0.0.1:4182/#unknown",
+      "timeOrigin": 1793248488294.1,
+      "heading": "文档风险与决策",
+      "focus": {
+        "tag": "H1",
+        "text": "文档风险与决策"
+      }
+    },
+    "closed": true,
+    "server_stopped": true,
+    "screenshot": "pdf-locator-after-route.png",
+    "screenshot_visually_reviewed": true
+  },
+  "unchanged_outputs": [
+    "frontend/dist",
+    "online-demo"
+  ],
+  "skills": {
+    "primary": "design-taste-frontend: existing Carbon product UI preserved; marketing/visual redesign directives not applicable",
+    "auxiliary": "playwright: existing cached CLI, sole browser automation capability"
+  },
+  "limitations": [
+    "The public static demo and packaged frontend/dist have not been rebuilt or deployed with this change.",
+    "One initial TypeScript test typing issue was fixed (nullable value assigned only inside callback); final source checks passed."
+  ],
+  "result": "passed",
+  "files": [
+    {
+      "name": "01-open-docx.log",
+      "bytes": 457,
+      "sha256": "ac00a4e4b8c45eae1719ada2f0614a263254c7db8c8824f81cd1f1d54d7f21f0"
+    },
+    {
+      "name": "01-open-docx.yml",
+      "bytes": 7949,
+      "sha256": "e8f036b5bc7e0b9d4408a481143319dd369b7d85285430b9fd68ce35d774b550"
+    },
+    {
+      "name": "02-docx-ready.log",
+      "bytes": 582,
+      "sha256": "67a65f897a5940cdaaa2ee48a2d4a8e01ec43d69e95226a53b5cad5ba839961f"
+    },
+    {
+      "name": "03-resize.log",
+      "bytes": 93,
+      "sha256": "6d71f9f29bc176b37c24390dad8dd251ee3eb35546959ebd2e26720302a96a20"
+    },
+    {
+      "name": "04-docx-locator.log",
+      "bytes": 324,
+      "sha256": "a0aeced4f8c1712b9057896cf64549b24d5c27c0bd758b979f344cb70a4dde80"
+    },
+    {
+      "name": "04-docx-locator.yml",
+      "bytes": 7153,
+      "sha256": "a1b5e8ad8a44eee5c476feabf4799f69b1e4aca27c4e535ee7449c6388d85718"
+    },
+    {
+      "name": "05-before-route.log",
+      "bytes": 790,
+      "sha256": "13a734be2cba6a2f5eda31e72f41ef5e01cbf64929a672fa0681b38118b038dd"
+    },
+    {
+      "name": "06-pdf-hash.log",
+      "bytes": 312,
+      "sha256": "94842577204b79134480f07897055f9a8c16df3569434dfa3fa7183bad77d700"
+    },
+    {
+      "name": "06-pdf-hash.yml",
+      "bytes": 8081,
+      "sha256": "a679c6467d775f91d4da8543032166f2a66c9924f818b7bdc7a8c9ff5d5976fb"
+    },
+    {
+      "name": "07-pdf-updated.log",
+      "bytes": 973,
+      "sha256": "01bd98e3ca506802e6980a446c58fa4b3e82c1840efb4b68beb3891bc7833660"
+    },
+    {
+      "name": "08-pdf-ready.log",
+      "bytes": 8224,
+      "sha256": "d2eab9b37672386daddb0cccc7b4eb1d811457782a897ccd98f6dc9ad2256e11"
+    },
+    {
+      "name": "09-pdf-locator.log",
+      "bytes": 310,
+      "sha256": "e4766e7f0c9c2475e2c7bb6ee3cb1136f7c74f842d4effe9a250270577d1980b"
+    },
+    {
+      "name": "09-pdf-locator.yml",
+      "bytes": 6491,
+      "sha256": "2616190b5c6790fb0788ac05a05e1186cd6dd6aad51bf342226b88fc712400f4"
+    },
+    {
+      "name": "10-pdf-locator-dom.log",
+      "bytes": 967,
+      "sha256": "3a4eb935328e4e90b7f1d7d292023b8f42e16c607c3a3137dcb145eb09afa19a"
+    },
+    {
+      "name": "11-pdf-locator-image.log",
+      "bytes": 540,
+      "sha256": "b968d347d8631b758a11b4c33d1702c9d37cc9d59cbaccc42bd13928cb1153da"
+    },
+    {
+      "name": "12-request-methods.log",
+      "bytes": 171,
+      "sha256": "722d7262da1b2dd48ce3137e5ac2d260c79c88ac5143a15d1ae350876de00c32"
+    },
+    {
+      "name": "13-back-docx.log",
+      "bytes": 249,
+      "sha256": "42b6649c9c61442fd1039e5cb3b8cedf5bca0e350dd8e0cdf090e12f2ec73845"
+    },
+    {
+      "name": "13-back-docx.yml",
+      "bytes": 1462,
+      "sha256": "81d6a947ac640caa12d0168537e4dc465a3081324c57db8077f4af54fd9a6930"
+    },
+    {
+      "name": "14-back-confirmed.log",
+      "bytes": 868,
+      "sha256": "3ec0901fdec9353fd55adc68b7385283785cc711a1c779b31c14aab2f61c06f6"
+    },
+    {
+      "name": "15-unknown-hash.log",
+      "bytes": 339,
+      "sha256": "64fd18ada39783c575e83a542ca62552befc25d4ed8850bfdddeadd52b11d977"
+    },
+    {
+      "name": "15-unknown-hash.yml",
+      "bytes": 7501,
+      "sha256": "7825008c80a823903a1e026235bb2d077d1fc62a5420b117b163f22238842c49"
+    },
+    {
+      "name": "16-unknown-fallback.log",
+      "bytes": 574,
+      "sha256": "70842b711821fceb3233fa184061654a05ff9f7adb98e7d23c68cd5da9128a70"
+    },
+    {
+      "name": "17-browser-close.log",
+      "bytes": 33,
+      "sha256": "81020ca3b70cfeb95707fa10585808264a8747a41df550b0de45d80a1b27fc9b"
+    },
+    {
+      "name": "app-tests.log",
+      "bytes": 325,
+      "sha256": "8ef93471963a1580a0f066b93d864619fde0e5798c691521fa9bc2655f55aaf5"
+    },
+    {
+      "name": "commands.json",
+      "bytes": 8280,
+      "sha256": "9bc6d7acb62bd4afc49a3feb597dcb383fd166480e8478c7529c0d2d5d8333af"
+    },
+    {
+      "name": "frontend-tests-final.log",
+      "bytes": 312,
+      "sha256": "7268872e9016f7ac369339f39e1aa3d913635c70d8edb70b66c347170900a067"
+    },
+    {
+      "name": "pdf-locator-after-route.png",
+      "bytes": 113741,
+      "sha256": "443bf2aa89d61223966fe8b0ce952a6e10991665598b788b0fd4911188368de2"
+    },
+    {
+      "name": "record_cli.py",
+      "bytes": 874,
+      "sha256": "4b54d60b5819ee6dd6bbb3aadb0c56660aba3421aac7b310cf72e435716d57c4"
+    },
+    {
+      "name": "server-stopped.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "typescript-final.log",
+      "bytes": 141,
+      "sha256": "8ea0103cc704725503eb7ce55ee6de5e170808ab42861f9c7e99f34b9b325603"
+    },
+    {
+      "name": "typescript.log",
+      "bytes": 232,
+      "sha256": "d02c65abafa7a6678efea56532028f8f339db2b73404a947e7c833a6a0afbde9"
+    }
+  ]
+}

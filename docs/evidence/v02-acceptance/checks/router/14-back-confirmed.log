@@ -1,0 +1,6 @@
+### Result
+{"url":"http://127.0.0.1:4182/#case/RC-5f3e993cc1b54903a06ee1dcef7a0ecc","timeOrigin":1793248488294.1,"heading":"真实工作流虚构验证 rejected","selectedTab":"规则发现","focus":{"tag":"H1","text":"真实工作流虚构验证 rejected"},"oldPdfTextPresent":false}
+### Ran Playwright code
+```js
+await (async page => {await page.waitForFunction(()=>document.querySelector("h1")?.textContent==="真实工作流虚构验证 rejected",null,{timeout:10000});return await page.evaluate(()=>({url:location.href,timeOrigin:performance.timeOrigin,heading:document.querySelector("h1").textContent,selectedTab:document.querySelector("[role=tab][aria-selected=true]").textContent,focus:{tag:document.activeElement.tagName,text:document.activeElement.textContent},oldPdfTextPresent:document.body.innerText.includes("个人手机号[PHONE_01]")}));})(page);
+```

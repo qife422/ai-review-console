@@ -1,0 +1,222 @@
+[
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-router",
+      "open",
+      "http://127.0.0.1:4182/#case/RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+      "--headed"
+    ],
+    "at": "2026-10-29T04:34:55.321239+00:00",
+    "exit_code": 0,
+    "log": "01-open-docx.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-router",
+      "run-code",
+      "async page => {await page.waitForFunction(()=>document.querySelector(\"h1\")?.textContent===\"\u771f\u5b9e\u5de5\u4f5c\u6d41\u865a\u6784\u9a8c\u8bc1 rejected\",null,{timeout:15000});return {heading:await page.locator(\"h1\").innerText(),url:page.url(),focus:await page.evaluate(()=>({tag:document.activeElement.tagName,text:document.activeElement.textContent}))};}"
+    ],
+    "at": "2026-10-29T04:35:04.156469+00:00",
+    "exit_code": 0,
+    "log": "02-docx-ready.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-router",
+      "resize",
+      "1440",
+      "1000"
+    ],
+    "at": "2026-10-29T04:35:20.261730+00:00",
+    "exit_code": 0,
+    "log": "03-resize.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-router",
+      "click",
+      "e194"
+    ],
+    "at": "2026-10-29T04:35:21.570424+00:00",
+    "exit_code": 0,
+    "log": "04-docx-locator.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-router",
+      "eval",
+      "() => ({url:location.href,timeOrigin:performance.timeOrigin,heading:document.querySelector(\"h1\").textContent,selectedTab:document.querySelector(\"[role=tab][aria-selected=true]\").textContent,focusId:document.activeElement.id,highlights:[...document.querySelectorAll(\".highlighted-section\")].map(s=>({id:s.id,locator:s.querySelector(\"small\").textContent}))})"
+    ],
+    "at": "2026-10-29T04:35:22.407775+00:00",
+    "exit_code": 0,
+    "log": "05-before-route.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-router",
+      "goto",
+      "http://127.0.0.1:4182/#case/RC-98aacae843754218bfe76ffba1a2a0b0"
+    ],
+    "at": "2026-10-29T04:35:23.267486+00:00",
+    "exit_code": 0,
+    "log": "06-pdf-hash.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-router",
+      "run-code",
+      "async page => {await page.waitForFunction(()=>document.querySelector(\"h1\")?.textContent===\"\u771f\u5b9e\u5de5\u4f5c\u6d41\u865a\u6784\u9a8c\u8bc1 changes_requested\",null,{timeout:10000});return await page.evaluate(()=>({url:location.href,timeOrigin:performance.timeOrigin,heading:document.querySelector(\"h1\").textContent,selectedTab:document.querySelector(\"[role=tab][aria-selected=true]\").textContent,focus:{tag:document.activeElement.tagName,text:document.activeElement.textContent},oldDocxTextPresent:document.body.innerText.includes(\"\u5ba2\u6237\u9884\u4ed8\u6b3e90%\"),highlights:document.querySelectorAll(\".highlighted-section\").length}));}"
+    ],
+    "at": "2026-10-29T04:35:24.080200+00:00",
+    "exit_code": 0,
+    "log": "07-pdf-updated.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-router",
+      "snapshot"
+    ],
+    "at": "2026-10-29T04:35:24.429959+00:00",
+    "exit_code": 0,
+    "log": "08-pdf-ready.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-router",
+      "click",
+      "e405"
+    ],
+    "at": "2026-10-29T04:35:38.242908+00:00",
+    "exit_code": 0,
+    "log": "09-pdf-locator.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-router",
+      "eval",
+      "() => {const s=document.getElementById(\"evidence-section-section-0001\");const r=s.getBoundingClientRect();return {url:location.href,selectedTab:document.querySelector(\"[role=tab][aria-selected=true]\").textContent,focusId:document.activeElement.id,targetId:s.id,locator:s.querySelector(\"small\").textContent,highlighted:s.classList.contains(\"highlighted-section\"),visible:r.top>=0&&r.bottom<=innerHeight,text:s.querySelector(\"pre\").textContent};}"
+    ],
+    "at": "2026-10-29T04:35:39.079311+00:00",
+    "exit_code": 0,
+    "log": "10-pdf-locator-dom.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-router",
+      "screenshot",
+      "--filename",
+      "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/router/pdf-locator-after-route.png"
+    ],
+    "at": "2026-10-29T04:35:39.561344+00:00",
+    "exit_code": 0,
+    "log": "11-pdf-locator-image.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-router",
+      "requests"
+    ],
+    "at": "2026-10-29T04:35:39.896235+00:00",
+    "exit_code": 0,
+    "log": "12-request-methods.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-router",
+      "go-back"
+    ],
+    "at": "2026-10-29T04:35:40.396754+00:00",
+    "exit_code": 0,
+    "log": "13-back-docx.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-router",
+      "run-code",
+      "async page => {await page.waitForFunction(()=>document.querySelector(\"h1\")?.textContent===\"\u771f\u5b9e\u5de5\u4f5c\u6d41\u865a\u6784\u9a8c\u8bc1 rejected\",null,{timeout:10000});return await page.evaluate(()=>({url:location.href,timeOrigin:performance.timeOrigin,heading:document.querySelector(\"h1\").textContent,selectedTab:document.querySelector(\"[role=tab][aria-selected=true]\").textContent,focus:{tag:document.activeElement.tagName,text:document.activeElement.textContent},oldPdfTextPresent:document.body.innerText.includes(\"\u4e2a\u4eba\u624b\u673a\u53f7[PHONE_01]\")}));}"
+    ],
+    "at": "2026-10-29T04:35:41.232572+00:00",
+    "exit_code": 0,
+    "log": "14-back-confirmed.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-router",
+      "goto",
+      "http://127.0.0.1:4182/#unknown"
+    ],
+    "at": "2026-10-29T04:35:59.412861+00:00",
+    "exit_code": 0,
+    "log": "15-unknown-hash.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-router",
+      "run-code",
+      "async page => {await page.waitForFunction(()=>document.querySelector(\"h1\")?.textContent===\"\u6587\u6863\u98ce\u9669\u4e0e\u51b3\u7b56\",null,{timeout:10000});return await page.evaluate(()=>({url:location.href,timeOrigin:performance.timeOrigin,heading:document.querySelector(\"h1\").textContent,focus:{tag:document.activeElement.tagName,text:document.activeElement.textContent}}));}"
+    ],
+    "at": "2026-10-29T04:36:00.260024+00:00",
+    "exit_code": 0,
+    "log": "16-unknown-fallback.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-router",
+      "close"
+    ],
+    "at": "2026-10-29T04:36:01.737732+00:00",
+    "exit_code": 0,
+    "log": "17-browser-close.log"
+  }
+]

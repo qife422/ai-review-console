@@ -1,0 +1,5 @@
+{"mode": "before_execution", "case_id": "RC-a43ab2a785974286a834eae458ea8b6f", "result": "passed", "seconds": 96.699}
+{"mode": "after_callback", "case_id": "RC-09d903b0982944ad947a50f220e06852", "result": "passed", "seconds": 7.169}
+{"mode": "langflow_unavailable", "case_id": "RC-d769a7d4f1d1409ebf2808b92327cbc1", "result": "passed", "seconds": 15.203}
+{"mode": "callback_unavailable", "case_id": "RC-eb709c55c42a4e62a7cb9691fdf15468", "result": "passed", "seconds": 16.477}
+{"manifest": "/private/tmp/arc-v02-acceptance.UYLZxy/faults.json", "sha256": "99b13319226bb4ce1d26d5d59b2a8e1d288756ef00cee1701ead83da15f97c5c"}

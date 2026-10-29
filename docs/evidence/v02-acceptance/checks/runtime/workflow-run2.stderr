@@ -1,0 +1,25 @@
+Verified TXT Intake / approved / three reports
+Verified DOCX Intake / rejected / three reports
+Verified PDF Intake / changes_requested / three reports
+Verified Markdown Intake
+Verified missing-marker failure and deduplicated manual retry
+Benchmark 1/20: upload=0.126s Intake=1.375s
+Benchmark 2/20: upload=0.095s Intake=2.314s
+Benchmark 3/20: upload=0.065s Intake=2.187s
+Benchmark 4/20: upload=0.061s Intake=3.199s
+Benchmark 5/20: upload=0.039s Intake=2.133s
+Benchmark 6/20: upload=0.084s Intake=2.181s
+Benchmark 7/20: upload=0.036s Intake=2.176s
+Benchmark 8/20: upload=0.086s Intake=3.306s
+Benchmark 9/20: upload=0.038s Intake=2.222s
+Benchmark 10/20: upload=0.044s Intake=2.271s
+Benchmark 11/20: upload=0.029s Intake=2.244s
+Benchmark 12/20: upload=0.030s Intake=2.314s
+Benchmark 13/20: upload=0.036s Intake=2.189s
+Benchmark 14/20: upload=0.022s Intake=2.167s
+Benchmark 15/20: upload=0.061s Intake=2.214s
+Benchmark 16/20: upload=0.033s Intake=2.218s
+Benchmark 17/20: upload=0.038s Intake=3.420s
+Benchmark 18/20: upload=0.050s Intake=2.190s
+Benchmark 19/20: upload=0.066s Intake=2.144s
+Benchmark 20/20: upload=0.024s Intake=2.122s

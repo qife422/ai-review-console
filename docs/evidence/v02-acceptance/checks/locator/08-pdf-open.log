@@ -1,0 +1,9 @@
+### Ran Playwright code
+```js
+await page.goto('http://127.0.0.1:8080/#case/RC-98aacae843754218bfe76ffba1a2a0b0');
+```
+### Page
+- Page URL: http://127.0.0.1:8080/#case/RC-98aacae843754218bfe76ffba1a2a0b0
+- Page Title: AI Review Console
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-10-29T04-28-24-778Z.yml)

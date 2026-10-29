@@ -1,0 +1,11 @@
+### Ran Playwright code
+```js
+await page.goto('http://127.0.0.1:4182/#unknown');
+```
+### Page
+- Page URL: http://127.0.0.1:4182/#unknown
+- Page Title: AI Review Console
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-10-29T04-35-59-402Z.yml)
+### Events
+- New console entries: .playwright-cli/console-2026-10-29T04-35-59-201Z.log#L1-L3

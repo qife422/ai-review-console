@@ -1,0 +1,449 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "producer": "scripts/validate_langflow.py",
+  "producer_sha256": "4784e5164eb41004c0029a76a8c1c00eb1b977461ca7c58e37a9d75f6e8cdc2e",
+  "command": [
+    "scripts/validate_langflow.py",
+    "--api-url",
+    "http://127.0.0.1:8000",
+    "--evidence",
+    "/private/tmp/arc-v02-acceptance.UYLZxy/workflow.json",
+    "--benchmark-count",
+    "20"
+  ],
+  "checked_at": "2026-10-29T04:21:39.214862+00:00",
+  "langflow_version": "1.11.6",
+  "acceptance": [
+    "AC-02",
+    "AC-04",
+    "AC-05",
+    "AC-13",
+    "AC-18"
+  ],
+  "component_count": 5,
+  "build_input": "authenticated Build API data override; no per-case PATCH",
+  "runtime_transport": "arc-runtime-v1: base64 of canonical UTF-8 JSON",
+  "stored_flow_hashes_before": {
+    "Document Review Intake": "e1b0cdcd3c26657da65069d0c344ec3fab87947b4e5cacb6bd1f15796e9dd7c7",
+    "Document Review Decision": "5c423209971c9d6263538e5ca15a4896f3505e2b5e084fbffbfccd2308e531d7"
+  },
+  "stored_flow_hashes_after": {
+    "Document Review Intake": "e1b0cdcd3c26657da65069d0c344ec3fab87947b4e5cacb6bd1f15796e9dd7c7",
+    "Document Review Decision": "5c423209971c9d6263538e5ca15a4896f3505e2b5e084fbffbfccd2308e531d7"
+  },
+  "cases": [
+    {
+      "case_id": "RC-6c12cc7245e34a018d145bbe7d588d6f",
+      "document_version_id": "DV-1056f732a4d04cb6a0256b58500ae874",
+      "intake_job_id": "JB-0c5418dfcfc44152a6d66962eafe34f4",
+      "intake_langflow_job_id": "0fed416b-8e14-402b-a4bf-c2f2656c4774",
+      "decision": "approved",
+      "decision_id": "DC-2589559184fe4adaa6b47be31356faab",
+      "report_langflow_job_id": "e9f09769-fbe4-4d3a-bb4f-d09f141bb8e0",
+      "source_sha256": "6f87114e23674d5e20ac4de38a1565aa151f022d8ec3c1f49b7c7e069afd15e7",
+      "source_format": "txt",
+      "reports": [
+        {
+          "format": "json",
+          "sha256": "b3a33536c2e245bd442d98899f9ef844037cab0d789ef00eebc39278a302c877",
+          "bytes": 3140
+        },
+        {
+          "format": "html",
+          "sha256": "8c9002f21dccca99d9bc5bbb2a88073c2ce2d539e96dd1b2159bf20743cef07b",
+          "bytes": 7620
+        },
+        {
+          "format": "pdf",
+          "sha256": "314d6d21759a2b004ccf8caa50aa9136f97f5c4c96ddd308d1cc208e6015f586",
+          "bytes": 38341
+        }
+      ]
+    },
+    {
+      "case_id": "RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+      "document_version_id": "DV-7572577550204dc8a690f828b56d456f",
+      "intake_job_id": "JB-8cbb20ada40d489bb503d7f7f187c962",
+      "intake_langflow_job_id": "f027d5e8-0d54-4aeb-8b0d-4af54f72186d",
+      "decision": "rejected",
+      "decision_id": "DC-d87e1000135c44d994cb19be6e875060",
+      "report_langflow_job_id": "d15bd1bd-a519-43ad-b3ab-deb6c4a27540",
+      "source_sha256": "aa58168c343272a3f6c179396980748ed43dde375036cfd01b5b280829243a05",
+      "source_format": "docx",
+      "reports": [
+        {
+          "format": "json",
+          "sha256": "463bbade89cfc45a705f6ea695c9725d803f5b0194481ed7eeaa2ff3f4954652",
+          "bytes": 3610
+        },
+        {
+          "format": "pdf",
+          "sha256": "918aacbd7e1aa32c52408ce72f0d3294a48a1a1ad44c2b8ef4a2cb80f3cd70c5",
+          "bytes": 40743
+        },
+        {
+          "format": "html",
+          "sha256": "8786a5a020e27476b206f3b1b4b36e73361907df96c58106025366a8ab085c57",
+          "bytes": 8564
+        }
+      ]
+    },
+    {
+      "case_id": "RC-98aacae843754218bfe76ffba1a2a0b0",
+      "document_version_id": "DV-6447f1f4640146f6a08de0242163ae40",
+      "intake_job_id": "JB-4dc7780bb76740a0baf1831441174a84",
+      "intake_langflow_job_id": "02304e32-b5f0-446c-8fef-c0534e6adc76",
+      "decision": "changes_requested",
+      "decision_id": "DC-6ddefb110c6b4b2a8b26ab09af8d0a9e",
+      "report_langflow_job_id": "8520acbb-4b58-4df7-8a9d-e7b448afa182",
+      "source_sha256": "777f4a0594e05e4fa9b44590f73a04fffc5cd313fd05e5c2afed09aa2f6e90bc",
+      "source_format": "pdf",
+      "reports": [
+        {
+          "format": "json",
+          "sha256": "c4a4e9b4dcb11a06ca43ab338adaab74d225b51786cfc12b16051ec8c382347d",
+          "bytes": 3725
+        },
+        {
+          "format": "html",
+          "sha256": "afddad30ecf8b28b73f167936a5ce2c6c75a3d261624787046ad849bcd482718",
+          "bytes": 8792
+        },
+        {
+          "format": "pdf",
+          "sha256": "fa09b507d8a1d5b4fb5e4a5ee8ee1d6f0eb9b898ba900b7fe1944e60c9b561ff",
+          "bytes": 41469
+        }
+      ]
+    }
+  ],
+  "markdown_intake": {
+    "case_id": "RC-870d601999c0449fab9ce2e82afacdc1",
+    "source_format": "md",
+    "source_sha256": "adaf610a897d7510cbb2890526b56b4b47e05a755081827d277ced2b4d52f5bd",
+    "intake_job": {
+      "job_id": "JB-15938909551344e9a948d13e038e0f96",
+      "kind": "intake",
+      "state": "succeeded",
+      "phase": "persisted",
+      "attempt": 1,
+      "retry_generation": 0,
+      "error_code": null,
+      "error_detail": null,
+      "retryable": false,
+      "langflow_job_id": "9866eb54-9c8e-4e24-8d75-8bb72f82c823",
+      "flow_id": "75cbcd63-8493-46d0-9feb-b6d757ca7ce9",
+      "flow_hash": "e1b0cdcd3c26657da65069d0c344ec3fab87947b4e5cacb6bd1f15796e9dd7c7",
+      "next_run_at": "2026-10-29T04:20:29.845395+00:00",
+      "created_at": "2026-10-29T04:20:29.845561+00:00"
+    }
+  },
+  "failure_retry": {
+    "case_id": "RC-00d5ed64225044fb9c1cdb37a9b2727c",
+    "document_version_id": "DV-40cbdf2402494bb4af2413b591eb3a3d",
+    "source_sha256": "e3fce5a734f20a4b18120a5857c966bbde59b1f4ddf8686135fa311f8edf1299",
+    "first_job": {
+      "job_id": "JB-2d9170a435ca46cfa3531d2242f40cd7",
+      "kind": "intake",
+      "state": "failed",
+      "phase": "failed",
+      "attempt": 1,
+      "retry_generation": 0,
+      "error_code": "synthetic_marker_missing",
+      "error_detail": "Document processing failed: synthetic_marker_missing",
+      "retryable": false,
+      "langflow_job_id": "80977d91-6e25-4bbb-ad8a-56d713d4b405",
+      "flow_id": "75cbcd63-8493-46d0-9feb-b6d757ca7ce9",
+      "flow_hash": "e1b0cdcd3c26657da65069d0c344ec3fab87947b4e5cacb6bd1f15796e9dd7c7",
+      "next_run_at": "2026-10-29T04:20:43.596033+00:00",
+      "created_at": "2026-10-29T04:20:31.991830+00:00"
+    },
+    "retry_job": {
+      "job_id": "JB-b086df8daa5143b484fe597fe6231b38",
+      "kind": "intake",
+      "state": "failed",
+      "phase": "failed",
+      "attempt": 1,
+      "retry_generation": 1,
+      "error_code": "synthetic_marker_missing",
+      "error_detail": "Document processing failed: synthetic_marker_missing",
+      "retryable": false,
+      "langflow_job_id": "34fda630-2650-49aa-9ded-b59068980479",
+      "flow_id": "75cbcd63-8493-46d0-9feb-b6d757ca7ce9",
+      "flow_hash": "e1b0cdcd3c26657da65069d0c344ec3fab87947b4e5cacb6bd1f15796e9dd7c7",
+      "next_run_at": "2026-10-29T04:20:46.731652+00:00",
+      "created_at": "2026-10-29T04:20:44.544067+00:00"
+    },
+    "same_key_upload_and_retry_deduplicated": true,
+    "audit_event_counts": {
+      "document_received": 1,
+      "intake_retry_requested": 1,
+      "intake_failed": 2
+    },
+    "result": "failed as expected; unscored; same case/version; one manual retry generation"
+  },
+  "benchmark": {
+    "environment": {
+      "host_platform": "macOS-26.5.2-arm64-arm-64bit",
+      "host_machine": "arm64",
+      "docker_server_version": "28.3.2",
+      "docker_cpu_count": 8,
+      "docker_memory_bytes": 4109803520
+    },
+    "method": "20-or-fewer sequential 1 MiB TXT uploads; loopback API; AI disabled",
+    "samples": [
+      {
+        "case_id": "RC-c97fdd3ef7f3405394020379602107de",
+        "job_id": "JB-43ae8a3b87e0433cba503ce91df080a9",
+        "langflow_job_id": "943bffba-ab9e-44df-9d9a-5eb7b02553b3",
+        "source_bytes": 1048576,
+        "source_sha256": "7b4009769296e9c0ec425816bea68aa8c2da3ce8b35a01e391c39d1ca8654dd1",
+        "upload_seconds": 0.126427,
+        "intake_seconds": 1.374629
+      },
+      {
+        "case_id": "RC-7dfb602169034c41bb2c55ef704fdfde",
+        "job_id": "JB-f771ead3564d4ec989eb26ded33190fc",
+        "langflow_job_id": "0843ee10-b891-4e2c-8618-7d0a213361e6",
+        "source_bytes": 1048576,
+        "source_sha256": "57bda318e38bb537a778caace6616db3e43582ffecb4fe3de92da96813cfe3ab",
+        "upload_seconds": 0.094931,
+        "intake_seconds": 2.314301
+      },
+      {
+        "case_id": "RC-157e234157d5465399f69ee4fa6fbddf",
+        "job_id": "JB-fdb6fa016d154a8eadaaa1898e56dd15",
+        "langflow_job_id": "1b418b9f-a8df-47c9-aa6d-07151951a95e",
+        "source_bytes": 1048576,
+        "source_sha256": "29ff8cb44799ea7ce4e63057ef97d8bd5f9c730ce34a221889b479ddce801d29",
+        "upload_seconds": 0.065169,
+        "intake_seconds": 2.187099
+      },
+      {
+        "case_id": "RC-9356c49d039b43528b8011225167077e",
+        "job_id": "JB-df38dbce9c0a43899c8a3b84029ed3b4",
+        "langflow_job_id": "e381b29f-73c4-4415-a0ba-1d4fc9ccec52",
+        "source_bytes": 1048576,
+        "source_sha256": "cb89c5db088625f7779f2c1917648b686b46b552b44965d603a6bd4ec96f1bb5",
+        "upload_seconds": 0.061057,
+        "intake_seconds": 3.198968
+      },
+      {
+        "case_id": "RC-e691c787f365465f83ddc9e6f661a16f",
+        "job_id": "JB-a5935d22e49a46c481cc755d37f5548a",
+        "langflow_job_id": "795cc479-bbfa-41b1-8731-59852aee93c6",
+        "source_bytes": 1048576,
+        "source_sha256": "1fdc84d79116150e302d91ed809fa9c86494be176adee624102351182dc13d92",
+        "upload_seconds": 0.038818,
+        "intake_seconds": 2.13338
+      },
+      {
+        "case_id": "RC-2c3cee63d455443caa3d80018f021cab",
+        "job_id": "JB-98915159dd91465383a25f2d1f68b196",
+        "langflow_job_id": "2e76895c-6a07-41ea-ba87-b20658749491",
+        "source_bytes": 1048576,
+        "source_sha256": "a3dac8d30e4c464efcb4b6a667128a33fc2f3d163026b448e78501e08c6c419a",
+        "upload_seconds": 0.08413,
+        "intake_seconds": 2.180553
+      },
+      {
+        "case_id": "RC-6be4b071e12d420f98ebaf718363d155",
+        "job_id": "JB-a9a7ee23ce384834bef8204034112ddc",
+        "langflow_job_id": "3350b502-9427-449c-92e3-9a6a3d05555a",
+        "source_bytes": 1048576,
+        "source_sha256": "165e5f9df578f363c8b578dc6d752af2d0b8d0b98607a69e0de4a551fb3d20cf",
+        "upload_seconds": 0.036124,
+        "intake_seconds": 2.175546
+      },
+      {
+        "case_id": "RC-889c7d8b944a489da08c56cfb8e1cdef",
+        "job_id": "JB-0e65a557c12948cbbf454448125d3f73",
+        "langflow_job_id": "8838a1df-36a9-4270-86ae-6404f0c11052",
+        "source_bytes": 1048576,
+        "source_sha256": "c4267edd43bd90c43dfca0f3f267c5b10b48608fbfe4b7b8869d22c36b1b8576",
+        "upload_seconds": 0.085774,
+        "intake_seconds": 3.306462
+      },
+      {
+        "case_id": "RC-073ca41dabc44a248c60a627ecac68e9",
+        "job_id": "JB-e0ed403a2b114581a13223fee558e628",
+        "langflow_job_id": "e714decf-134f-43f2-bd50-159af6a96b4f",
+        "source_bytes": 1048576,
+        "source_sha256": "4e72bd0072adcbfcdfaeeda5ae87475f80ca2034acc5d63662c7e7ff1701fed6",
+        "upload_seconds": 0.037612,
+        "intake_seconds": 2.221851
+      },
+      {
+        "case_id": "RC-c89cc8618e6341509a8f374bc007fe3e",
+        "job_id": "JB-0bb88952aba14d2fac131a005b0ec5a9",
+        "langflow_job_id": "02f84bcf-62ed-4a9f-9c8d-70a0e738f3ef",
+        "source_bytes": 1048576,
+        "source_sha256": "2598ad1fa11c6ea104d8558ed7373153a3b05e4a3de84f6696a6c5aafb27281c",
+        "upload_seconds": 0.043946,
+        "intake_seconds": 2.271263
+      },
+      {
+        "case_id": "RC-486456840e614808ae9c315d562e7831",
+        "job_id": "JB-2fe181ba422e4f5292bd78c39a98b8b5",
+        "langflow_job_id": "ec2428a5-3941-4db8-9adc-0d6b52805fcb",
+        "source_bytes": 1048576,
+        "source_sha256": "69e296960a28228799261b171d650f6cafbd93605daf650638403e4c51bbb82f",
+        "upload_seconds": 0.028721,
+        "intake_seconds": 2.243961
+      },
+      {
+        "case_id": "RC-18ccb00023824948a30197c6a4d2a3e3",
+        "job_id": "JB-c1aa93559d464107be4acf7d36c7b129",
+        "langflow_job_id": "d6ab6e15-3607-46f3-a85c-e2c0ca82fc74",
+        "source_bytes": 1048576,
+        "source_sha256": "150ce3e531676269a63bbf415811979db362ac61bdfa98d16a2c140f5a1c20d0",
+        "upload_seconds": 0.030079,
+        "intake_seconds": 2.313529
+      },
+      {
+        "case_id": "RC-f3ef5a113e7d4410a2b2e6075a62d1ab",
+        "job_id": "JB-b050ed9d4fce416583b513ea6f54d459",
+        "langflow_job_id": "af66d379-be51-4d30-b2d7-a84ac899d28e",
+        "source_bytes": 1048576,
+        "source_sha256": "af6751068a83a392a30d2afdb27dc46eaad95fbd6b6e5d7dc18ee76dc87a6e50",
+        "upload_seconds": 0.036229,
+        "intake_seconds": 2.18916
+      },
+      {
+        "case_id": "RC-0d914234ae574053b2e982aacb80a617",
+        "job_id": "JB-44c73683fa0343188ee45142ecaca4f6",
+        "langflow_job_id": "a52b7ce8-390a-4dcb-b447-5d49d3d04547",
+        "source_bytes": 1048576,
+        "source_sha256": "c914f32f5469e3c99cf1f0a199f3228ea0ec3207ee957ab96ee327123c48573f",
+        "upload_seconds": 0.02157,
+        "intake_seconds": 2.167347
+      },
+      {
+        "case_id": "RC-813aa5c2eb8a4895b9c7978695303d75",
+        "job_id": "JB-7a06297b141a4335bc769a8dc22e508a",
+        "langflow_job_id": "19e6117e-75a8-48d4-8c8b-da9edfd6364a",
+        "source_bytes": 1048576,
+        "source_sha256": "86cf72177133c8dbcd860da3b44b569bb7334ac2af3c87d63109e31abb3cde14",
+        "upload_seconds": 0.061084,
+        "intake_seconds": 2.21352
+      },
+      {
+        "case_id": "RC-051bfa4200e6406a829f025b0cf71452",
+        "job_id": "JB-6cd6770654e94b1d80f5516dc0d235ef",
+        "langflow_job_id": "bf3aa725-af3e-4cc5-89bc-9435fe14cc1e",
+        "source_bytes": 1048576,
+        "source_sha256": "c72c3bd41c25c7ca68190d0e150a47f082ce28e87a795117f7f2cf83ec0f24ae",
+        "upload_seconds": 0.032885,
+        "intake_seconds": 2.218212
+      },
+      {
+        "case_id": "RC-4c456e00c37248ea9450f1965fe47e09",
+        "job_id": "JB-b91d2b660cda422e9d44a7a206dbc53f",
+        "langflow_job_id": "e84a3fb2-a5ff-4f2c-bf88-69f920bdfd9f",
+        "source_bytes": 1048576,
+        "source_sha256": "b56a3e8d7deda7822dce5840fa975a12e0a066d4c6b99531af82913491c9b2a3",
+        "upload_seconds": 0.037975,
+        "intake_seconds": 3.420485
+      },
+      {
+        "case_id": "RC-fe574d4d9c564e7aae29aa50c705f4a4",
+        "job_id": "JB-c78dc253f84e447f8c93b31e426315f1",
+        "langflow_job_id": "68b4a164-6d49-4023-9c41-e3f404615c63",
+        "source_bytes": 1048576,
+        "source_sha256": "503659c360a3383ee2b38d9c9b69aca502950eb7b2061467d7e4d58ff1b74ea2",
+        "upload_seconds": 0.050156,
+        "intake_seconds": 2.190064
+      },
+      {
+        "case_id": "RC-9a884bb1cd9f4dd590bf6a4959407f66",
+        "job_id": "JB-f0e846d324fc4c139b9589e2e22e7a28",
+        "langflow_job_id": "3126a6a7-3b11-4329-9fc6-feaf9eeed25b",
+        "source_bytes": 1048576,
+        "source_sha256": "79142dde9841f5c268167c6a3ed17da26e3bade29bceb5ea178533e6fcbe6f45",
+        "upload_seconds": 0.065593,
+        "intake_seconds": 2.143522
+      },
+      {
+        "case_id": "RC-cfb10d50d2a94fc99749041caa4d4d94",
+        "job_id": "JB-9a3d6118788e4d0e9b723ec3e7a23e1f",
+        "langflow_job_id": "3106c3fd-3937-4664-8d43-a2c93dd5067b",
+        "source_bytes": 1048576,
+        "source_sha256": "e61adc19f0237ba11faa2cfc68a7b981cb322b0b12191bd3316bb3f581f59087",
+        "upload_seconds": 0.024001,
+        "intake_seconds": 2.121555
+      }
+    ],
+    "query_seconds": [
+      0.076072,
+      0.039526,
+      0.05624,
+      0.065708,
+      0.050517,
+      0.056272,
+      0.044052,
+      0.038015,
+      0.034697,
+      0.057018,
+      0.046916,
+      0.073349,
+      0.043598,
+      0.036661,
+      0.109843,
+      0.055319,
+      0.055493,
+      0.042353,
+      0.102237,
+      0.118757,
+      0.138205,
+      0.036866,
+      0.033857,
+      0.046297,
+      0.065011,
+      0.046126,
+      0.038784,
+      0.090758,
+      0.065439,
+      0.037569,
+      0.052793,
+      0.036544,
+      0.033016,
+      0.04753,
+      0.037429,
+      0.039281,
+      0.037456,
+      0.045029,
+      0.047732,
+      0.036791,
+      0.041269,
+      0.039696,
+      0.044435,
+      0.037587,
+      0.040119,
+      0.049053,
+      0.037788,
+      0.037042,
+      0.278335,
+      0.04282,
+      0.147207,
+      0.113597,
+      0.03976,
+      0.051904,
+      0.036108,
+      0.030269,
+      0.029,
+      0.046728,
+      0.035393,
+      0.038489
+    ],
+    "upload_p95_seconds": 0.094931,
+    "query_p95_seconds": 0.118757,
+    "intake_max_seconds": 3.420485,
+    "targets_met": {
+      "upload_p95_le_3_seconds": true,
+      "query_p95_le_500_ms": true,
+      "each_intake_le_120_seconds": true,
+      "sequential_tasks_not_lost": true
+    }
+  },
+  "result": "passed"
+}

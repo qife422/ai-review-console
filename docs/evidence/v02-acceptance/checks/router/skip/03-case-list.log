@@ -1,0 +1,6 @@
+### Result
+Route added for pattern: **/api/cases
+### Ran Playwright code
+```js
+await page.context().route('**/api/cases', async route => { /* route handler */ });
+```

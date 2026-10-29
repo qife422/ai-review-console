@@ -1,0 +1,25 @@
+### Result
+{
+  "caseUrl": "http://127.0.0.1:8080/#case/RC-98aacae843754218bfe76ffba1a2a0b0",
+  "selectedTab": "文档对照",
+  "highlighted": true,
+  "highlightedCount": 1,
+  "focusId": "evidence-section-section-0001",
+  "targetId": "evidence-section-section-0001",
+  "locator": "page:1",
+  "text": "SYNTHETIC DEMO DOCUMENT\nBuilt on Langflow\n执行验证 7aea71efd5ec4cec80c3436af61de10e\n[PERSON_01]，个人手机号[PHONE_01]。使用共享账号和明文密码。",
+  "rect": {
+    "top": 694.015625,
+    "bottom": 848.203125
+  },
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "visible": true,
+  "scrollY": 623
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const section=document.getElementById("evidence-section-section-0001");const r=section.getBoundingClientRect();return {caseUrl:location.href,selectedTab:document.querySelector("[role=tab][aria-selected=true]").textContent,highlighted:section.classList.contains("highlighted-section"),highlightedCount:document.querySelectorAll(".highlighted-section").length,focusId:document.activeElement.id,targetId:section.id,locator:section.querySelector("small").textContent,text:section.querySelector("pre").textContent,rect:{top:r.top,bottom:r.bottom},viewport:{width:innerWidth,height:innerHeight},visible:r.top>=0&&r.bottom<=innerHeight,scrollY}; }');
+```

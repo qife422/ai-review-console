@@ -1,0 +1,181 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "AC-06",
+    "AC-07"
+  ],
+  "producer": "scripts/verify_faults.py",
+  "producer_sha256": "c5cdb51230a93b46126e634353de858d1799ccb14f63b3eccc0846e85af784f9",
+  "checked_at": "2026-10-29T04:22:00.288398+00:00",
+  "project": "ai-review-console-upgrade",
+  "cases": [
+    {
+      "mode": "before_execution",
+      "case_id": "RC-a43ab2a785974286a834eae458ea8b6f",
+      "job_id": "JB-453cc04555e140c5bb4407e6e31285c5",
+      "retry_job_id": null,
+      "source_sha256": "79eaeab9df2d4cb3205d92deea1eeb4583ba0a8812d3eb08bd9c48c9b418c8b6",
+      "container": {
+        "container": "arc-fault-before-execution-b0d94de6",
+        "container_id": "956a0cc159c6d1e010906fe5c77b30228e9f8a91f4dd8e3260436f3d0cd07ede",
+        "image_id": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+        "exit_code": 137
+      },
+      "interrupted_or_failed": {
+        "state": "running",
+        "phase": "starting",
+        "attempt": 1,
+        "langflow_job_id": null,
+        "error_code": null,
+        "lease_until": "2026-10-29 04:23:34.696014+00:00",
+        "result_hash": null,
+        "execution_token_sha256": "d545c787413d9f177a39bfbae348dd1519ca06c31c4915adbce01b40e636d37e",
+        "assessment_count": 0,
+        "scored_audit_count": 0,
+        "job_count": 1
+      },
+      "recovered": {
+        "state": "succeeded",
+        "phase": "persisted",
+        "attempt": 1,
+        "langflow_job_id": "54e698b1-ef4d-44b8-ae8a-4ad0b4daa1ba",
+        "error_code": null,
+        "lease_until": "2026-10-29 04:25:04.767803+00:00",
+        "result_hash": "9542865d49c18c11ba5b657955d210d531490049da291bfbdd9565217e571817",
+        "execution_token_sha256": "d545c787413d9f177a39bfbae348dd1519ca06c31c4915adbce01b40e636d37e",
+        "assessment_count": 1,
+        "scored_audit_count": 1,
+        "job_count": 1
+      },
+      "elapsed_seconds": 96.699,
+      "result": "passed"
+    },
+    {
+      "mode": "after_callback",
+      "case_id": "RC-09d903b0982944ad947a50f220e06852",
+      "job_id": "JB-b86c90eeb60c4e508e19e9d58da9290f",
+      "retry_job_id": null,
+      "source_sha256": "c3f59d55c418d70d53aa3908eeea92d1ae2cce6b3f1dd077cf9d4ea02ecc7a0c",
+      "container": {
+        "container": "arc-fault-after-callback-992fbc3d",
+        "container_id": "0f1896be5a1cf31f1beac9507c41d93d6cc111bcd176386cc65a352b1f8a4d6e",
+        "image_id": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+        "exit_code": 137
+      },
+      "interrupted_or_failed": {
+        "state": "succeeded",
+        "phase": "persisted",
+        "attempt": 1,
+        "langflow_job_id": "7b7137d2-dd10-4106-afa5-dad8474b5342",
+        "error_code": null,
+        "lease_until": "2026-10-29 04:25:12.752585+00:00",
+        "result_hash": "0e96681bc04721b6c44c3c8065bee0079397671e37d0c7625b9d8c6a2e46d01c",
+        "execution_token_sha256": "8440e44c7ad57b2e0ad6d63316ccc2d135be504d1f48f5a4f44f9496816e7a10",
+        "assessment_count": 1,
+        "scored_audit_count": 1,
+        "job_count": 1
+      },
+      "recovered": {
+        "state": "succeeded",
+        "phase": "persisted",
+        "attempt": 1,
+        "langflow_job_id": "7b7137d2-dd10-4106-afa5-dad8474b5342",
+        "error_code": null,
+        "lease_until": "2026-10-29 04:25:12.752585+00:00",
+        "result_hash": "0e96681bc04721b6c44c3c8065bee0079397671e37d0c7625b9d8c6a2e46d01c",
+        "execution_token_sha256": "8440e44c7ad57b2e0ad6d63316ccc2d135be504d1f48f5a4f44f9496816e7a10",
+        "assessment_count": 1,
+        "scored_audit_count": 1,
+        "job_count": 1
+      },
+      "elapsed_seconds": 7.169,
+      "result": "passed"
+    },
+    {
+      "mode": "langflow_unavailable",
+      "case_id": "RC-d769a7d4f1d1409ebf2808b92327cbc1",
+      "job_id": "JB-6dda9ab726d8450683839e7cd136b852",
+      "retry_job_id": null,
+      "source_sha256": "3ad2ec3f37d806f037ea18d1d6c29199971b89288eaf0bf399f0b1bde1e96877",
+      "container": {
+        "container": "arc-fault-langflow-unavailable-7e273486",
+        "container_id": "339eb6d4ef67596122c1e64249413a72126991bc8ac46d01400b42db644077be",
+        "image_id": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+        "exit_code": 137
+      },
+      "interrupted_or_failed": {
+        "state": "retry_wait",
+        "phase": "retry_wait",
+        "attempt": 1,
+        "langflow_job_id": null,
+        "error_code": "langflow_unavailable",
+        "lease_until": null,
+        "result_hash": null,
+        "execution_token_sha256": "9be4931a6b17b35d3fedd671f11a85aff840eb06de4fc114e58930551a7a1678",
+        "assessment_count": 0,
+        "scored_audit_count": 0,
+        "job_count": 1
+      },
+      "recovered": {
+        "state": "succeeded",
+        "phase": "persisted",
+        "attempt": 2,
+        "langflow_job_id": "8bf9e2d4-7e5c-4ce6-acf9-2fc4419c7688",
+        "error_code": null,
+        "lease_until": "2026-10-29 04:25:32.066274+00:00",
+        "result_hash": "5f6c1afb1c24d40ebd0eaed06aa118e9de562792063a7085a1c829d74d0ff7f2",
+        "execution_token_sha256": "475b556f0a7fef7902680dd7776c444e3dd1686a0a38c83ebf69677f8eefde7e",
+        "assessment_count": 1,
+        "scored_audit_count": 1,
+        "job_count": 1
+      },
+      "elapsed_seconds": 15.203,
+      "result": "passed"
+    },
+    {
+      "mode": "callback_unavailable",
+      "case_id": "RC-eb709c55c42a4e62a7cb9691fdf15468",
+      "job_id": "JB-d8b6fdbf1ca048edb31bf7a54e162499",
+      "retry_job_id": null,
+      "source_sha256": "38fdd61853f182d5b95a9d08b49a54466a9be68570b5be8600a6d98a33b1945c",
+      "container": {
+        "container": "arc-fault-callback-unavailable-2d305668",
+        "container_id": "19174a966754ade0c0a6ee16d8fc56aa7aea2b111113b2a94cb2a9e4b7314165",
+        "image_id": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+        "exit_code": 137
+      },
+      "interrupted_or_failed": {
+        "state": "retry_wait",
+        "phase": "failure_pending",
+        "attempt": 1,
+        "langflow_job_id": null,
+        "error_code": "callback_unavailable",
+        "lease_until": null,
+        "result_hash": null,
+        "execution_token_sha256": "3e02bd4535bcae4237a0f492b9ed270c6e8aa59ded3d7a1b7cbc35b513750783",
+        "assessment_count": 0,
+        "scored_audit_count": 0,
+        "job_count": 1
+      },
+      "recovered": {
+        "state": "succeeded",
+        "phase": "persisted",
+        "attempt": 2,
+        "langflow_job_id": "9d69ef6d-62b6-41a2-b786-e11144ed195c",
+        "error_code": null,
+        "lease_until": "2026-10-29 04:25:49.057424+00:00",
+        "result_hash": "969a13070afa3e0cd1c028e0f2ac6839ee6904fb6e3ad46757f312d8f915d6f3",
+        "execution_token_sha256": "f61e72dc83438eb895dbca0fd24a26f2c17ab1f3636373b59ac8f000735621ba",
+        "assessment_count": 1,
+        "scored_audit_count": 1,
+        "job_count": 1
+      },
+      "elapsed_seconds": 16.477,
+      "result": "passed"
+    }
+  ],
+  "limitations": "Transport failures use real refused TCP connections in isolated one-shot workers; they do not stop the shared API/Langflow services. Timeout/429 mappings are separate contract tests. No existing case or business data is overwritten.",
+  "retention": "Fault containers and synthetic cases retained; no cleanup authorization",
+  "result": "failed",
+  "failure": "AssertionError: "
+}

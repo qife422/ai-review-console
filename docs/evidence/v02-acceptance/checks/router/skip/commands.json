@@ -1,0 +1,239 @@
+[
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-skip",
+      "open",
+      "about:blank",
+      "--headed"
+    ],
+    "at": "2026-10-29T04:43:37.407799+00:00",
+    "exit_code": 0,
+    "log": "01-open-blank.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-skip",
+      "route",
+      "**/api/summary",
+      "--body",
+      "{\"total_cases\": 1, \"pending_approval\": 1, \"high_risk\": 1, \"completed\": 0, \"average_score\": 57, \"scored_cases\": 1, \"risk_distribution\": {\"low\": 0, \"medium\": 0, \"high\": 1, \"critical\": 0}, \"category_distribution\": {\"privacy\": 1, \"legal\": 1, \"financial\": 0, \"security\": 0, \"policy\": 0}, \"system_status\": {\"api\": \"healthy\", \"database\": \"healthy\", \"worker\": \"healthy\", \"langflow\": \"healthy\"}, \"ruleset_version\": \"2026.09-demo.1\"}",
+      "--content-type",
+      "application/json"
+    ],
+    "at": "2026-10-29T04:43:44.457900+00:00",
+    "exit_code": 0,
+    "log": "02-summary.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-skip",
+      "route",
+      "**/api/cases",
+      "--body",
+      "[{\"id\": \"RC-SKIP-B\", \"title\": \"\u865a\u6784\u952e\u76d8\u7126\u70b9\u9a8c\u8bc1 B\", \"document_name\": \"synthetic.txt\", \"document_type\": \"TXT\", \"status\": \"pending_approval\", \"risk_score\": 57, \"risk_level\": \"high\", \"owner\": \"\u6797\u6f88\", \"submitted_at\": \"2026-10-08T12:00:00Z\", \"due_at\": \"2026-10-09T12:00:00Z\", \"pii_count\": 1, \"decision\": null, \"source_kind\": \"seed_demo\", \"current_document_version_id\": \"version-1\", \"assessment_id\": \"assessment-1\", \"row_version\": 3, \"document_hash\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"hash_kind\": \"synthetic_text\", \"original_text\": \"SYNTHETIC DEMO DOCUMENT\\n\u627f\u62c5\u5168\u90e8\u635f\u5931\u3002\", \"redacted_text\": \"SYNTHETIC DEMO DOCUMENT\\n\u627f\u62c5\u5168\u90e8\u635f\u5931\u3002\", \"findings\": [{\"rule_id\": \"LEGAL-002\", \"category\": \"legal\", \"title\": \"\u8d23\u4efb\u4e0a\u9650\u7f3a\u5931\", \"severity\": \"critical\", \"points\": 28, \"evidence\": \"\u627f\u62c5\u5168\u90e8\u635f\u5931\u3002\", \"recommendation\": \"\u8865\u5145\u8d23\u4efb\u4e0a\u9650\u3002\", \"section_id\": \"section-1\", \"locator\": \"block:1\", \"start\": 0, \"end\": 7, \"offset_basis\": \"redacted_unicode_codepoints\"}], \"dimensions\": {\"legal\": 84}, \"warnings\": [], \"decision_reason\": null, \"decided_by\": null, \"decided_at\": null, \"flow_run_id\": null, \"ruleset_version\": \"2026.09-demo.1\", \"audit_events\": [], \"jobs\": [], \"reports\": [], \"parsed_sections\": [{\"section_id\": \"section-1\", \"locator\": \"block:1\", \"text\": \"SYNTHETIC DEMO DOCUMENT\\n\u627f\u62c5\u5168\u90e8\u635f\u5931\u3002\"}], \"redacted_sections\": [{\"section_id\": \"section-1\", \"locator\": \"block:1\", \"text\": \"SYNTHETIC DEMO DOCUMENT\\n\u627f\u62c5\u5168\u90e8\u635f\u5931\u3002\"}], \"source\": {\"source_sha256\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"hash_kind\": \"synthetic_text\", \"bytes\": 200, \"mime_type\": \"text/plain\", \"source_kind\": \"seed_demo\", \"legacy_flow_label\": null, \"langflow_job_id\": null, \"flow_id\": null, \"flow_hash\": null}}]",
+      "--content-type",
+      "application/json"
+    ],
+    "at": "2026-10-29T04:43:44.641028+00:00",
+    "exit_code": 0,
+    "log": "03-case-list.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-skip",
+      "route",
+      "**/api/system/status",
+      "--body",
+      "{\"checked_at\": \"2026-10-08T12:00:00Z\", \"services\": {\"api\": {\"state\": \"healthy\", \"checked_at\": \"2026-10-08T12:00:00Z\"}, \"database\": {\"state\": \"healthy\", \"checked_at\": \"2026-10-08T12:00:00Z\"}, \"worker\": {\"state\": \"healthy\", \"checked_at\": \"2026-10-08T12:00:00Z\"}, \"langflow\": {\"state\": \"unavailable\", \"checked_at\": \"2026-10-08T12:00:00Z\", \"detail\": \"\u672a\u53d6\u5f97\u4e0a\u6e38\u54cd\u5e94\"}}}",
+      "--content-type",
+      "application/json"
+    ],
+    "at": "2026-10-29T04:43:44.822798+00:00",
+    "exit_code": 0,
+    "log": "04-status.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-skip",
+      "route",
+      "**/api/cases/RC-SKIP-B",
+      "--body",
+      "{\"id\": \"RC-SKIP-B\", \"title\": \"\u865a\u6784\u952e\u76d8\u7126\u70b9\u9a8c\u8bc1 B\", \"document_name\": \"synthetic.txt\", \"document_type\": \"TXT\", \"status\": \"pending_approval\", \"risk_score\": 57, \"risk_level\": \"high\", \"owner\": \"\u6797\u6f88\", \"submitted_at\": \"2026-10-08T12:00:00Z\", \"due_at\": \"2026-10-09T12:00:00Z\", \"pii_count\": 1, \"decision\": null, \"source_kind\": \"seed_demo\", \"current_document_version_id\": \"version-1\", \"assessment_id\": \"assessment-1\", \"row_version\": 3, \"document_hash\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"hash_kind\": \"synthetic_text\", \"original_text\": \"SYNTHETIC DEMO DOCUMENT\\n\u627f\u62c5\u5168\u90e8\u635f\u5931\u3002\", \"redacted_text\": \"SYNTHETIC DEMO DOCUMENT\\n\u627f\u62c5\u5168\u90e8\u635f\u5931\u3002\", \"findings\": [{\"rule_id\": \"LEGAL-002\", \"category\": \"legal\", \"title\": \"\u8d23\u4efb\u4e0a\u9650\u7f3a\u5931\", \"severity\": \"critical\", \"points\": 28, \"evidence\": \"\u627f\u62c5\u5168\u90e8\u635f\u5931\u3002\", \"recommendation\": \"\u8865\u5145\u8d23\u4efb\u4e0a\u9650\u3002\", \"section_id\": \"section-1\", \"locator\": \"block:1\", \"start\": 0, \"end\": 7, \"offset_basis\": \"redacted_unicode_codepoints\"}], \"dimensions\": {\"legal\": 84}, \"warnings\": [], \"decision_reason\": null, \"decided_by\": null, \"decided_at\": null, \"flow_run_id\": null, \"ruleset_version\": \"2026.09-demo.1\", \"audit_events\": [], \"jobs\": [], \"reports\": [], \"parsed_sections\": [{\"section_id\": \"section-1\", \"locator\": \"block:1\", \"text\": \"SYNTHETIC DEMO DOCUMENT\\n\u627f\u62c5\u5168\u90e8\u635f\u5931\u3002\"}], \"redacted_sections\": [{\"section_id\": \"section-1\", \"locator\": \"block:1\", \"text\": \"SYNTHETIC DEMO DOCUMENT\\n\u627f\u62c5\u5168\u90e8\u635f\u5931\u3002\"}], \"source\": {\"source_sha256\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"hash_kind\": \"synthetic_text\", \"bytes\": 200, \"mime_type\": \"text/plain\", \"source_kind\": \"seed_demo\", \"legacy_flow_label\": null, \"langflow_job_id\": null, \"flow_id\": null, \"flow_hash\": null}}",
+      "--content-type",
+      "application/json"
+    ],
+    "at": "2026-10-29T04:43:45.006835+00:00",
+    "exit_code": 0,
+    "log": "05-case-detail.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-skip",
+      "goto",
+      "http://127.0.0.1:4183/#case/RC-SKIP-B"
+    ],
+    "at": "2026-10-29T04:43:51.821325+00:00",
+    "exit_code": 0,
+    "log": "06-open-case.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-skip",
+      "run-code",
+      "async page => {await page.waitForFunction(()=>document.querySelector(\"h1\")?.textContent===\"\u865a\u6784\u952e\u76d8\u7126\u70b9\u9a8c\u8bc1 B\"&&document.activeElement===document.querySelector(\"h1\"),null,{timeout:15000});return await page.evaluate(()=>({url:location.href,heading:document.querySelector(\"h1\").textContent,focusTag:document.activeElement.tagName}));}"
+    ],
+    "at": "2026-10-29T04:44:15.987755+00:00",
+    "exit_code": 0,
+    "log": "07-case-ready.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-skip",
+      "press",
+      "Shift+Tab"
+    ],
+    "at": "2026-10-29T04:44:16.406419+00:00",
+    "exit_code": 0,
+    "log": "08-shifttab-1.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-skip",
+      "press",
+      "Shift+Tab"
+    ],
+    "at": "2026-10-29T04:44:16.761220+00:00",
+    "exit_code": 0,
+    "log": "08-shifttab-2.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-skip",
+      "press",
+      "Shift+Tab"
+    ],
+    "at": "2026-10-29T04:44:16.965443+00:00",
+    "exit_code": 0,
+    "log": "08-shifttab-3.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-skip",
+      "press",
+      "Shift+Tab"
+    ],
+    "at": "2026-10-29T04:44:17.170483+00:00",
+    "exit_code": 0,
+    "log": "08-shifttab-4.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-skip",
+      "press",
+      "Shift+Tab"
+    ],
+    "at": "2026-10-29T04:44:17.384045+00:00",
+    "exit_code": 0,
+    "log": "08-shifttab-5.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-skip",
+      "press",
+      "Shift+Tab"
+    ],
+    "at": "2026-10-29T04:44:17.637426+00:00",
+    "exit_code": 0,
+    "log": "08-shifttab-6.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-skip",
+      "eval",
+      "() => ({url:location.href,focusTag:document.activeElement.tagName,focusText:document.activeElement.textContent,href:document.activeElement.getAttribute(\"href\"),mainTabIndex:document.getElementById(\"main-content\").tabIndex})"
+    ],
+    "at": "2026-10-29T04:44:18.511534+00:00",
+    "exit_code": 0,
+    "log": "09-skip-focused.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-skip",
+      "press",
+      "Enter"
+    ],
+    "at": "2026-10-29T04:44:36.120505+00:00",
+    "exit_code": 0,
+    "log": "10-keyboard-enter.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-skip",
+      "eval",
+      "() => ({url:location.href,hash:location.hash,heading:document.querySelector(\"h1\").textContent,focusTag:document.activeElement.tagName,focusId:document.activeElement.id,mainFocused:document.activeElement===document.querySelector(\"main\"),mainTabIndex:document.querySelector(\"main\").tabIndex,caseContentPresent:document.querySelector(\"main\").textContent.includes(\"RC-SKIP-B\")})"
+    ],
+    "at": "2026-10-29T04:44:36.942939+00:00",
+    "exit_code": 0,
+    "log": "11-skip-result-dom.log"
+  },
+  {
+    "argv": [
+      "node",
+      "/Users/ffq/.npm/_npx/31e32ef8478fbf80/node_modules/@playwright/cli/playwright-cli.js",
+      "--session",
+      "arc-v02-skip",
+      "close"
+    ],
+    "at": "2026-10-29T04:44:37.696412+00:00",
+    "exit_code": 0,
+    "log": "12-browser-close.log"
+  }
+]

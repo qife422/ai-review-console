@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/scripts/validate_langflow.py", line 483, in <module>
+    main()
+  File "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/scripts/validate_langflow.py", line 414, in main
+    component_index = langflow.request("GET", "/api/v1/all").json()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/api/app/langflow_client.py", line 127, in request
+    self._authenticate()
+  File "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/api/app/langflow_client.py", line 92, in _authenticate
+    raise LangflowError("langflow_auth_unconfigured", "Langflow credentials are missing")
+api.app.langflow_client.LangflowError: Langflow credentials are missing

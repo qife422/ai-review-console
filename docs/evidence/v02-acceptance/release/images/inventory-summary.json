@@ -1,0 +1,122 @@
+{
+  "api": {
+    "identity": {
+      "id": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+      "created": "2026-10-29T04:18:51.885978423Z",
+      "size": 103628347,
+      "os": "linux",
+      "architecture": "arm64",
+      "repo_digests": [
+        "ai-review-console-api@sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a"
+      ],
+      "layers": [
+        "sha256:3e5d01a55aea2c9ea64c3cfef2bb870df4b01c7e206103a970d4c3dc6caed96b",
+        "sha256:62750a0d4afa47971eda307d875c99fc4a7292beb47970df9c18647609d86e88",
+        "sha256:3603fa54c00d0cb83e3070b70cd08bc24ca60844986408ade6c1b80ef7b0f532",
+        "sha256:4882eb1c66d54726bda0140b368f4388ceca8351cdcc6d10fe29bdcddb0b6f59",
+        "sha256:4be07e71362a8aa2d41974393757a969b8240e8eddeaef8319ddb344d29433d3",
+        "sha256:a7bec58548e478bdcf57059e988f8a990924764bd89704135dcbeab1e11666d5",
+        "sha256:dfd622086a5543f10dbc6e4a902d963f5b43bc7a3e5ffa21b0eff0555ce010ee",
+        "sha256:bdad3bcfd877d6cb87236ea9e5c825062a83ffac62ecbe92e77bda515713aae0",
+        "sha256:18f13ed0125f810e0d4aee6b083ea4452f84ba115d50da80bce4decf8984f6ba",
+        "sha256:d9998566cf924bedf7e1137961d33c25e2b5f977e524e5f3960c88aca682fdb5",
+        "sha256:9f8263b47fca7dd31bc2c2e4179086cd79d6b4792240727916defcc8ce05fcdc",
+        "sha256:0a9c74f9a563b62cffd5e7663d9f77da198b83a385f3e58dc596b8f6b5cf0fee",
+        "sha256:19d12ffb638d03fce7b1d8fa404b74433edb13464a1619de7b795b3c2712e5e2",
+        "sha256:da5f9922a9cea6c5eeca037a2cb80615105fb1de87bf822678fda5a9452ec1ca",
+        "sha256:ce58b64db7c388a30462a22e786cf69c2dd9299e2b43dbb4180f3ae2dd15aec5"
+      ]
+    },
+    "os_metadata_exit_code": 0,
+    "python_metadata_exit_code": 0,
+    "packages": 140,
+    "python_raw_count": 35,
+    "python_unique_count": 35,
+    "license_summary": {
+      "recorded": 42,
+      "unknown": 17,
+      "review_required_copyleft_or_restricted_match": 81
+    },
+    "scope": "installed package-manager metadata only; not a complete image file tree"
+  },
+  "langflow": {
+    "identity": {
+      "id": "sha256:ff0f5cc380743034c05b4bfcf587be0e714da1610799f0c7c41d45902a5267c4",
+      "created": "2026-10-09T05:57:04.674058917Z",
+      "size": 934062614,
+      "os": "linux",
+      "architecture": "arm64",
+      "repo_digests": [
+        "ai-review-console-langflow@sha256:ff0f5cc380743034c05b4bfcf587be0e714da1610799f0c7c41d45902a5267c4"
+      ],
+      "layers": [
+        "sha256:13cd712d7d37b0e11b96b206d9d2063c8b323c576953bc61bbe58581ce45f9f7",
+        "sha256:60a0de809404261e76396f14e523084336e95fce16523d807061f6925cadc67a",
+        "sha256:06a14a89fd58ed478a6160a6856fd380cba0a9ed6178751b1dfa4353e2335148",
+        "sha256:329c1619b6cdeae347d20a9d7c4cd1e6f6b16aa104cef79f583c60186e8c7cbe",
+        "sha256:d2656073f9961d706cd4a30baabe7bce365ec8c2b696735948d33a9e71263b85",
+        "sha256:99a43b2775a2114808309993126c21d7191213ed160012b62f73927fd9a3ed1a",
+        "sha256:8b854f7c3b9d72f261aa8bd622c1835efddf27ea74f756744fbe73b2d7e8b4b1",
+        "sha256:a77f007c50ae383b4a5c9a32a002d463d260037c76543c9655eabe395c509914",
+        "sha256:8466c4beedb515f2e7e6f0004444ad07ad9421d04700ca21eae5b8bb849a7e04",
+        "sha256:93a1fef78c364f865e32e508cabd9ef57ed1659d0f60d2bb22fae3a68880db0e",
+        "sha256:6311264e2494cfd792b2c32d5a9125ffc0f264fd487cb80c14979e3d847399c0",
+        "sha256:e3f9b7c98913c241da1eecd436999472ba978e59d7aafbdcc9942cd10489addc",
+        "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+        "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+        "sha256:00d80754fc1f038c2129d3d5ada9d28c2ab9eeb521362e1a5eb4919d9a1e0c12",
+        "sha256:4079141ad11b1f7cb5c8d1affcb23059e5d297c96fcc6117cd5b22d3aae75a00",
+        "sha256:32e151c280aa095d404b22b8a2a0d36e87b0d8e7ec4150e9cbf63c6da7b01311",
+        "sha256:b417efcff496fcccd30805bc711d2c4914643866f4238986dc003b677a1cee3a",
+        "sha256:f11186ec8a09720518993297910172c9c324b425743416beb4e76c236c313fd6",
+        "sha256:17766f2fa72aab87700ec021af7e0edbe81936e4f4fa9126b6a78a0fe5d755a4"
+      ]
+    },
+    "os_metadata_exit_code": 0,
+    "python_metadata_exit_code": 0,
+    "packages": 770,
+    "python_raw_count": 1088,
+    "python_unique_count": 544,
+    "license_summary": {
+      "recorded": 592,
+      "unknown": 10,
+      "review_required_copyleft_or_restricted_match": 168
+    },
+    "scope": "installed package-manager metadata only; not a complete image file tree"
+  },
+  "web": {
+    "identity": {
+      "id": "sha256:827925e33497504894c22220231543a2eef36c4a7e5581d86349797d63220124",
+      "created": "2026-10-29T04:19:32.387727761Z",
+      "size": 24554521,
+      "os": "linux",
+      "architecture": "arm64",
+      "repo_digests": [
+        "ai-review-console-upgrade-web@sha256:827925e33497504894c22220231543a2eef36c4a7e5581d86349797d63220124"
+      ],
+      "layers": [
+        "sha256:0b83d017db6efafadf6b3f18d087d2ce1d67d8f0e927dc7254b0ad088074cd3a",
+        "sha256:488c372ba3256e07c09fa9b9510c4f24baeb7352b68006ac328bef4d32d299d8",
+        "sha256:d634c83098bad4821d491c5653e71b0ea0495cd5a7e928ad5259b0bb231aeebd",
+        "sha256:14856caa7722df4d3603e97a5b3de9cdadeb7f2f2ab8d98b5c51f0274ad6da2c",
+        "sha256:825ba0c5d54f44d970dff1caeb5ee4407dcf68ae00272a0a255534f05de8bef3",
+        "sha256:cdedf5a93bd73ca4de0fead6c4ac445a2fbec78dd6545e4fdf07488a548bcac4",
+        "sha256:5eb2b5468732ecb9fccb799d91f630da80fcd8093971350b619f31f841b8ea0d",
+        "sha256:52525aad6e4f256604bb6568ccc6c218142e37f993a3caf3c4cbe9947944bdb2",
+        "sha256:d674f43dd85d99f59798c0c49eb648e35857e01ee2cb5c0b4ccc0d3d96ccdcc9",
+        "sha256:617267c37103bb958526f27ecafc5dd86bf6fae0ca11cf2ed5a41f746688b1be"
+      ]
+    },
+    "os_metadata_exit_code": 0,
+    "python_metadata_exit_code": null,
+    "packages": 70,
+    "python_raw_count": 0,
+    "python_unique_count": 0,
+    "license_summary": {
+      "recorded": 51,
+      "unknown": 0,
+      "review_required_copyleft_or_restricted_match": 19
+    },
+    "scope": "installed package-manager metadata only; not a complete image file tree"
+  }
+}

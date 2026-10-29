@@ -1,0 +1,538 @@
+{
+  "started": "2026-10-29T04:48:45.505Z",
+  "finished": "2026-10-29T04:50:45.827Z",
+  "outcome": "passed",
+  "failure": null,
+  "base_url": "http://localhost:8080",
+  "session": "arc-ui-d992c67a",
+  "approve": true,
+  "intake": true,
+  "case_id": "RC-5b07022d38ea45e2b4529e541018b575",
+  "steps": [
+    {
+      "name": "cli-version",
+      "mode": "tool",
+      "version": "0.1.22",
+      "at": "2026-10-29T04:48:45.717Z"
+    },
+    {
+      "name": "dashboard-1440-light",
+      "mode": "real-ui",
+      "theme": "white",
+      "width": 1440,
+      "viewport": 1440,
+      "heading": "rgb(22, 22, 22)",
+      "tile": "rgb(244, 244, 244)",
+      "token": "#161616",
+      "at": "2026-10-29T04:48:55.204Z"
+    },
+    {
+      "name": "dashboard-1440-dark",
+      "mode": "real-ui",
+      "theme": "g100",
+      "width": 1440,
+      "viewport": 1440,
+      "heading": "rgb(244, 244, 244)",
+      "tile": "rgb(38, 38, 38)",
+      "token": "#f4f4f4",
+      "at": "2026-10-29T04:48:57.417Z"
+    },
+    {
+      "name": "dashboard-390-light",
+      "mode": "real-ui",
+      "theme": "white",
+      "width": 390,
+      "viewport": 390,
+      "heading": "rgb(22, 22, 22)",
+      "tile": "rgb(244, 244, 244)",
+      "token": "#161616",
+      "at": "2026-10-29T04:48:59.682Z"
+    },
+    {
+      "name": "dashboard-390-dark",
+      "mode": "real-ui",
+      "theme": "g100",
+      "width": 390,
+      "viewport": 390,
+      "heading": "rgb(244, 244, 244)",
+      "tile": "rgb(38, 38, 38)",
+      "token": "#f4f4f4",
+      "at": "2026-10-29T04:49:01.695Z"
+    },
+    {
+      "name": "mobile-keyboard-navigation",
+      "mode": "real-ui",
+      "at": "2026-10-29T04:49:07.178Z"
+    },
+    {
+      "name": "filtered-empty-state",
+      "mode": "real-ui",
+      "at": "2026-10-29T04:49:08.234Z"
+    },
+    {
+      "name": "upload-modal-focus-wrap-and-restore",
+      "mode": "real-ui",
+      "at": "2026-10-29T04:49:14.525Z"
+    },
+    {
+      "name": "offline-error",
+      "mode": "browser-network-simulation",
+      "at": "2026-10-29T04:49:18.217Z"
+    },
+    {
+      "name": "network-error-recovery",
+      "mode": "browser-network-simulation",
+      "at": "2026-10-29T04:49:20.149Z"
+    },
+    {
+      "name": "loading-skeleton",
+      "mode": "browser-delay-simulation",
+      "at": "2026-10-29T04:49:30.189Z"
+    },
+    {
+      "name": "real-synthetic-upload",
+      "mode": "real-workflow",
+      "case_id": "RC-5b07022d38ea45e2b4529e541018b575",
+      "at": "2026-10-29T04:49:44.545Z"
+    },
+    {
+      "name": "intake-completed-1440-light",
+      "mode": "real-ui",
+      "theme": "white",
+      "width": 1440,
+      "viewport": 1440,
+      "heading": "rgb(22, 22, 22)",
+      "tile": "rgb(244, 244, 244)",
+      "token": "#161616",
+      "at": "2026-10-29T04:49:46.083Z"
+    },
+    {
+      "name": "intake-completed-1440-dark",
+      "mode": "real-ui",
+      "theme": "g100",
+      "width": 1440,
+      "viewport": 1440,
+      "heading": "rgb(244, 244, 244)",
+      "tile": "rgb(38, 38, 38)",
+      "token": "#f4f4f4",
+      "at": "2026-10-29T04:49:48.168Z"
+    },
+    {
+      "name": "intake-completed-390-light",
+      "mode": "real-ui",
+      "theme": "white",
+      "width": 390,
+      "viewport": 390,
+      "heading": "rgb(22, 22, 22)",
+      "tile": "rgb(244, 244, 244)",
+      "token": "#161616",
+      "at": "2026-10-29T04:49:50.551Z"
+    },
+    {
+      "name": "intake-completed-390-dark",
+      "mode": "real-ui",
+      "theme": "g100",
+      "width": 390,
+      "viewport": 390,
+      "heading": "rgb(244, 244, 244)",
+      "tile": "rgb(38, 38, 38)",
+      "token": "#f4f4f4",
+      "at": "2026-10-29T04:49:52.602Z"
+    },
+    {
+      "name": "real-intake-and-stable-refresh",
+      "mode": "real-workflow",
+      "assessment_id": "AS-0251af1993df46ce960108b73a846a9b",
+      "document_version_id": "DV-5b5ee5c2dc5041cf91c36409c52b16d0",
+      "langflow_job_id": "2b38f60e-886d-4ff2-b9c1-dbbd57ce254d",
+      "at": "2026-10-29T04:49:54.604Z"
+    },
+    {
+      "name": "decision-modal-focus-and-minimum-reason",
+      "mode": "real-ui",
+      "at": "2026-10-29T04:49:58.142Z"
+    },
+    {
+      "name": "real-version-bound-decision-and-three-reports",
+      "mode": "real-workflow",
+      "snapshot_hash": "327c84d181da38af1f46fc0ab1f1e6604f87c993b235a2a9bb9289d48d0af3df",
+      "at": "2026-10-29T04:50:09.911Z"
+    },
+    {
+      "name": "reports-ready-1440-light",
+      "mode": "real-ui",
+      "theme": "white",
+      "width": 1440,
+      "viewport": 1440,
+      "heading": "rgb(22, 22, 22)",
+      "tile": "rgb(244, 244, 244)",
+      "token": "#161616",
+      "at": "2026-10-29T04:50:11.151Z"
+    },
+    {
+      "name": "reports-ready-1440-dark",
+      "mode": "real-ui",
+      "theme": "g100",
+      "width": 1440,
+      "viewport": 1440,
+      "heading": "rgb(244, 244, 244)",
+      "tile": "rgb(38, 38, 38)",
+      "token": "#f4f4f4",
+      "at": "2026-10-29T04:50:13.204Z"
+    },
+    {
+      "name": "reports-ready-390-light",
+      "mode": "real-ui",
+      "theme": "white",
+      "width": 390,
+      "viewport": 390,
+      "heading": "rgb(22, 22, 22)",
+      "tile": "rgb(244, 244, 244)",
+      "token": "#161616",
+      "at": "2026-10-29T04:50:15.547Z"
+    },
+    {
+      "name": "reports-ready-390-dark",
+      "mode": "real-ui",
+      "theme": "g100",
+      "width": 390,
+      "viewport": 390,
+      "heading": "rgb(244, 244, 244)",
+      "tile": "rgb(38, 38, 38)",
+      "token": "#f4f4f4",
+      "at": "2026-10-29T04:50:17.627Z"
+    },
+    {
+      "name": "real-download-json",
+      "mode": "real-workflow",
+      "bytes": 3201,
+      "sha256": "6427657bae76a07b2b96d45ec3c9cd9daeab458730d4387400370e2c15827e8b",
+      "file": ".playwright-cli/RC-5b07022d38ea45e2b4529e541018b575-report.json",
+      "at": "2026-10-29T04:50:27.119Z"
+    },
+    {
+      "name": "real-download-html",
+      "mode": "real-workflow",
+      "bytes": 7775,
+      "sha256": "fce7c78235442215e187f3b2b9435a78afa12f1825a48b714b22d588d8afb135",
+      "file": ".playwright-cli/RC-5b07022d38ea45e2b4529e541018b575-report.html",
+      "at": "2026-10-29T04:50:31.301Z"
+    },
+    {
+      "name": "real-download-pdf",
+      "mode": "real-workflow",
+      "bytes": 39314,
+      "sha256": "fa2266c18353b335ec253e93cad911c286775b4fa62feb87662e7039c96dedda",
+      "file": ".playwright-cli/RC-5b07022d38ea45e2b4529e541018b575-report.pdf",
+      "at": "2026-10-29T04:50:35.462Z"
+    },
+    {
+      "name": "download-integrity-error-remains-in-page",
+      "mode": "browser-response-simulation",
+      "at": "2026-10-29T04:50:38.616Z"
+    },
+    {
+      "name": "failed-missing-only-report-retry",
+      "mode": "browser-response-simulation",
+      "formats": [
+        "html",
+        "pdf"
+      ],
+      "at": "2026-10-29T04:50:45.004Z"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": ".playwright-cli/RC-5b07022d38ea45e2b4529e541018b575-report.html",
+      "bytes": 7775,
+      "sha256": "fce7c78235442215e187f3b2b9435a78afa12f1825a48b714b22d588d8afb135"
+    },
+    {
+      "path": ".playwright-cli/RC-5b07022d38ea45e2b4529e541018b575-report.json",
+      "bytes": 3201,
+      "sha256": "6427657bae76a07b2b96d45ec3c9cd9daeab458730d4387400370e2c15827e8b"
+    },
+    {
+      "path": ".playwright-cli/RC-5b07022d38ea45e2b4529e541018b575-report.pdf",
+      "bytes": 39314,
+      "sha256": "fa2266c18353b335ec253e93cad911c286775b4fa62feb87662e7039c96dedda"
+    },
+    {
+      "path": ".playwright-cli/console-2026-10-29T04-48-53-035Z.log",
+      "bytes": 2430,
+      "sha256": "3cd68ad61f2ad3a95398db085109ae4e6141e13bf24f587be88571d66796bb50"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-48-53-727Z.yml",
+      "bytes": 7362,
+      "sha256": "5643d96e12327101f99d1488fbdba3a153b14d1a7055550000f7b58ce120d3b5"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-48-56-676Z.yml",
+      "bytes": 7363,
+      "sha256": "750758b3c4e5507b78e4699e815b5b5f0d2464ec80b20e27656ed326ae281b76"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-48-58-710Z.yml",
+      "bytes": 7363,
+      "sha256": "7d0c13c1d990168f45634a77ab18d86ea47a683a96bf41cf7a971f365ef2fc1d"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-49-00-961Z.yml",
+      "bytes": 6893,
+      "sha256": "e6fe1cdd9aa8ccbcfb2ff6b23fef1537cf22e7083411caca923e531071fb75b7"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-49-02-973Z.yml",
+      "bytes": 6893,
+      "sha256": "41e73935b7ece9504181afe3350b6af3862092cedabe0860e84b73c7afa6e39c"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-49-06-188Z.yml",
+      "bytes": 12706,
+      "sha256": "e0f51cedac766b651777f7a55e603a7f99d6ca55ae190a0477f832198cb82ba1"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-49-10-253Z.yml",
+      "bytes": 14478,
+      "sha256": "69c3356ec824d80937378a57548a84babba9515913c95b45513386e9311328ae"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-49-16-041Z.yml",
+      "bytes": 6929,
+      "sha256": "2c54878c39325f3da3360e067262d0e53c49313caa68fc3c31b371a0416120a6"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-49-17-758Z.yml",
+      "bytes": 1053,
+      "sha256": "c8bb983daa6b0cc44ea1eaae232eb118f29173921a9f88166d6d4b395b253e2e"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-49-19-906Z.yml",
+      "bytes": 7068,
+      "sha256": "3e26fa0cb83f676c7692a18aed5a5641dfe70e92886906a58c870dc93465a8b5"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-49-31-691Z.yml",
+      "bytes": 12934,
+      "sha256": "fe7db0982a4fb2a3d1de59f8fc3a66c12ea7e1a9b6d324b0f15494dc73002dbf"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-49-33-395Z.yml",
+      "bytes": 14737,
+      "sha256": "d53c46ce30de040d2c3767d081d36ad60b7e4d36e1f249bb799008d0db5060e8"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-49-36-328Z.yml",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-49-37-094Z.yml",
+      "bytes": 15037,
+      "sha256": "17dbe867f3442b0968ff55b9c7b4867099c25a4e5142e0c38777d56613c2e7df"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-49-43-542Z.yml",
+      "bytes": 5592,
+      "sha256": "698c353c1e37a25a2deeabbde351f1ad3468063abbc8d53f5b1186e8b526205d"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-49-47-422Z.yml",
+      "bytes": 7208,
+      "sha256": "ce0ba7cbaa0d307ee4292c800160f735f2349670b89278100a29f77f805cb91e"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-49-49-548Z.yml",
+      "bytes": 7208,
+      "sha256": "b12b848ef3e1ff1a1a892284fcbf454c96a39cbf9d82d616d2c335828eef389d"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-49-51-869Z.yml",
+      "bytes": 6738,
+      "sha256": "858df3e7d80d25194bab9e8fe740ae6ee3b99f251118fa70c507d02419e76382"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-49-53-912Z.yml",
+      "bytes": 6738,
+      "sha256": "3ce9c1b8a37df047e9500706802d0ee4b51bee061b5cd95d85166e9c124628c6"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-49-54-314Z.yml",
+      "bytes": 6528,
+      "sha256": "0f22351cd789bb70206535c09888808b8167342cf5255ee3f57e83b353a49c34"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-49-55-633Z.yml",
+      "bytes": 7873,
+      "sha256": "b10e25fbf257c4574f1357613b78ececc48e0530a113980c28971267d7beedce"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-49-59-825Z.yml",
+      "bytes": 7874,
+      "sha256": "cfa65294bc62ea7c01c55271b3e0bc9c3505b27c59f60e1bffb7692d02286310"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-50-07-359Z.yml",
+      "bytes": 6685,
+      "sha256": "abc9c652951f1e67a8b8daf2687411eae28bdb3a5bfb400c0cc56f0d69a2aba3"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-50-12-466Z.yml",
+      "bytes": 7554,
+      "sha256": "0e269e5d3c5d666deeb542f70765f9169acec76f122b50fd6101c0557f0cfc8a"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-50-14-540Z.yml",
+      "bytes": 7554,
+      "sha256": "166c1a9a901570d1efb69aae2f202b15fea23323308612ba54be18156d612dbd"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-50-16-849Z.yml",
+      "bytes": 7047,
+      "sha256": "b295437ba25e91fbb20581261bbe7673d70578cb76490c63a1949c684452fadf"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-50-18-930Z.yml",
+      "bytes": 7047,
+      "sha256": "0c1db0405320a125a5da39d35ce3122b79be4ac0feb4a62286785cb246921c77"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-50-27-103Z.yml",
+      "bytes": 7038,
+      "sha256": "769a2a24bd224b0ed98aac81a5da40a7ce573efac265dedf0c8b691409fde381"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-50-31-287Z.yml",
+      "bytes": 7038,
+      "sha256": "769a2a24bd224b0ed98aac81a5da40a7ce573efac265dedf0c8b691409fde381"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-50-35-449Z.yml",
+      "bytes": 7038,
+      "sha256": "769a2a24bd224b0ed98aac81a5da40a7ce573efac265dedf0c8b691409fde381"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-50-37-190Z.yml",
+      "bytes": 7268,
+      "sha256": "1fc5970fadb0f29754f40ce64cadf64a646a9253f3009b9190f88db77e3c45d4"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-50-40-544Z.yml",
+      "bytes": 7047,
+      "sha256": "f2c4977ea653f103a3a486966e96369726da09e7cec35d4c45bf62b4f515ac30"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-50-42-320Z.yml",
+      "bytes": 7038,
+      "sha256": "05410c69dc5595f4ddb215ece4f52699e29116fdb6110b05d3ab8e9a32cfd746"
+    },
+    {
+      "path": ".playwright-cli/page-2026-10-29T04-50-44-978Z.yml",
+      "bytes": 7111,
+      "sha256": "da3f578e53566cd6c5d40bfdb5183f4ec04e88acbdb4a0ad1412714e4efe63d7"
+    },
+    {
+      "path": "commands.log",
+      "bytes": 509081,
+      "sha256": "f92180b721d69d622a3f04c21284cf9f1c7df794b7e562647ec949561aaee574"
+    },
+    {
+      "path": "dashboard-1440-dark.png",
+      "bytes": 216374,
+      "sha256": "3845de4a2344c6c28f89a8a382ee805bae8de0f42d63925539f96ce82413b2d2"
+    },
+    {
+      "path": "dashboard-1440-light.png",
+      "bytes": 215303,
+      "sha256": "9e24b879bf526e73a6216e3890531f1d78a452229577657a67f3941df32c0ebb"
+    },
+    {
+      "path": "dashboard-390-dark.png",
+      "bytes": 205085,
+      "sha256": "88e6c0ad8bb0068d1b964582ed6fa83e7b58cdc09cfbed5520dfb829bfd16455"
+    },
+    {
+      "path": "dashboard-390-light.png",
+      "bytes": 201236,
+      "sha256": "42914bf612e1a4899f96a29b629b51a832a27e91f6ab2f672ed04d20c6e0b3b2"
+    },
+    {
+      "path": "dashboard-loading-390-light.png",
+      "bytes": 14992,
+      "sha256": "0b9f81e963b1c163460b9705fa0fda87edfdcd79a5db8e06f4f14e3a90a0b93d"
+    },
+    {
+      "path": "dashboard-offline-390-light.png",
+      "bytes": 20830,
+      "sha256": "39662d18a556366a2d8bf5d1943a046220a88ba46f3faec1b06140cd56233906"
+    },
+    {
+      "path": "intake-completed-1440-dark.png",
+      "bytes": 211966,
+      "sha256": "9a77210eabf30f3d5e80e96eb26b2fb08ef0563f2e9c6207262ea2ac5c8e084a"
+    },
+    {
+      "path": "intake-completed-1440-light.png",
+      "bytes": 211206,
+      "sha256": "04840cdf8b22e6e21bb5406e42aff70be812903a87f254c0a7b496837ad3bbdc"
+    },
+    {
+      "path": "intake-completed-390-dark.png",
+      "bytes": 199082,
+      "sha256": "3a098c49cdaecf10940cc49bb32996c611e35050f931b05dae26419fc55d0748"
+    },
+    {
+      "path": "intake-completed-390-light.png",
+      "bytes": 197119,
+      "sha256": "f1c6dd2411972fd1f07c7021d859a557eacce039b64302ad778e65e14cf98cf6"
+    },
+    {
+      "path": "queue-empty-390-light.png",
+      "bytes": 48349,
+      "sha256": "aabe72c5e430ddcec92bdf8bfbe9e7c19d57707938f80fd70856a9d82715eac6"
+    },
+    {
+      "path": "report-integrity-error-390-light.png",
+      "bytes": 53225,
+      "sha256": "ffe032525b2767fa289ad05d9615a594535249404392733e30ce6f1938eabf93"
+    },
+    {
+      "path": "report-partial-retry-390-light.png",
+      "bytes": 49893,
+      "sha256": "86e2e43e309a96d4dff43ffc365e8b6616d24b33c5fee361cc498098b4f6e42b"
+    },
+    {
+      "path": "reports-ready-1440-dark.png",
+      "bytes": 220316,
+      "sha256": "282899b781388d5509588a530b4a0da6d0be3f471a3cf536b4d8d5a0dd175536"
+    },
+    {
+      "path": "reports-ready-1440-light.png",
+      "bytes": 219148,
+      "sha256": "8364d9a8f432f9f00157c9ed98205d4e2778bd4e867cf518dfb028d6fce99f5c"
+    },
+    {
+      "path": "reports-ready-390-dark.png",
+      "bytes": 208049,
+      "sha256": "dd371c90e7f32d52ab9d096babdd9f63cdd173882b2f22621444f6b83d6befe3"
+    },
+    {
+      "path": "reports-ready-390-light.png",
+      "bytes": 204845,
+      "sha256": "b47c1f0c8ba652cf147561ea806d7baf4435bed78e318ebd6a1ac22ccad8fcc6"
+    },
+    {
+      "path": "synthetic-intake.txt",
+      "bytes": 192,
+      "sha256": "8d15c495205a6443dc329d18595822acd119df3e8d7820181ac2f02cc7a873d9"
+    },
+    {
+      "path": "upload-modal-keyboard-390-light.png",
+      "bytes": 58370,
+      "sha256": "e88d5680701eb120a2324476d477502d5c5310901910a873cef3c1fb3105343c"
+    }
+  ],
+  "evidence_bytes": 3579421,
+  "cli_commands": 212
+}

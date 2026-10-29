@@ -1,0 +1,259 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "AC-15",
+    "AC-18"
+  ],
+  "source_commit": "85dddfd43fa51abfa53c5291177dda818397139d",
+  "run_url": "https://github.com/qife422/ai-review-console/actions/runs/40817201951",
+  "run_conclusion": "success",
+  "browser_result": "passed",
+  "browser_finished_utc": "2026-10-29T04:27:11.131Z",
+  "unit_tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "128",
+    "time": "5.187",
+    "timestamp": "2026-10-29T04:21:10.837964+00:00",
+    "hostname": "runnervm48cm3"
+  },
+  "workflow_result": "passed",
+  "workflow_component_count": 5,
+  "workflow_cases": 3,
+  "workflow_report_downloads": 9,
+  "font_family": "Noto Sans CJK SC",
+  "font_package_version": "1:20230817+repack1-3",
+  "reviewer": "internal agent /root/v02_ci_release",
+  "reviewed_at": "2026-10-29T04:29:13.365817+00:00",
+  "visual_method": "tools.view_image on downloaded native CI artifact PNGs",
+  "reviewed_screenshots": [
+    {
+      "path": "artifacts/workflow-browser-verification/browser/reports-ready-1440-light.png",
+      "sha256": "77fa3faef3f87406685d54f32b78924fb75b5c9abe348d59b3e957362ca91ff1"
+    },
+    {
+      "path": "artifacts/workflow-browser-verification/browser/reports-ready-390-dark.png",
+      "sha256": "7db4c32080cf6441d24f5b5f0f83003f658288a61f42e49b43db72a6ca2b7df7"
+    }
+  ],
+  "visual_observations": "Chinese labels, decision reason, risk evidence and report buttons are readable in desktop light and mobile dark report pages; no missing-glyph boxes observed; responsive stacking and wraps remain usable",
+  "automated_viewport_checks": [
+    {
+      "name": "dashboard-1440-light",
+      "mode": "real-ui",
+      "theme": "white",
+      "width": 1440,
+      "viewport": 1440,
+      "heading": "rgb(22, 22, 22)",
+      "tile": "rgb(244, 244, 244)",
+      "token": "#161616",
+      "at": "2026-10-29T04:25:06.606Z"
+    },
+    {
+      "name": "dashboard-1440-dark",
+      "mode": "real-ui",
+      "theme": "g100",
+      "width": 1440,
+      "viewport": 1440,
+      "heading": "rgb(244, 244, 244)",
+      "tile": "rgb(38, 38, 38)",
+      "token": "#f4f4f4",
+      "at": "2026-10-29T04:25:09.237Z"
+    },
+    {
+      "name": "dashboard-390-light",
+      "mode": "real-ui",
+      "theme": "white",
+      "width": 390,
+      "viewport": 390,
+      "heading": "rgb(22, 22, 22)",
+      "tile": "rgb(244, 244, 244)",
+      "token": "#161616",
+      "at": "2026-10-29T04:25:11.880Z"
+    },
+    {
+      "name": "dashboard-390-dark",
+      "mode": "real-ui",
+      "theme": "g100",
+      "width": 390,
+      "viewport": 390,
+      "heading": "rgb(244, 244, 244)",
+      "tile": "rgb(38, 38, 38)",
+      "token": "#f4f4f4",
+      "at": "2026-10-29T04:25:14.147Z"
+    },
+    {
+      "name": "intake-completed-1440-light",
+      "mode": "real-ui",
+      "theme": "white",
+      "width": 1440,
+      "viewport": 1440,
+      "heading": "rgb(22, 22, 22)",
+      "tile": "rgb(244, 244, 244)",
+      "token": "#161616",
+      "at": "2026-10-29T04:26:04.600Z"
+    },
+    {
+      "name": "intake-completed-1440-dark",
+      "mode": "real-ui",
+      "theme": "g100",
+      "width": 1440,
+      "viewport": 1440,
+      "heading": "rgb(244, 244, 244)",
+      "tile": "rgb(38, 38, 38)",
+      "token": "#f4f4f4",
+      "at": "2026-10-29T04:26:06.937Z"
+    },
+    {
+      "name": "intake-completed-390-light",
+      "mode": "real-ui",
+      "theme": "white",
+      "width": 390,
+      "viewport": 390,
+      "heading": "rgb(22, 22, 22)",
+      "tile": "rgb(244, 244, 244)",
+      "token": "#161616",
+      "at": "2026-10-29T04:26:09.556Z"
+    },
+    {
+      "name": "intake-completed-390-dark",
+      "mode": "real-ui",
+      "theme": "g100",
+      "width": 390,
+      "viewport": 390,
+      "heading": "rgb(244, 244, 244)",
+      "tile": "rgb(38, 38, 38)",
+      "token": "#f4f4f4",
+      "at": "2026-10-29T04:26:11.853Z"
+    },
+    {
+      "name": "reports-ready-1440-light",
+      "mode": "real-ui",
+      "theme": "white",
+      "width": 1440,
+      "viewport": 1440,
+      "heading": "rgb(22, 22, 22)",
+      "tile": "rgb(244, 244, 244)",
+      "token": "#161616",
+      "at": "2026-10-29T04:26:32.400Z"
+    },
+    {
+      "name": "reports-ready-1440-dark",
+      "mode": "real-ui",
+      "theme": "g100",
+      "width": 1440,
+      "viewport": 1440,
+      "heading": "rgb(244, 244, 244)",
+      "tile": "rgb(38, 38, 38)",
+      "token": "#f4f4f4",
+      "at": "2026-10-29T04:26:34.762Z"
+    },
+    {
+      "name": "reports-ready-390-light",
+      "mode": "real-ui",
+      "theme": "white",
+      "width": 390,
+      "viewport": 390,
+      "heading": "rgb(22, 22, 22)",
+      "tile": "rgb(244, 244, 244)",
+      "token": "#161616",
+      "at": "2026-10-29T04:26:37.404Z"
+    },
+    {
+      "name": "reports-ready-390-dark",
+      "mode": "real-ui",
+      "theme": "g100",
+      "width": 390,
+      "viewport": 390,
+      "heading": "rgb(244, 244, 244)",
+      "tile": "rgb(38, 38, 38)",
+      "token": "#f4f4f4",
+      "at": "2026-10-29T04:26:39.699Z"
+    }
+  ],
+  "downloaded_screenshot_hash_checks": [
+    {
+      "path": "artifacts/workflow-browser-verification/browser/commands.log",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifacts/workflow-browser-verification/browser/dashboard-1440-dark.png",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifacts/workflow-browser-verification/browser/dashboard-1440-light.png",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifacts/workflow-browser-verification/browser/dashboard-390-dark.png",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifacts/workflow-browser-verification/browser/dashboard-390-light.png",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifacts/workflow-browser-verification/browser/dashboard-loading-390-light.png",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifacts/workflow-browser-verification/browser/dashboard-offline-390-light.png",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifacts/workflow-browser-verification/browser/intake-completed-1440-dark.png",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifacts/workflow-browser-verification/browser/intake-completed-1440-light.png",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifacts/workflow-browser-verification/browser/intake-completed-390-dark.png",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifacts/workflow-browser-verification/browser/intake-completed-390-light.png",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifacts/workflow-browser-verification/browser/queue-empty-390-light.png",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifacts/workflow-browser-verification/browser/report-integrity-error-390-light.png",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifacts/workflow-browser-verification/browser/report-partial-retry-390-light.png",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifacts/workflow-browser-verification/browser/reports-ready-1440-dark.png",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifacts/workflow-browser-verification/browser/reports-ready-1440-light.png",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifacts/workflow-browser-verification/browser/reports-ready-390-dark.png",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifacts/workflow-browser-verification/browser/reports-ready-390-light.png",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifacts/workflow-browser-verification/browser/synthetic-intake.txt",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "artifacts/workflow-browser-verification/browser/upload-modal-keyboard-390-light.png",
+      "matches_recorded_sha256": true
+    }
+  ],
+  "qualification": "new same-product-source CI confirms CJK repair; browser offline, loading, integrity-error and partial-retry cases are explicitly simulated responses, not container fault injection; not a production approval"
+}

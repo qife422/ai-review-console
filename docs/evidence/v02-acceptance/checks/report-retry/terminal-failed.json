@@ -1,0 +1,80 @@
+{
+  "id": "RC-4eb0d6e1713543cea8688013dd7509de",
+  "status": "changes_requested",
+  "source_kind": "uploaded_demo",
+  "current_document_version_id": "DV-cfae49c0276f4b9e902233d222649916",
+  "assessment_id": "AS-4d92c8c14824448581c6ec5c7a74ddd4",
+  "decision": "changes_requested",
+  "decision_id": "DC-feeffd0c4ac344948cccdf1b0fb0b948",
+  "decision_reason": "仅用虚构资料验证报告部分失败，人工决定应保留且现有报告不得被重写。",
+  "decided_by": "synthetic-report-validator",
+  "reports": [
+    {
+      "report_id": "RP-510a81011b97488abe4efdd87bed71a5",
+      "format": "json",
+      "state": "ready",
+      "snapshot_hash": "d6a039f2b4ada16b3a82fb7b464cc4699bf2ae2265523fb989a53ec69faeaf98",
+      "sha256": "de9eab7fb3a9ec52858a825f9544e6c998349fd9189f7cab76a0cd623becbbfc",
+      "bytes": 3212,
+      "created_at": "2026-10-29T04:33:36.863603+00:00",
+      "error_code": null,
+      "download_url": "/api/cases/RC-4eb0d6e1713543cea8688013dd7509de/report/json?report_id=RP-510a81011b97488abe4efdd87bed71a5"
+    },
+    {
+      "report_id": "RP-07e7930951214a068c0044b4e11bfeda",
+      "format": "pdf",
+      "state": "failed",
+      "snapshot_hash": "d6a039f2b4ada16b3a82fb7b464cc4699bf2ae2265523fb989a53ec69faeaf98",
+      "sha256": null,
+      "bytes": null,
+      "created_at": "2026-10-29T04:33:36.863605+00:00",
+      "error_code": "report_partial",
+      "download_url": null
+    },
+    {
+      "report_id": "RP-6f47889b37c54beda1396e85b2ca6c6a",
+      "format": "html",
+      "state": "ready",
+      "snapshot_hash": "d6a039f2b4ada16b3a82fb7b464cc4699bf2ae2265523fb989a53ec69faeaf98",
+      "sha256": "2bacfae2fa73c163a583dee09cf5e9ba8130020027b9d88dba225ed702fd4a65",
+      "bytes": 7764,
+      "created_at": "2026-10-29T04:33:36.863605+00:00",
+      "error_code": null,
+      "download_url": "/api/cases/RC-4eb0d6e1713543cea8688013dd7509de/report/html?report_id=RP-6f47889b37c54beda1396e85b2ca6c6a"
+    }
+  ],
+  "jobs": [
+    {
+      "job_id": "JB-2d45896cb40b46a0b3a72785a45c2db2",
+      "kind": "report",
+      "state": "failed",
+      "phase": "failed",
+      "attempt": 3,
+      "retry_generation": 0,
+      "error_code": "report_partial",
+      "error_detail": "Some report formats failed",
+      "retryable": true,
+      "langflow_job_id": "5f0bb9ad-74b1-4110-83dc-2202c08a7bf5",
+      "flow_id": "d174caae-2495-45f4-92f5-d1c5c0caf916",
+      "flow_hash": "5c423209971c9d6263538e5ca15a4896f3505e2b5e084fbffbfccd2308e531d7",
+      "next_run_at": "2026-10-29T04:34:19.143556+00:00",
+      "created_at": "2026-10-29T04:33:36.865227+00:00"
+    },
+    {
+      "job_id": "JB-9d04bc4cf0294a108ad1646946f3cb54",
+      "kind": "intake",
+      "state": "succeeded",
+      "phase": "persisted",
+      "attempt": 1,
+      "retry_generation": 0,
+      "error_code": null,
+      "error_detail": null,
+      "retryable": false,
+      "langflow_job_id": "76ca285e-954e-4b5a-bb1f-4887d66f2673",
+      "flow_id": "75cbcd63-8493-46d0-9feb-b6d757ca7ce9",
+      "flow_hash": "e1b0cdcd3c26657da65069d0c344ec3fab87947b4e5cacb6bd1f15796e9dd7c7",
+      "next_run_at": "2026-10-29T04:33:34.691287+00:00",
+      "created_at": "2026-10-29T04:33:34.691500+00:00"
+    }
+  ]
+}

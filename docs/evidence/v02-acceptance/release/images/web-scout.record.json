@@ -1,0 +1,18 @@
+{
+  "name": "web",
+  "command": [
+    "docker",
+    "scout",
+    "cves",
+    "sbom:///private/tmp/arc-v02-scout.t8QHbF/web.spdx.json",
+    "--format",
+    "sarif",
+    "--exit-code"
+  ],
+  "started": "2026-10-29T04:21:21.002819+00:00",
+  "finished": "2026-10-29T04:21:22.323225+00:00",
+  "exit_code": 1,
+  "stop_reason": null,
+  "stdout": "web-scout.stdout",
+  "stderr": "web-scout.stderr"
+}

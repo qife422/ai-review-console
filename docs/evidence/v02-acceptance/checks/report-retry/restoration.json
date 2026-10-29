@@ -1,0 +1,39 @@
+{
+  "required": true,
+  "result": "passed",
+  "langflow": {
+    "image_id": "sha256:ff0f5cc380743034c05b4bfcf587be0e714da1610799f0c7c41d45902a5267c4",
+    "environment_sha256": "01f7e3de3384012d19b3953b5d2445b80b1c3f4b9f36795e985151299d054026",
+    "mounts": [
+      {
+        "type": "volume",
+        "name": "ai-review-console-upgrade_report-artifacts",
+        "destination": "/app/artifacts",
+        "rw": true
+      },
+      {
+        "type": "volume",
+        "name": "ai-review-console-upgrade_source-documents",
+        "destination": "/app/documents",
+        "rw": false
+      }
+    ],
+    "networks": [
+      "ai-review-console-upgrade_backend"
+    ],
+    "health": "healthy",
+    "font_override_present": false
+  },
+  "flows": {
+    "intake": {
+      "config_hash": "d3747beed0b494091b59ad1407225968215e915149eb29c9d0e686e0ea8463fc",
+      "flow_hash": "e1b0cdcd3c26657da65069d0c344ec3fab87947b4e5cacb6bd1f15796e9dd7c7",
+      "id": "75cbcd63-8493-46d0-9feb-b6d757ca7ce9"
+    },
+    "report": {
+      "config_hash": "d3747beed0b494091b59ad1407225968215e915149eb29c9d0e686e0ea8463fc",
+      "flow_hash": "5c423209971c9d6263538e5ca15a4896f3505e2b5e084fbffbfccd2308e531d7",
+      "id": "d174caae-2495-45f4-92f5-d1c5c0caf916"
+    }
+  }
+}

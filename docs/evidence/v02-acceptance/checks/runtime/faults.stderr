@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/scripts/verify_faults.py", line 294, in <module>
+    main()
+  File "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/scripts/verify_faults.py", line 276, in main
+    evidence["cases"].append(verify(client, mode))
+                             ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/scripts/verify_faults.py", line 208, in verify
+    assert recovered["attempt"] == 1 and recovered["job_count"] == 2
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

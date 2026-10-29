@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-10-29T04:39:45.567093+00:00",
+  "active_jobs_before_stop": 0,
+  "commands": [
+    {
+      "argv": [
+        "docker",
+        "stop",
+        "arc-restore-2ed4123efdbb-api"
+      ],
+      "exit_code": 0,
+      "stdout": "arc-restore-2ed4123efdbb-api\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "ai-review-console-upgrade",
+        "stop",
+        "worker",
+        "web",
+        "api",
+        "langflow",
+        "postgres"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": " Container ai-review-console-upgrade-web-1  Stopping\n Container ai-review-console-upgrade-postgres-1  Stopping\n Container ai-review-console-upgrade-worker-1  Stopping\n Container ai-review-console-upgrade-langflow-1  Stopping\n Container ai-review-console-upgrade-postgres-1  Stopped\n Container ai-review-console-upgrade-web-1  Stopped\n Container ai-review-console-upgrade-worker-1  Stopped\n Container ai-review-console-upgrade-api-1  Stopping\n Container ai-review-console-upgrade-api-1  Stopped\n Container ai-review-console-upgrade-langflow-1  Stopped\n"
+    }
+  ],
+  "data_or_volumes_deleted": false,
+  "states": [
+    "ai-review-console-upgrade-langflow-1 exited",
+    "ai-review-console-upgrade-web-1 exited",
+    "ai-review-console-upgrade-worker-1 exited",
+    "ai-review-console-upgrade-api-1 exited",
+    "ai-review-console-upgrade-storage-init-run-479d79f38c52 exited",
+    "ai-review-console-upgrade-flow-init-run-db6c01558b99 exited",
+    "ai-review-console-upgrade-migrate-run-5a5f4578d30d exited",
+    "ai-review-console-upgrade-postgres-1 exited",
+    "ai-review-console-web-1 exited",
+    "ai-review-console-api-1 exited",
+    "ai-review-console-flow-init-1 exited",
+    "ai-review-console-langflow-1 exited",
+    "ai-review-console-postgres-1 exited"
+  ]
+}

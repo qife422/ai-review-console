@@ -1,0 +1,41 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "AC-15",
+    "AC-18"
+  ],
+  "source_commit": "540fd4c07cc3ad1b1ce017d3957f06fa0732e5ba",
+  "run_id": 40819513529,
+  "run_url": "https://github.com/qife422/ai-review-console/actions/runs/40819513529",
+  "completed_at_utc": "2026-10-29T04:50:51Z",
+  "reviewed_at_utc": "2026-10-29T04:52:03.590422+00:00",
+  "reviewer": "internal agent /root/v02_ci_release",
+  "visual_method": "view_image(detail=original) on downloaded native CI artifacts",
+  "screenshots": [
+    "reports-ready-1440-light.png",
+    "reports-ready-390-dark.png"
+  ],
+  "observations": "Desktop light and mobile dark report pages have readable Chinese labels, reason, risk evidence and download controls; no missing-glyph boxes or visible clipping observed",
+  "font_family": "Noto Sans CJK SC",
+  "font_package_version": "1:20230817+repack1-3",
+  "unit_tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "128",
+    "time": "5.407",
+    "timestamp": "2026-10-29T04:46:02.516249+00:00",
+    "hostname": "runnervm48cm3"
+  },
+  "frontend_tests": {
+    "files": 5,
+    "tests": 29,
+    "passed": 29,
+    "source": "native verify job log"
+  },
+  "workflow_cases": 3,
+  "workflow_downloads": 9,
+  "browser_result": "passed",
+  "limitations": "Representative internal screenshot review plus native keyboard/theme/viewport/state assertions; browser offline/loading/integrity/partial-retry cases explicitly simulate responses, not container faults; no production approval"
+}

@@ -1,0 +1,6 @@
+### Result
+{"url":"http://127.0.0.1:4183/#case/RC-SKIP-B","heading":"虚构键盘焦点验证 B","focusTag":"H1"}
+### Ran Playwright code
+```js
+await (async page => {await page.waitForFunction(()=>document.querySelector("h1")?.textContent==="虚构键盘焦点验证 B"&&document.activeElement===document.querySelector("h1"),null,{timeout:15000});return await page.evaluate(()=>({url:location.href,heading:document.querySelector("h1").textContent,focusTag:document.activeElement.tagName}));})(page);
+```

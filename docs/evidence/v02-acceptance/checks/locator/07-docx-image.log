@@ -1,0 +1,11 @@
+### Result
+- [Screenshot of viewport](../../../../../var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/docx-locator.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as ../../../../../var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/docx-locator.png
+await page.screenshot({
+  path: '../../../../../var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/locator/docx-locator.png',
+  scale: 'css',
+  type: 'png'
+});
+```

@@ -1,0 +1,249 @@
+{
+  "checked_at": "2026-10-29T04:38:48.810630+00:00",
+  "containers": [
+    {
+      "name": "/ai-review-console-upgrade-langflow-1",
+      "image": "sha256:ff0f5cc380743034c05b4bfcf587be0e714da1610799f0c7c41d45902a5267c4",
+      "state": "running"
+    },
+    {
+      "name": "/arc-restore-2ed4123efdbb-api",
+      "image": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+      "state": "running"
+    },
+    {
+      "name": "/arc-restore-2ed4123efdbb-empty-proof",
+      "image": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+      "state": "exited"
+    },
+    {
+      "name": "/arc-fault-langflow-401-293dc7f2",
+      "image": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+      "state": "exited"
+    },
+    {
+      "name": "/arc-fault-langflow-401-3fb4fa22",
+      "image": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+      "state": "exited"
+    },
+    {
+      "name": "/arc-fault-callback-unavailable-2d305668",
+      "image": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+      "state": "exited"
+    },
+    {
+      "name": "/arc-fault-langflow-unavailable-7e273486",
+      "image": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+      "state": "exited"
+    },
+    {
+      "name": "/arc-fault-after-callback-992fbc3d",
+      "image": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+      "state": "exited"
+    },
+    {
+      "name": "/arc-fault-before-execution-b0d94de6",
+      "image": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+      "state": "exited"
+    },
+    {
+      "name": "/ai-review-console-upgrade-web-1",
+      "image": "sha256:827925e33497504894c22220231543a2eef36c4a7e5581d86349797d63220124",
+      "state": "running"
+    },
+    {
+      "name": "/ai-review-console-upgrade-worker-1",
+      "image": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+      "state": "running"
+    },
+    {
+      "name": "/ai-review-console-upgrade-api-1",
+      "image": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+      "state": "running"
+    },
+    {
+      "name": "/arc-fault-before-execution-59f320bd",
+      "image": "sha256:cb6ae1835e9a10e5847e1fe5a571ce0942d19d008ff6614f5195e5eb3166ffb1",
+      "state": "exited"
+    },
+    {
+      "name": "/ai-review-console-upgrade-storage-init-run-479d79f38c52",
+      "image": "sha256:c7b8c206b5291760464254b58c1a1b51a3ca076d06ef3cd5389c0e1a4978b9a3",
+      "state": "exited"
+    },
+    {
+      "name": "/ai-review-console-upgrade-flow-init-run-db6c01558b99",
+      "image": "sha256:bc38ca0518e4d65b8880821d336e0df9e0662d3336a1f51e71dac0ce125227bd",
+      "state": "exited"
+    },
+    {
+      "name": "/ai-review-console-upgrade-migrate-run-5a5f4578d30d",
+      "image": "sha256:bc38ca0518e4d65b8880821d336e0df9e0662d3336a1f51e71dac0ce125227bd",
+      "state": "exited"
+    },
+    {
+      "name": "/ai-review-console-upgrade-postgres-1",
+      "image": "sha256:21f6013073bc6b92830a2129570e2f5ec42a6c734b5a985a41e83aa58f54c3c1",
+      "state": "running"
+    },
+    {
+      "name": "/ai-review-console-web-1",
+      "image": "sha256:feca3cf30ad38e857c9b001634d874461f7e8d1a22e9f8c14f23dca4f873e80f",
+      "state": "exited"
+    },
+    {
+      "name": "/ai-review-console-api-1",
+      "image": "sha256:9af748b5948f254215ef1502e0d3625f3edeca5093f89b1d8713c7fdcfe11cca",
+      "state": "exited"
+    },
+    {
+      "name": "/ai-review-console-flow-init-1",
+      "image": "sha256:9af748b5948f254215ef1502e0d3625f3edeca5093f89b1d8713c7fdcfe11cca",
+      "state": "exited"
+    },
+    {
+      "name": "/ai-review-console-langflow-1",
+      "image": "sha256:741d5b052da3931ed51924e396d8a0ff29b5ddff483781c49198f957799c7408",
+      "state": "exited"
+    },
+    {
+      "name": "/ai-review-console-postgres-1",
+      "image": "sha256:21f6013073bc6b92830a2129570e2f5ec42a6c734b5a985a41e83aa58f54c3c1",
+      "state": "exited"
+    }
+  ],
+  "project_images": [
+    {
+      "id": "sha256:21f6013073bc6b92830a2129570e2f5ec42a6c734b5a985a41e83aa58f54c3c1",
+      "bytes": 158721177
+    },
+    {
+      "id": "sha256:741d5b052da3931ed51924e396d8a0ff29b5ddff483781c49198f957799c7408",
+      "unavailable": true
+    },
+    {
+      "id": "sha256:827925e33497504894c22220231543a2eef36c4a7e5581d86349797d63220124",
+      "bytes": 24554521
+    },
+    {
+      "id": "sha256:9af748b5948f254215ef1502e0d3625f3edeca5093f89b1d8713c7fdcfe11cca",
+      "unavailable": true
+    },
+    {
+      "id": "sha256:bc38ca0518e4d65b8880821d336e0df9e0662d3336a1f51e71dac0ce125227bd",
+      "unavailable": true
+    },
+    {
+      "id": "sha256:c7b8c206b5291760464254b58c1a1b51a3ca076d06ef3cd5389c0e1a4978b9a3",
+      "unavailable": true
+    },
+    {
+      "id": "sha256:cb6ae1835e9a10e5847e1fe5a571ce0942d19d008ff6614f5195e5eb3166ffb1",
+      "unavailable": true
+    },
+    {
+      "id": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+      "bytes": 103628347
+    },
+    {
+      "id": "sha256:feca3cf30ad38e857c9b001634d874461f7e8d1a22e9f8c14f23dca4f873e80f",
+      "bytes": 24529009
+    },
+    {
+      "id": "sha256:ff0f5cc380743034c05b4bfcf587be0e714da1610799f0c7c41d45902a5267c4",
+      "bytes": 934062614
+    }
+  ],
+  "shared_layers_may_be_double_counted": true,
+  "volumes_retained": [
+    "ai-review-console-upgrade_flow-config",
+    "ai-review-console-upgrade_postgres-data",
+    "ai-review-console-upgrade_report-artifacts",
+    "ai-review-console-upgrade_source-documents",
+    "ai-review-console_postgres-data",
+    "ai-review-console_report-artifacts",
+    "arc-restore-2ed4123efdbb-reports",
+    "arc-restore-2ed4123efdbb-source"
+  ],
+  "evidence_files": 144,
+  "evidence_bytes": 4509240,
+  "source_baseline_bytes": 638871,
+  "temporary_measured_roots": [
+    "/private/tmp/arc-v02-acceptance.UYLZxy",
+    "/private/tmp/arc-v02-release.Emuo3s",
+    "/private/tmp/arc-v02-scout.t8QHbF"
+  ],
+  "protected_sqlite_sha256": "980ad5d23d866a52e4101966594e5a24ee67edef08475afc63ff9c3e1f6fca1f",
+  "contract_sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753",
+  "cleanup_authorized": false,
+  "image_reported_size_sum_available_bytes": 1245495668,
+  "image_inventory_complete": false,
+  "image_inventory_limitation": "Five historical image IDs could not be resolved; available metadata size is not an upper bound or complete physical-storage attribution. No further image build planned.",
+  "current_runtime_display_sizes": [
+    {
+      "Containers": "1",
+      "CreatedAt": "2026-10-28 21:19:32 -0700 PDT",
+      "CreatedSince": "19 minutes ago",
+      "Digest": "<none>",
+      "ID": "sha256:827925e33497504894c22220231543a2eef36c4a7e5581d86349797d63220124",
+      "Repository": "ai-review-console-upgrade-web",
+      "SharedSize": "N/A",
+      "Size": "84.9MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "84.88MB"
+    },
+    {
+      "Containers": "10",
+      "CreatedAt": "2026-10-28 21:18:51 -0700 PDT",
+      "CreatedSince": "20 minutes ago",
+      "Digest": "<none>",
+      "ID": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+      "Repository": "ai-review-console-api",
+      "SharedSize": "N/A",
+      "Size": "449MB",
+      "Tag": "local",
+      "UniqueSize": "N/A",
+      "VirtualSize": "449MB"
+    },
+    {
+      "Containers": "1",
+      "CreatedAt": "2026-10-08 22:57:04 -0700 PDT",
+      "CreatedSince": "2 weeks ago",
+      "Digest": "<none>",
+      "ID": "sha256:ff0f5cc380743034c05b4bfcf587be0e714da1610799f0c7c41d45902a5267c4",
+      "Repository": "ai-review-console-langflow",
+      "SharedSize": "N/A",
+      "Size": "4.33GB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "4.325GB"
+    },
+    {
+      "Containers": "0",
+      "CreatedAt": "2026-09-01 00:20:36 -0700 PDT",
+      "CreatedSince": "8 weeks ago",
+      "Digest": "<none>",
+      "ID": "sha256:842abd5245becdded1521f365b123875390e51c746c828c7e281f74208de61c0",
+      "Repository": "ai-review-console-api",
+      "SharedSize": "N/A",
+      "Size": "413MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "413.5MB"
+    },
+    {
+      "Containers": "2",
+      "CreatedAt": "2025-11-03 17:29:06 -0800 PST",
+      "CreatedSince": "11 months ago",
+      "Digest": "<none>",
+      "ID": "sha256:21f6013073bc6b92830a2129570e2f5ec42a6c734b5a985a41e83aa58f54c3c1",
+      "Repository": "postgres",
+      "SharedSize": "N/A",
+      "Size": "657MB",
+      "Tag": "16.10-trixie",
+      "UniqueSize": "N/A",
+      "VirtualSize": "657MB"
+    }
+  ]
+}

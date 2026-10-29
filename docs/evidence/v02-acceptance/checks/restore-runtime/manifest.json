@@ -1,0 +1,1119 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "AC-17"
+  ],
+  "producer": "scripts/verify_restore_runtime.py",
+  "producer_sha256": "b6d77a70836573b882950eac131fb30df8ba5856d9b84c5f7af5de80981e43b7",
+  "checked_at": "2026-10-29T04:30:31.606657+00:00",
+  "restore_manifest": "/private/tmp/arc-v02-acceptance.UYLZxy/restore.json",
+  "restore_manifest_sha256": "a63e9915ba383f9e8dff55980ade380128984af10ac1d01425c8f7ad4eddb576",
+  "resumed_empty_plan_sha256": "13a9d0e2d6682d3198c6df948ad450c113e7dafd1a23797d82a662656a94dc65",
+  "database": "arc_restore_2ed4123efdbb",
+  "all_database_connections_read_only": true,
+  "database_public_tables_before_and_after": {
+    "assessments": {
+      "rows": 71,
+      "content_sha256": "3d158f9fbe6a0027414c1e904aa6b5f2c0cbe1a56c186855b2ac348db4dd2561"
+    },
+    "audit_events": {
+      "rows": 189,
+      "content_sha256": "f283cd2e41bdd065947eb14d39e6e34d665ba17e7fbbf911ffbd2e296e1a78e4"
+    },
+    "decisions": {
+      "rows": 15,
+      "content_sha256": "2fbc75979b456c2480032a53d0ff05ede5b953bf8c1d766b2761cf4b09d5e51a"
+    },
+    "document_versions": {
+      "rows": 73,
+      "content_sha256": "96a49ea87cc9e202adccda2397b8b87b4f12b961bb1555680234b8e9ff13f74b"
+    },
+    "report_artifacts": {
+      "rows": 45,
+      "content_sha256": "b8479e67931f99f686fde51846795f353213b22a57d842434ca9d10d89d5e75d"
+    },
+    "review_cases": {
+      "rows": 73,
+      "content_sha256": "5c34d7ee0e40042a306f6b402f998f9d1a46b8c64ce4d7cf94ae03bb2dd95aa6"
+    },
+    "schema_migrations": {
+      "rows": 1,
+      "content_sha256": "aedb7efec79265c1f55ca1e0de01b31bd620d4f57b07e4d1702cb438e57eea63"
+    },
+    "upload_requests": {
+      "rows": 61,
+      "content_sha256": "9a07daa2d84eb71b1b2623910017f2270cdb575182e5f429a1b53d44da7318fb"
+    },
+    "worker_heartbeats": {
+      "rows": 11,
+      "content_sha256": "378f23562617451c28b8ec7543810b26dc56fbdd3ca0bd025467275eacc9cf03"
+    },
+    "workflow_jobs": {
+      "rows": 75,
+      "content_sha256": "05638ac2c5f3126f1236916c3b58770167da1f1b45c872b3a9c9d86a033c3230"
+    }
+  },
+  "database_content_unchanged": true,
+  "original_sqlite_sha256_before_and_after": "980ad5d23d866a52e4101966594e5a24ee67edef08475afc63ff9c3e1f6fca1f",
+  "selected_file_precheck": {
+    "copied": false,
+    "files": [
+      {
+        "bytes": 144,
+        "case_id": "RC-6c12cc7245e34a018d145bbe7d588d6f",
+        "document_version_id": "DV-1056f732a4d04cb6a0256b58500ae874",
+        "key": "DV-1056f732a4d04cb6a0256b58500ae874/source.txt",
+        "kind": "source",
+        "report_id": null,
+        "sha256": "6f87114e23674d5e20ac4de38a1565aa151f022d8ec3c1f49b7c7e069afd15e7",
+        "source_gid": 10001,
+        "source_mode": "0o644",
+        "source_sha256": "6f87114e23674d5e20ac4de38a1565aa151f022d8ec3c1f49b7c7e069afd15e7",
+        "source_uid": 10001
+      },
+      {
+        "bytes": 15403,
+        "case_id": "RC-98aacae843754218bfe76ffba1a2a0b0",
+        "document_version_id": "DV-6447f1f4640146f6a08de0242163ae40",
+        "key": "DV-6447f1f4640146f6a08de0242163ae40/source.pdf",
+        "kind": "source",
+        "report_id": null,
+        "sha256": "777f4a0594e05e4fa9b44590f73a04fffc5cd313fd05e5c2afed09aa2f6e90bc",
+        "source_gid": 10001,
+        "source_mode": "0o644",
+        "source_sha256": "777f4a0594e05e4fa9b44590f73a04fffc5cd313fd05e5c2afed09aa2f6e90bc",
+        "source_uid": 10001
+      },
+      {
+        "bytes": 36875,
+        "case_id": "RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+        "document_version_id": "DV-7572577550204dc8a690f828b56d456f",
+        "key": "DV-7572577550204dc8a690f828b56d456f/source.docx",
+        "kind": "source",
+        "report_id": null,
+        "sha256": "aa58168c343272a3f6c179396980748ed43dde375036cfd01b5b280829243a05",
+        "source_gid": 10001,
+        "source_mode": "0o644",
+        "source_sha256": "aa58168c343272a3f6c179396980748ed43dde375036cfd01b5b280829243a05",
+        "source_uid": 10001
+      },
+      {
+        "bytes": 40743,
+        "case_id": "RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+        "document_version_id": "DV-7572577550204dc8a690f828b56d456f",
+        "key": "DC-d87e1000135c44d994cb19be6e875060/e806c5d9694a3290008e429a029b37c0c4b6033af9b6c622b547ab851bbdae14/report.pdf",
+        "kind": "report",
+        "report_id": "RP-1a1b67f1d2fd4937895ed5b471b963d4",
+        "sha256": "918aacbd7e1aa32c52408ce72f0d3294a48a1a1ad44c2b8ef4a2cb80f3cd70c5",
+        "source_gid": 0,
+        "source_mode": "0o644",
+        "source_sha256": "918aacbd7e1aa32c52408ce72f0d3294a48a1a1ad44c2b8ef4a2cb80f3cd70c5",
+        "source_uid": 1000
+      },
+      {
+        "bytes": 8792,
+        "case_id": "RC-98aacae843754218bfe76ffba1a2a0b0",
+        "document_version_id": "DV-6447f1f4640146f6a08de0242163ae40",
+        "key": "DC-6ddefb110c6b4b2a8b26ab09af8d0a9e/645d2abb020997fc5e10db357b95640bc9e747dd3c8bbf253d187542fe414b95/report.html",
+        "kind": "report",
+        "report_id": "RP-24f0069a653f46e49d9056d527fca437",
+        "sha256": "afddad30ecf8b28b73f167936a5ce2c6c75a3d261624787046ad849bcd482718",
+        "source_gid": 0,
+        "source_mode": "0o644",
+        "source_sha256": "afddad30ecf8b28b73f167936a5ce2c6c75a3d261624787046ad849bcd482718",
+        "source_uid": 1000
+      },
+      {
+        "bytes": 7620,
+        "case_id": "RC-6c12cc7245e34a018d145bbe7d588d6f",
+        "document_version_id": "DV-1056f732a4d04cb6a0256b58500ae874",
+        "key": "DC-2589559184fe4adaa6b47be31356faab/c1231f2baf5db8b58f75e380af0d6cd61c366258cdc00fdefcfbb03e04834c80/report.html",
+        "kind": "report",
+        "report_id": "RP-35d36d35499a4499a8267f1aba014d69",
+        "sha256": "8c9002f21dccca99d9bc5bbb2a88073c2ce2d539e96dd1b2159bf20743cef07b",
+        "source_gid": 0,
+        "source_mode": "0o644",
+        "source_sha256": "8c9002f21dccca99d9bc5bbb2a88073c2ce2d539e96dd1b2159bf20743cef07b",
+        "source_uid": 1000
+      },
+      {
+        "bytes": 41469,
+        "case_id": "RC-98aacae843754218bfe76ffba1a2a0b0",
+        "document_version_id": "DV-6447f1f4640146f6a08de0242163ae40",
+        "key": "DC-6ddefb110c6b4b2a8b26ab09af8d0a9e/645d2abb020997fc5e10db357b95640bc9e747dd3c8bbf253d187542fe414b95/report.pdf",
+        "kind": "report",
+        "report_id": "RP-890cbf90b63c4445961fd42bdab71745",
+        "sha256": "fa09b507d8a1d5b4fb5e4a5ee8ee1d6f0eb9b898ba900b7fe1944e60c9b561ff",
+        "source_gid": 0,
+        "source_mode": "0o644",
+        "source_sha256": "fa09b507d8a1d5b4fb5e4a5ee8ee1d6f0eb9b898ba900b7fe1944e60c9b561ff",
+        "source_uid": 1000
+      },
+      {
+        "bytes": 3140,
+        "case_id": "RC-6c12cc7245e34a018d145bbe7d588d6f",
+        "document_version_id": "DV-1056f732a4d04cb6a0256b58500ae874",
+        "key": "DC-2589559184fe4adaa6b47be31356faab/c1231f2baf5db8b58f75e380af0d6cd61c366258cdc00fdefcfbb03e04834c80/report.json",
+        "kind": "report",
+        "report_id": "RP-ae0d7c3eef554d0ba31fa220291b4ece",
+        "sha256": "b3a33536c2e245bd442d98899f9ef844037cab0d789ef00eebc39278a302c877",
+        "source_gid": 0,
+        "source_mode": "0o644",
+        "source_sha256": "b3a33536c2e245bd442d98899f9ef844037cab0d789ef00eebc39278a302c877",
+        "source_uid": 1000
+      },
+      {
+        "bytes": 38341,
+        "case_id": "RC-6c12cc7245e34a018d145bbe7d588d6f",
+        "document_version_id": "DV-1056f732a4d04cb6a0256b58500ae874",
+        "key": "DC-2589559184fe4adaa6b47be31356faab/c1231f2baf5db8b58f75e380af0d6cd61c366258cdc00fdefcfbb03e04834c80/report.pdf",
+        "kind": "report",
+        "report_id": "RP-c27895ac2be140be9c6daec725427e2b",
+        "sha256": "314d6d21759a2b004ccf8caa50aa9136f97f5c4c96ddd308d1cc208e6015f586",
+        "source_gid": 0,
+        "source_mode": "0o644",
+        "source_sha256": "314d6d21759a2b004ccf8caa50aa9136f97f5c4c96ddd308d1cc208e6015f586",
+        "source_uid": 1000
+      },
+      {
+        "bytes": 8564,
+        "case_id": "RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+        "document_version_id": "DV-7572577550204dc8a690f828b56d456f",
+        "key": "DC-d87e1000135c44d994cb19be6e875060/e806c5d9694a3290008e429a029b37c0c4b6033af9b6c622b547ab851bbdae14/report.html",
+        "kind": "report",
+        "report_id": "RP-c34f76b937bf48cb83a6959d6d19d969",
+        "sha256": "8786a5a020e27476b206f3b1b4b36e73361907df96c58106025366a8ab085c57",
+        "source_gid": 0,
+        "source_mode": "0o644",
+        "source_sha256": "8786a5a020e27476b206f3b1b4b36e73361907df96c58106025366a8ab085c57",
+        "source_uid": 1000
+      },
+      {
+        "bytes": 3610,
+        "case_id": "RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+        "document_version_id": "DV-7572577550204dc8a690f828b56d456f",
+        "key": "DC-d87e1000135c44d994cb19be6e875060/e806c5d9694a3290008e429a029b37c0c4b6033af9b6c622b547ab851bbdae14/report.json",
+        "kind": "report",
+        "report_id": "RP-cd594a94641148348a26e3faa4cea83d",
+        "sha256": "463bbade89cfc45a705f6ea695c9725d803f5b0194481ed7eeaa2ff3f4954652",
+        "source_gid": 0,
+        "source_mode": "0o644",
+        "source_sha256": "463bbade89cfc45a705f6ea695c9725d803f5b0194481ed7eeaa2ff3f4954652",
+        "source_uid": 1000
+      },
+      {
+        "bytes": 3725,
+        "case_id": "RC-98aacae843754218bfe76ffba1a2a0b0",
+        "document_version_id": "DV-6447f1f4640146f6a08de0242163ae40",
+        "key": "DC-6ddefb110c6b4b2a8b26ab09af8d0a9e/645d2abb020997fc5e10db357b95640bc9e747dd3c8bbf253d187542fe414b95/report.json",
+        "kind": "report",
+        "report_id": "RP-d3a6e851a9ff4cb3ad778200a8d5d155",
+        "sha256": "c4a4e9b4dcb11a06ca43ab338adaab74d225b51786cfc12b16051ec8c382347d",
+        "source_gid": 0,
+        "source_mode": "0o644",
+        "source_sha256": "c4a4e9b4dcb11a06ca43ab338adaab74d225b51786cfc12b16051ec8c382347d",
+        "source_uid": 1000
+      }
+    ],
+    "selected_bytes": 208426,
+    "selected_count": 12
+  },
+  "selected_file_copy": {
+    "copied": true,
+    "files": [
+      {
+        "bytes": 144,
+        "case_id": "RC-6c12cc7245e34a018d145bbe7d588d6f",
+        "destination_gid": 10001,
+        "destination_mode": "0o644",
+        "destination_uid": 10001,
+        "document_version_id": "DV-1056f732a4d04cb6a0256b58500ae874",
+        "key": "DV-1056f732a4d04cb6a0256b58500ae874/source.txt",
+        "kind": "source",
+        "report_id": null,
+        "sha256": "6f87114e23674d5e20ac4de38a1565aa151f022d8ec3c1f49b7c7e069afd15e7",
+        "source_gid": 10001,
+        "source_mode": "0o644",
+        "source_sha256": "6f87114e23674d5e20ac4de38a1565aa151f022d8ec3c1f49b7c7e069afd15e7",
+        "source_uid": 10001
+      },
+      {
+        "bytes": 15403,
+        "case_id": "RC-98aacae843754218bfe76ffba1a2a0b0",
+        "destination_gid": 10001,
+        "destination_mode": "0o644",
+        "destination_uid": 10001,
+        "document_version_id": "DV-6447f1f4640146f6a08de0242163ae40",
+        "key": "DV-6447f1f4640146f6a08de0242163ae40/source.pdf",
+        "kind": "source",
+        "report_id": null,
+        "sha256": "777f4a0594e05e4fa9b44590f73a04fffc5cd313fd05e5c2afed09aa2f6e90bc",
+        "source_gid": 10001,
+        "source_mode": "0o644",
+        "source_sha256": "777f4a0594e05e4fa9b44590f73a04fffc5cd313fd05e5c2afed09aa2f6e90bc",
+        "source_uid": 10001
+      },
+      {
+        "bytes": 36875,
+        "case_id": "RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+        "destination_gid": 10001,
+        "destination_mode": "0o644",
+        "destination_uid": 10001,
+        "document_version_id": "DV-7572577550204dc8a690f828b56d456f",
+        "key": "DV-7572577550204dc8a690f828b56d456f/source.docx",
+        "kind": "source",
+        "report_id": null,
+        "sha256": "aa58168c343272a3f6c179396980748ed43dde375036cfd01b5b280829243a05",
+        "source_gid": 10001,
+        "source_mode": "0o644",
+        "source_sha256": "aa58168c343272a3f6c179396980748ed43dde375036cfd01b5b280829243a05",
+        "source_uid": 10001
+      },
+      {
+        "bytes": 40743,
+        "case_id": "RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+        "destination_gid": 1000,
+        "destination_mode": "0o644",
+        "destination_uid": 1000,
+        "document_version_id": "DV-7572577550204dc8a690f828b56d456f",
+        "key": "DC-d87e1000135c44d994cb19be6e875060/e806c5d9694a3290008e429a029b37c0c4b6033af9b6c622b547ab851bbdae14/report.pdf",
+        "kind": "report",
+        "report_id": "RP-1a1b67f1d2fd4937895ed5b471b963d4",
+        "sha256": "918aacbd7e1aa32c52408ce72f0d3294a48a1a1ad44c2b8ef4a2cb80f3cd70c5",
+        "source_gid": 0,
+        "source_mode": "0o644",
+        "source_sha256": "918aacbd7e1aa32c52408ce72f0d3294a48a1a1ad44c2b8ef4a2cb80f3cd70c5",
+        "source_uid": 1000
+      },
+      {
+        "bytes": 8792,
+        "case_id": "RC-98aacae843754218bfe76ffba1a2a0b0",
+        "destination_gid": 1000,
+        "destination_mode": "0o644",
+        "destination_uid": 1000,
+        "document_version_id": "DV-6447f1f4640146f6a08de0242163ae40",
+        "key": "DC-6ddefb110c6b4b2a8b26ab09af8d0a9e/645d2abb020997fc5e10db357b95640bc9e747dd3c8bbf253d187542fe414b95/report.html",
+        "kind": "report",
+        "report_id": "RP-24f0069a653f46e49d9056d527fca437",
+        "sha256": "afddad30ecf8b28b73f167936a5ce2c6c75a3d261624787046ad849bcd482718",
+        "source_gid": 0,
+        "source_mode": "0o644",
+        "source_sha256": "afddad30ecf8b28b73f167936a5ce2c6c75a3d261624787046ad849bcd482718",
+        "source_uid": 1000
+      },
+      {
+        "bytes": 7620,
+        "case_id": "RC-6c12cc7245e34a018d145bbe7d588d6f",
+        "destination_gid": 1000,
+        "destination_mode": "0o644",
+        "destination_uid": 1000,
+        "document_version_id": "DV-1056f732a4d04cb6a0256b58500ae874",
+        "key": "DC-2589559184fe4adaa6b47be31356faab/c1231f2baf5db8b58f75e380af0d6cd61c366258cdc00fdefcfbb03e04834c80/report.html",
+        "kind": "report",
+        "report_id": "RP-35d36d35499a4499a8267f1aba014d69",
+        "sha256": "8c9002f21dccca99d9bc5bbb2a88073c2ce2d539e96dd1b2159bf20743cef07b",
+        "source_gid": 0,
+        "source_mode": "0o644",
+        "source_sha256": "8c9002f21dccca99d9bc5bbb2a88073c2ce2d539e96dd1b2159bf20743cef07b",
+        "source_uid": 1000
+      },
+      {
+        "bytes": 41469,
+        "case_id": "RC-98aacae843754218bfe76ffba1a2a0b0",
+        "destination_gid": 1000,
+        "destination_mode": "0o644",
+        "destination_uid": 1000,
+        "document_version_id": "DV-6447f1f4640146f6a08de0242163ae40",
+        "key": "DC-6ddefb110c6b4b2a8b26ab09af8d0a9e/645d2abb020997fc5e10db357b95640bc9e747dd3c8bbf253d187542fe414b95/report.pdf",
+        "kind": "report",
+        "report_id": "RP-890cbf90b63c4445961fd42bdab71745",
+        "sha256": "fa09b507d8a1d5b4fb5e4a5ee8ee1d6f0eb9b898ba900b7fe1944e60c9b561ff",
+        "source_gid": 0,
+        "source_mode": "0o644",
+        "source_sha256": "fa09b507d8a1d5b4fb5e4a5ee8ee1d6f0eb9b898ba900b7fe1944e60c9b561ff",
+        "source_uid": 1000
+      },
+      {
+        "bytes": 3140,
+        "case_id": "RC-6c12cc7245e34a018d145bbe7d588d6f",
+        "destination_gid": 1000,
+        "destination_mode": "0o644",
+        "destination_uid": 1000,
+        "document_version_id": "DV-1056f732a4d04cb6a0256b58500ae874",
+        "key": "DC-2589559184fe4adaa6b47be31356faab/c1231f2baf5db8b58f75e380af0d6cd61c366258cdc00fdefcfbb03e04834c80/report.json",
+        "kind": "report",
+        "report_id": "RP-ae0d7c3eef554d0ba31fa220291b4ece",
+        "sha256": "b3a33536c2e245bd442d98899f9ef844037cab0d789ef00eebc39278a302c877",
+        "source_gid": 0,
+        "source_mode": "0o644",
+        "source_sha256": "b3a33536c2e245bd442d98899f9ef844037cab0d789ef00eebc39278a302c877",
+        "source_uid": 1000
+      },
+      {
+        "bytes": 38341,
+        "case_id": "RC-6c12cc7245e34a018d145bbe7d588d6f",
+        "destination_gid": 1000,
+        "destination_mode": "0o644",
+        "destination_uid": 1000,
+        "document_version_id": "DV-1056f732a4d04cb6a0256b58500ae874",
+        "key": "DC-2589559184fe4adaa6b47be31356faab/c1231f2baf5db8b58f75e380af0d6cd61c366258cdc00fdefcfbb03e04834c80/report.pdf",
+        "kind": "report",
+        "report_id": "RP-c27895ac2be140be9c6daec725427e2b",
+        "sha256": "314d6d21759a2b004ccf8caa50aa9136f97f5c4c96ddd308d1cc208e6015f586",
+        "source_gid": 0,
+        "source_mode": "0o644",
+        "source_sha256": "314d6d21759a2b004ccf8caa50aa9136f97f5c4c96ddd308d1cc208e6015f586",
+        "source_uid": 1000
+      },
+      {
+        "bytes": 8564,
+        "case_id": "RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+        "destination_gid": 1000,
+        "destination_mode": "0o644",
+        "destination_uid": 1000,
+        "document_version_id": "DV-7572577550204dc8a690f828b56d456f",
+        "key": "DC-d87e1000135c44d994cb19be6e875060/e806c5d9694a3290008e429a029b37c0c4b6033af9b6c622b547ab851bbdae14/report.html",
+        "kind": "report",
+        "report_id": "RP-c34f76b937bf48cb83a6959d6d19d969",
+        "sha256": "8786a5a020e27476b206f3b1b4b36e73361907df96c58106025366a8ab085c57",
+        "source_gid": 0,
+        "source_mode": "0o644",
+        "source_sha256": "8786a5a020e27476b206f3b1b4b36e73361907df96c58106025366a8ab085c57",
+        "source_uid": 1000
+      },
+      {
+        "bytes": 3610,
+        "case_id": "RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+        "destination_gid": 1000,
+        "destination_mode": "0o644",
+        "destination_uid": 1000,
+        "document_version_id": "DV-7572577550204dc8a690f828b56d456f",
+        "key": "DC-d87e1000135c44d994cb19be6e875060/e806c5d9694a3290008e429a029b37c0c4b6033af9b6c622b547ab851bbdae14/report.json",
+        "kind": "report",
+        "report_id": "RP-cd594a94641148348a26e3faa4cea83d",
+        "sha256": "463bbade89cfc45a705f6ea695c9725d803f5b0194481ed7eeaa2ff3f4954652",
+        "source_gid": 0,
+        "source_mode": "0o644",
+        "source_sha256": "463bbade89cfc45a705f6ea695c9725d803f5b0194481ed7eeaa2ff3f4954652",
+        "source_uid": 1000
+      },
+      {
+        "bytes": 3725,
+        "case_id": "RC-98aacae843754218bfe76ffba1a2a0b0",
+        "destination_gid": 1000,
+        "destination_mode": "0o644",
+        "destination_uid": 1000,
+        "document_version_id": "DV-6447f1f4640146f6a08de0242163ae40",
+        "key": "DC-6ddefb110c6b4b2a8b26ab09af8d0a9e/645d2abb020997fc5e10db357b95640bc9e747dd3c8bbf253d187542fe414b95/report.json",
+        "kind": "report",
+        "report_id": "RP-d3a6e851a9ff4cb3ad778200a8d5d155",
+        "sha256": "c4a4e9b4dcb11a06ca43ab338adaab74d225b51786cfc12b16051ec8c382347d",
+        "source_gid": 0,
+        "source_mode": "0o644",
+        "source_sha256": "c4a4e9b4dcb11a06ca43ab338adaab74d225b51786cfc12b16051ec8c382347d",
+        "source_uid": 1000
+      }
+    ],
+    "selected_bytes": 208426,
+    "selected_count": 12
+  },
+  "selected_sources": [
+    {
+      "version_id": "DV-1056f732a4d04cb6a0256b58500ae874",
+      "case_id": "RC-6c12cc7245e34a018d145bbe7d588d6f",
+      "source_key": "DV-1056f732a4d04cb6a0256b58500ae874/source.txt",
+      "bytes": 144,
+      "sha256": "6f87114e23674d5e20ac4de38a1565aa151f022d8ec3c1f49b7c7e069afd15e7"
+    },
+    {
+      "version_id": "DV-6447f1f4640146f6a08de0242163ae40",
+      "case_id": "RC-98aacae843754218bfe76ffba1a2a0b0",
+      "source_key": "DV-6447f1f4640146f6a08de0242163ae40/source.pdf",
+      "bytes": 15403,
+      "sha256": "777f4a0594e05e4fa9b44590f73a04fffc5cd313fd05e5c2afed09aa2f6e90bc"
+    },
+    {
+      "version_id": "DV-7572577550204dc8a690f828b56d456f",
+      "case_id": "RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+      "source_key": "DV-7572577550204dc8a690f828b56d456f/source.docx",
+      "bytes": 36875,
+      "sha256": "aa58168c343272a3f6c179396980748ed43dde375036cfd01b5b280829243a05"
+    }
+  ],
+  "selected_ready_reports": [
+    {
+      "report_id": "RP-1a1b67f1d2fd4937895ed5b471b963d4",
+      "case_id": "RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+      "document_version_id": "DV-7572577550204dc8a690f828b56d456f",
+      "format": "pdf",
+      "artifact_key": "DC-d87e1000135c44d994cb19be6e875060/e806c5d9694a3290008e429a029b37c0c4b6033af9b6c622b547ab851bbdae14/report.pdf",
+      "bytes": 40743,
+      "sha256": "918aacbd7e1aa32c52408ce72f0d3294a48a1a1ad44c2b8ef4a2cb80f3cd70c5"
+    },
+    {
+      "report_id": "RP-24f0069a653f46e49d9056d527fca437",
+      "case_id": "RC-98aacae843754218bfe76ffba1a2a0b0",
+      "document_version_id": "DV-6447f1f4640146f6a08de0242163ae40",
+      "format": "html",
+      "artifact_key": "DC-6ddefb110c6b4b2a8b26ab09af8d0a9e/645d2abb020997fc5e10db357b95640bc9e747dd3c8bbf253d187542fe414b95/report.html",
+      "bytes": 8792,
+      "sha256": "afddad30ecf8b28b73f167936a5ce2c6c75a3d261624787046ad849bcd482718"
+    },
+    {
+      "report_id": "RP-35d36d35499a4499a8267f1aba014d69",
+      "case_id": "RC-6c12cc7245e34a018d145bbe7d588d6f",
+      "document_version_id": "DV-1056f732a4d04cb6a0256b58500ae874",
+      "format": "html",
+      "artifact_key": "DC-2589559184fe4adaa6b47be31356faab/c1231f2baf5db8b58f75e380af0d6cd61c366258cdc00fdefcfbb03e04834c80/report.html",
+      "bytes": 7620,
+      "sha256": "8c9002f21dccca99d9bc5bbb2a88073c2ce2d539e96dd1b2159bf20743cef07b"
+    },
+    {
+      "report_id": "RP-890cbf90b63c4445961fd42bdab71745",
+      "case_id": "RC-98aacae843754218bfe76ffba1a2a0b0",
+      "document_version_id": "DV-6447f1f4640146f6a08de0242163ae40",
+      "format": "pdf",
+      "artifact_key": "DC-6ddefb110c6b4b2a8b26ab09af8d0a9e/645d2abb020997fc5e10db357b95640bc9e747dd3c8bbf253d187542fe414b95/report.pdf",
+      "bytes": 41469,
+      "sha256": "fa09b507d8a1d5b4fb5e4a5ee8ee1d6f0eb9b898ba900b7fe1944e60c9b561ff"
+    },
+    {
+      "report_id": "RP-ae0d7c3eef554d0ba31fa220291b4ece",
+      "case_id": "RC-6c12cc7245e34a018d145bbe7d588d6f",
+      "document_version_id": "DV-1056f732a4d04cb6a0256b58500ae874",
+      "format": "json",
+      "artifact_key": "DC-2589559184fe4adaa6b47be31356faab/c1231f2baf5db8b58f75e380af0d6cd61c366258cdc00fdefcfbb03e04834c80/report.json",
+      "bytes": 3140,
+      "sha256": "b3a33536c2e245bd442d98899f9ef844037cab0d789ef00eebc39278a302c877"
+    },
+    {
+      "report_id": "RP-c27895ac2be140be9c6daec725427e2b",
+      "case_id": "RC-6c12cc7245e34a018d145bbe7d588d6f",
+      "document_version_id": "DV-1056f732a4d04cb6a0256b58500ae874",
+      "format": "pdf",
+      "artifact_key": "DC-2589559184fe4adaa6b47be31356faab/c1231f2baf5db8b58f75e380af0d6cd61c366258cdc00fdefcfbb03e04834c80/report.pdf",
+      "bytes": 38341,
+      "sha256": "314d6d21759a2b004ccf8caa50aa9136f97f5c4c96ddd308d1cc208e6015f586"
+    },
+    {
+      "report_id": "RP-c34f76b937bf48cb83a6959d6d19d969",
+      "case_id": "RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+      "document_version_id": "DV-7572577550204dc8a690f828b56d456f",
+      "format": "html",
+      "artifact_key": "DC-d87e1000135c44d994cb19be6e875060/e806c5d9694a3290008e429a029b37c0c4b6033af9b6c622b547ab851bbdae14/report.html",
+      "bytes": 8564,
+      "sha256": "8786a5a020e27476b206f3b1b4b36e73361907df96c58106025366a8ab085c57"
+    },
+    {
+      "report_id": "RP-cd594a94641148348a26e3faa4cea83d",
+      "case_id": "RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+      "document_version_id": "DV-7572577550204dc8a690f828b56d456f",
+      "format": "json",
+      "artifact_key": "DC-d87e1000135c44d994cb19be6e875060/e806c5d9694a3290008e429a029b37c0c4b6033af9b6c622b547ab851bbdae14/report.json",
+      "bytes": 3610,
+      "sha256": "463bbade89cfc45a705f6ea695c9725d803f5b0194481ed7eeaa2ff3f4954652"
+    },
+    {
+      "report_id": "RP-d3a6e851a9ff4cb3ad778200a8d5d155",
+      "case_id": "RC-98aacae843754218bfe76ffba1a2a0b0",
+      "document_version_id": "DV-6447f1f4640146f6a08de0242163ae40",
+      "format": "json",
+      "artifact_key": "DC-6ddefb110c6b4b2a8b26ab09af8d0a9e/645d2abb020997fc5e10db357b95640bc9e747dd3c8bbf253d187542fe414b95/report.json",
+      "bytes": 3725,
+      "sha256": "c4a4e9b4dcb11a06ca43ab338adaab74d225b51786cfc12b16051ec8c382347d"
+    }
+  ],
+  "container_id": "f573c2bb04dcd1643d56a2dc403f40ceaa4adbccd09f72c6799e2873a2c22d5f",
+  "container_name": "arc-restore-2ed4123efdbb-api",
+  "source_api": "ai-review-console-upgrade-api-1",
+  "image_id": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+  "network": "ai-review-console-upgrade_backend",
+  "api_url": "http://127.0.0.1:8001",
+  "runtime_inspection": {
+    "image": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+    "mounts": [
+      {
+        "Type": "volume",
+        "Name": "ai-review-console-upgrade_flow-config",
+        "Source": "/var/lib/docker/volumes/ai-review-console-upgrade_flow-config/_data",
+        "Destination": "/app/config",
+        "Driver": "local",
+        "Mode": "z",
+        "RW": false,
+        "Propagation": ""
+      },
+      {
+        "Type": "volume",
+        "Name": "arc-restore-2ed4123efdbb-source",
+        "Source": "/var/lib/docker/volumes/arc-restore-2ed4123efdbb-source/_data",
+        "Destination": "/app/documents",
+        "Driver": "local",
+        "Mode": "z",
+        "RW": false,
+        "Propagation": ""
+      },
+      {
+        "Type": "volume",
+        "Name": "arc-restore-2ed4123efdbb-reports",
+        "Source": "/var/lib/docker/volumes/arc-restore-2ed4123efdbb-reports/_data",
+        "Destination": "/app/artifacts",
+        "Driver": "local",
+        "Mode": "z",
+        "RW": false,
+        "Propagation": ""
+      }
+    ],
+    "running": true
+  },
+  "health": {
+    "status": "ok",
+    "data_mode": "synthetic-only",
+    "workflow_engine": "Langflow"
+  },
+  "case_count": 3,
+  "database_case_count": 73,
+  "case_readbacks": [
+    {
+      "case_id": "RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+      "status": "rejected",
+      "document_version_id": "DV-7572577550204dc8a690f828b56d456f",
+      "response_sha256": "ca4cf86b3b6dadd104cd5570ac5b5a1ca66f45c9c550020e2c926de80f26c860",
+      "http_status": 200
+    },
+    {
+      "case_id": "RC-6c12cc7245e34a018d145bbe7d588d6f",
+      "status": "approved",
+      "document_version_id": "DV-1056f732a4d04cb6a0256b58500ae874",
+      "response_sha256": "daabd86ac74a9c06c8d9b9f67f982d8eb5073a51d48213723cceb4055a0493ca",
+      "http_status": 200
+    },
+    {
+      "case_id": "RC-98aacae843754218bfe76ffba1a2a0b0",
+      "status": "changes_requested",
+      "document_version_id": "DV-6447f1f4640146f6a08de0242163ae40",
+      "response_sha256": "64e50c627e044fa9eaec44f0d00de397a3d697a9fa73e0aa7e75e52d45915c73",
+      "http_status": 200
+    }
+  ],
+  "file_scope": {
+    "mode": "selected_cases",
+    "case_ids": [
+      "RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+      "RC-6c12cc7245e34a018d145bbe7d588d6f",
+      "RC-98aacae843754218bfe76ffba1a2a0b0"
+    ],
+    "unselected_file_count": 79,
+    "unselected_files_runtime_verified": false
+  },
+  "downloads": [
+    {
+      "case_id": "RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+      "report_id": "RP-1a1b67f1d2fd4937895ed5b471b963d4",
+      "format": "pdf",
+      "bytes": 40743,
+      "sha256": "918aacbd7e1aa32c52408ce72f0d3294a48a1a1ad44c2b8ef4a2cb80f3cd70c5",
+      "header_sha256": "918aacbd7e1aa32c52408ce72f0d3294a48a1a1ad44c2b8ef4a2cb80f3cd70c5",
+      "content_type": "application/pdf",
+      "http_status": 200
+    },
+    {
+      "case_id": "RC-98aacae843754218bfe76ffba1a2a0b0",
+      "report_id": "RP-24f0069a653f46e49d9056d527fca437",
+      "format": "html",
+      "bytes": 8792,
+      "sha256": "afddad30ecf8b28b73f167936a5ce2c6c75a3d261624787046ad849bcd482718",
+      "header_sha256": "afddad30ecf8b28b73f167936a5ce2c6c75a3d261624787046ad849bcd482718",
+      "content_type": "text/html; charset=utf-8",
+      "http_status": 200
+    },
+    {
+      "case_id": "RC-6c12cc7245e34a018d145bbe7d588d6f",
+      "report_id": "RP-35d36d35499a4499a8267f1aba014d69",
+      "format": "html",
+      "bytes": 7620,
+      "sha256": "8c9002f21dccca99d9bc5bbb2a88073c2ce2d539e96dd1b2159bf20743cef07b",
+      "header_sha256": "8c9002f21dccca99d9bc5bbb2a88073c2ce2d539e96dd1b2159bf20743cef07b",
+      "content_type": "text/html; charset=utf-8",
+      "http_status": 200
+    },
+    {
+      "case_id": "RC-98aacae843754218bfe76ffba1a2a0b0",
+      "report_id": "RP-890cbf90b63c4445961fd42bdab71745",
+      "format": "pdf",
+      "bytes": 41469,
+      "sha256": "fa09b507d8a1d5b4fb5e4a5ee8ee1d6f0eb9b898ba900b7fe1944e60c9b561ff",
+      "header_sha256": "fa09b507d8a1d5b4fb5e4a5ee8ee1d6f0eb9b898ba900b7fe1944e60c9b561ff",
+      "content_type": "application/pdf",
+      "http_status": 200
+    },
+    {
+      "case_id": "RC-6c12cc7245e34a018d145bbe7d588d6f",
+      "report_id": "RP-ae0d7c3eef554d0ba31fa220291b4ece",
+      "format": "json",
+      "bytes": 3140,
+      "sha256": "b3a33536c2e245bd442d98899f9ef844037cab0d789ef00eebc39278a302c877",
+      "header_sha256": "b3a33536c2e245bd442d98899f9ef844037cab0d789ef00eebc39278a302c877",
+      "content_type": "application/json",
+      "http_status": 200
+    },
+    {
+      "case_id": "RC-6c12cc7245e34a018d145bbe7d588d6f",
+      "report_id": "RP-c27895ac2be140be9c6daec725427e2b",
+      "format": "pdf",
+      "bytes": 38341,
+      "sha256": "314d6d21759a2b004ccf8caa50aa9136f97f5c4c96ddd308d1cc208e6015f586",
+      "header_sha256": "314d6d21759a2b004ccf8caa50aa9136f97f5c4c96ddd308d1cc208e6015f586",
+      "content_type": "application/pdf",
+      "http_status": 200
+    },
+    {
+      "case_id": "RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+      "report_id": "RP-c34f76b937bf48cb83a6959d6d19d969",
+      "format": "html",
+      "bytes": 8564,
+      "sha256": "8786a5a020e27476b206f3b1b4b36e73361907df96c58106025366a8ab085c57",
+      "header_sha256": "8786a5a020e27476b206f3b1b4b36e73361907df96c58106025366a8ab085c57",
+      "content_type": "text/html; charset=utf-8",
+      "http_status": 200
+    },
+    {
+      "case_id": "RC-5f3e993cc1b54903a06ee1dcef7a0ecc",
+      "report_id": "RP-cd594a94641148348a26e3faa4cea83d",
+      "format": "json",
+      "bytes": 3610,
+      "sha256": "463bbade89cfc45a705f6ea695c9725d803f5b0194481ed7eeaa2ff3f4954652",
+      "header_sha256": "463bbade89cfc45a705f6ea695c9725d803f5b0194481ed7eeaa2ff3f4954652",
+      "content_type": "application/json",
+      "http_status": 200
+    },
+    {
+      "case_id": "RC-98aacae843754218bfe76ffba1a2a0b0",
+      "report_id": "RP-d3a6e851a9ff4cb3ad778200a8d5d155",
+      "format": "json",
+      "bytes": 3725,
+      "sha256": "c4a4e9b4dcb11a06ca43ab338adaab74d225b51786cfc12b16051ec8c382347d",
+      "header_sha256": "c4a4e9b4dcb11a06ca43ab338adaab74d225b51786cfc12b16051ec8c382347d",
+      "content_type": "application/json",
+      "http_status": 200
+    }
+  ],
+  "commands": [
+    {
+      "label": "source-runtime",
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{\"image\":{{json .Image}},\"mounts\":{{json .Mounts}},\"networks\":{{json .NetworkSettings.Networks}},\"labels\":{{json .Config.Labels}},\"running\":{{json .State.Running}}}",
+        "ai-review-console-upgrade-api-1"
+      ],
+      "started_at": "2026-10-29T04:30:22.657725+00:00",
+      "ended_at": "2026-10-29T04:30:22.866883+00:00",
+      "exit_code": 0,
+      "stdin_sha256": null,
+      "stdout_sha256": "53ba430934b7e9f9e30ab233619f2ed3778b2161a9261c1b857cc5aa9c7bd67b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment_values_recorded": false
+    },
+    {
+      "label": "preflight-arc-restore-2ed4123efdbb-source",
+      "command": [
+        "docker",
+        "volume",
+        "inspect",
+        "arc-restore-2ed4123efdbb-source"
+      ],
+      "started_at": "2026-10-29T04:30:22.866999+00:00",
+      "ended_at": "2026-10-29T04:30:22.893495+00:00",
+      "exit_code": 0,
+      "stdin_sha256": null,
+      "stdout_sha256": "1fe9a0461d0778df989af28677e2faaaa1dca2cad6df1c79628b97f598ff64d7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment_values_recorded": false
+    },
+    {
+      "label": "preflight-arc-restore-2ed4123efdbb-reports",
+      "command": [
+        "docker",
+        "volume",
+        "inspect",
+        "arc-restore-2ed4123efdbb-reports"
+      ],
+      "started_at": "2026-10-29T04:30:22.893552+00:00",
+      "ended_at": "2026-10-29T04:30:22.915048+00:00",
+      "exit_code": 0,
+      "stdin_sha256": null,
+      "stdout_sha256": "1cb7d3b52c2382f3455bdf8301a73c18b8c62e814a6c94c48d6f6c7a7f36ae4e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment_values_recorded": false
+    },
+    {
+      "label": "preflight-api",
+      "command": [
+        "docker",
+        "inspect",
+        "arc-restore-2ed4123efdbb-api"
+      ],
+      "started_at": "2026-10-29T04:30:22.915121+00:00",
+      "ended_at": "2026-10-29T04:30:22.994916+00:00",
+      "exit_code": 1,
+      "stdin_sha256": null,
+      "stdout_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "stderr_sha256": "b28455bdc72faf7b9c44751b437d1b03c47a0107a5f1efbc6b777fe477b1bcd0",
+      "environment_values_recorded": false
+    },
+    {
+      "label": "empty-target-precheck",
+      "command": [
+        "docker",
+        "run",
+        "--pull=never",
+        "--rm",
+        "-i",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "256m",
+        "--cpus",
+        "1",
+        "--user",
+        "0:0",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "--mount",
+        "type=volume,source=ai-review-console-upgrade_source-documents,target=/source-documents,readonly,volume-nocopy",
+        "--mount",
+        "type=volume,source=ai-review-console-upgrade_report-artifacts,target=/source-reports,readonly,volume-nocopy",
+        "--mount",
+        "type=volume,source=arc-restore-2ed4123efdbb-source,target=/resume-source,readonly,volume-nocopy",
+        "--mount",
+        "type=volume,source=arc-restore-2ed4123efdbb-reports,target=/resume-reports,readonly,volume-nocopy",
+        "--entrypoint",
+        "python",
+        "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+        "-c",
+        "from pathlib import Path; assert all(not any(Path(p).iterdir()) for p in ['/resume-source','/resume-reports']), 'Nonempty resume target'; print('Both exact prior target volumes are empty')"
+      ],
+      "started_at": "2026-10-29T04:30:22.997338+00:00",
+      "ended_at": "2026-10-29T04:30:23.789474+00:00",
+      "exit_code": 0,
+      "stdin_sha256": null,
+      "stdout_sha256": "d1545283ad6c5c8d2808ebf8731bb4047b3b57999fdf18e80dc8f77669259d2b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment_values_recorded": false
+    },
+    {
+      "label": "selected-file-precheck",
+      "command": [
+        "docker",
+        "run",
+        "--pull=never",
+        "--rm",
+        "-i",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "256m",
+        "--cpus",
+        "1",
+        "--user",
+        "0:0",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "--mount",
+        "type=volume,source=ai-review-console-upgrade_source-documents,target=/source-documents,readonly,volume-nocopy",
+        "--mount",
+        "type=volume,source=ai-review-console-upgrade_report-artifacts,target=/source-reports,readonly,volume-nocopy",
+        "--entrypoint",
+        "python",
+        "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+        "-c",
+        "\nimport hashlib,json,os,stat,sys\nfrom pathlib import Path,PurePosixPath\ndata=json.load(sys.stdin)\nitems=data[\"files\"]\nif len(items)>500 or sum(p[\"bytes\"] for p in items)>32*1024*1024:\n    raise RuntimeError(\"restore_file_capacity\")\nfound=[]\nfor item in items:\n    if item[\"kind\"] not in {\"source\",\"report\"}:\n        raise RuntimeError(\"invalid_file_kind\")\n    key=PurePosixPath(item[\"key\"])\n    if key.is_absolute() or \"..\" in key.parts or not key.parts:\n        raise RuntimeError(\"invalid_storage_key\")\n    root=Path(\"/source-documents\" if item[\"kind\"]==\"source\" else \"/source-reports\")\n    path=root.joinpath(*key.parts)\n    if not path.resolve().is_relative_to(root) or any(\n        root.joinpath(*key.parts[:n]).is_symlink() for n in range(1,len(key.parts)+1)):\n        raise RuntimeError(\"symlink_or_path_escape\")\n    info=path.stat()\n    if not stat.S_ISREG(info.st_mode) or info.st_size!=item[\"bytes\"]:\n        raise RuntimeError(\"selected_size_or_type_mismatch:\"+item[\"key\"])\n    content=path.read_bytes()\n    sha=hashlib.sha256(content).hexdigest()\n    if sha!=item[\"sha256\"]:\n        raise RuntimeError(\"selected_hash_mismatch:\"+item[\"key\"])\n    found.append(dict(item,source_uid=info.st_uid,source_gid=info.st_gid,\n        source_mode=oct(stat.S_IMODE(info.st_mode)),source_sha256=sha))\nif data[\"copy\"]:\n    if any(any(root.iterdir()) for root in (Path(\"/restore-documents\"),Path(\"/restore-reports\"))):\n        raise RuntimeError(\"nonempty_restore_target\")\n    for root,uid in ((Path(\"/restore-documents\"),10001),(Path(\"/restore-reports\"),1000)):\n        os.chown(root,uid,uid)\n        os.chmod(root,0o755)\n    for item in found:\n        source_root=Path(\"/source-documents\" if item[\"kind\"]==\"source\" else \"/source-reports\")\n        source=source_root/item[\"key\"]\n        root=Path(\"/restore-documents\" if item[\"kind\"]==\"source\" else \"/restore-reports\")\n        uid=10001 if item[\"kind\"]==\"source\" else 1000\n        target=root/item[\"key\"]\n        target.parent.mkdir(parents=True,exist_ok=True)\n        for parent in target.parents:\n            if parent==root.parent: break\n            os.chown(parent,uid,uid)\n            os.chmod(parent,0o755)\n        content=source.read_bytes()\n        if len(content)!=item[\"bytes\"] or hashlib.sha256(content).hexdigest()!=item[\"sha256\"]:\n            raise RuntimeError(\"source_changed_before_copy\")\n        with target.open(\"xb\") as stream: stream.write(content)\n        os.chown(target,uid,uid)\n        os.chmod(target,0o644)\n        copied=target.read_bytes()\n        if hashlib.sha256(copied).hexdigest()!=item[\"sha256\"]:\n            raise RuntimeError(\"destination_hash_mismatch\")\n        info=target.stat()\n        item.update(destination_uid=info.st_uid,destination_gid=info.st_gid,\n            destination_mode=oct(stat.S_IMODE(info.st_mode)))\nprint(json.dumps({\"files\":found,\"selected_count\":len(found),\n    \"selected_bytes\":sum(p[\"bytes\"] for p in found),\"copied\":data[\"copy\"]},sort_keys=True))\n"
+      ],
+      "started_at": "2026-10-29T04:30:23.789982+00:00",
+      "ended_at": "2026-10-29T04:30:24.159961+00:00",
+      "exit_code": 0,
+      "stdin_sha256": "45b1fe6d4262ed753a71c2c1e9926415b6508dca58a7c0c0966e1ec267b7abce",
+      "stdout_sha256": "82e150c0c6a7636108cf9c1dae411152860f6112abe73d33259950576270a226",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment_values_recorded": false
+    },
+    {
+      "label": "selected-file-copy",
+      "command": [
+        "docker",
+        "run",
+        "--pull=never",
+        "--rm",
+        "-i",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "256m",
+        "--cpus",
+        "1",
+        "--user",
+        "0:0",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "--mount",
+        "type=volume,source=ai-review-console-upgrade_source-documents,target=/source-documents,readonly,volume-nocopy",
+        "--mount",
+        "type=volume,source=ai-review-console-upgrade_report-artifacts,target=/source-reports,readonly,volume-nocopy",
+        "--cap-add=CHOWN",
+        "--cap-add=FOWNER",
+        "--cap-add=DAC_OVERRIDE",
+        "--mount",
+        "type=volume,source=arc-restore-2ed4123efdbb-source,target=/restore-documents,volume-nocopy",
+        "--mount",
+        "type=volume,source=arc-restore-2ed4123efdbb-reports,target=/restore-reports,volume-nocopy",
+        "--entrypoint",
+        "python",
+        "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+        "-c",
+        "\nimport hashlib,json,os,stat,sys\nfrom pathlib import Path,PurePosixPath\ndata=json.load(sys.stdin)\nitems=data[\"files\"]\nif len(items)>500 or sum(p[\"bytes\"] for p in items)>32*1024*1024:\n    raise RuntimeError(\"restore_file_capacity\")\nfound=[]\nfor item in items:\n    if item[\"kind\"] not in {\"source\",\"report\"}:\n        raise RuntimeError(\"invalid_file_kind\")\n    key=PurePosixPath(item[\"key\"])\n    if key.is_absolute() or \"..\" in key.parts or not key.parts:\n        raise RuntimeError(\"invalid_storage_key\")\n    root=Path(\"/source-documents\" if item[\"kind\"]==\"source\" else \"/source-reports\")\n    path=root.joinpath(*key.parts)\n    if not path.resolve().is_relative_to(root) or any(\n        root.joinpath(*key.parts[:n]).is_symlink() for n in range(1,len(key.parts)+1)):\n        raise RuntimeError(\"symlink_or_path_escape\")\n    info=path.stat()\n    if not stat.S_ISREG(info.st_mode) or info.st_size!=item[\"bytes\"]:\n        raise RuntimeError(\"selected_size_or_type_mismatch:\"+item[\"key\"])\n    content=path.read_bytes()\n    sha=hashlib.sha256(content).hexdigest()\n    if sha!=item[\"sha256\"]:\n        raise RuntimeError(\"selected_hash_mismatch:\"+item[\"key\"])\n    found.append(dict(item,source_uid=info.st_uid,source_gid=info.st_gid,\n        source_mode=oct(stat.S_IMODE(info.st_mode)),source_sha256=sha))\nif data[\"copy\"]:\n    if any(any(root.iterdir()) for root in (Path(\"/restore-documents\"),Path(\"/restore-reports\"))):\n        raise RuntimeError(\"nonempty_restore_target\")\n    for root,uid in ((Path(\"/restore-documents\"),10001),(Path(\"/restore-reports\"),1000)):\n        os.chown(root,uid,uid)\n        os.chmod(root,0o755)\n    for item in found:\n        source_root=Path(\"/source-documents\" if item[\"kind\"]==\"source\" else \"/source-reports\")\n        source=source_root/item[\"key\"]\n        root=Path(\"/restore-documents\" if item[\"kind\"]==\"source\" else \"/restore-reports\")\n        uid=10001 if item[\"kind\"]==\"source\" else 1000\n        target=root/item[\"key\"]\n        target.parent.mkdir(parents=True,exist_ok=True)\n        for parent in target.parents:\n            if parent==root.parent: break\n            os.chown(parent,uid,uid)\n            os.chmod(parent,0o755)\n        content=source.read_bytes()\n        if len(content)!=item[\"bytes\"] or hashlib.sha256(content).hexdigest()!=item[\"sha256\"]:\n            raise RuntimeError(\"source_changed_before_copy\")\n        with target.open(\"xb\") as stream: stream.write(content)\n        os.chown(target,uid,uid)\n        os.chmod(target,0o644)\n        copied=target.read_bytes()\n        if hashlib.sha256(copied).hexdigest()!=item[\"sha256\"]:\n            raise RuntimeError(\"destination_hash_mismatch\")\n        info=target.stat()\n        item.update(destination_uid=info.st_uid,destination_gid=info.st_gid,\n            destination_mode=oct(stat.S_IMODE(info.st_mode)))\nprint(json.dumps({\"files\":found,\"selected_count\":len(found),\n    \"selected_bytes\":sum(p[\"bytes\"] for p in found),\"copied\":data[\"copy\"]},sort_keys=True))\n"
+      ],
+      "started_at": "2026-10-29T04:30:24.160959+00:00",
+      "ended_at": "2026-10-29T04:30:24.640407+00:00",
+      "exit_code": 0,
+      "stdin_sha256": "734e01ed84a72b6041a772794e83c9a2f9ff1bacf5e349937fc41c4b891d396a",
+      "stdout_sha256": "ee4eb2db11488c4d78ccbd01cc21ad8562aae9811f1827556c592664d2c2f260",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment_values_recorded": false
+    },
+    {
+      "label": "start-isolated-api",
+      "command": [
+        "docker",
+        "run",
+        "--pull=never",
+        "-d",
+        "--name",
+        "arc-restore-2ed4123efdbb-api",
+        "--label",
+        "arc.restore.database=arc_restore_2ed4123efdbb",
+        "--label",
+        "arc.restore.consumer=verify_restore_runtime.py",
+        "--network",
+        "ai-review-console-upgrade_backend",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "256m",
+        "--cpus",
+        "1",
+        "--publish",
+        "127.0.0.1:8001:8000",
+        "--env",
+        "DATABASE_URL",
+        "--env",
+        "DEMO_MODE=false",
+        "--env",
+        "DOCUMENTS_ROOT=/app/documents",
+        "--env",
+        "REPORTS_ROOT=/app/artifacts",
+        "--env",
+        "LANGFLOW_URL=http://langflow:7860",
+        "--env",
+        "LANGFLOW_FLOW_MANIFEST=/app/config/langflow-flows.json",
+        "--mount",
+        "type=volume,source=arc-restore-2ed4123efdbb-source,target=/app/documents,readonly,volume-nocopy",
+        "--mount",
+        "type=volume,source=arc-restore-2ed4123efdbb-reports,target=/app/artifacts,readonly,volume-nocopy",
+        "--mount",
+        "type=volume,source=ai-review-console-upgrade_flow-config,target=/app/config,readonly,volume-nocopy",
+        "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a"
+      ],
+      "started_at": "2026-10-29T04:30:24.641370+00:00",
+      "ended_at": "2026-10-29T04:30:24.964972+00:00",
+      "exit_code": 0,
+      "stdin_sha256": null,
+      "stdout_sha256": "0e311c38bf77f6a79c91c039aa177451070538784639af6dad1869cb6d7fe00b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment_values_recorded": false
+    },
+    {
+      "label": "restored-runtime-inspect",
+      "command": [
+        "docker",
+        "inspect",
+        "--format",
+        "{\"image\":{{json .Image}},\"mounts\":{{json .Mounts}},\"running\":{{json .State.Running}}}",
+        "arc-restore-2ed4123efdbb-api"
+      ],
+      "started_at": "2026-10-29T04:30:31.494641+00:00",
+      "ended_at": "2026-10-29T04:30:31.576171+00:00",
+      "exit_code": 0,
+      "stdin_sha256": null,
+      "stdout_sha256": "5de3e085c833d7bf269e1c737231e2892d4354b8422128af3e65d5143ac11645",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment_values_recorded": false
+    },
+    {
+      "label": "restored-api-logs",
+      "command": [
+        "docker",
+        "logs",
+        "--tail",
+        "30",
+        "arc-restore-2ed4123efdbb-api"
+      ],
+      "started_at": "2026-10-29T04:30:31.576255+00:00",
+      "ended_at": "2026-10-29T04:30:31.605183+00:00",
+      "exit_code": 0,
+      "stdin_sha256": null,
+      "stdout_sha256": "c228987ed97563d80eaad61a0d6fc118c9f6408118e6ac9c0276c0a12dd5e125",
+      "stderr_sha256": "866969a732c2fcf300878953814bcf23fd2e1fbae82d3a5967c7052626517032",
+      "environment_values_recorded": false
+    }
+  ],
+  "retained": [
+    "arc_restore_2ed4123efdbb",
+    "arc-restore-2ed4123efdbb-source",
+    "arc-restore-2ed4123efdbb-reports",
+    "arc-restore-2ed4123efdbb-api"
+  ],
+  "limits": {
+    "files": 12,
+    "bytes": 208426,
+    "max_files": 500,
+    "max_bytes": 33554432
+  },
+  "mutations_not_performed": [
+    "source database/old volumes/original SQLite change",
+    "seed",
+    "migration",
+    "worker",
+    "decision write",
+    "application cutover",
+    "delete/drop/cleanup"
+  ],
+  "limitations": "Full database table fingerprints verified; file runtime proof covers only the explicit selected-files plan. Unselected database-associated files are not claimed restored or available. Not a complete file backup/production DR policy.",
+  "api_logs_sha256": "9a2c4c0d5ad89f7fad2c56876be121186aa7cf28be235e67686a347389bb7180",
+  "result": "passed",
+  "files": [
+    {
+      "path": "empty-target-precheck.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "empty-target-precheck.stdout",
+      "bytes": 42,
+      "sha256": "d1545283ad6c5c8d2808ebf8731bb4047b3b57999fdf18e80dc8f77669259d2b"
+    },
+    {
+      "path": "preflight-api.stderr",
+      "bytes": 52,
+      "sha256": "b28455bdc72faf7b9c44751b437d1b03c47a0107a5f1efbc6b777fe477b1bcd0"
+    },
+    {
+      "path": "preflight-api.stdout",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "preflight-arc-restore-2ed4123efdbb-reports.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "preflight-arc-restore-2ed4123efdbb-reports.stdout",
+      "bytes": 437,
+      "sha256": "1cb7d3b52c2382f3455bdf8301a73c18b8c62e814a6c94c48d6f6c7a7f36ae4e"
+    },
+    {
+      "path": "preflight-arc-restore-2ed4123efdbb-source.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "preflight-arc-restore-2ed4123efdbb-source.stdout",
+      "bytes": 435,
+      "sha256": "1fe9a0461d0778df989af28677e2faaaa1dca2cad6df1c79628b97f598ff64d7"
+    },
+    {
+      "path": "restored-api-logs.stderr",
+      "bytes": 192,
+      "sha256": "866969a732c2fcf300878953814bcf23fd2e1fbae82d3a5967c7052626517032"
+    },
+    {
+      "path": "restored-api-logs.stdout",
+      "bytes": 1820,
+      "sha256": "c228987ed97563d80eaad61a0d6fc118c9f6408118e6ac9c0276c0a12dd5e125"
+    },
+    {
+      "path": "restored-runtime-inspect.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "restored-runtime-inspect.stdout",
+      "bytes": 778,
+      "sha256": "5de3e085c833d7bf269e1c737231e2892d4354b8422128af3e65d5143ac11645"
+    },
+    {
+      "path": "selected-file-copy.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "selected-file-copy.stdout",
+      "bytes": 7302,
+      "sha256": "ee4eb2db11488c4d78ccbd01cc21ad8562aae9811f1827556c592664d2c2f260"
+    },
+    {
+      "path": "selected-file-precheck.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "selected-file-precheck.stdout",
+      "bytes": 6349,
+      "sha256": "82e150c0c6a7636108cf9c1dae411152860f6112abe73d33259950576270a226"
+    },
+    {
+      "path": "selected-files.json",
+      "bytes": 4786,
+      "sha256": "13a9d0e2d6682d3198c6df948ad450c113e7dafd1a23797d82a662656a94dc65"
+    },
+    {
+      "path": "source-runtime.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "source-runtime.stdout",
+      "bytes": 2157,
+      "sha256": "53ba430934b7e9f9e30ab233619f2ed3778b2161a9261c1b857cc5aa9c7bd67b"
+    },
+    {
+      "path": "start-isolated-api.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "start-isolated-api.stdout",
+      "bytes": 65,
+      "sha256": "0e311c38bf77f6a79c91c039aa177451070538784639af6dad1869cb6d7fe00b"
+    }
+  ]
+}

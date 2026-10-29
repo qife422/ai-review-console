@@ -1,0 +1,179 @@
+{
+  "started_at": "2026-10-29T04:19:10.619185+00:00",
+  "source_commit": "14d44b1210cff67b6f2bdd60de4523cc56bcb1e8",
+  "producer": "current review_core.reporting using tests/test_core_reporting.py _snapshot plus exact long Chinese test input",
+  "render_command": [
+    "pdftoppm",
+    "-r",
+    "100",
+    "-png",
+    "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/report.pdf",
+    "/var/folders/tf/dx_7lj314gvf47llbkfqpylw0000gn/T/arc-v02-fast-ca_8qxtm/pdf/page"
+  ],
+  "render_exit_code": 0,
+  "render_output": "",
+  "pdf_pages": 4,
+  "field_checks": {
+    "case_id": {
+      "json": true,
+      "html": true,
+      "pdf": true
+    },
+    "document_version_id": {
+      "json": true,
+      "html": true,
+      "pdf": true
+    },
+    "assessment_id": {
+      "json": true,
+      "html": true,
+      "pdf": true
+    },
+    "decision_id": {
+      "json": true,
+      "html": true,
+      "pdf": true
+    },
+    "document_hash": {
+      "json": true,
+      "html": true,
+      "pdf": true
+    },
+    "ruleset_version": {
+      "json": true,
+      "html": true,
+      "pdf": true
+    },
+    "redaction_policy_version": {
+      "json": true,
+      "html": true,
+      "pdf": true
+    },
+    "decision_reason": {
+      "json": true,
+      "html": true,
+      "pdf": true
+    },
+    "decided_by": {
+      "json": true,
+      "html": true,
+      "pdf": true
+    },
+    "risk_score": {
+      "json": true,
+      "html": true,
+      "pdf": true
+    },
+    "risk_level": {
+      "json": true,
+      "html": true,
+      "pdf": true
+    },
+    "all_end_markers": {
+      "json": true,
+      "html": true,
+      "pdf": true
+    },
+    "decision": {
+      "json": true,
+      "html": true,
+      "pdf": true
+    },
+    "title": {
+      "json": true,
+      "html": true,
+      "pdf": true
+    },
+    "decided_at": {
+      "json": true,
+      "html": true,
+      "pdf": true
+    },
+    "generated_at": {
+      "json": true,
+      "html": true,
+      "pdf": true
+    },
+    "snapshot_hash": {
+      "json": true,
+      "html": true,
+      "pdf": true
+    }
+  },
+  "total_bytes": 1511774,
+  "files": [
+    {
+      "name": "extracted-pages.json",
+      "bytes": 19313,
+      "sha256": "a4d44e2a2c40630075e7873c58ca4b1cd7e24603a231533de1520b82c51f15b3"
+    },
+    {
+      "name": "page-1.png",
+      "bytes": 228317,
+      "sha256": "0ba6f5fb6c26bba609a20e8f70ed2460aa9f0c4782db3037c27abb84fa961afd"
+    },
+    {
+      "name": "page-2.png",
+      "bytes": 395238,
+      "sha256": "915650ef2dc8289429eb73796d28fc967345f9cd4a1e4ba0094c7d4b7869d4e0"
+    },
+    {
+      "name": "page-3.png",
+      "bytes": 394813,
+      "sha256": "f80ec043709f5eda6692a626c3914229d9039a796526679f78aea870ff95e164"
+    },
+    {
+      "name": "page-4.png",
+      "bytes": 348115,
+      "sha256": "81fdf552b3ea4b1ff0081078846a0b75eb1c68a90cec6c6930bafde46f0f13cb"
+    },
+    {
+      "name": "report.html",
+      "bytes": 42338,
+      "sha256": "b1264a4be239e91e758ccf63ceb92ed4713c8b011da529631652b4ff50c9a92c"
+    },
+    {
+      "name": "report.json",
+      "bytes": 20352,
+      "sha256": "3ac88095d42bc87979b7d3344866709c945d88c653647cea3481829631b771d7"
+    },
+    {
+      "name": "report.pdf",
+      "bytes": 38154,
+      "sha256": "d9367bc5e02873e39889a40f94df490932c7f7d92cd41249742599971a764e30"
+    },
+    {
+      "name": "snapshot.json",
+      "bytes": 19860,
+      "sha256": "81db1f2ce07f46821d01fd39ece98be0ecdd94bf11fa3dd1b3fec7751221c207"
+    },
+    {
+      "name": "verify-pdf.py",
+      "bytes": 1186,
+      "sha256": "6e31eecc62c5bda1ee8f4309472a886de141df58d94c6f680472a6007abbad10"
+    }
+  ],
+  "visual_review": {
+    "method": "view_image inspected all four rendered PNG pages at 100dpi",
+    "result": "pass",
+    "notes": [
+      "Chinese glyphs readable; no black squares or overlap",
+      "Long reason includes end marker on page 1",
+      "Evidence 1-7 end markers extracted and their continuation visible across pages 2-4",
+      "Page headers/footers and page numbers preserved, final audit detail visible on page 4"
+    ],
+    "correction": "Original helper expected 中风险 but actual defined RISK_LABELS medium is 中; corrected comparison to source mapping. No product change."
+  },
+  "all_field_checks_pass": true,
+  "reproduce_command": "From repository root: PYTHONPATH=. .venv/bin/python <evidence>/verify-pdf.py <evidence>/snapshot.json <new-empty-output-directory>",
+  "source_inputs": [
+    {
+      "path": "review_core/reporting.py",
+      "sha256": "ac0a498141b64e6a9497092b7ea9b023111d82df28674752e816bea241446aaf"
+    },
+    {
+      "path": "tests/test_core_reporting.py",
+      "sha256": "d3889977edb726fdf5a0e2df5a51205143957196a29905a0b22dab42cf71141a"
+    }
+  ]
+}

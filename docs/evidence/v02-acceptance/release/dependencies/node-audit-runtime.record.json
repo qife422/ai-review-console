@@ -1,0 +1,18 @@
+{
+  "command": [
+    "npm",
+    "audit",
+    "--package-lock-only",
+    "--omit=dev",
+    "--json",
+    "--ignore-scripts",
+    "--registry=https://registry.npmjs.org"
+  ],
+  "cwd": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1/frontend",
+  "start": "2026-10-29T04:17:42.128622+00:00",
+  "end": "2026-10-29T04:17:43.746280+00:00",
+  "exit_code": 1,
+  "timed_out": false,
+  "stdout": "node-audit-runtime.stdout",
+  "stderr": "node-audit-runtime.stderr"
+}
