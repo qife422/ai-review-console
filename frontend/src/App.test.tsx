@@ -111,6 +111,10 @@ test("location changes load the new case once and a late old response cannot rep
   expect(screen.getByRole("heading", { name: "新的虚构案件 B" })).toBeInTheDocument();
   expect(screen.queryByRole("heading", { name: "迟到的虚构案件 A" })).not.toBeInTheDocument();
   expect(newRequests).toBe(1);
+  fireEvent.click(screen.getByRole("link", { name: "Skip to main content" }));
+  expect(window.location.hash).toBe("#case/RC-B");
+  expect(screen.getByRole("heading", { name: "新的虚构案件 B" })).toBeInTheDocument();
+  expect(screen.getByRole("main")).toHaveFocus();
   act(() => {
     history.replaceState(null, "", "#queue");
     window.dispatchEvent(new PopStateEvent("popstate"));

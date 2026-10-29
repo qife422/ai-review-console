@@ -158,7 +158,7 @@ export default function App() {
   return (
     <div className={dark ? "app theme-dark" : "app"}>
       <Header aria-label="AI Review Console">
-        <SkipToContent />
+        <SkipToContent onClick={(event) => { event.preventDefault(); document.getElementById("main-content")?.focus(); }} />
         <HeaderName prefix="AI">Review Console</HeaderName>
         <span className="header-attribution">{isPublicDemo ? "浏览器流程模拟" : "Built on Langflow"}</span>
         <HeaderGlobalBar><HeaderGlobalAction aria-label={dark ? "切换到浅色模式" : "切换到深色模式"} onClick={() => setDark((value) => !value)}>{dark ? <Sun size={20} /> : <Moon size={20} />}</HeaderGlobalAction></HeaderGlobalBar>
@@ -171,7 +171,7 @@ export default function App() {
         </SideNavItems>
         <div className="side-notice"><strong>SYNTHETIC</strong><span>仅使用虚构演示数据</span><span>演示身份：demo-reviewer</span></div>
       </SideNav>
-      <Content id="main-content" className="main-content">
+      <Content id="main-content" className="main-content" tabIndex={-1}>
         <nav className="mobile-navigation" aria-label="移动主导航"><Button size="sm" kind={view === "dashboard" ? "primary" : "ghost"} onClick={() => navigate("dashboard")}>总览</Button><Button size="sm" kind={view !== "dashboard" ? "primary" : "ghost"} onClick={() => navigate("queue")}>审查队列</Button></nav>
         {isPublicDemo && <aside className="demo-banner" aria-label="在线演示说明">
           <div><strong>公开交互演示 · 仅虚构数据</strong><p>选择预置样本，体验脱敏、风险证据、人工决定与报告。流程和分数为演示预设，不连接真实 AI、Langflow 或数据库；不能上传本机文件，所有操作仅保留于本页，刷新即重置。</p></div>
