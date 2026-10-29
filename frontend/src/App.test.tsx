@@ -85,3 +85,40 @@ test("hidden pages slow polling and unmount aborts active requests", async () =>
   await act(async () => { await vi.advanceTimersByTimeAsync(30_000); });
   expect(detailRequests).toBe(2);
 });
+
+test("location changes load the new case once and a late old response cannot replace it", async () => {
+  history.replaceState(null, "", "#case/RC-A");
+  let resolveOld!: (response: Response) => void;
+  const oldResponse = new Promise<Response>((resolve) => { resolveOld = resolve; });
+  const oldSignals: AbortSignal[] = [];
+  let newRequests = 0;
+  vi.stubGlobal("fetch", vi.fn((input: RequestInfo | URL, init?: RequestInit) => {
+    const path = String(input);
+    if (path.endsWith("/cases/RC-A")) { if (init?.signal) oldSignals.push(init.signal); return oldResponse; }
+    if (path.endsWith("/cases/RC-B")) { newRequests += 1; return Promise.resolve(jsonResponse(makeDetail({ id: "RC-B", title: "新的虚构案件 B" }))); }
+    return Promise.resolve(jsonResponse(path.endsWith("/summary") ? summary : path.endsWith("/system/status") ? testSystemStatus : cases));
+  }));
+  render(<App />);
+  await waitFor(() => expect(oldSignals).toHaveLength(1));
+  act(() => {
+    history.pushState(null, "", "#case/RC-B");
+    window.dispatchEvent(new PopStateEvent("popstate"));
+    window.dispatchEvent(new HashChangeEvent("hashchange"));
+  });
+  expect(await screen.findByRole("heading", { name: "新的虚构案件 B" })).toBeInTheDocument();
+  expect(oldSignals[0].aborted).toBe(true);
+  await act(async () => { resolveOld(jsonResponse(makeDetail({ id: "RC-A", title: "迟到的虚构案件 A" }))); });
+  expect(screen.getByRole("heading", { name: "新的虚构案件 B" })).toBeInTheDocument();
+  expect(screen.queryByRole("heading", { name: "迟到的虚构案件 A" })).not.toBeInTheDocument();
+  expect(newRequests).toBe(1);
+  act(() => {
+    history.replaceState(null, "", "#queue");
+    window.dispatchEvent(new PopStateEvent("popstate"));
+  });
+  expect(await screen.findByRole("heading", { name: "审查队列" })).toBeInTheDocument();
+  act(() => {
+    history.replaceState(null, "", "#unknown");
+    window.dispatchEvent(new HashChangeEvent("hashchange"));
+  });
+  expect(await screen.findByRole("heading", { name: "文档风险与决策" })).toBeInTheDocument();
+});

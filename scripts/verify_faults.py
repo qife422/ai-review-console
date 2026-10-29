@@ -25,6 +25,13 @@ import psycopg
 ROOT = Path(__file__).resolve().parents[1]
 PROJECT = "ai-review-console-upgrade"
 COMPOSE = ["docker", "compose", "-p", PROJECT]
+MODES = (
+    "before_execution",
+    "after_callback",
+    "langflow_unavailable",
+    "callback_unavailable",
+    "langflow_401",
+)
 
 
 def canonical(value: object) -> bytes:
@@ -55,7 +62,8 @@ def database() -> psycopg.Connection:
 def snapshot(case_id: str, job_id: str) -> dict[str, Any]:
     with database() as connection:
         row = connection.execute(
-            "SELECT state, phase, attempt, execution_token, langflow_job_id, error_code, "
+            "SELECT state, phase, attempt, retry_generation, execution_token, langflow_job_id, "
+            "error_code, "
             "lease_until, result_hash FROM workflow_jobs WHERE id=%s AND case_id=%s",
             (job_id, case_id),
         ).fetchone()
@@ -67,6 +75,7 @@ def snapshot(case_id: str, job_id: str) -> dict[str, Any]:
                     "state",
                     "phase",
                     "attempt",
+                    "retry_generation",
                     "token",
                     "langflow_job_id",
                     "error_code",
@@ -193,11 +202,13 @@ def verify(client: httpx.Client, mode: str) -> dict[str, Any]:
         )
         assert retry.status_code == 202, retry.text[:300]
         retry_job_id = retry.json()["job_id"]
+        assert retry_job_id != job_id
     recovered = wait_success(client, case_id, retry_job_id or job_id)
     # Give the restarted worker another claim cycle, not just the callback's response.
     time.sleep(3)
     repeated = snapshot(case_id, retry_job_id or job_id)
     assert repeated == recovered
+    original_after_recovery = None
     if mode in {"before_execution", "after_callback"}:
         assert recovered["attempt"] == 1 and recovered["job_count"] == 1
         assert interrupted["execution_token_sha256"] == recovered["execution_token_sha256"]
@@ -205,8 +216,21 @@ def verify(client: httpx.Client, mode: str) -> dict[str, Any]:
         assert recovered["attempt"] == 2 and recovered["job_count"] == 1
         assert interrupted["execution_token_sha256"] != recovered["execution_token_sha256"]
     else:
-        assert recovered["attempt"] == 1 and recovered["job_count"] == 2
-        assert snapshot(case_id, job_id)["state"] == "failed"
+        # A manual retry creates generation 1. Its own transient failures (for
+        # example a real Langflow login 429) may retry within the Contract's
+        # three-attempt limit; requiring exactly one attempt is not a guarantee.
+        assert recovered["retry_generation"] == 1 and 1 <= recovered["attempt"] <= 3
+        assert recovered["job_count"] == 2
+        original_after_recovery = snapshot(case_id, job_id)
+        assert original_after_recovery["state"] == "failed"
+        assert original_after_recovery["error_code"] == "langflow_auth_failed"
+        assert original_after_recovery["attempt"] == 1
+        assert original_after_recovery["retry_generation"] == 0
+        assert (
+            original_after_recovery["execution_token_sha256"]
+            == interrupted["execution_token_sha256"]
+        )
+        assert recovered["execution_token_sha256"] != interrupted["execution_token_sha256"]
     result = {
         "mode": mode,
         "case_id": case_id,
@@ -216,6 +240,7 @@ def verify(client: httpx.Client, mode: str) -> dict[str, Any]:
         "container": container,
         "interrupted_or_failed": interrupted,
         "recovered": recovered,
+        "original_job_after_recovery": original_after_recovery,
         "elapsed_seconds": round(time.monotonic() - started, 3),
         "result": "passed",
     }
@@ -236,7 +261,11 @@ def verify(client: httpx.Client, mode: str) -> dict[str, Any]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--mode", choices=MODES, action="append")
     args = parser.parse_args()
+    modes = tuple(args.mode) if args.mode else MODES
+    if len(modes) > 5 or len(set(modes)) != len(modes):
+        raise ValueError("Select at most five distinct fault modes")
     output = args.output.resolve()
     allowed = (Path(tempfile.gettempdir()).resolve(), Path("/private/tmp"))
     if not output.is_dir() or not any(output.is_relative_to(root) for root in allowed):
@@ -256,23 +285,20 @@ def main() -> None:
         "producer_sha256": digest(Path(__file__).read_bytes()),
         "checked_at": datetime.now(UTC).isoformat(),
         "project": PROJECT,
+        "selected_modes": list(modes),
         "cases": [],
         "limitations": (
             "Transport failures use real refused TCP connections in isolated one-shot workers; "
             "they do not stop the shared API/Langflow services. Timeout/429 mappings are separate "
-            "contract tests. No existing case or business data is overwritten."
+            "contract tests. A recovered manual retry may encounter a real transient 429 "
+            "and use up to three attempts in its new generation. Only selected modes are "
+            "covered by this manifest. No existing case or business data is overwritten."
         ),
         "retention": "Fault containers and synthetic cases retained; no cleanup authorization",
     }
     try:
         with httpx.Client(base_url="http://127.0.0.1:8000", timeout=15) as client:
-            for mode in (
-                "before_execution",
-                "after_callback",
-                "langflow_unavailable",
-                "callback_unavailable",
-                "langflow_401",
-            ):
+            for mode in modes:
                 evidence["cases"].append(verify(client, mode))
             health = client.get("/api/health").raise_for_status().json()
             evidence["final_health"] = health

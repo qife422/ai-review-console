@@ -1,8 +1,8 @@
 """Bounded isolated restore startup/download proof; no seed, migration or worker.
 
-Targets only arc_restore_9fdda24be9b6. Copies the explicitly selected restored
-source/ready-report keys into two new volumes, retaining all targets. The API
-database sessions and all API storage/config mounts are read-only.
+Targets only an explicitly selected, manifest-bound arc_restore_<12hex> database.
+Copies its registered source/ready-report keys into two new volumes, retaining
+all targets. Database sessions and API storage/config mounts remain read-only.
 """
 
 from __future__ import annotations
@@ -30,18 +30,9 @@ else:
     from verify_restore import pg_fingerprint
 
 ROOT = Path(__file__).resolve().parents[1]
-DATABASE = "arc_restore_9fdda24be9b6"
-SOURCE_API = "ai-review-console-upgrade-api-1"
 NETWORK = "ai-review-console-upgrade_backend"
-SOURCE_IMAGE = "sha256:4e807fd845c49d138849f25a1e3521d41ec4a9daa80c3af23c1ea9bdbbf2f29b"
-IMAGE = "sha256:6f12e1b6ae3c58c76422716ab521455937f654af93c1d611cba074cf4d3f56f9"
-SOURCE_VOLUME = "arc-restore-9fdda24be9b6-source"
-REPORT_VOLUME = "arc-restore-9fdda24be9b6-reports"
-API_CONTAINER = "arc-restore-9fdda24be9b6-api"
 LIMIT_BYTES = 32 * 1024 * 1024
 LIMIT_FILES = 500
-EXPECTED_FILES = 10
-EXPECTED_BYTES = 154619
 COPY_CODE = r"""
 import hashlib,json,os,stat,sys
 from pathlib import Path,PurePosixPath
@@ -51,6 +42,8 @@ if len(items)>500 or sum(p["bytes"] for p in items)>32*1024*1024:
     raise RuntimeError("restore_file_capacity")
 found=[]
 for item in items:
+    if item["kind"] not in {"source","report"}:
+        raise RuntimeError("invalid_file_kind")
     key=PurePosixPath(item["key"])
     if key.is_absolute() or ".." in key.parts or not key.parts:
         raise RuntimeError("invalid_storage_key")
@@ -69,6 +62,8 @@ for item in items:
     found.append(dict(item,source_uid=info.st_uid,source_gid=info.st_gid,
         source_mode=oct(stat.S_IMODE(info.st_mode)),source_sha256=sha))
 if data["copy"]:
+    if any(any(root.iterdir()) for root in (Path("/restore-documents"),Path("/restore-reports"))):
+        raise RuntimeError("nonempty_restore_target")
     for root,uid in ((Path("/restore-documents"),10001),(Path("/restore-reports"),1000)):
         os.chown(root,uid,uid)
         os.chmod(root,0o755)
@@ -174,19 +169,19 @@ def full_fingerprint(connection: psycopg.Connection) -> dict:
     return result
 
 
-def read_database() -> tuple[dict, list[dict], list[dict], list[dict]]:
+def read_database(database: str) -> tuple[dict, list[dict], list[dict], list[dict]]:
     with psycopg.connect(
         host="127.0.0.1",
         port=5433,
         user="review",
         password=os.getenv("POSTGRES_PASSWORD", "synthetic-demo-only"),
-        dbname=DATABASE,
+        dbname=database,
         options="-c default_transaction_read_only=on",
         row_factory=dict_row,
     ) as connection:
         assert (
             connection.execute("SELECT current_database()").fetchone()["current_database"]
-            == DATABASE
+            == database
         )
         assert (
             connection.execute("SHOW transaction_read_only").fetchone()["transaction_read_only"]
@@ -216,54 +211,143 @@ def main() -> None:
     parser.add_argument(
         "--restore-manifest",
         type=Path,
-        default=Path("/private/tmp/arc-restore-xVRbrJ/restore.json"),
+        required=True,
     )
+    parser.add_argument("--restore-manifest-sha256", required=True)
+    parser.add_argument("--database", required=True)
+    parser.add_argument("--source-api", choices=["ai-review-console-upgrade-api-1"], required=True)
+    parser.add_argument("--image", required=True)
+    parser.add_argument("--case-id", action="append", default=[])
+    parser.add_argument("--resume-empty-plan", type=Path)
+    parser.add_argument("--resume-empty-plan-sha256")
     args = parser.parse_args()
+    database, source_api, image = args.database, args.source_api, args.image
+    if bool(args.resume_empty_plan) != bool(args.resume_empty_plan_sha256):
+        raise ValueError("Resume requires the exact prior plan and its SHA-256")
+    if not re.fullmatch(r"arc_restore_[a-f0-9]{12}", database):
+        raise ValueError("Use an exact isolated arc_restore_<12hex> database")
+    if not re.fullmatch(r"sha256:[a-f0-9]{64}", image):
+        raise ValueError("Use the exact current source container image SHA-256")
+    if not re.fullmatch(r"[a-f0-9]{64}", args.restore_manifest_sha256):
+        raise ValueError("Bind the selected restore manifest by SHA-256")
+    selected_case_ids = set(args.case_id)
+    if (
+        len(args.case_id) > 3
+        or len(selected_case_ids) != len(args.case_id)
+        or any(not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]{0,99}", value)
+               for value in args.case_id)
+    ):
+        raise ValueError("Select at most three distinct, exact case IDs")
+    stem = database.replace("arc_restore_", "arc-restore-", 1)
+    source_volume, report_volume, api_container = stem + "-source", stem + "-reports", stem + "-api"
     output = args.output.resolve()
-    if not str(output).startswith("/private/tmp/arc-restore-runtime.") or not output.is_dir():
+    if (
+        output.parent != Path("/private/tmp")
+        or not re.fullmatch(r"arc-restore-runtime\.[A-Za-z0-9_-]+", output.name)
+        or not output.is_dir()
+    ):
         raise ValueError("Use a new mktemp -d /private/tmp/arc-restore-runtime.XXXXXX directory")
     if any(output.iterdir()):
         raise FileExistsError("Do not overwrite restore runtime evidence")
-    restore = json.loads(args.restore_manifest.read_text())
-    if restore["postgresql"]["restored_database"] != DATABASE:
+    if args.restore_manifest.is_symlink():
+        raise ValueError("Select a regular restore manifest, not a symbolic link")
+    manifest_path = args.restore_manifest.resolve(strict=True)
+    if not manifest_path.is_file() or manifest_path.stat().st_size > 1024 * 1024:
+        raise ValueError("Restore manifest must be a regular file no larger than 1 MiB")
+    manifest_bytes = manifest_path.read_bytes()
+    if digest(manifest_bytes) != args.restore_manifest_sha256:
+        raise ValueError("Restore manifest does not match its explicitly selected SHA-256")
+    restore = json.loads(manifest_bytes)
+    pg = restore["postgresql"]
+    if (
+        restore["contract"] != "ARC-UPGRADE@0.1.0"
+        or "AC-17" not in restore["acceptance"]
+        or pg["project"] != "ai-review-console-upgrade"
+        or pg["container"] != "ai-review-console-upgrade-postgres-1"
+        or pg["source_database"] != "review_console"
+        or pg["schema_version"] != 2
+        or pg["result"] != "passed"
+        or pg["all_counts_and_content_hashes_equal"] is not True
+        or pg["application_cutover"] is not False
+    ):
+        raise ValueError("Manifest is not a passed, isolated upgrade restore proof")
+    if pg["restored_database"] != database:
         raise ValueError("Only the explicitly restored database is in scope")
-    before, sources, reports, cases = read_database()
+    before, sources, reports, cases = read_database(database)
     with psycopg.connect(
         host="127.0.0.1",
         port=5433,
         user="review",
         password=os.getenv("POSTGRES_PASSWORD", "synthetic-demo-only"),
-        dbname=DATABASE,
+        dbname=database,
         options="-c default_transaction_read_only=on",
     ) as connection:
-        assert pg_fingerprint(connection) == restore["postgresql"]["source_and_restored_tables"]
+        assert pg_fingerprint(connection) == pg["source_and_restored_tables"]
+    database_case_count = len(cases)
+    database_case_ids = {case["id"] for case in cases}
+    registered_file_count = len(sources) + len(reports)
+    if selected_case_ids:
+        if not selected_case_ids.issubset(database_case_ids):
+            raise ValueError("Selected case is not present in the manifest-bound restored database")
+        sources = [entry for entry in sources if entry["case_id"] in selected_case_ids]
+        reports = [entry for entry in reports if entry["case_id"] in selected_case_ids]
+        cases = [case for case in cases if case["id"] in selected_case_ids]
+        if (
+            {entry["case_id"] for entry in sources} != selected_case_ids
+            or {entry["case_id"] for entry in reports} != selected_case_ids
+        ):
+            raise ValueError("Every selected case needs registered source and ready report files")
+    if not sources or not reports:
+        raise ValueError("Restore startup proof requires registered source and ready report files")
     items = [
-        {"kind": "source", "key": p["source_key"], "bytes": p["bytes"], "sha256": p["sha256"]}
+        {"kind": "source", "key": p["source_key"], "bytes": p["bytes"], "sha256": p["sha256"],
+         "case_id": p["case_id"], "document_version_id": p["version_id"], "report_id": None}
         for p in sources
     ] + [
-        {"kind": "report", "key": p["artifact_key"], "bytes": p["bytes"], "sha256": p["sha256"]}
+        {"kind": "report", "key": p["artifact_key"], "bytes": p["bytes"], "sha256": p["sha256"],
+         "case_id": p["case_id"], "document_version_id": p["document_version_id"],
+         "report_id": p["report_id"]}
         for p in reports
     ]
+    plan_fields = ("kind", "key", "bytes", "sha256", "case_id", "document_version_id", "report_id")
     for item in items:
         key = PurePosixPath(item["key"])
         if (
             key.is_absolute()
             or ".." in key.parts
             or not key.parts
+            or str(key) != item["key"]
             or not re.fullmatch(r"[A-Za-z0-9._/-]{1,180}", item["key"])
         ):
             raise ValueError("Storage key is outside the bounded allowlist")
-        if not isinstance(item["bytes"], int) or item["bytes"] <= 0:
+        if type(item["bytes"]) is not int or item["bytes"] <= 0:
             raise ValueError("Missing registered size")
         if not re.fullmatch(r"[a-f0-9]{64}", item["sha256"]):
             raise ValueError("Missing registered SHA-256")
     total = sum(p["bytes"] for p in items)
     if len(items) > LIMIT_FILES or total > LIMIT_BYTES:
         raise RuntimeError("Stop: restore file copy capacity exceeded")
-    if len(items) != EXPECTED_FILES or total != EXPECTED_BYTES:
-        raise RuntimeError("Selected file plan differs from the approved exact size/count")
     if len({(p["kind"], p["key"]) for p in items}) != len(items):
         raise ValueError("Duplicate selected storage keys")
+    if args.resume_empty_plan:
+        previous = args.resume_empty_plan
+        if previous.is_symlink() or not previous.is_file() or previous.stat().st_size > 1024 * 1024:
+            raise ValueError("Resume plan must be a bounded regular file")
+        previous_bytes = previous.read_bytes()
+        if digest(previous_bytes) != args.resume_empty_plan_sha256:
+            raise ValueError("Prior selected-file plan hash mismatch")
+        previous_plan = json.loads(previous_bytes)
+        if (
+            previous_plan["database"] != database
+            or previous_plan["image"] != image
+            or previous_plan["source_api"] != source_api
+            or previous_plan["restore_manifest_sha256"] != args.restore_manifest_sha256
+            or previous_plan["case_ids"] != sorted(selected_case_ids)
+            or previous_plan["count"] != len(items)
+            or previous_plan["bytes"] != total
+            or previous_plan["files"] != items
+        ):
+            raise ValueError("Resume must use exactly the original selected-file plan")
     original_sqlite = ROOT / "review_console.sqlite3"
     sqlite_before = digest(original_sqlite.read_bytes())
     assert sqlite_before == restore["sqlite"]["source_sha256_before_and_after"]
@@ -276,12 +360,19 @@ def main() -> None:
                 "inspect",
                 "--format",
                 '{"image":{{json .Image}},"mounts":{{json .Mounts}},'
-                '"networks":{{json .NetworkSettings.Networks}}}',
-                SOURCE_API,
+                '"networks":{{json .NetworkSettings.Networks}},'
+                '"labels":{{json .Config.Labels}},"running":{{json .State.Running}}}',
+                source_api,
             ],
         ).stdout
     )
-    if inspect["image"] not in {SOURCE_IMAGE, IMAGE} or NETWORK not in inspect["networks"]:
+    if (
+        inspect["image"] != image
+        or NETWORK not in inspect["networks"]
+        or not inspect["running"]
+        or inspect["labels"].get("com.docker.compose.project") != "ai-review-console-upgrade"
+        or inspect["labels"].get("com.docker.compose.service") != "api"
+    ):
         raise RuntimeError("Source runtime image/network differs from the fixed target")
     mounts = {p["Destination"]: p["Name"] for p in inspect["mounts"] if p["Type"] == "volume"}
     expected_mounts = {
@@ -291,13 +382,24 @@ def main() -> None:
     }
     if any(mounts.get(k) != v for k, v in expected_mounts.items()):
         raise RuntimeError("Source mount identity differs from the planned exact volumes")
-    for volume in [SOURCE_VOLUME, REPORT_VOLUME]:
+    for volume in [source_volume, report_volume]:
         probe = commands.run(
             "preflight-" + volume, ["docker", "volume", "inspect", volume], check=False
         )
-        if probe.returncode == 0 or b"no such volume" not in probe.stderr.lower():
+        if args.resume_empty_plan:
+            if probe.returncode:
+                raise RuntimeError("Resume requires both original exact target volumes")
+            metadata = json.loads(probe.stdout)[0]
+            labels = metadata.get("Labels") or {}
+            if (
+                metadata["Name"] != volume
+                or labels.get("arc.restore.database") != database
+                or labels.get("arc.restore.consumer") != "verify_restore_runtime.py"
+            ):
+                raise RuntimeError("Resume volume ownership does not match the prior plan")
+        elif probe.returncode == 0 or b"no such volume" not in probe.stderr.lower():
             raise RuntimeError("Target already exists or cannot be resolved; preserve it")
-    probe = commands.run("preflight-api", ["docker", "inspect", API_CONTAINER], check=False)
+    probe = commands.run("preflight-api", ["docker", "inspect", api_container], check=False)
     if probe.returncode == 0 or b"no such object" not in probe.stderr.lower():
         raise RuntimeError("Restore API target already exists or cannot be resolved; preserve it")
     with socket.socket() as sock:
@@ -333,14 +435,48 @@ def main() -> None:
         + ",target=/source-reports,readonly,volume-nocopy",
     ]
     planned = {"files": items, "copy": False}
+    if args.resume_empty_plan:
+        commands.run(
+            "empty-target-precheck",
+            base + [
+                "--mount", "type=volume,source=" + source_volume
+                + ",target=/resume-source,readonly,volume-nocopy",
+                "--mount", "type=volume,source=" + report_volume
+                + ",target=/resume-reports,readonly,volume-nocopy",
+                "--entrypoint", "python", image, "-c",
+                "from pathlib import Path; "
+                "assert all(not any(Path(p).iterdir()) "
+                "for p in ['/resume-source','/resume-reports']), 'Nonempty resume target'; "
+                "print('Both exact prior target volumes are empty')",
+            ],
+        )
     precheck = json.loads(
         commands.run(
             "selected-file-precheck",
-            base + ["--entrypoint", "python", IMAGE, "-c", COPY_CODE],
+            base + ["--entrypoint", "python", image, "-c", COPY_CODE],
             data=canonical(planned),
         ).stdout
     )
-    for volume in [SOURCE_VOLUME, REPORT_VOLUME]:
+    assert precheck["selected_count"] == len(items) and precheck["selected_bytes"] == total
+    assert [
+        {key: entry[key] for key in plan_fields}
+        for entry in precheck["files"]
+    ] == items
+    if digest(manifest_path.read_bytes()) != args.restore_manifest_sha256:
+        raise RuntimeError("Selected restore manifest changed before copy")
+    with (output / "selected-files.json").open("xb") as stream:
+        stream.write(canonical({
+            "restore_manifest_sha256": args.restore_manifest_sha256,
+            "database": database,
+            "image": image,
+            "source_api": source_api,
+            "count": len(items),
+            "bytes": total,
+            "case_ids": sorted(selected_case_ids),
+            "scope": "selected cases" if selected_case_ids else "all registered files",
+            "files": items,
+        }))
+    for volume in ([] if args.resume_empty_plan else [source_volume, report_volume]):
         commands.run(
             "create-" + volume,
             [
@@ -348,7 +484,7 @@ def main() -> None:
                 "volume",
                 "create",
                 "--label",
-                "arc.restore.database=" + DATABASE,
+                "arc.restore.database=" + database,
                 "--label",
                 "arc.restore.consumer=verify_restore_runtime.py",
                 volume,
@@ -361,21 +497,28 @@ def main() -> None:
             + [
                 "--cap-add=CHOWN",
                 "--cap-add=FOWNER",
+                # Only this bounded copy process can traverse the newly chowned
+                # destination roots; all source mounts remain read-only.
+                "--cap-add=DAC_OVERRIDE",
                 "--mount",
-                "type=volume,source=" + SOURCE_VOLUME + ",target=/restore-documents,volume-nocopy",
+                "type=volume,source=" + source_volume + ",target=/restore-documents,volume-nocopy",
                 "--mount",
-                "type=volume,source=" + REPORT_VOLUME + ",target=/restore-reports,volume-nocopy",
+                "type=volume,source=" + report_volume + ",target=/restore-reports,volume-nocopy",
                 "--entrypoint",
                 "python",
-                IMAGE,
+                image,
                 "-c",
                 COPY_CODE,
             ],
             data=canonical({"files": items, "copy": True}),
         ).stdout
     )
-    assert copied["selected_count"] == EXPECTED_FILES
-    assert copied["selected_bytes"] == EXPECTED_BYTES
+    assert copied["selected_count"] == len(items)
+    assert copied["selected_bytes"] == total
+    assert [
+        {key: entry[key] for key in plan_fields}
+        for entry in copied["files"]
+    ] == items
     for item in copied["files"]:
         owner = 10001 if item["kind"] == "source" else 1000
         assert item["destination_uid"] == item["destination_gid"] == owner
@@ -385,7 +528,7 @@ def main() -> None:
         "DATABASE_URL": "postgresql+psycopg://review:"
         + password
         + "@postgres:5432/"
-        + DATABASE
+        + database
         + "?options="
         + quote("-c default_transaction_read_only=on", safe="")
     }
@@ -395,9 +538,9 @@ def main() -> None:
         "--pull=never",
         "-d",
         "--name",
-        API_CONTAINER,
+        api_container,
         "--label",
-        "arc.restore.database=" + DATABASE,
+        "arc.restore.database=" + database,
         "--label",
         "arc.restore.consumer=verify_restore_runtime.py",
         "--network",
@@ -426,14 +569,14 @@ def main() -> None:
         "--env",
         "LANGFLOW_FLOW_MANIFEST=/app/config/langflow-flows.json",
         "--mount",
-        "type=volume,source=" + SOURCE_VOLUME + ",target=/app/documents,readonly,volume-nocopy",
+        "type=volume,source=" + source_volume + ",target=/app/documents,readonly,volume-nocopy",
         "--mount",
-        "type=volume,source=" + REPORT_VOLUME + ",target=/app/artifacts,readonly,volume-nocopy",
+        "type=volume,source=" + report_volume + ",target=/app/artifacts,readonly,volume-nocopy",
         "--mount",
         "type=volume,source="
         + mounts["/app/config"]
         + ",target=/app/config,readonly,volume-nocopy",
-        IMAGE,
+        image,
     ]
     container_id = (
         commands.run("start-isolated-api", start_command, environment=environment)
@@ -453,7 +596,7 @@ def main() -> None:
             except httpx.HTTPError:
                 if time.monotonic() > deadline:
                     commands.run(
-                        "api-failure-logs", ["docker", "logs", "--tail", "40", API_CONTAINER]
+                        "api-failure-logs", ["docker", "logs", "--tail", "40", api_container]
                     )
                     raise RuntimeError(
                         "Restore API did not become healthy; retained for inspection"
@@ -461,13 +604,15 @@ def main() -> None:
                 time.sleep(1)
         listed = client.get("/api/cases")
         listed.raise_for_status()
-        assert {p["id"] for p in listed.json()} == {p["id"] for p in cases}
+        assert len(listed.json()) == database_case_count
+        assert {p["id"] for p in listed.json()} == database_case_ids
         details = []
         for case in cases:
             response = client.get("/api/cases/" + case["id"])
             response.raise_for_status()
             payload = response.json()
             assert payload["status"] == case["status"]
+            assert payload["decision"] == case["decision"]
             assert payload["current_document_version_id"] == case["current_document_version_id"]
             details.append(
                 {
@@ -507,8 +652,9 @@ def main() -> None:
                         "http_status": response.status_code,
                     }
                 )
-    after, _, _, _ = read_database()
+    after, _, _, _ = read_database(database)
     assert before == after and digest(original_sqlite.read_bytes()) == sqlite_before
+    assert digest(manifest_path.read_bytes()) == args.restore_manifest_sha256
     target = json.loads(
         commands.run(
             "restored-runtime-inspect",
@@ -518,22 +664,23 @@ def main() -> None:
                 "--format",
                 '{"image":{{json .Image}},"mounts":{{json .Mounts}},'
                 '"running":{{json .State.Running}}}',
-                API_CONTAINER,
+                api_container,
             ],
         ).stdout
     )
-    assert target["image"] == IMAGE and target["running"]
+    assert target["image"] == image and target["running"]
     assert len(target["mounts"]) == 3 and all(not p["RW"] for p in target["mounts"])
-    logs = commands.run("restored-api-logs", ["docker", "logs", "--tail", "30", API_CONTAINER])
+    logs = commands.run("restored-api-logs", ["docker", "logs", "--tail", "30", api_container])
     evidence = {
         "contract": "ARC-UPGRADE@0.1.0",
         "acceptance": ["AC-17"],
         "producer": "scripts/verify_restore_runtime.py",
         "producer_sha256": digest(Path(__file__).read_bytes()),
         "checked_at": now(),
-        "restore_manifest": str(args.restore_manifest),
-        "restore_manifest_sha256": digest(args.restore_manifest.read_bytes()),
-        "database": DATABASE,
+        "restore_manifest": str(manifest_path),
+        "restore_manifest_sha256": args.restore_manifest_sha256,
+        "resumed_empty_plan_sha256": args.resume_empty_plan_sha256,
+        "database": database,
         "all_database_connections_read_only": True,
         "database_public_tables_before_and_after": before,
         "database_content_unchanged": before == after,
@@ -543,17 +690,25 @@ def main() -> None:
         "selected_sources": sources,
         "selected_ready_reports": reports,
         "container_id": container_id,
-        "container_name": API_CONTAINER,
-        "image_id": IMAGE,
+        "container_name": api_container,
+        "source_api": source_api,
+        "image_id": image,
         "network": NETWORK,
         "api_url": api_url,
         "runtime_inspection": target,
         "health": health,
         "case_count": len(cases),
+        "database_case_count": database_case_count,
         "case_readbacks": details,
+        "file_scope": {
+            "mode": "selected_cases" if selected_case_ids else "all_registered_files",
+            "case_ids": sorted(selected_case_ids),
+            "unselected_file_count": registered_file_count - len(items),
+            "unselected_files_runtime_verified": False,
+        },
         "downloads": downloads,
         "commands": commands.records,
-        "retained": [DATABASE, SOURCE_VOLUME, REPORT_VOLUME, API_CONTAINER],
+        "retained": [database, source_volume, report_volume, api_container],
         "limits": {
             "files": len(items),
             "bytes": total,
@@ -569,7 +724,11 @@ def main() -> None:
             "application cutover",
             "delete/drop/cleanup",
         ],
-        "limitations": "Precise snapshot runtime proof; not a backup/production DR policy.",
+        "limitations": (
+            "Full database table fingerprints verified; file runtime proof covers only the "
+            "explicit selected-files plan. Unselected database-associated files are not "
+            "claimed restored or available. Not a complete file backup/production DR policy."
+        ),
         "api_logs_sha256": digest(logs.stdout + logs.stderr),
         "result": "passed",
     }

@@ -36,6 +36,7 @@ export default function App() {
   const [uploadNotice, setUploadNotice] = useState<string | null>(null);
   const dataController = useRef<AbortController | null>(null);
   const detailController = useRef<AbortController | null>(null);
+  const currentLocation = useRef(readLocation());
 
   const loadData = useCallback(async (foreground = true, signal?: AbortSignal) => {
     if (foreground) {
@@ -58,21 +59,42 @@ export default function App() {
 
   const loadDetail = useCallback(async (foreground = true, signal?: AbortSignal) => {
     if (!selectedCaseId) return;
+    const requestedCaseId = selectedCaseId;
     if (foreground) {
       detailController.current?.abort();
       detailController.current = new AbortController();
       signal = detailController.current.signal;
       setDetailLoading(true);
     }
+    const isCurrent = () => !signal?.aborted && currentLocation.current.view === "detail" && currentLocation.current.caseId === requestedCaseId;
     try {
-      const next = await api.case(selectedCaseId, signal);
-      if (!signal?.aborted) { setDetail(next); setDetailError(null); }
+      const next = await api.case(requestedCaseId, signal);
+      if (isCurrent()) { setDetail(next); setDetailError(null); }
     } catch (requestError) {
-      if (!signal?.aborted) setDetailError(errorMessage(requestError, "案件加载失败"));
+      if (isCurrent()) setDetailError(errorMessage(requestError, "案件加载失败"));
     } finally {
-      if (foreground && !signal?.aborted) setDetailLoading(false);
+      if (foreground && isCurrent()) setDetailLoading(false);
     }
   }, [selectedCaseId]);
+
+  useEffect(() => {
+    const locationChanged = () => {
+      const next = readLocation();
+      const previous = currentLocation.current;
+      if (next.view === previous.view && next.caseId === previous.caseId) return;
+      // Browsers may emit both events for one traversal; handle that route once.
+      currentLocation.current = next;
+      detailController.current?.abort();
+      setDetail(null);
+      setDetailError(null);
+      setDetailLoading(next.view === "detail");
+      setView(next.view);
+      setSelectedCaseId(next.caseId);
+    };
+    window.addEventListener("hashchange", locationChanged);
+    window.addEventListener("popstate", locationChanged);
+    return () => { window.removeEventListener("hashchange", locationChanged); window.removeEventListener("popstate", locationChanged); };
+  }, []);
 
   useEffect(() => {
     void loadData();
@@ -112,6 +134,7 @@ export default function App() {
   }, [active, view, loadData, loadDetail]);
 
   function navigate(nextView: View, caseId: string | null = null) {
+    currentLocation.current = { view: nextView, caseId };
     setView(nextView);
     setSelectedCaseId(caseId);
     if (caseId !== selectedCaseId) setDetail(null);
