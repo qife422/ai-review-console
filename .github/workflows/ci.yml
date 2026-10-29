@@ -102,6 +102,16 @@ jobs:
         run: |
           npm install --global @playwright/cli@0.1.22
           command -v google-chrome || playwright-cli install-browser chrome
+      - name: Install Chinese browser font
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends fonts-noto-cjk fontconfig
+      - name: Verify Chinese browser font availability
+        run: |
+          mkdir -p "$RUNNER_TEMP/arc-ci-evidence"
+          fc-match --format='%{family}\n' 'sans-serif:lang=zh-cn' | tee "$RUNNER_TEMP/arc-ci-evidence/chinese-browser-font.txt"
+          grep -F 'Noto Sans CJK' "$RUNNER_TEMP/arc-ci-evidence/chinese-browser-font.txt"
+          dpkg-query -W -f='${Version}\n' fonts-noto-cjk > "$RUNNER_TEMP/arc-ci-evidence/chinese-browser-font-version.txt"
       - name: Keyboard upload to decision and downloadable reports
         env:
           ARC_UI_APPROVE: "1"
