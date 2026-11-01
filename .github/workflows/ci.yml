@@ -102,16 +102,18 @@ jobs:
         run: |
           npm install --global @playwright/cli@0.1.22
           command -v google-chrome || playwright-cli install-browser chrome
-      - name: Install Chinese browser font
+      - name: Install pinned Chinese browser font
         run: |
-          sudo apt-get update
-          sudo apt-get install --yes --no-install-recommends fonts-noto-cjk fontconfig
+          mkdir -p "$HOME/.local/share/fonts/arc"
+          install -m 644 review_core/assets/NotoSansSC-Regular.ttf "$HOME/.local/share/fonts/arc/NotoSansSC-Regular.ttf"
+          fc-cache -f "$HOME/.local/share/fonts/arc"
       - name: Verify Chinese browser font availability
         run: |
           mkdir -p "$RUNNER_TEMP/arc-ci-evidence"
           fc-match --format='%{family}\n' 'sans-serif:lang=zh-cn' | tee "$RUNNER_TEMP/arc-ci-evidence/chinese-browser-font.txt"
-          grep -F 'Noto Sans CJK' "$RUNNER_TEMP/arc-ci-evidence/chinese-browser-font.txt"
-          dpkg-query -W -f='${Version}\n' fonts-noto-cjk > "$RUNNER_TEMP/arc-ci-evidence/chinese-browser-font-version.txt"
+          grep -E 'Noto Sans (CJK )?SC' "$RUNNER_TEMP/arc-ci-evidence/chinese-browser-font.txt"
+          echo 'e3b799e4230233500ff152d1cc81ade6c64acb34958c90cd6b6e02927a2923a9  review_core/assets/NotoSansSC-Regular.ttf' | sha256sum --check
+          sha256sum review_core/assets/NotoSansSC-Regular.ttf "$HOME/.local/share/fonts/arc/NotoSansSC-Regular.ttf" > "$RUNNER_TEMP/arc-ci-evidence/chinese-browser-font-version.txt"
       - name: Keyboard upload to decision and downloadable reports
         env:
           ARC_UI_APPROVE: "1"
