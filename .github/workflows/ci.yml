@@ -121,6 +121,9 @@ jobs:
           ARC_UI_EVIDENCE_DIR: ${{ runner.temp }}/arc-ci-evidence/browser
           ARC_PLAYWRIGHT_CLI: playwright-cli
         run: node frontend/scripts/verify-ui-cli.mjs
+      - name: Collect bounded image and license evidence (not release acceptance)
+        run: |
+          .venv/bin/python scripts/collect_release_ci.py --output-dir "$RUNNER_TEMP/arc-ci-evidence/release"
       - name: Preserve compact runtime diagnostics
         if: always()
         run: |
