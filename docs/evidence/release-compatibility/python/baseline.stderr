@@ -1,0 +1,8 @@
+/app/.venv/lib64/python3.14/site-packages/datamodel_code_generator/format.py:278: FutureWarning: The default external formatters (black, isort) will become opt-in in a future version. To keep the current behavior, specify formatters=[Formatter.BLACK, Formatter.ISORT]. To prepare for dependency-free formatting, use formatters=[Formatter.BUILTIN]. To suppress this warning, specify formatters explicitly.
+  warn_deprecated(
+Traceback (most recent call last):
+  File "<stdin>", line 296, in <module>
+  File "<stdin>", line 287, in main
+  File "<stdin>", line 167, in datamodel_probe
+  File "<stdin>", line 56, in validate_model
+AssertionError

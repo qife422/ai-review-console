@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-11-01T02:10:10.015738+00:00",
+  "tested_source_commit": "a64ab476c8acfaa36a3d6cc260a4c6c286bad380",
+  "tested_ci_run": 41263397231,
+  "method": "Render reviewable docs from actual CI evidence before sealing; apply after seal; Git binds final current state to avoid self-reference",
+  "files": [
+    {
+      "path": "README.md",
+      "tested_source_sha256": "397467c0495f87ee3cc3332dacea33bc4e0139a6a3724280bc9d31b52e86130f",
+      "planned_final_sha256": "399fa30d6e97b4b7c36af04cad7c5f7740b1032e10548bb865c985ff1394704c",
+      "effect": "README enters package description and API COPY; business/test/dependency/Flow code unchanged by this documentation followup"
+    },
+    {
+      "path": "docs/SPEC_INDEX.md",
+      "tested_source_sha256": "7697b95cf28cd25147252c0ee00fd7689b44a728bfbdfc1204bc23571511eae6",
+      "planned_final_sha256": "b31e080046a4a252f033137fa203d42446aee54db60a9664453d8708aa998976",
+      "effect": "status/index/history documentation; current state manifest reference filled after seal"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "tested_source_sha256": "33b9c145596811aa7660686ad7e68ed09cf7949c6dac8bc5823b98440b9e9e52",
+      "planned_final_sha256": "2c55965f0012fd6571b7b0046040a0beb2d5488c2457fb2959576b352fc25b9e",
+      "effect": "status/index/history documentation; current state manifest reference filled after seal"
+    },
+    {
+      "path": "docs/CURRENT_STATE.md",
+      "tested_source_sha256": "1708cbea111fa4a017c21ae8f347258f7efbee45518c2ff35cd9be4f457cecf5",
+      "planned_final_sha256": null,
+      "effect": "status/index/history documentation; current state manifest reference filled after seal"
+    }
+  ],
+  "exact_image_claim": "Only CI-built IDs from the tested source; subsequent README metadata/docs are not claimed to be those same image bytes",
+  "full_old_fault_restore_performance_rerun": false,
+  "production_static_site_or_backend_deployment": false,
+  "fixed_spec_and_old_evidence_modified": false
+}

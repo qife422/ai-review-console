@@ -1,0 +1,457 @@
+{
+  "candidate_metadata": {
+    "datamodel-code-generator": {
+      "name": "datamodel-code-generator",
+      "queried_at": "2026-11-01T01:44:59.425447+00:00",
+      "requires": [
+        "argcomplete<4,>=2.10.1",
+        "black>=19.10b0; sys_platform != \"emscripten\"",
+        "genson<2,>=1.2.1",
+        "inflect<8,>=4.1",
+        "isort<9,>=4.3.21; sys_platform != \"emscripten\"",
+        "jinja2<4,>=2.10.1",
+        "pydantic<3,>=2.12; python_version >= \"3.14\"",
+        "pydantic<3,>=2; python_version < \"3.14\"",
+        "pyyaml>=6.0.1",
+        "tomli<3,>=2.2.1; python_version < \"3.11\"",
+        "typing-extensions<5,>=4.16",
+        "black>=19.10b0; sys_platform != \"emscripten\" and extra == \"all\"",
+        "graphql-core>=3.2.3; extra == \"all\"",
+        "grpcio-tools<2,>=1.62; extra == \"all\"",
+        "httpx>=0.24.1; extra == \"all\"",
+        "isort<9,>=4.3.21; sys_platform != \"emscripten\" and extra == \"all\"",
+        "openapi-spec-validator<0.8,>=0.2.8; extra == \"all\"",
+        "prance>=0.18.2; extra == \"all\"",
+        "pysnooper<2,>=0.4.1; extra == \"all\"",
+        "ruff>=0.9.10; extra == \"all\"",
+        "watchfiles>=1.1; extra == \"all\"",
+        "black>=19.10b0; sys_platform != \"emscripten\" and extra == \"black\"",
+        "pysnooper<2,>=0.4.1; extra == \"debug\"",
+        "graphql-core>=3.2.3; extra == \"graphql\"",
+        "httpx>=0.24.1; extra == \"http\"",
+        "httpx2<3,>=2; extra == \"httpx2\"",
+        "isort<9,>=4.3.21; sys_platform != \"emscripten\" and extra == \"isort\"",
+        "grpcio-tools<2,>=1.62; extra == \"protobuf\"",
+        "ruff>=0.9.10; extra == \"ruff\"",
+        "ryaml>=0.5.1; extra == \"ryaml\"",
+        "openapi-spec-validator<0.8,>=0.2.8; extra == \"validation\"",
+        "prance>=0.18.2; extra == \"validation\"",
+        "watchfiles>=1.1; extra == \"watch\""
+      ],
+      "requires_python": ">=3.10",
+      "response_sha256": "0cc57fe06d7096e81e449ca759f8082fe0983c7e881caf42db589de6cc53ca92",
+      "source_url": "https://pypi.org/pypi/datamodel-code-generator/0.81.0/json",
+      "version": "0.81.0",
+      "vuln_ids": []
+    },
+    "oauthlib": {
+      "name": "oauthlib",
+      "queried_at": "2026-11-01T01:44:59.351286+00:00",
+      "requires": [
+        "cryptography>=3.0.0; extra == \"rsa\"",
+        "cryptography>=3.0.0; extra == \"signedtoken\"",
+        "pyjwt<3,>=2.0.0; extra == \"signedtoken\"",
+        "blinker>=1.4.0; extra == \"signals\""
+      ],
+      "requires_python": ">=3.9",
+      "response_sha256": "3b2b409855c601f392d75b712e84c6c0482c4091a312ce299908dd2b2fa462ff",
+      "source_url": "https://pypi.org/pypi/oauthlib/4.0.0/json",
+      "version": "4.0.0",
+      "vuln_ids": []
+    },
+    "opentelemetry-api": {
+      "name": "opentelemetry-api",
+      "queried_at": "2026-11-01T01:44:59.228990+00:00",
+      "requires": [
+        "typing-extensions>=4.5.0"
+      ],
+      "requires_python": ">=3.10",
+      "response_sha256": "8f8e7481c7bd41f5f33387baf18b6960994aee806f4f4fadb7a40c6370c06e87",
+      "source_url": "https://pypi.org/pypi/opentelemetry-api/1.45.1/json",
+      "version": "1.45.1",
+      "vuln_ids": []
+    },
+    "opentelemetry-exporter-otlp": {
+      "name": "opentelemetry-exporter-otlp",
+      "queried_at": "2026-11-01T01:44:59.067208+00:00",
+      "requires": [
+        "opentelemetry-exporter-otlp-proto-grpc==1.45.1",
+        "opentelemetry-exporter-otlp-proto-http==1.45.1"
+      ],
+      "requires_python": ">=3.10",
+      "response_sha256": "49543ccbcc918c086048ef896dd6a8020f26c9a8593738754d3b4b2ed00ffd3a",
+      "source_url": "https://pypi.org/pypi/opentelemetry-exporter-otlp/1.45.1/json",
+      "version": "1.45.1",
+      "vuln_ids": []
+    },
+    "opentelemetry-exporter-otlp-proto-common": {
+      "name": "opentelemetry-exporter-otlp-proto-common",
+      "queried_at": "2026-11-01T01:44:59.151244+00:00",
+      "requires": [
+        "opentelemetry-proto==1.45.1"
+      ],
+      "requires_python": ">=3.10",
+      "response_sha256": "ff8d56598187ca0629cbd11115bcd24ae21153912071e0bbf3354dc32f872bf0",
+      "source_url": "https://pypi.org/pypi/opentelemetry-exporter-otlp-proto-common/1.45.1/json",
+      "version": "1.45.1",
+      "vuln_ids": []
+    },
+    "opentelemetry-exporter-otlp-proto-grpc": {
+      "name": "opentelemetry-exporter-otlp-proto-grpc",
+      "queried_at": "2026-11-01T01:44:58.942334+00:00",
+      "requires": [
+        "googleapis-common-protos~=1.57",
+        "grpcio<2.0.0,>=1.63.2; python_version < \"3.13\"",
+        "grpcio<2.0.0,>=1.66.2; python_version == \"3.13\"",
+        "grpcio<2.0.0,>=1.75.1; python_version >= \"3.14\"",
+        "opentelemetry-api~=1.15",
+        "opentelemetry-exporter-otlp-common==0.66b1",
+        "opentelemetry-exporter-otlp-proto-common==1.45.1",
+        "opentelemetry-proto==1.45.1",
+        "opentelemetry-sdk~=1.45.1",
+        "typing-extensions>=4.6.0",
+        "opentelemetry-exporter-credential-provider-gcp>=0.59b0; extra == \"gcp-auth\""
+      ],
+      "requires_python": ">=3.10",
+      "response_sha256": "5e013c35cffe6c3da2a2c204782040df2fb6fc1299032a2257ddd545f5f2e259",
+      "source_url": "https://pypi.org/pypi/opentelemetry-exporter-otlp-proto-grpc/1.45.1/json",
+      "version": "1.45.1",
+      "vuln_ids": []
+    },
+    "opentelemetry-exporter-otlp-proto-http": {
+      "name": "opentelemetry-exporter-otlp-proto-http",
+      "queried_at": "2026-11-01T01:44:59.281772+00:00",
+      "requires": [
+        "googleapis-common-protos~=1.52",
+        "opentelemetry-api~=1.15",
+        "opentelemetry-exporter-http-transport[requests]==0.66b1",
+        "opentelemetry-exporter-otlp-common==0.66b1",
+        "opentelemetry-exporter-otlp-proto-common==1.45.1",
+        "opentelemetry-proto==1.45.1",
+        "opentelemetry-sdk~=1.45.1",
+        "requests~=2.7",
+        "typing-extensions>=4.5.0",
+        "opentelemetry-exporter-credential-provider-gcp>=0.59b0; extra == \"gcp-auth\"",
+        "opentelemetry-exporter-http-transport[requests]==0.66b1; extra == \"requests\"",
+        "requests~=2.7; extra == \"requests\""
+      ],
+      "requires_python": ">=3.10",
+      "response_sha256": "a27029fc7084f526350a621e7fab5d775ac62f01054a81205271c7309e02a38c",
+      "source_url": "https://pypi.org/pypi/opentelemetry-exporter-otlp-proto-http/1.45.1/json",
+      "version": "1.45.1",
+      "vuln_ids": []
+    },
+    "opentelemetry-exporter-prometheus": {
+      "name": "opentelemetry-exporter-prometheus",
+      "queried_at": "2026-11-01T01:44:59.066792+00:00",
+      "requires": [
+        "opentelemetry-api~=1.12",
+        "opentelemetry-sdk~=1.45.1",
+        "prometheus-client<1.0.0,>=0.5.0"
+      ],
+      "requires_python": ">=3.10",
+      "response_sha256": "d724a0759c3cf42c611f5b45c332f56ff66c3418a5a8413f2d4bdfa15f49ea5b",
+      "source_url": "https://pypi.org/pypi/opentelemetry-exporter-prometheus/0.66b1/json",
+      "version": "0.66b1",
+      "vuln_ids": []
+    },
+    "opentelemetry-instrumentation": {
+      "name": "opentelemetry-instrumentation",
+      "queried_at": "2026-11-01T01:44:58.797672+00:00",
+      "requires": [
+        "opentelemetry-api~=1.4",
+        "opentelemetry-semantic-conventions==0.66b1",
+        "packaging>=18.0",
+        "wrapt<3.0.0,>=1.0.0"
+      ],
+      "requires_python": ">=3.10",
+      "response_sha256": "790d7907366399de7461da7af4110e5a75a966aa90c04132ad36e4aa89e38b5c",
+      "source_url": "https://pypi.org/pypi/opentelemetry-instrumentation/0.66b1/json",
+      "version": "0.66b1",
+      "vuln_ids": []
+    },
+    "opentelemetry-instrumentation-asgi": {
+      "name": "opentelemetry-instrumentation-asgi",
+      "queried_at": "2026-11-01T01:44:59.018524+00:00",
+      "requires": [
+        "asgiref~=3.0",
+        "opentelemetry-api~=1.12",
+        "opentelemetry-instrumentation==0.66b1",
+        "opentelemetry-semantic-conventions==0.66b1",
+        "opentelemetry-util-http==0.66b1",
+        "asgiref~=3.0; extra == \"instruments\""
+      ],
+      "requires_python": ">=3.10",
+      "response_sha256": "d04d54664d8f60f9453522f3d6d0e5e9ab3e9381982940f893a9b75a10e5a289",
+      "source_url": "https://pypi.org/pypi/opentelemetry-instrumentation-asgi/0.66b1/json",
+      "version": "0.66b1",
+      "vuln_ids": []
+    },
+    "opentelemetry-instrumentation-fastapi": {
+      "name": "opentelemetry-instrumentation-fastapi",
+      "queried_at": "2026-11-01T01:44:59.088970+00:00",
+      "requires": [
+        "opentelemetry-api~=1.12",
+        "opentelemetry-instrumentation-asgi==0.66b1",
+        "opentelemetry-instrumentation==0.66b1",
+        "opentelemetry-semantic-conventions==0.66b1",
+        "opentelemetry-util-http==0.66b1",
+        "fastapi~=0.92; extra == \"instruments\""
+      ],
+      "requires_python": ">=3.10",
+      "response_sha256": "f21380dc024fd8b99d0c19c93235732175cd20aca27d6c027448b33750c4e13b",
+      "source_url": "https://pypi.org/pypi/opentelemetry-instrumentation-fastapi/0.66b1/json",
+      "version": "0.66b1",
+      "vuln_ids": []
+    },
+    "opentelemetry-instrumentation-logging": {
+      "name": "opentelemetry-instrumentation-logging",
+      "queried_at": "2026-11-01T01:44:59.351442+00:00",
+      "requires": [
+        "opentelemetry-api~=1.12",
+        "opentelemetry-instrumentation==0.66b1",
+        "opentelemetry-semantic-conventions==0.66b1"
+      ],
+      "requires_python": ">=3.10",
+      "response_sha256": "2433b51faa7001c95e3f7cbbcf125c9b52476940a8923e92a6393e02a3c41d8d",
+      "source_url": "https://pypi.org/pypi/opentelemetry-instrumentation-logging/0.66b1/json",
+      "version": "0.66b1",
+      "vuln_ids": []
+    },
+    "opentelemetry-instrumentation-redis": {
+      "name": "opentelemetry-instrumentation-redis",
+      "queried_at": "2026-11-01T01:44:59.379985+00:00",
+      "requires": [
+        "opentelemetry-api~=1.12",
+        "opentelemetry-instrumentation==0.66b1",
+        "opentelemetry-semantic-conventions==0.66b1",
+        "wrapt>=1.12.1",
+        "redis>=2.6; extra == \"instruments\""
+      ],
+      "requires_python": ">=3.10",
+      "response_sha256": "122f95d7275b132505f97fa42d4be7369389f145b52077b98970c0b92c83398a",
+      "source_url": "https://pypi.org/pypi/opentelemetry-instrumentation-redis/0.66b1/json",
+      "version": "0.66b1",
+      "vuln_ids": []
+    },
+    "opentelemetry-instrumentation-requests": {
+      "name": "opentelemetry-instrumentation-requests",
+      "queried_at": "2026-11-01T01:44:58.866838+00:00",
+      "requires": [
+        "opentelemetry-api~=1.12",
+        "opentelemetry-instrumentation==0.66b1",
+        "opentelemetry-semantic-conventions==0.66b1",
+        "opentelemetry-util-http==0.66b1",
+        "requests~=2.0; extra == \"instruments\""
+      ],
+      "requires_python": ">=3.10",
+      "response_sha256": "ff42e464ddc9648d14059d2bf189f1f5becc7cc3df8d208ba1e424a523fce181",
+      "source_url": "https://pypi.org/pypi/opentelemetry-instrumentation-requests/0.66b1/json",
+      "version": "0.66b1",
+      "vuln_ids": []
+    },
+    "opentelemetry-instrumentation-sqlalchemy": {
+      "name": "opentelemetry-instrumentation-sqlalchemy",
+      "queried_at": "2026-11-01T01:44:59.205863+00:00",
+      "requires": [
+        "opentelemetry-api~=1.12",
+        "opentelemetry-instrumentation==0.66b1",
+        "opentelemetry-semantic-conventions==0.66b1",
+        "packaging>=21.0",
+        "wrapt>=1.11.2",
+        "sqlalchemy<2.1.0,>=1.0.0; extra == \"instruments\""
+      ],
+      "requires_python": ">=3.10",
+      "response_sha256": "5ab75aae156938bc4a71039d5f6cf3e52e53278637e974ab72f5fe0959747464",
+      "source_url": "https://pypi.org/pypi/opentelemetry-instrumentation-sqlalchemy/0.66b1/json",
+      "version": "0.66b1",
+      "vuln_ids": []
+    },
+    "opentelemetry-instrumentation-threading": {
+      "name": "opentelemetry-instrumentation-threading",
+      "queried_at": "2026-11-01T01:44:58.933011+00:00",
+      "requires": [
+        "opentelemetry-api~=1.12",
+        "opentelemetry-instrumentation==0.66b1",
+        "wrapt<3.0.0,>=1.0.0"
+      ],
+      "requires_python": ">=3.10",
+      "response_sha256": "5b9eb288bd023112c864ec036147c776ef25a4a072d0823afc1ff1f81765bd11",
+      "source_url": "https://pypi.org/pypi/opentelemetry-instrumentation-threading/0.66b1/json",
+      "version": "0.66b1",
+      "vuln_ids": []
+    },
+    "opentelemetry-instrumentation-urllib3": {
+      "name": "opentelemetry-instrumentation-urllib3",
+      "queried_at": "2026-11-01T01:44:59.207275+00:00",
+      "requires": [
+        "opentelemetry-api~=1.12",
+        "opentelemetry-instrumentation==0.66b1",
+        "opentelemetry-semantic-conventions==0.66b1",
+        "opentelemetry-util-http==0.66b1",
+        "wrapt<3.0.0,>=1.0.0",
+        "urllib3<3.0.0,>=1.0.0; extra == \"instruments\""
+      ],
+      "requires_python": ">=3.10",
+      "response_sha256": "994ea2b08123bccc36ecdb950bfd494a384f669a77b19d6d51b1bd344cb01b9e",
+      "source_url": "https://pypi.org/pypi/opentelemetry-instrumentation-urllib3/0.66b1/json",
+      "version": "0.66b1",
+      "vuln_ids": []
+    },
+    "opentelemetry-proto": {
+      "name": "opentelemetry-proto",
+      "queried_at": "2026-11-01T01:44:59.349445+00:00",
+      "requires": [
+        "protobuf<8.0,>=5.0"
+      ],
+      "requires_python": ">=3.10",
+      "response_sha256": "8d5a4d59e0c5b77eb52e237062d592bc9fc91c95804129afa37870983b00fa1b",
+      "source_url": "https://pypi.org/pypi/opentelemetry-proto/1.45.1/json",
+      "version": "1.45.1",
+      "vuln_ids": []
+    },
+    "opentelemetry-sdk": {
+      "name": "opentelemetry-sdk",
+      "queried_at": "2026-11-01T01:44:58.935584+00:00",
+      "requires": [
+        "opentelemetry-api==1.45.1",
+        "opentelemetry-semantic-conventions==0.66b1",
+        "typing-extensions>=4.5.0",
+        "opentelemetry-configuration==0.66b1; extra == \"file-configuration\""
+      ],
+      "requires_python": ">=3.10",
+      "response_sha256": "250515b469c31b07bdf59defb9ff646696add881ead10167d2b17f0c89e28b64",
+      "source_url": "https://pypi.org/pypi/opentelemetry-sdk/1.45.1/json",
+      "version": "1.45.1",
+      "vuln_ids": []
+    },
+    "opentelemetry-semantic-conventions": {
+      "name": "opentelemetry-semantic-conventions",
+      "queried_at": "2026-11-01T01:44:58.796423+00:00",
+      "requires": [
+        "opentelemetry-api==1.45.1",
+        "typing-extensions>=4.5.0"
+      ],
+      "requires_python": ">=3.10",
+      "response_sha256": "75a6fb7054ba1b267d4ecd6c0c87571c767be24bc5272ae5046b9706da064c09",
+      "source_url": "https://pypi.org/pypi/opentelemetry-semantic-conventions/0.66b1/json",
+      "version": "0.66b1",
+      "vuln_ids": []
+    },
+    "opentelemetry-util-http": {
+      "name": "opentelemetry-util-http",
+      "queried_at": "2026-11-01T01:44:58.871630+00:00",
+      "requires": [],
+      "requires_python": ">=3.10",
+      "response_sha256": "d05c160a029959d3eca78187874da6a8cf439d5541a66d1d8c31ae3763e470a6",
+      "source_url": "https://pypi.org/pypi/opentelemetry-util-http/0.66b1/json",
+      "version": "0.66b1",
+      "vuln_ids": []
+    },
+    "opentelemetry-exporter-otlp-common": {
+      "name": "opentelemetry-exporter-otlp-common",
+      "version": "0.66b1",
+      "source_url": "https://pypi.org/pypi/opentelemetry-exporter-otlp-common/0.66b1/json",
+      "response_sha256": "5ca0b466fbedf9c3732d6f40efedbf2670d836e0247ab92c2a9e06f94188c7ee",
+      "queried_at": "2026-11-01T01:45:06.195801+00:00",
+      "requires_python": ">=3.10",
+      "requires": [
+        "opentelemetry-sdk~=1.45.1",
+        "opentelemetry-exporter-http-transport==0.66b1; extra == \"http\""
+      ],
+      "vuln_ids": []
+    },
+    "opentelemetry-exporter-http-transport": {
+      "name": "opentelemetry-exporter-http-transport",
+      "version": "0.66b1",
+      "source_url": "https://pypi.org/pypi/opentelemetry-exporter-http-transport/0.66b1/json",
+      "response_sha256": "fbe40a6c14d21ffc2f6d759026574b7e85c0e674e787e7f77791f3641e6f4bd4",
+      "queried_at": "2026-11-01T01:45:06.341260+00:00",
+      "requires_python": ">=3.10",
+      "requires": [
+        "opentelemetry-api~=1.15",
+        "requests~=2.25; extra == \"requests\"",
+        "urllib3>=1.26; extra == \"urllib3\""
+      ],
+      "vuln_ids": []
+    }
+  },
+  "candidate_pins": {
+    "datamodel-code-generator": "0.81.0",
+    "oauthlib": "4.0.0",
+    "opentelemetry-api": "1.45.1",
+    "opentelemetry-exporter-otlp": "1.45.1",
+    "opentelemetry-exporter-otlp-proto-common": "1.45.1",
+    "opentelemetry-exporter-otlp-proto-grpc": "1.45.1",
+    "opentelemetry-exporter-otlp-proto-http": "1.45.1",
+    "opentelemetry-exporter-prometheus": "0.66b1",
+    "opentelemetry-instrumentation": "0.66b1",
+    "opentelemetry-instrumentation-asgi": "0.66b1",
+    "opentelemetry-instrumentation-fastapi": "0.66b1",
+    "opentelemetry-instrumentation-logging": "0.66b1",
+    "opentelemetry-instrumentation-redis": "0.66b1",
+    "opentelemetry-instrumentation-requests": "0.66b1",
+    "opentelemetry-instrumentation-sqlalchemy": "0.66b1",
+    "opentelemetry-instrumentation-threading": "0.66b1",
+    "opentelemetry-instrumentation-urllib3": "0.66b1",
+    "opentelemetry-proto": "1.45.1",
+    "opentelemetry-sdk": "1.45.1",
+    "opentelemetry-semantic-conventions": "0.66b1",
+    "opentelemetry-util-http": "0.66b1",
+    "opentelemetry-exporter-otlp-common": "0.66b1",
+    "opentelemetry-exporter-http-transport": "0.66b1"
+  },
+  "created_at": "2026-11-01T01:44:59.525018+00:00",
+  "inventory_command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--read-only",
+    "--cap-drop",
+    "ALL",
+    "--security-opt",
+    "no-new-privileges",
+    "--pids-limit",
+    "64",
+    "--memory",
+    "512m",
+    "--entrypoint",
+    "python",
+    "sha256:865e7348409fecd375f86f622c99f1510d98f31f833ab1dad2c9b2bd16a85751",
+    "-c",
+    "import importlib.metadata as m,json; d={};\nfor p in m.distributions():\n n=p.metadata.get(\"Name\",\"\");d[(n.lower().replace(\"_\",\"-\"),p.version)]={\"name\":n,\"version\":p.version,\"requires\":p.requires or []}\nprint(json.dumps(list(d.values()),sort_keys=True))"
+  ],
+  "inventory_raw_sha256": "b0c7f297cc77075fca6a12dc187ed66cbd52851aaf542faa5f6bfda2a8dfda24",
+  "native_image_id": "sha256:865e7348409fecd375f86f622c99f1510d98f31f833ab1dad2c9b2bd16a85751",
+  "installed_metadata_parts": [
+    "inventory-part-0.json",
+    "inventory-part-1.json",
+    "inventory-part-2.json",
+    "inventory-part-3.json",
+    "inventory-part-4.json",
+    "inventory-part-5.json",
+    "inventory-part-6.json",
+    "inventory-part-7.json",
+    "inventory-part-8.json",
+    "inventory-part-9.json"
+  ],
+  "initial_forward_conflicts": [
+    {
+      "installed_or_selected": null,
+      "owner": "opentelemetry-exporter-otlp-proto-grpc",
+      "requirement": "opentelemetry-exporter-otlp-common==0.66b1"
+    },
+    {
+      "installed_or_selected": null,
+      "owner": "opentelemetry-exporter-otlp-proto-http",
+      "requirement": "opentelemetry-exporter-http-transport[requests]==0.66b1"
+    },
+    {
+      "installed_or_selected": null,
+      "owner": "opentelemetry-exporter-otlp-proto-http",
+      "requirement": "opentelemetry-exporter-otlp-common==0.66b1"
+    }
+  ]
+}

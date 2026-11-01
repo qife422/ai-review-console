@@ -1,0 +1,499 @@
+{
+  "created_at": "2026-11-01T01:46:29.219541+00:00",
+  "remote_response_bytes": 476488,
+  "scope": "Source reference archive hashes and exact license candidate data; archives not downloaded and source-to-binary correspondence not verified.",
+  "requests": [
+    {
+      "url": "https://pypi.org/pypi/psycopg/3.3.5/json",
+      "retrieved_at": "2026-11-01T01:46:27.627437+00:00",
+      "state": "retrieved",
+      "bytes": 5935,
+      "sha256": "09cee29640ce28af1f3056737d339b0467cbf7da6efd04c790ba6da89a22bfe3",
+      "package": {
+        "name": "psycopg",
+        "version": "3.3.5",
+        "license": null,
+        "license_expression": "LGPL-3.0-only",
+        "requires_dist": [
+          "typing-extensions>=4.6; python_version < \"3.13\"",
+          "tzdata; sys_platform == \"win32\"",
+          "psycopg-c==3.3.5; implementation_name != \"pypy\" and extra == \"c\"",
+          "psycopg-binary==3.3.5; implementation_name != \"pypy\" and extra == \"binary\"",
+          "psycopg-pool; extra == \"pool\"",
+          "anyio>=4.0; extra == \"test\"",
+          "mypy>=2.1.0; implementation_name != \"pypy\" and extra == \"test\"",
+          "pproxy>=2.7; extra == \"test\"",
+          "pytest>=6.2.5; extra == \"test\"",
+          "pytest-cov>=3.0; extra == \"test\"",
+          "pytest-randomly>=3.5; extra == \"test\"",
+          "ast-comments>=1.1.2; extra == \"dev\"",
+          "black>=26.1.0; extra == \"dev\"",
+          "codespell>=2.2; extra == \"dev\"",
+          "cython-lint>=0.21; extra == \"dev\"",
+          "dnspython>=2.1; extra == \"dev\"",
+          "flake8>=4.0; extra == \"dev\"",
+          "isort[colors]<9.0,>=6.0; extra == \"dev\"",
+          "isort-psycopg; extra == \"dev\"",
+          "mypy>=2.1.0; extra == \"dev\"",
+          "pre-commit>=4.0.1; extra == \"dev\"",
+          "types-setuptools>=57.4; extra == \"dev\"",
+          "types-shapely>=2.0; extra == \"dev\"",
+          "wheel>=0.37; extra == \"dev\"",
+          "Sphinx>=9.1; extra == \"docs\"",
+          "furo==2025.12.19; extra == \"docs\"",
+          "sphinx-autobuild>=2025.8.25; extra == \"docs\"",
+          "sphinx-autodoc-typehints>=3.10.2; extra == \"docs\""
+        ],
+        "project_urls": {
+          "Changes": "https://psycopg.org/psycopg3/docs/news.html",
+          "Code": "https://github.com/psycopg/psycopg",
+          "Documentation": "https://psycopg.org/psycopg3/docs/",
+          "Funding": "https://github.com/sponsors/dvarrazzo",
+          "Homepage": "https://psycopg.org/",
+          "Issue Tracker": "https://github.com/psycopg/psycopg/issues"
+        }
+      },
+      "source_archives": [
+        {
+          "url": "https://files.pythonhosted.org/packages/72/73/8fb739d0f6bba247b9b93c9840c402a4f88545be5f1d4b02b23366371c00/psycopg-3.3.5.tar.gz",
+          "filename": "psycopg-3.3.5.tar.gz",
+          "bytes": 166508,
+          "sha256": "d0a3d9ccf5788af054cbd745278cb02401b5c312aeaafbf2c6144460aec47da4"
+        }
+      ]
+    },
+    {
+      "url": "https://pypi.org/pypi/psycopg/3.3.4/json",
+      "retrieved_at": "2026-11-01T01:46:27.628527+00:00",
+      "state": "retrieved",
+      "bytes": 5932,
+      "sha256": "30898f6418a99bdfafdb17a187c1774dbb39883c592b1e9006d2bcc9f46b5610",
+      "package": {
+        "name": "psycopg",
+        "version": "3.3.4",
+        "license": null,
+        "license_expression": "LGPL-3.0-only",
+        "requires_dist": [
+          "typing-extensions>=4.6; python_version < \"3.13\"",
+          "tzdata; sys_platform == \"win32\"",
+          "psycopg-c==3.3.4; implementation_name != \"pypy\" and extra == \"c\"",
+          "psycopg-binary==3.3.4; implementation_name != \"pypy\" and extra == \"binary\"",
+          "psycopg-pool; extra == \"pool\"",
+          "anyio>=4.0; extra == \"test\"",
+          "mypy>=1.19.0; implementation_name != \"pypy\" and extra == \"test\"",
+          "pproxy>=2.7; extra == \"test\"",
+          "pytest>=6.2.5; extra == \"test\"",
+          "pytest-cov>=3.0; extra == \"test\"",
+          "pytest-randomly>=3.5; extra == \"test\"",
+          "ast-comments>=1.1.2; extra == \"dev\"",
+          "black>=26.1.0; extra == \"dev\"",
+          "codespell>=2.2; extra == \"dev\"",
+          "cython-lint>=0.16; extra == \"dev\"",
+          "dnspython>=2.1; extra == \"dev\"",
+          "flake8>=4.0; extra == \"dev\"",
+          "isort[colors]>=6.0; extra == \"dev\"",
+          "isort-psycopg; extra == \"dev\"",
+          "mypy>=1.19.0; extra == \"dev\"",
+          "pre-commit>=4.0.1; extra == \"dev\"",
+          "types-setuptools>=57.4; extra == \"dev\"",
+          "types-shapely>=2.0; extra == \"dev\"",
+          "wheel>=0.37; extra == \"dev\"",
+          "Sphinx>=9.1; extra == \"docs\"",
+          "furo==2025.12.19; extra == \"docs\"",
+          "sphinx-autobuild>=2025.8.25; extra == \"docs\"",
+          "sphinx-autodoc-typehints>=3.10.2; extra == \"docs\""
+        ],
+        "project_urls": {
+          "Changes": "https://psycopg.org/psycopg3/docs/news.html",
+          "Code": "https://github.com/psycopg/psycopg",
+          "Documentation": "https://psycopg.org/psycopg3/docs/",
+          "Funding": "https://github.com/sponsors/dvarrazzo",
+          "Homepage": "https://psycopg.org/",
+          "Issue Tracker": "https://github.com/psycopg/psycopg/issues"
+        }
+      },
+      "source_archives": [
+        {
+          "url": "https://files.pythonhosted.org/packages/db/2f/cb91e5502ec9de1de6f1b76cfbf69531932725361168bb06963620c77e2e/psycopg-3.3.4.tar.gz",
+          "filename": "psycopg-3.3.4.tar.gz",
+          "bytes": 165799,
+          "sha256": "e21207764952cff81b6b8bdacad9a3939f2793367fdac2987b3aac36a651b5bc"
+        }
+      ]
+    },
+    {
+      "url": "https://pypi.org/pypi/psycopg-c/3.3.5/json",
+      "retrieved_at": "2026-11-01T01:46:27.628760+00:00",
+      "state": "retrieved",
+      "bytes": 4129,
+      "sha256": "11aa11f9ff272e43373d135b69d9de381d13caadfd6ff83a8d2d1dae448c7abe",
+      "package": {
+        "name": "psycopg-c",
+        "version": "3.3.5",
+        "license": null,
+        "license_expression": "LGPL-3.0-only",
+        "requires_dist": null,
+        "project_urls": {
+          "Changes": "https://psycopg.org/psycopg3/docs/news.html",
+          "Code": "https://github.com/psycopg/psycopg",
+          "Documentation": "https://psycopg.org/psycopg3/docs/",
+          "Funding": "https://github.com/sponsors/dvarrazzo",
+          "Homepage": "https://psycopg.org/",
+          "Issue Tracker": "https://github.com/psycopg/psycopg/issues"
+        }
+      },
+      "source_archives": [
+        {
+          "url": "https://files.pythonhosted.org/packages/21/7b/5da2274bdbfed6b02aea463e2b803b8d4406bbc9d6c6f6bfd7122492254f/psycopg_c-3.3.5.tar.gz",
+          "filename": "psycopg_c-3.3.5.tar.gz",
+          "bytes": 694569,
+          "sha256": "5e11edaa0040a64d0af351a8fd3e276a824cd92fe34abc350cd67aa07ad36c55"
+        }
+      ]
+    },
+    {
+      "url": "https://pypi.org/pypi/psycopg2/2.9.12/json",
+      "retrieved_at": "2026-11-01T01:46:27.628896+00:00",
+      "state": "retrieved",
+      "bytes": 11221,
+      "sha256": "314d8abb06cc7cb68a2f84223980b09ecfa8e2a7a57c1da43d9972445161d879",
+      "package": {
+        "name": "psycopg2",
+        "version": "2.9.12",
+        "license": "LGPL with exceptions",
+        "license_expression": null,
+        "requires_dist": null,
+        "project_urls": {
+          "Changes": "https://www.psycopg.org/docs/news.html",
+          "Code": "https://github.com/psycopg/psycopg2",
+          "Documentation": "https://www.psycopg.org/docs/",
+          "Download": "https://pypi.org/project/psycopg2/",
+          "Homepage": "https://psycopg.org/",
+          "Issue Tracker": "https://github.com/psycopg/psycopg2/issues"
+        }
+      },
+      "source_archives": [
+        {
+          "url": "https://files.pythonhosted.org/packages/c7/bc/f66df707ed1aec949fbf24e4460e4f4277a7ba23cdadb3965bb1f634ddb9/psycopg2-2.9.12.tar.gz",
+          "filename": "psycopg2-2.9.12.tar.gz",
+          "bytes": 379683,
+          "sha256": "1dedb1c7a1d8552c4a6044c6b1c41a52e6a8e2d144af83eccac758076b1b7c15"
+        }
+      ]
+    },
+    {
+      "url": "https://pypi.org/pypi/pillow/13.0.0/json",
+      "retrieved_at": "2026-11-01T01:46:27.812052+00:00",
+      "state": "retrieved",
+      "bytes": 80892,
+      "sha256": "183d4151cbc909acf39d4d5d48469d6bc66d5516e7f506854241839d0611b69e",
+      "package": {
+        "name": "pillow",
+        "version": "13.0.0",
+        "license": null,
+        "license_expression": "MIT-CMU",
+        "requires_dist": [
+          "furo; extra == \"docs\"",
+          "olefile; extra == \"docs\"",
+          "sphinx>=8.2; extra == \"docs\"",
+          "sphinx-autobuild; extra == \"docs\"",
+          "sphinx-copybutton; extra == \"docs\"",
+          "sphinx-inline-tabs; extra == \"docs\"",
+          "sphinxext-opengraph; extra == \"docs\"",
+          "olefile; extra == \"fpx\"",
+          "olefile; extra == \"mic\"",
+          "arro3-compute; extra == \"test-arrow\"",
+          "arro3-core; extra == \"test-arrow\"",
+          "nanoarrow; extra == \"test-arrow\"",
+          "pyarrow; extra == \"test-arrow\"",
+          "coverage>=7.4.2; extra == \"tests\"",
+          "defusedxml; extra == \"tests\"",
+          "markdown2; extra == \"tests\"",
+          "olefile; extra == \"tests\"",
+          "packaging; extra == \"tests\"",
+          "psutil; (sys_platform == \"linux\" or sys_platform == \"darwin\") and extra == \"tests\"",
+          "pytest; extra == \"tests\"",
+          "pytest-cov; extra == \"tests\"",
+          "pytest-timeout; extra == \"tests\"",
+          "pytest-xdist; extra == \"tests\"",
+          "setuptools; extra == \"tests\"",
+          "trove-classifiers>=2024.10.12; extra == \"tests\"",
+          "defusedxml; extra == \"xmp\""
+        ],
+        "project_urls": {
+          "Changelog": "https://github.com/python-pillow/Pillow/releases",
+          "Documentation": "https://pillow.readthedocs.io",
+          "Funding": "https://tidelift.com/lifter/search/pypi/pillow",
+          "Homepage": "https://python-pillow.org",
+          "Mastodon": "https://fosstodon.org/@pillow",
+          "Release notes": "https://pillow.readthedocs.io/en/stable/releasenotes/index.html",
+          "Security": "https://pillow.readthedocs.io/en/stable/handbook/security.html",
+          "Source": "https://github.com/python-pillow/Pillow"
+        }
+      },
+      "source_archives": [
+        {
+          "url": "https://files.pythonhosted.org/packages/ce/a4/9cc30690a394a8305e8be4c9036aa16d0dfddadd09079860b582f562496d/pillow-13.0.0.tar.gz",
+          "filename": "pillow-13.0.0.tar.gz",
+          "bytes": 47058631,
+          "sha256": "cdcd1ba258178f7356d74170c9a81ba4eab6a5d55748bc402a5a2a6fe6be3510"
+        }
+      ]
+    },
+    {
+      "url": "https://pypi.org/pypi/pillow/12.3.0/json",
+      "retrieved_at": "2026-11-01T01:46:27.814831+00:00",
+      "state": "unavailable",
+      "error_type": "ValueError",
+      "reason": "per-response limit"
+    },
+    {
+      "url": "https://pypi.org/pypi/lxml/6.1.2/json",
+      "retrieved_at": "2026-11-01T01:46:27.815093+00:00",
+      "state": "retrieved",
+      "bytes": 155127,
+      "sha256": "3c13b1696b8cbff457d15a210c7f0d0d0ecde9ec9e0deab3495c1c468115248e",
+      "package": {
+        "name": "lxml",
+        "version": "6.1.2",
+        "license": "BSD-3-Clause",
+        "license_expression": null,
+        "requires_dist": [
+          "cssselect>=0.7; extra == \"cssselect\"",
+          "html5lib; extra == \"html5\"",
+          "BeautifulSoup4; extra == \"htmlsoup\"",
+          "lxml_html_clean; extra == \"html-clean\""
+        ],
+        "project_urls": {
+          "Bug Tracker": "https://bugs.launchpad.net/lxml",
+          "Homepage": "https://lxml.de/",
+          "Source": "https://github.com/lxml/lxml"
+        }
+      },
+      "source_archives": [
+        {
+          "url": "https://files.pythonhosted.org/packages/ad/a9/970b8fa0ecc4fbf1dfaed0d89bbc1fc1421b25ec26a2038c91e872dc6c8e/lxml-6.1.2.tar.gz",
+          "filename": "lxml-6.1.2.tar.gz",
+          "bytes": 4210626,
+          "sha256": "1055241852f2b02068af4a625a5d32c087db193c12251928af2562ecd2239f18"
+        }
+      ]
+    },
+    {
+      "url": "https://pypi.org/pypi/lxml/6.1.1/json",
+      "retrieved_at": "2026-11-01T01:46:27.887690+00:00",
+      "state": "retrieved",
+      "bytes": 118949,
+      "sha256": "16d30a4379bc3be8c747187330c48a6e0e2900d7a2e56fe467d5dc4ee656ca13",
+      "package": {
+        "name": "lxml",
+        "version": "6.1.1",
+        "license": "BSD-3-Clause",
+        "license_expression": null,
+        "requires_dist": [
+          "cssselect>=0.7; extra == \"cssselect\"",
+          "html5lib; extra == \"html5\"",
+          "BeautifulSoup4; extra == \"htmlsoup\"",
+          "lxml_html_clean; extra == \"html-clean\""
+        ],
+        "project_urls": {
+          "Bug Tracker": "https://bugs.launchpad.net/lxml",
+          "Homepage": "https://lxml.de/",
+          "Source": "https://github.com/lxml/lxml"
+        }
+      },
+      "source_archives": [
+        {
+          "url": "https://files.pythonhosted.org/packages/05/3b/aab6728cae887456f409b4d75e8a01856e4f04bd510de38052a47768b680/lxml-6.1.1.tar.gz",
+          "filename": "lxml-6.1.1.tar.gz",
+          "bytes": 4197430,
+          "sha256": "ba96ae44888e0185281e937633a743ea90d5a196c6000f82565ebb0580012d40"
+        }
+      ]
+    },
+    {
+      "url": "https://pypi.org/pypi/reportlab/4.5.1/json",
+      "retrieved_at": "2026-11-01T01:46:27.907928+00:00",
+      "state": "retrieved",
+      "bytes": 3696,
+      "sha256": "0e988f52c00a9a138419af495ca0dd2f5118fa901ff7cdc6ee102375b98482b1",
+      "package": {
+        "name": "reportlab",
+        "version": "4.5.1",
+        "license": "BSD license (see license.txt for details), Copyright (c) 2000-2025, ReportLab Inc.",
+        "license_expression": null,
+        "requires_dist": [
+          "pillow>=9.0.0",
+          "charset-normalizer",
+          "rl_accel<1.1,>=0.9.0; extra == \"accel\"",
+          "rl_renderPM<4.1,>=4.0.3; extra == \"renderpm\"",
+          "rlPyCairo<1,>=0.2.0; extra == \"pycairo\"",
+          "freetype-py<2.4,>=2.3.0; extra == \"pycairo\"",
+          "rlbidi; extra == \"bidi\"",
+          "uharfbuzz; extra == \"shaping\""
+        ],
+        "project_urls": {
+          "Homepage": "https://www.reportlab.com/"
+        }
+      },
+      "source_archives": [
+        {
+          "url": "https://files.pythonhosted.org/packages/4d/3f/b3861b7e40c9d66f4a04e018958d681d16b948bfd1963c962d43a8c23f66/reportlab-4.5.1.tar.gz",
+          "filename": "reportlab-4.5.1.tar.gz",
+          "bytes": 3939748,
+          "sha256": "9fdf68f4de9171ec66acb4a5feed8f8ca2af43479e707a6fbb0daa75d88e5494"
+        }
+      ]
+    },
+    {
+      "url": "https://pypi.org/pypi/certifi/2026.10.23/json",
+      "retrieved_at": "2026-11-01T01:46:27.985750+00:00",
+      "state": "retrieved",
+      "bytes": 4631,
+      "sha256": "546ce90e02c152f5ff565baca6bc2a8f43c355855f637756f49a0143e312bdb2",
+      "package": {
+        "name": "certifi",
+        "version": "2026.10.23",
+        "license": "MPL-2.0",
+        "license_expression": null,
+        "requires_dist": null,
+        "project_urls": {
+          "Homepage": "https://github.com/certifi/python-certifi",
+          "Source": "https://github.com/certifi/python-certifi"
+        }
+      },
+      "source_archives": [
+        {
+          "url": "https://files.pythonhosted.org/packages/fd/11/b524cbd9bbdaca58608e4cf4053fd463417549e1959fa8d3aa18319f9555/certifi-2026.10.23.tar.gz",
+          "filename": "certifi-2026.10.23.tar.gz",
+          "bytes": 136225,
+          "sha256": "a9895e6e2758b371e0545e321a3a8fd1fcfd9829ada8824a936dfb16aaaf36cd"
+        }
+      ]
+    },
+    {
+      "url": "https://pypi.org/pypi/ibm-db/3.2.9/json",
+      "retrieved_at": "2026-11-01T01:46:28.000543+00:00",
+      "state": "retrieved",
+      "bytes": 64190,
+      "sha256": "d077ed0371d3d48e9b47d58a8613b6bb15993a3f9962303d022351bd3c39b3f1",
+      "package": {
+        "name": "ibm-db",
+        "version": "3.2.9",
+        "license": "Apache License 2.0",
+        "license_expression": null,
+        "requires_dist": null,
+        "project_urls": {
+          "Download": "http://code.google.com/p/ibm-db/downloads/list",
+          "Homepage": "http://pypi.python.org/pypi/ibm_db/"
+        }
+      },
+      "source_archives": [
+        {
+          "url": "https://files.pythonhosted.org/packages/6c/36/8cd1503b7f947293bb045ec86e6fa60a0bef3bacf1a601840ea65c4b78de/ibm_db-3.2.9.tar.gz",
+          "filename": "ibm_db-3.2.9.tar.gz",
+          "bytes": 276595,
+          "sha256": "0ad6dc4575519a5563fd7f845fc6bc00d688020e1d3ae78d382e79183bc32b0b"
+        }
+      ]
+    },
+    {
+      "url": "https://pypi.org/pypi/zep-python/2.0.0/json",
+      "retrieved_at": "2026-11-01T01:46:28.009019+00:00",
+      "state": "retrieved",
+      "bytes": 7910,
+      "sha256": "3c22f660ca94a97bd24132403ed427110e8dd8b843a4ab3c8ada8e244ddd81a1",
+      "package": {
+        "name": "zep-python",
+        "version": "2.0.0",
+        "license": null,
+        "license_expression": null,
+        "requires_dist": [
+          "httpx>=0.21.2",
+          "pydantic>=1.9.2",
+          "typing_extensions>=4.0.0"
+        ],
+        "project_urls": null
+      },
+      "source_archives": [
+        {
+          "url": "https://files.pythonhosted.org/packages/d0/a0/af8f63b4dbf71a704a1edca16f588c24cb75f1027e6a6e4fb8e5e029ea23/zep_python-2.0.0.tar.gz",
+          "filename": "zep_python-2.0.0.tar.gz",
+          "bytes": 21932,
+          "sha256": "6462005e1465dbde92a374ddf10aa1638d598497f6a2e2d378098896af4c0b86"
+        }
+      ]
+    },
+    {
+      "url": "https://ftp.postgresql.org/pub/source/v18.6/postgresql-18.6.tar.bz2.sha256",
+      "retrieved_at": "2026-11-01T01:46:28.051295+00:00",
+      "state": "retrieved",
+      "bytes": 90,
+      "sha256": "92b190ded4a002654768daa8ac41db530354b9be13c7c67059592ddf5bb0c43a",
+      "text": "555610c24d53e4316da5b7d3fc25c279d96856d5e0e23ee308c328c5fa881d9f  postgresql-18.6.tar.bz2\n"
+    },
+    {
+      "url": "https://ftp.postgresql.org/pub/source/v17.9/postgresql-17.9.tar.bz2.sha256",
+      "retrieved_at": "2026-11-01T01:46:28.056369+00:00",
+      "state": "retrieved",
+      "bytes": 90,
+      "sha256": "94d0a50cca447ead6a623cd1787d2f238956ef702f085c69777b36ace0be0821",
+      "text": "3b9a62538a8da151e807a3ddb1198e8605f2032544d78f403ae883d27ecf1ee4  postgresql-17.9.tar.bz2\n"
+    },
+    {
+      "url": "https://github.com/openssl/openssl/releases/download/openssl-3.5.8/openssl-3.5.8.tar.gz.sha256",
+      "retrieved_at": "2026-11-01T01:46:28.107074+00:00",
+      "state": "retrieved",
+      "bytes": 87,
+      "sha256": "03917b1ef4b845cfee8a777ce963397fb777d198e6f4d1ca0e2608d8130926df",
+      "text": "a8f84a39918ec6415ce765d9b429d313ba97b8143169c172e734b9514464f5b2 *openssl-3.5.8.tar.gz\n"
+    },
+    {
+      "url": "https://github.com/openssl/openssl/releases/download/openssl-3.5.6/openssl-3.5.6.tar.gz.sha256",
+      "retrieved_at": "2026-11-01T01:46:28.237792+00:00",
+      "state": "retrieved",
+      "bytes": 87,
+      "sha256": "35d01043ab0e675fcd8422de2c6b89be84c148483d29c9adf7e2a486516fc6a6",
+      "text": "deae7c80cba99c4b4f940ecadb3c3338b13cb77418409238e57d7f31f2a3b736 *openssl-3.5.6.tar.gz\n"
+    },
+    {
+      "url": "https://www.openssl.org/source/old/1.1.1/openssl-1.1.1k.tar.gz.sha256",
+      "retrieved_at": "2026-11-01T01:46:28.425465+00:00",
+      "state": "retrieved",
+      "bytes": 65,
+      "sha256": "84694227224235e76b50f7aee7f317ef2accf64f1c46347e892770c2e03c2af0",
+      "text": "892a0875b9872acd04a9fde79b1f943075d5ea162415de3047c327df33fbaee5\n"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/getzep/zep-python/v2.0.0/LICENSE",
+      "retrieved_at": "2026-11-01T01:46:28.430023+00:00",
+      "state": "retrieved",
+      "bytes": 11356,
+      "sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1",
+      "text": "                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code control systems,\n      and issue tracking systems that are managed by, or on behalf of, the\n      Licensor for the purpose of discussing and improving the Work, but\n      excluding communication that is conspicuously marked or otherwise\n      designated in writing by the copyright owner as \"Not a Contribution.\"\n\n      \"Contributor\" shall mean Licensor and any individual or Legal Entity\n      on behalf of whom a Contribution has been received by Licensor and\n      subsequently incorporated within the Work.\n\n   2. Grant of Copyright License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      copyright license to reproduce, prepare Derivative Works of,\n      publicly display, publicly perform, sublicense, and distribute the\n      Work and such Derivative Works in Source or Object form.\n\n   3. Grant of Patent License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      (except as stated in this section) patent license to make, have made,\n      use, offer to sell, sell, import, and otherwise transfer the Work,\n      where such license applies only to those patent claims licensable\n      by such Contributor that are necessarily infringed by their\n      Contribution(s) alone or by combination of their Contribution(s)\n      with the Work to which such Contribution(s) was submitted. If You\n      institute patent litigation against any entity (including a\n      cross-claim or counterclaim in a lawsuit) alleging that the Work\n      or a Contribution incorporated within the Work constitutes direct\n      or contributory patent infringement, then any patent licenses\n      granted to You under this License for that Work shall terminate\n      as of the date such litigation is filed.\n\n   4. Redistribution. You may reproduce and distribute copies of the\n      Work or Derivative Works thereof in any medium, with or without\n      modifications, and in Source or Object form, provided that You\n      meet the following conditions:\n\n      (a) You must give any other recipients of the Work or\n          Derivative Works a copy of this License; and\n\n      (b) You must cause any modified files to carry prominent notices\n          stating that You changed the files; and\n\n      (c) You must retain, in the Source form of any Derivative Works\n          that You distribute, all copyright, patent, trademark, and\n          attribution notices from the Source form of the Work,\n          excluding those notices that do not pertain to any part of\n          the Derivative Works; and\n\n      (d) If the Work includes a \"NOTICE\" text file as part of its\n          distribution, then any Derivative Works that You distribute must\n          include a readable copy of the attribution notices contained\n          within such NOTICE file, excluding those notices that do not\n          pertain to any part of the Derivative Works, in at least one\n          of the following places: within a NOTICE text file distributed\n          as part of the Derivative Works; within the Source form or\n          documentation, if provided along with the Derivative Works; or,\n          within a display generated by the Derivative Works, if and\n          wherever such third-party notices normally appear. The contents\n          of the NOTICE file are for informational purposes only and\n          do not modify the License. You may add Your own attribution\n          notices within Derivative Works that You distribute, alongside\n          or as an addendum to the NOTICE text from the Work, provided\n          that such additional attribution notices cannot be construed\n          as modifying the License.\n\n      You may add Your own copyright statement to Your modifications and\n      may provide additional or different license terms and conditions\n      for use, reproduction, or distribution of Your modifications, or\n      for any such Derivative Works as a whole, provided Your use,\n      reproduction, and distribution of the Work otherwise complies with\n      the conditions stated in this License.\n\n   5. Submission of Contributions. Unless You explicitly state otherwise,\n      any Contribution intentionally submitted for inclusion in the Work\n      by You to the Licensor shall be under the terms and conditions of\n      this License, without any additional terms or conditions.\n      Notwithstanding the above, nothing herein shall supersede or modify\n      the terms of any separate license agreement you may have executed\n      with Licensor regarding such Contributions.\n\n   6. Trademarks. This License does not grant permission to use the trade\n      names, trademarks, service marks, or product names of the Licensor,\n      except as required for reasonable and customary use in describing the\n      origin of the Work and reproducing the content of the NOTICE file.\n\n   7. Disclaimer of Warranty. Unless required by applicable law or\n      agreed to in writing, Licensor provides the Work (and each\n      Contributor provides its Contributions) on an \"AS IS\" BASIS,\n      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\n      implied, including, without limitation, any warranties or conditions\n      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\n      PARTICULAR PURPOSE. You are solely responsible for determining the\n      appropriateness of using or redistributing the Work and assume any\n      risks associated with Your exercise of permissions under this License.\n\n   8. Limitation of Liability. In no event and under no legal theory,\n      whether in tort (including negligence), contract, or otherwise,\n      unless required by applicable law (such as deliberate and grossly\n      negligent acts) or agreed to in writing, shall any Contributor be\n      liable to You for damages, including any direct, indirect, special,\n      incidental, or consequential damages of any character arising as a\n      result of this License or out of the use or inability to use the\n      Work (including but not limited to damages for loss of goodwill,\n      work stoppage, computer failure or malfunction, or any and all\n      other commercial damages or losses), even if such Contributor\n      has been advised of the possibility of such damages.\n\n   9. Accepting Warranty or Additional Liability. While redistributing\n      the Work or Derivative Works thereof, You may choose to offer,\n      and charge a fee for, acceptance of support, warranty, indemnity,\n      or other liability obligations and/or rights consistent with this\n      License. However, in accepting such obligations, You may act only\n      on Your own behalf and on Your sole responsibility, not on behalf\n      of any other Contributor, and only if You agree to indemnify,\n      defend, and hold each Contributor harmless for any liability\n      incurred by, or claims asserted against, such Contributor by reason\n      of your accepting any such warranty or additional liability.\n\n   END OF TERMS AND CONDITIONS\n\n   APPENDIX: How to apply the Apache License to your work.\n\n      To apply the Apache License to your work, attach the following\n      boilerplate notice, with the fields enclosed by brackets \"[]\"\n      replaced with your own identifying information. (Don't include\n      the brackets!)  The text should be enclosed in the appropriate\n      comment syntax for the file format. We also recommend that a\n      file or class name and description of purpose be included on the\n      same \"printed page\" as the copyright notice for easier\n      identification within third-party archives.\n\n   Copyright [yyyy] [name of copyright owner]\n\n   Licensed under the Apache License, Version 2.0 (the \"License\");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       http://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an \"AS IS\" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/getzep/zep-python/v2.0.0/pyproject.toml",
+      "retrieved_at": "2026-11-01T01:46:28.519986+00:00",
+      "state": "retrieved",
+      "bytes": 725,
+      "sha256": "68377cc6aaa0bf2156b0628d83ffbe9237444353f3a0b49eb25390084f351026",
+      "text": "[tool.poetry]\nname = \"zep-cloud\"\nversion = \"2.0.0\"\ndescription = \"\"\nreadme = \"README.md\"\nauthors = []\npackages = [{ include = \"zep_cloud\", from = \"src\" }]\n\n[tool.poetry.dependencies]\npython = \">=3.9.0,<4.0\"\nhttpx = \">=0.21.2\"\npydantic = \">= 1.9.2\"\ntyping_extensions = \">= 4.0.0\"\n\n[tool.poetry.group.dev.dependencies]\nmypy = \"1.9.0\"\npytest = \"^7.4.0\"\npytest-asyncio = \"^0.23.5\"\npython-dateutil = \"^2.9.0\"\nlangchain = \"^0.1.3\"\nopenai = \"^1.9.0\"\nlangchain-openai = \"^0.0.3\"\nblack = \"^24.4.2\"\nruff = \"^0.4.8\"\nipykernel = \"^6.29.4\"\n\n[tool.pytest.ini_options]\ntestpaths = [\"tests\"]\nasyncio_mode = \"auto\"\n\n[tool.mypy]\nplugins = [\"pydantic.mypy\"]\n\n\n[build-system]\nrequires = [\"poetry-core\"]\nbuild-backend = \"poetry.core.masonry.api\"\n"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/getzep/zep-python/v2.0.2/pyproject.toml",
+      "retrieved_at": "2026-11-01T01:46:28.587429+00:00",
+      "state": "retrieved",
+      "bytes": 1376,
+      "sha256": "a8730c8bfb9d628119be06480a5716fb5f58f8b15256b472530f965b174ccbd8",
+      "text": "[tool.poetry]\nname = \"zep-python\"\nversion = \"2.0.2\"\ndescription = \"\"\nreadme = \"README.md\"\nauthors = []\nkeywords = []\n\nclassifiers = [\n    \"Intended Audience :: Developers\",\n    \"Programming Language :: Python\",\n    \"Programming Language :: Python :: 3\",\n    \"Programming Language :: Python :: 3.8\",\n    \"Programming Language :: Python :: 3.9\",\n    \"Programming Language :: Python :: 3.10\",\n    \"Programming Language :: Python :: 3.11\",\n    \"Programming Language :: Python :: 3.12\",\n    \"Operating System :: OS Independent\",\n    \"Operating System :: POSIX\",\n    \"Operating System :: MacOS\",\n    \"Operating System :: POSIX :: Linux\",\n    \"Operating System :: Microsoft :: Windows\",\n    \"Topic :: Software Development :: Libraries :: Python Modules\",\n    \"Typing :: Typed\"\n]\npackages = [\n    { include = \"zep_python\", from = \"src\"}\n]\n\n[project.urls]\nRepository = 'https://github.com/getzep/zep-python'\n\n[tool.poetry.dependencies]\npython = \"^3.8\"\nhttpx = \">=0.21.2\"\npydantic = \">= 1.9.2\"\ntyping_extensions = \">= 4.0.0\"\n\n[tool.poetry.dev-dependencies]\nmypy = \"1.9.0\"\npytest = \"^7.4.0\"\npytest-asyncio = \"^0.23.5\"\npython-dateutil = \"^2.9.0\"\ntypes-python-dateutil = \"^2.9.0.20240316\"\n\n[tool.pytest.ini_options]\ntestpaths = [ \"tests\" ]\nasyncio_mode = \"auto\"\n\n[tool.mypy]\nplugins = [\"pydantic.mypy\"]\n\n\n[build-system]\nrequires = [\"poetry-core\"]\nbuild-backend = \"poetry.core.masonry.api\"\n"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/psycopg/psycopg/3.3.5/tools/build/wheel_linux_before_all.sh",
+      "retrieved_at": "2026-11-01T01:46:28.620038+00:00",
+      "state": "unavailable",
+      "error_type": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-11-01T02:10:26.713395+00:00",
+  "method": "Read/hash fixed original files and every payload listed by both old sealed manifests; no writes to protected inputs",
+  "fixed": [
+    {
+      "path": "review_console.sqlite3",
+      "bytes": 57344,
+      "sha256": "980ad5d23d866a52e4101966594e5a24ee67edef08475afc63ff9c3e1f6fca1f",
+      "unchanged": true
+    },
+    {
+      "path": "docs/UPGRADE_SPEC.md",
+      "bytes": 50489,
+      "sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753",
+      "unchanged": true
+    },
+    {
+      "path": "docs/spec-baseline.json",
+      "bytes": 8731,
+      "sha256": "5ad13f524e74554b9c8cb30b9809ffbbbbed8e3d7fa4ede5625bb1b7d781bf2e",
+      "unchanged": true
+    },
+    {
+      "path": "docs/evidence/v02-release/manifest.json",
+      "bytes": 74437,
+      "sha256": "c2a9cba23f3653e7c507654631f74568ee7490f80212ffe382c92323a4547f36",
+      "unchanged": true
+    },
+    {
+      "path": "docs/evidence/v02-acceptance/manifest.json",
+      "bytes": 123887,
+      "sha256": "6e3fa0159c396b1d422b32d90ccabb772b82db5d5cbeddb6e385e0e54138ba1c",
+      "unchanged": true
+    }
+  ],
+  "old_payloads": [
+    {
+      "evidence": "v02-release",
+      "verified_files": 404,
+      "verified_bytes": 26939835,
+      "all_unchanged": true
+    },
+    {
+      "evidence": "v02-acceptance",
+      "verified_files": 187,
+      "verified_bytes": 5181623,
+      "all_unchanged": true
+    }
+  ],
+  "historical_database_volumes": "not mounted, started, migrated or deleted this continuation; prior preservation applies only to prior recorded run"
+}

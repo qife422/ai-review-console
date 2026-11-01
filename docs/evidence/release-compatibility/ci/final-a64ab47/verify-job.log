@@ -1,0 +1,984 @@
+﻿2026-11-01T02:00:43.6352500Z Current runner version: '2.338.2'
+2026-11-01T02:00:43.6369319Z ##[group]Runner Image Provisioner
+2026-11-01T02:00:43.6369943Z Hosted Compute Agent
+2026-11-01T02:00:43.6370324Z Version: 20261021.618
+2026-11-01T02:00:43.6370681Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-11-01T02:00:43.6371145Z Build Date: 2026-10-21T00:45:21Z
+2026-11-01T02:00:43.6371566Z Worker ID: {18939604-b29a-4e81-b4f6-44bd09f8453f}
+2026-11-01T02:00:43.6372001Z Region: centralus
+2026-11-01T02:00:43.6372359Z Cloud: Azure
+2026-11-01T02:00:43.6372662Z ##[endgroup]
+2026-11-01T02:00:43.6373550Z ##[group]Operating System
+2026-11-01T02:00:43.6373908Z Ubuntu
+2026-11-01T02:00:43.6374244Z 24.04.5
+2026-11-01T02:00:43.6374595Z LTS
+2026-11-01T02:00:43.6374897Z ##[endgroup]
+2026-11-01T02:00:43.6375250Z ##[group]Runner Image
+2026-11-01T02:00:43.6375627Z Image: ubuntu-24.04
+2026-11-01T02:00:43.6375983Z Version: 20261025.353.1
+2026-11-01T02:00:43.6376746Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-01T02:00:43.6377599Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-11-01T02:00:43.6378169Z ##[endgroup]
+2026-11-01T02:00:43.6378867Z ##[group]GITHUB_TOKEN Permissions
+2026-11-01T02:00:43.6379969Z Contents: read
+2026-11-01T02:00:43.6380342Z Metadata: read
+2026-11-01T02:00:43.6380681Z ##[endgroup]
+2026-11-01T02:00:43.6381853Z Secret source: Actions
+2026-11-01T02:00:43.6382476Z Cache mode: write
+2026-11-01T02:00:43.6382997Z Prepare workflow directory
+2026-11-01T02:00:43.6670311Z Prepare all required actions
+2026-11-01T02:00:43.6711602Z Getting action download info
+2026-11-01T02:00:43.8894041Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-01T02:00:43.9868292Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-01T02:00:44.0782522Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-11-01T02:00:44.1789657Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-01T02:00:44.4308325Z Complete job name: verify
+2026-11-01T02:00:44.4693803Z ##[group]Checking docker version
+2026-11-01T02:00:44.4701798Z ##[command]/usr/bin/docker version --format '{{.Server.APIVersion}}'
+2026-11-01T02:00:44.5307424Z '1.48'
+2026-11-01T02:00:44.5319722Z Docker daemon API version: '1.48'
+2026-11-01T02:00:44.5320117Z ##[command]/usr/bin/docker version --format '{{.Client.APIVersion}}'
+2026-11-01T02:00:44.5446956Z '1.48'
+2026-11-01T02:00:44.5461036Z Docker client API version: '1.48'
+2026-11-01T02:00:44.5464435Z ##[endgroup]
+2026-11-01T02:00:44.5466091Z ##[group]Clean up resources from previous jobs
+2026-11-01T02:00:44.5469365Z ##[command]/usr/bin/docker ps --all --quiet --no-trunc --filter "label=94b161"
+2026-11-01T02:00:44.5586520Z ##[command]/usr/bin/docker network prune --force --filter "label=94b161"
+2026-11-01T02:00:44.5693728Z ##[endgroup]
+2026-11-01T02:00:44.5694011Z ##[group]Create local container network
+2026-11-01T02:00:44.5700019Z ##[command]/usr/bin/docker network create --label 94b161 github_network_b1e2412afe734114bac328d6c1bfce0d
+2026-11-01T02:00:44.6065092Z 5fe403bfff464959625ee092646224ef86e4a5408f4c4cba8788b3af482d9c0d
+2026-11-01T02:00:44.6082184Z ##[endgroup]
+2026-11-01T02:00:44.6098324Z ##[group]Starting postgres service container
+2026-11-01T02:00:44.6111753Z ##[command]/usr/bin/docker pull postgres:16.15-trixie@sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c
+2026-11-01T02:00:45.0305278Z docker.io/library/postgres@sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c: Pulling from library/postgres
+2026-11-01T02:00:45.1706971Z 6fc242d221a6: Pulling fs layer
+2026-11-01T02:00:45.1707451Z d06edb2e3f43: Pulling fs layer
+2026-11-01T02:00:45.1707872Z 3795839385bc: Pulling fs layer
+2026-11-01T02:00:45.1708286Z cea4f0db46a6: Pulling fs layer
+2026-11-01T02:00:45.1708658Z 9b1a18996a22: Pulling fs layer
+2026-11-01T02:00:45.1709422Z fbc84e711712: Pulling fs layer
+2026-11-01T02:00:45.1709814Z 879995175298: Pulling fs layer
+2026-11-01T02:00:45.1710069Z d89068781d71: Pulling fs layer
+2026-11-01T02:00:45.1710332Z 5c4d204f6daa: Pulling fs layer
+2026-11-01T02:00:45.1710677Z 28d8a96df569: Pulling fs layer
+2026-11-01T02:00:45.1711126Z b355a8fcc1d3: Pulling fs layer
+2026-11-01T02:00:45.1711399Z dc3e98153fd4: Pulling fs layer
+2026-11-01T02:00:45.1711650Z c60d02d02e9b: Pulling fs layer
+2026-11-01T02:00:45.1711909Z 7ee6ed8de1c8: Pulling fs layer
+2026-11-01T02:00:45.1712162Z cea4f0db46a6: Waiting
+2026-11-01T02:00:45.1712420Z 9b1a18996a22: Waiting
+2026-11-01T02:00:45.1712643Z fbc84e711712: Waiting
+2026-11-01T02:00:45.1713016Z 879995175298: Waiting
+2026-11-01T02:00:45.1713275Z d89068781d71: Waiting
+2026-11-01T02:00:45.1713501Z 5c4d204f6daa: Waiting
+2026-11-01T02:00:45.1713723Z 28d8a96df569: Waiting
+2026-11-01T02:00:45.1713950Z b355a8fcc1d3: Waiting
+2026-11-01T02:00:45.1714174Z 7ee6ed8de1c8: Waiting
+2026-11-01T02:00:45.1714406Z dc3e98153fd4: Waiting
+2026-11-01T02:00:45.1714634Z c60d02d02e9b: Waiting
+2026-11-01T02:00:45.3713159Z d06edb2e3f43: Verifying Checksum
+2026-11-01T02:00:45.3713750Z d06edb2e3f43: Download complete
+2026-11-01T02:00:45.5564955Z 3795839385bc: Verifying Checksum
+2026-11-01T02:00:45.5566865Z 3795839385bc: Download complete
+2026-11-01T02:00:45.5690197Z 6fc242d221a6: Verifying Checksum
+2026-11-01T02:00:45.5691752Z 6fc242d221a6: Download complete
+2026-11-01T02:00:45.6131714Z cea4f0db46a6: Verifying Checksum
+2026-11-01T02:00:45.6132556Z cea4f0db46a6: Download complete
+2026-11-01T02:00:45.7445271Z 879995175298: Verifying Checksum
+2026-11-01T02:00:45.7446198Z 879995175298: Download complete
+2026-11-01T02:00:45.7948851Z 9b1a18996a22: Verifying Checksum
+2026-11-01T02:00:45.7959716Z 9b1a18996a22: Download complete
+2026-11-01T02:00:45.8240397Z fbc84e711712: Verifying Checksum
+2026-11-01T02:00:45.8240753Z fbc84e711712: Download complete
+2026-11-01T02:00:45.9179350Z d89068781d71: Verifying Checksum
+2026-11-01T02:00:45.9179942Z d89068781d71: Download complete
+2026-11-01T02:00:46.0038410Z 28d8a96df569: Download complete
+2026-11-01T02:00:46.0367817Z b355a8fcc1d3: Verifying Checksum
+2026-11-01T02:00:46.0368526Z b355a8fcc1d3: Download complete
+2026-11-01T02:00:46.1753750Z 6fc242d221a6: Pull complete
+2026-11-01T02:00:46.1931395Z c60d02d02e9b: Verifying Checksum
+2026-11-01T02:00:46.1932245Z c60d02d02e9b: Download complete
+2026-11-01T02:00:46.2725776Z dc3e98153fd4: Verifying Checksum
+2026-11-01T02:00:46.2726722Z dc3e98153fd4: Download complete
+2026-11-01T02:00:46.3659469Z 7ee6ed8de1c8: Verifying Checksum
+2026-11-01T02:00:46.3659914Z 7ee6ed8de1c8: Download complete
+2026-11-01T02:00:46.4263133Z 5c4d204f6daa: Verifying Checksum
+2026-11-01T02:00:46.4263365Z 5c4d204f6daa: Download complete
+2026-11-01T02:00:48.5214859Z d06edb2e3f43: Pull complete
+2026-11-01T02:00:48.7353958Z 3795839385bc: Pull complete
+2026-11-01T02:00:48.7750555Z cea4f0db46a6: Pull complete
+2026-11-01T02:00:49.0722539Z 9b1a18996a22: Pull complete
+2026-11-01T02:00:49.1448321Z fbc84e711712: Pull complete
+2026-11-01T02:00:49.1502264Z 879995175298: Pull complete
+2026-11-01T02:00:49.1563369Z d89068781d71: Pull complete
+2026-11-01T02:00:52.3513251Z 5c4d204f6daa: Pull complete
+2026-11-01T02:00:52.3606259Z 28d8a96df569: Pull complete
+2026-11-01T02:00:52.3706942Z b355a8fcc1d3: Pull complete
+2026-11-01T02:00:52.3789356Z dc3e98153fd4: Pull complete
+2026-11-01T02:00:52.3844162Z c60d02d02e9b: Pull complete
+2026-11-01T02:00:52.3906089Z 7ee6ed8de1c8: Pull complete
+2026-11-01T02:00:52.3936602Z Digest: sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c
+2026-11-01T02:00:52.3945565Z Status: Downloaded newer image for postgres@sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c
+2026-11-01T02:00:52.3949984Z docker.io/library/postgres:16.15-trixie@sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c
+2026-11-01T02:00:52.4003453Z ##[command]/usr/bin/docker create --name c712d1b2ad1348d9b29ffc01f9a77411_postgres1615trixiesha2561beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c_0984df --label 94b161 --network github_network_b1e2412afe734114bac328d6c1bfce0d --network-alias postgres -p 5432:5432 --health-cmd "pg_isready -U review -d review_console" --health-interval 5s --health-timeout 5s --health-retries 20 -e "POSTGRES_USER=review" -e "POSTGRES_PASSWORD=synthetic-demo-only" -e "POSTGRES_DB=review_console" -e GITHUB_ACTIONS=true -e CI=true postgres:16.15-trixie@sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c
+2026-11-01T02:00:52.4184313Z e81dbb43cf85a664574adfd803ece117c456d9e56ee0d4e4eb612d8b464c30b8
+2026-11-01T02:00:52.4202130Z ##[command]/usr/bin/docker start e81dbb43cf85a664574adfd803ece117c456d9e56ee0d4e4eb612d8b464c30b8
+2026-11-01T02:00:52.6125062Z e81dbb43cf85a664574adfd803ece117c456d9e56ee0d4e4eb612d8b464c30b8
+2026-11-01T02:00:52.6156845Z ##[command]/usr/bin/docker ps --all --filter id=e81dbb43cf85a664574adfd803ece117c456d9e56ee0d4e4eb612d8b464c30b8 --filter status=running --no-trunc --format "{{.ID}} {{.Status}}"
+2026-11-01T02:00:52.6305255Z e81dbb43cf85a664574adfd803ece117c456d9e56ee0d4e4eb612d8b464c30b8 Up Less than a second (health: starting)
+2026-11-01T02:00:52.6326931Z ##[command]/usr/bin/docker port e81dbb43cf85a664574adfd803ece117c456d9e56ee0d4e4eb612d8b464c30b8
+2026-11-01T02:00:52.6441128Z 5432/tcp -> 0.0.0.0:5432
+2026-11-01T02:00:52.6442172Z 5432/tcp -> [::]:5432
+2026-11-01T02:00:52.6484582Z ##[endgroup]
+2026-11-01T02:00:52.6490178Z ##[group]Waiting for all services to be ready
+2026-11-01T02:00:52.6498825Z ##[command]/usr/bin/docker inspect --format="{{if .Config.Healthcheck}}{{print .State.Health.Status}}{{end}}" e81dbb43cf85a664574adfd803ece117c456d9e56ee0d4e4eb612d8b464c30b8
+2026-11-01T02:00:52.6611691Z starting
+2026-11-01T02:00:52.6630719Z postgres service is starting, waiting 2 seconds before checking again.
+2026-11-01T02:00:54.6616406Z ##[command]/usr/bin/docker inspect --format="{{if .Config.Healthcheck}}{{print .State.Health.Status}}{{end}}" e81dbb43cf85a664574adfd803ece117c456d9e56ee0d4e4eb612d8b464c30b8
+2026-11-01T02:00:54.6717519Z starting
+2026-11-01T02:00:54.6730123Z postgres service is starting, waiting 3 seconds before checking again.
+2026-11-01T02:00:58.3637036Z ##[command]/usr/bin/docker inspect --format="{{if .Config.Healthcheck}}{{print .State.Health.Status}}{{end}}" e81dbb43cf85a664574adfd803ece117c456d9e56ee0d4e4eb612d8b464c30b8
+2026-11-01T02:00:58.3744197Z healthy
+2026-11-01T02:00:58.3761960Z postgres service is healthy.
+2026-11-01T02:00:58.3762480Z ##[endgroup]
+2026-11-01T02:00:58.3932523Z ##[group]Run actions/checkout@v4
+2026-11-01T02:00:58.3932983Z with:
+2026-11-01T02:00:58.3933112Z   repository: qife422/ai-review-console
+2026-11-01T02:00:58.3934548Z   token: ***
+2026-11-01T02:00:58.3934661Z   ssh-strict: true
+2026-11-01T02:00:58.3934772Z   ssh-user: git
+2026-11-01T02:00:58.3934891Z   persist-credentials: true
+2026-11-01T02:00:58.3935019Z   clean: true
+2026-11-01T02:00:58.3935135Z   sparse-checkout-cone-mode: true
+2026-11-01T02:00:58.3935271Z   fetch-depth: 1
+2026-11-01T02:00:58.3935396Z   fetch-tags: false
+2026-11-01T02:00:58.3935508Z   show-progress: true
+2026-11-01T02:00:58.3935622Z   lfs: false
+2026-11-01T02:00:58.3935724Z   submodules: false
+2026-11-01T02:00:58.3935835Z   set-safe-directory: true
+2026-11-01T02:00:58.3935971Z   allow-unsafe-pr-checkout: false
+2026-11-01T02:00:58.3936181Z env:
+2026-11-01T02:00:58.3936490Z   ARC_TEST_POSTGRES_URL: ***127.0.0.1:5432/review_console
+2026-11-01T02:00:58.3936656Z ##[endgroup]
+2026-11-01T02:00:58.5760562Z Syncing repository: qife422/ai-review-console
+2026-11-01T02:00:58.5761741Z ##[group]Getting Git version info
+2026-11-01T02:00:58.5762100Z Working directory is '/home/runner/work/ai-review-console/ai-review-console'
+2026-11-01T02:00:58.5762596Z [command]/usr/bin/git version
+2026-11-01T02:00:58.5830978Z git version 2.56.0
+2026-11-01T02:00:58.5848803Z ##[endgroup]
+2026-11-01T02:00:58.5857285Z Temporarily overriding HOME='/home/runner/work/_temp/5fc603c7-2a07-494d-a7b6-8ddbe69ae483' before making global git config changes
+2026-11-01T02:00:58.5858300Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-01T02:00:58.5860877Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ai-review-console/ai-review-console
+2026-11-01T02:00:58.5915975Z Deleting the contents of '/home/runner/work/ai-review-console/ai-review-console'
+2026-11-01T02:00:58.5937423Z ##[group]Initializing the repository
+2026-11-01T02:00:58.5942558Z [command]/usr/bin/git init /home/runner/work/ai-review-console/ai-review-console
+2026-11-01T02:00:58.6029439Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-01T02:00:58.6029948Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-01T02:00:58.6030266Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-01T02:00:58.6030471Z hint: call:
+2026-11-01T02:00:58.6030608Z hint:
+2026-11-01T02:00:58.6030907Z hint: 	git config --global init.defaultBranch <name>
+2026-11-01T02:00:58.6031208Z hint:
+2026-11-01T02:00:58.6031452Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-01T02:00:58.6031865Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-01T02:00:58.6032174Z hint:
+2026-11-01T02:00:58.6032343Z hint: 	git branch -m <name>
+2026-11-01T02:00:58.6032533Z hint:
+2026-11-01T02:00:58.6033058Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-01T02:00:58.6043846Z Initialized empty Git repository in /home/runner/work/ai-review-console/ai-review-console/.git/
+2026-11-01T02:00:58.6045073Z [command]/usr/bin/git remote add origin https://github.com/qife422/ai-review-console
+2026-11-01T02:00:58.6088349Z ##[endgroup]
+2026-11-01T02:00:58.6088692Z ##[group]Disabling automatic garbage collection
+2026-11-01T02:00:58.6091831Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-01T02:00:58.6120690Z ##[endgroup]
+2026-11-01T02:00:58.6121002Z ##[group]Setting up auth
+2026-11-01T02:00:58.6126017Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-01T02:00:58.6156283Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-01T02:00:58.6469457Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-01T02:00:58.6507404Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-01T02:00:58.6699507Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:00:58.6737004Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-01T02:00:58.6925572Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-01T02:00:58.7011787Z ##[endgroup]
+2026-11-01T02:00:58.7012082Z ##[group]Fetching the repository
+2026-11-01T02:00:58.7020467Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +a64ab476c8acfaa36a3d6cc260a4c6c286bad380:refs/remotes/origin/main
+2026-11-01T02:00:59.7779290Z From https://github.com/qife422/ai-review-console
+2026-11-01T02:00:59.7779887Z  * [new ref]         a64ab476c8acfaa36a3d6cc260a4c6c286bad380 -> origin/main
+2026-11-01T02:00:59.7787562Z ##[endgroup]
+2026-11-01T02:00:59.7787784Z ##[group]Determining the checkout info
+2026-11-01T02:00:59.7788046Z ##[endgroup]
+2026-11-01T02:00:59.7790027Z [command]/usr/bin/git sparse-checkout disable
+2026-11-01T02:00:59.7840428Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-01T02:00:59.7874343Z ##[group]Checking out the ref
+2026-11-01T02:00:59.7877577Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-01T02:00:59.9211389Z Switched to a new branch 'main'
+2026-11-01T02:00:59.9213929Z branch 'main' set up to track 'origin/main'.
+2026-11-01T02:00:59.9230232Z ##[endgroup]
+2026-11-01T02:00:59.9274709Z [command]/usr/bin/git log -1 --format=%H
+2026-11-01T02:00:59.9303937Z a64ab476c8acfaa36a3d6cc260a4c6c286bad380
+2026-11-01T02:00:59.9489170Z ##[group]Run actions/setup-python@v5
+2026-11-01T02:00:59.9489325Z with:
+2026-11-01T02:00:59.9489434Z   python-version: 3.12
+2026-11-01T02:00:59.9489552Z   cache: pip
+2026-11-01T02:00:59.9489659Z   check-latest: false
+2026-11-01T02:00:59.9491014Z   token: ***
+2026-11-01T02:00:59.9491128Z   update-environment: true
+2026-11-01T02:00:59.9491260Z   allow-prereleases: false
+2026-11-01T02:00:59.9491382Z   freethreaded: false
+2026-11-01T02:00:59.9491492Z env:
+2026-11-01T02:00:59.9491793Z   ARC_TEST_POSTGRES_URL: ***127.0.0.1:5432/review_console
+2026-11-01T02:00:59.9491955Z ##[endgroup]
+2026-11-01T02:01:00.0354393Z ##[group]Installed versions
+2026-11-01T02:01:00.0408690Z (node:2515) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-01T02:01:00.0409194Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-01T02:01:00.0409470Z Successfully set up CPython (3.12.15)
+2026-11-01T02:01:00.0409890Z ##[endgroup]
+2026-11-01T02:01:00.1430519Z [command]/opt/hostedtoolcache/Python/3.12.15/x64/bin/pip cache dir
+2026-11-01T02:01:00.3343118Z /home/runner/.cache/pip
+2026-11-01T02:01:00.5116891Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-fffdd4551fa7f0b2b06bf3be717262e0dda0c70417893e48adc3fa9e4c2fc066
+2026-11-01T02:01:00.5181494Z (node:2515) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-01T02:01:01.7758050Z Received 82931742 of 82931742 (100.0%), 78.6 MBs/sec
+2026-11-01T02:01:01.7758436Z Cache Size: ~79 MB (82931742 B)
+2026-11-01T02:01:01.7781085Z [command]/usr/bin/tar -xf /home/runner/work/_temp/7689d2cd-ba2f-4ddb-9993-08eac53f84a1/cache.tzst -P -C /home/runner/work/ai-review-console/ai-review-console --use-compress-program unzstd
+2026-11-01T02:01:01.8979842Z Cache restored successfully
+2026-11-01T02:01:01.9020564Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-fffdd4551fa7f0b2b06bf3be717262e0dda0c70417893e48adc3fa9e4c2fc066
+2026-11-01T02:01:01.9226391Z ##[group]Run python -m pip install --upgrade pip
+2026-11-01T02:01:01.9226644Z [36;1mpython -m pip install --upgrade pip[0m
+2026-11-01T02:01:01.9247000Z shell: /usr/bin/bash -e {0}
+2026-11-01T02:01:01.9247142Z env:
+2026-11-01T02:01:01.9247520Z   ARC_TEST_POSTGRES_URL: ***127.0.0.1:5432/review_console
+2026-11-01T02:01:01.9247735Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:01.9247971Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-01T02:01:01.9248218Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:01.9248424Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:01.9248628Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:01.9248836Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-01T02:01:01.9249016Z ##[endgroup]
+2026-11-01T02:01:02.2859856Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (26.2.2)
+2026-11-01T02:01:02.4597721Z ##[group]Run pip install -r requirements.lock
+2026-11-01T02:01:02.4597938Z [36;1mpip install -r requirements.lock[0m
+2026-11-01T02:01:02.4614608Z shell: /usr/bin/bash -e {0}
+2026-11-01T02:01:02.4614742Z env:
+2026-11-01T02:01:02.4615106Z   ARC_TEST_POSTGRES_URL: ***127.0.0.1:5432/review_console
+2026-11-01T02:01:02.4615315Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:02.4615540Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-01T02:01:02.4615896Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:02.4616099Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:02.4616304Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:02.4616508Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-01T02:01:02.4616681Z ##[endgroup]
+2026-11-01T02:01:02.7658466Z Collecting annotated-doc==0.0.5 (from -r requirements.lock (line 7))
+2026-11-01T02:01:02.7668756Z   Using cached annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+2026-11-01T02:01:02.7863271Z Collecting annotated-types==0.8.0 (from -r requirements.lock (line 9))
+2026-11-01T02:01:02.7872438Z   Using cached annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+2026-11-01T02:01:02.8095465Z Collecting anyio==4.14.2 (from -r requirements.lock (line 11))
+2026-11-01T02:01:02.8105213Z   Using cached anyio-4.14.2-py3-none-any.whl.metadata (4.6 kB)
+2026-11-01T02:01:02.8323904Z Collecting certifi==2026.10.23 (from -r requirements.lock (line 16))
+2026-11-01T02:01:02.8333712Z   Using cached certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+2026-11-01T02:01:02.9228334Z Collecting charset-normalizer==3.5.1 (from -r requirements.lock (line 21))
+2026-11-01T02:01:02.9238155Z   Using cached charset_normalizer-3.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (45 kB)
+2026-11-01T02:01:02.9463144Z Collecting click==8.5.0 (from -r requirements.lock (line 23))
+2026-11-01T02:01:02.9470908Z   Using cached click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+2026-11-01T02:01:02.9787397Z Collecting fastapi==0.141.1 (from -r requirements.lock (line 25))
+2026-11-01T02:01:02.9796633Z   Using cached fastapi-0.141.1-py3-none-any.whl.metadata (27 kB)
+2026-11-01T02:01:03.0647077Z Collecting greenlet==3.5.5 (from -r requirements.lock (line 27))
+2026-11-01T02:01:03.0657182Z   Using cached greenlet-3.5.5-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+2026-11-01T02:01:03.0846295Z Collecting h11==0.16.0 (from -r requirements.lock (line 29))
+2026-11-01T02:01:03.0854845Z   Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-11-01T02:01:03.1063536Z Collecting httpcore==1.0.9 (from -r requirements.lock (line 33))
+2026-11-01T02:01:03.1073229Z   Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-11-01T02:01:03.1381842Z Collecting httptools==0.8.0 (from -r requirements.lock (line 35))
+2026-11-01T02:01:03.1391664Z   Using cached httptools-0.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (3.5 kB)
+2026-11-01T02:01:03.1602241Z Collecting httpx==0.28.1 (from -r requirements.lock (line 37))
+2026-11-01T02:01:03.1610716Z   Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2026-11-01T02:01:03.1814402Z Collecting idna==3.19 (from -r requirements.lock (line 39))
+2026-11-01T02:01:03.1822670Z   Using cached idna-3.19-py3-none-any.whl.metadata (9.2 kB)
+2026-11-01T02:01:03.3143113Z Collecting lxml==6.1.2 (from -r requirements.lock (line 43))
+2026-11-01T02:01:03.3152907Z   Using cached lxml-6.1.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.3 kB)
+2026-11-01T02:01:03.4139377Z Collecting pillow==13.0.0 (from -r requirements.lock (line 45))
+2026-11-01T02:01:03.4149444Z   Using cached pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+2026-11-01T02:01:03.4534373Z Collecting psycopg==3.3.5 (from -r requirements.lock (line 49))
+2026-11-01T02:01:03.4541753Z   Using cached psycopg-3.3.5-py3-none-any.whl.metadata (4.3 kB)
+2026-11-01T02:01:03.5544116Z Collecting psycopg-binary==3.3.5 (from -r requirements.lock (line 51))
+2026-11-01T02:01:03.5554265Z   Using cached psycopg_binary-3.3.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.7 kB)
+2026-11-01T02:01:03.6193077Z Collecting pydantic==2.13.5 (from -r requirements.lock (line 53))
+2026-11-01T02:01:03.6202631Z   Using cached pydantic-2.13.5-py3-none-any.whl.metadata (110 kB)
+2026-11-01T02:01:04.0194397Z Collecting pydantic-core==2.46.5 (from -r requirements.lock (line 57))
+2026-11-01T02:01:04.0204756Z   Using cached pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+2026-11-01T02:01:04.0430966Z Collecting pypdf==6.21.4 (from -r requirements.lock (line 59))
+2026-11-01T02:01:04.0438793Z   Using cached pypdf-6.21.4-py3-none-any.whl.metadata (7.6 kB)
+2026-11-01T02:01:04.0638387Z Collecting python-docx==1.2.0 (from -r requirements.lock (line 61))
+2026-11-01T02:01:04.0645865Z   Using cached python_docx-1.2.0-py3-none-any.whl.metadata (2.0 kB)
+2026-11-01T02:01:04.0839207Z Collecting python-dotenv==1.2.3 (from -r requirements.lock (line 63))
+2026-11-01T02:01:04.0846315Z   Using cached python_dotenv-1.2.3-py3-none-any.whl.metadata (29 kB)
+2026-11-01T02:01:04.1046603Z Collecting python-multipart==0.0.32 (from -r requirements.lock (line 65))
+2026-11-01T02:01:04.1053612Z   Using cached python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
+2026-11-01T02:01:04.1435199Z Collecting pyyaml==6.0.3 (from -r requirements.lock (line 67))
+2026-11-01T02:01:04.1445229Z   Using cached pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-11-01T02:01:04.2060022Z Collecting reportlab==4.5.1 (from -r requirements.lock (line 69))
+2026-11-01T02:01:04.2069548Z   Using cached reportlab-4.5.1-py3-none-any.whl.metadata (1.7 kB)
+2026-11-01T02:01:04.4084800Z Collecting sqlalchemy==2.0.52 (from -r requirements.lock (line 71))
+2026-11-01T02:01:04.4096174Z   Using cached sqlalchemy-2.0.52-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.6 kB)
+2026-11-01T02:01:04.4360191Z Collecting starlette==1.6.0 (from -r requirements.lock (line 73))
+2026-11-01T02:01:04.4368517Z   Using cached starlette-1.6.0-py3-none-any.whl.metadata (6.4 kB)
+2026-11-01T02:01:04.4571851Z Collecting typing-extensions==4.16.0 (from -r requirements.lock (line 75))
+2026-11-01T02:01:04.4579478Z   Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-11-01T02:01:04.4761675Z Collecting typing-inspection==0.4.4 (from -r requirements.lock (line 86))
+2026-11-01T02:01:04.4768932Z   Using cached typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+2026-11-01T02:01:04.5003044Z Collecting uvicorn==0.52.4 (from -r requirements.lock (line 90))
+2026-11-01T02:01:04.5010409Z   Using cached uvicorn-0.52.4-py3-none-any.whl.metadata (6.6 kB)
+2026-11-01T02:01:04.5334860Z Collecting uvloop==0.22.1 (from -r requirements.lock (line 92))
+2026-11-01T02:01:04.5342590Z   Using cached uvloop-0.22.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.9 kB)
+2026-11-01T02:01:04.6230784Z Collecting watchfiles==1.2.0 (from -r requirements.lock (line 94))
+2026-11-01T02:01:04.6240570Z   Using cached watchfiles-1.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+2026-11-01T02:01:04.7179950Z Collecting websockets==17.1 (from -r requirements.lock (line 96))
+2026-11-01T02:01:04.7190427Z   Using cached websockets-17.1-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.3 kB)
+2026-11-01T02:01:04.7375232Z Using cached annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+2026-11-01T02:01:04.7381973Z Using cached annotated_types-0.8.0-py3-none-any.whl (13 kB)
+2026-11-01T02:01:04.7388927Z Using cached anyio-4.14.2-py3-none-any.whl (125 kB)
+2026-11-01T02:01:04.7396599Z Using cached certifi-2026.10.23-py3-none-any.whl (135 kB)
+2026-11-01T02:01:04.7403866Z Using cached charset_normalizer-3.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (248 kB)
+2026-11-01T02:01:04.7413464Z Using cached click-8.5.0-py3-none-any.whl (125 kB)
+2026-11-01T02:01:04.7417847Z Using cached fastapi-0.141.1-py3-none-any.whl (131 kB)
+2026-11-01T02:01:04.7424945Z Using cached greenlet-3.5.5-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (621 kB)
+2026-11-01T02:01:04.7433092Z Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+2026-11-01T02:01:04.7439480Z Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-11-01T02:01:04.7446071Z Using cached httptools-0.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (523 kB)
+2026-11-01T02:01:04.7453818Z Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+2026-11-01T02:01:04.7460274Z Using cached idna-3.19-py3-none-any.whl (68 kB)
+2026-11-01T02:01:04.7467077Z Using cached lxml-6.1.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
+2026-11-01T02:01:04.7487141Z Using cached pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+2026-11-01T02:01:04.7511740Z Using cached psycopg-3.3.5-py3-none-any.whl (213 kB)
+2026-11-01T02:01:04.7518709Z Using cached psycopg_binary-3.3.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.2 MB)
+2026-11-01T02:01:04.7538247Z Using cached pydantic-2.13.5-py3-none-any.whl (472 kB)
+2026-11-01T02:01:04.7545989Z Using cached pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-11-01T02:01:04.7557610Z Using cached pypdf-6.21.4-py3-none-any.whl (410 kB)
+2026-11-01T02:01:04.7564987Z Using cached python_docx-1.2.0-py3-none-any.whl (252 kB)
+2026-11-01T02:01:04.7571843Z Using cached python_dotenv-1.2.3-py3-none-any.whl (22 kB)
+2026-11-01T02:01:04.7578345Z Using cached python_multipart-0.0.32-py3-none-any.whl (30 kB)
+2026-11-01T02:01:04.7585159Z Using cached pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+2026-11-01T02:01:04.7593201Z Using cached reportlab-4.5.1-py3-none-any.whl (2.0 MB)
+2026-11-01T02:01:04.7604483Z Using cached sqlalchemy-2.0.52-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.4 MB)
+2026-11-01T02:01:04.7618691Z Using cached starlette-1.6.0-py3-none-any.whl (75 kB)
+2026-11-01T02:01:04.7625394Z Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-11-01T02:01:04.7631665Z Using cached typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+2026-11-01T02:01:04.7637956Z Using cached uvicorn-0.52.4-py3-none-any.whl (79 kB)
+2026-11-01T02:01:04.7644787Z Using cached uvloop-0.22.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.4 MB)
+2026-11-01T02:01:04.7661430Z Using cached watchfiles-1.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (456 kB)
+2026-11-01T02:01:04.7669001Z Using cached websockets-17.1-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (224 kB)
+2026-11-01T02:01:04.8679730Z Installing collected packages: websockets, uvloop, typing-extensions, pyyaml, python-multipart, python-dotenv, pypdf, psycopg-binary, pillow, lxml, idna, httptools, h11, greenlet, click, charset-normalizer, certifi, annotated-types, annotated-doc, uvicorn, typing-inspection, sqlalchemy, reportlab, python-docx, pydantic-core, psycopg, httpcore, anyio, watchfiles, starlette, pydantic, httpx, fastapi
+2026-11-01T02:01:07.5807563Z 
+2026-11-01T02:01:07.5835838Z Successfully installed annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.14.2 certifi-2026.10.23 charset-normalizer-3.5.1 click-8.5.0 fastapi-0.141.1 greenlet-3.5.5 h11-0.16.0 httpcore-1.0.9 httptools-0.8.0 httpx-0.28.1 idna-3.19 lxml-6.1.2 pillow-13.0.0 psycopg-3.3.5 psycopg-binary-3.3.5 pydantic-2.13.5 pydantic-core-2.46.5 pypdf-6.21.4 python-docx-1.2.0 python-dotenv-1.2.3 python-multipart-0.0.32 pyyaml-6.0.3 reportlab-4.5.1 sqlalchemy-2.0.52 starlette-1.6.0 typing-extensions-4.16.0 typing-inspection-0.4.4 uvicorn-0.52.4 uvloop-0.22.1 watchfiles-1.2.0 websockets-17.1
+2026-11-01T02:01:07.7420621Z ##[group]Run pip install -e '.[dev]'
+2026-11-01T02:01:07.7420923Z [36;1mpip install -e '.[dev]'[0m
+2026-11-01T02:01:07.7438352Z shell: /usr/bin/bash -e {0}
+2026-11-01T02:01:07.7438494Z env:
+2026-11-01T02:01:07.7438878Z   ARC_TEST_POSTGRES_URL: ***127.0.0.1:5432/review_console
+2026-11-01T02:01:07.7439093Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:07.7439324Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-01T02:01:07.7439695Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:07.7439902Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:07.7440107Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:07.7440314Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-01T02:01:07.7440489Z ##[endgroup]
+2026-11-01T02:01:07.9464878Z Obtaining file:///home/runner/work/ai-review-console/ai-review-console
+2026-11-01T02:01:07.9481714Z   Installing build dependencies: started
+2026-11-01T02:01:08.4328292Z   Installing build dependencies: finished with status 'done'
+2026-11-01T02:01:08.4333164Z   Checking if build backend supports build_editable: started
+2026-11-01T02:01:08.4698911Z   Checking if build backend supports build_editable: finished with status 'done'
+2026-11-01T02:01:08.4704172Z   Getting requirements to build editable: started
+2026-11-01T02:01:08.5689028Z   Getting requirements to build editable: finished with status 'done'
+2026-11-01T02:01:08.5697639Z   Installing backend dependencies: started
+2026-11-01T02:01:08.8956576Z   Installing backend dependencies: finished with status 'done'
+2026-11-01T02:01:08.8961414Z   Preparing editable metadata (pyproject.toml): started
+2026-11-01T02:01:09.0144634Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+2026-11-01T02:01:09.0180572Z Requirement already satisfied: certifi>=2026.10.23 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from ai-review-console==0.2.0) (2026.10.23)
+2026-11-01T02:01:09.0183959Z Requirement already satisfied: fastapi<1,>=0.116 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from ai-review-console==0.2.0) (0.141.1)
+2026-11-01T02:01:09.0186991Z Requirement already satisfied: greenlet<4,>=3.5.5 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from ai-review-console==0.2.0) (3.5.5)
+2026-11-01T02:01:09.0189817Z Requirement already satisfied: httpx<1,>=0.28 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from ai-review-console==0.2.0) (0.28.1)
+2026-11-01T02:01:09.0192607Z Requirement already satisfied: pillow<14,>=13 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from ai-review-console==0.2.0) (13.0.0)
+2026-11-01T02:01:09.0197795Z Requirement already satisfied: psycopg<4,>=3.2 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from psycopg[binary]<4,>=3.2->ai-review-console==0.2.0) (3.3.5)
+2026-11-01T02:01:09.0201115Z Requirement already satisfied: pydantic<3,>=2.11 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from ai-review-console==0.2.0) (2.13.5)
+2026-11-01T02:01:09.0204081Z Requirement already satisfied: pypdf<7,>=6.21.4 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from ai-review-console==0.2.0) (6.21.4)
+2026-11-01T02:01:09.0206815Z Requirement already satisfied: python-docx<2,>=1.2 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from ai-review-console==0.2.0) (1.2.0)
+2026-11-01T02:01:09.0209455Z Requirement already satisfied: python-multipart<1,>=0.0.20 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from ai-review-console==0.2.0) (0.0.32)
+2026-11-01T02:01:09.0212590Z Requirement already satisfied: reportlab<5,>=4.4 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from ai-review-console==0.2.0) (4.5.1)
+2026-11-01T02:01:09.0215817Z Requirement already satisfied: sqlalchemy<3,>=2.0.43 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from ai-review-console==0.2.0) (2.0.52)
+2026-11-01T02:01:09.0219132Z Requirement already satisfied: uvicorn<1,>=0.35 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from uvicorn[standard]<1,>=0.35->ai-review-console==0.2.0) (0.52.4)
+2026-11-01T02:01:09.1561908Z Collecting mypy<2,>=1.17 (from ai-review-console==0.2.0)
+2026-11-01T02:01:09.1572481Z   Using cached mypy-1.20.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-11-01T02:01:09.1794468Z Collecting pip-audit<3,>=2.10 (from ai-review-console==0.2.0)
+2026-11-01T02:01:09.1801400Z   Using cached pip_audit-2.10.1-py3-none-any.whl.metadata (28 kB)
+2026-11-01T02:01:09.2250305Z Collecting pip-tools<8,>=7.6 (from ai-review-console==0.2.0)
+2026-11-01T02:01:09.2257764Z   Using cached pip_tools-7.6.2-py3-none-any.whl.metadata (25 kB)
+2026-11-01T02:01:09.2460046Z Collecting pytest-cov<7,>=6.2 (from ai-review-console==0.2.0)
+2026-11-01T02:01:09.2467244Z   Using cached pytest_cov-6.3.0-py3-none-any.whl.metadata (30 kB)
+2026-11-01T02:01:09.2719195Z Collecting pytest<9,>=8.4 (from ai-review-console==0.2.0)
+2026-11-01T02:01:09.2726652Z   Using cached pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+2026-11-01T02:01:09.4505881Z Collecting ruff<1,>=0.12 (from ai-review-console==0.2.0)
+2026-11-01T02:01:09.4516697Z   Using cached ruff-0.17.3-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+2026-11-01T02:01:09.4541390Z Requirement already satisfied: starlette>=0.46.0 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from fastapi<1,>=0.116->ai-review-console==0.2.0) (1.6.0)
+2026-11-01T02:01:09.4545831Z Requirement already satisfied: typing-extensions>=4.8.0 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from fastapi<1,>=0.116->ai-review-console==0.2.0) (4.16.0)
+2026-11-01T02:01:09.4548278Z Requirement already satisfied: typing-inspection>=0.4.2 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from fastapi<1,>=0.116->ai-review-console==0.2.0) (0.4.4)
+2026-11-01T02:01:09.4550549Z Requirement already satisfied: annotated-doc>=0.0.2 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from fastapi<1,>=0.116->ai-review-console==0.2.0) (0.0.5)
+2026-11-01T02:01:09.4568837Z Requirement already satisfied: anyio in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from httpx<1,>=0.28->ai-review-console==0.2.0) (4.14.2)
+2026-11-01T02:01:09.4571796Z Requirement already satisfied: httpcore==1.* in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from httpx<1,>=0.28->ai-review-console==0.2.0) (1.0.9)
+2026-11-01T02:01:09.4574026Z Requirement already satisfied: idna in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from httpx<1,>=0.28->ai-review-console==0.2.0) (3.19)
+2026-11-01T02:01:09.4584568Z Requirement already satisfied: h11>=0.16 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from httpcore==1.*->httpx<1,>=0.28->ai-review-console==0.2.0) (0.16.0)
+2026-11-01T02:01:09.4767504Z Collecting mypy_extensions>=1.0.0 (from mypy<2,>=1.17->ai-review-console==0.2.0)
+2026-11-01T02:01:09.4778045Z   Using cached mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+2026-11-01T02:01:09.4811352Z Collecting pathspec>=1.0.0 (from mypy<2,>=1.17->ai-review-console==0.2.0)
+2026-11-01T02:01:09.4819037Z   Using cached pathspec-1.1.1-py3-none-any.whl.metadata (14 kB)
+2026-11-01T02:01:09.5608647Z Collecting librt>=0.8.0 (from mypy<2,>=1.17->ai-review-console==0.2.0)
+2026-11-01T02:01:09.5619097Z   Using cached librt-0.16.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (1.3 kB)
+2026-11-01T02:01:09.5831016Z Collecting CacheControl>=0.13.0 (from CacheControl[filecache]>=0.13.0->pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:09.5839303Z   Using cached cachecontrol-0.14.4-py3-none-any.whl.metadata (3.1 kB)
+2026-11-01T02:01:09.6120986Z Collecting cyclonedx-python-lib<12,>=5 (from pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:09.6129128Z   Using cached cyclonedx_python_lib-11.12.0-py3-none-any.whl.metadata (6.9 kB)
+2026-11-01T02:01:09.6177316Z Collecting packaging>=23.0.0 (from pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:09.6184618Z   Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-11-01T02:01:09.6370101Z Collecting pip-api>=0.0.28 (from pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:09.6377194Z   Using cached pip_api-0.0.35-py3-none-any.whl.metadata (17 kB)
+2026-11-01T02:01:09.6561809Z Collecting pip-requirements-parser>=32.0.0 (from pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:09.6568760Z   Using cached pip_requirements_parser-32.0.1-py3-none-any.whl.metadata (9.3 kB)
+2026-11-01T02:01:09.6796007Z Collecting requests>=2.31.0 (from pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:09.6802932Z   Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+2026-11-01T02:01:09.7064407Z Collecting rich>=12.4 (from pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:09.7071289Z   Using cached rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+2026-11-01T02:01:09.7323473Z Collecting tomli>=2.2.1 (from pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:09.7330449Z   Using cached tomli-2.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+2026-11-01T02:01:09.7507877Z Collecting tomli-w>=1.2.0 (from pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:09.7514582Z   Using cached tomli_w-1.2.0-py3-none-any.whl.metadata (5.7 kB)
+2026-11-01T02:01:09.7730723Z Collecting platformdirs>=4.2.0 (from pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:09.7737774Z   Using cached platformdirs-4.14.2-py3-none-any.whl.metadata (5.4 kB)
+2026-11-01T02:01:09.7935311Z Collecting license-expression<31,>=30 (from cyclonedx-python-lib<12,>=5->pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:09.7941946Z   Using cached license_expression-30.4.4-py3-none-any.whl.metadata (11 kB)
+2026-11-01T02:01:09.8303946Z Collecting packageurl-python<2,>=0.11 (from cyclonedx-python-lib<12,>=5->pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:09.8310771Z   Using cached packageurl_python-0.17.6-py3-none-any.whl.metadata (5.1 kB)
+2026-11-01T02:01:09.8525504Z Collecting py-serializable<3.0.0,>=2.1.0 (from cyclonedx-python-lib<12,>=5->pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:09.8532210Z   Using cached py_serializable-2.1.0-py3-none-any.whl.metadata (4.3 kB)
+2026-11-01T02:01:09.8713874Z Collecting sortedcontainers<3.0.0,>=2.4.0 (from cyclonedx-python-lib<12,>=5->pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:09.8720404Z   Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+2026-11-01T02:01:09.8922433Z Collecting boolean.py>=4.0 (from license-expression<31,>=30->cyclonedx-python-lib<12,>=5->pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:09.8929194Z   Using cached boolean_py-5.0-py3-none-any.whl.metadata (2.3 kB)
+2026-11-01T02:01:09.9147275Z Collecting build>=1.0.0 (from pip-tools<8,>=7.6->ai-review-console==0.2.0)
+2026-11-01T02:01:09.9157241Z   Using cached build-1.6.1-py3-none-any.whl.metadata (5.6 kB)
+2026-11-01T02:01:09.9177619Z Requirement already satisfied: click>=8 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from pip-tools<8,>=7.6->ai-review-console==0.2.0) (8.5.0)
+2026-11-01T02:01:09.9181041Z Requirement already satisfied: pip>=22.2 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from pip-tools<8,>=7.6->ai-review-console==0.2.0) (26.2.2)
+2026-11-01T02:01:09.9351085Z Collecting pyproject_hooks (from pip-tools<8,>=7.6->ai-review-console==0.2.0)
+2026-11-01T02:01:09.9358269Z   Using cached pyproject_hooks-1.3.3-py3-none-any.whl.metadata (1.3 kB)
+2026-11-01T02:01:09.9925820Z Collecting setuptools (from pip-tools<8,>=7.6->ai-review-console==0.2.0)
+2026-11-01T02:01:09.9933658Z   Using cached setuptools-84.2.1-py3-none-any.whl.metadata (6.6 kB)
+2026-11-01T02:01:10.0170096Z Collecting wheel (from pip-tools<8,>=7.6->ai-review-console==0.2.0)
+2026-11-01T02:01:10.0177860Z   Using cached wheel-0.48.0-py3-none-any.whl.metadata (2.3 kB)
+2026-11-01T02:01:10.0208713Z Requirement already satisfied: psycopg-binary==3.3.5 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from psycopg[binary]<4,>=3.2->ai-review-console==0.2.0) (3.3.5)
+2026-11-01T02:01:10.0442879Z Collecting defusedxml<0.8.0,>=0.7.1 (from py-serializable<3.0.0,>=2.1.0->cyclonedx-python-lib<12,>=5->pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:10.0449901Z   Using cached defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+2026-11-01T02:01:10.0481643Z Requirement already satisfied: annotated-types>=0.6.0 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from pydantic<3,>=2.11->ai-review-console==0.2.0) (0.8.0)
+2026-11-01T02:01:10.0484824Z Requirement already satisfied: pydantic-core==2.46.5 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from pydantic<3,>=2.11->ai-review-console==0.2.0) (2.46.5)
+2026-11-01T02:01:10.0674183Z Collecting iniconfig>=1 (from pytest<9,>=8.4->ai-review-console==0.2.0)
+2026-11-01T02:01:10.0681238Z   Using cached iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+2026-11-01T02:01:10.0717088Z Collecting pluggy<2,>=1.5 (from pytest<9,>=8.4->ai-review-console==0.2.0)
+2026-11-01T02:01:10.0724375Z   Using cached pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+2026-11-01T02:01:10.0931706Z Collecting pygments>=2.7.2 (from pytest<9,>=8.4->ai-review-console==0.2.0)
+2026-11-01T02:01:10.0939116Z   Using cached pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-11-01T02:01:10.3099127Z Collecting coverage>=7.5 (from coverage[toml]>=7.5->pytest-cov<7,>=6.2->ai-review-console==0.2.0)
+2026-11-01T02:01:10.3109991Z   Using cached coverage-7.17.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.1 kB)
+2026-11-01T02:01:10.3137160Z Requirement already satisfied: lxml>=3.1.0 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from python-docx<2,>=1.2->ai-review-console==0.2.0) (6.1.2)
+2026-11-01T02:01:10.3151658Z Requirement already satisfied: charset-normalizer in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from reportlab<5,>=4.4->ai-review-console==0.2.0) (3.5.1)
+2026-11-01T02:01:10.3202193Z Requirement already satisfied: httptools>=0.8.0 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from uvicorn[standard]<1,>=0.35->ai-review-console==0.2.0) (0.8.0)
+2026-11-01T02:01:10.3206782Z Requirement already satisfied: python-dotenv>=0.13 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from uvicorn[standard]<1,>=0.35->ai-review-console==0.2.0) (1.2.3)
+2026-11-01T02:01:10.3210509Z Requirement already satisfied: pyyaml>=5.1 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from uvicorn[standard]<1,>=0.35->ai-review-console==0.2.0) (6.0.3)
+2026-11-01T02:01:10.3215279Z Requirement already satisfied: uvloop>=0.15.1 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from uvicorn[standard]<1,>=0.35->ai-review-console==0.2.0) (0.22.1)
+2026-11-01T02:01:10.3218782Z Requirement already satisfied: watchfiles>=0.20 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from uvicorn[standard]<1,>=0.35->ai-review-console==0.2.0) (1.2.0)
+2026-11-01T02:01:10.3222163Z Requirement already satisfied: websockets>=13.0 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from uvicorn[standard]<1,>=0.35->ai-review-console==0.2.0) (17.1)
+2026-11-01T02:01:10.4189428Z Collecting msgpack<2.0.0,>=0.5.2 (from CacheControl>=0.13.0->CacheControl[filecache]>=0.13.0->pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:10.4200157Z   Using cached msgpack-1.2.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+2026-11-01T02:01:10.4460069Z Collecting filelock>=3.8.0 (from CacheControl[filecache]>=0.13.0->pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:10.4468356Z   Using cached filelock-4.2.6-py3-none-any.whl.metadata (2.0 kB)
+2026-11-01T02:01:10.4787061Z Collecting pyparsing (from pip-requirements-parser>=32.0.0->pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:10.4794576Z   Using cached pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+2026-11-01T02:01:10.5045681Z Collecting urllib3<3,>=1.26 (from requests>=2.31.0->pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:10.5052952Z   Using cached urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+2026-11-01T02:01:10.5272704Z Collecting markdown-it-py>=2.2.0 (from rich>=12.4->pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:10.5279929Z   Using cached markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+2026-11-01T02:01:10.5477136Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=12.4->pip-audit<3,>=2.10->ai-review-console==0.2.0)
+2026-11-01T02:01:10.5484100Z   Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-11-01T02:01:10.5590278Z Using cached mypy-1.20.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (14.7 MB)
+2026-11-01T02:01:10.5634453Z Using cached pip_audit-2.10.1-py3-none-any.whl (62 kB)
+2026-11-01T02:01:10.5641141Z Using cached cyclonedx_python_lib-11.12.0-py3-none-any.whl (529 kB)
+2026-11-01T02:01:10.5649031Z Using cached license_expression-30.4.4-py3-none-any.whl (120 kB)
+2026-11-01T02:01:10.5655904Z Using cached packageurl_python-0.17.6-py3-none-any.whl (36 kB)
+2026-11-01T02:01:10.5662251Z Using cached pip_tools-7.6.2-py3-none-any.whl (76 kB)
+2026-11-01T02:01:10.5668851Z Using cached py_serializable-2.1.0-py3-none-any.whl (23 kB)
+2026-11-01T02:01:10.5675426Z Using cached defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+2026-11-01T02:01:10.5681682Z Using cached pytest-8.4.2-py3-none-any.whl (365 kB)
+2026-11-01T02:01:10.5688950Z Using cached pluggy-1.7.0-py3-none-any.whl (27 kB)
+2026-11-01T02:01:10.5695282Z Using cached pytest_cov-6.3.0-py3-none-any.whl (25 kB)
+2026-11-01T02:01:10.5701562Z Using cached ruff-0.17.3-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.6 MB)
+2026-11-01T02:01:10.5732389Z Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+2026-11-01T02:01:10.5738600Z Using cached boolean_py-5.0-py3-none-any.whl (26 kB)
+2026-11-01T02:01:10.5745007Z Using cached build-1.6.1-py3-none-any.whl (31 kB)
+2026-11-01T02:01:10.5751101Z Using cached cachecontrol-0.14.4-py3-none-any.whl (22 kB)
+2026-11-01T02:01:10.5757742Z Using cached msgpack-1.2.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (475 kB)
+2026-11-01T02:01:10.5765234Z Using cached coverage-7.17.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (261 kB)
+2026-11-01T02:01:10.5771796Z Using cached filelock-4.2.6-py3-none-any.whl (164 kB)
+2026-11-01T02:01:10.5778302Z Using cached iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+2026-11-01T02:01:10.5784834Z Using cached librt-0.16.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (531 kB)
+2026-11-01T02:01:10.5791908Z Using cached mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+2026-11-01T02:01:10.5797969Z Using cached packaging-26.3-py3-none-any.whl (129 kB)
+2026-11-01T02:01:10.5804366Z Using cached pathspec-1.1.1-py3-none-any.whl (57 kB)
+2026-11-01T02:01:10.5810435Z Using cached pip_api-0.0.35-py3-none-any.whl (123 kB)
+2026-11-01T02:01:10.5817037Z Using cached pip_requirements_parser-32.0.1-py3-none-any.whl (35 kB)
+2026-11-01T02:01:10.5823141Z Using cached platformdirs-4.14.2-py3-none-any.whl (35 kB)
+2026-11-01T02:01:10.5829196Z Using cached pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-11-01T02:01:10.5838198Z Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+2026-11-01T02:01:10.5844510Z Using cached urllib3-2.8.0-py3-none-any.whl (135 kB)
+2026-11-01T02:01:10.5850928Z Using cached rich-15.0.0-py3-none-any.whl (310 kB)
+2026-11-01T02:01:10.5857677Z Using cached markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+2026-11-01T02:01:10.5863949Z Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-11-01T02:01:10.5870296Z Using cached tomli-2.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (286 kB)
+2026-11-01T02:01:10.5877271Z Using cached tomli_w-1.2.0-py3-none-any.whl (6.7 kB)
+2026-11-01T02:01:10.5883423Z Using cached pyparsing-3.3.3-py3-none-any.whl (126 kB)
+2026-11-01T02:01:10.5889915Z Using cached pyproject_hooks-1.3.3-py3-none-any.whl (10 kB)
+2026-11-01T02:01:10.5896164Z Using cached setuptools-84.2.1-py3-none-any.whl (876 kB)
+2026-11-01T02:01:10.5904342Z Using cached wheel-0.48.0-py3-none-any.whl (33 kB)
+2026-11-01T02:01:10.6580838Z Building wheels for collected packages: ai-review-console
+2026-11-01T02:01:10.6586979Z   Building editable for ai-review-console (pyproject.toml): started
+2026-11-01T02:01:10.6827243Z   Building editable for ai-review-console (pyproject.toml): finished with status 'done'
+2026-11-01T02:01:10.6830433Z   Created wheel for ai-review-console: filename=ai_review_console-0.2.0-py3-none-any.whl size=11746 sha256=90775a037e00186d9cf323b33bfea413294acf909e7d9a0d8fa29ab2e754c1dd
+2026-11-01T02:01:10.6831468Z   Stored in directory: /tmp/pip-ephem-wheel-cache-j2n2x6nl/wheels/57/9f/c7/99bf632b98bea1abdaf55b0e54c4acf9ff282c963fa7ecbcf0
+2026-11-01T02:01:10.6843431Z Successfully built ai-review-console
+2026-11-01T02:01:10.7328495Z Installing collected packages: sortedcontainers, boolean.py, urllib3, tomli-w, tomli, setuptools, ruff, pyproject_hooks, pyparsing, pygments, pluggy, platformdirs, pip-api, pathspec, packaging, packageurl-python, mypy_extensions, msgpack, mdurl, license-expression, librt, iniconfig, filelock, defusedxml, coverage, wheel, requests, pytest, py-serializable, pip-requirements-parser, mypy, markdown-it-py, build, rich, pytest-cov, pip-tools, cyclonedx-python-lib, CacheControl, ai-review-console, pip-audit
+2026-11-01T02:01:14.1942004Z 
+2026-11-01T02:01:14.1973531Z Successfully installed CacheControl-0.14.4 ai-review-console-0.2.0 boolean.py-5.0 build-1.6.1 coverage-7.17.0 cyclonedx-python-lib-11.12.0 defusedxml-0.7.1 filelock-4.2.6 iniconfig-2.3.1 librt-0.16.0 license-expression-30.4.4 markdown-it-py-4.2.0 mdurl-0.1.2 msgpack-1.2.4 mypy-1.20.2 mypy_extensions-1.1.0 packageurl-python-0.17.6 packaging-26.3 pathspec-1.1.1 pip-api-0.0.35 pip-audit-2.10.1 pip-requirements-parser-32.0.1 pip-tools-7.6.2 platformdirs-4.14.2 pluggy-1.7.0 py-serializable-2.1.0 pygments-2.21.0 pyparsing-3.3.3 pyproject_hooks-1.3.3 pytest-8.4.2 pytest-cov-6.3.0 requests-2.34.2 rich-15.0.0 ruff-0.17.3 setuptools-84.2.1 sortedcontainers-2.4.0 tomli-2.5.0 tomli-w-1.2.0 urllib3-2.8.0 wheel-0.48.0
+2026-11-01T02:01:14.3405958Z ##[group]Run ruff check .
+2026-11-01T02:01:14.3406122Z [36;1mruff check .[0m
+2026-11-01T02:01:14.3422429Z shell: /usr/bin/bash -e {0}
+2026-11-01T02:01:14.3422584Z env:
+2026-11-01T02:01:14.3423217Z   ARC_TEST_POSTGRES_URL: ***127.0.0.1:5432/review_console
+2026-11-01T02:01:14.3423431Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:14.3423661Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-01T02:01:14.3423889Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:14.3424096Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:14.3424308Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:14.3424542Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-01T02:01:14.3424721Z ##[endgroup]
+2026-11-01T02:01:14.3627815Z All checks passed!
+2026-11-01T02:01:14.3671815Z ##[group]Run pytest --junitxml="$RUNNER_TEMP/arc-unit.xml"
+2026-11-01T02:01:14.3672174Z [36;1mpytest --junitxml="$RUNNER_TEMP/arc-unit.xml"[0m
+2026-11-01T02:01:14.3688862Z shell: /usr/bin/bash -e {0}
+2026-11-01T02:01:14.3689077Z env:
+2026-11-01T02:01:14.3689792Z   ARC_TEST_POSTGRES_URL: ***127.0.0.1:5432/review_console
+2026-11-01T02:01:14.3690091Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:14.3690414Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-01T02:01:14.3690761Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:14.3691047Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:14.3691385Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:14.3691875Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-01T02:01:14.3692119Z ##[endgroup]
+2026-11-01T02:01:16.5412286Z ........................................................................ [ 44%]
+2026-11-01T02:01:18.0994641Z ........................................................................ [ 89%]
+2026-11-01T02:01:18.8404155Z .................                                                        [100%]
+2026-11-01T02:01:18.8404515Z =============================== warnings summary ===============================
+2026-11-01T02:01:18.8404827Z ../../../../../opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/fastapi/testclient.py:1
+2026-11-01T02:01:18.8405382Z   /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+2026-11-01T02:01:18.8405871Z     from starlette.testclient import TestClient as TestClient  # noqa
+2026-11-01T02:01:18.8406063Z 
+2026-11-01T02:01:18.8406199Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-11-01T02:01:18.8406480Z ----------- generated xml file: /home/runner/work/_temp/arc-unit.xml -----------
+2026-11-01T02:01:18.8406691Z 161 passed, 1 warning in 3.48s
+2026-11-01T02:01:19.1628668Z ##[group]Run if git grep -nIE -- \
+2026-11-01T02:01:19.1628893Z [36;1mif git grep -nIE -- \[0m
+2026-11-01T02:01:19.1629104Z [36;1m  '-----BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY|sk-[A-Za-z0-9]{20,}' .; then[0m
+2026-11-01T02:01:19.1629305Z [36;1m  exit 1[0m
+2026-11-01T02:01:19.1629414Z [36;1mfi[0m
+2026-11-01T02:01:19.1646216Z shell: /usr/bin/bash -e {0}
+2026-11-01T02:01:19.1646358Z env:
+2026-11-01T02:01:19.1646767Z   ARC_TEST_POSTGRES_URL: ***127.0.0.1:5432/review_console
+2026-11-01T02:01:19.1646975Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:19.1647204Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-01T02:01:19.1647446Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:19.1647647Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:19.1647850Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:19.1648095Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-01T02:01:19.1648274Z ##[endgroup]
+2026-11-01T02:01:19.3561787Z ##[group]Run actions/setup-node@v4
+2026-11-01T02:01:19.3561953Z with:
+2026-11-01T02:01:19.3562063Z   node-version: 22
+2026-11-01T02:01:19.3562177Z   cache: npm
+2026-11-01T02:01:19.3562316Z   cache-dependency-path: frontend/package-lock.json
+2026-11-01T02:01:19.3562496Z   always-auth: false
+2026-11-01T02:01:19.3562618Z   check-latest: false
+2026-11-01T02:01:19.3564188Z   token: ***
+2026-11-01T02:01:19.3564300Z env:
+2026-11-01T02:01:19.3564561Z   ARC_TEST_POSTGRES_URL: ***127.0.0.1:5432/review_console
+2026-11-01T02:01:19.3564773Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:19.3565002Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-01T02:01:19.3565251Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:19.3565461Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:19.3565670Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:19.3565909Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-01T02:01:19.3566089Z ##[endgroup]
+2026-11-01T02:01:19.4467094Z Found in cache @ /opt/hostedtoolcache/node/22.23.4/x64
+2026-11-01T02:01:19.4468895Z (node:2892) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-01T02:01:19.4469307Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-01T02:01:19.4470841Z ##[group]Environment details
+2026-11-01T02:01:19.7238030Z node: v22.23.4
+2026-11-01T02:01:19.7238304Z npm: 10.9.9
+2026-11-01T02:01:19.7238467Z yarn: 1.22.22
+2026-11-01T02:01:19.7239543Z ##[endgroup]
+2026-11-01T02:01:19.7252017Z [command]/opt/hostedtoolcache/node/22.23.4/x64/bin/npm config get cache
+2026-11-01T02:01:19.7941812Z /home/runner/.npm
+2026-11-01T02:01:19.9474899Z Cache hit for: node-cache-Linux-x64-npm-60a48de3332760468a477c12ae08846c2f2e3d5e01489a8137eeb5b7e8c07e43
+2026-11-01T02:01:19.9536378Z (node:2892) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-01T02:01:21.1221445Z Received 134217728 of 252492926 (53.2%), 128.0 MBs/sec
+2026-11-01T02:01:21.5453456Z Received 252492926 of 252492926 (100.0%), 169.1 MBs/sec
+2026-11-01T02:01:21.5454087Z Cache Size: ~241 MB (252492926 B)
+2026-11-01T02:01:21.5500989Z [command]/usr/bin/tar -xf /home/runner/work/_temp/ba49bd62-db83-4f52-b6a2-b07e297b2e2e/cache.tzst -P -C /home/runner/work/ai-review-console/ai-review-console --use-compress-program unzstd
+2026-11-01T02:01:21.8489947Z Cache restored successfully
+2026-11-01T02:01:21.8597286Z Cache restored from key: node-cache-Linux-x64-npm-60a48de3332760468a477c12ae08846c2f2e3d5e01489a8137eeb5b7e8c07e43
+2026-11-01T02:01:21.8845768Z ##[group]Run npm ci
+2026-11-01T02:01:21.8845918Z [36;1mnpm ci[0m
+2026-11-01T02:01:21.8865861Z shell: /usr/bin/bash -e {0}
+2026-11-01T02:01:21.8865994Z env:
+2026-11-01T02:01:21.8866364Z   ARC_TEST_POSTGRES_URL: ***127.0.0.1:5432/review_console
+2026-11-01T02:01:21.8866575Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:21.8866798Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-01T02:01:21.8867024Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:21.8867233Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:21.8867440Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:21.8867648Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-01T02:01:21.8867837Z ##[endgroup]
+2026-11-01T02:01:30.9848138Z 
+2026-11-01T02:01:31.0098473Z added 189 packages, and audited 190 packages in 9s
+2026-11-01T02:01:31.0213152Z 
+2026-11-01T02:01:31.0394065Z 32 packages are looking for funding
+2026-11-01T02:01:31.0524092Z   run `npm fund` for details
+2026-11-01T02:01:31.0723223Z 
+2026-11-01T02:01:31.0874239Z found 0 vulnerabilities
+2026-11-01T02:01:31.4504759Z ##[group]Run npm test -- --run
+2026-11-01T02:01:31.4505053Z [36;1mnpm test -- --run[0m
+2026-11-01T02:01:31.4526124Z shell: /usr/bin/bash -e {0}
+2026-11-01T02:01:31.4526333Z env:
+2026-11-01T02:01:31.4526912Z   ARC_TEST_POSTGRES_URL: ***127.0.0.1:5432/review_console
+2026-11-01T02:01:31.4527233Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:31.4527585Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-01T02:01:31.4527934Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:31.4528265Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:31.4528624Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:31.4528958Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-01T02:01:31.4529223Z ##[endgroup]
+2026-11-01T02:01:31.8574275Z 
+2026-11-01T02:01:31.8633796Z > ai-review-console-web@0.2.0 test
+2026-11-01T02:01:31.8674818Z > vitest --run
+2026-11-01T02:01:31.8743197Z 
+2026-11-01T02:01:32.5599650Z 
+2026-11-01T02:01:32.5601610Z [1m[30m[46m RUN [49m[39m[22m [36mv4.1.12 [39m[90m/home/runner/work/ai-review-console/ai-review-console/frontend[39m
+2026-11-01T02:01:32.5602071Z 
+2026-11-01T02:01:33.6986533Z  [32m✓[39m src/demo/index.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 48[2mms[22m[39m
+2026-11-01T02:01:34.5103519Z [90mstdout[2m | src/components/CaseDetail.test.tsx[2m > [22m[2munfinished review does not appear as zero risk and cannot be decided or exported
+2026-11-01T02:01:34.5126903Z [22m[39m[@carbon/feature-flags] `enable-focus-wrap-without-sentinels` is available but not enabled.
+2026-11-01T02:01:34.5128004Z Enable the new focus wrap behavior that doesn't use sentinel nodes
+2026-11-01T02:01:34.5128690Z This becomes the default behavior in v12. Enable it to migrate early, or enable `enable-v12-release` to turn on every v12 flag at once.
+2026-11-01T02:01:34.5129397Z [@carbon/feature-flags] `enable-v12-dynamic-floating-styles` is available but not enabled.
+2026-11-01T02:01:34.5129978Z Enable dynamic setting of floating styles for components like Popover, Tooltip, etc.
+2026-11-01T02:01:34.5130677Z This becomes the default behavior in v12. Enable it to migrate early, or enable `enable-v12-release` to turn on every v12 flag at once.
+2026-11-01T02:01:34.5131071Z 
+2026-11-01T02:01:34.5164341Z [90mstdout[2m | src/App.test.tsx[2m > [22m[2mrenders the Langflow attribution and dashboard data
+2026-11-01T02:01:34.5214192Z [22m[39m[@carbon/feature-flags] `enable-v12-dynamic-floating-styles` is available but not enabled.
+2026-11-01T02:01:34.5243797Z Enable dynamic setting of floating styles for components like Popover, Tooltip, etc.
+2026-11-01T02:01:34.5284394Z This becomes the default behavior in v12. Enable it to migrate early, or enable `enable-v12-release` to turn on every v12 flag at once.
+2026-11-01T02:01:34.5287425Z 
+2026-11-01T02:01:34.5585404Z [90mstdout[2m | src/App.test.tsx[2m > [22m[2mrenders the Langflow attribution and dashboard data
+2026-11-01T02:01:34.5604359Z [22m[39m[@carbon/feature-flags] `enable-v12-tile-default-icons` is available but not enabled.
+2026-11-01T02:01:34.5633776Z Enable rendering of default icons in the tile components
+2026-11-01T02:01:34.5660518Z This becomes the default behavior in v12. Enable it to migrate early, or enable `enable-v12-release` to turn on every v12 flag at once.
+2026-11-01T02:01:34.5694344Z 
+2026-11-01T02:01:34.8034982Z [90mstdout[2m | src/App.test.tsx[2m > [22m[2ma processing case restores from its link, polls every two seconds and stops at a terminal review state
+2026-11-01T02:01:34.8046384Z [22m[39m[@carbon/feature-flags] `enable-focus-wrap-without-sentinels` is available but not enabled.
+2026-11-01T02:01:34.8104106Z Enable the new focus wrap behavior that doesn't use sentinel nodes
+2026-11-01T02:01:34.8186598Z This becomes the default behavior in v12. Enable it to migrate early, or enable `enable-v12-release` to turn on every v12 flag at once.
+2026-11-01T02:01:34.8292423Z 
+2026-11-01T02:01:35.3957327Z [90mstdout[2m | src/components/UploadDialog.test.tsx[2m > [22m[2mvalidates file size, format and the synthetic confirmation before submitting
+2026-11-01T02:01:35.4014310Z [22m[39m[@carbon/feature-flags] `enable-focus-wrap-without-sentinels` is available but not enabled.
+2026-11-01T02:01:35.4031836Z Enable the new focus wrap behavior that doesn't use sentinel nodes
+2026-11-01T02:01:35.4053959Z This becomes the default behavior in v12. Enable it to migrate early, or enable `enable-v12-release` to turn on every v12 flag at once.
+2026-11-01T02:01:35.4063604Z [@carbon/feature-flags] `enable-v12-dynamic-floating-styles` is available but not enabled.
+2026-11-01T02:01:35.4083711Z Enable dynamic setting of floating styles for components like Popover, Tooltip, etc.
+2026-11-01T02:01:35.4143982Z This becomes the default behavior in v12. Enable it to migrate early, or enable `enable-v12-release` to turn on every v12 flag at once.
+2026-11-01T02:01:35.4173138Z 
+2026-11-01T02:01:35.4174486Z  [32m✓[39m src/App.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 1079[2mms[22m[39m
+2026-11-01T02:01:35.4213843Z    [33m[2m✓[22m[39m location changes load the new case once and a late old response cannot replace it [33m 330[2mms[22m[39m
+2026-11-01T02:01:35.5704699Z  [32m✓[39m src/components/UploadDialog.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 507[2mms[22m[39m
+2026-11-01T02:01:35.5720387Z    [33m[2m✓[22m[39m validates file size, format and the synthetic confirmation before submitting [33m 330[2mms[22m[39m
+2026-11-01T02:01:35.6183165Z  [32m✓[39m src/components/CaseDetail.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[33m 1364[2mms[22m[39m
+2026-11-01T02:01:35.6231973Z    [33m[2m✓[22m[39m a complete zero rule score still requires a version-bound human decision [33m 340[2mms[22m[39m
+2026-11-01T02:01:36.4435801Z  [32m✓[39m src/components/WorkflowPanel.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 126[2mms[22m[39m
+2026-11-01T02:01:36.4474790Z 
+2026-11-01T02:01:36.4477516Z [2m Test Files [22m [1m[32m5 passed[39m[22m[90m (5)[39m
+2026-11-01T02:01:36.4478061Z [2m      Tests [22m [1m[32m29 passed[39m[22m[90m (29)[39m
+2026-11-01T02:01:36.4478597Z [2m   Start at [22m 02:01:32
+2026-11-01T02:01:36.4479347Z [2m   Duration [22m 3.88s[2m (transform 600ms, setup 551ms, import 2.37s, tests 3.12s, environment 3.10s)[22m
+2026-11-01T02:01:36.4479692Z 
+2026-11-01T02:01:36.4853564Z ##[group]Run npm run build
+2026-11-01T02:01:36.4853748Z [36;1mnpm run build[0m
+2026-11-01T02:01:36.4869895Z shell: /usr/bin/bash -e {0}
+2026-11-01T02:01:36.4870033Z env:
+2026-11-01T02:01:36.4870437Z   ARC_TEST_POSTGRES_URL: ***127.0.0.1:5432/review_console
+2026-11-01T02:01:36.4870665Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:36.4870890Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-01T02:01:36.4871117Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:36.4871319Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:36.4871520Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:36.4871728Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-01T02:01:36.4871907Z ##[endgroup]
+2026-11-01T02:01:36.5477309Z 
+2026-11-01T02:01:36.5477999Z > ai-review-console-web@0.2.0 build
+2026-11-01T02:01:36.5478687Z > tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.node.json && vite build
+2026-11-01T02:01:36.5479010Z 
+2026-11-01T02:01:37.1663021Z [36mvite v8.2.4 [32mbuilding client environment for production...[36m[39m
+2026-11-01T02:01:37.1742356Z transforming...
+2026-11-01T02:01:42.8085020Z ✓ 924 modules transformed.
+2026-11-01T02:01:42.8950298Z rendering chunks...
+2026-11-01T02:01:43.0110971Z computing gzip size...
+2026-11-01T02:01:43.0233659Z dist/index.html                                                    0.57 kB │ gzip:   0.39 kB
+2026-11-01T02:01:43.0254055Z dist/assets/IBMPlexMono-Regular-Latin3-Df6MHWOD.woff2              6.41 kB
+2026-11-01T02:01:43.0259661Z [33m[plugin builtin:vite-reporter] 
+2026-11-01T02:01:43.0260223Z dist/assets/IBMPlexMono-Light-Latin3-DJKb-LDK.woff2                6.50 kB
+2026-11-01T02:01:43.0294028Z (!) Some chunks are larger than 500 kB after minification. Consider:
+2026-11-01T02:01:43.0294664Z dist/assets/IBMPlexMono-SemiBold-Latin3-BPRD-mvZ.woff2             6.65 kB
+2026-11-01T02:01:43.0303836Z - Using dynamic import() to code-split the application
+2026-11-01T02:01:43.0324303Z - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+2026-11-01T02:01:43.0325178Z dist/assets/IBMPlexMono-Italic-Latin3-dwGfTAvb.woff2               6.76 kB
+2026-11-01T02:01:43.0326043Z dist/assets/IBMPlexSerif-Regular-Latin3-DRU4_7P7.woff2             6.76 kB
+2026-11-01T02:01:43.0326846Z dist/assets/IBMPlexMono-LightItalic-Latin3-CwyIh1H-.woff2          6.89 kB
+2026-11-01T02:01:43.0327511Z dist/assets/IBMPlexSerif-SemiBold-Latin3-CnzhbPba.woff2            6.97 kB
+2026-11-01T02:01:43.0328372Z dist/assets/IBMPlexSerif-Light-Latin3-EtLg8H2D.woff2               6.98 kB
+2026-11-01T02:01:43.0329049Z dist/assets/IBMPlexMono-SemiBoldItalic-Latin3-BIMmEBTt.woff2       7.03 kB
+2026-11-01T02:01:43.0329718Z dist/assets/IBMPlexSans-Regular-Latin3-B7f3PIUA.woff2              7.08 kB
+2026-11-01T02:01:43.0330374Z dist/assets/IBMPlexSerif-Italic-Latin3-z65q2iCo.woff2              7.12 kB
+2026-11-01T02:01:43.0330998Z dist/assets/IBMPlexSerif-LightItalic-Latin3-BQr6oFeJ.woff2         7.13 kB
+2026-11-01T02:01:43.0331686Z dist/assets/IBMPlexSans-Light-Latin3-Dzanp4Xn.woff2                7.21 kB
+2026-11-01T02:01:43.0332701Z dist/assets/IBMPlexSans-SemiBold-Latin3-b1rxH0LD.woff2             7.28 kB
+2026-11-01T02:01:43.0333539Z dist/assets/IBMPlexSerif-SemiBoldItalic-Latin3-Ba6Eu9N9.woff2      7.32 kB
+2026-11-01T02:01:43.0334212Z dist/assets/IBMPlexSans-SemiBoldItalic-Latin3-D2LbChAr.woff2       7.47 kB
+2026-11-01T02:01:43.0334880Z dist/assets/IBMPlexSans-Regular-Pi-CkmElvWW.woff2                  7.50 kB
+2026-11-01T02:01:43.0335542Z dist/assets/IBMPlexSans-LightItalic-Latin3-CMAUmq7-.woff2          7.51 kB
+2026-11-01T02:01:43.0336213Z dist/assets/IBMPlexSans-Italic-Latin3-yFTtv7WN.woff2               7.58 kB
+2026-11-01T02:01:43.0336869Z dist/assets/IBMPlexSans-Light-Pi-Wq6RJxSB.woff2                    7.62 kB
+2026-11-01T02:01:43.0337759Z dist/assets/IBMPlexSans-Italic-Pi-COJ9AKmU.woff2                   7.72 kB
+2026-11-01T02:01:43.0338420Z dist/assets/IBMPlexSerif-Regular-Pi-DGvahjwQ.woff2                 7.74 kB
+2026-11-01T02:01:43.0339077Z dist/assets/IBMPlexSans-SemiBold-Pi-CG8jxtIB.woff2                 7.82 kB
+2026-11-01T02:01:43.0339751Z dist/assets/IBMPlexSerif-SemiBold-Pi-BL3GhYz2.woff2                7.86 kB
+2026-11-01T02:01:43.0340427Z dist/assets/IBMPlexSerif-Light-Pi-BSTgdqRE.woff2                   7.89 kB
+2026-11-01T02:01:43.0341088Z dist/assets/IBMPlexSans-SemiBoldItalic-Pi-BGgNlM4X.woff2           7.95 kB
+2026-11-01T02:01:43.0341764Z dist/assets/IBMPlexSans-LightItalic-Pi-D3y-_wTf.woff2              8.04 kB
+2026-11-01T02:01:43.0342410Z dist/assets/IBMPlexSerif-Italic-Pi-CsbuaGMy.woff2                  8.10 kB
+2026-11-01T02:01:43.0343267Z dist/assets/IBMPlexSerif-LightItalic-Pi-DVCXPI0H.woff2             8.23 kB
+2026-11-01T02:01:43.0343941Z dist/assets/IBMPlexSerif-SemiBoldItalic-Pi-C68R6CW-.woff2          8.23 kB
+2026-11-01T02:01:43.0344624Z dist/assets/IBMPlexMono-Light-Pi-xpIvCU2V.woff2                   10.81 kB
+2026-11-01T02:01:43.0345275Z dist/assets/IBMPlexMono-Regular-Pi-DGYmctoh.woff2                 10.83 kB
+2026-11-01T02:01:43.0345932Z dist/assets/IBMPlexMono-SemiBold-Pi-9Wgz4jOm.woff2                11.04 kB
+2026-11-01T02:01:43.0346605Z dist/assets/IBMPlexMono-LightItalic-Pi-BJBHlt7x.woff2             11.26 kB
+2026-11-01T02:01:43.0347265Z dist/assets/IBMPlexMono-Italic-Pi-Cz82mS5A.woff2                  11.35 kB
+2026-11-01T02:01:43.0347929Z dist/assets/IBMPlexMono-SemiBoldItalic-Pi-BZw27fDB.woff2          11.44 kB
+2026-11-01T02:01:43.0348593Z dist/assets/IBMPlexMono-Regular-Latin2-Bx2Zd6oW.woff2             13.31 kB
+2026-11-01T02:01:43.0349261Z dist/assets/IBMPlexMono-Light-Latin2-COW5KW2l.woff2               13.45 kB
+2026-11-01T02:01:43.0349922Z dist/assets/IBMPlexMono-SemiBold-Latin2-Chnj1oVO.woff2            13.53 kB
+2026-11-01T02:01:43.0350584Z dist/assets/IBMPlexMono-Italic-Latin2-CUMLBQsM.woff2              14.59 kB
+2026-11-01T02:01:43.0351255Z dist/assets/IBMPlexMono-LightItalic-Latin2-BQWlnr0R.woff2         14.60 kB
+2026-11-01T02:01:43.0351937Z dist/assets/IBMPlexMono-SemiBoldItalic-Latin2-C_xeENQ8.woff2      14.80 kB
+2026-11-01T02:01:43.0352586Z dist/assets/IBMPlexSans-Regular-Latin2-DVrf9P05.woff2             15.21 kB
+2026-11-01T02:01:43.0353777Z - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+2026-11-01T02:01:43.0354426Z dist/assets/IBMPlexSans-Light-Latin2-C9IfqevB.woff2               15.54 kB
+2026-11-01T02:01:43.0355037Z dist/assets/IBMPlexSans-SemiBold-Latin2-B0f1M9rs.woff2            15.62 kB
+2026-11-01T02:01:43.0355690Z dist/assets/IBMPlexMono-Light-Cyrillic-CH5TvAnd.woff2             15.93 kB
+2026-11-01T02:01:43.0356361Z dist/assets/IBMPlexMono-Regular-Cyrillic-BXMPDyz3.woff2           15.94 kB
+2026-11-01T02:01:43.0357037Z dist/assets/IBMPlexSans-Italic-Latin2-DZn1CBeW.woff2              15.97 kB
+2026-11-01T02:01:43.0357733Z dist/assets/IBMPlexSans-SemiBoldItalic-Latin2-COiqB-bN.woff2      16.19 kB
+2026-11-01T02:01:43.0358471Z dist/assets/IBMPlexSans-LightItalic-Latin2-DMXpu7f7.woff2         16.21 kB
+2026-11-01T02:01:43.0359152Z dist/assets/IBMPlexSerif-Light-Latin2-DTSfkaSB.woff2              16.28 kB
+2026-11-01T02:01:43.0359842Z dist/assets/IBMPlexSerif-SemiBold-Latin2-DbatmXsK.woff2           16.33 kB
+2026-11-01T02:01:43.0360738Z dist/assets/IBMPlexSerif-Regular-Latin2-DAbKM1DI.woff2            16.38 kB
+2026-11-01T02:01:43.0361538Z dist/assets/IBMPlexMono-SemiBold-Cyrillic-mAYZ68us.woff2          16.48 kB
+2026-11-01T02:01:43.0362237Z dist/assets/IBMPlexSerif-LightItalic-Latin2-Dyfr4ufI.woff2        16.89 kB
+2026-11-01T02:01:43.0363050Z dist/assets/IBMPlexSerif-Italic-Latin2-CqKetnKM.woff2             17.09 kB
+2026-11-01T02:01:43.0363744Z dist/assets/IBMPlexMono-Regular-Latin1-BsnL3gsb.woff2             17.26 kB
+2026-11-01T02:01:43.0364505Z dist/assets/IBMPlexMono-Light-Latin1-CYu-OdDn.woff2               17.41 kB
+2026-11-01T02:01:43.0365532Z dist/assets/IBMPlexSerif-SemiBoldItalic-Latin2-D4T8TxYV.woff2     17.44 kB
+2026-11-01T02:01:43.0366375Z dist/assets/IBMPlexMono-SemiBold-Latin1-iYs1QkgK.woff2            17.71 kB
+2026-11-01T02:01:43.0367066Z dist/assets/IBMPlexMono-Italic-Cyrillic-DLvEK-0r.woff2            18.11 kB
+2026-11-01T02:01:43.0367758Z dist/assets/IBMPlexMono-LightItalic-Cyrillic-DIoOyI0e.woff2       18.59 kB
+2026-11-01T02:01:43.0368456Z dist/assets/IBMPlexMono-SemiBoldItalic-Cyrillic-BBOPdLBX.woff2    18.77 kB
+2026-11-01T02:01:43.0369174Z dist/assets/IBMPlexMono-LightItalic-Latin1-CbmW7FP1.woff2         19.33 kB
+2026-11-01T02:01:43.0369857Z dist/assets/IBMPlexMono-Italic-Latin1-BEGMiYkX.woff2              19.42 kB
+2026-11-01T02:01:43.0370535Z dist/assets/IBMPlexMono-SemiBoldItalic-Latin1-CcPCXfEQ.woff2      19.70 kB
+2026-11-01T02:01:43.0371215Z dist/assets/IBMPlexSans-Regular-Cyrillic-C5X9L19Z.woff2           20.05 kB
+2026-11-01T02:01:43.0371910Z dist/assets/IBMPlexSans-Light-Cyrillic-BZNsP5Vs.woff2             20.39 kB
+2026-11-01T02:01:43.0372587Z dist/assets/IBMPlexSans-Regular-Latin1-BUjEsRx4.woff2             20.98 kB
+2026-11-01T02:01:43.0373360Z dist/assets/IBMPlexSans-SemiBold-Cyrillic-92PWFvQi.woff2          21.15 kB
+2026-11-01T02:01:43.0374124Z [33m[33m[PLUGIN_TIMINGS] [0mYour build spent 97% of 5.9s inside plugin hooks (5.7s).
+2026-11-01T02:01:43.0374828Z dist/assets/IBMPlexSans-Italic-Cyrillic-cWWMnfSK.woff2            21.52 kB
+2026-11-01T02:01:43.0375521Z dist/assets/IBMPlexSans-Light-Latin1-inJE14c2.woff2               22.24 kB
+2026-11-01T02:01:43.0376266Z dist/assets/IBMPlexSans-SemiBold-Latin1-CIhZjzyK.woff2            22.26 kB
+2026-11-01T02:01:43.0376954Z dist/assets/IBMPlexSans-LightItalic-Cyrillic-DRI38Xs8.woff2       22.33 kB
+2026-11-01T02:01:43.0377647Z dist/assets/IBMPlexSans-SemiBoldItalic-Cyrillic-OiGOilnu.woff2    22.36 kB
+2026-11-01T02:01:43.0378329Z dist/assets/IBMPlexSerif-Regular-Latin1-BbRgzBSR.woff2            22.68 kB
+2026-11-01T02:01:43.0379000Z dist/assets/IBMPlexSans-Italic-Latin1-D6ilVweT.woff2              22.92 kB
+2026-11-01T02:01:43.0379673Z dist/assets/IBMPlexSerif-Regular-Cyrillic-BYGf3Rh3.woff2          23.48 kB
+2026-11-01T02:01:43.0380349Z dist/assets/IBMPlexSerif-Light-Latin1-BO4YX23O.woff2              23.54 kB
+2026-11-01T02:01:43.0381022Z dist/assets/IBMPlexSans-SemiBoldItalic-Latin1-Dar2sbTJ.woff2      23.56 kB
+2026-11-01T02:01:43.0381728Z dist/assets/IBMPlexSerif-SemiBold-Latin1-DrTkIf9U.woff2           23.75 kB
+2026-11-01T02:01:43.0382419Z dist/assets/IBMPlexSerif-Light-Cyrillic-D90fdGsF.woff2            23.76 kB
+2026-11-01T02:01:43.0383639Z Measured inside the callback, so queue time is excluded and time the callback itself awaited is not:
+2026-11-01T02:01:43.0384279Z dist/assets/IBMPlexSans-LightItalic-Latin1-C2Ta4wwA.woff2         24.02 kB
+2026-11-01T02:01:43.0384959Z dist/assets/IBMPlexSerif-Italic-Latin1-BsgE5agO.woff2             24.13 kB
+2026-11-01T02:01:43.0385627Z dist/assets/IBMPlexSerif-SemiBold-Cyrillic-DWs9CxMR.woff2         24.47 kB
+2026-11-01T02:01:43.0386281Z dist/assets/IBMPlexSerif-LightItalic-Latin1-DkuTNFmu.woff2        24.78 kB
+2026-11-01T02:01:43.0386974Z dist/assets/IBMPlexSerif-Italic-Cyrillic-zE0JRB26.woff2           25.52 kB
+2026-11-01T02:01:43.0387652Z dist/assets/IBMPlexSerif-SemiBoldItalic-Latin1-CTRAPqB7.woff2     25.67 kB
+2026-11-01T02:01:43.0388335Z dist/assets/IBMPlexSerif-LightItalic-Cyrillic-DDOre_Kj.woff2      25.96 kB
+2026-11-01T02:01:43.0389172Z dist/assets/IBMPlexSerif-SemiBoldItalic-Cyrillic-DV8gyGXr.woff2   26.87 kB
+2026-11-01T02:01:43.0389785Z dist/licenses/THIRD_PARTY_LICENSES.md                             78.11 kB
+2026-11-01T02:01:43.0390489Z dist/assets/index-DEs6t4r4.css                                   960.01 kB │ gzip: 102.66 kB
+2026-11-01T02:01:43.0391424Z dist/assets/index-CBy9wful.js                                    559.01 kB │ gzip: 166.10 kB
+2026-11-01T02:01:43.0391983Z 
+2026-11-01T02:01:43.0392315Z [32m✓ built in 5.86s[39m
+2026-11-01T02:01:43.0433544Z   - vite:css transform (96%, 5.6s, 1 call)
+2026-11-01T02:01:43.0434450Z See https://rolldown.rs/reference/InputOptions.checks#plugintimings for more details.
+2026-11-01T02:01:43.0434985Z [39m
+2026-11-01T02:01:43.1237343Z ##[group]Run docker compose config --quiet
+2026-11-01T02:01:43.1237707Z [36;1mdocker compose config --quiet[0m
+2026-11-01T02:01:43.1272284Z shell: /usr/bin/bash -e {0}
+2026-11-01T02:01:43.1272562Z env:
+2026-11-01T02:01:43.1273338Z   ARC_TEST_POSTGRES_URL: ***127.0.0.1:5432/review_console
+2026-11-01T02:01:43.1273681Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:43.1274048Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-01T02:01:43.1274426Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:43.1274781Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:43.1275123Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:43.1275477Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-01T02:01:43.1275773Z ##[endgroup]
+2026-11-01T02:01:43.3711904Z ##[group]Run actions/upload-artifact@v4
+2026-11-01T02:01:43.3712089Z with:
+2026-11-01T02:01:43.3712222Z   name: unit-verification
+2026-11-01T02:01:43.3712387Z   path: /home/runner/work/_temp/arc-unit.xml
+2026-11-01T02:01:43.3712563Z   retention-days: 7
+2026-11-01T02:01:43.3712699Z   if-no-files-found: warn
+2026-11-01T02:01:43.3713060Z   compression-level: 6
+2026-11-01T02:01:43.3713201Z   overwrite: false
+2026-11-01T02:01:43.3713340Z   include-hidden-files: false
+2026-11-01T02:01:43.3713492Z env:
+2026-11-01T02:01:43.3713922Z   ARC_TEST_POSTGRES_URL: ***127.0.0.1:5432/review_console
+2026-11-01T02:01:43.3714159Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:43.3714425Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-01T02:01:43.3714687Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:43.3714924Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:43.3715182Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-01T02:01:43.3715420Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-01T02:01:43.3715626Z ##[endgroup]
+2026-11-01T02:01:43.4982231Z (node:4114) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-01T02:01:43.4983045Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-01T02:01:43.5021597Z With the provided path, there will be 1 file uploaded
+2026-11-01T02:01:43.5024968Z Artifact name is valid!
+2026-11-01T02:01:43.5025395Z Root directory input is valid!
+2026-11-01T02:01:43.7881182Z Beginning upload of artifact content to blob storage
+2026-11-01T02:01:43.7978798Z (node:4114) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-01T02:01:43.9714685Z Uploaded bytes 3655
+2026-11-01T02:01:44.0179334Z Finished uploading artifact content to blob storage!
+2026-11-01T02:01:44.0180370Z SHA256 digest of uploaded artifact zip is 2d781c50edfa0ef2cb52113bf559241036b1c0d138eb9a29a6280c135b077136
+2026-11-01T02:01:44.0181106Z Finalizing artifact upload
+2026-11-01T02:01:44.4438105Z Artifact unit-verification.zip successfully finalized. Artifact ID 13066535377
+2026-11-01T02:01:44.4439319Z Artifact unit-verification has been successfully uploaded! Final size is 3655 bytes. Artifact ID is 13066535377
+2026-11-01T02:01:44.4453782Z Artifact download URL: https://github.com/qife422/ai-review-console/actions/runs/41263397231/artifacts/13066535377
+2026-11-01T02:01:44.4616109Z Post job cleanup.
+2026-11-01T02:01:44.5534642Z (node:4181) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-01T02:01:44.5535407Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-01T02:01:44.5536845Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-60a48de3332760468a477c12ae08846c2f2e3d5e01489a8137eeb5b7e8c07e43, not saving cache.
+2026-11-01T02:01:44.5680870Z Post job cleanup.
+2026-11-01T02:01:44.6551640Z Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-fffdd4551fa7f0b2b06bf3be717262e0dda0c70417893e48adc3fa9e4c2fc066, not saving cache.
+2026-11-01T02:01:44.6552684Z (node:4189) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-01T02:01:44.6553417Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-01T02:01:44.6671920Z Post job cleanup.
+2026-11-01T02:01:44.7271418Z [command]/usr/bin/git version
+2026-11-01T02:01:44.7335081Z git version 2.56.0
+2026-11-01T02:01:44.7358520Z Temporarily overriding HOME='/home/runner/work/_temp/37a40afc-9c71-420f-97bc-e4f4a324e231' before making global git config changes
+2026-11-01T02:01:44.7359482Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-01T02:01:44.7362058Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ai-review-console/ai-review-console
+2026-11-01T02:01:44.7397015Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-01T02:01:44.7428156Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-01T02:01:44.7656467Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-01T02:01:44.7681481Z http.https://github.com/.extraheader
+2026-11-01T02:01:44.7690066Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-01T02:01:44.7744224Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-01T02:01:44.7937873Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:01:44.7974301Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-01T02:01:44.8269086Z Print service container logs: c712d1b2ad1348d9b29ffc01f9a77411_postgres1615trixiesha2561beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c_0984df
+2026-11-01T02:01:44.8272056Z ##[command]/usr/bin/docker logs --details e81dbb43cf85a664574adfd803ece117c456d9e56ee0d4e4eb612d8b464c30b8
+2026-11-01T02:01:44.8381388Z  The files belonging to this database system will be owned by user "postgres".
+2026-11-01T02:01:44.8383298Z  initdb: warning: enabling "trust" authentication for local connections
+2026-11-01T02:01:44.8383743Z  initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+2026-11-01T02:01:44.8384096Z  This user must also own the server process.
+2026-11-01T02:01:44.8384564Z  2026-11-01 02:00:53.701 UTC [1] LOG:  starting PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-11-01T02:01:44.8384908Z  
+2026-11-01T02:01:44.8385213Z  2026-11-01 02:00:53.702 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-11-01T02:01:44.8385715Z  The database cluster will be initialized with locale "en_US.utf8".
+2026-11-01T02:01:44.8386028Z  2026-11-01 02:00:53.702 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-11-01T02:01:44.8386292Z  The default database encoding has accordingly been set to "UTF8".
+2026-11-01T02:01:44.8386590Z  2026-11-01 02:00:53.702 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-01T02:01:44.8386882Z  The default text search configuration will be set to "english".
+2026-11-01T02:01:44.8387209Z  2026-11-01 02:00:53.705 UTC [64] LOG:  database system was shut down at 2026-11-01 02:00:53 UTC
+2026-11-01T02:01:44.8387527Z  2026-11-01 02:00:53.708 UTC [1] LOG:  database system is ready to accept connections
+2026-11-01T02:01:44.8387775Z  
+2026-11-01T02:01:44.8388039Z  Data page checksums are disabled.
+2026-11-01T02:01:44.8388396Z  
+2026-11-01T02:01:44.8388674Z  fixing permissions on existing directory /var/lib/postgresql/data ... ok
+2026-11-01T02:01:44.8389038Z  creating subdirectories ... ok
+2026-11-01T02:01:44.8389324Z  selecting dynamic shared memory implementation ... posix
+2026-11-01T02:01:44.8389628Z  selecting default max_connections ... 100
+2026-11-01T02:01:44.8389832Z  selecting default shared_buffers ... 128MB
+2026-11-01T02:01:44.8390022Z  selecting default time zone ... Etc/UTC
+2026-11-01T02:01:44.8390192Z  creating configuration files ... ok
+2026-11-01T02:01:44.8390355Z  running bootstrap script ... ok
+2026-11-01T02:01:44.8390533Z  performing post-bootstrap initialization ... ok
+2026-11-01T02:01:44.8390714Z  syncing data to disk ... ok
+2026-11-01T02:01:44.8390850Z  
+2026-11-01T02:01:44.8391010Z  
+2026-11-01T02:01:44.8391177Z  Success. You can now start the database server using:
+2026-11-01T02:01:44.8391355Z  
+2026-11-01T02:01:44.8391498Z      pg_ctl -D /var/lib/postgresql/data -l logfile start
+2026-11-01T02:01:44.8391672Z  
+2026-11-01T02:01:44.8392028Z  waiting for server to start....2026-11-01 02:00:53.327 UTC [48] LOG:  starting PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-11-01T02:01:44.8392511Z  2026-11-01 02:00:53.327 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-01T02:01:44.8393013Z  2026-11-01 02:00:53.329 UTC [51] LOG:  database system was shut down at 2026-11-01 02:00:52 UTC
+2026-11-01T02:01:44.8393461Z  2026-11-01 02:00:53.332 UTC [48] LOG:  database system is ready to accept connections
+2026-11-01T02:01:44.8393786Z   done
+2026-11-01T02:01:44.8393955Z  server started
+2026-11-01T02:01:44.8394138Z  CREATE DATABASE
+2026-11-01T02:01:44.8394316Z  
+2026-11-01T02:01:44.8394466Z  
+2026-11-01T02:01:44.8394747Z  /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+2026-11-01T02:01:44.8395095Z  
+2026-11-01T02:01:44.8395322Z  2026-11-01 02:00:53.486 UTC [48] LOG:  received fast shutdown request
+2026-11-01T02:01:44.8396005Z  waiting for server to shut down....2026-11-01 02:00:53.486 UTC [48] LOG:  aborting any active transactions
+2026-11-01T02:01:44.8396599Z  2026-11-01 02:00:53.489 UTC [48] LOG:  background worker "logical replication launcher" (PID 54) exited with exit code 1
+2026-11-01T02:01:44.8397065Z  2026-11-01 02:00:53.489 UTC [49] LOG:  shutting down
+2026-11-01T02:01:44.8397411Z  2026-11-01 02:00:53.489 UTC [49] LOG:  checkpoint starting: shutdown immediate
+2026-11-01T02:01:44.8398347Z  2026-11-01 02:00:53.589 UTC [49] LOG:  checkpoint complete: wrote 926 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.077 s, sync=0.020 s, total=0.101 s; sync files=301, longest=0.019 s, average=0.001 s; distance=4273 kB, estimate=4273 kB; lsn=0/191F0E8, redo lsn=0/191F0E8
+2026-11-01T02:01:44.8399262Z  2026-11-01 02:00:53.595 UTC [48] LOG:  database system is shut down
+2026-11-01T02:01:44.8399552Z   done
+2026-11-01T02:01:44.8399717Z  server stopped
+2026-11-01T02:01:44.8399898Z  
+2026-11-01T02:01:44.8400111Z  PostgreSQL init process complete; ready for start up.
+2026-11-01T02:01:44.8400495Z  
+2026-11-01T02:01:44.8414963Z Stop and remove container: c712d1b2ad1348d9b29ffc01f9a77411_postgres1615trixiesha2561beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c_0984df
+2026-11-01T02:01:44.8418502Z ##[command]/usr/bin/docker rm --force e81dbb43cf85a664574adfd803ece117c456d9e56ee0d4e4eb612d8b464c30b8
+2026-11-01T02:01:50.2201181Z e81dbb43cf85a664574adfd803ece117c456d9e56ee0d4e4eb612d8b464c30b8
+2026-11-01T02:01:50.2228462Z Remove container network: github_network_b1e2412afe734114bac328d6c1bfce0d
+2026-11-01T02:01:50.2230986Z ##[command]/usr/bin/docker network rm github_network_b1e2412afe734114bac328d6c1bfce0d
+2026-11-01T02:01:50.3091456Z github_network_b1e2412afe734114bac328d6c1bfce0d
+2026-11-01T02:01:50.3158644Z Cleaning up orphan processes
+2026-11-01T02:01:50.3403730Z Terminate orphan process: pid (3035) (node)
+2026-11-01T02:01:50.3484215Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

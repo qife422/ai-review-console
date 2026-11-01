@@ -1,0 +1,338 @@
+{
+  "created_at": "2026-11-01T01:50:54.267334+00:00",
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "AC-19",
+    "RELEASE-001"
+  ],
+  "source_revision": "a59dc31c74c5b2b9ed24b4b35be3cc7f2411154d",
+  "methods": {
+    "producer_kind": "Actual inline Python commands and functions.exec orchestration in the task; no standalone metadata/graph producer file existed. This summary is a local synthesis, not a substitute for raw evidence.",
+    "inventory": {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "512m",
+        "--entrypoint",
+        "python",
+        "sha256:865e7348409fecd375f86f622c99f1510d98f31f833ab1dad2c9b2bd16a85751",
+        "-c",
+        "import importlib.metadata as m,json; d={};\nfor p in m.distributions():\n n=p.metadata.get(\"Name\",\"\");d[(n.lower().replace(\"_\",\"-\"),p.version)]={\"name\":n,\"version\":p.version,\"requires\":p.requires or []}\nprint(json.dumps(list(d.values()),sort_keys=True))"
+      ],
+      "image_id": "sha256:865e7348409fecd375f86f622c99f1510d98f31f833ab1dad2c9b2bd16a85751",
+      "raw_stdout_sha256": "b0c7f297cc77075fca6a12dc187ed66cbd52851aaf542faa5f6bfda2a8dfda24",
+      "capture": "Parsed JSON list was held in orchestration memory, then split into ten inventory-part JSON files to respect the128KiB hook input ceiling. Content was not re-queried.",
+      "original_stdout_reconstruction": "json.dumps(concatenated_parts, sort_keys=True) + newline",
+      "reconstructed_original_stdout_sha256_matches": true
+    },
+    "pypi": "Version-specific official HTTPS PyPI JSON metadata queries in a ThreadPoolExecutor(max_workers=4); records retain source_url, query time, full response SHA256, Requires-Python/Requires-Dist and provider vulnerability IDs. Complete network response bodies were not retained; metadata fields were selected without package installation.",
+    "dependency_graph": "Normalize names with packaging.utils.canonicalize_name; start from exact native installed versions/Requires-Dist, replace the23 selected candidate versions and their Requires-Dist. Evaluate each PEP508 marker with extra empty, Linux/Python3.14.7 and aarch64 then x86_64. Every active requirement must have an installed/selected version satisfying its specifier; Requires-Python checked against3.14.7.",
+    "amd64_marker_inputs": {
+      "ibm-db": "3.2.9",
+      "tree-sitter": "0.26.0",
+      "tree-sitter-javascript": "0.25.0",
+      "tree-sitter-typescript": "0.23.2",
+      "source": "Previous actual CI fac92ea release images/langflow-inventory.json, already selected in prior packet; existing architecture-specific markers were evaluated for Linux/x86_64 rather than inventing native installation."
+    },
+    "extras_limitation": "The graph checks default-active requirements. Historical optional extras and full pip resolver behavior remain actual CI pip-check/build responsibility; litellm proxy-runtime and other unselected extras are not enabled."
+  },
+  "candidate_pins": {
+    "datamodel-code-generator": "0.81.0",
+    "oauthlib": "4.0.0",
+    "opentelemetry-api": "1.45.1",
+    "opentelemetry-exporter-otlp": "1.45.1",
+    "opentelemetry-exporter-otlp-proto-common": "1.45.1",
+    "opentelemetry-exporter-otlp-proto-grpc": "1.45.1",
+    "opentelemetry-exporter-otlp-proto-http": "1.45.1",
+    "opentelemetry-exporter-prometheus": "0.66b1",
+    "opentelemetry-instrumentation": "0.66b1",
+    "opentelemetry-instrumentation-asgi": "0.66b1",
+    "opentelemetry-instrumentation-fastapi": "0.66b1",
+    "opentelemetry-instrumentation-logging": "0.66b1",
+    "opentelemetry-instrumentation-redis": "0.66b1",
+    "opentelemetry-instrumentation-requests": "0.66b1",
+    "opentelemetry-instrumentation-sqlalchemy": "0.66b1",
+    "opentelemetry-instrumentation-threading": "0.66b1",
+    "opentelemetry-instrumentation-urllib3": "0.66b1",
+    "opentelemetry-proto": "1.45.1",
+    "opentelemetry-sdk": "1.45.1",
+    "opentelemetry-semantic-conventions": "0.66b1",
+    "opentelemetry-util-http": "0.66b1",
+    "opentelemetry-exporter-otlp-common": "0.66b1",
+    "opentelemetry-exporter-http-transport": "0.66b1"
+  },
+  "candidate_count": 23,
+  "candidate_composition": {
+    "oauthlib_and_datamodel_existing_packages": 2,
+    "existing_standard_otel_packages": 19,
+    "required_new_otel_transport_common_packages": 2
+  },
+  "metadata_graph": {
+    "aarch64": "passed_zero_active_conflicts",
+    "x86_64": "passed_zero_active_conflicts",
+    "actual_result": {
+      "aarch64": [],
+      "x86_64": []
+    },
+    "runtime_proof": false
+  },
+  "baseline": {
+    "image_id": "sha256:865e7348409fecd375f86f622c99f1510d98f31f833ab1dad2c9b2bd16a85751",
+    "exit_code": 0,
+    "result": "passed_scoped_old_behavior_probe_after_probe_comparison_fix",
+    "observed_versions": {
+      "datamodel-code-generator": "0.71.0",
+      "oauthlib": "3.3.1",
+      "opentelemetry-api": "1.44.0",
+      "opentelemetry-instrumentation": "0.65b0",
+      "opentelemetry-sdk": "1.44.0"
+    },
+    "old_jsonp_parameter_present": true,
+    "old_oversized_tracestate_retained": true,
+    "datamodel": {
+      "fixed_schema_sha256": "0cee68a71f00321dc6cbb183bb7e809d67f6ba5f06cf61e6f19996e0ded40d2c",
+      "generated_sha256": "4eae988f715c0bd29c1f249d88479a9af7cc932aa6af815d6badccc07c079a6f",
+      "rejected_payloads": 3,
+      "valid_payloads": 1
+    },
+    "otel_scope": {
+      "baseline_old_tracestate_expected": true,
+      "fastapi_instrumentation": "passed",
+      "in_memory_spans": 5,
+      "instrumentor_modules": [
+        "requests",
+        "urllib3",
+        "sqlalchemy",
+        "logging",
+        "redis",
+        "asgi",
+        "fastapi"
+      ],
+      "oversized_tracestate_bytes": 8351,
+      "oversized_tracestate_discarded": false,
+      "propagation": "passed",
+      "thread_context": "passed"
+    },
+    "scratch": {
+      "bytes": 447,
+      "files": 1
+    },
+    "first_attempt": "The first probe compared Python Enum objects to JSON strings and failed its harness assertion; fixed to model_dump(mode=json), with negative payload cases unchanged. Original failure, producer, and successful rerun retained."
+  },
+  "new_image_runtime": {
+    "state": "pending_ci_not_verified",
+    "source_commit": "a59dc31c74c5b2b9ed24b4b35be3cc7f2411154d",
+    "run_url": "https://github.com/qife422/ai-review-console/actions/runs/41262700501",
+    "at_this_summary": "CI started; no target-image compatibility result observed by this agent yet.",
+    "required": "Actual pip resolution/check; stdin offline probe WITHOUT --baseline; true Langflow Intake/Decision/reports/browser and exact-image scans."
+  },
+  "collector_review": {
+    "result": "parameter_and_source_review_passed",
+    "facts": [
+      "Uses exact image ID obtained from current CI Compose labels.",
+      "Passes probe bytes via docker run -i python -B - stdin; no scripts COPY assumption.",
+      "No --baseline is supplied, so new JSONP-removal and oversized-tracestate assertions are enforced.",
+      "Rootfs read-only, network none, no mounts, tmpfs/tmp32MiB/noexec/nosuid, cap-dropALL/no-new-privileges, memory512MiB, pids64.",
+      "Probe11367bytes is below collector64KiB payload limit.",
+      "Collector records probe stdin SHA256 and stops if probe exits nonzero."
+    ],
+    "observed_actual_new_ci_probe": "not_yet_run"
+  },
+  "remaining_if_three_targeted_packages_pass_ci": [
+    {
+      "name": "pillow",
+      "installed": "12.3.0",
+      "recorded_security_fixed_versions": [
+        "13.0.0"
+      ],
+      "reason": "langflow-base0.11.6/lfx1.11.6/docling-core2.88.0 active upper bounds exclude13; no force-install or base upgrade",
+      "state": "unresolved_upstream_constraint"
+    },
+    {
+      "name": "filelock",
+      "installed": "3.32.0",
+      "recorded_security_fixed_versions": [
+        "4.0.9",
+        "4.2.1"
+      ],
+      "reason": "langflow-base0.11.6/lfx1.11.6 require<4.0.0; no supported compatible security version in recorded candidates",
+      "state": "unresolved_upstream_constraint"
+    },
+    {
+      "name": "setuptools",
+      "installed": "83.0.0",
+      "recorded_security_fixed_versions": [
+        "84.1.0"
+      ],
+      "reason": "langflow-base0.11.6/lfx1.11.6 require<84.0.0; no metadata rewrite or bypass",
+      "state": "unresolved_upstream_constraint"
+    },
+    {
+      "name": "chromadb",
+      "installed": "1.5.9",
+      "recorded_security_fixed_versions": [],
+      "reason": "Returned exact PyPI OSV records expose no fixed event; recorded PyPI latest stable is1.5.9. No-match/fix absence is not proof no workaround exists.",
+      "state": "unresolved_no_established_fix"
+    },
+    {
+      "name": "couchbase",
+      "installed": "4.6.2",
+      "recorded_security_fixed_versions": [],
+      "reason": "Returned exact PyPI OSV records expose no fixed event; recorded newer4.6.4 is not established as fixing the advisory, so not blindly pinned.",
+      "state": "unresolved_no_established_fix"
+    }
+  ],
+  "risk_acceptance": "not_granted",
+  "release_acceptance": "not_granted",
+  "new_skill_loaded": false,
+  "inputs": [
+    {
+      "path": "candidate-metadata.json",
+      "bytes": 19074,
+      "sha256": "bc7bf45ec93955e05fd0ccb34fb9d47ce2a475a5432732976d92633172423d93"
+    },
+    {
+      "path": "graph-check.json",
+      "bytes": 1433,
+      "sha256": "67df960339b375279030f3ebd6d60556c123ec475aeff24a03a16ba1319ac884"
+    },
+    {
+      "path": "baseline.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "baseline.stderr",
+      "bytes": 642,
+      "sha256": "8f83300bc42c01168e80b8b486a654b0cbd8737065ff3d1ad3d45a3672a7166d"
+    },
+    {
+      "path": "baseline.record.json",
+      "bytes": 837,
+      "sha256": "93ee4e68bb1b2b89f536aafe3a75d72f915c56fd4dde52f28e8a8976a5339590"
+    },
+    {
+      "path": "producer-baseline-first.py",
+      "bytes": 11356,
+      "sha256": "0b54f67fd27420e0c90d275f63faebaa7e733f042310a1374ace428f1bd69379"
+    },
+    {
+      "path": "baseline-json-values.stdout",
+      "bytes": 1227,
+      "sha256": "57fab4474269aee51b2a5153eaa867bb545f2eb9fbae75a0ace6500c036321b1"
+    },
+    {
+      "path": "baseline-json-values.stderr",
+      "bytes": 671,
+      "sha256": "a30099c8f0e24f22df1cab60948d6ea90de48f5729a9ba18b6d342b3a5cebdb9"
+    },
+    {
+      "path": "baseline-json-values.record.json",
+      "bytes": 837,
+      "sha256": "c3b3dae97337825f0f81fddde9f4bd2811768ae85c2122c60a2fcf8f61713aed"
+    },
+    {
+      "path": "compat-unit-final.stdout",
+      "bytes": 174,
+      "sha256": "829f357e3bbbe9aba94e36c0de9f95ffec16646275303613c91fb7b2cca3ca20"
+    },
+    {
+      "path": "compat-unit-final.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "compat-unit-final.xml",
+      "bytes": 800,
+      "sha256": "913e83bba3e6339f6d4ba2cf4aed9bc0f4dc2920356f95cf2f91869f95388732"
+    },
+    {
+      "path": "compat-ruff.stdout",
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "path": "inventory-part-0.json",
+      "bytes": 16442,
+      "sha256": "b5eae11c25c78312a9968dcdd04d8d559a6d1cfe61f8df4445e59d6ed1f6f772"
+    },
+    {
+      "path": "inventory-part-1.json",
+      "bytes": 30115,
+      "sha256": "6181cbbde316911f751f22da5cce7a83deda4228ae608e22b4f94fca2acd8081"
+    },
+    {
+      "path": "inventory-part-2.json",
+      "bytes": 71263,
+      "sha256": "b70aa9a5196451b01498a1036b91e2985dcb3726ed142ad4e12cf6c1232bde15"
+    },
+    {
+      "path": "inventory-part-3.json",
+      "bytes": 23924,
+      "sha256": "71b6daf45ed61910c6c880e0a1043b6b3d5fd90fe294b2a3e5f71d3ffa242e4f"
+    },
+    {
+      "path": "inventory-part-4.json",
+      "bytes": 23265,
+      "sha256": "58aed857a0a8158727009b6807314b752824e8162f1c37cea85e1c1f8ec05d99"
+    },
+    {
+      "path": "inventory-part-5.json",
+      "bytes": 25397,
+      "sha256": "b073d322a9a91b0f292c8e10a047dc0307661a237f7f54d6ddc78fa29e09d011"
+    },
+    {
+      "path": "inventory-part-6.json",
+      "bytes": 45571,
+      "sha256": "def85c3419f148ecb7aa3603e38c5ba9b2f0ad1b2502e86dfe2dfb17a7088cb1"
+    },
+    {
+      "path": "inventory-part-7.json",
+      "bytes": 23913,
+      "sha256": "78d8686556c3344eb8b1e31d042b6c0a8278d89b1f52a489ae5f4261a0e6306a"
+    },
+    {
+      "path": "inventory-part-8.json",
+      "bytes": 36400,
+      "sha256": "4ade2488fb3d13c9570da8697ca07f9a5aaea39be0c945589a96348406683b16"
+    },
+    {
+      "path": "inventory-part-9.json",
+      "bytes": 3811,
+      "sha256": "86ba6bdedc8021f105a85476d0f3fea374b4bb0f9e5e2946d6d85bfd34f45cb6"
+    }
+  ],
+  "source_inputs": [
+    {
+      "path": "docker/langflow.Dockerfile",
+      "bytes": 2217,
+      "sha256": "0234332d2b6f3ba0e8c5f46ba391418d39983557336ce2f0a4778757160647aa"
+    },
+    {
+      "path": "scripts/verify_dependency_compatibility.py",
+      "bytes": 11367,
+      "sha256": "31b51b1f0d64ce73371d08f25263fdfb9d1cdf078be0e12d6691a664deaf75f4"
+    },
+    {
+      "path": "tests/test_dependency_compatibility.py",
+      "bytes": 1433,
+      "sha256": "39d04aa9e5e073de7e0322c7053a97437fa3af8a5a82a3bd8273f9f59b6325bf"
+    },
+    {
+      "path": "scripts/collect_release_ci.py",
+      "bytes": 12092,
+      "sha256": "f82cd355fb40121c3282096077d1f01083a9320774311c99a76e036b385f04b7"
+    }
+  ]
+}

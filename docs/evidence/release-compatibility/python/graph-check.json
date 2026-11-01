@@ -1,0 +1,32 @@
+{
+  "active_default_graph_conflicts": {
+    "aarch64": [],
+    "x86_64": []
+  },
+  "candidate_pins": {
+    "datamodel-code-generator": "0.81.0",
+    "oauthlib": "4.0.0",
+    "opentelemetry-api": "1.45.1",
+    "opentelemetry-exporter-otlp": "1.45.1",
+    "opentelemetry-exporter-otlp-proto-common": "1.45.1",
+    "opentelemetry-exporter-otlp-proto-grpc": "1.45.1",
+    "opentelemetry-exporter-otlp-proto-http": "1.45.1",
+    "opentelemetry-exporter-prometheus": "0.66b1",
+    "opentelemetry-instrumentation": "0.66b1",
+    "opentelemetry-instrumentation-asgi": "0.66b1",
+    "opentelemetry-instrumentation-fastapi": "0.66b1",
+    "opentelemetry-instrumentation-logging": "0.66b1",
+    "opentelemetry-instrumentation-redis": "0.66b1",
+    "opentelemetry-instrumentation-requests": "0.66b1",
+    "opentelemetry-instrumentation-sqlalchemy": "0.66b1",
+    "opentelemetry-instrumentation-threading": "0.66b1",
+    "opentelemetry-instrumentation-urllib3": "0.66b1",
+    "opentelemetry-proto": "1.45.1",
+    "opentelemetry-sdk": "1.45.1",
+    "opentelemetry-semantic-conventions": "0.66b1",
+    "opentelemetry-util-http": "0.66b1",
+    "opentelemetry-exporter-otlp-common": "0.66b1",
+    "opentelemetry-exporter-http-transport": "0.66b1"
+  },
+  "method": "Native exact inventory+official candidate metadata; AMD64 marker-only dependencies use prior CI exact versions; optional extra combinations remain final pip resolver responsibility."
+}

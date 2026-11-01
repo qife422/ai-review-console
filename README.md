@@ -25,9 +25,9 @@ Langflow-powered document review console with deterministic redaction, explainab
 
 固定实施 Contract 为 [Spec计划书](docs/UPGRADE_SPEC.md) `ARC-UPGRADE@0.1.0`。实际验收、内容指纹和剩余边界见 [当前状态](docs/CURRENT_STATE.md)及[Spec索引](docs/SPEC_INDEX.md)。本地技术验证与负责人最终接受分开；没有生产或收费模型授权。
 
-2026-10-31 已修补应用 Python 与前端依赖，两个范围的审计均为 0；兼容修补 Langflow 依赖、固定运行基础与维护包，并把精确镜像的包级扫描和许可证材料采集纳入 CI。代码 `fac92ea` 的 [完整 CI](https://github.com/qife422/ai-review-console/actions/runs/41259579902) 已通过 **154 Python / 29 前端测试**、真实工作流及双主题双尺寸浏览器验收。本机原生镜像的真实 Flow、29 个显式 Langflow pin、旧虚构案件和报告保全也已复验。
+2026-10-31 保留上轮应用与前端依赖修补，本轮进一步升级 OAuthlib、datamodel-code-generator 及 OpenTelemetry，Langflow 仍为 1.11.6，共 52 个显式 pin。代码 `a64ab47` 的 [完整 CI](https://github.com/qife422/ai-review-console/actions/runs/41263397231) 已通过 **161 Python / 29 前端测试**、离线兼容探针、真实工作流和浏览器验收。镜像包级扫描与实际许可文本已复核；本地容量警戒期间使用隔离 CI，没有新增本地构建或清理历史缓存。
 
-**发布检查 AC-19 仍未关闭**：Langflow 和部分系统包仍有漏洞记录，Zep 精确版本及完整镜像分发材料尚未确认。不是完整发布验收通过或风险接受。已解决项、具体剩余问题、扫描范围与后续计划统一见 [v0.2 发布验收](docs/evidence/v02-release/README.md)；[上轮收尾记录](docs/evidence/v02-acceptance/README.md)及固定 Spec 保持原字节。
+**发布检查 AC-19 仍未关闭**：本轮 Langflow 受影响 Python 包由 8 个缩至 5 个，部分系统包仍有记录；Zep 精确许可及完整原生/二进制分发材料尚未闭环，未接受剩余风险或批准完整后端镜像分发。已解决项、具体约束和后续关闭条件见 [本轮兼容与许可补验](docs/evidence/release-compatibility/README.md)；[前次发布检查](docs/evidence/v02-release/README.md)、[更早收尾记录](docs/evidence/v02-acceptance/README.md)及固定 Spec 保持原字节。
 
 ## 基于 Langflow
 

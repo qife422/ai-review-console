@@ -1,0 +1,134 @@
+{
+  "reviewed_at": "2026-11-01T01:46:37.084135+00:00",
+  "review_scope": "Read existing Docker Engine snapshot and previous sealed summaries only; no new daemon scan/build/pull/prune/installation; only this derived review JSON added.",
+  "input_hashes": {
+    "docker-system-df.json": "72a2aad7124d03b5e2937267584316b6053da5818530a0efb65f35218d43be3e",
+    "summary.json": "8fc80f2fe27a73cc2364494d1dc6ba96d0dc601d6058942a388bb10f5f973cd2"
+  },
+  "review_state": "complete_with_attribution_limits",
+  "docker_cli_28_3_2_accounting": {
+    "global_layers_size": 21874078300,
+    "private_buildcache_records": 162,
+    "private_buildcache_total_bytes": 2413293031,
+    "shared_buildcache_records": 97,
+    "shared_buildcache_total_bytes": 6343839452,
+    "all_buildcache_size_sum_bytes": 8757132483,
+    "cli_global_layers_plus_private_cache_bytes": 24287371331,
+    "formula": "LayersSize + sum(BuildCache.Size where Shared == false). Docker CLI28.3.2 summary already excludes shared cache from BuilderSize. Adding all cache record sizes would double count image-shared cache.",
+    "qualification": "Daemon storage accounting, not host allocated physical blocks, not exact per-project storage. 2,413,293,031 is CURRENT private-cache total, not task net growth.",
+    "official_source": "https://raw.githubusercontent.com/docker/cli/v28.3.2/cli/command/system/df.go",
+    "formatter_source": "https://raw.githubusercontent.com/docker/cli/v28.3.2/cli/command/formatter/disk_usage.go"
+  },
+  "project_classification": {
+    "tagged_available_image_ids": 9,
+    "available_arc_referenced_image_ids": 9,
+    "tag_only_available_image_ids": 2,
+    "known_available_project_image_ids": 11,
+    "postgres_images_missing_from_tag_only_summary": [
+      {
+        "id": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c",
+        "repo_digests": [
+          "postgres@sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+        ],
+        "size": 657653808,
+        "shared_size": 0,
+        "containers": 1
+      },
+      {
+        "id": "sha256:21f6013073bc6b92830a2129570e2f5ec42a6c734b5a985a41e83aa58f54c3c1",
+        "repo_digests": [
+          "postgres@sha256:21f6013073bc6b92830a2129570e2f5ec42a6c734b5a985a41e83aa58f54c3c1"
+        ],
+        "size": 656989340,
+        "shared_size": 0,
+        "containers": 2
+      }
+    ],
+    "arc_container_count": 28,
+    "arc_container_state_counts": [
+      {
+        "project": "ai-review-console",
+        "state": "exited",
+        "count": 5
+      },
+      {
+        "project": "ai-review-console-release",
+        "state": "exited",
+        "count": 8
+      },
+      {
+        "project": "ai-review-console-upgrade",
+        "state": "exited",
+        "count": 15
+      }
+    ],
+    "known_available_global_exclusive_image_content_lower_bound_bytes": 4763875182,
+    "known_available_image_virtual_content_upper_bound_bytes": 12402337646,
+    "historical_arc_referenced_metadata_unavailable_ids": [
+      "sha256:2fd8f05220ac2d4e60479eeefdcaef460d51b6e0a8b5b80f2a24dc5ab3917311",
+      "sha256:741d5b052da3931ed51924e396d8a0ff29b5ddff483781c49198f957799c7408",
+      "sha256:9af748b5948f254215ef1502e0d3625f3edeca5093f89b1d8713c7fdcfe11cca",
+      "sha256:bc38ca0518e4d65b8880821d336e0df9e0662d3336a1f51e71dac0ce125227bd",
+      "sha256:c7b8c206b5291760464254b58c1a1b51a3ca076d06ef3cd5389c0e1a4978b9a3",
+      "sha256:cb6ae1835e9a10e5847e1fe5a571ce0942d19d008ff6614f5195e5eb3166ffb1"
+    ],
+    "method": "De-duplicate immutable Engine image IDs, union recognized project tags with Compose project/service container references, explicitly include both Postgres digests. Tags are provenance clues; references may span historical and current project runtimes.",
+    "limits": [
+      "Size minus SharedSize is globally exclusive image-content lower bound; project-internal shared layers are omitted.",
+      "Sum Size across unique IDs is only a conservative logical content upper bound for KNOWN images. SharedSize values must not be summed or divided heuristically.",
+      "Six historical referenced IDs are absent from this snapshot image metadata; size/physical retention remain unavailable, not zero. Therefore the complete project12GiB condition is not proven by the visible subset.",
+      "SharedSize unknown/-1 must stay unknown; no such field should be silently clamped to zero.",
+      "Stopped container references remain references. Images Active in system-df means Containers>0, not currently running services; InUse=false/Reclaimable do not grant cleanup authority.",
+      "RootFS DiffID/ChainID identity can help explain sharing but does not itself yield exact host physical byte sizes."
+    ]
+  },
+  "growth_comparison": {
+    "previous_rounded_baseline_global_bytes": 21174000000,
+    "current_proxy_growth_bytes": 3113371331,
+    "current_proxy_growth_GiB": 2.899553003720939,
+    "previous_sealed_peak_proxy_bytes": 3629000000,
+    "wp_growth_guard_bytes": 3221225472,
+    "qualification": "Current rounded-baseline global proxy is about2.900GiB, but not exact project delta. It does not erase the previously observed3.63GB proxy warning or prove why snapshot sizes changed. Missing earlier exact ownership/private-cache state prevents reconstructing exact task-attributed historical peak."
+  },
+  "allowed_continuation_under_current_decision": {
+    "local_docker_build_pull_cache_growth": false,
+    "cloud_existing_ci_independent_runner": true,
+    "read_existing_metadata_and_images": true,
+    "bounded_source_license_analysis": true,
+    "bounded_artifact_downloads": "Only declared evidence limits with host free-space headroom rechecked.",
+    "cleanup_authorized": false,
+    "user_grype_cleanup_scope": "Previous explicit authorization covered only that already-deleted aborted Grype DB, not images, historical caches, volumes or other projects."
+  },
+  "before_any_future_local_expansion": [
+    "Retain current raw snapshot privately; publish only project-scoped derived totals and limitations.",
+    "Resolve or explicitly bound unavailable historical image metadata and attribute current project images/cache.",
+    "Use the same cumulative goal/WP accounting; do not reset growth baseline by changing package, tag, task name or agent.",
+    "Give a bounded estimate for download/unpack/build peak plus retained old layers; check host and Docker storage headroom against that estimate and project absolute/growth limits.",
+    "If safe bounds cannot be proven within existing thresholds, continue cloud CI and unaffected read-only/source work; any capacity increase, relocation or destructive cleanup requires its applicable separate user decision."
+  ],
+  "official_explanations": [
+    "https://docs.docker.com/reference/cli/docker/system/df/",
+    "https://docs.docker.com/reference/cli/docker/buildx/du/",
+    "https://docs.docker.com/desktop/troubleshoot-and-support/faqs/linuxfaqs/"
+  ],
+  "findings": [
+    {
+      "id": "CAP-01",
+      "priority": "P2",
+      "finding": "Existing summary project_tagged_images omits two Postgres digests despite explicit ARC Compose references; use11 known IDs rather than9 tag-only rows for the current visible project subset.",
+      "status": "reported; derived corrected bounds included; source summary not modified"
+    },
+    {
+      "id": "CAP-02",
+      "priority": "P2",
+      "finding": "Six historical ARC-referenced IDs have no image metadata in this snapshot. Visible-subset virtual upper bound does not establish whole-project physical usage or full12GiB compliance.",
+      "status": "unavailable; continue without local Docker growth"
+    },
+    {
+      "id": "CAP-03",
+      "priority": "P3",
+      "finding": "CLI summary private cache already excludes Shared records; distinguish current total, cumulative proxy delta and exact project/host physical attribution.",
+      "status": "method clarified; no threshold or cleanup authorization changed"
+    }
+  ]
+}

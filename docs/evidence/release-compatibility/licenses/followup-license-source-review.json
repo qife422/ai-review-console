@@ -1,0 +1,97 @@
+{
+  "created_at": "2026-11-01T01:51:06.827197+00:00",
+  "source_commit": "a59dc31",
+  "review_method": "Read-only source inspection and arithmetic against fixed previous CI license results; no Docker, build, installs or new source edits.",
+  "review_state": "no_material_defect_observed_with_required_final_readback",
+  "source_hashes": [
+    {
+      "path": "scripts/verify_image_licenses.py",
+      "sha256": "b4021bd6e0a432acdb9557ba8bc5fe95d5829171fce0490ff8f8d5e962ba4a32"
+    },
+    {
+      "path": "scripts/verify_dependency_compatibility.py",
+      "sha256": "31b51b1f0d64ce73371d08f25263fdfb9d1cdf078be0e12d6691a664deaf75f4"
+    },
+    {
+      "path": "scripts/collect_release_ci.py",
+      "sha256": "f82cd355fb40121c3282096077d1f01083a9320774311c99a76e036b385f04b7"
+    },
+    {
+      "path": "docker/langflow.Dockerfile",
+      "sha256": "0234332d2b6f3ba0e8c5f46ba391418d39983557336ce2f0a4778757160647aa"
+    }
+  ],
+  "new_or_changed_pin_count": 23,
+  "new_or_changed_pins": {
+    "oauthlib": "4.0.0",
+    "datamodel-code-generator": "0.81.0",
+    "opentelemetry-api": "1.45.1",
+    "opentelemetry-sdk": "1.45.1",
+    "opentelemetry-proto": "1.45.1",
+    "opentelemetry-exporter-otlp": "1.45.1",
+    "opentelemetry-exporter-otlp-proto-common": "1.45.1",
+    "opentelemetry-exporter-otlp-proto-grpc": "1.45.1",
+    "opentelemetry-exporter-otlp-proto-http": "1.45.1",
+    "opentelemetry-exporter-otlp-common": "0.66b1",
+    "opentelemetry-exporter-http-transport": "0.66b1",
+    "opentelemetry-exporter-prometheus": "0.66b1",
+    "opentelemetry-semantic-conventions": "0.66b1",
+    "opentelemetry-instrumentation": "0.66b1",
+    "opentelemetry-util-http": "0.66b1",
+    "opentelemetry-instrumentation-asgi": "0.66b1",
+    "opentelemetry-instrumentation-fastapi": "0.66b1",
+    "opentelemetry-instrumentation-logging": "0.66b1",
+    "opentelemetry-instrumentation-redis": "0.66b1",
+    "opentelemetry-instrumentation-requests": "0.66b1",
+    "opentelemetry-instrumentation-sqlalchemy": "0.66b1",
+    "opentelemetry-instrumentation-threading": "0.66b1",
+    "opentelemetry-instrumentation-urllib3": "0.66b1"
+  },
+  "all_new_pin_names_in_license_selector": true,
+  "unselected_new_pins": [],
+  "budget_estimate": {
+    "previous_actual_texts": 75,
+    "excluded_false_positive_texts": 4,
+    "added_langflow_exact_license_copies": 3,
+    "newly_selected_packages": 23,
+    "assumption": "Each newly selected installed package declares one legal text file; actual wheels may differ.",
+    "estimated_texts": 97,
+    "limit": 100,
+    "estimated_headroom": 3,
+    "byte_limit": 8388608,
+    "prior_remaining_bytes": 7643346,
+    "conclusion": "Likely fits file/text budgets, with only3file headroom; final raw output must be checked.",
+    "not_a_guarantee": true
+  },
+  "probe_assessment": {
+    "oauth": "PKCE/state mismatch, request/token/revocation compatibility and JSONP parameter removal tested offline; does not claim every OAuth integration or exploit is covered.",
+    "datamodel": "Fixed synthetic schema compiled/imported, one valid and three invalid cases verified; actual Langflow Flow remains separate.",
+    "otel": "Local in-memory span export, propagation/thread context, ASGI instrumentation, exporter imports and oversized tracestate behavior; no paid/external export.",
+    "runtime_boundary": "CI helper uses immutable LF image, no network/read-only root, bounded32MiB tmpfs, 512MiB/pids64, no business mounts.",
+    "coverage_limit": "Import-only exporter checks do not prove real remote exporter connectivity; no such connectivity claimed."
+  },
+  "final_ci_checks_required": [
+    "No batch_file_limit/batch_byte_limit/per_file_limit skip interpreted as success.",
+    "LF three supplemental exact files state=recorded and SHA match repository copies.",
+    "All23new explicit pins present at actual versions; identify new transitive metadata changes separately.",
+    "Four earlier non-license.py/.pyc entries excluded without consuming text budget.",
+    "CI green collected_with_explicit_scope remains distinct from license approval."
+  ],
+  "license_conclusions": {
+    "repository_copies": "Dnspython2.9 ISC and FastMCP3.4.10 Apache text copied; LFX same-version root MIT represented by existing Langflow license. This is a repository-material result, not proof any new image contains them.",
+    "current_static_and_source": "Project/font attribution and actual frontend bundle texts have known evidence scope; no public site redeployment performed.",
+    "zep": "Exact2.0.2permission still unresolved; current reverse extras require exact2.0.2. No licensed direct replacement found within these constraints.",
+    "native": "Exact existing ARM images101paths,95522697bytes hashed; planned batch100 incorrectly applied per image,1path deviation retained. Runtime versions/reference source hashes are not full corresponding-source/compliance proof.",
+    "full_backend_distribution_approved": false,
+    "risk_acceptance": false
+  },
+  "material_findings": [],
+  "watch_items": [
+    {
+      "id": "license-budget-headroom",
+      "severity": "verification_required",
+      "fact": "File count estimate97/100, only3headroom; collector explicitly records skips but returns collected scope after budget skips.",
+      "action": "Final result inspection rather than reliance on CI exit0; no source mutation requested."
+    }
+  ]
+}

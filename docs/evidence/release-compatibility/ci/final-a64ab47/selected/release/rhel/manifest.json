@@ -1,0 +1,998 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "AC-19",
+    "RELEASE-001"
+  ],
+  "producer": "scripts/scan_images_osv.py --redhat-only",
+  "started_at": "2026-11-01T02:07:02.734293+00:00",
+  "image_id": "sha256:7ecc28c0c5d44fba421bd63039b62b82267e43f496e2dd274ae8b4274fc411ac",
+  "service": "https://api.osv.dev/v1",
+  "result": "queried_with_findings",
+  "database_snapshot_date": null,
+  "rpm_entries": 226,
+  "metadata_only_public_keys": 3,
+  "mapped_software_packages": 223,
+  "unique_queries": 669,
+  "observed_unique_advisory_ids": 23,
+  "matched_software_packages": 50,
+  "findings": [
+    {
+      "package": "pcre2-syntax",
+      "version_with_epoch": "0:10.44-1.el10.3",
+      "architecture": "noarch",
+      "source_rpm": "pcre2-10.44-1.el10.3.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"pcre2-syntax\"},\"version\":\"0:10.44-1.el10.3\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"pcre2-syntax\"},\"version\":\"0:10.44-1.el10.3\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"pcre2-syntax\"},\"version\":\"0:10.44-1.el10.3\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:81522"
+      ]
+    },
+    {
+      "package": "glibc-minimal-langpack",
+      "version_with_epoch": "0:2.39-128.el10_2",
+      "architecture": "x86_64",
+      "source_rpm": "glibc-2.39-128.el10_2.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"glibc-minimal-langpack\"},\"version\":\"0:2.39-128.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"glibc-minimal-langpack\"},\"version\":\"0:2.39-128.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"glibc-minimal-langpack\"},\"version\":\"0:2.39-128.el10_2\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:76781",
+        "RHSA-2026:84753"
+      ]
+    },
+    {
+      "package": "glibc-common",
+      "version_with_epoch": "0:2.39-128.el10_2",
+      "architecture": "x86_64",
+      "source_rpm": "glibc-2.39-128.el10_2.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"glibc-common\"},\"version\":\"0:2.39-128.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"glibc-common\"},\"version\":\"0:2.39-128.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"glibc-common\"},\"version\":\"0:2.39-128.el10_2\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:76781",
+        "RHSA-2026:84753"
+      ]
+    },
+    {
+      "package": "glibc",
+      "version_with_epoch": "0:2.39-128.el10_2",
+      "architecture": "x86_64",
+      "source_rpm": "glibc-2.39-128.el10_2.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"glibc\"},\"version\":\"0:2.39-128.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"glibc\"},\"version\":\"0:2.39-128.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"glibc\"},\"version\":\"0:2.39-128.el10_2\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:76781",
+        "RHSA-2026:84753"
+      ]
+    },
+    {
+      "package": "xz-libs",
+      "version_with_epoch": "1:5.6.2-4.el10_0",
+      "architecture": "x86_64",
+      "source_rpm": "xz-5.6.2-4.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"xz-libs\"},\"version\":\"1:5.6.2-4.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"xz-libs\"},\"version\":\"1:5.6.2-4.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"xz-libs\"},\"version\":\"1:5.6.2-4.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:64787"
+      ]
+    },
+    {
+      "package": "libxml2",
+      "version_with_epoch": "0:2.12.5-10.el10_2.3",
+      "architecture": "x86_64",
+      "source_rpm": "libxml2-2.12.5-10.el10_2.3.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"libxml2\"},\"version\":\"0:2.12.5-10.el10_2.3\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"libxml2\"},\"version\":\"0:2.12.5-10.el10_2.3\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"libxml2\"},\"version\":\"0:2.12.5-10.el10_2.3\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:71586"
+      ]
+    },
+    {
+      "package": "pcre2",
+      "version_with_epoch": "0:10.44-1.el10.3",
+      "architecture": "x86_64",
+      "source_rpm": "pcre2-10.44-1.el10.3.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"pcre2\"},\"version\":\"0:10.44-1.el10.3\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"pcre2\"},\"version\":\"0:10.44-1.el10.3\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"pcre2\"},\"version\":\"0:10.44-1.el10.3\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:81522"
+      ]
+    },
+    {
+      "package": "gawk",
+      "version_with_epoch": "0:5.3.0-6.el10",
+      "architecture": "x86_64",
+      "source_rpm": "gawk-5.3.0-6.el10.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"gawk\"},\"version\":\"0:5.3.0-6.el10\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"gawk\"},\"version\":\"0:5.3.0-6.el10\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"gawk\"},\"version\":\"0:5.3.0-6.el10\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:73429"
+      ]
+    },
+    {
+      "package": "coreutils-single",
+      "version_with_epoch": "0:9.5-8.el10_2",
+      "architecture": "x86_64",
+      "source_rpm": "coreutils-9.5-8.el10_2.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"coreutils-single\"},\"version\":\"0:9.5-8.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"coreutils-single\"},\"version\":\"0:9.5-8.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"coreutils-single\"},\"version\":\"0:9.5-8.el10_2\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67886"
+      ]
+    },
+    {
+      "package": "openssl-libs",
+      "version_with_epoch": "1:3.5.5-6.el10_2",
+      "architecture": "x86_64",
+      "source_rpm": "openssl-3.5.5-6.el10_2.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"openssl-libs\"},\"version\":\"1:3.5.5-6.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"openssl-libs\"},\"version\":\"1:3.5.5-6.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"openssl-libs\"},\"version\":\"1:3.5.5-6.el10_2\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67154",
+        "RHSA-2026:76918"
+      ]
+    },
+    {
+      "package": "rpm-sequoia",
+      "version_with_epoch": "0:1.10.1.1-2.el10",
+      "architecture": "x86_64",
+      "source_rpm": "rust-rpm-sequoia-1.10.1.1-2.el10.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"rpm-sequoia\"},\"version\":\"0:1.10.1.1-2.el10\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"rpm-sequoia\"},\"version\":\"0:1.10.1.1-2.el10\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"rpm-sequoia\"},\"version\":\"0:1.10.1.1-2.el10\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:76734"
+      ]
+    },
+    {
+      "package": "glib2",
+      "version_with_epoch": "0:2.80.4-12.el10_2.21",
+      "architecture": "x86_64",
+      "source_rpm": "glib2-2.80.4-12.el10_2.21.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"glib2\"},\"version\":\"0:2.80.4-12.el10_2.21\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"glib2\"},\"version\":\"0:2.80.4-12.el10_2.21\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"glib2\"},\"version\":\"0:2.80.4-12.el10_2.21\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:64799"
+      ]
+    },
+    {
+      "package": "libcurl-minimal",
+      "version_with_epoch": "0:8.12.1-4.el10_2.4",
+      "architecture": "x86_64",
+      "source_rpm": "curl-8.12.1-4.el10_2.4.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"libcurl-minimal\"},\"version\":\"0:8.12.1-4.el10_2.4\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"libcurl-minimal\"},\"version\":\"0:8.12.1-4.el10_2.4\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"libcurl-minimal\"},\"version\":\"0:8.12.1-4.el10_2.4\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:69125",
+        "RHSA-2026:80512"
+      ]
+    },
+    {
+      "package": "curl",
+      "version_with_epoch": "0:8.12.1-4.el10_2.4",
+      "architecture": "x86_64",
+      "source_rpm": "curl-8.12.1-4.el10_2.4.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"curl\"},\"version\":\"0:8.12.1-4.el10_2.4\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"curl\"},\"version\":\"0:8.12.1-4.el10_2.4\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"curl\"},\"version\":\"0:8.12.1-4.el10_2.4\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:69125",
+        "RHSA-2026:80512"
+      ]
+    },
+    {
+      "package": "libarchive",
+      "version_with_epoch": "0:3.7.7-10.el10_2",
+      "architecture": "x86_64",
+      "source_rpm": "libarchive-3.7.7-10.el10_2.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"libarchive\"},\"version\":\"0:3.7.7-10.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"libarchive\"},\"version\":\"0:3.7.7-10.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"libarchive\"},\"version\":\"0:3.7.7-10.el10_2\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:69553"
+      ]
+    },
+    {
+      "package": "expat",
+      "version_with_epoch": "0:2.7.3-1.el10_2.1",
+      "architecture": "x86_64",
+      "source_rpm": "expat-2.7.3-1.el10_2.1.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"expat\"},\"version\":\"0:2.7.3-1.el10_2.1\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"expat\"},\"version\":\"0:2.7.3-1.el10_2.1\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"expat\"},\"version\":\"0:2.7.3-1.el10_2.1\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:64810",
+        "RHSA-2026:74001"
+      ]
+    },
+    {
+      "package": "python3.14-libs",
+      "version_with_epoch": "0:3.14.7-2.el10_2",
+      "architecture": "x86_64",
+      "source_rpm": "python3.14-3.14.7-2.el10_2.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"python3.14-libs\"},\"version\":\"0:3.14.7-2.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"python3.14-libs\"},\"version\":\"0:3.14.7-2.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"python3.14-libs\"},\"version\":\"0:3.14.7-2.el10_2\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:77018"
+      ]
+    },
+    {
+      "package": "python3.14",
+      "version_with_epoch": "0:3.14.7-2.el10_2",
+      "architecture": "x86_64",
+      "source_rpm": "python3.14-3.14.7-2.el10_2.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"python3.14\"},\"version\":\"0:3.14.7-2.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"python3.14\"},\"version\":\"0:3.14.7-2.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"python3.14\"},\"version\":\"0:3.14.7-2.el10_2\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:77018"
+      ]
+    },
+    {
+      "package": "glibc-langpack-en",
+      "version_with_epoch": "0:2.39-128.el10_2",
+      "architecture": "x86_64",
+      "source_rpm": "glibc-2.39-128.el10_2.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"glibc-langpack-en\"},\"version\":\"0:2.39-128.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"glibc-langpack-en\"},\"version\":\"0:2.39-128.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"glibc-langpack-en\"},\"version\":\"0:2.39-128.el10_2\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:76781",
+        "RHSA-2026:84753"
+      ]
+    },
+    {
+      "package": "libevent",
+      "version_with_epoch": "0:2.1.12-16.el10",
+      "architecture": "x86_64",
+      "source_rpm": "libevent-2.1.12-16.el10.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"libevent\"},\"version\":\"0:2.1.12-16.el10\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"libevent\"},\"version\":\"0:2.1.12-16.el10\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"libevent\"},\"version\":\"0:2.1.12-16.el10\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67909"
+      ]
+    },
+    {
+      "package": "perl-B",
+      "version_with_epoch": "0:1.89-512.2.el10_0",
+      "architecture": "x86_64",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-B\"},\"version\":\"0:1.89-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-B\"},\"version\":\"0:1.89-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-B\"},\"version\":\"0:1.89-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-FileHandle",
+      "version_with_epoch": "0:2.05-512.2.el10_0",
+      "architecture": "noarch",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-FileHandle\"},\"version\":\"0:2.05-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-FileHandle\"},\"version\":\"0:2.05-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-FileHandle\"},\"version\":\"0:2.05-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-AutoLoader",
+      "version_with_epoch": "0:5.74-512.2.el10_0",
+      "architecture": "noarch",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-AutoLoader\"},\"version\":\"0:5.74-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-AutoLoader\"},\"version\":\"0:5.74-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-AutoLoader\"},\"version\":\"0:5.74-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-URI",
+      "version_with_epoch": "0:5.27-3.el10",
+      "architecture": "noarch",
+      "source_rpm": "perl-URI-5.27-3.el10.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-URI\"},\"version\":\"0:5.27-3.el10\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-URI\"},\"version\":\"0:5.27-3.el10\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-URI\"},\"version\":\"0:5.27-3.el10\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:84587"
+      ]
+    },
+    {
+      "package": "perl-if",
+      "version_with_epoch": "0:0.61.000-512.2.el10_0",
+      "architecture": "noarch",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-if\"},\"version\":\"0:0.61.000-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-if\"},\"version\":\"0:0.61.000-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-if\"},\"version\":\"0:0.61.000-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-locale",
+      "version_with_epoch": "0:1.12-512.2.el10_0",
+      "architecture": "noarch",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-locale\"},\"version\":\"0:1.12-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-locale\"},\"version\":\"0:1.12-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-locale\"},\"version\":\"0:1.12-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-Class-Struct",
+      "version_with_epoch": "0:0.68-512.2.el10_0",
+      "architecture": "noarch",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-Class-Struct\"},\"version\":\"0:0.68-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-Class-Struct\"},\"version\":\"0:0.68-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-Class-Struct\"},\"version\":\"0:0.68-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-POSIX",
+      "version_with_epoch": "0:2.20-512.2.el10_0",
+      "architecture": "x86_64",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-POSIX\"},\"version\":\"0:2.20-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-POSIX\"},\"version\":\"0:2.20-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-POSIX\"},\"version\":\"0:2.20-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-IPC-Open3",
+      "version_with_epoch": "0:1.22-512.2.el10_0",
+      "architecture": "noarch",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-IPC-Open3\"},\"version\":\"0:1.22-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-IPC-Open3\"},\"version\":\"0:1.22-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-IPC-Open3\"},\"version\":\"0:1.22-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-SelectSaver",
+      "version_with_epoch": "0:1.02-512.2.el10_0",
+      "architecture": "noarch",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-SelectSaver\"},\"version\":\"0:1.02-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-SelectSaver\"},\"version\":\"0:1.02-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-SelectSaver\"},\"version\":\"0:1.02-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-Symbol",
+      "version_with_epoch": "0:1.09-512.2.el10_0",
+      "architecture": "noarch",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-Symbol\"},\"version\":\"0:1.09-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-Symbol\"},\"version\":\"0:1.09-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-Symbol\"},\"version\":\"0:1.09-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-File-stat",
+      "version_with_epoch": "0:1.14-512.2.el10_0",
+      "architecture": "noarch",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-File-stat\"},\"version\":\"0:1.14-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-File-stat\"},\"version\":\"0:1.14-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-File-stat\"},\"version\":\"0:1.14-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-Fcntl",
+      "version_with_epoch": "0:1.18-512.2.el10_0",
+      "architecture": "x86_64",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-Fcntl\"},\"version\":\"0:1.18-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-Fcntl\"},\"version\":\"0:1.18-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-Fcntl\"},\"version\":\"0:1.18-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-base",
+      "version_with_epoch": "0:2.27-512.2.el10_0",
+      "architecture": "noarch",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-base\"},\"version\":\"0:2.27-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-base\"},\"version\":\"0:2.27-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-base\"},\"version\":\"0:2.27-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-mro",
+      "version_with_epoch": "0:1.29-512.2.el10_0",
+      "architecture": "x86_64",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-mro\"},\"version\":\"0:1.29-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-mro\"},\"version\":\"0:1.29-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-mro\"},\"version\":\"0:1.29-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-IO",
+      "version_with_epoch": "0:1.55-512.2.el10_0",
+      "architecture": "x86_64",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-IO\"},\"version\":\"0:1.55-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-IO\"},\"version\":\"0:1.55-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-IO\"},\"version\":\"0:1.55-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-overloading",
+      "version_with_epoch": "0:0.02-512.2.el10_0",
+      "architecture": "noarch",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-overloading\"},\"version\":\"0:0.02-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-overloading\"},\"version\":\"0:0.02-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-overloading\"},\"version\":\"0:0.02-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-Errno",
+      "version_with_epoch": "0:1.38-512.2.el10_0",
+      "architecture": "x86_64",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-Errno\"},\"version\":\"0:1.38-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-Errno\"},\"version\":\"0:1.38-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-Errno\"},\"version\":\"0:1.38-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-File-Basename",
+      "version_with_epoch": "0:2.86-512.2.el10_0",
+      "architecture": "noarch",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-File-Basename\"},\"version\":\"0:2.86-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-File-Basename\"},\"version\":\"0:2.86-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-File-Basename\"},\"version\":\"0:2.86-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-Getopt-Std",
+      "version_with_epoch": "0:1.14-512.2.el10_0",
+      "architecture": "noarch",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-Getopt-Std\"},\"version\":\"0:1.14-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-Getopt-Std\"},\"version\":\"0:1.14-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-Getopt-Std\"},\"version\":\"0:1.14-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-overload",
+      "version_with_epoch": "0:1.37-512.2.el10_0",
+      "architecture": "noarch",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-overload\"},\"version\":\"0:1.37-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-overload\"},\"version\":\"0:1.37-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-overload\"},\"version\":\"0:1.37-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-vars",
+      "version_with_epoch": "0:1.05-512.2.el10_0",
+      "architecture": "noarch",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-vars\"},\"version\":\"0:1.05-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-vars\"},\"version\":\"0:1.05-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-vars\"},\"version\":\"0:1.05-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-NDBM_File",
+      "version_with_epoch": "0:1.17-512.2.el10_0",
+      "architecture": "x86_64",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-NDBM_File\"},\"version\":\"0:1.17-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-NDBM_File\"},\"version\":\"0:1.17-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-NDBM_File\"},\"version\":\"0:1.17-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-DynaLoader",
+      "version_with_epoch": "0:1.56-512.2.el10_0",
+      "architecture": "x86_64",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-DynaLoader\"},\"version\":\"0:1.56-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-DynaLoader\"},\"version\":\"0:1.56-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-DynaLoader\"},\"version\":\"0:1.56-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-libs",
+      "version_with_epoch": "4:5.40.2-512.2.el10_0",
+      "architecture": "x86_64",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-libs\"},\"version\":\"4:5.40.2-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-libs\"},\"version\":\"4:5.40.2-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-libs\"},\"version\":\"4:5.40.2-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-interpreter",
+      "version_with_epoch": "4:5.40.2-512.2.el10_0",
+      "architecture": "x86_64",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-interpreter\"},\"version\":\"4:5.40.2-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-interpreter\"},\"version\":\"4:5.40.2-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-interpreter\"},\"version\":\"4:5.40.2-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "perl-lib",
+      "version_with_epoch": "0:0.65-512.2.el10_0",
+      "architecture": "x86_64",
+      "source_rpm": "perl-5.40.2-512.2.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"perl-lib\"},\"version\":\"0:0.65-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"perl-lib\"},\"version\":\"0:0.65-512.2.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"perl-lib\"},\"version\":\"0:0.65-512.2.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:67156"
+      ]
+    },
+    {
+      "package": "openssh",
+      "version_with_epoch": "0:9.9p1-25.el10_2",
+      "architecture": "x86_64",
+      "source_rpm": "openssh-9.9p1-25.el10_2.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"openssh\"},\"version\":\"0:9.9p1-25.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"openssh\"},\"version\":\"0:9.9p1-25.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"openssh\"},\"version\":\"0:9.9p1-25.el10_2\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:69129",
+        "RHSA-2026:73954",
+        "RHSA-2026:85847"
+      ]
+    },
+    {
+      "package": "openssh-clients",
+      "version_with_epoch": "0:9.9p1-25.el10_2",
+      "architecture": "x86_64",
+      "source_rpm": "openssh-9.9p1-25.el10_2.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"openssh-clients\"},\"version\":\"0:9.9p1-25.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"openssh-clients\"},\"version\":\"0:9.9p1-25.el10_2\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"openssh-clients\"},\"version\":\"0:9.9p1-25.el10_2\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:69129",
+        "RHSA-2026:73954",
+        "RHSA-2026:85847"
+      ]
+    },
+    {
+      "package": "xz",
+      "version_with_epoch": "1:5.6.2-4.el10_0",
+      "architecture": "x86_64",
+      "source_rpm": "xz-5.6.2-4.el10_0.src.rpm",
+      "vendor": "Red Hat, Inc.",
+      "query_keys": [
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10.2\",\"name\":\"xz\"},\"version\":\"1:5.6.2-4.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::appstream\",\"name\":\"xz\"},\"version\":\"1:5.6.2-4.el10_0\"}",
+        "{\"package\":{\"ecosystem\":\"Red Hat:enterprise_linux:10::baseos\",\"name\":\"xz\"},\"version\":\"1:5.6.2-4.el10_0\"}"
+      ],
+      "mapping_status": "mapped",
+      "vulnerability_ids": [
+        "RHSA-2026:64787"
+      ]
+    }
+  ],
+  "mapping_unknown": 0,
+  "query_unknown": 0,
+  "detail_unknown": 0,
+  "ended_at": "2026-11-01T02:07:08.649615+00:00",
+  "commands": [
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"architecture\":{{json .Architecture}}}",
+        "sha256:7ecc28c0c5d44fba421bd63039b62b82267e43f496e2dd274ae8b4274fc411ac"
+      ],
+      "started_at": "2026-11-01T02:07:02.734310+00:00",
+      "ended_at": "2026-11-01T02:07:02.748510+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "33b4e9f26b0be1c3d39ea6cab6dd831c5ee88c634ddbd6124b6e12158ba8b42a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "512m",
+        "--user",
+        "0:0",
+        "--entrypoint",
+        "python",
+        "sha256:7ecc28c0c5d44fba421bd63039b62b82267e43f496e2dd274ae8b4274fc411ac",
+        "-c",
+        "\nimport pathlib,json,subprocess\nrecords=[]\ntotal=0\nfor f in pathlib.Path('/root/buildinfo').rglob('*.json'):\n    size=f.stat().st_size\n    if len(records)>=30 or size>1048576 or total+size>2097152:\n        raise RuntimeError('bounded Red Hat product metadata exceeded')\n    data=f.read_text()\n    total+=len(data.encode())\n    records.append({'path':str(f),'content':json.loads(data)})\nprint(json.dumps({'content_manifests':records,'rpm_query':subprocess.check_output([\n    'rpm','-qa','--qf','%{NAME}\\t%{EPOCHNUM}:%{VERSION}-%{RELEASE}\\t%{ARCH}\\t%{SOURCERPM}\\t%{VENDOR}\\n'\n]).decode()}))\n"
+      ],
+      "started_at": "2026-11-01T02:07:02.748551+00:00",
+      "ended_at": "2026-11-01T02:07:03.000354+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "cd8a85b42bc0066b8c5abdd43928b9b7bb19b218060e46d4079b9f6730154a56",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "512m",
+        "--user",
+        "0:0",
+        "--entrypoint",
+        "sh",
+        "sha256:7ecc28c0c5d44fba421bd63039b62b82267e43f496e2dd274ae8b4274fc411ac",
+        "-c",
+        "\nprintf '===os-release===\\n'\nif [ -r /etc/os-release ]; then cat /etc/os-release; fi\nprintf '\\n===apk===\\n'\nif [ -r /lib/apk/db/installed ]; then cat /lib/apk/db/installed; fi\nprintf '\\n===dpkg===\\n'\nif command -v dpkg-query >/dev/null 2>&1; then\n dpkg_fmt='${binary:Package}\\t${Version}\\t${Architecture}'\n dpkg_fmt=\"$dpkg_fmt\"'\\t${source:Package}\\t${source:Version}\\n'\n dpkg-query -W -f=\"$dpkg_fmt\"\nfi\nprintf '\\n===dpkg-licenses===\\n'\nfor copyright_path in /usr/share/doc/*/copyright; do\n [ -r \"$copyright_path\" ] || continue\n package_path=${copyright_path%/copyright}\n printf '%s\\t' \"${package_path##*/}\"\n awk '/^License:/ {gsub(/\\t/, \" \"); printf \"%s;\", $0}' \"$copyright_path\"\n printf '\\n'\ndone\nprintf '\\n===rpm===\\n'\nif command -v rpm >/dev/null 2>&1; then\n rpm -qa --qf '%{NAME}\\t%{VERSION}-%{RELEASE}\\t%{ARCH}\\t%{LICENSE}\\n'\nfi\n"
+      ],
+      "started_at": "2026-11-01T02:07:03.000451+00:00",
+      "ended_at": "2026-11-01T02:07:03.215123+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "e96c3ea2b9e18b381542c7b154778ac241a1e56ac545514861c69caeed54079c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "source_inputs": [
+    {
+      "path": "scripts/scan_images_osv.py",
+      "sha256": "0358ef68c8d866847f870f08770716d32cb2968b3eb684d2f00cb5088b9001db"
+    },
+    {
+      "path": "scripts/scan_release.py",
+      "sha256": "f3f353ff9a50651aa864aa75dbb480da9481dc78aaacaac2b74a90616558ea0c"
+    }
+  ],
+  "files": [
+    {
+      "path": "langflow-identity.stdout",
+      "bytes": 104,
+      "sha256": "33b4e9f26b0be1c3d39ea6cab6dd831c5ee88c634ddbd6124b6e12158ba8b42a"
+    },
+    {
+      "path": "langflow-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "langflow-redhat-metadata.stdout",
+      "bytes": 23106,
+      "sha256": "cd8a85b42bc0066b8c5abdd43928b9b7bb19b218060e46d4079b9f6730154a56"
+    },
+    {
+      "path": "langflow-redhat-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "langflow-os.stdout",
+      "bytes": 21395,
+      "sha256": "e96c3ea2b9e18b381542c7b154778ac241a1e56ac545514861c69caeed54079c"
+    },
+    {
+      "path": "langflow-os.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "repository-to-cpe.json",
+      "bytes": 4368758,
+      "sha256": "8ca46dae36ed2fae023cbc6262076629d854a428acaed1f062c9aaa3835da25e"
+    },
+    {
+      "path": "product-bindings.json",
+      "bytes": 1807,
+      "sha256": "81f7062f05a55fbc3034ee027392f46e41459149e58cb2725d1d6f820747bab3"
+    },
+    {
+      "path": "rpm-mappings.json",
+      "bytes": 330741,
+      "sha256": "f3631cdc47ec9a716de6164ba6936e0cc59fb895d582eb7c2065d0137e7bd857"
+    },
+    {
+      "path": "vulnerabilities.json",
+      "bytes": 553143,
+      "sha256": "fbf5a9e1d13bcd5481c6f003c451db53ac0519c7a4c00f192d75d1b0fe492a81"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 39124,
+      "sha256": "5fa216682c193285d76510fa5eda9565e3c8f2bac5f93f66301a6c023161ba02"
+    },
+    {
+      "path": "http-records.json",
+      "bytes": 159070,
+      "sha256": "e23064628350d14b309934b7a261225d24c7769ed376962c84fc18519104768c"
+    }
+  ],
+  "limitations": [
+    "Supplement scans RPM software only; prior same-image Python scan retained.",
+    "RPM binary names and full installed epoch:version-release are sent to OSV.",
+    "Red Hat content_set plus official repository mapping selects current minor and main streams; other minor/EUS streams are excluded.",
+    "Installed gpg-pubkey RPM metadata records are classified as keys, not code.",
+    "No full filesystem/static binary scan; no exposed OSV DB snapshot date.",
+    "No match is not proof of safety; unknown mappings/results remain unknown.",
+    "OSV Red Hat schema and official repository mapping are required inputs.",
+    "Findings are potential package impact; module/product applicability is not independently evaluated beyond installed epoch/arch and bound repository CPEs."
+  ],
+  "output_limit_bytes": 41943040,
+  "output_limit_files": 200
+}

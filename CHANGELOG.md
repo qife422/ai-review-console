@@ -2,6 +2,15 @@
 
 本文件记录主要功能与交接边界；精确代码差异以 Git 提交为准。开发快照不是正式发布，源码备份不是运行数据库备份。
 
+## 2026-10-31 — v0.2 兼容与许可补验
+
+- 先完成镜像/缓存精确盘点和二次回读：本地 layers/镜像/cache 集合与大小未增长；历史归属仍不足，继续暂停本地 build/pull，不 prune 或清理历史。
+- OAuthlib 4.0.0、datamodel-code-generator 0.81.0、OTel 1.45.1/0.66b1 成套升级；原 29 pins 保留，另固定两个必需 exporter 包，共 52 pins。
+- 新增离线兼容/安全探针；首次 a59 的低层解析器长度断言失败已保留，按精确上游源码改测入站传播器及分段头合计上限，没有降低阈值。最终 a64 的 [CI 41263397231](https://github.com/qife422/ai-review-console/actions/runs/41263397231) 实际通过 161 Python、29 前端、真实 Flow/报告、双主题双尺寸浏览器、pip check 与新探针。
+- 补入两份许可原文及 Langflow 镜像三份随包材料，实际哈希与采集额度已核实；排除误选源码/pyc。补齐真实 native 版本、路径哈希、源码校验与缺项，100 路径计划实际读 101 的偏差明确保留。
+- Langflow 剩余 Python 包级匹配由 8 个缩至 5 个；上游上限、无明确修复、系统项、Zep 精确许可及完整 native/二进制分发材料仍未闭环。AC-19 未通过，完整技术和最终接受仍待定，没有部署真实后端或重部署静态站点。
+- 已解决、待解决和下一步统一在 [本轮补验](docs/evidence/release-compatibility/README.md)；旧证据逐文件核对不变，最小增量证据及状态同步 GitHub。
+
 ## 2026-10-31 — v0.2 依赖修补与发布检查
 
 - 应用运行锁修补 certifi、Pillow、pypdf，33 包审计由本轮 67 原始结果 / 66 alias 组变为 0；前端 Vite/Vitest 及相关 family、source-map-js/undici 修补后 npm 全量及运行范围均 0，保留无关 pin。

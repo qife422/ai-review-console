@@ -1,0 +1,10 @@
+{
+  "created_at": "2026-11-01T01:50:53.108222+00:00",
+  "source_commit": "a59dc31c74c5b2b9ed24b4b35be3cc7f2411154d",
+  "run_id": 41262700501,
+  "evidence_limit_bytes": 20971520,
+  "evidence_limit_files": 200,
+  "transport_zip_not_formal": true,
+  "free_before": 13447753728,
+  "method": "Metadata size check before download; archive member/path/size checks before selected extraction; no overwrites. Reuse unchanged baseline fixed evidence by exact hash if required to remain within delta budget."
+}

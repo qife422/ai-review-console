@@ -1,0 +1,149 @@
+{
+  "at": "2026-11-01T02:09:26.142055+00:00",
+  "run": {
+    "attempt": 1,
+    "conclusion": "success",
+    "databaseId": 41263397231,
+    "event": "push",
+    "headSha": "a64ab476c8acfaa36a3d6cc260a4c6c286bad380",
+    "startedAt": "2026-11-01T02:00:40Z",
+    "status": "completed",
+    "updatedAt": "2026-11-01T02:07:15Z",
+    "url": "https://github.com/qife422/ai-review-console/actions/runs/41263397231",
+    "workflowName": "CI"
+  },
+  "contract": "ARC-UPGRADE@0.1.0",
+  "unit_tests": {
+    "passed": 161,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "junit": "arc-unit.xml"
+  },
+  "frontend": {
+    "passed": 29,
+    "test_files": 5,
+    "fresh_npm_ci": "passed",
+    "Ruff_and_typescript_build": "passed"
+  },
+  "workflow": {
+    "result": "passed",
+    "source_formats": [
+      "txt",
+      "docx",
+      "pdf",
+      "md"
+    ],
+    "decisions": [
+      "approved",
+      "rejected",
+      "changes_requested"
+    ],
+    "report_download_count": 9,
+    "component_count": 5,
+    "stored_flow_hashes_unchanged": true,
+    "failure_retry": "failed as expected; unscored; same case/version; one manual retry generation",
+    "benchmark": null
+  },
+  "browser": {
+    "outcome": "passed",
+    "steps": 28,
+    "cli_commands": 212,
+    "mode_counts": {
+      "tool": 1,
+      "real-ui": 16,
+      "browser-network-simulation": 2,
+      "browser-delay-simulation": 1,
+      "real-workflow": 6,
+      "browser-response-simulation": 2
+    },
+    "four_screenshots": "screenshot-provenance.json",
+    "raw_hidden_downloads": "Not uploaded by default; run assertions retained, no unavailable byte-preservation claim."
+  },
+  "compatibility_probe": {
+    "network": "forbidden",
+    "versions": {
+      "datamodel-code-generator": "0.81.0",
+      "oauthlib": "4.0.0",
+      "opentelemetry-api": "1.45.1",
+      "opentelemetry-instrumentation": "0.66b1",
+      "opentelemetry-sdk": "1.45.1"
+    },
+    "oauthlib": {
+      "baseline_old_jsonp_expected": false,
+      "jsonp_parameter_removed": true,
+      "pkce_request": "passed",
+      "requests_oauthlib_prepare": "passed",
+      "state_rejection": "passed",
+      "token_and_revocation": "passed"
+    },
+    "datamodel": {
+      "fixed_schema_sha256": "0cee68a71f00321dc6cbb183bb7e809d67f6ba5f06cf61e6f19996e0ded40d2c",
+      "generated_sha256": "4eae988f715c0bd29c1f249d88479a9af7cc932aa6af815d6badccc07c079a6f",
+      "rejected_payloads": 3,
+      "valid_payloads": 1
+    },
+    "otel_ingress": {
+      "all_discarded": true,
+      "cases": [
+        {
+          "case": "single",
+          "combined_bytes": 8351,
+          "discarded": true,
+          "header_fields": 1,
+          "trace_id_preserved": true
+        },
+        {
+          "case": "split",
+          "combined_bytes": 8351,
+          "discarded": true,
+          "header_fields": 2,
+          "trace_id_preserved": true
+        }
+      ],
+      "entrypoint": "TraceContextTextMapPropagator.extract",
+      "limit_bytes": 8192
+    },
+    "import_sources": [
+      {
+        "module": "opentelemetry.trace.span",
+        "path": "/app/.venv/lib64/python3.14/site-packages/opentelemetry/trace/span.py",
+        "resolved_path": "/app/.venv/lib/python3.14/site-packages/opentelemetry/trace/span.py",
+        "sha256": "67886d3802f7d87adcc6bc26d790ecef0b1fb89b1aed3e28f7c6d73b0b739e38"
+      },
+      {
+        "module": "opentelemetry.trace.propagation.tracecontext",
+        "path": "/app/.venv/lib64/python3.14/site-packages/opentelemetry/trace/propagation/tracecontext.py",
+        "resolved_path": "/app/.venv/lib/python3.14/site-packages/opentelemetry/trace/propagation/tracecontext.py",
+        "sha256": "ac6fbcf1610a51ebf9d9161e42e9e98d4e22a50552c57bb37596a62963e00776"
+      }
+    ],
+    "scratch": {
+      "bytes": 447,
+      "files": 1
+    }
+  },
+  "scan": {
+    "primary_exit_code": 2,
+    "rhel_exit_code": 1,
+    "primary_unique_queries": 797,
+    "primary_provider_IDs": 222,
+    "rhel_provider_IDs": 23,
+    "global_provider_ID_union": 245,
+    "primary_mapping_unknown": 226,
+    "primary_unknown_kind_counts": {
+      "langflow:rpm": 226
+    },
+    "rhel_exact_name_version_arch_set_equal": true,
+    "same_LF_image_ID": true,
+    "rhel_mapping_states": {
+      "mapped": 223,
+      "metadata_only_rpm_public_key_not_software": 3
+    },
+    "combined_mapping_query_detail_unknown": 0,
+    "qualification": "Installed package/Python metadata coverage only; no full filesystem/static bundled binary/reachability audit. Preserve original exit codes. Provider IDs are not deduplicated CVE counts; findings remain unaccepted."
+  },
+  "license_review": "../license-final-review.json (independent agent review expected, not CI legal approval)",
+  "compatibility_review": "../compatibility-final-review.json",
+  "scope": "Complete successful new-source CI evidence; prior a59 failed probe preserved separately. Collection success does not pass release gate or approve remaining findings/distribution."
+}

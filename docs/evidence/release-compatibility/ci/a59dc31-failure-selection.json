@@ -1,0 +1,123 @@
+{
+  "source_commit": "a59dc31c74c5b2b9ed24b4b35be3cc7f2411154d",
+  "run_id": 41262700501,
+  "artifact_id": 13066360264,
+  "zip_sha256": "74c6b64384f7ad6119403c6bf372056670d141e93d9ecf05c8c3274f344bc33f",
+  "selected": [
+    {
+      "path": "a59dc31-failure/release/api-container.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "a59dc31-failure/release/api-container.stdout",
+      "bytes": 65,
+      "sha256": "66ee17072e58fa02c065bbdd373dbb7a7536e79f959780c8f2555d8b3f52d4ca"
+    },
+    {
+      "path": "a59dc31-failure/release/api-image.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "a59dc31-failure/release/api-image.stdout",
+      "bytes": 95,
+      "sha256": "29ef8a1e1c21a527e6063851d09f73e128351feb2bc64e70962ed77bfdceafbd"
+    },
+    {
+      "path": "a59dc31-failure/release/api-pip-check.stderr",
+      "bytes": 266,
+      "sha256": "008cb6f70ed4af61f44bf24afe092613fa4ba3c1eb10ad4b6b26f20545063a3a"
+    },
+    {
+      "path": "a59dc31-failure/release/api-pip-check.stdout",
+      "bytes": 30,
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "path": "a59dc31-failure/release/dependency-compatibility.stderr",
+      "bytes": 669,
+      "sha256": "cb5d582cee61390f6f67378e402d5f4bf4fe5d097f2fbc7abd7bf25f96f637ce"
+    },
+    {
+      "path": "a59dc31-failure/release/dependency-compatibility.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "a59dc31-failure/release/langflow-container.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "a59dc31-failure/release/langflow-container.stdout",
+      "bytes": 65,
+      "sha256": "5c562bf559cdb8563117526c1fb103dfbc176193ac3eebef249d7daa58c28313"
+    },
+    {
+      "path": "a59dc31-failure/release/langflow-image.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "a59dc31-failure/release/langflow-image.stdout",
+      "bytes": 100,
+      "sha256": "48e590ebb9f564565eecb7fcc7850016873def264a361b52ca1b7ae3adb3f68d"
+    },
+    {
+      "path": "a59dc31-failure/release/langflow-pip-check.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "a59dc31-failure/release/langflow-pip-check.stdout",
+      "bytes": 30,
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "path": "a59dc31-failure/release/manifest.json",
+      "bytes": 11893,
+      "sha256": "ee6f7f17e2cdfdbb68215985672010605c65d83b9fa02277564c4f93cf84df7a"
+    },
+    {
+      "path": "a59dc31-failure/release/postgres-container.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "a59dc31-failure/release/postgres-container.stdout",
+      "bytes": 65,
+      "sha256": "56b060ac30e065ddea7a1378469a2fa3473cbecb603d6bfcb61e37b66e43c076"
+    },
+    {
+      "path": "a59dc31-failure/release/postgres-image.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "a59dc31-failure/release/postgres-image.stdout",
+      "bytes": 100,
+      "sha256": "4e2866d5f809c53e2926c1f81105234a9a917fe2d20c805f637e927d83934a84"
+    },
+    {
+      "path": "a59dc31-failure/release/web-container.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "a59dc31-failure/release/web-container.stdout",
+      "bytes": 65,
+      "sha256": "1861c3c0b6a7fdb7fb2664189b5b57378b50d0cb4e2b6884cf83921731cbfe3a"
+    },
+    {
+      "path": "a59dc31-failure/release/web-image.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "a59dc31-failure/release/web-image.stdout",
+      "bytes": 95,
+      "sha256": "74416a9f3e06df2797c7a23ab392d77f785ea15efc47260c541c447469d06742"
+    }
+  ]
+}

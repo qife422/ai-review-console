@@ -1,0 +1,26 @@
+{
+  "downloaded_at": "2026-11-01T02:03:55.765170+00:00",
+  "producer": "GitHub connector bounded artifact download",
+  "artifact_id": 13066535377,
+  "source_commit": "a64ab476c8acfaa36a3d6cc260a4c6c286bad380",
+  "run_id": 41263397231,
+  "zip_bytes": 3655,
+  "zip_sha256": "2d781c50edfa0ef2cb52113bf559241036b1c0d138eb9a29a6280c135b077136",
+  "selected": [
+    "arc-unit.xml"
+  ],
+  "selected_bytes": 22201,
+  "selected_sha256": "6868b19911c58d86aca2496a0c71316077af24060dcbc920f5d667bb0f4501a2",
+  "junit_suites": [
+    {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "161",
+      "time": "3.478",
+      "timestamp": "2026-11-01T02:01:15.070338+00:00",
+      "hostname": "runnervm48cm3"
+    }
+  ]
+}

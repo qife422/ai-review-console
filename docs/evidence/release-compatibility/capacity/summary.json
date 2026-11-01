@@ -1,0 +1,117 @@
+{
+  "at": "2026-11-01T01:44:43.046927+00:00",
+  "method": "Docker Engine GET /v1.51/system/df; exact IDs and API-reported accounting; no build/pull/prune",
+  "raw_sha256": "72a2aad7124d03b5e2937267584316b6053da5818530a0efb65f35218d43be3e",
+  "global_layers_size": 21874078300,
+  "project_tagged_images": [
+    {
+      "id": "sha256:865e7348409fecd375f86f622c99f1510d98f31f833ab1dad2c9b2bd16a85751",
+      "tags": [
+        "ai-review-console-langflow:v02-release"
+      ],
+      "reported_size": 4751823691,
+      "shared_with_global": 3355750400,
+      "global_exclusive_lower_bound": 1396073291,
+      "containers": 1
+    },
+    {
+      "id": "sha256:ec611a3c036474e409e9e94e212a382fe14c67ef06d62b83db2d8e9ecfd533cb",
+      "tags": [
+        "ai-review-console-api:v02-release"
+      ],
+      "reported_size": 464687549,
+      "shared_with_global": 0,
+      "global_exclusive_lower_bound": 464687549,
+      "containers": 2
+    },
+    {
+      "id": "sha256:0cd661b2e5b9c028aebb7b2b616c2f56cf87885da167ce6a4e001f0341345deb",
+      "tags": [
+        "ai-review-console-web:v02-release"
+      ],
+      "reported_size": 100364955,
+      "shared_with_global": 0,
+      "global_exclusive_lower_bound": 100364955,
+      "containers": 1
+    },
+    {
+      "id": "sha256:827925e33497504894c22220231543a2eef36c4a7e5581d86349797d63220124",
+      "tags": [
+        "ai-review-console-upgrade-web:latest"
+      ],
+      "reported_size": 84877298,
+      "shared_with_global": 57262080,
+      "global_exclusive_lower_bound": 27615218,
+      "containers": 1
+    },
+    {
+      "id": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+      "tags": [
+        "ai-review-console-api:local"
+      ],
+      "reported_size": 448975559,
+      "shared_with_global": 166539264,
+      "global_exclusive_lower_bound": 282436295,
+      "containers": 11
+    },
+    {
+      "id": "sha256:ff0f5cc380743034c05b4bfcf587be0e714da1610799f0c7c41d45902a5267c4",
+      "tags": [
+        "ai-review-console-langflow:latest"
+      ],
+      "reported_size": 4325318256,
+      "shared_with_global": 3355750400,
+      "global_exclusive_lower_bound": 969567856,
+      "containers": 1
+    },
+    {
+      "id": "sha256:842abd5245becdded1521f365b123875390e51c746c828c7e281f74208de61c0",
+      "tags": [
+        "ai-review-console-api:latest"
+      ],
+      "reported_size": 413453106,
+      "shared_with_global": 322949120,
+      "global_exclusive_lower_bound": 90503986,
+      "containers": 0
+    },
+    {
+      "id": "sha256:359945d7da35eb6d0a11b5233406a8c0cdb1429ddfa61f093b08c86ead6df47c",
+      "tags": [
+        "ai-review-console-flow-init:latest"
+      ],
+      "reported_size": 413452977,
+      "shared_with_global": 322949120,
+      "global_exclusive_lower_bound": 90503857,
+      "containers": 0
+    },
+    {
+      "id": "sha256:feca3cf30ad38e857c9b001634d874461f7e8d1a22e9f8c14f23dca4f873e80f",
+      "tags": [
+        "ai-review-console-web:latest"
+      ],
+      "reported_size": 84741107,
+      "shared_with_global": 57262080,
+      "global_exclusive_lower_bound": 27479027,
+      "containers": 1
+    }
+  ],
+  "project_image_global_exclusive_sum_lower_bound": 3449232034,
+  "project_image_virtual_sum_upper_bound": 11087694498,
+  "global_buildcache_records": 259,
+  "global_buildcache_counts": {
+    "Shared=False": 162,
+    "InUse=False": 259,
+    "Shared=True": 97
+  },
+  "global_buildcache_reported_sizes": {
+    "Shared=False": 2413293031,
+    "InUse=False": 8757132483,
+    "Shared=True": 6343839452
+  },
+  "caveats": [
+    "SharedSize values overlap; summing them is not physical usage",
+    "API metadata lacks per-layer byte sizes and exact build-cache ownership; no exact deduplicated per-project total or historical net-growth claim",
+    "Global BuildCache includes other projects/shared records; no deletion authority inferred"
+  ],
+  "free_bytes": 14510866432
+}

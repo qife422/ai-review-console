@@ -1,0 +1,63 @@
+{
+  "at": "2026-11-01T02:09:26.142055+00:00",
+  "source_commit": "a64ab476c8acfaa36a3d6cc260a4c6c286bad380",
+  "run_id": 41263397231,
+  "browser_outcome": "passed",
+  "screenshots": [
+    {
+      "path": "browser/reports-ready-1440-light.png",
+      "bytes": 218739,
+      "sha256": "087b82afbd75a3dc65881badcdd72c515f829be41095956714e9c5c4d943fd84",
+      "width_height": [
+        1440,
+        1660
+      ],
+      "CLI_mode": "real-ui",
+      "theme": "white",
+      "recorded_at": "2026-11-01T02:06:07.680Z",
+      "verification": "Original CI screenshot bytes and browser producer manifest hash match; associated real-ui layout assertion passed. No new design changes or separate visual review claimed."
+    },
+    {
+      "path": "browser/reports-ready-1440-dark.png",
+      "bytes": 219102,
+      "sha256": "856f2548bf0aa1c49e15bffb14ecf58d44e654236f19a5b53b548eaf9f74b8b4",
+      "width_height": [
+        1440,
+        1660
+      ],
+      "CLI_mode": "real-ui",
+      "theme": "g100",
+      "recorded_at": "2026-11-01T02:06:09.879Z",
+      "verification": "Original CI screenshot bytes and browser producer manifest hash match; associated real-ui layout assertion passed. No new design changes or separate visual review claimed."
+    },
+    {
+      "path": "browser/reports-ready-390-light.png",
+      "bytes": 203588,
+      "sha256": "65b8dd8dffeb5859425a4cbab25fe6ff2830a871d8e5c23287cc55ee9f90dcf0",
+      "width_height": [
+        390,
+        3269
+      ],
+      "CLI_mode": "real-ui",
+      "theme": "white",
+      "recorded_at": "2026-11-01T02:06:12.392Z",
+      "verification": "Original CI screenshot bytes and browser producer manifest hash match; associated real-ui layout assertion passed. No new design changes or separate visual review claimed."
+    },
+    {
+      "path": "browser/reports-ready-390-dark.png",
+      "bytes": 206434,
+      "sha256": "6aeddc94e0504b30a67290376182b2d13597824b54190301062687fd77c3b11c",
+      "width_height": [
+        390,
+        3269
+      ],
+      "CLI_mode": "real-ui",
+      "theme": "g100",
+      "recorded_at": "2026-11-01T02:06:14.548Z",
+      "verification": "Original CI screenshot bytes and browser producer manifest hash match; associated real-ui layout assertion passed. No new design changes or separate visual review claimed."
+    }
+  ],
+  "font_family": "Noto Sans SC",
+  "font_installed_hash_record": "e3b799e4230233500ff152d1cc81ade6c64acb34958c90cd6b6e02927a2923a9  review_core/assets/NotoSansSC-Regular.ttf\ne3b799e4230233500ff152d1cc81ade6c64acb34958c90cd6b6e02927a2923a9  /home/runner/.local/share/fonts/arc/NotoSansSC-Regular.ttf\n",
+  "hidden_file_qualification": "Raw producer result lists hidden CLI snapshots/downloads omitted by GitHub upload-artifact defaults. Only actual selected files are retained; runtime download hash assertions remain recorded."
+}

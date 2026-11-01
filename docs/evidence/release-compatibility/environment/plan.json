@@ -1,0 +1,32 @@
+{
+  "scope": "WP-05 remaining dependency compatibility and license closure",
+  "contract": "ARC-UPGRADE@0.1.0",
+  "source_head": "2b82956909f7bb08e4fc30c025163df0d0464f51",
+  "source_author_baseline": "reuse prior source-inputs107 and measure added delta; source fixed by Git",
+  "temporary_root": "/private/tmp/arc-release-followup.rLeRu5",
+  "candidate_root": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/artifacts/evidence-candidates/release-compatibility",
+  "sealed_root": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docs/evidence/release-compatibility",
+  "thresholds": {
+    "temporary_bytes": 268435456,
+    "temporary_files": 10000,
+    "evidence_bytes": 104857600,
+    "evidence_files": 1000,
+    "cache_total_bytes": 4294967296,
+    "cache_files": 100000,
+    "docker_project_bytes": 12884901888,
+    "docker_wp_growth_bytes": 3221225472,
+    "amplification_bytes": 1073741824,
+    "amplification_ratio": 100
+  },
+  "execution": "no local builds/pulls or cache growth while prior Docker capacity warning unresolved; reuse immutable local images for read-only probes, existing GitHub CI for bounded isolated build/regression",
+  "cleanup_authorized": false,
+  "budget": "same cfd2d589 goal; 3034.19s already used of90min; no reset",
+  "protected": [
+    "original SQLite and all historical volumes",
+    "fixed Spec/baseline",
+    "docs/evidence/v02-acceptance",
+    "docs/evidence/v02-release",
+    "previous temp/candidate material"
+  ],
+  "new_run_output_limit": 41943040
+}

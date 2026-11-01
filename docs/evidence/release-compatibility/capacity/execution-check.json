@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-01T01:56:11.278106+00:00",
+  "method": "Repeat local Engine GET /v1.51/system/df; compare immutable image-ID/size/shared and build-cache-ID/size/shared sets, no build/pull/prune",
+  "before_raw_sha256": "72a2aad7124d03b5e2937267584316b6053da5818530a0efb65f35218d43be3e",
+  "after_raw_sha256": "046d084532bb4b341a19685f53846cf23641cd0f09132af627dc310b3b92fc7f",
+  "global_raw_snapshots_public": false,
+  "global_layers_before": 21874078300,
+  "global_layers_after": 21874078300,
+  "image_identity_size_shared_unchanged": true,
+  "build_cache_identity_size_shared_unchanged": true,
+  "running_containers": 0,
+  "host_free_bytes": 13436870656,
+  "physical_project_attribution": "still unproven; prior warning remains",
+  "cleanup": false
+}

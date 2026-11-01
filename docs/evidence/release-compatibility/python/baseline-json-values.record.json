@@ -1,0 +1,33 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "-i",
+    "--network",
+    "none",
+    "--read-only",
+    "--cap-drop",
+    "ALL",
+    "--security-opt",
+    "no-new-privileges",
+    "--memory",
+    "512m",
+    "--pids-limit",
+    "64",
+    "--tmpfs",
+    "/tmp:rw,noexec,nosuid,size=32m",
+    "--entrypoint",
+    "python",
+    "sha256:865e7348409fecd375f86f622c99f1510d98f31f833ab1dad2c9b2bd16a85751",
+    "-B",
+    "-",
+    "--baseline"
+  ],
+  "started_at": "2026-11-01T01:47:14.690236+00:00",
+  "ended_at": "2026-11-01T01:47:16.995928+00:00",
+  "exit_code": 0,
+  "producer_sha256": "31b51b1f0d64ce73371d08f25263fdfb9d1cdf078be0e12d6691a664deaf75f4",
+  "stdout_sha256": "57fab4474269aee51b2a5153eaa867bb545f2eb9fbae75a0ace6500c036321b1",
+  "stderr_sha256": "a30099c8f0e24f22df1cab60948d6ea90de48f5729a9ba18b6d342b3a5cebdb9"
+}

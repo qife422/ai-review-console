@@ -1,0 +1,134 @@
+worker-1  | 2026-11-01 02:04:08,814 INFO Worker worker-61dcd14c400d45e4 started
+worker-1  | 2026-11-01 02:04:10,842 INFO HTTP Request: POST http://api:8000/api/integrations/langflow/jobs/JB-5b43c384b5214609b273b6a0902916be/started "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:11,048 INFO HTTP Request: POST http://langflow:7860/api/v1/login "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:11,054 INFO HTTP Request: GET http://langflow:7860/api/v1/flows/d2a50074-f98e-49f1-aea9-2de1d628a4f6 "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:11,310 INFO HTTP Request: POST http://langflow:7860/api/v1/build/d2a50074-f98e-49f1-aea9-2de1d628a4f6/flow?event_delivery=polling "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:11,324 INFO HTTP Request: GET http://langflow:7860/api/v1/build/430c28db-6a0b-4dcc-8359-7c39c9e0d9b5/events "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:13,379 INFO HTTP Request: POST http://api:8000/api/integrations/langflow/jobs/JB-cb0784bc571f4c6b84383f46838dd1c5/started "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:13,387 INFO HTTP Request: GET http://langflow:7860/api/v1/flows/2cfcf361-c180-461a-8d2b-929feb029aec "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:13,406 INFO HTTP Request: POST http://langflow:7860/api/v1/build/2cfcf361-c180-461a-8d2b-929feb029aec/flow?event_delivery=polling "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:13,415 INFO HTTP Request: GET http://langflow:7860/api/v1/build/5ed63d48-18ee-4e19-94ce-58281847c627/events "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:14,163 INFO HTTP Request: POST http://api:8000/api/integrations/langflow/reports "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:16,177 INFO HTTP Request: POST http://api:8000/api/integrations/langflow/jobs/JB-0c1cf5064b7340edb4dc529814ff9be8/started "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:16,185 INFO HTTP Request: GET http://langflow:7860/api/v1/flows/d2a50074-f98e-49f1-aea9-2de1d628a4f6 "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:16,207 INFO HTTP Request: POST http://langflow:7860/api/v1/build/d2a50074-f98e-49f1-aea9-2de1d628a4f6/flow?event_delivery=polling "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:16,217 INFO HTTP Request: GET http://langflow:7860/api/v1/build/fb6b0b94-543f-4307-9f28-4bd429786ed5/events "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:18,300 INFO HTTP Request: POST http://api:8000/api/integrations/langflow/jobs/JB-d0d49f540ab44134b657203ed23cb7ff/started "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:18,309 INFO HTTP Request: GET http://langflow:7860/api/v1/flows/2cfcf361-c180-461a-8d2b-929feb029aec "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:18,326 INFO HTTP Request: POST http://langflow:7860/api/v1/build/2cfcf361-c180-461a-8d2b-929feb029aec/flow?event_delivery=polling "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:18,336 INFO HTTP Request: GET http://langflow:7860/api/v1/build/2af8a4ff-9eb2-46c1-a78e-e0163b165907/events "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:18,383 INFO HTTP Request: POST http://api:8000/api/integrations/langflow/reports "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:20,397 INFO HTTP Request: POST http://api:8000/api/integrations/langflow/jobs/JB-d4827314c66a44eabb94beb167a4dfa3/started "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:20,404 INFO HTTP Request: GET http://langflow:7860/api/v1/flows/d2a50074-f98e-49f1-aea9-2de1d628a4f6 "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:20,427 INFO HTTP Request: POST http://langflow:7860/api/v1/build/d2a50074-f98e-49f1-aea9-2de1d628a4f6/flow?event_delivery=polling "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:20,437 INFO HTTP Request: GET http://langflow:7860/api/v1/build/4238fe69-9153-4274-a900-0bfd22ddab82/events "HTTP/1.1 200 OK"
+api-1     | INFO:     172.18.0.5:55436 - "GET /api/cases/RC-32ee8135d1f343e68f4de84ca4e1ce94/report/pdf?report_id=RP-71a2445675624e43a8ae8db393666555 HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:55448 - "POST /api/cases HTTP/1.1" 202 Accepted
+api-1     | INFO:     172.18.0.5:55462 - "GET /api/cases/RC-faff25c131ff4e14b4ca2a665efb9be5 HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:55472 - "GET /api/cases/RC-faff25c131ff4e14b4ca2a665efb9be5 HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.6:56808 - "POST /api/integrations/langflow/jobs/JB-bbcf4dc6a897495ba554ecc7affd8f52/started HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.3:39012 - "POST /api/integrations/langflow/results HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:59926 - "GET /api/cases/RC-faff25c131ff4e14b4ca2a665efb9be5 HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:59938 - "POST /api/cases HTTP/1.1" 202 Accepted
+api-1     | INFO:     172.18.0.5:59948 - "GET /api/cases/RC-6b63b4cccea84a70bd7e2d8266cb57ef HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:59958 - "GET /api/cases/RC-6b63b4cccea84a70bd7e2d8266cb57ef HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.6:56808 - "POST /api/integrations/langflow/jobs/JB-f58496115dda4a16b15c1ba912b4e743/started HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:59970 - "GET /api/cases/RC-6b63b4cccea84a70bd7e2d8266cb57ef HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.6:56808 - "POST /api/integrations/langflow/jobs/JB-f58496115dda4a16b15c1ba912b4e743/failure HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:59976 - "GET /api/cases/RC-6b63b4cccea84a70bd7e2d8266cb57ef HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:59990 - "POST /api/cases/RC-6b63b4cccea84a70bd7e2d8266cb57ef/retry HTTP/1.1" 202 Accepted
+api-1     | INFO:     172.18.0.5:60004 - "POST /api/cases/RC-6b63b4cccea84a70bd7e2d8266cb57ef/retry HTTP/1.1" 202 Accepted
+api-1     | INFO:     172.18.0.5:60010 - "GET /api/cases/RC-6b63b4cccea84a70bd7e2d8266cb57ef HTTP/1.1" 200 OK
+api-1     | INFO:     127.0.0.1:58428 - "GET /api/health HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:60024 - "GET /api/cases/RC-6b63b4cccea84a70bd7e2d8266cb57ef HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.6:56808 - "POST /api/integrations/langflow/jobs/JB-afe477f1aca4412ba5d9c0148dd28ced/started HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:60030 - "GET /api/cases/RC-6b63b4cccea84a70bd7e2d8266cb57ef HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.6:56808 - "POST /api/integrations/langflow/jobs/JB-afe477f1aca4412ba5d9c0148dd28ced/failure HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:60040 - "GET /api/cases/RC-6b63b4cccea84a70bd7e2d8266cb57ef HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:60046 - "POST /api/cases HTTP/1.1" 202 Accepted
+api-1     | INFO:     127.0.0.1:37776 - "GET /api/health HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:59266 - "GET /api/summary HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:59282 - "GET /api/cases HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:59268 - "GET /api/system/status HTTP/1.1" 200 OK
+api-1     | INFO:     127.0.0.1:38998 - "GET /api/health HTTP/1.1" 200 OK
+api-1     | INFO:     127.0.0.1:55494 - "GET /api/health HTTP/1.1" 200 OK
+api-1     | INFO:     127.0.0.1:36140 - "GET /api/health HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:58894 - "GET /api/summary HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:58900 - "GET /api/cases HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:58908 - "GET /api/system/status HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:43556 - "GET /api/system/status HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:43568 - "GET /api/cases HTTP/1.1" 200 OK
+api-1     | INFO:     127.0.0.1:60650 - "GET /api/health HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:43574 - "GET /api/summary HTTP/1.1" 200 OK
+api-1     | INFO:     127.0.0.1:36298 - "GET /api/health HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:34000 - "POST /api/cases HTTP/1.1" 202 Accepted
+api-1     | INFO:     172.18.0.5:34012 - "GET /api/summary HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:34014 - "GET /api/cases HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:34048 - "GET /api/cases/RC-228afb7984e24c2badab0f05a22504da HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:34034 - "GET /api/system/status HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.6:57104 - "POST /api/integrations/langflow/jobs/JB-3fd316a4599b44f6bb4eb161f709d885/started HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.3:49354 - "POST /api/integrations/langflow/results HTTP/1.1" 200 OK
+api-1     | INFO:     127.0.0.1:33436 - "GET /api/health HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:34064 - "GET /api/cases/RC-228afb7984e24c2badab0f05a22504da HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:34078 - "GET /api/summary HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:34098 - "GET /api/system/status HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:34084 - "GET /api/cases HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:34100 - "GET /api/cases/RC-228afb7984e24c2badab0f05a22504da HTTP/1.1" 200 OK
+api-1     | INFO:     127.0.0.1:48040 - "GET /api/health HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:50734 - "GET /api/summary HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:50742 - "GET /api/cases HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:50748 - "GET /api/cases/RC-228afb7984e24c2badab0f05a22504da HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:50752 - "GET /api/system/status HTTP/1.1" 200 OK
+api-1     | INFO:     127.0.0.1:47862 - "GET /api/health HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:60840 - "POST /api/cases/RC-228afb7984e24c2badab0f05a22504da/decision HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:60842 - "GET /api/summary HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:60848 - "GET /api/cases HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:60854 - "GET /api/system/status HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.6:54048 - "POST /api/integrations/langflow/jobs/JB-90f45e3565034e78b918f7b1697817de/started HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.6:54048 - "POST /api/integrations/langflow/reports HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:53046 - "GET /api/cases/RC-228afb7984e24c2badab0f05a22504da HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:53064 - "GET /api/system/status HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:53052 - "GET /api/cases HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:53056 - "GET /api/summary HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:53074 - "GET /api/cases/RC-228afb7984e24c2badab0f05a22504da HTTP/1.1" 200 OK
+api-1     | INFO:     127.0.0.1:34648 - "GET /api/health HTTP/1.1" 200 OK
+api-1     | INFO:     127.0.0.1:34638 - "GET /api/health HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:58212 - "GET /api/cases/RC-228afb7984e24c2badab0f05a22504da/report/json?report_id=RP-26d6d8a5df2142cca929f1eda0c90e43 HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:59676 - "GET /api/cases/RC-228afb7984e24c2badab0f05a22504da/report/html?report_id=RP-807d4662162b4fd49df783aee7c62cfc HTTP/1.1" 200 OK
+api-1     | INFO:     127.0.0.1:52088 - "GET /api/health HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:59684 - "GET /api/cases/RC-228afb7984e24c2badab0f05a22504da/report/pdf?report_id=RP-331b8b1d00f84ebd86866514a10efb52 HTTP/1.1" 200 OK
+api-1     | INFO:     127.0.0.1:36966 - "GET /api/health HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:52916 - "GET /api/cases/RC-228afb7984e24c2badab0f05a22504da HTTP/1.1" 200 OK
+api-1     | INFO:     172.18.0.5:52924 - "GET /api/cases/RC-228afb7984e24c2badab0f05a22504da HTTP/1.1" 200 OK
+api-1     | INFO:     127.0.0.1:38274 - "GET /api/health HTTP/1.1" 200 OK
+api-1     | INFO:     127.0.0.1:36438 - "GET /api/health HTTP/1.1" 200 OK
+worker-1  | 2026-11-01 02:04:22,489 INFO HTTP Request: POST http://api:8000/api/integrations/langflow/jobs/JB-e5b2d6e333784df6a483c65c80174699/started "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:22,498 INFO HTTP Request: GET http://langflow:7860/api/v1/flows/2cfcf361-c180-461a-8d2b-929feb029aec "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:22,513 INFO HTTP Request: POST http://langflow:7860/api/v1/build/2cfcf361-c180-461a-8d2b-929feb029aec/flow?event_delivery=polling "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:22,522 INFO HTTP Request: GET http://langflow:7860/api/v1/build/7a5943f9-2909-4f8d-862a-22cb935e2155/events "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:22,557 INFO HTTP Request: POST http://api:8000/api/integrations/langflow/reports "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:24,572 INFO HTTP Request: POST http://api:8000/api/integrations/langflow/jobs/JB-bbcf4dc6a897495ba554ecc7affd8f52/started "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:24,578 INFO HTTP Request: GET http://langflow:7860/api/v1/flows/d2a50074-f98e-49f1-aea9-2de1d628a4f6 "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:24,599 INFO HTTP Request: POST http://langflow:7860/api/v1/build/d2a50074-f98e-49f1-aea9-2de1d628a4f6/flow?event_delivery=polling "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:24,608 INFO HTTP Request: GET http://langflow:7860/api/v1/build/61a85609-1305-429c-b1f4-c0476e510b17/events "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:26,654 INFO HTTP Request: POST http://api:8000/api/integrations/langflow/jobs/JB-f58496115dda4a16b15c1ba912b4e743/started "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:26,661 INFO HTTP Request: GET http://langflow:7860/api/v1/flows/d2a50074-f98e-49f1-aea9-2de1d628a4f6 "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:26,669 INFO HTTP Request: POST http://langflow:7860/api/v1/build/d2a50074-f98e-49f1-aea9-2de1d628a4f6/flow?event_delivery=polling "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:26,692 INFO HTTP Request: GET http://langflow:7860/api/v1/build/e48b9f26-ecd1-4458-a471-ec81b0019745/events "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:27,727 INFO HTTP Request: POST http://api:8000/api/integrations/langflow/jobs/JB-f58496115dda4a16b15c1ba912b4e743/failure "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:27,728 WARNING Job JB-f58496115dda4a16b15c1ba912b4e743 attempt 1: synthetic_marker_missing (failed)
+worker-1  | 2026-11-01 02:04:29,742 INFO HTTP Request: POST http://api:8000/api/integrations/langflow/jobs/JB-afe477f1aca4412ba5d9c0148dd28ced/started "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:29,749 INFO HTTP Request: GET http://langflow:7860/api/v1/flows/d2a50074-f98e-49f1-aea9-2de1d628a4f6 "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:29,773 INFO HTTP Request: POST http://langflow:7860/api/v1/build/d2a50074-f98e-49f1-aea9-2de1d628a4f6/flow?event_delivery=polling "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:29,783 INFO HTTP Request: GET http://langflow:7860/api/v1/build/befe34a1-a6e6-4e06-9965-d58981bbf56a/events "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:30,744 INFO HTTP Request: POST http://api:8000/api/integrations/langflow/jobs/JB-afe477f1aca4412ba5d9c0148dd28ced/failure "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:04:30,745 WARNING Job JB-afe477f1aca4412ba5d9c0148dd28ced attempt 1: synthetic_marker_missing (failed)
+worker-1  | 2026-11-01 02:05:38,944 INFO HTTP Request: POST http://api:8000/api/integrations/langflow/jobs/JB-3fd316a4599b44f6bb4eb161f709d885/started "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:05:38,955 INFO HTTP Request: GET http://langflow:7860/api/v1/flows/d2a50074-f98e-49f1-aea9-2de1d628a4f6 "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:05:38,974 INFO HTTP Request: POST http://langflow:7860/api/v1/build/d2a50074-f98e-49f1-aea9-2de1d628a4f6/flow?event_delivery=polling "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:05:39,006 INFO HTTP Request: GET http://langflow:7860/api/v1/build/f814dede-6faf-4317-b052-374bba78f8c1/events "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:06:03,122 INFO HTTP Request: POST http://api:8000/api/integrations/langflow/jobs/JB-90f45e3565034e78b918f7b1697817de/started "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:06:03,131 INFO HTTP Request: GET http://langflow:7860/api/v1/flows/2cfcf361-c180-461a-8d2b-929feb029aec "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:06:03,149 INFO HTTP Request: POST http://langflow:7860/api/v1/build/2cfcf361-c180-461a-8d2b-929feb029aec/flow?event_delivery=polling "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:06:03,159 INFO HTTP Request: GET http://langflow:7860/api/v1/build/53aa7e10-0128-4d1c-83dc-7c0f737d48aa/events "HTTP/1.1 200 OK"
+worker-1  | 2026-11-01 02:06:03,191 INFO HTTP Request: POST http://api:8000/api/integrations/langflow/reports "HTTP/1.1 200 OK"

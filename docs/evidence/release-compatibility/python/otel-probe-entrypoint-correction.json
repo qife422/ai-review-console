@@ -1,0 +1,95 @@
+{
+  "created_at": "2026-11-01T02:01:15.454256+00:00",
+  "finding": "Probe applied the ingress length cap to the wrong upstream API; product dependency pin is unchanged.",
+  "failed_source": "a59dc31c74c5b2b9ed24b4b35be3cc7f2411154d",
+  "fixed_source": "a64ab476c8acfaa36a3d6cc260a4c6c286bad380",
+  "failed_ci": "https://github.com/qife422/ai-review-console/actions/runs/41262700501",
+  "rerun_ci": "https://github.com/qife422/ai-review-console/actions/runs/41263397231",
+  "cause": "Official1.45.1 TraceContextTextMapPropagator.extract enforces combined headers>8192 before invoking TraceState.from_header. The low-level parser itself uses linear split/strip and can retain valid32-member8351-character data. The initial direct-parser assertion falsely treated that as an ingress cap failure.",
+  "repair": "Retain8192 ingress limit and require both single8351 and split2headers(combined8351, each<=8192) to discard tracestate while preserving the valid injected trace_id. Record direct-parser entries separately and record actual imported module paths/resolved paths/SHA.",
+  "authority": "otel-patch-source-review.json binds exact upstream tag sources and SHA; guard is tracecontext.py60-71, parser span.py364-384.",
+  "baseline_current_producer_sha_matches": true,
+  "old_failed_producer_matches_git_source": true,
+  "correct_old_baseline": {
+    "exit_code": 0,
+    "entrypoint": "TraceContextTextMapPropagator.extract",
+    "cases": [
+      {
+        "case": "single",
+        "combined_bytes": 8351,
+        "discarded": false,
+        "header_fields": 1,
+        "trace_id_preserved": true
+      },
+      {
+        "case": "split",
+        "combined_bytes": 8351,
+        "discarded": false,
+        "header_fields": 2,
+        "trace_id_preserved": true
+      }
+    ],
+    "expected_old_insecure_behavior_observed": true,
+    "scope": "Old runtime behavior, not target-upgrade verification"
+  },
+  "new_runtime_state": "pending_new_CI_actual_verification",
+  "unchanged": [
+    "All dependency pins",
+    "8192 combined ingress limit",
+    "Required discarded state",
+    "Valid trace_id preservation",
+    "No-network/read-only/tmpfs/memory/pids guards"
+  ],
+  "failure_stderr": {
+    "path": "/private/tmp/arc-release-followup.rLeRu5/ci/a59dc31-failure/release/dependency-compatibility.stderr",
+    "bytes": 669,
+    "sha256": "cb5d582cee61390f6f67378e402d5f4bf4fe5d097f2fbc7abd7bf25f96f637ce"
+  },
+  "preserved_inputs": [
+    {
+      "path": "producer-wrong-entrypoint.py",
+      "bytes": 11367,
+      "sha256": "31b51b1f0d64ce73371d08f25263fdfb9d1cdf078be0e12d6691a664deaf75f4"
+    },
+    {
+      "path": "otel-patch-source-review.json",
+      "bytes": 1259,
+      "sha256": "2276ae89e4eeabc2c37a60de8cf2d00c2798acb0b46c237cac286912e076e955"
+    },
+    {
+      "path": "otel-1451-span.py",
+      "bytes": 20543,
+      "sha256": "67886d3802f7d87adcc6bc26d790ecef0b1fb89b1aed3e28f7c6d73b0b739e38"
+    },
+    {
+      "path": "otel-1451-tracecontext.py",
+      "bytes": 4128,
+      "sha256": "ac6fbcf1610a51ebf9d9161e42e9e98d4e22a50552c57bb37596a62963e00776"
+    },
+    {
+      "path": "baseline-ingress-sources.stdout",
+      "bytes": 2296,
+      "sha256": "6a3679902a5d17b9ba5405c71fbba05f2288fbec4db991af84bcb2b5a60fa5f2"
+    },
+    {
+      "path": "baseline-ingress-sources.stderr",
+      "bytes": 671,
+      "sha256": "a30099c8f0e24f22df1cab60948d6ea90de48f5729a9ba18b6d342b3a5cebdb9"
+    },
+    {
+      "path": "baseline-ingress-sources.record.json",
+      "bytes": 837,
+      "sha256": "c79f63c3e9a33e37926353f465533ac48bc9efe948120d912f23d9fe2f2b13c2"
+    },
+    {
+      "path": "compat-ingress-unit.xml",
+      "bytes": 951,
+      "sha256": "1e1aecb24b6c2970554f57e7a1d1fb23255dc0ef94d4e1e6faae2d93f8be8b5e"
+    },
+    {
+      "path": "compat-ingress-unit.stdout",
+      "bytes": 176,
+      "sha256": "8e28dc636765f00ff5d366803328be06306498e1bab00be994d003f953791cee"
+    }
+  ]
+}

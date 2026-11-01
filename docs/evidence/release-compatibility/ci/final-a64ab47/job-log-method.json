@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-01T02:08:37.428799+00:00",
+  "producer": "gh API exact job-log download redirected to new file; connector decoded-log content independently read",
+  "command": [
+    "gh",
+    "api",
+    "--allow-escape-sequences",
+    "repos/qife422/ai-review-console/actions/jobs/124721068621/logs"
+  ],
+  "bytes": 202633,
+  "sha256": "a66f357dc70832ee1b75df9d7dcef808867dfb3b6c3e1b4fcb6ee595ac440877",
+  "raw_ansi_retained": true,
+  "reason_for_cli_file_download": "Complete decoded job log exceeds apply_patch hook128KiB input limit."
+}

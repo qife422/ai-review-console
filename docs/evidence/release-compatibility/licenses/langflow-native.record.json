@@ -1,0 +1,28 @@
+{
+  "image_id": "sha256:865e7348409fecd375f86f622c99f1510d98f31f833ab1dad2c9b2bd16a85751",
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "-i",
+    "--read-only",
+    "--network",
+    "none",
+    "--cap-drop",
+    "ALL",
+    "--security-opt",
+    "no-new-privileges",
+    "--memory",
+    "512m",
+    "--entrypoint",
+    "python",
+    "sha256:865e7348409fecd375f86f622c99f1510d98f31f833ab1dad2c9b2bd16a85751",
+    "-",
+    "161896527"
+  ],
+  "started_at": "2026-11-01T01:45:53.916823+00:00",
+  "ended_at": "2026-11-01T01:45:55.959839+00:00",
+  "exit_code": 0,
+  "producer_sha256": "fcd50592cb0ecfbfef98509d8adc9979ccf4243ed1ab8f04da41515a9fd752d7",
+  "output_sha256": "8687aa6c6c297e573f63c24809ec2cdd431c4ac0f16376774490a76006f66994"
+}

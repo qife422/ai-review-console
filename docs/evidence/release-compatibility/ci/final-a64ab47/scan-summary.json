@@ -1,0 +1,122 @@
+{
+  "at": "2026-11-01T02:09:26.142055+00:00",
+  "source_commit": "a64ab476c8acfaa36a3d6cc260a4c6c286bad380",
+  "run_id": 41263397231,
+  "combined": {
+    "primary_exit_code": 2,
+    "rhel_exit_code": 1,
+    "primary_unique_queries": 797,
+    "primary_provider_IDs": 222,
+    "rhel_provider_IDs": 23,
+    "global_provider_ID_union": 245,
+    "primary_mapping_unknown": 226,
+    "primary_unknown_kind_counts": {
+      "langflow:rpm": 226
+    },
+    "rhel_exact_name_version_arch_set_equal": true,
+    "same_LF_image_ID": true,
+    "rhel_mapping_states": {
+      "mapped": 223,
+      "metadata_only_rpm_public_key_not_software": 3
+    },
+    "combined_mapping_query_detail_unknown": 0,
+    "qualification": "Installed package/Python metadata coverage only; no full filesystem/static bundled binary/reachability audit. Preserve original exit codes. Provider IDs are not deduplicated CVE counts; findings remain unaccepted."
+  },
+  "images": {
+    "api": {
+      "image_id": "sha256:823cf5d8e11cd33e96bcd23a71c97ad5d961e4c093571b87e67c70a77307708a",
+      "inventory_packages": 140,
+      "unknown_packages": 0,
+      "matched_binary_or_python_packages": 51,
+      "observed_unique_advisory_ids": 114,
+      "detail_unknown": 0,
+      "upstream_severity_labels": {
+        "unknown": 114
+      }
+    },
+    "langflow": {
+      "image_id": "sha256:7ecc28c0c5d44fba421bd63039b62b82267e43f496e2dd274ae8b4274fc411ac",
+      "inventory_packages": 776,
+      "unknown_packages": 226,
+      "matched_binary_or_python_packages": 5,
+      "observed_unique_advisory_ids": 81,
+      "detail_unknown": 0,
+      "upstream_severity_labels": {
+        "HIGH": 26,
+        "CRITICAL": 7,
+        "MODERATE": 22,
+        "unknown": 23,
+        "LOW": 3
+      }
+    },
+    "web": {
+      "image_id": "sha256:c2cc70db897abecf1fb5287f795c48d2f66679a0f65d31ff70f79a7b0a081783",
+      "inventory_packages": 71,
+      "unknown_packages": 0,
+      "matched_binary_or_python_packages": 0,
+      "observed_unique_advisory_ids": 0,
+      "detail_unknown": 0,
+      "upstream_severity_labels": {}
+    },
+    "postgres": {
+      "image_id": "sha256:74d436cb49d3398cf7b5d7b33635d43623d9e4da4b93c22db453f7d5d81181b1",
+      "inventory_packages": 142,
+      "unknown_packages": 0,
+      "matched_binary_or_python_packages": 63,
+      "observed_unique_advisory_ids": 116,
+      "detail_unknown": 0,
+      "upstream_severity_labels": {
+        "unknown": 116
+      }
+    }
+  },
+  "rhel": {
+    "contract": "ARC-UPGRADE@0.1.0",
+    "acceptance": [
+      "AC-19",
+      "RELEASE-001"
+    ],
+    "producer": "scripts/scan_images_osv.py --redhat-only",
+    "started_at": "2026-11-01T02:07:02.734293+00:00",
+    "image_id": "sha256:7ecc28c0c5d44fba421bd63039b62b82267e43f496e2dd274ae8b4274fc411ac",
+    "service": "https://api.osv.dev/v1",
+    "result": "queried_with_findings",
+    "database_snapshot_date": null,
+    "rpm_entries": 226,
+    "metadata_only_public_keys": 3,
+    "mapped_software_packages": 223,
+    "unique_queries": 669,
+    "observed_unique_advisory_ids": 23,
+    "matched_software_packages": 50,
+    "mapping_unknown": 0,
+    "query_unknown": 0,
+    "detail_unknown": 0
+  },
+  "remaining_PyPI_packages": [
+    {
+      "name": "setuptools",
+      "version": "83.0.0",
+      "provider_ID_count": 1
+    },
+    {
+      "name": "chromadb",
+      "version": "1.5.9",
+      "provider_ID_count": 8
+    },
+    {
+      "name": "filelock",
+      "version": "3.32.0",
+      "provider_ID_count": 12
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0",
+      "provider_ID_count": 59
+    },
+    {
+      "name": "couchbase",
+      "version": "4.6.2",
+      "provider_ID_count": 1
+    }
+  ]
+}
