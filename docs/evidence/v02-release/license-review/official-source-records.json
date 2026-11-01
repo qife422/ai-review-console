@@ -1,0 +1,30 @@
+[
+  {
+    "label": "lfx-upstream-license",
+    "url": "https://raw.githubusercontent.com/langflow-ai/langflow/v1.11.6/LICENSE",
+    "retrieved_at": "2026-11-01T00:44:16.578415+00:00",
+    "bytes": 1065,
+    "sha256": "48d4a7496209a9e1f2f549384251b69319360c3a38127cf513473590be383359"
+  },
+  {
+    "label": "lfx-upstream-pyproject",
+    "url": "https://raw.githubusercontent.com/langflow-ai/langflow/v1.11.6/src/lfx/pyproject.toml",
+    "retrieved_at": "2026-11-01T00:44:16.788270+00:00",
+    "bytes": 6084,
+    "sha256": "5b1da6bebde37b4a9bf4d82ff1f63a92fc6c616eded6717d689c6cd7287e3101"
+  },
+  {
+    "label": "zep-oss-commits",
+    "url": "https://api.github.com/repos/getzep/zep-python/commits?sha=oss&path=pyproject.toml&until=2024-09-27T00:00:00Z&per_page=3",
+    "retrieved_at": "2026-11-01T00:44:17.149939+00:00",
+    "bytes": 12888,
+    "sha256": "f9fbb9ca805ec461bc8222180a072c50dc1b2251b48da944adbbf2baeb3ae471"
+  },
+  {
+    "label": "lgpl3-psycopg-upstream",
+    "url": "https://raw.githubusercontent.com/psycopg/psycopg/3.3.5/LICENSE.txt",
+    "retrieved_at": "2026-11-01T00:44:17.330329+00:00",
+    "bytes": 7652,
+    "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118"
+  }
+]

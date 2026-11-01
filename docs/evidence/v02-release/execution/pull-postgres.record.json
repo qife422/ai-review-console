@@ -1,0 +1,25 @@
+{
+  "command": [
+    "docker",
+    "pull",
+    "postgres:16.15-trixie@sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+  ],
+  "cwd": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1",
+  "started_at": "2026-11-01T00:48:01.518945+00:00",
+  "ended_at": "2026-11-01T00:48:11.894046+00:00",
+  "elapsed_seconds": 10.37601975002326,
+  "exit_code": 0,
+  "stop_reason": null,
+  "files": {
+    "stdout": {
+      "path": "/private/tmp/arc-v02-release-close.p3RyvK/steps/pull-postgres.stdout",
+      "bytes": 1712,
+      "sha256": "7234f5a5a5352ce3095c557b585a164393d94eaf91d54208c791850acbd6c26e"
+    },
+    "stderr": {
+      "path": "/private/tmp/arc-v02-release-close.p3RyvK/steps/pull-postgres.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

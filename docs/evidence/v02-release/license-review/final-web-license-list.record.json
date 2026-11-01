@@ -1,0 +1,20 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--read-only",
+    "--network",
+    "none",
+    "--cap-drop",
+    "ALL",
+    "--entrypoint",
+    "/bin/sh",
+    "sha256:34509f24effc7e00ac347a69e1bf10f6de498ef57c4ba8a3212f27b13bf7f37d",
+    "-c",
+    "find /usr/share/nginx/html/licenses -maxdepth 3 -type f -print; find /usr/share/nginx/html -maxdepth 1 -type f -print; cat /usr/share/nginx/html/licenses/.vite-license.json 2>/dev/null || true"
+  ],
+  "created_at": "2026-11-01T00:48:33.316233+00:00",
+  "exit_code": 0,
+  "output_sha256": "8a7a21599a4205864131ec0365b0301b5bd4c76bc12e81c386e1304307edd089"
+}

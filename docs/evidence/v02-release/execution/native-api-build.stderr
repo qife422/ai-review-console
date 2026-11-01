@@ -1,0 +1,88 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from api.Dockerfile
+#1 transferring dockerfile:
+#1 transferring dockerfile: 943B 0.0s done
+#1 DONE 0.3s
+
+#2 [internal] load metadata for docker.io/library/python:3.12.16-slim-bookworm@sha256:e697c81897302a4c4333bade000d98038fbb21eb064f8ee1fd42d02ebcd9d337
+#2 DONE 3.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 134B 0.0s done
+#3 DONE 0.1s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [ 1/13] FROM docker.io/library/python:3.12.16-slim-bookworm@sha256:e697c81897302a4c4333bade000d98038fbb21eb064f8ee1fd42d02ebcd9d337
+#5 resolve docker.io/library/python:3.12.16-slim-bookworm@sha256:e697c81897302a4c4333bade000d98038fbb21eb064f8ee1fd42d02ebcd9d337 0.1s done
+#5 DONE 0.1s
+
+#4 [internal] load build context
+#4 transferring context: 796.59kB 0.3s done
+#4 DONE 0.3s
+
+#6 [ 7/13] COPY docs/DEPENDENCY_LICENSES.md ./docs/DEPENDENCY_LICENSES.md
+#6 CACHED
+
+#7 [ 2/13] WORKDIR /app
+#7 CACHED
+
+#8 [ 4/13] COPY requirements.lock ./
+#8 CACHED
+
+#9 [ 9/13] COPY custom_components ./custom_components
+#9 CACHED
+
+#10 [ 5/13] RUN pip install --no-cache-dir --timeout 120 --retries 10 pip==26.2.2     && pip install --no-cache-dir --no-deps --timeout 120 --retries 10 -r requirements.lock
+#10 CACHED
+
+#11 [ 8/13] COPY review_core ./review_core
+#11 CACHED
+
+#12 [ 6/13] COPY pyproject.toml README.md LICENSE THIRD_PARTY_NOTICES.md ./
+#12 CACHED
+
+#13 [ 3/13] RUN useradd --create-home --uid 10001 appuser
+#13 CACHED
+
+#14 [10/13] COPY api ./api
+#14 CACHED
+
+#15 [11/13] COPY scripts ./scripts
+#15 DONE 0.3s
+
+#16 [12/13] COPY flows ./flows
+#16 DONE 0.1s
+
+#17 [13/13] RUN pip install --no-cache-dir --no-deps . && mkdir -p /app/documents /app/config && chown -R appuser:appuser /app/documents /app/config
+#17 5.493 Processing ./.
+#17 5.497   Installing build dependencies: started
+#17 8.235   Installing build dependencies: finished with status 'done'
+#17 8.245   Getting requirements to build wheel: started
+#17 8.514   Getting requirements to build wheel: finished with status 'done'
+#17 8.517   Preparing metadata (pyproject.toml): started
+#17 9.497   Preparing metadata (pyproject.toml): finished with status 'done'
+#17 9.566 Building wheels for collected packages: ai-review-console
+#17 9.572   Building wheel for ai-review-console (pyproject.toml): started
+#17 9.681   Building wheel for ai-review-console (pyproject.toml): finished with status 'done'
+#17 9.689   Created wheel for ai-review-console: filename=ai_review_console-0.2.0-py3-none-any.whl size=6385491 sha256=3ebc31e6cc09e8535eac42734808e86707c498101a4c09cdd8145bb53cfe194e
+#17 9.689   Stored in directory: /tmp/pip-ephem-wheel-cache-ifd6ptvu/wheels/54/1b/b7/aa63e25c8f14f4f2ae7b04e6097bdecb770e455c5c1ee0a600
+#17 9.709 Successfully built ai-review-console
+#17 9.778 Installing collected packages: ai-review-console
+#17 9.969 Successfully installed ai-review-console-0.2.0
+#17 9.970 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#17 DONE 10.2s
+
+#18 exporting to image
+#18 exporting layers
+#18 exporting layers 0.9s done
+#18 exporting manifest sha256:e017efd697317452d40986f190856bbf38beef712ea5634fd6689cf6586541f1 done
+#18 exporting config sha256:615b69522120c07159b81a1af357825c61ecb9172f474d62252e0e89561985d7 done
+#18 exporting attestation manifest sha256:506cd254ca7af4410407e578a50717225c921af70b613480d56c950057a48009 0.0s done
+#18 exporting manifest list sha256:ec611a3c036474e409e9e94e212a382fe14c67ef06d62b83db2d8e9ecfd533cb done
+#18 naming to docker.io/library/ai-review-console-api:v02-release done
+#18 unpacking to docker.io/library/ai-review-console-api:v02-release
+#18 unpacking to docker.io/library/ai-review-console-api:v02-release 0.3s done
+#18 DONE 1.4s

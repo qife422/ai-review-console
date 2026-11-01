@@ -1,0 +1,14 @@
+{
+  "method": "separate read-only internal agent review of fixed README and selected payload; not independent third-party audit",
+  "readme_sha256": "f898ed07d769c69ad4e0710206f351ebade7c3638ca9880a78fc4e2fd9dccc38",
+  "findings": [],
+  "observations": [
+    "395 original selected payload size/hash identities matched",
+    "all README links valid at intended published root",
+    "LF 90 provider IDs/65 alias groups and global 254 recomputed from actual aliases",
+    "default RPM unknown set exactly matched same-image Red Hat supplement",
+    "42 genuine license packages/4 missing texts and 4 heuristic source/pyc exclusions checked",
+    "154 Python/29 frontend and actual four screenshot identity/scope checked"
+  ],
+  "preconditions_resolved": "outer manifest below includes all actual payload including README/selection/new environment records"
+}

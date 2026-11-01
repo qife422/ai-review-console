@@ -1,0 +1,226 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from api.Dockerfile
+#1 transferring dockerfile: 868B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12.16-slim-bookworm@sha256:e697c81897302a4c4333bade000d98038fbb21eb064f8ee1fd42d02ebcd9d337
+#2 DONE 1.3s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 134B done
+#3 DONE 0.0s
+
+#4 [ 1/13] FROM docker.io/library/python:3.12.16-slim-bookworm@sha256:e697c81897302a4c4333bade000d98038fbb21eb064f8ee1fd42d02ebcd9d337
+#4 resolve docker.io/library/python:3.12.16-slim-bookworm@sha256:e697c81897302a4c4333bade000d98038fbb21eb064f8ee1fd42d02ebcd9d337 0.0s done
+#4 ...
+
+#5 [internal] load build context
+#5 transferring context: 11.48MB 0.2s done
+#5 DONE 0.2s
+
+#4 [ 1/13] FROM docker.io/library/python:3.12.16-slim-bookworm@sha256:e697c81897302a4c4333bade000d98038fbb21eb064f8ee1fd42d02ebcd9d337
+#4 sha256:abdbc0972de9023277dcc99d00cfe0ebefb63b60c26122ffa8cd242b3cb11cbf 250B / 250B 0.1s done
+#4 sha256:0e52ade5941015ddaf9fc870ec0a2e9f5e16c36db598c29a6255b2126e49e5be 0B / 13.61MB 0.2s
+#4 sha256:03557f251b4b73480b1d85ad514ac8fdf3f57527d38501d2212154e5fd711292 0B / 3.17MB 0.2s
+#4 sha256:f791e47cf52abf7b364878f2141547e3781072e437f599f6632849d88fca8ca4 0B / 28.14MB 0.2s
+#4 sha256:0e52ade5941015ddaf9fc870ec0a2e9f5e16c36db598c29a6255b2126e49e5be 1.08MB / 13.61MB 0.3s
+#4 sha256:0e52ade5941015ddaf9fc870ec0a2e9f5e16c36db598c29a6255b2126e49e5be 13.61MB / 13.61MB 0.4s done
+#4 sha256:03557f251b4b73480b1d85ad514ac8fdf3f57527d38501d2212154e5fd711292 3.17MB / 3.17MB 0.5s done
+#4 sha256:f791e47cf52abf7b364878f2141547e3781072e437f599f6632849d88fca8ca4 15.73MB / 28.14MB 0.6s
+#4 sha256:f791e47cf52abf7b364878f2141547e3781072e437f599f6632849d88fca8ca4 28.14MB / 28.14MB 0.8s
+#4 sha256:f791e47cf52abf7b364878f2141547e3781072e437f599f6632849d88fca8ca4 28.14MB / 28.14MB 0.9s done
+#4 extracting sha256:f791e47cf52abf7b364878f2141547e3781072e437f599f6632849d88fca8ca4
+#4 extracting sha256:f791e47cf52abf7b364878f2141547e3781072e437f599f6632849d88fca8ca4 0.6s done
+#4 DONE 1.6s
+
+#4 [ 1/13] FROM docker.io/library/python:3.12.16-slim-bookworm@sha256:e697c81897302a4c4333bade000d98038fbb21eb064f8ee1fd42d02ebcd9d337
+#4 extracting sha256:03557f251b4b73480b1d85ad514ac8fdf3f57527d38501d2212154e5fd711292 0.1s done
+#4 extracting sha256:0e52ade5941015ddaf9fc870ec0a2e9f5e16c36db598c29a6255b2126e49e5be
+#4 extracting sha256:0e52ade5941015ddaf9fc870ec0a2e9f5e16c36db598c29a6255b2126e49e5be 0.2s done
+#4 DONE 1.9s
+
+#4 [ 1/13] FROM docker.io/library/python:3.12.16-slim-bookworm@sha256:e697c81897302a4c4333bade000d98038fbb21eb064f8ee1fd42d02ebcd9d337
+#4 extracting sha256:abdbc0972de9023277dcc99d00cfe0ebefb63b60c26122ffa8cd242b3cb11cbf done
+#4 DONE 1.9s
+
+#6 [ 2/13] WORKDIR /app
+#6 DONE 0.6s
+
+#7 [ 3/13] RUN useradd --create-home --uid 10001 appuser
+#7 DONE 0.2s
+
+#8 [ 4/13] COPY requirements.lock ./
+#8 DONE 0.0s
+
+#9 [ 5/13] RUN pip install --no-cache-dir --no-deps --timeout 120 --retries 10 -r requirements.lock
+#9 0.973 Collecting annotated-doc==0.0.5 (from -r requirements.lock (line 7))
+#9 1.128   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+#9 1.156 Collecting annotated-types==0.8.0 (from -r requirements.lock (line 9))
+#9 1.176   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+#9 1.219 Collecting anyio==4.14.2 (from -r requirements.lock (line 11))
+#9 1.244   Downloading anyio-4.14.2-py3-none-any.whl.metadata (4.6 kB)
+#9 1.276 Collecting certifi==2026.10.23 (from -r requirements.lock (line 16))
+#9 1.293   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+#9 1.399 Collecting charset-normalizer==3.5.1 (from -r requirements.lock (line 21))
+#9 1.428   Downloading charset_normalizer-3.5.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (45 kB)
+#9 1.467 Collecting click==8.5.0 (from -r requirements.lock (line 23))
+#9 1.485   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+#9 1.549 Collecting fastapi==0.141.1 (from -r requirements.lock (line 25))
+#9 1.568   Downloading fastapi-0.141.1-py3-none-any.whl.metadata (27 kB)
+#9 1.673 Collecting greenlet==3.5.5 (from -r requirements.lock (line 27))
+#9 1.695   Downloading greenlet-3.5.5-cp312-cp312-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl.metadata (3.8 kB)
+#9 1.719 Collecting h11==0.16.0 (from -r requirements.lock (line 29))
+#9 1.738   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#9 1.767 Collecting httpcore==1.0.9 (from -r requirements.lock (line 33))
+#9 1.784   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+#9 1.816 Collecting httptools==0.8.0 (from -r requirements.lock (line 35))
+#9 1.841   Downloading httptools-0.8.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (3.5 kB)
+#9 1.865 Collecting httpx==0.28.1 (from -r requirements.lock (line 37))
+#9 1.885   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+#9 1.915 Collecting idna==3.19 (from -r requirements.lock (line 39))
+#9 1.937   Downloading idna-3.19-py3-none-any.whl.metadata (9.2 kB)
+#9 2.073 Collecting lxml==6.1.2 (from -r requirements.lock (line 43))
+#9 2.174   Downloading lxml-6.1.2-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl.metadata (3.3 kB)
+#9 2.283 Collecting pillow==13.0.0 (from -r requirements.lock (line 45))
+#9 2.308   Downloading pillow-13.0.0-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (9.1 kB)
+#9 2.335 Collecting psycopg==3.3.5 (from -r requirements.lock (line 49))
+#9 2.352   Downloading psycopg-3.3.5-py3-none-any.whl.metadata (4.3 kB)
+#9 2.446 Collecting psycopg-binary==3.3.5 (from -r requirements.lock (line 51))
+#9 2.464   Downloading psycopg_binary-3.3.5-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (2.7 kB)
+#9 2.526 Collecting pydantic==2.13.5 (from -r requirements.lock (line 53))
+#9 2.546   Downloading pydantic-2.13.5-py3-none-any.whl.metadata (110 kB)
+#9 2.890 Collecting pydantic-core==2.46.5 (from -r requirements.lock (line 57))
+#9 2.911   Downloading pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (6.6 kB)
+#9 2.946 Collecting pypdf==6.21.4 (from -r requirements.lock (line 59))
+#9 2.964   Downloading pypdf-6.21.4-py3-none-any.whl.metadata (7.6 kB)
+#9 2.993 Collecting python-docx==1.2.0 (from -r requirements.lock (line 61))
+#9 3.015   Downloading python_docx-1.2.0-py3-none-any.whl.metadata (2.0 kB)
+#9 3.034 Collecting python-dotenv==1.2.3 (from -r requirements.lock (line 63))
+#9 3.055   Downloading python_dotenv-1.2.3-py3-none-any.whl.metadata (29 kB)
+#9 3.078 Collecting python-multipart==0.0.32 (from -r requirements.lock (line 65))
+#9 3.103   Downloading python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
+#9 3.135 Collecting pyyaml==6.0.3 (from -r requirements.lock (line 67))
+#9 3.153   Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (2.4 kB)
+#9 3.215 Collecting reportlab==4.5.1 (from -r requirements.lock (line 69))
+#9 3.236   Downloading reportlab-4.5.1-py3-none-any.whl.metadata (1.7 kB)
+#9 3.393 Collecting sqlalchemy==2.0.52 (from -r requirements.lock (line 71))
+#9 3.420   Downloading sqlalchemy-2.0.52-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (9.6 kB)
+#9 3.449 Collecting starlette==1.6.0 (from -r requirements.lock (line 73))
+#9 3.466   Downloading starlette-1.6.0-py3-none-any.whl.metadata (6.4 kB)
+#9 3.487 Collecting typing-extensions==4.16.0 (from -r requirements.lock (line 75))
+#9 3.504   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#9 3.530 Collecting typing-inspection==0.4.4 (from -r requirements.lock (line 86))
+#9 3.544   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+#9 3.584 Collecting uvicorn==0.52.4 (from -r requirements.lock (line 90))
+#9 3.600   Downloading uvicorn-0.52.4-py3-none-any.whl.metadata (6.6 kB)
+#9 3.638 Collecting uvloop==0.22.1 (from -r requirements.lock (line 92))
+#9 3.782   Downloading uvloop-0.22.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (4.9 kB)
+#9 3.865 Collecting watchfiles==1.2.0 (from -r requirements.lock (line 94))
+#9 3.885   Downloading watchfiles-1.2.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.9 kB)
+#9 3.967 Collecting websockets==17.1 (from -r requirements.lock (line 96))
+#9 3.986   Downloading websockets-17.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (6.3 kB)
+#9 4.017 Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+#9 4.040 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+#9 4.065 Downloading anyio-4.14.2-py3-none-any.whl (125 kB)
+#9 4.099 Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+#9 4.123 Downloading charset_normalizer-3.5.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (238 kB)
+#9 4.145 Downloading click-8.5.0-py3-none-any.whl (125 kB)
+#9 4.168 Downloading fastapi-0.141.1-py3-none-any.whl (131 kB)
+#9 4.188 Downloading greenlet-3.5.5-cp312-cp312-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl (611 kB)
+#9 4.209    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 611.9/611.9 kB 26.5 MB/s eta 0:00:00
+#9 4.232 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#9 4.258 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+#9 4.288 Downloading httptools-0.8.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (518 kB)
+#9 4.310 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+#9 4.329 Downloading idna-3.19-py3-none-any.whl (68 kB)
+#9 4.429 Downloading lxml-6.1.2-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl (5.0 MB)
+#9 4.820    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 12.4 MB/s eta 0:00:00
+#9 4.835 Downloading pillow-13.0.0-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (6.5 MB)
+#9 4.896    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.5/6.5 MB 114.0 MB/s eta 0:00:00
+#9 4.913 Downloading psycopg-3.3.5-py3-none-any.whl (213 kB)
+#9 4.934 Downloading psycopg_binary-3.3.5-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (6.8 MB)
+#9 5.014    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.8/6.8 MB 88.4 MB/s eta 0:00:00
+#9 5.034 Downloading pydantic-2.13.5-py3-none-any.whl (472 kB)
+#9 5.063 Downloading pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (2.0 MB)
+#9 5.082    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 112.0 MB/s eta 0:00:00
+#9 5.106 Downloading pypdf-6.21.4-py3-none-any.whl (410 kB)
+#9 5.134 Downloading python_docx-1.2.0-py3-none-any.whl (252 kB)
+#9 5.154 Downloading python_dotenv-1.2.3-py3-none-any.whl (22 kB)
+#9 5.175 Downloading python_multipart-0.0.32-py3-none-any.whl (30 kB)
+#9 5.196 Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (775 kB)
+#9 5.205    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 775.1/775.1 kB 122.4 MB/s eta 0:00:00
+#9 5.233 Downloading reportlab-4.5.1-py3-none-any.whl (2.0 MB)
+#9 5.250    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 113.5 MB/s eta 0:00:00
+#9 5.273 Downloading sqlalchemy-2.0.52-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (3.4 MB)
+#9 5.307    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 105.7 MB/s eta 0:00:00
+#9 5.326 Downloading starlette-1.6.0-py3-none-any.whl (75 kB)
+#9 5.351 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#9 5.368 Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+#9 5.394 Downloading uvicorn-0.52.4-py3-none-any.whl (79 kB)
+#9 5.416 Downloading uvloop-0.22.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (4.3 MB)
+#9 5.453    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 127.7 MB/s eta 0:00:00
+#9 5.485 Downloading watchfiles-1.2.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (453 kB)
+#9 5.509 Downloading websockets-17.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (225 kB)
+#9 5.579 Installing collected packages: websockets, watchfiles, uvloop, uvicorn, typing-inspection, typing-extensions, starlette, sqlalchemy, reportlab, pyyaml, python-multipart, python-dotenv, python-docx, pypdf, pydantic-core, pydantic, psycopg-binary, psycopg, pillow, lxml, idna, httpx, httptools, httpcore, h11, greenlet, fastapi, click, charset-normalizer, certifi, anyio, annotated-types, annotated-doc
+#9 8.095 Successfully installed annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.14.2 certifi-2026.10.23 charset-normalizer-3.5.1 click-8.5.0 fastapi-0.141.1 greenlet-3.5.5 h11-0.16.0 httpcore-1.0.9 httptools-0.8.0 httpx-0.28.1 idna-3.19 lxml-6.1.2 pillow-13.0.0 psycopg-3.3.5 psycopg-binary-3.3.5 pydantic-2.13.5 pydantic-core-2.46.5 pypdf-6.21.4 python-docx-1.2.0 python-dotenv-1.2.3 python-multipart-0.0.32 pyyaml-6.0.3 reportlab-4.5.1 sqlalchemy-2.0.52 starlette-1.6.0 typing-extensions-4.16.0 typing-inspection-0.4.4 uvicorn-0.52.4 uvloop-0.22.1 watchfiles-1.2.0 websockets-17.1
+#9 8.096 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#9 8.248 
+#9 8.248 [notice] A new release of pip is available: 25.0.1 -> 26.2.2
+#9 8.248 [notice] To update, run: pip install --upgrade pip
+#9 DONE 9.0s
+
+#10 [ 6/13] COPY pyproject.toml README.md LICENSE THIRD_PARTY_NOTICES.md ./
+#10 DONE 0.0s
+
+#11 [ 7/13] COPY docs/DEPENDENCY_LICENSES.md ./docs/DEPENDENCY_LICENSES.md
+#11 DONE 0.0s
+
+#12 [ 8/13] COPY review_core ./review_core
+#12 DONE 0.1s
+
+#13 [ 9/13] COPY custom_components ./custom_components
+#13 DONE 0.0s
+
+#14 [10/13] COPY api ./api
+#14 DONE 0.0s
+
+#15 [11/13] COPY scripts ./scripts
+#15 DONE 0.0s
+
+#16 [12/13] COPY flows ./flows
+#16 DONE 0.0s
+
+#17 [13/13] RUN pip install --no-cache-dir --no-deps . && mkdir -p /app/documents /app/config && chown -R appuser:appuser /app/documents /app/config
+#17 0.797 Processing /app
+#17 0.799   Installing build dependencies: started
+#17 2.440   Installing build dependencies: finished with status 'done'
+#17 2.444   Getting requirements to build wheel: started
+#17 2.593   Getting requirements to build wheel: finished with status 'done'
+#17 2.594   Preparing metadata (pyproject.toml): started
+#17 3.064   Preparing metadata (pyproject.toml): finished with status 'done'
+#17 3.071 Building wheels for collected packages: ai-review-console
+#17 3.072   Building wheel for ai-review-console (pyproject.toml): started
+#17 3.148   Building wheel for ai-review-console (pyproject.toml): finished with status 'done'
+#17 3.152   Created wheel for ai-review-console: filename=ai_review_console-0.2.0-py3-none-any.whl size=6385491 sha256=3ebc31e6cc09e8535eac42734808e86707c498101a4c09cdd8145bb53cfe194e
+#17 3.152   Stored in directory: /tmp/pip-ephem-wheel-cache-s1bxgwng/wheels/54/1b/b7/aa63e25c8f14f4f2ae7b04e6097bdecb770e455c5c1ee0a600
+#17 3.155 Successfully built ai-review-console
+#17 3.155 Installing collected packages: ai-review-console
+#17 3.239 Successfully installed ai-review-console-0.2.0
+#17 3.239 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#17 3.362 
+#17 3.362 [notice] A new release of pip is available: 25.0.1 -> 26.2.2
+#17 3.362 [notice] To update, run: pip install --upgrade pip
+#17 DONE 3.7s
+
+#18 exporting to image
+#18 exporting layers
+#18 exporting layers 3.3s done
+#18 exporting manifest sha256:42ff8cc858de20b77e3860228a39755c7c575c9412a9e7f77a9298e50fcaefcf done
+#18 exporting config sha256:14bfcf829277deee98510b23506eea6a23f1a6f38aa2d2f035e7dbd3e79abecf done
+#18 exporting attestation manifest sha256:cabc364f0616aa4b3b086837c33d0a7d5276a32147d93a78be0aab05c432b3ed 0.0s done
+#18 exporting manifest list sha256:2fd8f05220ac2d4e60479eeefdcaef460d51b6e0a8b5b80f2a24dc5ab3917311 done
+#18 naming to docker.io/library/ai-review-console-api:v02-release done
+#18 unpacking to docker.io/library/ai-review-console-api:v02-release
+#18 unpacking to docker.io/library/ai-review-console-api:v02-release 0.8s done
+#18 DONE 4.2s

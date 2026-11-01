@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-01T01:16:49.107126+00:00",
+  "baseline_global_reported": {
+    "images": "19.14GB",
+    "build_cache": "2.034GB"
+  },
+  "observed_global_reported": {
+    "images": "21.91GB",
+    "build_cache": "2.893GB"
+  },
+  "rounded_global_proxy_growth_bytes": 3629000000,
+  "wp_growth_guard_bytes": 3221225472,
+  "interpretation": "global reported proxy exceeds 3GiB; shared layers and other projects prevent exact project physical attribution; conservative stop on further image/cache generation",
+  "action": "no further builds/pulls/cache expansion; retain inventory and finish existing-image validation only; no image/cache pruning authority inferred"
+}

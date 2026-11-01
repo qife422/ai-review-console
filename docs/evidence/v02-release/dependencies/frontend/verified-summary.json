@@ -1,0 +1,57 @@
+{
+  "all_audit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "runtime_audit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "input_hashes": {
+    "frontend/package.json": "31de4ff938a2b13804c3cd139685b04383e433df5992f2cf2eba985474ebe8a1",
+    "frontend/package-lock.json": "c887f8c63172bc87d022265f925e9fdb5c4b4b79151a5d8d86176f789a7c5a3e",
+    "frontend/vite.config.ts": "2bc600fe5fbed94fcef8b67d24c2e0ef6c1ff8efe04dcbe3b74518b5684c8cf2",
+    "frontend/public/licenses/IBM-Plex-OFL-1.1.txt": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+  },
+  "license_sections": [
+    "@babel/runtime - 7.29.7 (MIT)",
+    "@carbon/feature-flags - 1.8.0 (Apache-2.0)",
+    "@carbon/icon-helpers - 10.81.0 (Apache-2.0)",
+    "@carbon/icons-react - 11.87.0 (Apache-2.0)",
+    "@carbon/layout - 11.58.0 (Apache-2.0)",
+    "@carbon/react - 1.115.0 (Apache-2.0)",
+    "@floating-ui/core - 1.8.0 (MIT)",
+    "@floating-ui/dom - 1.8.0 (MIT)",
+    "@floating-ui/react-dom - 2.1.9 (MIT)",
+    "@floating-ui/react - 0.27.20 (MIT)",
+    "@floating-ui/utils - 0.2.12 (MIT)",
+    "classnames - 2.5.1 (MIT)",
+    "compute-scroll-into-view - 3.1.1 (MIT)",
+    "copy-to-clipboard - 4.0.2 (MIT)",
+    "downshift - 9.4.0 (MIT)",
+    "es-toolkit - 1.52.0 (MIT)",
+    "invariant - 2.2.4 (MIT)",
+    "prop-types - 15.8.1 (MIT)",
+    "react-dom - 19.2.8 (MIT)",
+    "react-fast-compare - 3.2.2 (MIT)",
+    "react-is - 18.3.1 (MIT)",
+    "react - 19.2.8 (MIT)",
+    "scheduler - 0.27.0 (MIT)",
+    "tabbable - 6.5.0 (MIT)"
+  ],
+  "license_bytes": 78111,
+  "license_sha256": "86067bb78a1c7ba2d852e1d9a0117de90658d8494c21c6f8d0430473fa6e1a65",
+  "font_license_matches_source": true,
+  "dist_root": "/private/tmp/arc-v02-release-close.p3RyvK/frontend/dist",
+  "dist_bytes": 2943258,
+  "dist_files": 96,
+  "remaining": "Fresh npm ci and browser workflow on exact committed lock delegated to root CI; no public deployment in this task."
+}

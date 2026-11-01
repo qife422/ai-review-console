@@ -1,0 +1,31 @@
+{
+  "argv": [
+    ".venv/bin/pip-compile",
+    "--upgrade-package",
+    "certifi",
+    "--upgrade-package",
+    "pillow",
+    "--upgrade-package",
+    "pypdf",
+    "--strip-extras",
+    "--output-file",
+    "requirements.lock",
+    "pyproject.toml"
+  ],
+  "exit_code": 0,
+  "stdout": "compile.stdout",
+  "stderr": "compile.stderr",
+  "cwd": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1",
+  "time_instrumentation": "original invocation not instrumented; output file mtime recorded",
+  "output_mtime_utc": "2026-11-01T00:43:17.739450+00:00",
+  "outputs": {
+    "stdout": {
+      "file": "compile.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "file": "compile.stderr",
+      "sha256": "bd4dd5f664ea44ae6575d0d8d204de4d9f1cc765f2fb9d9bc24958b7d0c46e71"
+    }
+  }
+}

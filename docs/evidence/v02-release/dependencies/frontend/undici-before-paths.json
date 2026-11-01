@@ -1,0 +1,79 @@
+[
+  {
+    "name": "undici",
+    "version": "7.29.0",
+    "location": "node_modules/undici",
+    "isWorkspace": false,
+    "dependents": [
+      {
+        "type": "prod",
+        "name": "undici",
+        "spec": "^7.25.0",
+        "from": {
+          "name": "jsdom",
+          "version": "29.1.1",
+          "location": "node_modules/jsdom",
+          "isWorkspace": false,
+          "dependents": [
+            {
+              "type": "dev",
+              "name": "jsdom",
+              "spec": "29.1.1",
+              "from": {
+                "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+              }
+            },
+            {
+              "type": "peerOptional",
+              "name": "jsdom",
+              "spec": "*",
+              "from": {
+                "name": "vitest",
+                "version": "4.1.11",
+                "location": "node_modules/vitest",
+                "isWorkspace": false,
+                "dependents": [
+                  {
+                    "type": "dev",
+                    "name": "vitest",
+                    "spec": "4.1.11",
+                    "from": {
+                      "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                    }
+                  },
+                  {
+                    "type": "peerOptional",
+                    "name": "vitest",
+                    "spec": ">= 0.32",
+                    "from": {
+                      "name": "@testing-library/jest-dom",
+                      "version": "7.0.1",
+                      "location": "node_modules/@testing-library/jest-dom",
+                      "isWorkspace": false,
+                      "dependents": [
+                        {
+                          "type": "dev",
+                          "name": "@testing-library/jest-dom",
+                          "spec": "7.0.1",
+                          "from": {
+                            "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "dev": true,
+    "optional": false,
+    "devOptional": true,
+    "peer": false,
+    "bundled": false,
+    "overridden": false
+  }
+]

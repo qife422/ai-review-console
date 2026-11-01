@@ -1,0 +1,4777 @@
+{
+  "generated_at": "2026-11-01T01:17:01.284433+00:00",
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "AC-19",
+    "RELEASE-001"
+  ],
+  "ci": {
+    "head_sha": "fac92ea797c96cd8d12581bf616d0295e8312186",
+    "url": "https://github.com/qife422/ai-review-console/actions/runs/41259579902",
+    "status": "completed",
+    "conclusion": "success"
+  },
+  "method": "Union upstream-declared id/aliases symmetrically/transitively; no union of CVE references or inference that RHSA is one CVE. Fixed versions use exact ecosystem and package matching. No additional remote queries/builds/installs.",
+  "image_counts": {
+    "api": {
+      "identity": {
+        "id": "sha256:8f2f6f8d6916153043c8388c0f524bfc13c2e7945212dd7329c6e5cc8fdfa4f5",
+        "os": "linux",
+        "architecture": "amd64",
+        "size": 293851834,
+        "repo_digests": []
+      },
+      "query_started_at": "2026-11-01T01:11:29.346539+00:00",
+      "package_inventory_count": 140,
+      "matched_binary_or_python_packages": 51,
+      "counts": {
+        "advisory_ids_count": 114,
+        "unique_alias_identifiers_count": 0,
+        "id_and_alias_identifiers_count": 114,
+        "alias_groups_count": 114,
+        "advisory_ids": [
+          "DEBIAN-CVE-2005-2541",
+          "DEBIAN-CVE-2007-5686",
+          "DEBIAN-CVE-2010-4756",
+          "DEBIAN-CVE-2011-3374",
+          "DEBIAN-CVE-2011-3389",
+          "DEBIAN-CVE-2011-4116",
+          "DEBIAN-CVE-2013-4392",
+          "DEBIAN-CVE-2016-2781",
+          "DEBIAN-CVE-2017-18018",
+          "DEBIAN-CVE-2018-20796",
+          "DEBIAN-CVE-2018-5709",
+          "DEBIAN-CVE-2018-6829",
+          "DEBIAN-CVE-2019-1010022",
+          "DEBIAN-CVE-2019-1010023",
+          "DEBIAN-CVE-2019-1010024",
+          "DEBIAN-CVE-2019-1010025",
+          "DEBIAN-CVE-2019-9192",
+          "DEBIAN-CVE-2021-45346",
+          "DEBIAN-CVE-2022-0563",
+          "DEBIAN-CVE-2022-27943",
+          "DEBIAN-CVE-2022-3219",
+          "DEBIAN-CVE-2023-31437",
+          "DEBIAN-CVE-2023-31438",
+          "DEBIAN-CVE-2023-31439",
+          "DEBIAN-CVE-2023-31486",
+          "DEBIAN-CVE-2023-45853",
+          "DEBIAN-CVE-2023-50495",
+          "DEBIAN-CVE-2024-10041",
+          "DEBIAN-CVE-2024-2236",
+          "DEBIAN-CVE-2024-26458",
+          "DEBIAN-CVE-2024-26461",
+          "DEBIAN-CVE-2024-56433",
+          "DEBIAN-CVE-2025-13151",
+          "DEBIAN-CVE-2025-14104",
+          "DEBIAN-CVE-2025-27587",
+          "DEBIAN-CVE-2025-29088",
+          "DEBIAN-CVE-2025-30258",
+          "DEBIAN-CVE-2025-5278",
+          "DEBIAN-CVE-2025-6141",
+          "DEBIAN-CVE-2025-68972",
+          "DEBIAN-CVE-2025-69720",
+          "DEBIAN-CVE-2025-70873",
+          "DEBIAN-CVE-2025-7458",
+          "DEBIAN-CVE-2025-7709",
+          "DEBIAN-CVE-2025-8941",
+          "DEBIAN-CVE-2026-102010",
+          "DEBIAN-CVE-2026-102473",
+          "DEBIAN-CVE-2026-102474",
+          "DEBIAN-CVE-2026-105712",
+          "DEBIAN-CVE-2026-107708",
+          "DEBIAN-CVE-2026-107778",
+          "DEBIAN-CVE-2026-11822",
+          "DEBIAN-CVE-2026-11824",
+          "DEBIAN-CVE-2026-11850",
+          "DEBIAN-CVE-2026-13595",
+          "DEBIAN-CVE-2026-13757",
+          "DEBIAN-CVE-2026-15059",
+          "DEBIAN-CVE-2026-15534",
+          "DEBIAN-CVE-2026-16742",
+          "DEBIAN-CVE-2026-18374",
+          "DEBIAN-CVE-2026-18477",
+          "DEBIAN-CVE-2026-18508",
+          "DEBIAN-CVE-2026-18938",
+          "DEBIAN-CVE-2026-19499",
+          "DEBIAN-CVE-2026-19542",
+          "DEBIAN-CVE-2026-27171",
+          "DEBIAN-CVE-2026-27456",
+          "DEBIAN-CVE-2026-3184",
+          "DEBIAN-CVE-2026-40228",
+          "DEBIAN-CVE-2026-41991",
+          "DEBIAN-CVE-2026-41992",
+          "DEBIAN-CVE-2026-42250",
+          "DEBIAN-CVE-2026-50812",
+          "DEBIAN-CVE-2026-50813",
+          "DEBIAN-CVE-2026-53613",
+          "DEBIAN-CVE-2026-53615",
+          "DEBIAN-CVE-2026-53910",
+          "DEBIAN-CVE-2026-5435",
+          "DEBIAN-CVE-2026-54369",
+          "DEBIAN-CVE-2026-54370",
+          "DEBIAN-CVE-2026-54371",
+          "DEBIAN-CVE-2026-54411",
+          "DEBIAN-CVE-2026-5450",
+          "DEBIAN-CVE-2026-56391",
+          "DEBIAN-CVE-2026-56392",
+          "DEBIAN-CVE-2026-5704",
+          "DEBIAN-CVE-2026-57062",
+          "DEBIAN-CVE-2026-5928",
+          "DEBIAN-CVE-2026-6238",
+          "DEBIAN-CVE-2026-6368",
+          "DEBIAN-CVE-2026-67693",
+          "DEBIAN-CVE-2026-6791",
+          "DEBIAN-CVE-2026-76642",
+          "DEBIAN-CVE-2026-77117",
+          "DEBIAN-CVE-2026-78408",
+          "DEBIAN-CVE-2026-78410",
+          "DEBIAN-CVE-2026-80489",
+          "DEBIAN-CVE-2026-82560",
+          "DEBIAN-CVE-2026-84243",
+          "DEBIAN-CVE-2026-85091",
+          "DEBIAN-CVE-2026-85231",
+          "DEBIAN-CVE-2026-85977",
+          "DEBIAN-CVE-2026-8674",
+          "DEBIAN-CVE-2026-86805",
+          "DEBIAN-CVE-2026-88647",
+          "DEBIAN-CVE-2026-88648",
+          "DEBIAN-CVE-2026-89092",
+          "DEBIAN-CVE-2026-95184",
+          "DEBIAN-CVE-2026-95209",
+          "DEBIAN-CVE-2026-95210",
+          "DEBIAN-CVE-2026-9538",
+          "DEBIAN-CVE-2026-95619",
+          "DEBIAN-CVE-2026-95818",
+          "DEBIAN-CVE-2026-97399"
+        ],
+        "unique_alias_identifiers": [],
+        "alias_groups": [
+          [
+            "DEBIAN-CVE-2005-2541"
+          ],
+          [
+            "DEBIAN-CVE-2007-5686"
+          ],
+          [
+            "DEBIAN-CVE-2010-4756"
+          ],
+          [
+            "DEBIAN-CVE-2011-3374"
+          ],
+          [
+            "DEBIAN-CVE-2011-3389"
+          ],
+          [
+            "DEBIAN-CVE-2011-4116"
+          ],
+          [
+            "DEBIAN-CVE-2013-4392"
+          ],
+          [
+            "DEBIAN-CVE-2016-2781"
+          ],
+          [
+            "DEBIAN-CVE-2017-18018"
+          ],
+          [
+            "DEBIAN-CVE-2018-20796"
+          ],
+          [
+            "DEBIAN-CVE-2018-5709"
+          ],
+          [
+            "DEBIAN-CVE-2018-6829"
+          ],
+          [
+            "DEBIAN-CVE-2019-1010022"
+          ],
+          [
+            "DEBIAN-CVE-2019-1010023"
+          ],
+          [
+            "DEBIAN-CVE-2019-1010024"
+          ],
+          [
+            "DEBIAN-CVE-2019-1010025"
+          ],
+          [
+            "DEBIAN-CVE-2019-9192"
+          ],
+          [
+            "DEBIAN-CVE-2021-45346"
+          ],
+          [
+            "DEBIAN-CVE-2022-0563"
+          ],
+          [
+            "DEBIAN-CVE-2022-27943"
+          ],
+          [
+            "DEBIAN-CVE-2022-3219"
+          ],
+          [
+            "DEBIAN-CVE-2023-31437"
+          ],
+          [
+            "DEBIAN-CVE-2023-31438"
+          ],
+          [
+            "DEBIAN-CVE-2023-31439"
+          ],
+          [
+            "DEBIAN-CVE-2023-31486"
+          ],
+          [
+            "DEBIAN-CVE-2023-45853"
+          ],
+          [
+            "DEBIAN-CVE-2023-50495"
+          ],
+          [
+            "DEBIAN-CVE-2024-10041"
+          ],
+          [
+            "DEBIAN-CVE-2024-2236"
+          ],
+          [
+            "DEBIAN-CVE-2024-26458"
+          ],
+          [
+            "DEBIAN-CVE-2024-26461"
+          ],
+          [
+            "DEBIAN-CVE-2024-56433"
+          ],
+          [
+            "DEBIAN-CVE-2025-13151"
+          ],
+          [
+            "DEBIAN-CVE-2025-14104"
+          ],
+          [
+            "DEBIAN-CVE-2025-27587"
+          ],
+          [
+            "DEBIAN-CVE-2025-29088"
+          ],
+          [
+            "DEBIAN-CVE-2025-30258"
+          ],
+          [
+            "DEBIAN-CVE-2025-5278"
+          ],
+          [
+            "DEBIAN-CVE-2025-6141"
+          ],
+          [
+            "DEBIAN-CVE-2025-68972"
+          ],
+          [
+            "DEBIAN-CVE-2025-69720"
+          ],
+          [
+            "DEBIAN-CVE-2025-70873"
+          ],
+          [
+            "DEBIAN-CVE-2025-7458"
+          ],
+          [
+            "DEBIAN-CVE-2025-7709"
+          ],
+          [
+            "DEBIAN-CVE-2025-8941"
+          ],
+          [
+            "DEBIAN-CVE-2026-102010"
+          ],
+          [
+            "DEBIAN-CVE-2026-102473"
+          ],
+          [
+            "DEBIAN-CVE-2026-102474"
+          ],
+          [
+            "DEBIAN-CVE-2026-105712"
+          ],
+          [
+            "DEBIAN-CVE-2026-107708"
+          ],
+          [
+            "DEBIAN-CVE-2026-107778"
+          ],
+          [
+            "DEBIAN-CVE-2026-11822"
+          ],
+          [
+            "DEBIAN-CVE-2026-11824"
+          ],
+          [
+            "DEBIAN-CVE-2026-11850"
+          ],
+          [
+            "DEBIAN-CVE-2026-13595"
+          ],
+          [
+            "DEBIAN-CVE-2026-13757"
+          ],
+          [
+            "DEBIAN-CVE-2026-15059"
+          ],
+          [
+            "DEBIAN-CVE-2026-15534"
+          ],
+          [
+            "DEBIAN-CVE-2026-16742"
+          ],
+          [
+            "DEBIAN-CVE-2026-18374"
+          ],
+          [
+            "DEBIAN-CVE-2026-18477"
+          ],
+          [
+            "DEBIAN-CVE-2026-18508"
+          ],
+          [
+            "DEBIAN-CVE-2026-18938"
+          ],
+          [
+            "DEBIAN-CVE-2026-19499"
+          ],
+          [
+            "DEBIAN-CVE-2026-19542"
+          ],
+          [
+            "DEBIAN-CVE-2026-27171"
+          ],
+          [
+            "DEBIAN-CVE-2026-27456"
+          ],
+          [
+            "DEBIAN-CVE-2026-3184"
+          ],
+          [
+            "DEBIAN-CVE-2026-40228"
+          ],
+          [
+            "DEBIAN-CVE-2026-41991"
+          ],
+          [
+            "DEBIAN-CVE-2026-41992"
+          ],
+          [
+            "DEBIAN-CVE-2026-42250"
+          ],
+          [
+            "DEBIAN-CVE-2026-50812"
+          ],
+          [
+            "DEBIAN-CVE-2026-50813"
+          ],
+          [
+            "DEBIAN-CVE-2026-53613"
+          ],
+          [
+            "DEBIAN-CVE-2026-53615"
+          ],
+          [
+            "DEBIAN-CVE-2026-53910"
+          ],
+          [
+            "DEBIAN-CVE-2026-5435"
+          ],
+          [
+            "DEBIAN-CVE-2026-54369"
+          ],
+          [
+            "DEBIAN-CVE-2026-54370"
+          ],
+          [
+            "DEBIAN-CVE-2026-54371"
+          ],
+          [
+            "DEBIAN-CVE-2026-54411"
+          ],
+          [
+            "DEBIAN-CVE-2026-5450"
+          ],
+          [
+            "DEBIAN-CVE-2026-56391"
+          ],
+          [
+            "DEBIAN-CVE-2026-56392"
+          ],
+          [
+            "DEBIAN-CVE-2026-5704"
+          ],
+          [
+            "DEBIAN-CVE-2026-57062"
+          ],
+          [
+            "DEBIAN-CVE-2026-5928"
+          ],
+          [
+            "DEBIAN-CVE-2026-6238"
+          ],
+          [
+            "DEBIAN-CVE-2026-6368"
+          ],
+          [
+            "DEBIAN-CVE-2026-67693"
+          ],
+          [
+            "DEBIAN-CVE-2026-6791"
+          ],
+          [
+            "DEBIAN-CVE-2026-76642"
+          ],
+          [
+            "DEBIAN-CVE-2026-77117"
+          ],
+          [
+            "DEBIAN-CVE-2026-78408"
+          ],
+          [
+            "DEBIAN-CVE-2026-78410"
+          ],
+          [
+            "DEBIAN-CVE-2026-80489"
+          ],
+          [
+            "DEBIAN-CVE-2026-82560"
+          ],
+          [
+            "DEBIAN-CVE-2026-84243"
+          ],
+          [
+            "DEBIAN-CVE-2026-85091"
+          ],
+          [
+            "DEBIAN-CVE-2026-85231"
+          ],
+          [
+            "DEBIAN-CVE-2026-85977"
+          ],
+          [
+            "DEBIAN-CVE-2026-8674"
+          ],
+          [
+            "DEBIAN-CVE-2026-86805"
+          ],
+          [
+            "DEBIAN-CVE-2026-88647"
+          ],
+          [
+            "DEBIAN-CVE-2026-88648"
+          ],
+          [
+            "DEBIAN-CVE-2026-89092"
+          ],
+          [
+            "DEBIAN-CVE-2026-95184"
+          ],
+          [
+            "DEBIAN-CVE-2026-95209"
+          ],
+          [
+            "DEBIAN-CVE-2026-95210"
+          ],
+          [
+            "DEBIAN-CVE-2026-9538"
+          ],
+          [
+            "DEBIAN-CVE-2026-95619"
+          ],
+          [
+            "DEBIAN-CVE-2026-95818"
+          ],
+          [
+            "DEBIAN-CVE-2026-97399"
+          ]
+        ]
+      },
+      "query_unknown": 0,
+      "detail_unknown": 0,
+      "mapping_unknown_in_primary_scan": 0
+    },
+    "langflow": {
+      "identity": {
+        "id": "sha256:33960b31a9600466b019713f12a7779d720e94443cd09935d3dc0640ab019dc2",
+        "os": "linux",
+        "architecture": "amd64",
+        "size": 3613349757,
+        "repo_digests": []
+      },
+      "query_started_at": "2026-11-01T01:11:29.346539+00:00",
+      "package_inventory_count": 774,
+      "matched_binary_or_python_packages": 8,
+      "counts": {
+        "advisory_ids_count": 90,
+        "unique_alias_identifiers_count": 151,
+        "id_and_alias_identifiers_count": 191,
+        "alias_groups_count": 65,
+        "advisory_ids": [
+          "GHSA-22hg-r758-rrw9",
+          "GHSA-24rc-8hj2-v98c",
+          "GHSA-254f-3936-288h",
+          "GHSA-27h8-gf7j-v5hc",
+          "GHSA-2wm9-hf6c-p5cr",
+          "GHSA-332p-7hrc-92wf",
+          "GHSA-36p7-vc44-83pf",
+          "GHSA-3j72-p6qg-6xp7",
+          "GHSA-3jp2-3mrg-2vxc",
+          "GHSA-4558-3h8r-v8xp",
+          "GHSA-462x-pgg6-55fp",
+          "GHSA-4rm8-3hmm-39fg",
+          "GHSA-4rr5-89j8-mwwm",
+          "GHSA-567q-5qvw-pf92",
+          "GHSA-58r4-6rv3-gfh8",
+          "GHSA-5x8w-8jj5-q52h",
+          "GHSA-5xm2-6676-qcp9",
+          "GHSA-654x-cwwv-5j9c",
+          "GHSA-65qm-jvmh-6pqg",
+          "GHSA-6627-m3xw-93mp",
+          "GHSA-69hj-f68j-2879",
+          "GHSA-74r2-7ff9-mjj2",
+          "GHSA-77xj-x4rm-935c",
+          "GHSA-78g4-xqwv-q3g8",
+          "GHSA-7984-qgvg-3j9c",
+          "GHSA-7mwm-ghpf-9vrm",
+          "GHSA-8g5g-8vmr-9782",
+          "GHSA-8mx5-7m5m-r77g",
+          "GHSA-9c4x-gm8v-wgc4",
+          "GHSA-9v9v-9qvf-h2hj",
+          "GHSA-9vhv-jxww-xfm5",
+          "GHSA-c6hw-5grf-ff96",
+          "GHSA-cp9v-662q-vvx9",
+          "GHSA-cwqr-hh33-gh44",
+          "GHSA-f2g6-542v-9j58",
+          "GHSA-f4j7-r4q5-qw2c",
+          "GHSA-fc9g-5qg7-mf45",
+          "GHSA-fq56-3cx3-fjxp",
+          "GHSA-g4qv-2jxx-769h",
+          "GHSA-g7cr-3p24-7wf7",
+          "GHSA-g842-9rc4-69pw",
+          "GHSA-gg2r-wvfm-q9rx",
+          "GHSA-hj66-6f7g-4r5v",
+          "GHSA-j4m9-6w36-pw47",
+          "GHSA-j8f7-rjxc-mr56",
+          "GHSA-jg86-v3jv-hrpm",
+          "GHSA-m462-7rxw-wvpg",
+          "GHSA-mrfp-p49p-3hf2",
+          "GHSA-p4wg-p73j-c528",
+          "GHSA-p8hx-v2p6-rp84",
+          "GHSA-pchr-8j38-3x4p",
+          "GHSA-q45j-58j2-45rg",
+          "GHSA-rfgq-q3w2-pmv2",
+          "GHSA-rfpc-qcw5-3pc4",
+          "GHSA-v4x8-3wr5-3wq8",
+          "GHSA-v9pv-5gc8-w2m6",
+          "GHSA-vx6w-vv9f-6gvg",
+          "GHSA-w889-685w-c8fh",
+          "GHSA-xcq7-p3pf-p88h",
+          "GHSA-xgh8-jp6q-p5x8",
+          "GHSA-xmj3-9gf7-h52w",
+          "GHSA-xph7-9rjv-w5fr",
+          "GHSA-xpv3-w29h-x7cv",
+          "GHSA-xvh5-g6gv-559v",
+          "PYSEC-2023-235",
+          "PYSEC-2026-311",
+          "PYSEC-2026-3813",
+          "PYSEC-2026-3814",
+          "PYSEC-2026-3815",
+          "PYSEC-2026-4113",
+          "PYSEC-2026-4114",
+          "PYSEC-2026-4205",
+          "PYSEC-2026-4326",
+          "PYSEC-2026-4327",
+          "PYSEC-2026-4328",
+          "PYSEC-2026-4329",
+          "PYSEC-2026-4330",
+          "PYSEC-2026-4331",
+          "PYSEC-2026-4332",
+          "PYSEC-2026-4333",
+          "PYSEC-2026-4334",
+          "PYSEC-2026-4335",
+          "PYSEC-2026-4336",
+          "PYSEC-2026-4337",
+          "PYSEC-2026-4338",
+          "PYSEC-2026-4339",
+          "PYSEC-2026-4340",
+          "PYSEC-2026-4341",
+          "PYSEC-2026-4342",
+          "PYSEC-2026-4343"
+        ],
+        "unique_alias_identifiers": [
+          "BIT-pillow-2026-112390",
+          "BIT-pillow-2026-112391",
+          "BIT-pillow-2026-112392",
+          "BIT-pillow-2026-112393",
+          "BIT-pillow-2026-112394",
+          "BIT-pillow-2026-112395",
+          "BIT-pillow-2026-112396",
+          "BIT-pillow-2026-112397",
+          "BIT-pillow-2026-112398",
+          "BIT-pillow-2026-112399",
+          "BIT-pillow-2026-112400",
+          "BIT-pillow-2026-112401",
+          "BIT-pillow-2026-112402",
+          "BIT-pillow-2026-112403",
+          "BIT-pillow-2026-112404",
+          "BIT-pillow-2026-112405",
+          "BIT-pillow-2026-112406",
+          "BIT-pillow-2026-112891",
+          "BIT-pillow-2026-112892",
+          "BIT-pillow-2026-112893",
+          "BIT-pillow-2026-112894",
+          "BIT-pillow-2026-112895",
+          "BIT-pillow-2026-112896",
+          "BIT-pillow-2026-112897",
+          "BIT-pillow-2026-112898",
+          "BIT-pillow-2026-112900",
+          "BIT-pillow-2026-112901",
+          "BIT-pillow-2026-114501",
+          "BIT-pillow-2026-96636",
+          "BIT-pillow-2026-96637",
+          "BIT-pillow-2026-96638",
+          "BIT-pillow-2026-96639",
+          "BIT-pillow-2026-96640",
+          "BIT-pillow-2026-96641",
+          "BIT-pillow-2026-96642",
+          "BIT-pillow-2026-96643",
+          "BIT-pillow-2026-96644",
+          "BIT-pillow-2026-96778",
+          "CVE-2023-45875",
+          "CVE-2026-107377",
+          "CVE-2026-112390",
+          "CVE-2026-112391",
+          "CVE-2026-112392",
+          "CVE-2026-112393",
+          "CVE-2026-112394",
+          "CVE-2026-112395",
+          "CVE-2026-112396",
+          "CVE-2026-112397",
+          "CVE-2026-112398",
+          "CVE-2026-112399",
+          "CVE-2026-112400",
+          "CVE-2026-112401",
+          "CVE-2026-112402",
+          "CVE-2026-112403",
+          "CVE-2026-112404",
+          "CVE-2026-112405",
+          "CVE-2026-112406",
+          "CVE-2026-112891",
+          "CVE-2026-112892",
+          "CVE-2026-112893",
+          "CVE-2026-112894",
+          "CVE-2026-112895",
+          "CVE-2026-112896",
+          "CVE-2026-112897",
+          "CVE-2026-112898",
+          "CVE-2026-112899",
+          "CVE-2026-112900",
+          "CVE-2026-112901",
+          "CVE-2026-112902",
+          "CVE-2026-112907",
+          "CVE-2026-112908",
+          "CVE-2026-112909",
+          "CVE-2026-112910",
+          "CVE-2026-112911",
+          "CVE-2026-112913",
+          "CVE-2026-112915",
+          "CVE-2026-112935",
+          "CVE-2026-112936",
+          "CVE-2026-112938",
+          "CVE-2026-112939",
+          "CVE-2026-112940",
+          "CVE-2026-114501",
+          "CVE-2026-114603",
+          "CVE-2026-118669",
+          "CVE-2026-45829",
+          "CVE-2026-45830",
+          "CVE-2026-45831",
+          "CVE-2026-45833",
+          "CVE-2026-49264",
+          "CVE-2026-49265",
+          "CVE-2026-49272",
+          "CVE-2026-96636",
+          "CVE-2026-96637",
+          "CVE-2026-96638",
+          "CVE-2026-96639",
+          "CVE-2026-96640",
+          "CVE-2026-96641",
+          "CVE-2026-96642",
+          "CVE-2026-96643",
+          "CVE-2026-96644",
+          "CVE-2026-96778",
+          "GHSA-27h8-gf7j-v5hc",
+          "GHSA-2wm9-hf6c-p5cr",
+          "GHSA-36p7-vc44-83pf",
+          "GHSA-3j72-p6qg-6xp7",
+          "GHSA-4558-3h8r-v8xp",
+          "GHSA-4rm8-3hmm-39fg",
+          "GHSA-4rr5-89j8-mwwm",
+          "GHSA-58r4-6rv3-gfh8",
+          "GHSA-5x8w-8jj5-q52h",
+          "GHSA-654x-cwwv-5j9c",
+          "GHSA-77xj-x4rm-935c",
+          "GHSA-7mwm-ghpf-9vrm",
+          "GHSA-8g5g-8vmr-9782",
+          "GHSA-9v9v-9qvf-h2hj",
+          "GHSA-cp9v-662q-vvx9",
+          "GHSA-f4j7-r4q5-qw2c",
+          "GHSA-g4qv-2jxx-769h",
+          "GHSA-g842-9rc4-69pw",
+          "GHSA-hj66-6f7g-4r5v",
+          "GHSA-p8hx-v2p6-rp84",
+          "GHSA-pchr-8j38-3x4p",
+          "GHSA-v9pv-5gc8-w2m6",
+          "GHSA-xgh8-jp6q-p5x8",
+          "GHSA-xph7-9rjv-w5fr",
+          "GHSA-xpv3-w29h-x7cv",
+          "PYSEC-2026-311",
+          "PYSEC-2026-3813",
+          "PYSEC-2026-3814",
+          "PYSEC-2026-3815",
+          "PYSEC-2026-4113",
+          "PYSEC-2026-4114",
+          "PYSEC-2026-4205",
+          "PYSEC-2026-4326",
+          "PYSEC-2026-4327",
+          "PYSEC-2026-4328",
+          "PYSEC-2026-4329",
+          "PYSEC-2026-4330",
+          "PYSEC-2026-4331",
+          "PYSEC-2026-4332",
+          "PYSEC-2026-4333",
+          "PYSEC-2026-4334",
+          "PYSEC-2026-4335",
+          "PYSEC-2026-4336",
+          "PYSEC-2026-4337",
+          "PYSEC-2026-4338",
+          "PYSEC-2026-4339",
+          "PYSEC-2026-4340",
+          "PYSEC-2026-4341",
+          "PYSEC-2026-4342",
+          "PYSEC-2026-4343"
+        ],
+        "alias_groups": [
+          [
+            "GHSA-22hg-r758-rrw9"
+          ],
+          [
+            "GHSA-24rc-8hj2-v98c"
+          ],
+          [
+            "GHSA-254f-3936-288h"
+          ],
+          [
+            "GHSA-27h8-gf7j-v5hc",
+            "PYSEC-2026-4326"
+          ],
+          [
+            "GHSA-2wm9-hf6c-p5cr",
+            "PYSEC-2026-3813"
+          ],
+          [
+            "GHSA-332p-7hrc-92wf"
+          ],
+          [
+            "GHSA-36p7-vc44-83pf",
+            "PYSEC-2026-3814"
+          ],
+          [
+            "GHSA-3j72-p6qg-6xp7",
+            "PYSEC-2026-4341"
+          ],
+          [
+            "GHSA-3jp2-3mrg-2vxc"
+          ],
+          [
+            "GHSA-4558-3h8r-v8xp",
+            "PYSEC-2026-4327"
+          ],
+          [
+            "GHSA-462x-pgg6-55fp"
+          ],
+          [
+            "GHSA-4rm8-3hmm-39fg",
+            "PYSEC-2026-4340"
+          ],
+          [
+            "GHSA-4rr5-89j8-mwwm",
+            "PYSEC-2026-4328"
+          ],
+          [
+            "GHSA-567q-5qvw-pf92"
+          ],
+          [
+            "GHSA-58r4-6rv3-gfh8",
+            "PYSEC-2026-4329"
+          ],
+          [
+            "GHSA-5x8w-8jj5-q52h",
+            "PYSEC-2026-4330"
+          ],
+          [
+            "GHSA-5xm2-6676-qcp9"
+          ],
+          [
+            "GHSA-654x-cwwv-5j9c",
+            "PYSEC-2026-4336"
+          ],
+          [
+            "GHSA-65qm-jvmh-6pqg"
+          ],
+          [
+            "GHSA-6627-m3xw-93mp"
+          ],
+          [
+            "GHSA-69hj-f68j-2879"
+          ],
+          [
+            "GHSA-74r2-7ff9-mjj2"
+          ],
+          [
+            "GHSA-77xj-x4rm-935c",
+            "PYSEC-2026-4205"
+          ],
+          [
+            "GHSA-78g4-xqwv-q3g8"
+          ],
+          [
+            "GHSA-7984-qgvg-3j9c"
+          ],
+          [
+            "GHSA-7mwm-ghpf-9vrm",
+            "PYSEC-2026-4331"
+          ],
+          [
+            "GHSA-8g5g-8vmr-9782",
+            "PYSEC-2026-4332"
+          ],
+          [
+            "GHSA-8mx5-7m5m-r77g"
+          ],
+          [
+            "GHSA-9c4x-gm8v-wgc4"
+          ],
+          [
+            "GHSA-9v9v-9qvf-h2hj",
+            "PYSEC-2026-4343"
+          ],
+          [
+            "GHSA-9vhv-jxww-xfm5"
+          ],
+          [
+            "GHSA-c6hw-5grf-ff96"
+          ],
+          [
+            "GHSA-cp9v-662q-vvx9",
+            "PYSEC-2026-4333"
+          ],
+          [
+            "GHSA-cwqr-hh33-gh44"
+          ],
+          [
+            "GHSA-f2g6-542v-9j58"
+          ],
+          [
+            "GHSA-f4j7-r4q5-qw2c",
+            "PYSEC-2026-311"
+          ],
+          [
+            "GHSA-fc9g-5qg7-mf45"
+          ],
+          [
+            "GHSA-fq56-3cx3-fjxp"
+          ],
+          [
+            "GHSA-g4qv-2jxx-769h",
+            "PYSEC-2026-4342"
+          ],
+          [
+            "GHSA-g7cr-3p24-7wf7"
+          ],
+          [
+            "GHSA-g842-9rc4-69pw",
+            "PYSEC-2026-4338"
+          ],
+          [
+            "GHSA-gg2r-wvfm-q9rx"
+          ],
+          [
+            "GHSA-hj66-6f7g-4r5v",
+            "PYSEC-2026-4113"
+          ],
+          [
+            "GHSA-j4m9-6w36-pw47"
+          ],
+          [
+            "GHSA-j8f7-rjxc-mr56"
+          ],
+          [
+            "GHSA-jg86-v3jv-hrpm"
+          ],
+          [
+            "GHSA-m462-7rxw-wvpg"
+          ],
+          [
+            "GHSA-mrfp-p49p-3hf2"
+          ],
+          [
+            "GHSA-p4wg-p73j-c528"
+          ],
+          [
+            "GHSA-p8hx-v2p6-rp84",
+            "PYSEC-2026-4337"
+          ],
+          [
+            "GHSA-pchr-8j38-3x4p",
+            "PYSEC-2026-4334"
+          ],
+          [
+            "GHSA-q45j-58j2-45rg"
+          ],
+          [
+            "GHSA-rfgq-q3w2-pmv2"
+          ],
+          [
+            "GHSA-rfpc-qcw5-3pc4"
+          ],
+          [
+            "GHSA-v4x8-3wr5-3wq8"
+          ],
+          [
+            "GHSA-v9pv-5gc8-w2m6",
+            "PYSEC-2026-4339"
+          ],
+          [
+            "GHSA-vx6w-vv9f-6gvg"
+          ],
+          [
+            "GHSA-w889-685w-c8fh"
+          ],
+          [
+            "GHSA-xcq7-p3pf-p88h"
+          ],
+          [
+            "GHSA-xgh8-jp6q-p5x8",
+            "PYSEC-2026-4335"
+          ],
+          [
+            "GHSA-xmj3-9gf7-h52w"
+          ],
+          [
+            "GHSA-xph7-9rjv-w5fr",
+            "PYSEC-2026-3815"
+          ],
+          [
+            "GHSA-xpv3-w29h-x7cv",
+            "PYSEC-2026-4114"
+          ],
+          [
+            "GHSA-xvh5-g6gv-559v"
+          ],
+          [
+            "PYSEC-2023-235"
+          ]
+        ]
+      },
+      "query_unknown": 0,
+      "detail_unknown": 0,
+      "mapping_unknown_in_primary_scan": 226
+    },
+    "web": {
+      "identity": {
+        "id": "sha256:43c964da1c549cad88ef332222b7739c7e9b7c15e4a8d05829b5db992d8fd231",
+        "os": "linux",
+        "architecture": "amd64",
+        "size": 67398555,
+        "repo_digests": []
+      },
+      "query_started_at": "2026-11-01T01:11:29.346539+00:00",
+      "package_inventory_count": 71,
+      "matched_binary_or_python_packages": 0,
+      "counts": {
+        "advisory_ids_count": 0,
+        "unique_alias_identifiers_count": 0,
+        "id_and_alias_identifiers_count": 0,
+        "alias_groups_count": 0,
+        "advisory_ids": [],
+        "unique_alias_identifiers": [],
+        "alias_groups": []
+      },
+      "query_unknown": 0,
+      "detail_unknown": 0,
+      "mapping_unknown_in_primary_scan": 0
+    },
+    "postgres": {
+      "identity": {
+        "id": "sha256:74d436cb49d3398cf7b5d7b33635d43623d9e4da4b93c22db453f7d5d81181b1",
+        "os": "linux",
+        "architecture": "amd64",
+        "size": 451344072,
+        "repo_digests": [
+          "postgres@sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+        ]
+      },
+      "query_started_at": "2026-11-01T01:11:29.346539+00:00",
+      "package_inventory_count": 142,
+      "matched_binary_or_python_packages": 63,
+      "counts": {
+        "advisory_ids_count": 116,
+        "unique_alias_identifiers_count": 0,
+        "id_and_alias_identifiers_count": 116,
+        "alias_groups_count": 116,
+        "advisory_ids": [
+          "DEBIAN-CVE-2005-2541",
+          "DEBIAN-CVE-2007-5686",
+          "DEBIAN-CVE-2010-4756",
+          "DEBIAN-CVE-2011-3374",
+          "DEBIAN-CVE-2011-3389",
+          "DEBIAN-CVE-2011-4116",
+          "DEBIAN-CVE-2013-4392",
+          "DEBIAN-CVE-2015-3276",
+          "DEBIAN-CVE-2015-9019",
+          "DEBIAN-CVE-2017-14159",
+          "DEBIAN-CVE-2017-17740",
+          "DEBIAN-CVE-2017-18018",
+          "DEBIAN-CVE-2018-20796",
+          "DEBIAN-CVE-2018-5709",
+          "DEBIAN-CVE-2018-6829",
+          "DEBIAN-CVE-2019-1010022",
+          "DEBIAN-CVE-2019-1010023",
+          "DEBIAN-CVE-2019-1010024",
+          "DEBIAN-CVE-2019-1010025",
+          "DEBIAN-CVE-2019-9192",
+          "DEBIAN-CVE-2020-15719",
+          "DEBIAN-CVE-2021-45346",
+          "DEBIAN-CVE-2022-0563",
+          "DEBIAN-CVE-2022-3219",
+          "DEBIAN-CVE-2023-31437",
+          "DEBIAN-CVE-2023-31438",
+          "DEBIAN-CVE-2023-31439",
+          "DEBIAN-CVE-2024-2236",
+          "DEBIAN-CVE-2024-26458",
+          "DEBIAN-CVE-2024-26461",
+          "DEBIAN-CVE-2024-56433",
+          "DEBIAN-CVE-2024-7883",
+          "DEBIAN-CVE-2025-10911",
+          "DEBIAN-CVE-2025-11731",
+          "DEBIAN-CVE-2025-5278",
+          "DEBIAN-CVE-2025-6141",
+          "DEBIAN-CVE-2025-68972",
+          "DEBIAN-CVE-2025-69720",
+          "DEBIAN-CVE-2025-70873",
+          "DEBIAN-CVE-2025-8941",
+          "DEBIAN-CVE-2026-102010",
+          "DEBIAN-CVE-2026-102473",
+          "DEBIAN-CVE-2026-102474",
+          "DEBIAN-CVE-2026-105712",
+          "DEBIAN-CVE-2026-107161",
+          "DEBIAN-CVE-2026-107708",
+          "DEBIAN-CVE-2026-107778",
+          "DEBIAN-CVE-2026-11850",
+          "DEBIAN-CVE-2026-11979",
+          "DEBIAN-CVE-2026-13573",
+          "DEBIAN-CVE-2026-13574",
+          "DEBIAN-CVE-2026-13757",
+          "DEBIAN-CVE-2026-15059",
+          "DEBIAN-CVE-2026-15534",
+          "DEBIAN-CVE-2026-16742",
+          "DEBIAN-CVE-2026-18374",
+          "DEBIAN-CVE-2026-18477",
+          "DEBIAN-CVE-2026-18508",
+          "DEBIAN-CVE-2026-18938",
+          "DEBIAN-CVE-2026-19499",
+          "DEBIAN-CVE-2026-19542",
+          "DEBIAN-CVE-2026-22185",
+          "DEBIAN-CVE-2026-24882",
+          "DEBIAN-CVE-2026-27171",
+          "DEBIAN-CVE-2026-3184",
+          "DEBIAN-CVE-2026-39113",
+          "DEBIAN-CVE-2026-40228",
+          "DEBIAN-CVE-2026-42250",
+          "DEBIAN-CVE-2026-50812",
+          "DEBIAN-CVE-2026-50813",
+          "DEBIAN-CVE-2026-53910",
+          "DEBIAN-CVE-2026-5435",
+          "DEBIAN-CVE-2026-54369",
+          "DEBIAN-CVE-2026-54370",
+          "DEBIAN-CVE-2026-54371",
+          "DEBIAN-CVE-2026-54411",
+          "DEBIAN-CVE-2026-56391",
+          "DEBIAN-CVE-2026-56392",
+          "DEBIAN-CVE-2026-5704",
+          "DEBIAN-CVE-2026-57062",
+          "DEBIAN-CVE-2026-6238",
+          "DEBIAN-CVE-2026-6368",
+          "DEBIAN-CVE-2026-6653",
+          "DEBIAN-CVE-2026-67693",
+          "DEBIAN-CVE-2026-6791",
+          "DEBIAN-CVE-2026-74860",
+          "DEBIAN-CVE-2026-76642",
+          "DEBIAN-CVE-2026-76781",
+          "DEBIAN-CVE-2026-77117",
+          "DEBIAN-CVE-2026-78408",
+          "DEBIAN-CVE-2026-78409",
+          "DEBIAN-CVE-2026-78410",
+          "DEBIAN-CVE-2026-80489",
+          "DEBIAN-CVE-2026-82560",
+          "DEBIAN-CVE-2026-84243",
+          "DEBIAN-CVE-2026-85091",
+          "DEBIAN-CVE-2026-86137",
+          "DEBIAN-CVE-2026-86138",
+          "DEBIAN-CVE-2026-86139",
+          "DEBIAN-CVE-2026-86140",
+          "DEBIAN-CVE-2026-86141",
+          "DEBIAN-CVE-2026-86142",
+          "DEBIAN-CVE-2026-86143",
+          "DEBIAN-CVE-2026-86144",
+          "DEBIAN-CVE-2026-8674",
+          "DEBIAN-CVE-2026-86805",
+          "DEBIAN-CVE-2026-88647",
+          "DEBIAN-CVE-2026-88648",
+          "DEBIAN-CVE-2026-89092",
+          "DEBIAN-CVE-2026-95184",
+          "DEBIAN-CVE-2026-95209",
+          "DEBIAN-CVE-2026-95210",
+          "DEBIAN-CVE-2026-9538",
+          "DEBIAN-CVE-2026-95619",
+          "DEBIAN-CVE-2026-95818",
+          "DEBIAN-CVE-2026-97399"
+        ],
+        "unique_alias_identifiers": [],
+        "alias_groups": [
+          [
+            "DEBIAN-CVE-2005-2541"
+          ],
+          [
+            "DEBIAN-CVE-2007-5686"
+          ],
+          [
+            "DEBIAN-CVE-2010-4756"
+          ],
+          [
+            "DEBIAN-CVE-2011-3374"
+          ],
+          [
+            "DEBIAN-CVE-2011-3389"
+          ],
+          [
+            "DEBIAN-CVE-2011-4116"
+          ],
+          [
+            "DEBIAN-CVE-2013-4392"
+          ],
+          [
+            "DEBIAN-CVE-2015-3276"
+          ],
+          [
+            "DEBIAN-CVE-2015-9019"
+          ],
+          [
+            "DEBIAN-CVE-2017-14159"
+          ],
+          [
+            "DEBIAN-CVE-2017-17740"
+          ],
+          [
+            "DEBIAN-CVE-2017-18018"
+          ],
+          [
+            "DEBIAN-CVE-2018-20796"
+          ],
+          [
+            "DEBIAN-CVE-2018-5709"
+          ],
+          [
+            "DEBIAN-CVE-2018-6829"
+          ],
+          [
+            "DEBIAN-CVE-2019-1010022"
+          ],
+          [
+            "DEBIAN-CVE-2019-1010023"
+          ],
+          [
+            "DEBIAN-CVE-2019-1010024"
+          ],
+          [
+            "DEBIAN-CVE-2019-1010025"
+          ],
+          [
+            "DEBIAN-CVE-2019-9192"
+          ],
+          [
+            "DEBIAN-CVE-2020-15719"
+          ],
+          [
+            "DEBIAN-CVE-2021-45346"
+          ],
+          [
+            "DEBIAN-CVE-2022-0563"
+          ],
+          [
+            "DEBIAN-CVE-2022-3219"
+          ],
+          [
+            "DEBIAN-CVE-2023-31437"
+          ],
+          [
+            "DEBIAN-CVE-2023-31438"
+          ],
+          [
+            "DEBIAN-CVE-2023-31439"
+          ],
+          [
+            "DEBIAN-CVE-2024-2236"
+          ],
+          [
+            "DEBIAN-CVE-2024-26458"
+          ],
+          [
+            "DEBIAN-CVE-2024-26461"
+          ],
+          [
+            "DEBIAN-CVE-2024-56433"
+          ],
+          [
+            "DEBIAN-CVE-2024-7883"
+          ],
+          [
+            "DEBIAN-CVE-2025-10911"
+          ],
+          [
+            "DEBIAN-CVE-2025-11731"
+          ],
+          [
+            "DEBIAN-CVE-2025-5278"
+          ],
+          [
+            "DEBIAN-CVE-2025-6141"
+          ],
+          [
+            "DEBIAN-CVE-2025-68972"
+          ],
+          [
+            "DEBIAN-CVE-2025-69720"
+          ],
+          [
+            "DEBIAN-CVE-2025-70873"
+          ],
+          [
+            "DEBIAN-CVE-2025-8941"
+          ],
+          [
+            "DEBIAN-CVE-2026-102010"
+          ],
+          [
+            "DEBIAN-CVE-2026-102473"
+          ],
+          [
+            "DEBIAN-CVE-2026-102474"
+          ],
+          [
+            "DEBIAN-CVE-2026-105712"
+          ],
+          [
+            "DEBIAN-CVE-2026-107161"
+          ],
+          [
+            "DEBIAN-CVE-2026-107708"
+          ],
+          [
+            "DEBIAN-CVE-2026-107778"
+          ],
+          [
+            "DEBIAN-CVE-2026-11850"
+          ],
+          [
+            "DEBIAN-CVE-2026-11979"
+          ],
+          [
+            "DEBIAN-CVE-2026-13573"
+          ],
+          [
+            "DEBIAN-CVE-2026-13574"
+          ],
+          [
+            "DEBIAN-CVE-2026-13757"
+          ],
+          [
+            "DEBIAN-CVE-2026-15059"
+          ],
+          [
+            "DEBIAN-CVE-2026-15534"
+          ],
+          [
+            "DEBIAN-CVE-2026-16742"
+          ],
+          [
+            "DEBIAN-CVE-2026-18374"
+          ],
+          [
+            "DEBIAN-CVE-2026-18477"
+          ],
+          [
+            "DEBIAN-CVE-2026-18508"
+          ],
+          [
+            "DEBIAN-CVE-2026-18938"
+          ],
+          [
+            "DEBIAN-CVE-2026-19499"
+          ],
+          [
+            "DEBIAN-CVE-2026-19542"
+          ],
+          [
+            "DEBIAN-CVE-2026-22185"
+          ],
+          [
+            "DEBIAN-CVE-2026-24882"
+          ],
+          [
+            "DEBIAN-CVE-2026-27171"
+          ],
+          [
+            "DEBIAN-CVE-2026-3184"
+          ],
+          [
+            "DEBIAN-CVE-2026-39113"
+          ],
+          [
+            "DEBIAN-CVE-2026-40228"
+          ],
+          [
+            "DEBIAN-CVE-2026-42250"
+          ],
+          [
+            "DEBIAN-CVE-2026-50812"
+          ],
+          [
+            "DEBIAN-CVE-2026-50813"
+          ],
+          [
+            "DEBIAN-CVE-2026-53910"
+          ],
+          [
+            "DEBIAN-CVE-2026-5435"
+          ],
+          [
+            "DEBIAN-CVE-2026-54369"
+          ],
+          [
+            "DEBIAN-CVE-2026-54370"
+          ],
+          [
+            "DEBIAN-CVE-2026-54371"
+          ],
+          [
+            "DEBIAN-CVE-2026-54411"
+          ],
+          [
+            "DEBIAN-CVE-2026-56391"
+          ],
+          [
+            "DEBIAN-CVE-2026-56392"
+          ],
+          [
+            "DEBIAN-CVE-2026-5704"
+          ],
+          [
+            "DEBIAN-CVE-2026-57062"
+          ],
+          [
+            "DEBIAN-CVE-2026-6238"
+          ],
+          [
+            "DEBIAN-CVE-2026-6368"
+          ],
+          [
+            "DEBIAN-CVE-2026-6653"
+          ],
+          [
+            "DEBIAN-CVE-2026-67693"
+          ],
+          [
+            "DEBIAN-CVE-2026-6791"
+          ],
+          [
+            "DEBIAN-CVE-2026-74860"
+          ],
+          [
+            "DEBIAN-CVE-2026-76642"
+          ],
+          [
+            "DEBIAN-CVE-2026-76781"
+          ],
+          [
+            "DEBIAN-CVE-2026-77117"
+          ],
+          [
+            "DEBIAN-CVE-2026-78408"
+          ],
+          [
+            "DEBIAN-CVE-2026-78409"
+          ],
+          [
+            "DEBIAN-CVE-2026-78410"
+          ],
+          [
+            "DEBIAN-CVE-2026-80489"
+          ],
+          [
+            "DEBIAN-CVE-2026-82560"
+          ],
+          [
+            "DEBIAN-CVE-2026-84243"
+          ],
+          [
+            "DEBIAN-CVE-2026-85091"
+          ],
+          [
+            "DEBIAN-CVE-2026-86137"
+          ],
+          [
+            "DEBIAN-CVE-2026-86138"
+          ],
+          [
+            "DEBIAN-CVE-2026-86139"
+          ],
+          [
+            "DEBIAN-CVE-2026-86140"
+          ],
+          [
+            "DEBIAN-CVE-2026-86141"
+          ],
+          [
+            "DEBIAN-CVE-2026-86142"
+          ],
+          [
+            "DEBIAN-CVE-2026-86143"
+          ],
+          [
+            "DEBIAN-CVE-2026-86144"
+          ],
+          [
+            "DEBIAN-CVE-2026-8674"
+          ],
+          [
+            "DEBIAN-CVE-2026-86805"
+          ],
+          [
+            "DEBIAN-CVE-2026-88647"
+          ],
+          [
+            "DEBIAN-CVE-2026-88648"
+          ],
+          [
+            "DEBIAN-CVE-2026-89092"
+          ],
+          [
+            "DEBIAN-CVE-2026-95184"
+          ],
+          [
+            "DEBIAN-CVE-2026-95209"
+          ],
+          [
+            "DEBIAN-CVE-2026-95210"
+          ],
+          [
+            "DEBIAN-CVE-2026-9538"
+          ],
+          [
+            "DEBIAN-CVE-2026-95619"
+          ],
+          [
+            "DEBIAN-CVE-2026-95818"
+          ],
+          [
+            "DEBIAN-CVE-2026-97399"
+          ]
+        ]
+      },
+      "query_unknown": 0,
+      "detail_unknown": 0,
+      "mapping_unknown_in_primary_scan": 0
+    },
+    "langflow_rpm_supplement": {
+      "image_id": "sha256:33960b31a9600466b019713f12a7779d720e94443cd09935d3dc0640ab019dc2",
+      "query_started_at": "2026-11-01T01:11:46.991805+00:00",
+      "counts": {
+        "advisory_ids_count": 23,
+        "unique_alias_identifiers_count": 0,
+        "id_and_alias_identifiers_count": 23,
+        "alias_groups_count": 23,
+        "advisory_ids": [
+          "RHSA-2026:64787",
+          "RHSA-2026:64799",
+          "RHSA-2026:64810",
+          "RHSA-2026:67154",
+          "RHSA-2026:67156",
+          "RHSA-2026:67886",
+          "RHSA-2026:67909",
+          "RHSA-2026:69125",
+          "RHSA-2026:69129",
+          "RHSA-2026:69553",
+          "RHSA-2026:71586",
+          "RHSA-2026:73429",
+          "RHSA-2026:73954",
+          "RHSA-2026:74001",
+          "RHSA-2026:76734",
+          "RHSA-2026:76781",
+          "RHSA-2026:76918",
+          "RHSA-2026:77018",
+          "RHSA-2026:80512",
+          "RHSA-2026:81522",
+          "RHSA-2026:84587",
+          "RHSA-2026:84753",
+          "RHSA-2026:85847"
+        ],
+        "unique_alias_identifiers": [],
+        "alias_groups": [
+          [
+            "RHSA-2026:64787"
+          ],
+          [
+            "RHSA-2026:64799"
+          ],
+          [
+            "RHSA-2026:64810"
+          ],
+          [
+            "RHSA-2026:67154"
+          ],
+          [
+            "RHSA-2026:67156"
+          ],
+          [
+            "RHSA-2026:67886"
+          ],
+          [
+            "RHSA-2026:67909"
+          ],
+          [
+            "RHSA-2026:69125"
+          ],
+          [
+            "RHSA-2026:69129"
+          ],
+          [
+            "RHSA-2026:69553"
+          ],
+          [
+            "RHSA-2026:71586"
+          ],
+          [
+            "RHSA-2026:73429"
+          ],
+          [
+            "RHSA-2026:73954"
+          ],
+          [
+            "RHSA-2026:74001"
+          ],
+          [
+            "RHSA-2026:76734"
+          ],
+          [
+            "RHSA-2026:76781"
+          ],
+          [
+            "RHSA-2026:76918"
+          ],
+          [
+            "RHSA-2026:77018"
+          ],
+          [
+            "RHSA-2026:80512"
+          ],
+          [
+            "RHSA-2026:81522"
+          ],
+          [
+            "RHSA-2026:84587"
+          ],
+          [
+            "RHSA-2026:84753"
+          ],
+          [
+            "RHSA-2026:85847"
+          ]
+        ]
+      },
+      "mapped_software_packages": 223,
+      "metadata_only_public_keys": 3,
+      "matched_software_packages": 50,
+      "mapping_unknown": 0,
+      "query_unknown": 0,
+      "detail_unknown": 0,
+      "counting_unit": "RHSA advisory identifiers; not a CVE count"
+    }
+  },
+  "remaining_langflow_pypi": [
+    {
+      "name": "datamodel-code-generator",
+      "installed": "0.71.0",
+      "counts": {
+        "advisory_ids_count": 2,
+        "unique_alias_identifiers_count": 3,
+        "id_and_alias_identifiers_count": 3,
+        "alias_groups_count": 1,
+        "advisory_ids": [
+          "GHSA-77xj-x4rm-935c",
+          "PYSEC-2026-4205"
+        ],
+        "unique_alias_identifiers": [
+          "CVE-2026-107377",
+          "GHSA-77xj-x4rm-935c",
+          "PYSEC-2026-4205"
+        ],
+        "alias_groups": [
+          [
+            "GHSA-77xj-x4rm-935c",
+            "PYSEC-2026-4205"
+          ]
+        ]
+      },
+      "upstream_fields": [
+        {
+          "id": "GHSA-77xj-x4rm-935c",
+          "aliases": [
+            "CVE-2026-107377",
+            "PYSEC-2026-4205"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "PYSEC-2026-4205",
+          "aliases": [
+            "CVE-2026-107377",
+            "GHSA-77xj-x4rm-935c"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+            }
+          ],
+          "database_specific_severity": null
+        }
+      ],
+      "matching_ecosystem_fixed_versions": [
+        "0.81.0"
+      ],
+      "reverse_constraints_from_same_version_installed_metadata": [
+        {
+          "package": "toolguard",
+          "version": "0.2.21",
+          "requirement": "datamodel-code-generator>=0.52.2",
+          "specifier": ">=0.52.2",
+          "owner_final_installed_version": "0.2.21",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "vlmrun-hub",
+          "version": "0.1.34",
+          "requirement": "datamodel-code-generator>=0.28.0",
+          "specifier": ">=0.28.0",
+          "owner_final_installed_version": "0.1.34",
+          "owner_version_unchanged": true
+        }
+      ],
+      "disposition": "pre_1_0_minor_compatibility_work",
+      "reason": "Recorded fix0.81.0 crosses0.71→0.81 in a pre1.0 code generator. Reverse ranges allow it; generated-code/API compatibility was not validated in this patch set."
+    },
+    {
+      "name": "oauthlib",
+      "installed": "3.3.1",
+      "counts": {
+        "advisory_ids_count": 6,
+        "unique_alias_identifiers_count": 8,
+        "id_and_alias_identifiers_count": 10,
+        "alias_groups_count": 4,
+        "advisory_ids": [
+          "GHSA-3jp2-3mrg-2vxc",
+          "GHSA-7984-qgvg-3j9c",
+          "GHSA-hj66-6f7g-4r5v",
+          "GHSA-xpv3-w29h-x7cv",
+          "PYSEC-2026-4113",
+          "PYSEC-2026-4114"
+        ],
+        "unique_alias_identifiers": [
+          "CVE-2026-118669",
+          "CVE-2026-49264",
+          "CVE-2026-49265",
+          "CVE-2026-49272",
+          "GHSA-hj66-6f7g-4r5v",
+          "GHSA-xpv3-w29h-x7cv",
+          "PYSEC-2026-4113",
+          "PYSEC-2026-4114"
+        ],
+        "alias_groups": [
+          [
+            "GHSA-3jp2-3mrg-2vxc"
+          ],
+          [
+            "GHSA-7984-qgvg-3j9c"
+          ],
+          [
+            "GHSA-hj66-6f7g-4r5v",
+            "PYSEC-2026-4113"
+          ],
+          [
+            "GHSA-xpv3-w29h-x7cv",
+            "PYSEC-2026-4114"
+          ]
+        ]
+      },
+      "upstream_fields": [
+        {
+          "id": "GHSA-3jp2-3mrg-2vxc",
+          "aliases": [
+            "CVE-2026-49272"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:H/A:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-7984-qgvg-3j9c",
+          "aliases": [
+            "CVE-2026-118669"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:H/SI:H/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-hj66-6f7g-4r5v",
+          "aliases": [
+            "CVE-2026-49264",
+            "PYSEC-2026-4113"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-xpv3-w29h-x7cv",
+          "aliases": [
+            "CVE-2026-49265",
+            "PYSEC-2026-4114"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "PYSEC-2026-4113",
+          "aliases": [
+            "CVE-2026-49264",
+            "GHSA-hj66-6f7g-4r5v"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-4114",
+          "aliases": [
+            "CVE-2026-49265",
+            "GHSA-xpv3-w29h-x7cv"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N"
+            }
+          ],
+          "database_specific_severity": null
+        }
+      ],
+      "matching_ecosystem_fixed_versions": [
+        "4.0.0"
+      ],
+      "reverse_constraints_from_same_version_installed_metadata": [
+        {
+          "package": "requests-oauthlib",
+          "version": "2.0.0",
+          "requirement": "oauthlib >=3.0.0",
+          "specifier": ">=3.0.0",
+          "owner_final_installed_version": "2.0.0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "kubernetes",
+          "version": "31.0.0",
+          "requirement": "oauthlib>=3.2.2",
+          "specifier": ">=3.2.2",
+          "owner_final_installed_version": "31.0.0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "atlassian-python-api",
+          "version": "3.41.16",
+          "requirement": "oauthlib",
+          "specifier": "",
+          "owner_final_installed_version": "3.41.16",
+          "owner_version_unchanged": true
+        }
+      ],
+      "disposition": "major_upgrade_requires_separate_compatibility_work",
+      "reason": "Recorded fix4.0.0 crosses3.x→4.x. Current reverse ranges do not block it, but the major behavior change was not validated in this bounded patch set."
+    },
+    {
+      "name": "setuptools",
+      "installed": "83.0.0",
+      "counts": {
+        "advisory_ids_count": 1,
+        "unique_alias_identifiers_count": 0,
+        "id_and_alias_identifiers_count": 1,
+        "alias_groups_count": 1,
+        "advisory_ids": [
+          "GHSA-xmj3-9gf7-h52w"
+        ],
+        "unique_alias_identifiers": [],
+        "alias_groups": [
+          [
+            "GHSA-xmj3-9gf7-h52w"
+          ]
+        ]
+      },
+      "upstream_fields": [
+        {
+          "id": "GHSA-xmj3-9gf7-h52w",
+          "aliases": [],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:A/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "LOW"
+        }
+      ],
+      "matching_ecosystem_fixed_versions": [
+        "84.1.0"
+      ],
+      "reverse_constraints_from_same_version_installed_metadata": [
+        {
+          "package": "langflow-base",
+          "version": "0.11.6",
+          "requirement": "setuptools<84.0.0,>=83.0.0",
+          "specifier": "<84.0.0,>=83.0.0",
+          "owner_final_installed_version": "0.11.6",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "nv-ingest-client",
+          "version": "26.1.2",
+          "requirement": "setuptools>=78.1.1",
+          "specifier": ">=78.1.1",
+          "owner_final_installed_version": "26.1.2",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "lfx",
+          "version": "1.11.6",
+          "requirement": "setuptools<84.0.0,>=83.0.0",
+          "specifier": "<84.0.0,>=83.0.0",
+          "owner_final_installed_version": "1.11.6",
+          "owner_version_unchanged": true
+        }
+      ],
+      "disposition": "blocked_upstream_upper_bound_and_major",
+      "reason": "Recorded fix84.1.0 conflicts with unchanged langflow-base/lfx<84."
+    },
+    {
+      "name": "chromadb",
+      "installed": "1.5.9",
+      "counts": {
+        "advisory_ids_count": 8,
+        "unique_alias_identifiers_count": 12,
+        "id_and_alias_identifiers_count": 12,
+        "alias_groups_count": 4,
+        "advisory_ids": [
+          "GHSA-2wm9-hf6c-p5cr",
+          "GHSA-36p7-vc44-83pf",
+          "GHSA-f4j7-r4q5-qw2c",
+          "GHSA-xph7-9rjv-w5fr",
+          "PYSEC-2026-311",
+          "PYSEC-2026-3813",
+          "PYSEC-2026-3814",
+          "PYSEC-2026-3815"
+        ],
+        "unique_alias_identifiers": [
+          "CVE-2026-45829",
+          "CVE-2026-45830",
+          "CVE-2026-45831",
+          "CVE-2026-45833",
+          "GHSA-2wm9-hf6c-p5cr",
+          "GHSA-36p7-vc44-83pf",
+          "GHSA-f4j7-r4q5-qw2c",
+          "GHSA-xph7-9rjv-w5fr",
+          "PYSEC-2026-311",
+          "PYSEC-2026-3813",
+          "PYSEC-2026-3814",
+          "PYSEC-2026-3815"
+        ],
+        "alias_groups": [
+          [
+            "GHSA-2wm9-hf6c-p5cr",
+            "PYSEC-2026-3813"
+          ],
+          [
+            "GHSA-36p7-vc44-83pf",
+            "PYSEC-2026-3814"
+          ],
+          [
+            "GHSA-f4j7-r4q5-qw2c",
+            "PYSEC-2026-311"
+          ],
+          [
+            "GHSA-xph7-9rjv-w5fr",
+            "PYSEC-2026-3815"
+          ]
+        ]
+      },
+      "upstream_fields": [
+        {
+          "id": "GHSA-2wm9-hf6c-p5cr",
+          "aliases": [
+            "CVE-2026-45830",
+            "PYSEC-2026-3813"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+            },
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-36p7-vc44-83pf",
+          "aliases": [
+            "CVE-2026-45833",
+            "PYSEC-2026-3814"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H"
+            }
+          ],
+          "database_specific_severity": "CRITICAL"
+        },
+        {
+          "id": "GHSA-f4j7-r4q5-qw2c",
+          "aliases": [
+            "CVE-2026-45829",
+            "PYSEC-2026-311"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+            },
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P"
+            }
+          ],
+          "database_specific_severity": "CRITICAL"
+        },
+        {
+          "id": "GHSA-xph7-9rjv-w5fr",
+          "aliases": [
+            "CVE-2026-45831",
+            "PYSEC-2026-3815"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+            },
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "PYSEC-2026-311",
+          "aliases": [
+            "CVE-2026-45829",
+            "GHSA-f4j7-r4q5-qw2c"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-3813",
+          "aliases": [
+            "CVE-2026-45830",
+            "GHSA-2wm9-hf6c-p5cr"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+            },
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-3814",
+          "aliases": [
+            "CVE-2026-45833",
+            "GHSA-36p7-vc44-83pf"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-3815",
+          "aliases": [
+            "CVE-2026-45831",
+            "GHSA-xph7-9rjv-w5fr"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+            },
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N"
+            }
+          ],
+          "database_specific_severity": null
+        }
+      ],
+      "matching_ecosystem_fixed_versions": [],
+      "reverse_constraints_from_same_version_installed_metadata": [
+        {
+          "package": "langchain-chroma",
+          "version": "0.2.6",
+          "requirement": "chromadb>=1.0.20",
+          "specifier": ">=1.0.20",
+          "owner_final_installed_version": "0.2.6",
+          "owner_version_unchanged": true
+        }
+      ],
+      "disposition": "no_fixed_event_in_service_records",
+      "reason": "No fixed event for the exact PyPI package is present in returned records. Recorded PyPI latest stable1.5.9 equals installed version. This is not proof no upstream workaround exists."
+    },
+    {
+      "name": "filelock",
+      "installed": "3.32.0",
+      "counts": {
+        "advisory_ids_count": 12,
+        "unique_alias_identifiers_count": 12,
+        "id_and_alias_identifiers_count": 24,
+        "alias_groups_count": 12,
+        "advisory_ids": [
+          "GHSA-567q-5qvw-pf92",
+          "GHSA-6627-m3xw-93mp",
+          "GHSA-69hj-f68j-2879",
+          "GHSA-8mx5-7m5m-r77g",
+          "GHSA-9c4x-gm8v-wgc4",
+          "GHSA-9vhv-jxww-xfm5",
+          "GHSA-cwqr-hh33-gh44",
+          "GHSA-fq56-3cx3-fjxp",
+          "GHSA-j8f7-rjxc-mr56",
+          "GHSA-m462-7rxw-wvpg",
+          "GHSA-rfpc-qcw5-3pc4",
+          "GHSA-v4x8-3wr5-3wq8"
+        ],
+        "unique_alias_identifiers": [
+          "CVE-2026-112907",
+          "CVE-2026-112908",
+          "CVE-2026-112909",
+          "CVE-2026-112910",
+          "CVE-2026-112911",
+          "CVE-2026-112913",
+          "CVE-2026-112915",
+          "CVE-2026-112935",
+          "CVE-2026-112936",
+          "CVE-2026-112938",
+          "CVE-2026-112939",
+          "CVE-2026-112940"
+        ],
+        "alias_groups": [
+          [
+            "GHSA-567q-5qvw-pf92"
+          ],
+          [
+            "GHSA-6627-m3xw-93mp"
+          ],
+          [
+            "GHSA-69hj-f68j-2879"
+          ],
+          [
+            "GHSA-8mx5-7m5m-r77g"
+          ],
+          [
+            "GHSA-9c4x-gm8v-wgc4"
+          ],
+          [
+            "GHSA-9vhv-jxww-xfm5"
+          ],
+          [
+            "GHSA-cwqr-hh33-gh44"
+          ],
+          [
+            "GHSA-fq56-3cx3-fjxp"
+          ],
+          [
+            "GHSA-j8f7-rjxc-mr56"
+          ],
+          [
+            "GHSA-m462-7rxw-wvpg"
+          ],
+          [
+            "GHSA-rfpc-qcw5-3pc4"
+          ],
+          [
+            "GHSA-v4x8-3wr5-3wq8"
+          ]
+        ]
+      },
+      "upstream_fields": [
+        {
+          "id": "GHSA-567q-5qvw-pf92",
+          "aliases": [
+            "CVE-2026-112907"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L"
+            }
+          ],
+          "database_specific_severity": "LOW"
+        },
+        {
+          "id": "GHSA-6627-m3xw-93mp",
+          "aliases": [
+            "CVE-2026-112908"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:L"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-69hj-f68j-2879",
+          "aliases": [
+            "CVE-2026-112909"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-8mx5-7m5m-r77g",
+          "aliases": [
+            "CVE-2026-112910"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-9c4x-gm8v-wgc4",
+          "aliases": [
+            "CVE-2026-112911"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-9vhv-jxww-xfm5",
+          "aliases": [
+            "CVE-2026-112913"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+            }
+          ],
+          "database_specific_severity": "LOW"
+        },
+        {
+          "id": "GHSA-cwqr-hh33-gh44",
+          "aliases": [
+            "CVE-2026-112915"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-fq56-3cx3-fjxp",
+          "aliases": [
+            "CVE-2026-112935"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-j8f7-rjxc-mr56",
+          "aliases": [
+            "CVE-2026-112936"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-m462-7rxw-wvpg",
+          "aliases": [
+            "CVE-2026-112938"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:H"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-rfpc-qcw5-3pc4",
+          "aliases": [
+            "CVE-2026-112939"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-v4x8-3wr5-3wq8",
+          "aliases": [
+            "CVE-2026-112940"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        }
+      ],
+      "matching_ecosystem_fixed_versions": [
+        "4.0.9",
+        "4.2.1"
+      ],
+      "reverse_constraints_from_same_version_installed_metadata": [
+        {
+          "package": "langflow-base",
+          "version": "0.11.6",
+          "requirement": "filelock<4.0.0,>=3.20.1",
+          "specifier": "<4.0.0,>=3.20.1",
+          "owner_final_installed_version": "0.11.6",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "lfx",
+          "version": "1.11.6",
+          "requirement": "filelock<4.0.0,>=3.20.1",
+          "specifier": "<4.0.0,>=3.20.1",
+          "owner_final_installed_version": "1.11.6",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "huggingface_hub",
+          "version": "1.25.1",
+          "requirement": "filelock>=3.10.0",
+          "specifier": ">=3.10.0",
+          "owner_final_installed_version": "1.25.1",
+          "owner_version_unchanged": true
+        }
+      ],
+      "disposition": "blocked_upstream_upper_bound_and_major",
+      "reason": "Recorded fixes require4.x; unchanged langflow-base/lfx require<4."
+    },
+    {
+      "name": "pillow",
+      "installed": "12.3.0",
+      "counts": {
+        "advisory_ids_count": 59,
+        "unique_alias_identifiers_count": 114,
+        "id_and_alias_identifiers_count": 137,
+        "alias_groups_count": 41,
+        "advisory_ids": [
+          "GHSA-22hg-r758-rrw9",
+          "GHSA-24rc-8hj2-v98c",
+          "GHSA-254f-3936-288h",
+          "GHSA-27h8-gf7j-v5hc",
+          "GHSA-332p-7hrc-92wf",
+          "GHSA-3j72-p6qg-6xp7",
+          "GHSA-4558-3h8r-v8xp",
+          "GHSA-462x-pgg6-55fp",
+          "GHSA-4rm8-3hmm-39fg",
+          "GHSA-4rr5-89j8-mwwm",
+          "GHSA-58r4-6rv3-gfh8",
+          "GHSA-5x8w-8jj5-q52h",
+          "GHSA-5xm2-6676-qcp9",
+          "GHSA-654x-cwwv-5j9c",
+          "GHSA-65qm-jvmh-6pqg",
+          "GHSA-74r2-7ff9-mjj2",
+          "GHSA-78g4-xqwv-q3g8",
+          "GHSA-7mwm-ghpf-9vrm",
+          "GHSA-8g5g-8vmr-9782",
+          "GHSA-9v9v-9qvf-h2hj",
+          "GHSA-c6hw-5grf-ff96",
+          "GHSA-cp9v-662q-vvx9",
+          "GHSA-f2g6-542v-9j58",
+          "GHSA-fc9g-5qg7-mf45",
+          "GHSA-g4qv-2jxx-769h",
+          "GHSA-g7cr-3p24-7wf7",
+          "GHSA-g842-9rc4-69pw",
+          "GHSA-gg2r-wvfm-q9rx",
+          "GHSA-j4m9-6w36-pw47",
+          "GHSA-jg86-v3jv-hrpm",
+          "GHSA-mrfp-p49p-3hf2",
+          "GHSA-p4wg-p73j-c528",
+          "GHSA-p8hx-v2p6-rp84",
+          "GHSA-pchr-8j38-3x4p",
+          "GHSA-q45j-58j2-45rg",
+          "GHSA-rfgq-q3w2-pmv2",
+          "GHSA-v9pv-5gc8-w2m6",
+          "GHSA-vx6w-vv9f-6gvg",
+          "GHSA-w889-685w-c8fh",
+          "GHSA-xgh8-jp6q-p5x8",
+          "GHSA-xvh5-g6gv-559v",
+          "PYSEC-2026-4326",
+          "PYSEC-2026-4327",
+          "PYSEC-2026-4328",
+          "PYSEC-2026-4329",
+          "PYSEC-2026-4330",
+          "PYSEC-2026-4331",
+          "PYSEC-2026-4332",
+          "PYSEC-2026-4333",
+          "PYSEC-2026-4334",
+          "PYSEC-2026-4335",
+          "PYSEC-2026-4336",
+          "PYSEC-2026-4337",
+          "PYSEC-2026-4338",
+          "PYSEC-2026-4339",
+          "PYSEC-2026-4340",
+          "PYSEC-2026-4341",
+          "PYSEC-2026-4342",
+          "PYSEC-2026-4343"
+        ],
+        "unique_alias_identifiers": [
+          "BIT-pillow-2026-112390",
+          "BIT-pillow-2026-112391",
+          "BIT-pillow-2026-112392",
+          "BIT-pillow-2026-112393",
+          "BIT-pillow-2026-112394",
+          "BIT-pillow-2026-112395",
+          "BIT-pillow-2026-112396",
+          "BIT-pillow-2026-112397",
+          "BIT-pillow-2026-112398",
+          "BIT-pillow-2026-112399",
+          "BIT-pillow-2026-112400",
+          "BIT-pillow-2026-112401",
+          "BIT-pillow-2026-112402",
+          "BIT-pillow-2026-112403",
+          "BIT-pillow-2026-112404",
+          "BIT-pillow-2026-112405",
+          "BIT-pillow-2026-112406",
+          "BIT-pillow-2026-112891",
+          "BIT-pillow-2026-112892",
+          "BIT-pillow-2026-112893",
+          "BIT-pillow-2026-112894",
+          "BIT-pillow-2026-112895",
+          "BIT-pillow-2026-112896",
+          "BIT-pillow-2026-112897",
+          "BIT-pillow-2026-112898",
+          "BIT-pillow-2026-112900",
+          "BIT-pillow-2026-112901",
+          "BIT-pillow-2026-114501",
+          "BIT-pillow-2026-96636",
+          "BIT-pillow-2026-96637",
+          "BIT-pillow-2026-96638",
+          "BIT-pillow-2026-96639",
+          "BIT-pillow-2026-96640",
+          "BIT-pillow-2026-96641",
+          "BIT-pillow-2026-96642",
+          "BIT-pillow-2026-96643",
+          "BIT-pillow-2026-96644",
+          "BIT-pillow-2026-96778",
+          "CVE-2026-112390",
+          "CVE-2026-112391",
+          "CVE-2026-112392",
+          "CVE-2026-112393",
+          "CVE-2026-112394",
+          "CVE-2026-112395",
+          "CVE-2026-112396",
+          "CVE-2026-112397",
+          "CVE-2026-112398",
+          "CVE-2026-112399",
+          "CVE-2026-112400",
+          "CVE-2026-112401",
+          "CVE-2026-112402",
+          "CVE-2026-112403",
+          "CVE-2026-112404",
+          "CVE-2026-112405",
+          "CVE-2026-112406",
+          "CVE-2026-112891",
+          "CVE-2026-112892",
+          "CVE-2026-112893",
+          "CVE-2026-112894",
+          "CVE-2026-112895",
+          "CVE-2026-112896",
+          "CVE-2026-112897",
+          "CVE-2026-112898",
+          "CVE-2026-112899",
+          "CVE-2026-112900",
+          "CVE-2026-112901",
+          "CVE-2026-112902",
+          "CVE-2026-114501",
+          "CVE-2026-96636",
+          "CVE-2026-96637",
+          "CVE-2026-96638",
+          "CVE-2026-96639",
+          "CVE-2026-96640",
+          "CVE-2026-96641",
+          "CVE-2026-96642",
+          "CVE-2026-96643",
+          "CVE-2026-96644",
+          "CVE-2026-96778",
+          "GHSA-27h8-gf7j-v5hc",
+          "GHSA-3j72-p6qg-6xp7",
+          "GHSA-4558-3h8r-v8xp",
+          "GHSA-4rm8-3hmm-39fg",
+          "GHSA-4rr5-89j8-mwwm",
+          "GHSA-58r4-6rv3-gfh8",
+          "GHSA-5x8w-8jj5-q52h",
+          "GHSA-654x-cwwv-5j9c",
+          "GHSA-7mwm-ghpf-9vrm",
+          "GHSA-8g5g-8vmr-9782",
+          "GHSA-9v9v-9qvf-h2hj",
+          "GHSA-cp9v-662q-vvx9",
+          "GHSA-g4qv-2jxx-769h",
+          "GHSA-g842-9rc4-69pw",
+          "GHSA-p8hx-v2p6-rp84",
+          "GHSA-pchr-8j38-3x4p",
+          "GHSA-v9pv-5gc8-w2m6",
+          "GHSA-xgh8-jp6q-p5x8",
+          "PYSEC-2026-4326",
+          "PYSEC-2026-4327",
+          "PYSEC-2026-4328",
+          "PYSEC-2026-4329",
+          "PYSEC-2026-4330",
+          "PYSEC-2026-4331",
+          "PYSEC-2026-4332",
+          "PYSEC-2026-4333",
+          "PYSEC-2026-4334",
+          "PYSEC-2026-4335",
+          "PYSEC-2026-4336",
+          "PYSEC-2026-4337",
+          "PYSEC-2026-4338",
+          "PYSEC-2026-4339",
+          "PYSEC-2026-4340",
+          "PYSEC-2026-4341",
+          "PYSEC-2026-4342",
+          "PYSEC-2026-4343"
+        ],
+        "alias_groups": [
+          [
+            "GHSA-22hg-r758-rrw9"
+          ],
+          [
+            "GHSA-24rc-8hj2-v98c"
+          ],
+          [
+            "GHSA-254f-3936-288h"
+          ],
+          [
+            "GHSA-27h8-gf7j-v5hc",
+            "PYSEC-2026-4326"
+          ],
+          [
+            "GHSA-332p-7hrc-92wf"
+          ],
+          [
+            "GHSA-3j72-p6qg-6xp7",
+            "PYSEC-2026-4341"
+          ],
+          [
+            "GHSA-4558-3h8r-v8xp",
+            "PYSEC-2026-4327"
+          ],
+          [
+            "GHSA-462x-pgg6-55fp"
+          ],
+          [
+            "GHSA-4rm8-3hmm-39fg",
+            "PYSEC-2026-4340"
+          ],
+          [
+            "GHSA-4rr5-89j8-mwwm",
+            "PYSEC-2026-4328"
+          ],
+          [
+            "GHSA-58r4-6rv3-gfh8",
+            "PYSEC-2026-4329"
+          ],
+          [
+            "GHSA-5x8w-8jj5-q52h",
+            "PYSEC-2026-4330"
+          ],
+          [
+            "GHSA-5xm2-6676-qcp9"
+          ],
+          [
+            "GHSA-654x-cwwv-5j9c",
+            "PYSEC-2026-4336"
+          ],
+          [
+            "GHSA-65qm-jvmh-6pqg"
+          ],
+          [
+            "GHSA-74r2-7ff9-mjj2"
+          ],
+          [
+            "GHSA-78g4-xqwv-q3g8"
+          ],
+          [
+            "GHSA-7mwm-ghpf-9vrm",
+            "PYSEC-2026-4331"
+          ],
+          [
+            "GHSA-8g5g-8vmr-9782",
+            "PYSEC-2026-4332"
+          ],
+          [
+            "GHSA-9v9v-9qvf-h2hj",
+            "PYSEC-2026-4343"
+          ],
+          [
+            "GHSA-c6hw-5grf-ff96"
+          ],
+          [
+            "GHSA-cp9v-662q-vvx9",
+            "PYSEC-2026-4333"
+          ],
+          [
+            "GHSA-f2g6-542v-9j58"
+          ],
+          [
+            "GHSA-fc9g-5qg7-mf45"
+          ],
+          [
+            "GHSA-g4qv-2jxx-769h",
+            "PYSEC-2026-4342"
+          ],
+          [
+            "GHSA-g7cr-3p24-7wf7"
+          ],
+          [
+            "GHSA-g842-9rc4-69pw",
+            "PYSEC-2026-4338"
+          ],
+          [
+            "GHSA-gg2r-wvfm-q9rx"
+          ],
+          [
+            "GHSA-j4m9-6w36-pw47"
+          ],
+          [
+            "GHSA-jg86-v3jv-hrpm"
+          ],
+          [
+            "GHSA-mrfp-p49p-3hf2"
+          ],
+          [
+            "GHSA-p4wg-p73j-c528"
+          ],
+          [
+            "GHSA-p8hx-v2p6-rp84",
+            "PYSEC-2026-4337"
+          ],
+          [
+            "GHSA-pchr-8j38-3x4p",
+            "PYSEC-2026-4334"
+          ],
+          [
+            "GHSA-q45j-58j2-45rg"
+          ],
+          [
+            "GHSA-rfgq-q3w2-pmv2"
+          ],
+          [
+            "GHSA-v9pv-5gc8-w2m6",
+            "PYSEC-2026-4339"
+          ],
+          [
+            "GHSA-vx6w-vv9f-6gvg"
+          ],
+          [
+            "GHSA-w889-685w-c8fh"
+          ],
+          [
+            "GHSA-xgh8-jp6q-p5x8",
+            "PYSEC-2026-4335"
+          ],
+          [
+            "GHSA-xvh5-g6gv-559v"
+          ]
+        ]
+      },
+      "upstream_fields": [
+        {
+          "id": "GHSA-22hg-r758-rrw9",
+          "aliases": [
+            "BIT-pillow-2026-112390",
+            "CVE-2026-112390"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-24rc-8hj2-v98c",
+          "aliases": [
+            "BIT-pillow-2026-96638",
+            "CVE-2026-96638"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-254f-3936-288h",
+          "aliases": [
+            "BIT-pillow-2026-112391",
+            "CVE-2026-112391"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-27h8-gf7j-v5hc",
+          "aliases": [
+            "BIT-pillow-2026-112392",
+            "CVE-2026-112392",
+            "PYSEC-2026-4326"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-332p-7hrc-92wf",
+          "aliases": [
+            "BIT-pillow-2026-112393",
+            "CVE-2026-112393"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "CRITICAL"
+        },
+        {
+          "id": "GHSA-3j72-p6qg-6xp7",
+          "aliases": [
+            "BIT-pillow-2026-96642",
+            "CVE-2026-96642",
+            "PYSEC-2026-4341"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-4558-3h8r-v8xp",
+          "aliases": [
+            "BIT-pillow-2026-112394",
+            "CVE-2026-112394",
+            "PYSEC-2026-4327"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-462x-pgg6-55fp",
+          "aliases": [
+            "BIT-pillow-2026-112395",
+            "CVE-2026-112395"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-4rm8-3hmm-39fg",
+          "aliases": [
+            "BIT-pillow-2026-96641",
+            "CVE-2026-96641",
+            "PYSEC-2026-4340"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-4rr5-89j8-mwwm",
+          "aliases": [
+            "BIT-pillow-2026-112396",
+            "CVE-2026-112396",
+            "PYSEC-2026-4328"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-58r4-6rv3-gfh8",
+          "aliases": [
+            "BIT-pillow-2026-112397",
+            "CVE-2026-112397",
+            "PYSEC-2026-4329"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-5x8w-8jj5-q52h",
+          "aliases": [
+            "BIT-pillow-2026-112398",
+            "CVE-2026-112398",
+            "PYSEC-2026-4330"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "CRITICAL"
+        },
+        {
+          "id": "GHSA-5xm2-6676-qcp9",
+          "aliases": [
+            "BIT-pillow-2026-112399",
+            "CVE-2026-112399"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-654x-cwwv-5j9c",
+          "aliases": [
+            "BIT-pillow-2026-114501",
+            "CVE-2026-114501",
+            "PYSEC-2026-4336"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-65qm-jvmh-6pqg",
+          "aliases": [
+            "BIT-pillow-2026-112400",
+            "CVE-2026-112400"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-74r2-7ff9-mjj2",
+          "aliases": [
+            "BIT-pillow-2026-112401",
+            "CVE-2026-112401"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-78g4-xqwv-q3g8",
+          "aliases": [],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-7mwm-ghpf-9vrm",
+          "aliases": [
+            "BIT-pillow-2026-112402",
+            "CVE-2026-112402",
+            "PYSEC-2026-4331"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-8g5g-8vmr-9782",
+          "aliases": [
+            "BIT-pillow-2026-112403",
+            "CVE-2026-112403",
+            "PYSEC-2026-4332"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "CRITICAL"
+        },
+        {
+          "id": "GHSA-9v9v-9qvf-h2hj",
+          "aliases": [
+            "BIT-pillow-2026-96644",
+            "CVE-2026-96644",
+            "PYSEC-2026-4343"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-c6hw-5grf-ff96",
+          "aliases": [
+            "BIT-pillow-2026-112404",
+            "CVE-2026-112404"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-cp9v-662q-vvx9",
+          "aliases": [
+            "BIT-pillow-2026-112405",
+            "CVE-2026-112405",
+            "PYSEC-2026-4333"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-f2g6-542v-9j58",
+          "aliases": [
+            "BIT-pillow-2026-112406",
+            "CVE-2026-112406"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-fc9g-5qg7-mf45",
+          "aliases": [
+            "BIT-pillow-2026-112891",
+            "CVE-2026-112891"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-g4qv-2jxx-769h",
+          "aliases": [
+            "BIT-pillow-2026-96643",
+            "CVE-2026-96643",
+            "PYSEC-2026-4342"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-g7cr-3p24-7wf7",
+          "aliases": [
+            "BIT-pillow-2026-96778",
+            "CVE-2026-96778"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-g842-9rc4-69pw",
+          "aliases": [
+            "BIT-pillow-2026-96637",
+            "CVE-2026-96637",
+            "PYSEC-2026-4338"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-gg2r-wvfm-q9rx",
+          "aliases": [
+            "BIT-pillow-2026-112892",
+            "CVE-2026-112892"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-j4m9-6w36-pw47",
+          "aliases": [
+            "BIT-pillow-2026-112893",
+            "CVE-2026-112893"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-jg86-v3jv-hrpm",
+          "aliases": [
+            "BIT-pillow-2026-112894",
+            "CVE-2026-112894"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-mrfp-p49p-3hf2",
+          "aliases": [
+            "BIT-pillow-2026-96640",
+            "CVE-2026-96640"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-p4wg-p73j-c528",
+          "aliases": [
+            "BIT-pillow-2026-112895",
+            "CVE-2026-112895"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-p8hx-v2p6-rp84",
+          "aliases": [
+            "BIT-pillow-2026-96636",
+            "CVE-2026-96636",
+            "PYSEC-2026-4337"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-pchr-8j38-3x4p",
+          "aliases": [
+            "BIT-pillow-2026-112896",
+            "CVE-2026-112896",
+            "PYSEC-2026-4334"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-q45j-58j2-45rg",
+          "aliases": [
+            "BIT-pillow-2026-112897",
+            "CVE-2026-112897"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "GHSA-rfgq-q3w2-pmv2",
+          "aliases": [
+            "BIT-pillow-2026-112898",
+            "CVE-2026-112898"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-v9pv-5gc8-w2m6",
+          "aliases": [
+            "BIT-pillow-2026-96639",
+            "CVE-2026-96639",
+            "PYSEC-2026-4339"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            }
+          ],
+          "database_specific_severity": "CRITICAL"
+        },
+        {
+          "id": "GHSA-vx6w-vv9f-6gvg",
+          "aliases": [
+            "CVE-2026-112899"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-w889-685w-c8fh",
+          "aliases": [
+            "BIT-pillow-2026-112900",
+            "CVE-2026-112900"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "CRITICAL"
+        },
+        {
+          "id": "GHSA-xgh8-jp6q-p5x8",
+          "aliases": [
+            "BIT-pillow-2026-112901",
+            "CVE-2026-112901",
+            "PYSEC-2026-4335"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        },
+        {
+          "id": "GHSA-xvh5-g6gv-559v",
+          "aliases": [
+            "CVE-2026-112902"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V4",
+              "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          ],
+          "database_specific_severity": "HIGH"
+        },
+        {
+          "id": "PYSEC-2026-4326",
+          "aliases": [
+            "BIT-pillow-2026-112392",
+            "CVE-2026-112392",
+            "GHSA-27h8-gf7j-v5hc"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-4327",
+          "aliases": [
+            "BIT-pillow-2026-112394",
+            "CVE-2026-112394",
+            "GHSA-4558-3h8r-v8xp"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-4328",
+          "aliases": [
+            "BIT-pillow-2026-112396",
+            "CVE-2026-112396",
+            "GHSA-4rr5-89j8-mwwm"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-4329",
+          "aliases": [
+            "BIT-pillow-2026-112397",
+            "CVE-2026-112397",
+            "GHSA-58r4-6rv3-gfh8"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-4330",
+          "aliases": [
+            "BIT-pillow-2026-112398",
+            "CVE-2026-112398",
+            "GHSA-5x8w-8jj5-q52h"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-4331",
+          "aliases": [
+            "BIT-pillow-2026-112402",
+            "CVE-2026-112402",
+            "GHSA-7mwm-ghpf-9vrm"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-4332",
+          "aliases": [
+            "BIT-pillow-2026-112403",
+            "CVE-2026-112403",
+            "GHSA-8g5g-8vmr-9782"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-4333",
+          "aliases": [
+            "BIT-pillow-2026-112405",
+            "CVE-2026-112405",
+            "GHSA-cp9v-662q-vvx9"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-4334",
+          "aliases": [
+            "BIT-pillow-2026-112896",
+            "CVE-2026-112896",
+            "GHSA-pchr-8j38-3x4p"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-4335",
+          "aliases": [
+            "BIT-pillow-2026-112901",
+            "CVE-2026-112901",
+            "GHSA-xgh8-jp6q-p5x8"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-4336",
+          "aliases": [
+            "BIT-pillow-2026-114501",
+            "CVE-2026-114501",
+            "GHSA-654x-cwwv-5j9c"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-4337",
+          "aliases": [
+            "BIT-pillow-2026-96636",
+            "CVE-2026-96636",
+            "GHSA-p8hx-v2p6-rp84"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-4338",
+          "aliases": [
+            "BIT-pillow-2026-96637",
+            "CVE-2026-96637",
+            "GHSA-g842-9rc4-69pw"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-4339",
+          "aliases": [
+            "BIT-pillow-2026-96639",
+            "CVE-2026-96639",
+            "GHSA-v9pv-5gc8-w2m6"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-4340",
+          "aliases": [
+            "BIT-pillow-2026-96641",
+            "CVE-2026-96641",
+            "GHSA-4rm8-3hmm-39fg"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-4341",
+          "aliases": [
+            "BIT-pillow-2026-96642",
+            "CVE-2026-96642",
+            "GHSA-3j72-p6qg-6xp7"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-4342",
+          "aliases": [
+            "BIT-pillow-2026-96643",
+            "CVE-2026-96643",
+            "GHSA-g4qv-2jxx-769h"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+            }
+          ],
+          "database_specific_severity": null
+        },
+        {
+          "id": "PYSEC-2026-4343",
+          "aliases": [
+            "BIT-pillow-2026-96644",
+            "CVE-2026-96644",
+            "GHSA-9v9v-9qvf-h2hj"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H"
+            }
+          ],
+          "database_specific_severity": null
+        }
+      ],
+      "matching_ecosystem_fixed_versions": [
+        "13.0.0"
+      ],
+      "reverse_constraints_from_same_version_installed_metadata": [
+        {
+          "package": "lfx-nextplaid",
+          "version": "0.1.0",
+          "requirement": "pillow>=10.0.0",
+          "specifier": ">=10.0.0",
+          "owner_final_installed_version": "0.1.0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "langflow-base",
+          "version": "0.11.6",
+          "requirement": "pillow<13.0.0,>=12.3.0",
+          "specifier": "<13.0.0,>=12.3.0",
+          "owner_final_installed_version": "0.11.6",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "vlmrun",
+          "version": "0.7.1",
+          "requirement": "Pillow>=10.2.0",
+          "specifier": ">=10.2.0",
+          "owner_final_installed_version": "0.7.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "lfx",
+          "version": "1.11.6",
+          "requirement": "pillow<13.0.0,>=12.3.0",
+          "specifier": "<13.0.0,>=12.3.0",
+          "owner_final_installed_version": "1.11.6",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "smolagents",
+          "version": "1.26.0",
+          "requirement": "pillow>=10.0.1",
+          "specifier": ">=10.0.1",
+          "owner_final_installed_version": "1.26.0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "docling-core",
+          "version": "2.88.0",
+          "requirement": "pillow<13.0.0,>=10.0.0",
+          "specifier": "<13.0.0,>=10.0.0",
+          "owner_final_installed_version": "2.88.0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "vlmrun-hub",
+          "version": "0.1.34",
+          "requirement": "Pillow>=10.2.0",
+          "specifier": ">=10.2.0",
+          "owner_final_installed_version": "0.1.34",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "reportlab",
+          "version": "4.5.1",
+          "requirement": "pillow>=9.0.0",
+          "specifier": ">=9.0.0",
+          "owner_final_installed_version": "4.5.1",
+          "owner_version_unchanged": true
+        }
+      ],
+      "disposition": "blocked_upstream_upper_bound",
+      "reason": "Pillow13.0.0 is the recorded fix; unchanged Langflow/lfx and docling-core require Pillow<13. No forced install or metadata rewrite."
+    },
+    {
+      "name": "opentelemetry-api",
+      "installed": "1.44.0",
+      "counts": {
+        "advisory_ids_count": 1,
+        "unique_alias_identifiers_count": 1,
+        "id_and_alias_identifiers_count": 2,
+        "alias_groups_count": 1,
+        "advisory_ids": [
+          "GHSA-xcq7-p3pf-p88h"
+        ],
+        "unique_alias_identifiers": [
+          "CVE-2026-114603"
+        ],
+        "alias_groups": [
+          [
+            "GHSA-xcq7-p3pf-p88h"
+          ]
+        ]
+      },
+      "upstream_fields": [
+        {
+          "id": "GHSA-xcq7-p3pf-p88h",
+          "aliases": [
+            "CVE-2026-114603"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+            }
+          ],
+          "database_specific_severity": "MODERATE"
+        }
+      ],
+      "matching_ecosystem_fixed_versions": [
+        "1.45.1"
+      ],
+      "reverse_constraints_from_same_version_installed_metadata": [
+        {
+          "package": "opentelemetry-semantic-conventions",
+          "version": "0.65b0",
+          "requirement": "opentelemetry-api==1.44.0",
+          "specifier": "==1.44.0",
+          "owner_final_installed_version": "0.65b0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation",
+          "version": "0.65b0",
+          "requirement": "opentelemetry-api~=1.4",
+          "specifier": "~=1.4",
+          "owner_final_installed_version": "0.65b0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-google-generativeai",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-openai",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "langfuse",
+          "version": "3.15.0",
+          "requirement": "opentelemetry-api (>=1.33.1,<2.0.0)",
+          "specifier": "<2.0.0,>=1.33.1",
+          "owner_final_installed_version": "3.15.0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-mistralai",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-requests",
+          "version": "0.65b0",
+          "requirement": "opentelemetry-api~=1.12",
+          "specifier": "~=1.12",
+          "owner_final_installed_version": "0.65b0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-marqo",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-pinecone",
+          "version": "0.60.0",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.60.0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-ollama",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-replicate",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "langflow-base",
+          "version": "0.11.6",
+          "requirement": "opentelemetry-api<2.0.0,>=1.30.0",
+          "specifier": "<2.0.0,>=1.30.0",
+          "owner_final_installed_version": "0.11.6",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "openinference-instrumentation-langchain",
+          "version": "0.1.67",
+          "requirement": "opentelemetry-api",
+          "specifier": "",
+          "owner_final_installed_version": "0.1.67",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-chromadb",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-threading",
+          "version": "0.65b0",
+          "requirement": "opentelemetry-api~=1.12",
+          "specifier": "~=1.12",
+          "owner_final_installed_version": "0.65b0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-agno",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.28.0",
+          "specifier": "<2,>=1.28.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-exporter-otlp-proto-grpc",
+          "version": "1.44.0",
+          "requirement": "opentelemetry-api~=1.15",
+          "specifier": "~=1.15",
+          "owner_final_installed_version": "1.44.0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-asgi",
+          "version": "0.65b0",
+          "requirement": "opentelemetry-api~=1.12",
+          "specifier": "~=1.12",
+          "owner_final_installed_version": "0.65b0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-qdrant",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-langchain",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-llamaindex",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-voyageai",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-transformers",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-cohere",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-sdk",
+          "version": "1.44.0",
+          "requirement": "opentelemetry-api==1.44.0",
+          "specifier": "==1.44.0",
+          "owner_final_installed_version": "1.44.0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "traceloop-sdk",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-exporter-prometheus",
+          "version": "0.65b0",
+          "requirement": "opentelemetry-api~=1.12",
+          "specifier": "~=1.12",
+          "owner_final_installed_version": "0.65b0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "chromadb",
+          "version": "1.5.9",
+          "requirement": "opentelemetry-api>=1.2.0",
+          "specifier": ">=1.2.0",
+          "owner_final_installed_version": "1.5.9",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-weaviate",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-alephalpha",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-fastapi",
+          "version": "0.65b0",
+          "requirement": "opentelemetry-api~=1.12",
+          "specifier": "~=1.12",
+          "owner_final_installed_version": "0.65b0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-lancedb",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "openinference-instrumentation",
+          "version": "0.1.54",
+          "requirement": "opentelemetry-api",
+          "specifier": "",
+          "owner_final_installed_version": "0.1.54",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-sagemaker",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-mcp",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-urllib3",
+          "version": "0.65b0",
+          "requirement": "opentelemetry-api~=1.12",
+          "specifier": "~=1.12",
+          "owner_final_installed_version": "0.65b0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-sqlalchemy",
+          "version": "0.65b0",
+          "requirement": "opentelemetry-api~=1.12",
+          "specifier": "~=1.12",
+          "owner_final_installed_version": "0.65b0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-milvus",
+          "version": "0.60.0",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.60.0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-anthropic",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-watsonx",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-openai-agents",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-bedrock",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-litellm",
+          "version": "0.1.0",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.1.0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-exporter-otlp-proto-http",
+          "version": "1.44.0",
+          "requirement": "opentelemetry-api~=1.15",
+          "specifier": "~=1.15",
+          "owner_final_installed_version": "1.44.0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-logging",
+          "version": "0.65b0",
+          "requirement": "opentelemetry-api~=1.12",
+          "specifier": "~=1.12",
+          "owner_final_installed_version": "0.65b0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-haystack",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-crewai",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-writer",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-vertexai",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-together",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-redis",
+          "version": "0.65b0",
+          "requirement": "opentelemetry-api~=1.12",
+          "specifier": "~=1.12",
+          "owner_final_installed_version": "0.65b0",
+          "owner_version_unchanged": true
+        },
+        {
+          "package": "opentelemetry-instrumentation-groq",
+          "version": "0.62.1",
+          "requirement": "opentelemetry-api<2,>=1.38.0",
+          "specifier": "<2,>=1.38.0",
+          "owner_final_installed_version": "0.62.1",
+          "owner_version_unchanged": true
+        }
+      ],
+      "disposition": "coupled_exact_dependencies",
+      "reason": "Recorded fix1.45.1 requires coordinated SDK/semantic-conventions upgrade; unchanged SDK1.44.0 and semantic-conventions0.65b0 require API==1.44.0."
+    },
+    {
+      "name": "couchbase",
+      "installed": "4.6.2",
+      "counts": {
+        "advisory_ids_count": 1,
+        "unique_alias_identifiers_count": 1,
+        "id_and_alias_identifiers_count": 2,
+        "alias_groups_count": 1,
+        "advisory_ids": [
+          "PYSEC-2023-235"
+        ],
+        "unique_alias_identifiers": [
+          "CVE-2023-45875"
+        ],
+        "alias_groups": [
+          [
+            "PYSEC-2023-235"
+          ]
+        ]
+      },
+      "upstream_fields": [
+        {
+          "id": "PYSEC-2023-235",
+          "aliases": [
+            "CVE-2023-45875"
+          ],
+          "severity": [
+            {
+              "type": "CVSS_V3",
+              "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+            }
+          ],
+          "database_specific_severity": null
+        }
+      ],
+      "matching_ecosystem_fixed_versions": [],
+      "reverse_constraints_from_same_version_installed_metadata": [],
+      "disposition": "no_fixed_event_in_service_records",
+      "reason": "No fixed event for the exact PyPI package is present in returned records. Recorded latest stable4.6.4 is not established by these records as a security fix; no blind upgrade or risk acceptance."
+    }
+  ],
+  "selected_pin_checks": [
+    {
+      "name": "aiohttp",
+      "baseline_arm64_version": "3.14.3",
+      "expected": "3.14.4",
+      "ci_amd64_installed": "3.14.4",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-2g87-pp6c-29x5",
+        "GHSA-494j-54xm-rwp3",
+        "GHSA-5wr8-gcqf-gqf3",
+        "GHSA-6cjc-53gc-5rqm",
+        "GHSA-9xw5-w5jj-pvcg",
+        "GHSA-f9xw-jh8m-3mwq",
+        "GHSA-gx76-c99x-2c96",
+        "GHSA-pqxq-w44r-73xw"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "authlib",
+      "baseline_arm64_version": "1.7.2",
+      "expected": "1.9.1",
+      "ci_amd64_installed": "1.9.1",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-6v38-4h7w-rj9h",
+        "GHSA-7vr2-2fgp-9w7p",
+        "GHSA-8m4g-j4wp-wgcg",
+        "GHSA-c5mf-xmp2-59rc",
+        "GHSA-c73q-w75p-j82v",
+        "GHSA-fch4-3c6x-j4gc",
+        "GHSA-jj7h-c3hg-m23x",
+        "GHSA-q686-2qmg-hqc7",
+        "GHSA-x4rv-c3wx-4cr8",
+        "PYSEC-2026-4354",
+        "PYSEC-2026-4355",
+        "PYSEC-2026-4356",
+        "PYSEC-2026-4357",
+        "PYSEC-2026-4358",
+        "PYSEC-2026-4359",
+        "PYSEC-2026-4360"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "black",
+      "baseline_arm64_version": "26.5.1",
+      "expected": "26.10.1",
+      "ci_amd64_installed": "26.10.1",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-cg8m-r9f2-5wm2"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "brotli",
+      "baseline_arm64_version": "1.2.0",
+      "expected": "1.2.1",
+      "ci_amd64_installed": "1.2.1",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-9v8h-qqgm-4m35",
+        "PYSEC-2026-4322"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "dnspython",
+      "baseline_arm64_version": "2.8.0",
+      "expected": "2.9.0",
+      "ci_amd64_installed": "2.9.0",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-45c3-73f7-pv4m"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "fastmcp",
+      "baseline_arm64_version": "3.4.4",
+      "expected": "3.4.10",
+      "ci_amd64_installed": "3.4.10",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-7xgj-8392-5q4r"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "fastmcp-slim",
+      "baseline_arm64_version": "3.4.4",
+      "expected": "3.4.10",
+      "ci_amd64_installed": "3.4.10",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-7xgj-8392-5q4r"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "fsspec",
+      "baseline_arm64_version": "2026.2.0",
+      "expected": "2026.6.0",
+      "ci_amd64_installed": "2026.6.0",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-27vj-qcqg-25rc",
+        "PYSEC-2026-4217"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "gitpython",
+      "baseline_arm64_version": "3.1.59",
+      "expected": "3.2.1",
+      "ci_amd64_installed": "3.2.1",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-239g-whfq-7xj9",
+        "GHSA-23mf-xhv8-69c2",
+        "GHSA-59cr-6r3x-644w",
+        "GHSA-83vg-56qc-22m7",
+        "GHSA-f9j4-qggq-h239",
+        "GHSA-fx3j-rwgx-fr94",
+        "GHSA-g5vv-9gxw-82hx",
+        "GHSA-gq48-pqfc-9p58",
+        "GHSA-m64x-33q8-m5h7",
+        "GHSA-w8jc-g24h-crhw",
+        "GHSA-whh4-5q6c-9v3x",
+        "PYSEC-2026-3982",
+        "PYSEC-2026-3984"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "joserfc",
+      "baseline_arm64_version": "1.7.4",
+      "expected": "1.7.6",
+      "ci_amd64_installed": "1.7.6",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-9pg5-8c7x-5hfx",
+        "GHSA-jpxq-7h8p-2q76"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "langchain-nvidia-ai-endpoints",
+      "baseline_arm64_version": "1.0.4",
+      "expected": "1.5.0",
+      "ci_amd64_installed": "1.5.0",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-g28h-2cmm-rj9x"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "langgraph",
+      "baseline_arm64_version": "1.2.9",
+      "expected": "1.2.14",
+      "ci_amd64_installed": "1.2.14",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-3fx2-cqw9-xr3c"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "langgraph-sdk",
+      "baseline_arm64_version": "0.4.2",
+      "expected": "0.4.6",
+      "ci_amd64_installed": "0.4.6",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-3fx2-cqw9-xr3c",
+        "GHSA-fvww-7h3r-vfhp",
+        "PYSEC-2026-4240"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "litellm",
+      "baseline_arm64_version": "1.93.0",
+      "expected": "1.103.1",
+      "ci_amd64_installed": "1.103.1",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-3cv6-jpf6-8222",
+        "GHSA-7hp6-4w63-5g45",
+        "GHSA-g5ff-637f-6q2m",
+        "PYSEC-2026-4066"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "mako",
+      "baseline_arm64_version": "1.3.12",
+      "expected": "1.4.2",
+      "ci_amd64_installed": "1.4.2",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-5639-2j2p-m4mx",
+        "PYSEC-2026-4243"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "mcp",
+      "baseline_arm64_version": "1.28.1",
+      "expected": "1.30.0",
+      "ci_amd64_installed": "1.30.0",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-5h93-6whr-6q8j",
+        "GHSA-84m7-p3x7-pcfv",
+        "GHSA-rwrf-2pqf-9j8j",
+        "GHSA-w4fh-qvv9-3v23"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "mem0ai",
+      "baseline_arm64_version": "2.0.14",
+      "expected": "2.0.18",
+      "ci_amd64_installed": "2.0.18",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-5324-3w58-qpp2"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "multidict",
+      "baseline_arm64_version": "6.7.1",
+      "expected": "6.9.1",
+      "ci_amd64_installed": "6.9.1",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-54p9-h82j-f925",
+        "PYSEC-2026-4244"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "nltk",
+      "baseline_arm64_version": "3.10.3",
+      "expected": "3.10.4",
+      "ci_amd64_installed": "3.10.4",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-8mgp-746c-j5xp",
+        "GHSA-j456-xh4h-cpf2"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "pyasn1",
+      "baseline_arm64_version": "0.6.4",
+      "expected": "0.6.5",
+      "ci_amd64_installed": "0.6.5",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-2qm8-x737-gmw5",
+        "GHSA-9m75-vc3g-4x39",
+        "GHSA-fm9c-5rcf-2q5p",
+        "GHSA-mm57-4v3p-rchx"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "pyjwt",
+      "baseline_arm64_version": "2.13.0",
+      "expected": "2.15.0",
+      "ci_amd64_installed": "2.15.0",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-2gx3-rcp4-g85q",
+        "GHSA-42vr-xj54-vc7v",
+        "GHSA-8wjv-2p76-3863",
+        "GHSA-9j54-fg26-wv3r",
+        "GHSA-9v7f-9g4p-ffgj",
+        "GHSA-ffc3-869f-jxw9",
+        "GHSA-gvp8-978c-rx2q",
+        "GHSA-hxm8-2xgr-2p9m",
+        "GHSA-jwrc-g2q2-pq5p",
+        "GHSA-p4g4-x82p-q773",
+        "GHSA-pxh4-856f-4h89",
+        "GHSA-r6x4-923q-g947",
+        "GHSA-w2cx-738m-mc7w",
+        "GHSA-w6j9-cwv2-h6wq",
+        "GHSA-x33g-cr3x-6449",
+        "PYSEC-2026-4140",
+        "PYSEC-2026-4141",
+        "PYSEC-2026-4142",
+        "PYSEC-2026-4143",
+        "PYSEC-2026-4144",
+        "PYSEC-2026-4145",
+        "PYSEC-2026-4146",
+        "PYSEC-2026-4147",
+        "PYSEC-2026-4148",
+        "PYSEC-2026-4149",
+        "PYSEC-2026-4150",
+        "PYSEC-2026-4151",
+        "PYSEC-2026-4152",
+        "PYSEC-2026-4183"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "pymongo",
+      "baseline_arm64_version": "4.17.0",
+      "expected": "4.18.3",
+      "ci_amd64_installed": "4.18.3",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-8fvv-fgr5-f8ch",
+        "GHSA-98qm-wvgf-w4cf",
+        "GHSA-qx36-8mw2-4r3x",
+        "GHSA-v4x9-3549-crwv",
+        "GHSA-vp6j-j7w5-5xjj",
+        "PYSEC-2026-4294",
+        "PYSEC-2026-4295",
+        "PYSEC-2026-4296",
+        "PYSEC-2026-4297"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "transformers",
+      "baseline_arm64_version": "5.8.1",
+      "expected": "5.10.0",
+      "ci_amd64_installed": "5.10.0",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-x9r9-c232-4q39",
+        "GHSA-xrqw-3rrv-vx5w",
+        "PYSEC-2026-3929",
+        "PYSEC-2026-4174"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "urllib3",
+      "baseline_arm64_version": "2.7.0",
+      "expected": "2.8.0",
+      "ci_amd64_installed": "2.8.0",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [
+        "GHSA-8988-9cw3-xx77",
+        "GHSA-gh4c-6fx4-qh6g",
+        "GHSA-vxq7-64xx-v4gw",
+        "PYSEC-2026-4175",
+        "PYSEC-2026-4176",
+        "PYSEC-2026-4177"
+      ],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    },
+    {
+      "name": "yarl",
+      "baseline_arm64_version": "1.24.5",
+      "expected": "1.25.1",
+      "ci_amd64_installed": "1.25.1",
+      "exact_match": true,
+      "final_osv_advisory_ids": [],
+      "baseline_observed_advisory_ids": [],
+      "comparison_scope": "same normalized PyPI package/version; architecture and query time differ, not a controlled same-environment reduction"
+    }
+  ],
+  "added_pypi_packages": [
+    {
+      "name": "ibm-db",
+      "ci_version": "3.2.9",
+      "recorded_reverse_dependencies": [
+        {
+          "owner": "lfx-ibm",
+          "owner_recorded_version": "0.1.2",
+          "owner_ci_version": "0.1.2",
+          "requirement": "ibm-db<4.0.0,>=3.2.9; sys_platform != 'linux' or platform_machine != 'aarch64'",
+          "active_default_linux_x86_64": true,
+          "active_default_linux_aarch64": false
+        }
+      ],
+      "explanation": "Existing dependency marker becomes active on Linux/x86_64. Presence is not evidence of a newly enabled external integration.",
+      "role": "IBM dependency of existing lfx-ibm"
+    },
+    {
+      "name": "tree-sitter",
+      "ci_version": "0.26.0",
+      "recorded_reverse_dependencies": [
+        {
+          "owner": "opik",
+          "owner_recorded_version": "2.2.7",
+          "owner_ci_version": "2.2.7",
+          "requirement": "tree-sitter<1.0,>=0.23; platform_machine != \"aarch64\" or sys_platform != \"linux\"",
+          "active_default_linux_x86_64": true,
+          "active_default_linux_aarch64": false
+        },
+        {
+          "owner": "docling-core",
+          "owner_recorded_version": "2.88.0",
+          "owner_ci_version": "2.88.0",
+          "requirement": "tree-sitter<0.27.0,>=0.25.0; extra == \"chunking\"",
+          "active_default_linux_x86_64": false,
+          "active_default_linux_aarch64": false
+        },
+        {
+          "owner": "docling-core",
+          "owner_recorded_version": "2.88.0",
+          "owner_ci_version": "2.88.0",
+          "requirement": "tree-sitter<0.27.0,>=0.25.0; extra == \"chunking-openai\"",
+          "active_default_linux_x86_64": false,
+          "active_default_linux_aarch64": false
+        }
+      ],
+      "explanation": "Existing dependency marker becomes active on Linux/x86_64. Presence is not evidence of a newly enabled external integration.",
+      "role": "Code syntax parsing dependency of existing opik; docling chunking extras also declare it, but selected historical extras are not inferred."
+    },
+    {
+      "name": "tree-sitter-javascript",
+      "ci_version": "0.25.0",
+      "recorded_reverse_dependencies": [
+        {
+          "owner": "opik",
+          "owner_recorded_version": "2.2.7",
+          "owner_ci_version": "2.2.7",
+          "requirement": "tree-sitter-javascript<1.0,>=0.23; platform_machine != \"aarch64\" or sys_platform != \"linux\"",
+          "active_default_linux_x86_64": true,
+          "active_default_linux_aarch64": false
+        },
+        {
+          "owner": "docling-core",
+          "owner_recorded_version": "2.88.0",
+          "owner_ci_version": "2.88.0",
+          "requirement": "tree-sitter-javascript>=0.23.1; extra == \"chunking\"",
+          "active_default_linux_x86_64": false,
+          "active_default_linux_aarch64": false
+        },
+        {
+          "owner": "docling-core",
+          "owner_recorded_version": "2.88.0",
+          "owner_ci_version": "2.88.0",
+          "requirement": "tree-sitter-javascript>=0.23.1; extra == \"chunking-openai\"",
+          "active_default_linux_x86_64": false,
+          "active_default_linux_aarch64": false
+        }
+      ],
+      "explanation": "Existing dependency marker becomes active on Linux/x86_64. Presence is not evidence of a newly enabled external integration.",
+      "role": "Code syntax parsing dependency of existing opik; docling chunking extras also declare it, but selected historical extras are not inferred."
+    },
+    {
+      "name": "tree-sitter-typescript",
+      "ci_version": "0.23.2",
+      "recorded_reverse_dependencies": [
+        {
+          "owner": "opik",
+          "owner_recorded_version": "2.2.7",
+          "owner_ci_version": "2.2.7",
+          "requirement": "tree-sitter-typescript<1.0,>=0.23; platform_machine != \"aarch64\" or sys_platform != \"linux\"",
+          "active_default_linux_x86_64": true,
+          "active_default_linux_aarch64": false
+        },
+        {
+          "owner": "docling-core",
+          "owner_recorded_version": "2.88.0",
+          "owner_ci_version": "2.88.0",
+          "requirement": "tree-sitter-typescript>=0.23.2; extra == \"chunking\"",
+          "active_default_linux_x86_64": false,
+          "active_default_linux_aarch64": false
+        },
+        {
+          "owner": "docling-core",
+          "owner_recorded_version": "2.88.0",
+          "owner_ci_version": "2.88.0",
+          "requirement": "tree-sitter-typescript>=0.23.2; extra == \"chunking-openai\"",
+          "active_default_linux_x86_64": false,
+          "active_default_linux_aarch64": false
+        }
+      ],
+      "explanation": "Existing dependency marker becomes active on Linux/x86_64. Presence is not evidence of a newly enabled external integration.",
+      "role": "Code syntax parsing dependency of existing opik; docling chunking extras also declare it, but selected historical extras are not inferred."
+    }
+  ],
+  "removed_pypi_packages": [],
+  "api_pip_verification": {
+    "installed": "26.2.2",
+    "remaining_pypi_advisory_ids": [],
+    "remaining_api_ids_all_debian": true
+  },
+  "web_verification": {
+    "installed_patches": {
+      "brotli-libs": "1.2.1-r0",
+      "curl": "8.23.0-r0",
+      "libcurl": "8.23.0-r0"
+    },
+    "observed_ids": 0,
+    "mapping_unknown": 0,
+    "query_unknown": 0,
+    "detail_unknown": 0
+  },
+  "baseline_comparison": {
+    "baseline_identity": {
+      "id": "sha256:7a9404bcf318e1db1ba232e60390310b90a2272c97d0dafe917d4ce0834758ec",
+      "os": "linux",
+      "architecture": "arm64",
+      "size": 934279565,
+      "repo_digests": [
+        "ai-review-console-langflow@sha256:7a9404bcf318e1db1ba232e60390310b90a2272c97d0dafe917d4ce0834758ec"
+      ]
+    },
+    "final_identity": {
+      "id": "sha256:33960b31a9600466b019713f12a7779d720e94443cd09935d3dc0640ab019dc2",
+      "os": "linux",
+      "architecture": "amd64",
+      "size": 3613349757,
+      "repo_digests": []
+    },
+    "baseline_query_started_at": "2026-11-01T00:47:43.317874+00:00",
+    "final_query_started_at": "2026-11-01T01:11:29.346539+00:00",
+    "strict_same_environment_reduction_claim": false,
+    "why": "ARM64 local and AMD64 CI images and query times differ. Compare exact package version installation/no-match results, not total image counts as a controlled improvement percentage."
+  },
+  "limitations": [
+    "Package-level potential impact, not exploitability proof.",
+    "No match is not proof of absolute safety; OSV DB snapshot not exposed.",
+    "Severity fields remain upstream; absent fields remain unknown.",
+    "Same-version reverse metadata was recorded on ARM64; marker evaluation is explicit for AMD64 and required owner package versions are checked.",
+    "Main Langflow scan RPM unknown226 is resolved only by separately bound same-image RHEL supplement:223 software+3 public-key metadata records.",
+    "Residual risk remains open; no risk acceptance or full release pass inferred."
+  ],
+  "producer_sha256": "73a0e55d84568b447fa971543e11b19b4112424985f2813d9b9a10fe42471747",
+  "inputs": [
+    {
+      "path": "ci/final-fac92ea/selected/release/images/summary.json",
+      "bytes": 65859,
+      "sha256": "105dd6b4f3fa77329b715cd02feae53905251a787059d960be02344476006f40"
+    },
+    {
+      "path": "ci/final-fac92ea/selected/release/rhel/summary.json",
+      "bytes": 39124,
+      "sha256": "bcf9de30d73b8dc8360d3c95511a5514272cbd7796110f7e1f4fa17a147e1232"
+    },
+    {
+      "path": "ci/final-fac92ea/selected/release/images/vulnerabilities.json",
+      "bytes": 1996166,
+      "sha256": "dabe53b333ac6980b13e755b4df37f24efc6ec87499431a1fd1d730718ac889d"
+    },
+    {
+      "path": "ci/final-fac92ea/selected/release/rhel/vulnerabilities.json",
+      "bytes": 553143,
+      "sha256": "fbf5a9e1d13bcd5481c6f003c451db53ac0519c7a4c00f192d75d1b0fe492a81"
+    },
+    {
+      "path": "python-osv/images/summary.json",
+      "bytes": 48163,
+      "sha256": "2054159ef4cd8b7e2b8601fcf676774c008aae62407628322fdeffa7462e7d7d"
+    },
+    {
+      "path": "python-osv/images/vulnerabilities.json",
+      "bytes": 3053308,
+      "sha256": "030b7e33e8fd7e5734e642bc5cfe91d9c10fdcd4836458c5a09e34641a606a9e"
+    },
+    {
+      "path": "python-osv/images/langflow-inventory.json",
+      "bytes": 307972,
+      "sha256": "a7105d21d12be9b922070275c8ca77366701817a8a466025b4a3bb6e3b20eec6"
+    },
+    {
+      "path": "python/langflow-all-requirements.json",
+      "bytes": 308342,
+      "sha256": "d6d99dee3aa7786ddb33e7b2f91df9b219701c0f62d9e89cc518a772bd95a1d4"
+    },
+    {
+      "path": "python/lf-patch-candidates-before-metadata.json",
+      "bytes": 31980,
+      "sha256": "8a3629baa25b184c52f562a274cb04f8c158146c3d303aa82b420457d1ef0102"
+    },
+    {
+      "path": "python/lf-patches/selection.json",
+      "bytes": 11050,
+      "sha256": "d33e77cdd03cc79ac1c8323df8301af8b8cf164e52fe82a7ef3600f6a469f11d"
+    },
+    {
+      "path": "ci/final-fac92ea/run-final.json",
+      "bytes": 319,
+      "sha256": "c3d5e8d4db14df3b0b4c9b2722a9fa47f8830ba6d8107b0220473ef788f9df05"
+    },
+    {
+      "path": "ci/final-fac92ea/selected/release/images/api-inventory.json",
+      "bytes": 60494,
+      "sha256": "68f7552ab45b6c64f05f94644452b3414afe513068eb15395f482c3044de2963"
+    },
+    {
+      "path": "ci/final-fac92ea/selected/release/images/langflow-inventory.json",
+      "bytes": 309099,
+      "sha256": "2a62450a298f6b7f106d45f28adb6c5952926ceb5bda8664ef00a3dfbc1b2c41"
+    },
+    {
+      "path": "ci/final-fac92ea/selected/release/images/web-inventory.json",
+      "bytes": 20965,
+      "sha256": "5ae3631dcd4a38217be7f9e59e0071cff9a7033df1435dfa1c44482f25fc7b75"
+    },
+    {
+      "path": "ci/final-fac92ea/selected/release/images/postgres-inventory.json",
+      "bytes": 77818,
+      "sha256": "af379c83f2d3b2daf005062436232f72c5e577dac69fce1becd63c9f66047e27"
+    }
+  ]
+}

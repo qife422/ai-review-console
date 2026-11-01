@@ -1,0 +1,687 @@
+[
+  {
+    "name": "source-map-js",
+    "version": "1.2.1",
+    "location": "node_modules/source-map-js",
+    "isWorkspace": false,
+    "dependents": [
+      {
+        "type": "prod",
+        "name": "source-map-js",
+        "spec": "^1.2.1",
+        "from": {
+          "name": "css-tree",
+          "version": "3.2.1",
+          "location": "node_modules/css-tree",
+          "isWorkspace": false,
+          "dependents": [
+            {
+              "type": "prod",
+              "name": "css-tree",
+              "spec": "^3.2.1",
+              "from": {
+                "name": "jsdom",
+                "version": "29.1.1",
+                "location": "node_modules/jsdom",
+                "isWorkspace": false,
+                "dependents": [
+                  {
+                    "type": "dev",
+                    "name": "jsdom",
+                    "spec": "29.1.1",
+                    "from": {
+                      "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                    }
+                  },
+                  {
+                    "type": "peerOptional",
+                    "name": "jsdom",
+                    "spec": "*",
+                    "from": {
+                      "name": "vitest",
+                      "version": "4.1.11",
+                      "location": "node_modules/vitest",
+                      "isWorkspace": false,
+                      "dependents": [
+                        {
+                          "type": "dev",
+                          "name": "vitest",
+                          "spec": "4.1.11",
+                          "from": {
+                            "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                          }
+                        },
+                        {
+                          "type": "peerOptional",
+                          "name": "vitest",
+                          "spec": ">= 0.32",
+                          "from": {
+                            "name": "@testing-library/jest-dom",
+                            "version": "7.0.1",
+                            "location": "node_modules/@testing-library/jest-dom",
+                            "isWorkspace": false,
+                            "dependents": [
+                              {
+                                "type": "dev",
+                                "name": "@testing-library/jest-dom",
+                                "spec": "7.0.1",
+                                "from": {
+                                  "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "prod",
+              "name": "css-tree",
+              "spec": "^3.0.0",
+              "from": {
+                "name": "@bramus/specificity",
+                "version": "2.4.2",
+                "location": "node_modules/@bramus/specificity",
+                "isWorkspace": false,
+                "dependents": [
+                  {
+                    "type": "prod",
+                    "name": "@bramus/specificity",
+                    "spec": "^2.4.2",
+                    "from": {
+                      "name": "jsdom",
+                      "version": "29.1.1",
+                      "location": "node_modules/jsdom",
+                      "isWorkspace": false,
+                      "dependents": [
+                        {
+                          "type": "dev",
+                          "name": "jsdom",
+                          "spec": "29.1.1",
+                          "from": {
+                            "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                          }
+                        },
+                        {
+                          "type": "peerOptional",
+                          "name": "jsdom",
+                          "spec": "*",
+                          "from": {
+                            "name": "vitest",
+                            "version": "4.1.11",
+                            "location": "node_modules/vitest",
+                            "isWorkspace": false,
+                            "dependents": [
+                              {
+                                "type": "dev",
+                                "name": "vitest",
+                                "spec": "4.1.11",
+                                "from": {
+                                  "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                                }
+                              },
+                              {
+                                "type": "peerOptional",
+                                "name": "vitest",
+                                "spec": ">= 0.32",
+                                "from": {
+                                  "name": "@testing-library/jest-dom",
+                                  "version": "7.0.1",
+                                  "location": "node_modules/@testing-library/jest-dom",
+                                  "isWorkspace": false,
+                                  "dependents": [
+                                    {
+                                      "type": "dev",
+                                      "name": "@testing-library/jest-dom",
+                                      "spec": "7.0.1",
+                                      "from": {
+                                        "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "prod",
+              "name": "css-tree",
+              "spec": "^3.2.1",
+              "from": {
+                "name": "@asamuzakjp/dom-selector",
+                "version": "7.1.1",
+                "location": "node_modules/@asamuzakjp/dom-selector",
+                "isWorkspace": false,
+                "dependents": [
+                  {
+                    "type": "prod",
+                    "name": "@asamuzakjp/dom-selector",
+                    "spec": "^7.1.1",
+                    "from": {
+                      "name": "jsdom",
+                      "version": "29.1.1",
+                      "location": "node_modules/jsdom",
+                      "isWorkspace": false,
+                      "dependents": [
+                        {
+                          "type": "dev",
+                          "name": "jsdom",
+                          "spec": "29.1.1",
+                          "from": {
+                            "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                          }
+                        },
+                        {
+                          "type": "peerOptional",
+                          "name": "jsdom",
+                          "spec": "*",
+                          "from": {
+                            "name": "vitest",
+                            "version": "4.1.11",
+                            "location": "node_modules/vitest",
+                            "isWorkspace": false,
+                            "dependents": [
+                              {
+                                "type": "dev",
+                                "name": "vitest",
+                                "spec": "4.1.11",
+                                "from": {
+                                  "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                                }
+                              },
+                              {
+                                "type": "peerOptional",
+                                "name": "vitest",
+                                "spec": ">= 0.32",
+                                "from": {
+                                  "name": "@testing-library/jest-dom",
+                                  "version": "7.0.1",
+                                  "location": "node_modules/@testing-library/jest-dom",
+                                  "isWorkspace": false,
+                                  "dependents": [
+                                    {
+                                      "type": "dev",
+                                      "name": "@testing-library/jest-dom",
+                                      "spec": "7.0.1",
+                                      "from": {
+                                        "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "peerOptional",
+              "name": "css-tree",
+              "spec": "^3.2.1",
+              "from": {
+                "name": "@csstools/css-syntax-patches-for-csstree",
+                "version": "1.1.12",
+                "location": "node_modules/@csstools/css-syntax-patches-for-csstree",
+                "isWorkspace": false,
+                "dependents": [
+                  {
+                    "type": "prod",
+                    "name": "@csstools/css-syntax-patches-for-csstree",
+                    "spec": "^1.1.3",
+                    "from": {
+                      "name": "jsdom",
+                      "version": "29.1.1",
+                      "location": "node_modules/jsdom",
+                      "isWorkspace": false,
+                      "dependents": [
+                        {
+                          "type": "dev",
+                          "name": "jsdom",
+                          "spec": "29.1.1",
+                          "from": {
+                            "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                          }
+                        },
+                        {
+                          "type": "peerOptional",
+                          "name": "jsdom",
+                          "spec": "*",
+                          "from": {
+                            "name": "vitest",
+                            "version": "4.1.11",
+                            "location": "node_modules/vitest",
+                            "isWorkspace": false,
+                            "dependents": [
+                              {
+                                "type": "dev",
+                                "name": "vitest",
+                                "spec": "4.1.11",
+                                "from": {
+                                  "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                                }
+                              },
+                              {
+                                "type": "peerOptional",
+                                "name": "vitest",
+                                "spec": ">= 0.32",
+                                "from": {
+                                  "name": "@testing-library/jest-dom",
+                                  "version": "7.0.1",
+                                  "location": "node_modules/@testing-library/jest-dom",
+                                  "isWorkspace": false,
+                                  "dependents": [
+                                    {
+                                      "type": "dev",
+                                      "name": "@testing-library/jest-dom",
+                                      "spec": "7.0.1",
+                                      "from": {
+                                        "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "prod",
+        "name": "source-map-js",
+        "spec": "^1.2.1",
+        "from": {
+          "name": "postcss",
+          "version": "8.5.26",
+          "location": "node_modules/postcss",
+          "isWorkspace": false,
+          "dependents": [
+            {
+              "type": "prod",
+              "name": "postcss",
+              "spec": "^8.5.26",
+              "from": {
+                "name": "vite",
+                "version": "8.2.2",
+                "location": "node_modules/vite",
+                "isWorkspace": false,
+                "dependents": [
+                  {
+                    "type": "dev",
+                    "name": "vite",
+                    "spec": "8.2.2",
+                    "from": {
+                      "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                    }
+                  },
+                  {
+                    "type": "prod",
+                    "name": "vite",
+                    "spec": "^6.0.0 || ^7.0.0 || ^8.0.0",
+                    "from": {
+                      "name": "vitest",
+                      "version": "4.1.11",
+                      "location": "node_modules/vitest",
+                      "isWorkspace": false,
+                      "dependents": [
+                        {
+                          "type": "dev",
+                          "name": "vitest",
+                          "spec": "4.1.11",
+                          "from": {
+                            "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                          }
+                        },
+                        {
+                          "type": "peerOptional",
+                          "name": "vitest",
+                          "spec": ">= 0.32",
+                          "from": {
+                            "name": "@testing-library/jest-dom",
+                            "version": "7.0.1",
+                            "location": "node_modules/@testing-library/jest-dom",
+                            "isWorkspace": false,
+                            "dependents": [
+                              {
+                                "type": "dev",
+                                "name": "@testing-library/jest-dom",
+                                "spec": "7.0.1",
+                                "from": {
+                                  "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "peerOptional",
+                    "name": "vite",
+                    "spec": "^6.0.0 || ^7.0.0 || ^8.0.0",
+                    "from": {
+                      "name": "@vitest/mocker",
+                      "version": "4.1.11",
+                      "location": "node_modules/@vitest/mocker",
+                      "isWorkspace": false,
+                      "dependents": [
+                        {
+                          "type": "prod",
+                          "name": "@vitest/mocker",
+                          "spec": "4.1.11",
+                          "from": {
+                            "name": "vitest",
+                            "version": "4.1.11",
+                            "location": "node_modules/vitest",
+                            "isWorkspace": false,
+                            "dependents": [
+                              {
+                                "type": "dev",
+                                "name": "vitest",
+                                "spec": "4.1.11",
+                                "from": {
+                                  "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                                }
+                              },
+                              {
+                                "type": "peerOptional",
+                                "name": "vitest",
+                                "spec": ">= 0.32",
+                                "from": {
+                                  "name": "@testing-library/jest-dom",
+                                  "version": "7.0.1",
+                                  "location": "node_modules/@testing-library/jest-dom",
+                                  "isWorkspace": false,
+                                  "dependents": [
+                                    {
+                                      "type": "dev",
+                                      "name": "@testing-library/jest-dom",
+                                      "spec": "7.0.1",
+                                      "from": {
+                                        "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "peer",
+                    "name": "vite",
+                    "spec": "^8.0.0",
+                    "from": {
+                      "name": "@vitejs/plugin-react",
+                      "version": "6.1.1",
+                      "location": "node_modules/@vitejs/plugin-react",
+                      "isWorkspace": false,
+                      "dependents": [
+                        {
+                          "type": "dev",
+                          "name": "@vitejs/plugin-react",
+                          "spec": "6.1.1",
+                          "from": {
+                            "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "prod",
+        "name": "source-map-js",
+        "spec": ">=0.6.2 <2.0.0",
+        "from": {
+          "name": "sass",
+          "version": "1.92.1",
+          "location": "node_modules/sass",
+          "isWorkspace": false,
+          "dependents": [
+            {
+              "type": "dev",
+              "name": "sass",
+              "spec": "1.92.1",
+              "from": {
+                "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+              }
+            },
+            {
+              "type": "peerOptional",
+              "name": "sass",
+              "spec": "^1.70.0",
+              "from": {
+                "name": "vite",
+                "version": "8.2.2",
+                "location": "node_modules/vite",
+                "isWorkspace": false,
+                "dependents": [
+                  {
+                    "type": "dev",
+                    "name": "vite",
+                    "spec": "8.2.2",
+                    "from": {
+                      "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                    }
+                  },
+                  {
+                    "type": "prod",
+                    "name": "vite",
+                    "spec": "^6.0.0 || ^7.0.0 || ^8.0.0",
+                    "from": {
+                      "name": "vitest",
+                      "version": "4.1.11",
+                      "location": "node_modules/vitest",
+                      "isWorkspace": false,
+                      "dependents": [
+                        {
+                          "type": "dev",
+                          "name": "vitest",
+                          "spec": "4.1.11",
+                          "from": {
+                            "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                          }
+                        },
+                        {
+                          "type": "peerOptional",
+                          "name": "vitest",
+                          "spec": ">= 0.32",
+                          "from": {
+                            "name": "@testing-library/jest-dom",
+                            "version": "7.0.1",
+                            "location": "node_modules/@testing-library/jest-dom",
+                            "isWorkspace": false,
+                            "dependents": [
+                              {
+                                "type": "dev",
+                                "name": "@testing-library/jest-dom",
+                                "spec": "7.0.1",
+                                "from": {
+                                  "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "peerOptional",
+                    "name": "vite",
+                    "spec": "^6.0.0 || ^7.0.0 || ^8.0.0",
+                    "from": {
+                      "name": "@vitest/mocker",
+                      "version": "4.1.11",
+                      "location": "node_modules/@vitest/mocker",
+                      "isWorkspace": false,
+                      "dependents": [
+                        {
+                          "type": "prod",
+                          "name": "@vitest/mocker",
+                          "spec": "4.1.11",
+                          "from": {
+                            "name": "vitest",
+                            "version": "4.1.11",
+                            "location": "node_modules/vitest",
+                            "isWorkspace": false,
+                            "dependents": [
+                              {
+                                "type": "dev",
+                                "name": "vitest",
+                                "spec": "4.1.11",
+                                "from": {
+                                  "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                                }
+                              },
+                              {
+                                "type": "peerOptional",
+                                "name": "vitest",
+                                "spec": ">= 0.32",
+                                "from": {
+                                  "name": "@testing-library/jest-dom",
+                                  "version": "7.0.1",
+                                  "location": "node_modules/@testing-library/jest-dom",
+                                  "isWorkspace": false,
+                                  "dependents": [
+                                    {
+                                      "type": "dev",
+                                      "name": "@testing-library/jest-dom",
+                                      "spec": "7.0.1",
+                                      "from": {
+                                        "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "peer",
+                    "name": "vite",
+                    "spec": "^8.0.0",
+                    "from": {
+                      "name": "@vitejs/plugin-react",
+                      "version": "6.1.1",
+                      "location": "node_modules/@vitejs/plugin-react",
+                      "isWorkspace": false,
+                      "dependents": [
+                        {
+                          "type": "dev",
+                          "name": "@vitejs/plugin-react",
+                          "spec": "6.1.1",
+                          "from": {
+                            "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "peerOptional",
+              "name": "sass",
+              "spec": "^1.33.0",
+              "from": {
+                "name": "@carbon/styles",
+                "version": "1.114.0",
+                "location": "node_modules/@carbon/styles",
+                "isWorkspace": false,
+                "dependents": [
+                  {
+                    "type": "prod",
+                    "name": "@carbon/styles",
+                    "spec": "^1.114.0",
+                    "from": {
+                      "name": "@carbon/react",
+                      "version": "1.115.0",
+                      "location": "node_modules/@carbon/react",
+                      "isWorkspace": false,
+                      "dependents": [
+                        {
+                          "type": "prod",
+                          "name": "@carbon/react",
+                          "spec": "1.115.0",
+                          "from": {
+                            "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "peer",
+              "name": "sass",
+              "spec": "^1.33.0",
+              "from": {
+                "name": "@carbon/react",
+                "version": "1.115.0",
+                "location": "node_modules/@carbon/react",
+                "isWorkspace": false,
+                "dependents": [
+                  {
+                    "type": "prod",
+                    "name": "@carbon/react",
+                    "spec": "1.115.0",
+                    "from": {
+                      "location": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "dev": false,
+    "optional": false,
+    "devOptional": false,
+    "peer": false,
+    "bundled": false,
+    "overridden": false
+  }
+]

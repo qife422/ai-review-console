@@ -1,0 +1,89 @@
+{
+  "trigger": "cache growth >2GiB",
+  "download_stopped": true,
+  "cache_bytes": 3263362472,
+  "files": 2570,
+  "largest": [
+    {
+      "path": "tool-cache/grype-db/grype-db-download254135768/vulnerability.db",
+      "bytes": 2966994944
+    },
+    {
+      "path": "tool-cache/grype-tool/grype",
+      "bytes": 88576235
+    },
+    {
+      "path": "tool-cache/npm/_cacache/content-v2/sha512/5f/77/66b04e049004819d26c0c5f62164ba57d6cf416d33fc00d338ef17c32ae14c85c66d022953cf93523e26e32300d996997307897277ec076fc84a4f7d1c22",
+      "bytes": 38999531
+    },
+    {
+      "path": "tool-cache/grype-tool/grype_0.121.0_darwin_arm64.tar.gz",
+      "bytes": 29343080
+    },
+    {
+      "path": "tool-cache/npm/_cacache/content-v2/sha512/d6/1c/e75f4d0eeac980fab59846a11576380d67964333d978387074d53b8cd4c34a23d3e4fc2d2432c0506c78766aca11315e5ed915e3774f8b3d6cf02ce04f25",
+      "bytes": 25942803
+    },
+    {
+      "path": "tool-cache/npm/_cacache/content-v2/sha512/78/20/5b670880e3d4634f84573c0677e5c0833f8bca2169174f1a0eba1be1f7667ca51776a9e871e8c8ac92a9a6bca795be079a3f1cdfe6705245d20b09149d9f",
+      "bytes": 16954992
+    },
+    {
+      "path": "tool-cache/npm/_cacache/content-v2/sha512/b3/f3/906bce702c1b27a2242ba022d3ca446e8c9b5d9d8d81969c7cd009dcd00e068ce7afd19ef1f893c5a0f1fa9d1a2e3e8bdbd443c18681b81cb5ff7c10072c",
+      "bytes": 15873496
+    },
+    {
+      "path": "tool-cache/npm/_cacache/content-v2/sha512/b4/6e/7aa4c4f934d6bd6e718cd85237d78a143273265cb12682eebf5f907de5b654a3c86034928b7a8cc513bebb89157e13c7a4eefce4b197b3c301522aedad07",
+      "bytes": 11183996
+    },
+    {
+      "path": "tool-cache/python/http-v2/9/b/e/d/8/9bed80cf4c2167097913b4389aad04353259d11bce92cd9bb63116eb.body",
+      "bytes": 4852329
+    },
+    {
+      "path": "tool-cache/npm/_cacache/content-v2/sha512/61/3c/cbe90044257c87713bb426251ced128ca7e9b3949b65eeb18b98445a5d441e14720c73d6ad76be86f4cf42f2f0d66efe347a9a13400ccd2f6fcfb5954385",
+      "bytes": 3329270
+    },
+    {
+      "path": "tool-cache/npm/_cacache/content-v2/sha512/22/90/e5bfd418197be3728dfbcd3e2503a16e190724fd93d29d535a6c5db3c8892836a474b94b926beb019ba99e358900782685dca964927a8bc7f38279e9d639",
+      "bytes": 3294090
+    },
+    {
+      "path": "tool-cache/npm/_cacache/content-v2/sha512/60/92/5a7762cc0d39ee4d897190c22938d43fbd4aa2e6075b875ccdf9efb9d9b40ae90ddb34e1ef36a80b82c553e7191144ffcde9aaf696461c446b6ec912bc34",
+      "bytes": 2570034
+    },
+    {
+      "path": "tool-cache/npm/_cacache/content-v2/sha512/f9/fe/8cac6c3b9e069fd3340bc8b27396915cc335bf546a02edbe77dce7b490faa5a68f3470295a312ce8c24b8cd6d6eb6d0c9f422c08042ddf746699ccb6ca63",
+      "bytes": 2472281
+    },
+    {
+      "path": "tool-cache/npm/_cacache/content-v2/sha512/70/72/9c9c466d99ab6961e337c176f7b8018d4a28724675642a3f72d757c5df4d499a184cb3097f05218f950ff82b7e46b52b6022246e4432a710fc8c62731c8f",
+      "bytes": 2339552
+    },
+    {
+      "path": "tool-cache/npm/_cacache/content-v2/sha512/dc/c3/291168b68a8efc4b748b3ce18efba44db365026cafbd9090e75b30cd118261f7d55e8c8496f2be4f818f80e64d611a395c709769700630757e5263e6d06b",
+      "bytes": 2297925
+    },
+    {
+      "path": "tool-cache/npm/_cacache/content-v2/sha512/9a/c3/335c37b89930a4e6c3f9402a3a14ce25e9ff3a492a7bf05c876bfb95010333b3c9dbcd72688ebfc48c3b064c58798f3443b327d5da7cae817003f9e99e32",
+      "bytes": 2061097
+    },
+    {
+      "path": "tool-cache/npm/_cacache/content-v2/sha512/5e/de/e74c41354fe03eaa23d5ac1dc324c8db115e16d26f9e78dc7cbe2c4f90e90befa01bf57219822c4ce65c5eb24abda89a2b63a85b902bf66043a46d26e84e",
+      "bytes": 1635787
+    },
+    {
+      "path": "tool-cache/npm/_cacache/content-v2/sha512/6f/fd/356cc40ec014b455f53f47e600788e6d2cf9b6a0d330d2dff97b3c195a7488dc243839fbb6ccc66dc8475150f9638a0a46d1a61ddad6ee2a01b90bcf3a97",
+      "bytes": 1607480
+    },
+    {
+      "path": "tool-cache/npm/_cacache/content-v2/sha512/f2/6c/9711073f6e906d9541b36dec3a55707001637678eace48881f6da9cb5667895f67469f5774a1ecd12cd4616935d4b0809244a371ef5ee5d6ffb338d06047",
+      "bytes": 1319425
+    },
+    {
+      "path": "tool-cache/npm/_cacache/content-v2/sha512/38/ff/c18ab30d66caca07ed4e34e82fb16c2e982364252ff09737e28287a7ad2dd4b662f031fc371f230e9fa662ef65b02568e7af1e37196a4c1578d821ff7910",
+      "bytes": 1301005
+    }
+  ],
+  "action": "retain; no deletion; stop this cache expansion; use bounded remote metadata queries or existing complete read-only data only"
+}

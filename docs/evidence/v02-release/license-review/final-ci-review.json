@@ -1,0 +1,1683 @@
+{
+  "created_at": "2026-11-01T01:16:20.970005+00:00",
+  "source_commit": "fac92ea",
+  "ci_run_id": 41259579902,
+  "remote_input_bytes": 218384,
+  "remote_input_limit_bytes": 1048576,
+  "official_sources": [
+    {
+      "url": "https://pypi.org/pypi/dnspython/2.9.0/json",
+      "retrieved_at": "2026-11-01T01:16:18.060813+00:00",
+      "bytes": 7527,
+      "sha256": "aae392b87340b9da2e8509f8a8802ad54507cf92774cf227ccb46c2bae2c138e",
+      "state": "retrieved",
+      "metadata": {
+        "name": "dnspython",
+        "version": "2.9.0",
+        "license": null,
+        "license_expression": "ISC",
+        "classifiers": [
+          "Development Status :: 5 - Production/Stable",
+          "Intended Audience :: Developers",
+          "Intended Audience :: System Administrators",
+          "Operating System :: Microsoft :: Windows",
+          "Operating System :: POSIX",
+          "Programming Language :: Python",
+          "Programming Language :: Python :: 3",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Programming Language :: Python :: 3.14",
+          "Topic :: Internet :: Name Service (DNS)",
+          "Topic :: Software Development :: Libraries :: Python Modules"
+        ],
+        "project_urls": {
+          "documentation": "https://dnspython.readthedocs.io/en/stable/",
+          "homepage": "https://www.dnspython.org",
+          "issues": "https://github.com/rthalley/dnspython/issues",
+          "repository": "https://github.com/rthalley/dnspython.git"
+        },
+        "requires_dist": [
+          "black>=26.5; extra == \"dev\"",
+          "coverage>=7.15; extra == \"dev\"",
+          "hypercorn>=0.18.0; extra == \"dev\"",
+          "pyright>=1.1.411; extra == \"dev\"",
+          "pytest>=9.1; extra == \"dev\"",
+          "pytest-cov>=7.1; extra == \"dev\"",
+          "quart-trio>=0.12.0; extra == \"dev\"",
+          "ruff>=0.16.0; extra == \"dev\"",
+          "sphinx>=9.1.0; python_full_version >= \"3.12\" and extra == \"dev\"",
+          "sphinx-rtd-theme>=3.1.0; python_full_version >= \"3.12\" and extra == \"dev\"",
+          "trustme>=1.2.1; extra == \"dev\"",
+          "ty>=0.0.85; extra == \"dev\"",
+          "cryptography>=50; extra == \"dnssec\"",
+          "httpcore2>=2.13; extra == \"doh\"",
+          "httpx2>=2.13; extra == \"doh\"",
+          "h2>=4.4; extra == \"doh\"",
+          "aioquic>=1.3.0; extra == \"doq\"",
+          "idna>=3.20; extra == \"idna\"",
+          "trio>=0.34; extra == \"trio\"",
+          "wmi>=1.5.1; sys_platform == \"win32\" and extra == \"wmi\""
+        ]
+      },
+      "release_files": [
+        {
+          "filename": "dnspython-2.9.0-py3-none-any.whl",
+          "bytes": 354822,
+          "sha256": "9a4aedb833c3c1b49214d04d44d3032ab7a9135f7c1d29a549b4ff78fd82fda9"
+        },
+        {
+          "filename": "dnspython-2.9.0.tar.gz",
+          "bytes": 423560,
+          "sha256": "b44dc6b18f07a8b1c56676a19fbfdb5209415b046a9cece286baafa87ff3f7f1"
+        }
+      ],
+      "relevant_description": [
+        "[![Build Status](https://github.com/rthalley/dnspython/actions/workflows/ci.yml/badge.svg)](https://github.com/rthalley/dnspython/actions/)\n[![Documentation Status](https://readthedocs.org/projects/dnspython/badge/?version=latest)](https://dnspython.readthedocs.io/en/latest/?badge=latest)\n[![PyPI version](https://badge.fury.io/py/dnspython.svg)](https://badge.fury.io/py/dnspython)\n[![License: ISC](https://img.shields.io/badge/License-ISC-brightgreen.svg)](https://opensource.org/licenses/ISC)\n[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)"
+      ]
+    },
+    {
+      "url": "https://pypi.org/pypi/fastmcp-slim/3.4.10/json",
+      "retrieved_at": "2026-11-01T01:16:18.290916+00:00",
+      "bytes": 11957,
+      "sha256": "70709d66aa68ed85b20a321b23ef76fe6a64892eddb0f82337783b2afe89294e",
+      "state": "retrieved",
+      "metadata": {
+        "name": "fastmcp-slim",
+        "version": "3.4.10",
+        "license": null,
+        "license_expression": "Apache-2.0",
+        "classifiers": [
+          "Intended Audience :: Developers",
+          "License :: OSI Approved :: Apache Software License",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Topic :: Scientific/Engineering :: Artificial Intelligence",
+          "Typing :: Typed"
+        ],
+        "project_urls": {
+          "Documentation": "https://gofastmcp.com",
+          "Homepage": "https://gofastmcp.com",
+          "Repository": "https://github.com/PrefectHQ/fastmcp"
+        },
+        "requires_dist": [
+          "platformdirs>=4.0.0",
+          "pydantic-settings>=2.0.0",
+          "pydantic[email]>=2.11.7",
+          "python-dotenv>=1.1.0",
+          "rich>=13.9.4",
+          "typing-extensions>=4.0.0",
+          "anthropic>=0.48.0; extra == \"anthropic\"",
+          "prefab-ui>=0.18.0; extra == \"apps\"",
+          "azure-identity>=1.16.0; extra == \"azure\"",
+          "pyjwt>=2.12.0; extra == \"azure\"",
+          "authlib>=1.6.11; extra == \"client\"",
+          "exceptiongroup>=1.2.2; extra == \"client\"",
+          "httpx<1.0,>=0.28.1; extra == \"client\"",
+          "mcp<2.0,>=1.24.0; extra == \"client\"",
+          "opentelemetry-api>=1.20.0; extra == \"client\"",
+          "py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4; extra == \"client\"",
+          "starlette>=1.0.1; extra == \"client\"",
+          "pydantic-monty==0.0.17; extra == \"code-mode\"",
+          "google-genai>=1.18.0; extra == \"gemini\"",
+          "jsonref>=1.1.0; extra == \"gemini\"",
+          "exceptiongroup>=1.2.2; extra == \"mcp\"",
+          "httpx<1.0,>=0.28.1; extra == \"mcp\"",
+          "mcp<2.0,>=1.24.0; extra == \"mcp\"",
+          "opentelemetry-api>=1.20.0; extra == \"mcp\"",
+          "starlette>=1.0.1; extra == \"mcp\"",
+          "openai>=1.102.0; extra == \"openai\"",
+          "authlib>=1.6.11; extra == \"server\"",
+          "cyclopts>=4.0.0; extra == \"server\"",
+          "exceptiongroup>=1.2.2; extra == \"server\"",
+          "griffelib>=2.0.0; extra == \"server\"",
+          "httpx<1.0,>=0.28.1; extra == \"server\"",
+          "joserfc>=1.1.0; extra == \"server\"",
+          "jsonref>=1.1.0; extra == \"server\"",
+          "jsonschema-path>=0.3.4; extra == \"server\"",
+          "mcp<2.0,>=1.24.0; extra == \"server\"",
+          "openapi-pydantic>=0.5.1; extra == \"server\"",
+          "opentelemetry-api>=1.20.0; extra == \"server\"",
+          "packaging>=24.0; extra == \"server\"",
+          "py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4; extra == \"server\"",
+          "pyperclip>=1.9.0; extra == \"server\"",
+          "python-multipart>=0.0.26; extra == \"server\"",
+          "pyyaml<7.0,>=6.0; extra == \"server\"",
+          "starlette>=1.0.1; extra == \"server\"",
+          "uncalled-for>=0.2.0; extra == \"server\"",
+          "uvicorn>=0.35; extra == \"server\"",
+          "watchfiles>=1.0.0; extra == \"server\"",
+          "websockets>=15.0.1; extra == \"server\"",
+          "pydocket>=0.20.0; extra == \"tasks\""
+        ]
+      },
+      "release_files": [
+        {
+          "filename": "fastmcp_slim-3.4.10-py3-none-any.whl",
+          "bytes": 785895,
+          "sha256": "f388941db8bdf38999e6c9d2536c4cd59a6571908d851cee2d10ee59f4e53532"
+        },
+        {
+          "filename": "fastmcp_slim-3.4.10.tar.gz",
+          "bytes": 610326,
+          "sha256": "d80ae606ead8dfefa1f21b009929824210ea87eb4b422653a1be8dca61797ccd"
+        }
+      ],
+      "relevant_description": [
+        "[![Docs](https://img.shields.io/badge/docs-gofastmcp.com-blue)](https://gofastmcp.com)\n[![Discord](https://img.shields.io/badge/community-discord-5865F2?logo=discord&logoColor=white)](https://discord.gg/uu8dJCgttd)\n[![PyPI - Version](https://img.shields.io/pypi/v/fastmcp.svg)](https://pypi.org/project/fastmcp)\n[![Tests](https://github.com/PrefectHQ/fastmcp/actions/workflows/run-tests.yml/badge.svg)](https://github.com/PrefectHQ/fastmcp/actions/workflows/run-tests.yml)\n[![License](https://img.shields.io/github/license/PrefectHQ/fastmcp.svg)](https://github.com/PrefectHQ/fastmcp/blob/main/LICENSE)"
+      ]
+    },
+    {
+      "url": "https://pypi.org/pypi/tree-sitter/0.26.0/json",
+      "retrieved_at": "2026-11-01T01:16:18.438171+00:00",
+      "bytes": 47129,
+      "sha256": "9092685a2f892a458da47b612f842f80aff303f6fadb82261414dc644af2e699",
+      "state": "retrieved",
+      "metadata": {
+        "name": "tree-sitter",
+        "version": "0.26.0",
+        "license": null,
+        "license_expression": null,
+        "classifiers": [
+          "Intended Audience :: Developers",
+          "License :: OSI Approved :: MIT License",
+          "Operating System :: OS Independent",
+          "Programming Language :: C",
+          "Programming Language :: Python",
+          "Topic :: Software Development :: Compilers",
+          "Topic :: Text Processing :: Linguistic",
+          "Typing :: Typed"
+        ],
+        "project_urls": {
+          "Discord": "https://discord.gg/w7nTvsVJhm",
+          "Documentation": "https://tree-sitter.github.io/py-tree-sitter/",
+          "Homepage": "https://tree-sitter.github.io/tree-sitter/",
+          "Matrix": "https://matrix.to/#/#tree-sitter-chat:matrix.org",
+          "Source": "https://github.com/tree-sitter/py-tree-sitter"
+        },
+        "requires_dist": [
+          "sphinx~=8.2; extra == \"docs\"",
+          "sphinx-book-theme; extra == \"docs\"",
+          "tree-sitter-html==0.23.2; extra == \"tests\"",
+          "tree-sitter-javascript==0.25.0; extra == \"tests\"",
+          "tree-sitter-json==0.24.8; extra == \"tests\"",
+          "tree-sitter-python==0.25.0; extra == \"tests\"",
+          "tree-sitter-rust==0.24.2; extra == \"tests\""
+        ]
+      },
+      "release_files": [
+        {
+          "filename": "tree_sitter-0.26.0-cp310-cp310-macosx_10_9_x86_64.whl",
+          "bytes": 148676,
+          "sha256": "ff527388df14cb5009f9274faf78cc69a7393ae6acf3b04784b8acca249519c5"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp310-cp310-macosx_11_0_arm64.whl",
+          "bytes": 140757,
+          "sha256": "7bcbadfa614326debef581957d5c780a9d7f66065c13deea61aa21d1dd36263f"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp310-cp310-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+          "bytes": 631526,
+          "sha256": "2f941cea06128c1f74f8937a8e2a90c7db49cf4be6647cd9e07d92a306d91517"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+          "bytes": 658688,
+          "sha256": "e9e46b664887d8c1014f1fb33e09454bbdd9ec1fe29b7fd02dde7b46bc1bb81a"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp310-cp310-manylinux_2_31_riscv64.manylinux_2_39_riscv64.whl",
+          "bytes": 644399,
+          "sha256": "763627db05db34f12333081bd7422cc1c675893d373cc870b3e9249e200700e4"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp310-cp310-musllinux_1_2_x86_64.whl",
+          "bytes": 655316,
+          "sha256": "17a1c5cfd3a05d5c7c86bf4282b6ef8092c91dc0a98390499669c3fedb7d1814"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp310-cp310-win_amd64.whl",
+          "bytes": 129494,
+          "sha256": "f289be0225ba2ace8e87d6c9639b2bc9ff2b5271afb7c5d39282a4a00e248682"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp310-cp310-win_arm64.whl",
+          "bytes": 116486,
+          "sha256": "526a165a2cb1d1f79e247d400f0e0acd8d49a817d6f312d543513af200b1f886"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp311-cp311-macosx_10_9_x86_64.whl",
+          "bytes": 148679,
+          "sha256": "1d6fe0e8fb4df77b5ee816228e2c4475a63d8cc1d4d3a7ffd7097b2b87fc3e95"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp311-cp311-macosx_11_0_arm64.whl",
+          "bytes": 140759,
+          "sha256": "514a9bf8993e5210e7970736aaf6020d1759b670e195ef17b1c48f586aa30736"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+          "bytes": 637206,
+          "sha256": "10f0d4eb94aa7242dcb7f554bcd24dd7ba1c114f00d58759ba08c7a46c8ec51a"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+          "bytes": 664758,
+          "sha256": "335294ce0504fcefde5245dff596778ffaf820205b98ae0b549c72e48855f1d8"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp311-cp311-manylinux_2_31_riscv64.manylinux_2_39_riscv64.whl",
+          "bytes": 647438,
+          "sha256": "f9997ba61368c48ed54e715676afadf703947a1542464e39d047764fb3624b01"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp311-cp311-musllinux_1_2_x86_64.whl",
+          "bytes": 661944,
+          "sha256": "c56581ad256c4195a21bfe449fed5d44a02fe83a4a7d6e70e6ec302c881191c7"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp311-cp311-win_amd64.whl",
+          "bytes": 129496,
+          "sha256": "0f8793fd18ad7eec276ed4b51c097b4bf2002b357259b66b0d75db1f3f41c754"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp311-cp311-win_arm64.whl",
+          "bytes": 116484,
+          "sha256": "dea4b4e27d49e9ec5b785d4f994da000e6726882fcc6ad05ec98478500c71aef"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp312-cp312-macosx_10_13_x86_64.whl",
+          "bytes": 148934,
+          "sha256": "6cb2bd20efb2544c19ac54486ab7cb8ec7b36f913bbe1ce95df84acb96743d9c"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp312-cp312-macosx_11_0_arm64.whl",
+          "bytes": 140820,
+          "sha256": "918d89529786873f0982a0f59c2a303cd065fbfd1b903d71a8e4e1584f67b42e"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+          "bytes": 638844,
+          "sha256": "30a88be89ff1f2755297f81e8080d88b795dd98720c3f9fa2acf93873182cc95"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+          "bytes": 667487,
+          "sha256": "5a6b333b0282d8bb0af741f9b018bd2523d4eecb2686bf6717066a625fecfaa4"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp312-cp312-manylinux_2_31_riscv64.manylinux_2_39_riscv64.whl",
+          "bytes": 647975,
+          "sha256": "3f3c44339dd34fe8eb2b8d5aa7610660499a795f70376b130bbee7a437337280"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp312-cp312-musllinux_1_2_x86_64.whl",
+          "bytes": 665018,
+          "sha256": "94550e13b6ae576969da40246f4c4abb206380b5375ad43f26dd9151d55438e3"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp312-cp312-win_amd64.whl",
+          "bytes": 129619,
+          "sha256": "ca89e361a276dbc934b28a43dd881199e25d34ff5493ee0ce45f3c52a6124a37"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp312-cp312-win_arm64.whl",
+          "bytes": 116545,
+          "sha256": "bc6cb01d5ee75c85424aa1f1c72a82d8f07fd52539a0f3c4a6ed3e8721079b84"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp313-cp313-macosx_10_13_x86_64.whl",
+          "bytes": 148893,
+          "sha256": "ed0889dbed843ce45ede9f5169c0b2dea2222f12685844a03fadb81f12705867"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp313-cp313-macosx_11_0_arm64.whl",
+          "bytes": 140829,
+          "sha256": "6189c6c340c7384357711e3d92645e96bfb79f7a502f86de1ebdb23eb43f7dab"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+          "bytes": 639334,
+          "sha256": "8ff2e0750b7daa722302838356d7b65e303829b7eb73c915df127ddba115e1d1"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+          "bytes": 668102,
+          "sha256": "7075ef857ef86f327dbb72d1e2574dda78db5754b3a1fca6506acd7fe5d561a7"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp313-cp313-manylinux_2_31_riscv64.manylinux_2_39_riscv64.whl",
+          "bytes": 648560,
+          "sha256": "26c996c1edfee86e977bb3f5462e74fcec0d0b0db1e85a3c475875763caa03be"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp313-cp313-musllinux_1_2_x86_64.whl",
+          "bytes": 665121,
+          "sha256": "00289bfe7978f3e0dc0ce69813a20fa9f44ea4c100b3ec62043e5eb74ccfc3a2"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp313-cp313-win_amd64.whl",
+          "bytes": 129615,
+          "sha256": "93e220cab7e6a823efeb2046c49171427de92ef71c7c681c01820d14d8d3721f"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp313-cp313-win_arm64.whl",
+          "bytes": 116525,
+          "sha256": "b31a8195d2f224224c530ac814632d98c1dcc123d227442c07c736e86b70d564"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp314-cp314-macosx_10_15_x86_64.whl",
+          "bytes": 148901,
+          "sha256": "5a3c93a352b7e6f70f73e121bbfa2d0117ba7478bd51114ed35c91b0b78814fa"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp314-cp314-macosx_11_0_arm64.whl",
+          "bytes": 140805,
+          "sha256": "5fc2f41bf246ff2f70a9cc3690be35ec7580a4923151873d898c8bcb1a4503d3"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+          "bytes": 640586,
+          "sha256": "b8ea92a255c91671a7ec4625aba3ab7bb5220c423630ffbf83c45d7312abe084"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+          "bytes": 668300,
+          "sha256": "f665510f0fcf4636fb9696f1f7853bed7a3bd764b7bb0cb8494e619c14ed5a0c"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp314-cp314-manylinux_2_31_riscv64.manylinux_2_39_riscv64.whl",
+          "bytes": 649627,
+          "sha256": "253df7ab82cc0a9d311cd65f06e9f99fb3eac55996ae9fc94da22f123a861b90"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp314-cp314-musllinux_1_2_x86_64.whl",
+          "bytes": 664885,
+          "sha256": "ff80d4833d330a73184a3ac5132abe93c575d2dea31975c6f15c0d21fef238aa"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp314-cp314-win_amd64.whl",
+          "bytes": 132688,
+          "sha256": "a4033fecc8f606c7f2e8b8014d0057b74668a7f0152763606f7bc25c5f9ec64c"
+        },
+        {
+          "filename": "tree_sitter-0.26.0-cp314-cp314-win_arm64.whl",
+          "bytes": 120287,
+          "sha256": "823251c4b6725a7c03ed497a339135ede7ae4bdde75bb8be7ef5e305aeb4ff52"
+        },
+        {
+          "filename": "tree_sitter-0.26.0.tar.gz",
+          "bytes": 191423,
+          "sha256": "b40c219edccc4564530c96f8f1556f6202b37cda964d1cbd7bd2b7e68b40a245"
+        }
+      ],
+      "relevant_description": []
+    },
+    {
+      "url": "https://pypi.org/pypi/tree-sitter-javascript/0.25.0/json",
+      "retrieved_at": "2026-11-01T01:16:18.524018+00:00",
+      "bytes": 10835,
+      "sha256": "2063de8d348380c7e3b8ebe03014af22f90224e945cdfebac0786ca7379047de",
+      "state": "retrieved",
+      "metadata": {
+        "name": "tree-sitter-javascript",
+        "version": "0.25.0",
+        "license": "MIT",
+        "license_expression": null,
+        "classifiers": [
+          "Intended Audience :: Developers",
+          "Topic :: Software Development :: Compilers",
+          "Topic :: Text Processing :: Linguistic",
+          "Typing :: Typed"
+        ],
+        "project_urls": {
+          "Homepage": "https://github.com/tree-sitter/tree-sitter-javascript"
+        },
+        "requires_dist": [
+          "tree-sitter~=0.24; extra == \"core\""
+        ]
+      },
+      "release_files": [
+        {
+          "filename": "tree_sitter_javascript-0.25.0-cp310-abi3-macosx_10_9_x86_64.whl",
+          "bytes": 64052,
+          "sha256": "b70f887fb269d6e58c349d683f59fa647140c410cfe2bee44a883b20ec92e3dc"
+        },
+        {
+          "filename": "tree_sitter_javascript-0.25.0-cp310-abi3-macosx_11_0_arm64.whl",
+          "bytes": 66440,
+          "sha256": "8264a996b8845cfce06965152a013b5d9cbb7d199bc3503e12b5682e62bb1de1"
+        },
+        {
+          "filename": "tree_sitter_javascript-0.25.0-cp310-abi3-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl",
+          "bytes": 99728,
+          "sha256": "9dc04ba91fc8583344e57c1f1ed5b2c97ecaaf47480011b92fbeab8dda96db75"
+        },
+        {
+          "filename": "tree_sitter_javascript-0.25.0-cp310-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+          "bytes": 106072,
+          "sha256": "199d09985190852e0912da2b8d26c932159be314bc04952cf917ed0e4c633e6b"
+        },
+        {
+          "filename": "tree_sitter_javascript-0.25.0-cp310-abi3-musllinux_1_2_aarch64.whl",
+          "bytes": 104388,
+          "sha256": "dfcf789064c58dc13c0a4edb550acacfc6f0f280577f1e7a00de3e89fc7f8ddc"
+        },
+        {
+          "filename": "tree_sitter_javascript-0.25.0-cp310-abi3-musllinux_1_2_x86_64.whl",
+          "bytes": 98377,
+          "sha256": "1b852d3aee8a36186dbcc32c798b11b4869f9b5041743b63b65c2ef793db7a54"
+        },
+        {
+          "filename": "tree_sitter_javascript-0.25.0-cp310-abi3-win_amd64.whl",
+          "bytes": 62975,
+          "sha256": "e5ed840f5bd4a3f0272e441d19429b26eedc257abe5574c8546da6b556865e3c"
+        },
+        {
+          "filename": "tree_sitter_javascript-0.25.0-cp310-abi3-win_arm64.whl",
+          "bytes": 61668,
+          "sha256": "622a69d677aa7f6ee2931d8c77c981a33f0ebb6d275aa9d43d3397c879a9bb0b"
+        },
+        {
+          "filename": "tree_sitter_javascript-0.25.0.tar.gz",
+          "bytes": 132338,
+          "sha256": "329b5414874f0588a98f1c291f1b28138286617aa907746ffe55adfdcf963f38"
+        }
+      ],
+      "relevant_description": []
+    },
+    {
+      "url": "https://pypi.org/pypi/tree-sitter-typescript/0.23.2/json",
+      "retrieved_at": "2026-11-01T01:16:18.665817+00:00",
+      "bytes": 9989,
+      "sha256": "31eafe3f2a9456eab14d25dac855b286b07495235047b1c35bdca9a47803ead1",
+      "state": "retrieved",
+      "metadata": {
+        "name": "tree-sitter-typescript",
+        "version": "0.23.2",
+        "license": "MIT",
+        "license_expression": null,
+        "classifiers": [
+          "Intended Audience :: Developers",
+          "License :: OSI Approved :: MIT License",
+          "Topic :: Software Development :: Compilers",
+          "Topic :: Text Processing :: Linguistic",
+          "Typing :: Typed"
+        ],
+        "project_urls": {
+          "Homepage": "https://github.com/tree-sitter/tree-sitter-typescript"
+        },
+        "requires_dist": [
+          "tree-sitter~=0.23; extra == \"core\""
+        ]
+      },
+      "release_files": [
+        {
+          "filename": "tree_sitter_typescript-0.23.2-cp39-abi3-macosx_10_9_x86_64.whl",
+          "bytes": 286677,
+          "sha256": "3cd752d70d8e5371fdac6a9a4df9d8924b63b6998d268586f7d374c9fba2a478"
+        },
+        {
+          "filename": "tree_sitter_typescript-0.23.2-cp39-abi3-macosx_11_0_arm64.whl",
+          "bytes": 302008,
+          "sha256": "c7cc1b0ff5d91bac863b0e38b1578d5505e718156c9db577c8baea2557f66de8"
+        },
+        {
+          "filename": "tree_sitter_typescript-0.23.2-cp39-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+          "bytes": 351987,
+          "sha256": "4b1eed5b0b3a8134e86126b00b743d667ec27c63fc9de1b7bb23168803879e31"
+        },
+        {
+          "filename": "tree_sitter_typescript-0.23.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+          "bytes": 344960,
+          "sha256": "e96d36b85bcacdeb8ff5c2618d75593ef12ebaf1b4eace3477e2bdb2abb1752c"
+        },
+        {
+          "filename": "tree_sitter_typescript-0.23.2-cp39-abi3-musllinux_1_2_x86_64.whl",
+          "bytes": 340245,
+          "sha256": "8d4f0f9bcb61ad7b7509d49a1565ff2cc363863644a234e1e0fe10960e55aea0"
+        },
+        {
+          "filename": "tree_sitter_typescript-0.23.2-cp39-abi3-win_amd64.whl",
+          "bytes": 278015,
+          "sha256": "3f730b66396bc3e11811e4465c41ee45d9e9edd6de355a58bbbc49fa770da8f9"
+        },
+        {
+          "filename": "tree_sitter_typescript-0.23.2-cp39-abi3-win_arm64.whl",
+          "bytes": 274052,
+          "sha256": "05db58f70b95ef0ea126db5560f3775692f609589ed6f8dd0af84b7f19f1cbb7"
+        },
+        {
+          "filename": "tree_sitter_typescript-0.23.2.tar.gz",
+          "bytes": 773053,
+          "sha256": "7b167b5827c882261cb7a50dfa0fb567975f9b315e87ed87ad0a0a3aedb3834d"
+        }
+      ],
+      "relevant_description": []
+    },
+    {
+      "url": "https://pypi.org/pypi/ibm-db/3.2.9/json",
+      "retrieved_at": "2026-11-01T01:16:18.818541+00:00",
+      "bytes": 64190,
+      "sha256": "d077ed0371d3d48e9b47d58a8613b6bb15993a3f9962303d022351bd3c39b3f1",
+      "state": "retrieved",
+      "metadata": {
+        "name": "ibm-db",
+        "version": "3.2.9",
+        "license": "Apache License 2.0",
+        "license_expression": null,
+        "classifiers": [
+          "Development Status :: 5 - Production/Stable",
+          "Intended Audience :: Developers",
+          "License :: OSI Approved :: Apache Software License",
+          "Operating System :: MacOS",
+          "Operating System :: MacOS :: MacOS X",
+          "Operating System :: Microsoft :: Windows :: Windows 10",
+          "Operating System :: Microsoft :: Windows :: Windows 11",
+          "Operating System :: POSIX :: AIX",
+          "Operating System :: POSIX :: Linux",
+          "Operating System :: Unix",
+          "Programming Language :: Python",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Programming Language :: Python :: 3.14",
+          "Programming Language :: Python :: 3.9",
+          "Topic :: Database :: Front-Ends"
+        ],
+        "project_urls": {
+          "Download": "http://code.google.com/p/ibm-db/downloads/list",
+          "Homepage": "http://pypi.python.org/pypi/ibm_db/"
+        },
+        "requires_dist": null
+      },
+      "release_files": [
+        {
+          "filename": "ibm_db-3.2.9-cp310-cp310-macosx_10_15_x86_64.whl",
+          "bytes": 24166574,
+          "sha256": "e130a461a0ce3fecdb9896ec767d95d89d4f14e5eb4b8b5e63aca249790c5155"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp310-cp310-macosx_14_0_arm64.whl",
+          "bytes": 20391416,
+          "sha256": "4edde94384f452720b6bc58b94ed03c9b3f5dadb7343d983a55c1122b4a38cf0"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp310-cp310-manylinux2014_i686.manylinux_2_17_i686.whl",
+          "bytes": 40635334,
+          "sha256": "80c2e242601ff2e99bce79da0fddc6e0e525b1f83d05423f00524bad5c41991e"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+          "bytes": 43980561,
+          "sha256": "0838993f2e98827afa9f30a1a4648bdadccabb6f9f6805ee42f24787a6ae45b7"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp310-cp310-win32.whl",
+          "bytes": 24609207,
+          "sha256": "825f1ab7d911daef6ca370af62608d663e2193244832cad8dabbfa9708e81bdb"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp310-cp310-win_amd64.whl",
+          "bytes": 28754450,
+          "sha256": "b163dd252f695113851a3d480289f8b368885835fe3296e8b202063440fe34c8"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp311-cp311-macosx_10_15_x86_64.whl",
+          "bytes": 24166574,
+          "sha256": "b72049768de33e0767e7ca4f5cf9c44812a6422c8a4e07bb07fd30c242f555b2"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp311-cp311-macosx_14_0_arm64.whl",
+          "bytes": 20391417,
+          "sha256": "a002be22327f29e1f6cf48b7ee84843e6a257bb7a2f7d017caa6e731aaea4e5a"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp311-cp311-manylinux2014_i686.manylinux_2_17_i686.whl",
+          "bytes": 40641529,
+          "sha256": "5831070fe9e6b2654668cfada10fb31a64e7555a7ef35e04e17ca831822df3bb"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+          "bytes": 43987216,
+          "sha256": "ec172bc1c61ac15cb98ebe1a2737689752b6565a2afa9c4442a09129f2ada963"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp311-cp311-win32.whl",
+          "bytes": 24609273,
+          "sha256": "8aaefd0162f7c500af87b39593eeec126312cbebf6c4ff7c3051eeb9e8b7f47d"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp311-cp311-win_amd64.whl",
+          "bytes": 28754305,
+          "sha256": "82517f76253ba3153aa8a43073cf9230a487974a660f3cf99bd4adda41910407"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp312-cp312-macosx_10_15_x86_64.whl",
+          "bytes": 24166563,
+          "sha256": "5432ef9103c094631ebb7e534a72dfd8324f265c3695e79698eb5c09fa28cddb"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp312-cp312-macosx_14_0_arm64.whl",
+          "bytes": 20391654,
+          "sha256": "d4b650ac1e3a9161090234821a655adb767baa52764e839c1a5ff306cd967de5"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp312-cp312-manylinux2014_i686.manylinux_2_17_i686.whl",
+          "bytes": 40606621,
+          "sha256": "4b3d8d707a9cf3bf633c7742fffc557d9c71e6555f0c9733a0f9b8ed7f874ffe"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+          "bytes": 43945644,
+          "sha256": "e60e1a12fa8e36510384944e1b438e6e9a353bc92d1d496a66acc8e1cb853a5e"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp312-cp312-win32.whl",
+          "bytes": 24608567,
+          "sha256": "a0b395c0f770627bbb6765f45d9fe99ed990fc4801c1adeeaa872d599ccc3b9d"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp312-cp312-win_amd64.whl",
+          "bytes": 28755039,
+          "sha256": "2353c0b968ec337ee4d4111dc4f8fe15a56818b3c399939de952f9a1f2589840"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp313-cp313-macosx_10_15_x86_64.whl",
+          "bytes": 24166466,
+          "sha256": "09cc163f950d0e8ffb8e390ddd65c3de45c0dc752ce7744e0934e74374134572"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp313-cp313-macosx_14_0_arm64.whl",
+          "bytes": 20391631,
+          "sha256": "b9264183d3353f68a77f06a8cc4ff8ba8fdfc567bcde619c74b7fc685f27152a"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp313-cp313-manylinux2014_i686.manylinux_2_17_i686.whl",
+          "bytes": 40606656,
+          "sha256": "06e578cceff73ec5a04a89b2d1807867b37553bee8dcd32369a9d07d17fe86c2"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+          "bytes": 43945653,
+          "sha256": "bbc992915eb03a70be716844bb05f252dc0413f0d475602445be66df7e188a11"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp313-cp313-win32.whl",
+          "bytes": 24608571,
+          "sha256": "03e044a50abb91852b194bf6f6ca35b1c46b8695e0377c663ee3361c118024ce"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp313-cp313-win_amd64.whl",
+          "bytes": 28755050,
+          "sha256": "973edafd5622a947d3a205274db5ace68a7d5bf53d92003f0901151b33c89d27"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp314-cp314-macosx_10_15_x86_64.whl",
+          "bytes": 24166743,
+          "sha256": "5190366f1d4a777797a39624146cfa99d0884f8a3c7ced1c82c8fb9520d65faa"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp314-cp314-macosx_14_0_arm64.whl",
+          "bytes": 20391505,
+          "sha256": "d204acdaa08436dd84ef999bb048ff352b7a1deae02752d144586bd278d9d31a"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp314-cp314-manylinux2014_i686.manylinux_2_17_i686.whl",
+          "bytes": 40606947,
+          "sha256": "9eb5725526b046b0d0e1021c30fe2e60078f2f1080010dc93f95d057c51cce0a"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+          "bytes": 43945000,
+          "sha256": "5ccbce68115de998ba99af314b489f36daab5453dbdb69c9a625b3a9722da0e3"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp314-cp314t-macosx_10_15_x86_64.whl",
+          "bytes": 24170941,
+          "sha256": "5fa430ce90eda04f2b1326a84817f09ad6a9f16d475afacb43522debf4283300"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp314-cp314-win32.whl",
+          "bytes": 25562087,
+          "sha256": "350d6e40c62340b583b6aa4887730a626191290fa91f63d9f7e58ff60edf17af"
+        },
+        {
+          "filename": "ibm_db-3.2.9-cp314-cp314-win_amd64.whl",
+          "bytes": 29355366,
+          "sha256": "62b2fc14da8b49895f6d9670a3bdce65d8ea2a5fdabd00303fbe404b8f84d947"
+        },
+        {
+          "filename": "ibm_db-3.2.9.tar.gz",
+          "bytes": 276595,
+          "sha256": "0ad6dc4575519a5563fd7f845fc6bc00d688020e1d3ae78d382e79183bc32b0b"
+        }
+      ],
+      "relevant_description": [
+        "- **SQL1598N Error** - It is expected in absence of valid db2connect license. Please click [here](#Licenserequirements) and read instructions.\n- **SQL0805N Error** - You need to rebind CLI packages to fix this error. Please read detailed instructions [here](#SQL0805NError).",
+        "**MacOS with Silicon Chip** - Supported from v3.2.5 onwards using v12.x clidriver.\n**MacOS with Intel Chip** - Supported using v11.x clidriver only. By default v11.5.9 clidriver will get downloaded.",
+        "If you have installed `DB2_RTC*` i.e. **DB2 Runtime Client** and want `ibm_db` to use it instead of clidriver, please read [this comment](https://github.com/ibmdb/python-ibmdb/issues/1023#issuecomment-3062805368) and take action.",
+        "- clidriver v12.1 on Linux uses x86_64_v2 instruction set which is not supported by cibuildwheel and wheel image creation [fails](https://github.com/pypa/manylinux/issues/1725) using v12.1 clidriver. So, default version of clidriver on Linux platform is v11.5.9 only.",
+        "- You can force installation of ibm_db on Linux with clidriver v12.1 using below commands:",
+        "```\nexport CLIDRIVER_VERSION=v12.1.0\npip install ibm_db --no-binary :all: --no-cache-dir\n```",
+        "- If a db2 client or server or dsdriver or clidriver is already installed in the system and user has already set installed path to `PATH` environment variable, then user needs to set [environment variable](#envvar) `IBM_DB_HOME` manually to the installed path before installing `ibm_db`.",
+        "- If user has installed clidriver in `F:\\DSDRIVER` and if the \"PATH\" environment variable has `F:\\DSDRIVER\\bin`, then user should also set `IBM_DB_HOME` to `F:\\DSDRIVER`.",
+        "- When we install ibm_db package on Linux, MacOS and Windows, `pip install ibm_db` command install prebuilt Wheel package that includes clidriver too and ignores `IBM_DB_HOME` or `IBM_DB_INSTALLER_URL` or `CLIDRIVER_VERSION` environment variables if set. Also, auto downloading of clidriver does not happen as clidriver is already present inside wheel package.",
+        "- If `db2cli validate` command works in your system and installed db2 client/server\n  has `include` directory, ibm_db installation from souce distribution will not download clidriver, but it will use the existing client/server from the system.",
+        "- To inforce auto downloading of clidriver _OR_ to make setting of environment variable `IBM_DB_HOME` or `IBM_DB_INSTALLER_URL` or `CLIDRIVER_VERSION` effective; install ibm_db from source distribution usin below command:",
+        "- If you want to use your own URL for clidriver.tar.gz/.zip please set below environment variable:",
+        "```\nexport IBM_DB_INSTALLER_URL=full_path_of_clidriver.tar.gz/.zip\npip install ibm_db --no-binary :all: --no-cache-dir\n```",
+        "- To install using specific version of clidriver from https://public.dhe.ibm.com/ibmdl/export/pub/software/data/db2/drivers/odbc_cli/:",
+        "```\nexport CLIDRIVER_VERSION=v11.5.9\npip install ibm_db --no-binary :all: --no-cache-dir\n```",
+        "- ibm_db will override value of CLIDRIVER_VERSION to v12.1.0 for MacARM64 and to v11.5.9 for Macx64 platform.",
+        "- When ibm_db get installed from wheel package, you can find clidriver under site_packages directory of Python. You need to copy license file under `site_packages/clidriver/license` to be effective, if any.",
+        "The `ibm_db` package now handles this **automatically** by installing an `ibm_db_dll.pth` file into `site-packages`. This file runs at Python startup and registers the clidriver `bin` directory via `os.add_dll_directory()`, so `import ibm_db` works out of the box.",
+        "If `IBM_DB_HOME` is set, the `.pth` file uses `%IBM_DB_HOME%\\bin`; otherwise it uses the bundled `site-packages\\clidriver\\bin`.",
+        "```python\nimport os\nos.add_dll_directory('path to clidriver installation until bin')\nimport ibm_db\n```",
+        "To find your clidriver `bin` path, run:",
+        "```\npython -c \"import os, site, sysconfig; paths=[os.path.join(site.getusersitepackages(),'clidriver','bin'), os.path.join(sysconfig.get_path('purelib'),'clidriver','bin')]; print(next((p for p in paths if os.path.isdir(p)), 'clidriver not found - reinstall ibm_db'))\"\n```",
+        "> The ODBC and CLI Driver(clidriver) is automatically downloaded at the time of installation and it is recommended to use this driver. However, if you wish to use an existing installation of clidriver or install the clidriver manually and use it, you can set IBM_DB_HOME environment variable as documented below:",
+        "  Set this environment variable to avoid automatic downloading of the clidriver during installation. You could set this to the installation path of ODBC and CLI driver in your environment.<br>\n  e.g:",
+        "  ```\n  Windows :\n  set IBM_DB_HOME=C:/Users/userid/clidriver"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rthalley/dnspython/v2.9.0/LICENSE",
+      "retrieved_at": "2026-11-01T01:16:18.978171+00:00",
+      "bytes": 1526,
+      "sha256": "c3ea3ff5654b329c19d3bc5f7481af623c3dded4a6145585499f843ad3d741cd",
+      "state": "retrieved",
+      "text": "ISC License\n\nCopyright (C) Dnspython Contributors\n\nPermission to use, copy, modify, and/or distribute this software for\nany purpose with or without fee is hereby granted, provided that the\nabove copyright notice and this permission notice appear in all\ncopies.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL\nWARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED\nWARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE\nAUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL\nDAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR\nPROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER\nTORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR\nPERFORMANCE OF THIS SOFTWARE.\n\n\n\nCopyright (C) 2001-2017 Nominum, Inc.\nCopyright (C) Google Inc.\n\nPermission to use, copy, modify, and distribute this software and its\ndocumentation for any purpose with or without fee is hereby granted,\nprovided that the above copyright notice and this permission notice\nappear in all copies.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND NOMINUM DISCLAIMS ALL WARRANTIES\nWITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF\nMERCHANTABILITY AND FITNESS. IN NO EVENT SHALL NOMINUM BE LIABLE FOR\nANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES\nWHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN\nACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT\nOF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rthalley/dnspython/v2.9.0/pyproject.toml",
+      "retrieved_at": "2026-11-01T01:16:19.142920+00:00",
+      "bytes": 2722,
+      "sha256": "6cc387d71a3d38f12df74ab7c3c7862452005c817e8cdfdb9b95ae669bb8d026",
+      "state": "retrieved",
+      "text": "[build-system]\nrequires = [\"uv_build>=0.9.21,<0.13.0\"]\nbuild-backend = \"uv_build\"\n\n[project]\nname = \"dnspython\"\ndescription = \"DNS toolkit\"\nauthors = [{ name = \"Bob Halley\", email = \"halley@dnspython.org\" }]\nlicense = \"ISC\"\nclassifiers = [\n    \"Development Status :: 5 - Production/Stable\",\n    \"Intended Audience :: Developers\",\n    \"Intended Audience :: System Administrators\",\n    \"Operating System :: POSIX\",\n    \"Operating System :: Microsoft :: Windows\",\n    \"Programming Language :: Python\",\n    \"Topic :: Internet :: Name Service (DNS)\",\n    \"Topic :: Software Development :: Libraries :: Python Modules\",\n    \"Programming Language :: Python :: 3\",\n    \"Programming Language :: Python :: 3.11\",\n    \"Programming Language :: Python :: 3.12\",\n    \"Programming Language :: Python :: 3.13\",\n    \"Programming Language :: Python :: 3.14\",\n]\nreadme = \"README.md\"\nrequires-python = \">=3.11\"\ndependencies = []\nversion = \"2.9.0\"\n\n[project.optional-dependencies]\ndev = [\n    \"black>=26.5\",\n    \"coverage>=7.15\",\n    \"hypercorn>=0.18.0\",\n    \"pyright>=1.1.411\",\n    \"pytest>=9.1\",\n    \"pytest-cov>=7.1\",\n    \"quart-trio>=0.12.0\",\n    \"ruff>=0.16.0\",\n    \"sphinx>=9.1.0 ; python_version >= '3.12'\",\n    \"sphinx-rtd-theme>=3.1.0 ; python_full_version >= '3.12'\",\n    \"trustme>=1.2.1\",\n    \"ty>=0.0.85\",\n]\ndnssec = [\"cryptography>=50\"]\ndoh = [\"httpcore2>=2.13\", \"httpx2>=2.13\", \"h2>=4.4\"]\ndoq = [\"aioquic>=1.3.0\"]\nidna = [\"idna>=3.20\"]\ntrio = [\"trio>=0.34\"]\nwmi = [\"wmi>=1.5.1; platform_system=='Windows'\"]\n\n[project.urls]\nhomepage = \"https://www.dnspython.org\"\nrepository = \"https://github.com/rthalley/dnspython.git\"\ndocumentation = \"https://dnspython.readthedocs.io/en/stable/\"\nissues = \"https://github.com/rthalley/dnspython/issues\"\n\n[tool.uv.build-backend]\nmodule-name = \"dns\"\nmodule-root = \"\"\nsource-include = [\n    \"dns/*.py\",\n    \"dns/**/*.py\",\n    \"dns/py.typed\",\n    \"examples/*.txt\",\n    \"examples/*.py\",\n    \"tests/*.txt\",\n    \"tests/*.py\",\n    \"tests/*.good\",\n    \"tests/example\",\n    \"tests/query\",\n    \"tests/resolv.conf\",\n    \"tests/*.pickle\",\n    \"tests/*.text\",\n    \"tests/*.generic\",\n    \"tests/tls/*.crt\",\n    \"tests/tls/*.pem\",\n    \"tests/tsigkeys/*.key\",\n    \"util/**\",\n]\nsource-exclude = [\n    \".pytest_cache\",\n    \".DS_Store\",\n]\n\n[tool.ruff]\nlint.select = [\n    # pycodestyle\n    \"E\",\n    # Pyflakes\n    \"F\",\n    # pyupgrade\n    \"UP\",\n    # flake8-bugbear\n    \"B\",\n    # isort\n    \"I\",\n]\nlint.ignore = [\n    \"E501\",\n    \"E741\",\n    \"I001\",\n    \"B904\",\n    \"B011\",\n    \"UP006\",\n    \"UP035\",\n]\nlint.exclude = [\"tests/*\"]\n\n[tool.black]\ntarget-version = [\"py310\"]\n\n[tool.isort]\nprofile = \"black\"\n\n[tool.pyright]\nreportUnsupportedDunderAll = false\nexclude = [\"dns/win32util.py\", \"examples/*.py\", \"tests/*.py\"]\n"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/PrefectHQ/fastmcp/v3.4.10/LICENSE",
+      "retrieved_at": "2026-11-01T01:16:19.350659+00:00",
+      "bytes": 11356,
+      "sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1",
+      "state": "retrieved",
+      "text": "                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code control systems,\n      and issue tracking systems that are managed by, or on behalf of, the\n      Licensor for the purpose of discussing and improving the Work, but\n      excluding communication that is conspicuously marked or otherwise\n      designated in writing by the copyright owner as \"Not a Contribution.\"\n\n      \"Contributor\" shall mean Licensor and any individual or Legal Entity\n      on behalf of whom a Contribution has been received by Licensor and\n      subsequently incorporated within the Work.\n\n   2. Grant of Copyright License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      copyright license to reproduce, prepare Derivative Works of,\n      publicly display, publicly perform, sublicense, and distribute the\n      Work and such Derivative Works in Source or Object form.\n\n   3. Grant of Patent License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      (except as stated in this section) patent license to make, have made,\n      use, offer to sell, sell, import, and otherwise transfer the Work,\n      where such license applies only to those patent claims licensable\n      by such Contributor that are necessarily infringed by their\n      Contribution(s) alone or by combination of their Contribution(s)\n      with the Work to which such Contribution(s) was submitted. If You\n      institute patent litigation against any entity (including a\n      cross-claim or counterclaim in a lawsuit) alleging that the Work\n      or a Contribution incorporated within the Work constitutes direct\n      or contributory patent infringement, then any patent licenses\n      granted to You under this License for that Work shall terminate\n      as of the date such litigation is filed.\n\n   4. Redistribution. You may reproduce and distribute copies of the\n      Work or Derivative Works thereof in any medium, with or without\n      modifications, and in Source or Object form, provided that You\n      meet the following conditions:\n\n      (a) You must give any other recipients of the Work or\n          Derivative Works a copy of this License; and\n\n      (b) You must cause any modified files to carry prominent notices\n          stating that You changed the files; and\n\n      (c) You must retain, in the Source form of any Derivative Works\n          that You distribute, all copyright, patent, trademark, and\n          attribution notices from the Source form of the Work,\n          excluding those notices that do not pertain to any part of\n          the Derivative Works; and\n\n      (d) If the Work includes a \"NOTICE\" text file as part of its\n          distribution, then any Derivative Works that You distribute must\n          include a readable copy of the attribution notices contained\n          within such NOTICE file, excluding those notices that do not\n          pertain to any part of the Derivative Works, in at least one\n          of the following places: within a NOTICE text file distributed\n          as part of the Derivative Works; within the Source form or\n          documentation, if provided along with the Derivative Works; or,\n          within a display generated by the Derivative Works, if and\n          wherever such third-party notices normally appear. The contents\n          of the NOTICE file are for informational purposes only and\n          do not modify the License. You may add Your own attribution\n          notices within Derivative Works that You distribute, alongside\n          or as an addendum to the NOTICE text from the Work, provided\n          that such additional attribution notices cannot be construed\n          as modifying the License.\n\n      You may add Your own copyright statement to Your modifications and\n      may provide additional or different license terms and conditions\n      for use, reproduction, or distribution of Your modifications, or\n      for any such Derivative Works as a whole, provided Your use,\n      reproduction, and distribution of the Work otherwise complies with\n      the conditions stated in this License.\n\n   5. Submission of Contributions. Unless You explicitly state otherwise,\n      any Contribution intentionally submitted for inclusion in the Work\n      by You to the Licensor shall be under the terms and conditions of\n      this License, without any additional terms or conditions.\n      Notwithstanding the above, nothing herein shall supersede or modify\n      the terms of any separate license agreement you may have executed\n      with Licensor regarding such Contributions.\n\n   6. Trademarks. This License does not grant permission to use the trade\n      names, trademarks, service marks, or product names of the Licensor,\n      except as required for reasonable and customary use in describing the\n      origin of the Work and reproducing the content of the NOTICE file.\n\n   7. Disclaimer of Warranty. Unless required by applicable law or\n      agreed to in writing, Licensor provides the Work (and each\n      Contributor provides its Contributions) on an \"AS IS\" BASIS,\n      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\n      implied, including, without limitation, any warranties or conditions\n      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\n      PARTICULAR PURPOSE. You are solely responsible for determining the\n      appropriateness of using or redistributing the Work and assume any\n      risks associated with Your exercise of permissions under this License.\n\n   8. Limitation of Liability. In no event and under no legal theory,\n      whether in tort (including negligence), contract, or otherwise,\n      unless required by applicable law (such as deliberate and grossly\n      negligent acts) or agreed to in writing, shall any Contributor be\n      liable to You for damages, including any direct, indirect, special,\n      incidental, or consequential damages of any character arising as a\n      result of this License or out of the use or inability to use the\n      Work (including but not limited to damages for loss of goodwill,\n      work stoppage, computer failure or malfunction, or any and all\n      other commercial damages or losses), even if such Contributor\n      has been advised of the possibility of such damages.\n\n   9. Accepting Warranty or Additional Liability. While redistributing\n      the Work or Derivative Works thereof, You may choose to offer,\n      and charge a fee for, acceptance of support, warranty, indemnity,\n      or other liability obligations and/or rights consistent with this\n      License. However, in accepting such obligations, You may act only\n      on Your own behalf and on Your sole responsibility, not on behalf\n      of any other Contributor, and only if You agree to indemnify,\n      defend, and hold each Contributor harmless for any liability\n      incurred by, or claims asserted against, such Contributor by reason\n      of your accepting any such warranty or additional liability.\n\n   END OF TERMS AND CONDITIONS\n\n   APPENDIX: How to apply the Apache License to your work.\n\n      To apply the Apache License to your work, attach the following\n      boilerplate notice, with the fields enclosed by brackets \"[]\"\n      replaced with your own identifying information. (Don't include\n      the brackets!)  The text should be enclosed in the appropriate\n      comment syntax for the file format. We also recommend that a\n      file or class name and description of purpose be included on the\n      same \"printed page\" as the copyright notice for easier\n      identification within third-party archives.\n\n   Copyright [yyyy] [name of copyright owner]\n\n   Licensed under the Apache License, Version 2.0 (the \"License\");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       http://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an \"AS IS\" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/PrefectHQ/fastmcp/v3.4.10/fastmcp_slim/pyproject.toml",
+      "retrieved_at": "2026-11-01T01:16:19.494570+00:00",
+      "bytes": 2829,
+      "sha256": "c75d7da0a3f4d0c4a712d2f3f507ce21f2d82df7d7e62492487dbd66eb106e58",
+      "state": "retrieved",
+      "text": "[project]\nname = \"fastmcp-slim\"\ndynamic = [\"version\", \"optional-dependencies\"]\ndescription = \"The dependency-slim FastMCP package.\"\nauthors = [{ name = \"Jeremiah Lowin\" }]\ndependencies = [\n    \"platformdirs>=4.0.0\",\n    \"pydantic[email]>=2.11.7\",\n    \"pydantic-settings>=2.0.0\",\n    \"python-dotenv>=1.1.0\",\n    \"rich>=13.9.4\",\n    \"typing-extensions>=4.0.0\",\n]\n\nrequires-python = \">=3.10\"\nreadme = \"README.md\"\nlicense = \"Apache-2.0\"\n\nkeywords = [\n    \"mcp\",\n    \"mcp server\",\n    \"mcp client\",\n    \"model context protocol\",\n    \"fastmcp\",\n    \"llm\",\n    \"agent\",\n]\nclassifiers = [\n    \"Intended Audience :: Developers\",\n    \"License :: OSI Approved :: Apache Software License\",\n    \"Topic :: Scientific/Engineering :: Artificial Intelligence\",\n    \"Programming Language :: Python :: 3.10\",\n    \"Programming Language :: Python :: 3.11\",\n    \"Programming Language :: Python :: 3.12\",\n    \"Programming Language :: Python :: 3.13\",\n    \"Typing :: Typed\",\n]\n\n[project.urls]\nHomepage = \"https://gofastmcp.com\"\nRepository = \"https://github.com/PrefectHQ/fastmcp\"\nDocumentation = \"https://gofastmcp.com\"\n\n[project.scripts]\nfastmcp = \"fastmcp.cli:app\"\n\n[build-system]\nrequires = [\"hatchling\", \"uv-dynamic-versioning>=0.7.0\"]\nbuild-backend = \"hatchling.build\"\n\n[tool.hatch.version]\nsource = \"uv-dynamic-versioning\"\n\n[tool.hatch.metadata]\nallow-direct-references = true\n\n[tool.hatch.build.targets.wheel]\npackages = [\"fastmcp\"]\n\n[tool.uv-dynamic-versioning]\nvcs = \"git\"\nstyle = \"pep440\"\nbump = true\nfallback-version = \"0.0.0\"\n\n[tool.hatch.metadata.hooks.uv-dynamic-versioning.optional-dependencies]\nanthropic = [\"anthropic>=0.48.0\"]\napps = [\"prefab-ui>=0.18.0\"]\n# PyJWT floor: transitive via msal; CVE-2026-32597 affects <= 2.11.0\nazure = [\"azure-identity>=1.16.0\", \"PyJWT>=2.12.0\"]\nclient = [\n    \"fastmcp-slim[mcp]=={{ version }}\",\n    \"authlib>=1.6.11\",\n    \"py-key-value-aio[filetree,keyring,memory]>=0.4.4,<0.5.0\",\n]\ncode-mode = [\"pydantic-monty==0.0.17\"]\ngemini = [\"google-genai>=1.18.0\", \"jsonref>=1.1.0\"]\nmcp = [\n    \"exceptiongroup>=1.2.2\",\n    \"httpx>=0.28.1,<1.0\",\n    \"mcp>=1.24.0,<2.0\",\n    \"opentelemetry-api>=1.20.0\",\n    # starlette floor: transitive via mcp (which only requires >=0.27).\n    # Pin past CVE-2026-48710, which was patched in 1.0.1.\n    \"starlette>=1.0.1\",\n]\nopenai = [\"openai>=1.102.0\"]\nserver = [\n    \"fastmcp-slim[mcp]=={{ version }}\",\n    \"authlib>=1.6.11\",\n    \"cyclopts>=4.0.0\",\n    \"griffelib>=2.0.0\",\n    \"jsonref>=1.1.0\",\n    \"jsonschema-path>=0.3.4\",\n    \"joserfc>=1.1.0\",\n    \"openapi-pydantic>=0.5.1\",\n    \"packaging>=24.0\",\n    \"py-key-value-aio[filetree,keyring,memory]>=0.4.4,<0.5.0\",\n    \"pyperclip>=1.9.0\",\n    \"python-multipart>=0.0.26\",\n    \"pyyaml>=6.0,<7.0\",\n    \"uncalled-for>=0.2.0\",\n    \"uvicorn>=0.35\",\n    \"watchfiles>=1.0.0\",\n    \"websockets>=15.0.1\",\n]\ntasks = [\"pydocket>=0.20.0\"]\n"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/tree-sitter/py-tree-sitter/v0.26.0/LICENSE",
+      "retrieved_at": "2026-11-01T01:16:19.678628+00:00",
+      "bytes": 1088,
+      "sha256": "1af0790543fffac99dd3bd290bf83ca963f4f8029065eb6f35638f4df863ae8e",
+      "state": "retrieved",
+      "text": "The MIT License (MIT)\n\nCopyright (c) 2019 Max Brunsfeld, GitHub\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/tree-sitter/py-tree-sitter/v0.26.0/pyproject.toml",
+      "retrieved_at": "2026-11-01T01:16:19.887960+00:00",
+      "bytes": 1877,
+      "sha256": "4c5b18f2e6061d84bbfe1cec53b9d0b97cd5dfe5bcf8df08cd72d1f5e485a858",
+      "state": "retrieved",
+      "text": "[project]\nname = \"tree-sitter\"\nversion = \"0.26.0\"\ndescription = \"Python bindings to the Tree-sitter parsing library\"\nkeywords = [\"incremental\", \"parsing\", \"tree-sitter\"]\nclassifiers = [\n    \"Intended Audience :: Developers\",\n    \"License :: OSI Approved :: MIT License\",\n    \"Operating System :: OS Independent\",\n    \"Programming Language :: C\",\n    \"Programming Language :: Python\",\n    \"Topic :: Software Development :: Compilers\",\n    \"Topic :: Text Processing :: Linguistic\",\n    \"Typing :: Typed\",\n]\nrequires-python = \">=3.10\"\nreadme = \"README.md\"\n\n[project.urls]\nHomepage = \"https://tree-sitter.github.io/tree-sitter/\"\nSource = \"https://github.com/tree-sitter/py-tree-sitter\"\nDocumentation = \"https://tree-sitter.github.io/py-tree-sitter/\"\nDiscord = \"https://discord.gg/w7nTvsVJhm\"\nMatrix = \"https://matrix.to/#/#tree-sitter-chat:matrix.org\"\n\n[[project.authors]]\nname = \"Max Brunsfeld\"\nemail = \"maxbrunsfeld@gmail.com\"\n\n[[project.maintainers]]\nname = \"ObserverOfTime\"\nemail = \"chronobserver@disroot.org\"\n\n[project.optional-dependencies]\ndocs = [\"sphinx~=8.2\", \"sphinx-book-theme\"]\ntests = [\n    \"tree-sitter-html==0.23.2\",\n    \"tree-sitter-javascript==0.25.0\",\n    \"tree-sitter-json==0.24.8\",\n    \"tree-sitter-python==0.25.0\",\n    \"tree-sitter-rust==0.24.2\",\n]\n\n[build-system]\nrequires = [\"setuptools>=43\"]\nbuild-backend = \"setuptools.build_meta\"\n\n[tool.ruff]\ntarget-version = \"py310\"\nline-length = 100\nindent-width = 4\nextend-exclude = [\n    \".github\",\n    \"__pycache__\",\n    \"setup.py\",\n    \"tree_sitter/core\",\n]\n\n[tool.ruff.format]\nquote-style = \"double\"\nindent-style = \"space\"\n\n[tool.cibuildwheel]\nbuild-frontend = \"build\"\ntest-extras = [\"tests\"]\ntest-command = \"python -munittest discover -s {project}/tests -v\"\n\n[tool.mypy]\nexclude = [\"tree_sitter/core\"]\n\n[tool.rstcheck]\nignore_directives = [\n    \"autoclass\",\n    \"autodata\",\n    \"automethod\",\n    \"autosummary\"\n]\n"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/tree-sitter/tree-sitter-javascript/v0.25.0/LICENSE",
+      "retrieved_at": "2026-11-01T01:16:20.106727+00:00",
+      "bytes": 1080,
+      "sha256": "2e0110e07abef7c2548b26ec9d6969775617ca539a0dc8dbeeb14d6452c711d1",
+      "state": "retrieved",
+      "text": "The MIT License (MIT)\n\nCopyright (c) 2014 Max Brunsfeld\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/tree-sitter/tree-sitter-typescript/v0.23.2/LICENSE",
+      "retrieved_at": "2026-11-01T01:16:20.336486+00:00",
+      "bytes": 1080,
+      "sha256": "49bf33cf78ef5897e4e161ce1517df7de1ae5042a65b6bcfd44401e0fc606559",
+      "state": "retrieved",
+      "text": "The MIT License (MIT)\n\nCopyright (c) 2017 Max Brunsfeld\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ibmdb/python-ibmdb/v3.2.9/LICENSE",
+      "retrieved_at": "2026-11-01T01:16:20.541171+00:00",
+      "bytes": 9164,
+      "sha256": "fb531487f666909d487239da6130e2256d8c86f26ec2674ce6aa5763bc7f8c56",
+      "state": "retrieved",
+      "text": "Apache License\nVersion 2.0, January 2004\nhttp://www.apache.org/licenses/\n\nTERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n1. Definitions.\n\n\"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document.\n\n\"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License.\n\n\"Legal Entity\" shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, \"control\" means (i) the power, direct or indirect, to cause the direction or management of such entity, whether by contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the outstanding shares, or (iii) beneficial ownership of such entity.\n\n\"You\" (or \"Your\") shall mean an individual or Legal Entity exercising permissions granted by this License.\n\n\"Source\" form shall mean the preferred form for making modifications, including but not limited to software source code, documentation source, and configuration files.\n\n\"Object\" form shall mean any form resulting from mechanical transformation or translation of a Source form, including but not limited to compiled object code, generated documentation, and conversions to other media types.\n\n\"Work\" shall mean the work of authorship, whether in Source or Object form, made available under the License, as indicated by a copyright notice that is included in or attached to the work (an example is provided in the Appendix below).\n\n\"Derivative Works\" shall mean any work, whether in Source or Object form, that is based on (or derived from) the Work and for which the editorial revisions, annotations, elaborations, or other modifications represent, as a whole, an original work of authorship. For the purposes of this License, Derivative Works shall not include works that remain separable from, or merely link (or bind by name) to the interfaces of, the Work and Derivative Works thereof.\n\n\"Contribution\" shall mean any work of authorship, including the original version of the Work and any modifications or additions to that Work or Derivative Works thereof, that is intentionally submitted to Licensor for inclusion in the Work by the copyright owner or by an individual or Legal Entity authorized to submit on behalf of the copyright owner. For the purposes of this definition, \"submitted\" means any form of electronic, verbal, or written communication sent to the Licensor or its representatives, including but not limited to communication on electronic mailing lists, source code control systems, and issue tracking systems that are managed by, or on behalf of, the Licensor for the purpose of discussing and improving the Work, but excluding communication that is conspicuously marked or otherwise designated in writing by the copyright owner as \"Not a Contribution.\"\n\n\"Contributor\" shall mean Licensor and any individual or Legal Entity on behalf of whom a Contribution has been received by Licensor and subsequently incorporated within the Work.\n\n2. Grant of Copyright License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform, sublicense, and distribute the Work and such Derivative Works in Source or Object form.\n\n3. Grant of Patent License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Work, where such license applies only to those patent claims licensable by such Contributor that are necessarily infringed by their Contribution(s) alone or by combination of their Contribution(s) with the Work to which such Contribution(s) was submitted. If You institute patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Work or a Contribution incorporated within the Work constitutes direct or contributory patent infringement, then any patent licenses granted to You under this License for that Work shall terminate as of the date such litigation is filed.\n\n4. Redistribution. You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications, and in Source or Object form, provided that You meet the following conditions:\n\n   1. You must give any other recipients of the Work or Derivative Works a copy of this License; and\n\n   2. You must cause any modified files to carry prominent notices stating that You changed the files; and\n\n   3. You must retain, in the Source form of any Derivative Works that You distribute, all copyright, patent, trademark, and attribution notices from the Source form of the Work, excluding those notices that do not pertain to any part of the Derivative Works; and\n\n   4. If the Work includes a \"NOTICE\" text file as part of its distribution, then any Derivative Works that You distribute must include a readable copy of the attribution notices contained within such NOTICE file, excluding those notices that do not pertain to any part of the Derivative Works, in at least one of the following places: within a NOTICE text file distributed as part of the Derivative Works; within the Source form or documentation, if provided along with the Derivative Works; or, within a display generated by the Derivative Works, if and wherever such third-party notices normally appear. The contents of the NOTICE file are for informational purposes only and do not modify the License. You may add Your own attribution notices within Derivative Works that You distribute, alongside or as an addendum to the NOTICE text from the Work, provided that such additional attribution notices cannot be construed as modifying the License.\n\nYou may add Your own copyright statement to Your modifications and may provide additional or different license terms and conditions for use, reproduction, or distribution of Your modifications, or for any such Derivative Works as a whole, provided Your use, reproduction, and distribution of the Work otherwise complies with the conditions stated in this License.\n\n5. Submission of Contributions. Unless You explicitly state otherwise, any Contribution intentionally submitted for inclusion in the Work by You to the Licensor shall be under the terms and conditions of this License, without any additional terms or conditions. Notwithstanding the above, nothing herein shall supersede or modify the terms of any separate license agreement you may have executed with Licensor regarding such Contributions.\n\n6. Trademarks. This License does not grant permission to use the trade names, trademarks, service marks, or product names of the Licensor, except as required for reasonable and customary use in describing the origin of the Work and reproducing the content of the NOTICE file.\n\n7. Disclaimer of Warranty. Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.\n\n8. Limitation of Liability. In no event and under no legal theory, whether in tort (including negligence), contract, or otherwise, unless required by applicable law (such as deliberate and grossly negligent acts) or agreed to in writing, shall any Contributor be liable to You for damages, including any direct, indirect, special, incidental, or consequential damages of any character arising as a result of this License or out of the use or inability to use the Work (including but not limited to damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses), even if such Contributor has been advised of the possibility of such damages.\n\n9. Accepting Warranty or Additional Liability. While redistributing the Work or Derivative Works thereof, You may choose to offer, and charge a fee for, acceptance of support, warranty, indemnity, or other liability obligations and/or rights consistent with this License. However, in accepting such obligations, You may act only on Your own behalf and on Your sole responsibility, not on behalf of any other Contributor, and only if You agree to indemnify, defend, and hold each Contributor harmless for any liability incurred by, or claims asserted against, such Contributor by reason of your accepting any such warranty or additional liability.\n\nEND OF TERMS AND CONDITIONS\n"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ibmdb/python-ibmdb/v3.2.9/README.md",
+      "retrieved_at": "2026-11-01T01:16:20.762398+00:00",
+      "bytes": 34035,
+      "sha256": "321b63ff7d736679cfe3d5ea4d14d4d8a4b6b50214905c8e798b7b4af4d7348f",
+      "state": "retrieved",
+      "text": "# Python support for IBM Db2 for LUW and IBM Db2 for z/OS\n\n## Python, DB-API components for IBM Db2 for LUW and IBM Db2 for z/OS\n\nProvides Python interface for connecting to IBM Db2 for LUW and IBM Db2 for z/OS\n\n<a name='components'></a>\n\n## Components\n\n1. The **ibm_db** contains:\n   - **ibm_db** driver: Python driver for IBM Db2 for LUW and IBM Db2 for z/OS databases. Uses the IBM Data Server Driver for ODBC and CLI APIs to connect to IBM Db2 for LUW.\n   - **ibm_db_dbi**: Python driver for IBM Db2 for LUW that complies to the DB-API 2.0 specification.\n\n## <a name=\"api\"></a> API Documentation\n\nFor more information on the APIs supported by ibm_db, please refer to below link:\n\nhttps://github.com/ibmdb/python-ibmdb/wiki/APIs\n\n<a name=\"prereq\"></a>\n\n## Pre-requisites\n\nInstall Python 3.9 <= 3.14. The minimum python version supported by driver is python 3.9 and the latest version supported is python 3.14.\nMacOS arm64 is supported Python 3.9 onwards.\n\n### To install ibm_db on z/OS system\n\nPlease follow detailed installation instructions as documented here: [ibm_db Installation on z/OS](INSTALL.md#inszos)\n\n- **SQL1598N Error** - It is expected in absence of valid db2connect license. Please click [here](#Licenserequirements) and read instructions.\n- **SQL0805N Error** - You need to rebind CLI packages to fix this error. Please read detailed instructions [here](#SQL0805NError).\n\n### For MacOS M1/M2/ Apple Silicon chip system\n\n**MacOS with Silicon Chip** - Supported from v3.2.5 onwards using v12.x clidriver.\n**MacOS with Intel Chip** - Supported using v11.x clidriver only. By default v11.5.9 clidriver will get downloaded.\n\n### Linux/Unix:\n\nIf you face problems due to missing python header files while installing the driver, you would need to install python developer package and retry install. e.g:\n\n```\n    zypper install python-devel\n     or\n    yum install python-devel\n```\n\nIf you have installed `DB2_RTC*` i.e. **DB2 Runtime Client** and want `ibm_db` to use it instead of clidriver, please read [this comment](https://github.com/ibmdb/python-ibmdb/issues/1023#issuecomment-3062805368) and take action.\n\n- clidriver v12.1 on Linux uses x86_64_v2 instruction set which is not supported by cibuildwheel and wheel image creation [fails](https://github.com/pypa/manylinux/issues/1725) using v12.1 clidriver. So, default version of clidriver on Linux platform is v11.5.9 only.\n\n- You can force installation of ibm_db on Linux with clidriver v12.1 using below commands:\n\n```\nexport CLIDRIVER_VERSION=v12.1.0\npip install ibm_db --no-binary :all: --no-cache-dir\n```\n\n### Windows:\n\n- If a db2 client or server or dsdriver or clidriver is already installed in the system and user has already set installed path to `PATH` environment variable, then user needs to set [environment variable](#envvar) `IBM_DB_HOME` manually to the installed path before installing `ibm_db`.\n\n- To verify it, just execute `db2level` command before installation of `ibm_db`. If it works, note down the install directory path and set system level environment variable `IBM_DB_HOME` as install path shown in output of `db2level` command.\n\n- If user has installed clidriver in `F:\\DSDRIVER` and if the \"PATH\" environment variable has `F:\\DSDRIVER\\bin`, then user should also set `IBM_DB_HOME` to `F:\\DSDRIVER`.\n\n### Docker Linux containers:\n\n- You may need to install **gcc, python, pip, python-devel, libxml2 and pam** if not already installed. Refer to [Installation](#docker) for more details.\n\n### Manual Installation\n\nTo install ibm_db from source code after clone from git, or to know the detialed installation steps for various platforms, please check [INSTALL document](https://github.com/ibmdb/python-ibmdb/blob/master/INSTALL.md#inslnx).\n\n<a name=\"installation\"></a>\n\n## Installation\n\n- Python **Wheels** are built for Linux, MacOS and Windows operating systems for multiple python versions (from python version 3.7 to 3.13). For other platforms, package gets installed from source distribution. For MaxOS arm64, python wheels are available from version 3.9 onwards.\n\nYou can install the driver using pip as:\n\n```\npip install ibm_db\n```\n\nThis will install ibm_db and ibm_db_dbi module.\n\n- When we install ibm_db package on Linux, MacOS and Windows, `pip install ibm_db` command install prebuilt Wheel package that includes clidriver too and ignores `IBM_DB_HOME` or `IBM_DB_INSTALLER_URL` or `CLIDRIVER_VERSION` environment variables if set. Also, auto downloading of clidriver does not happen as clidriver is already present inside wheel package.\n\n- For platforms not supported by python-wheel, ibm_db will get installed from souce distribution, GCC compiler is required on non-windows platform and VC++ compiler on Windows platform to install `ibm_db` from souce distribution.\n\n- If `db2cli validate` command works in your system and installed db2 client/server\n  has `include` directory, ibm_db installation from souce distribution will not download clidriver, but it will use the existing client/server from the system.\n\n- To inforce auto downloading of clidriver _OR_ to make setting of environment variable `IBM_DB_HOME` or `IBM_DB_INSTALLER_URL` or `CLIDRIVER_VERSION` effective; install ibm_db from source distribution usin below command:\n\n```\npip install ibm_db --no-binary :all: --no-cache-dir\n```\n\n- If you want to use your own URL for clidriver.tar.gz/.zip please set below environment variable:\n\n```\nexport IBM_DB_INSTALLER_URL=full_path_of_clidriver.tar.gz/.zip\npip install ibm_db --no-binary :all: --no-cache-dir\n```\n\n- To install using specific version of clidriver from https://public.dhe.ibm.com/ibmdl/export/pub/software/data/db2/drivers/odbc_cli/:\n\n```\nexport CLIDRIVER_VERSION=v11.5.9\npip install ibm_db --no-binary :all: --no-cache-dir\n```\n\n- ibm_db will override value of CLIDRIVER_VERSION to v12.1.0 for MacARM64 and to v11.5.9 for Macx64 platform.\n\n- When ibm_db get installed from wheel package, you can find clidriver under site_packages directory of Python. You need to copy license file under `site_packages/clidriver/license` to be effective, if any.\n\n**Windows DLL resolution (Python 3.8+):**\n\nSince Python 3.8, the `PATH` environment variable is no longer used for DLL resolution on Windows (see https://bugs.python.org/issue36085). You may see the following error when importing `ibm_db`:\n\n```\n>>> import ibm_db\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nImportError: DLL load failed while importing ibm_db: The specified module could not be found.\n```\n\nThe `ibm_db` package now handles this **automatically** by installing an `ibm_db_dll.pth` file into `site-packages`. This file runs at Python startup and registers the clidriver `bin` directory via `os.add_dll_directory()`, so `import ibm_db` works out of the box.\n\nIf `IBM_DB_HOME` is set, the `.pth` file uses `%IBM_DB_HOME%\\bin`; otherwise it uses the bundled `site-packages\\clidriver\\bin`.\n\n**If you still see `ImportError: DLL load failed` after a fresh install**, verify that the `.pth` file exists:\n\n```\npython -c \"import os, sysconfig; print(os.path.isfile(os.path.join(sysconfig.get_path('purelib'), 'ibm_db_dll.pth')))\"\n```\n\nIf it prints `False`, reinstall ibm_db:\n\n```\npip uninstall ibm_db\npip install ibm_db\n```\n\n**Manual fallback:** If the automatic fix does not work in your environment, you can set the DLL path directly in your code before importing the module:\n\n```python\nimport os\nos.add_dll_directory('path to clidriver installation until bin')\nimport ibm_db\n```\n\nTo find your clidriver `bin` path, run:\n\n```\npython -c \"import os, site, sysconfig; paths=[os.path.join(site.getusersitepackages(),'clidriver','bin'), os.path.join(sysconfig.get_path('purelib'),'clidriver','bin')]; print(next((p for p in paths if os.path.isdir(p)), 'clidriver not found - reinstall ibm_db'))\"\n```\n\n- <a name=\"docker\"></a>For installing ibm_db on docker Linux container, you can refer as below:\n\n```\nyum install python gcc pam wget python-devel.x86_64 libxml2\nuse, `yum install python3` to install python 3.x\n\nif pip or pip3 does not exist, install it as:\nwget https://bootstrap.pypa.io/get-pip.py\ndocker cp get-pip.py /root:<containerid>\ncd root\npython3 get-pip.py\n\nInstall python ibm_db as:\npip install ibm_db\nor\npip3 install ibm_db\n\n```\n\n- Uninstalling the ibm_db driver :\n\n```python\npip uninstall ibm_db\n```\n\n> The ODBC and CLI Driver(clidriver) is automatically downloaded at the time of installation and it is recommended to use this driver. However, if you wish to use an existing installation of clidriver or install the clidriver manually and use it, you can set IBM_DB_HOME environment variable as documented below:\n\n- <a name=\"envvar\"></a>Environment Variables:\n  `IBM_DB_HOME :`\n\n  Set this environment variable to avoid automatic downloading of the clidriver during installation. You could set this to the installation path of ODBC and CLI driver in your environment.<br>\n  e.g:\n\n  ```\n  Windows :\n  set IBM_DB_HOME=C:/Users/userid/clidriver\n\n  Other platforms:\n  export IBM_DB_HOME=/home/userid/clidriver\n  ```\n\n  **Note:** You must need to install ibm_db using command `pip install ibm_db --no-binary :all: --no-cache-dir`\n  on Linux, Windows and MacOS to make setting of `IBM_DB_HOME` effective. If you want to use Runtime Client or clidriver downloaded from fix central which do not have `include` file, please read [this comment](https://github.com/ibmdb/python-ibmdb/issues/1023#issuecomment-3062805368).\n\n  You are required to set the library path to the clidriver under IBM_DB_HOME to pick this version of the ODBC and CLI Driver.<br>\n  e.g:\n\n  ```\n  Windows:\n  set LIB=%IBM_DB_HOME%/lib;%LIB%\n\n  AIX:\n  export LIBPATH=$IBM_DB_HOME/lib:$LIBPATH\n\n  MAC:\n  export DYLD_LIBRARY_PATH=$IBM_DB_HOME/lib:$DYLD_LIBRARY_PATH\n\n  Other platforms:\n  export LD_LIBRARY_PATH=$IBM_DB_HOME/lib:$LD_LIBRARY_PATH\n  ```\n\n  The ODBC and CLI driver is available for download at [Db2 LUW ODBC and CLI Driver](https://public.dhe.ibm.com/ibmdl/export/pub/software/data/db2/drivers/odbc_cli/).\n  Refer to ([License requirements](#Licenserequirements)) for more details on the CLI driver for manual download and installation.\n\n- Installing using Anaconda distribution of python\n\n```\nconda install -c conda-forge ibm_db\n```\n\n- Supported Platform for Anaconda Installation\n\n| Platform |  Architecture  | Supported | Version |\n| :------: | :------------: | :-------: | :-----: |\n|  Linux   | amd64 (x86_64) |    Yes    | Latest  |\n|  Linux   |    ppc64le     |    Yes    | Latest  |\n|  Darwin  |   Mac OS x64   |    Yes    | Latest  |\n|  Darwin  |  Mac OS arm64  |    Yes    | Latest  |\n| Windows  |      x64       |    Yes    | Latest  |\n| Windows  |      x32       |    Yes    | Latest  |\n\n## <a name=\"quick example\"></a> Quick Example\n\n```python\n$ python\nPython 3.13.0 (main, Oct  7 2024, 05:02:14) [Clang 16.0.0 (clang-1600.0.26.4)] on darwin\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n>>> import ibm_db\n>>> #For connecting to local database named pydev for user db2inst1 and password secret, use below example\n>>> #ibm_db_conn = ibm_db.connect('pydev', 'db2inst1', 'secret')\n>>> #For connecting to remote database named pydev for uid db2inst and pwd secret on host host.test.com, use below example\n>>> # Connect using ibm_db\n>>> conn_str='database=pydev;hostname=host.test.com;port=portno;protocol=tcpip;uid=db2inst1;pwd=secret'\n>>> ibm_db_conn = ibm_db.connect(conn_str,'','')\n>>>\n>>> # Connect using ibm_db_dbi\n>>> import ibm_db_dbi\n>>> conn = ibm_db_dbi.Connection(ibm_db_conn)\n>>> # create table using ibm_db\n>>> create=\"create table mytable(id int, name varchar(50))\"\n>>> ibm_db.exec_immediate(ibm_db_conn, create)\n<ibm_db.IBM_DBStatement object at 0x7fcc5f44f650>\n>>>\n>>> # Execute tables API\n>>> conn.tables('DB2INST1', '%')\n[{'TABLE_CAT': None, 'TABLE_SCHEM': 'DB2INST1', 'TABLE_NAME': 'MYTABLE', 'TABLE_TYPE': 'TABLE', 'REMARKS': None}]\n>>>\n>>> # Insert 3 rows into the table\n>>> insert = \"insert into mytable values(?,?)\"\n>>> params=((1,'Sanders'),(2,'Pernal'),(3,'OBrien'))\n>>> stmt_insert = ibm_db.prepare(ibm_db_conn, insert)\n>>> ibm_db.execute_many(stmt_insert,params)\n3\n>>> # Fetch data using ibm_db_dbi\n>>> select=\"select id, name from mytable\"\n>>> cur = conn.cursor()\n>>> cur.execute(select)\nTrue\n>>> row=cur.fetchall()\n>>> print(\"{} \\t {} \\t {}\".format(row[0],row[1],row[2]),end=\"\\n\")\n(1, 'Sanders')   (2, 'Pernal')   (3, 'OBrien')\n>>> row=cur.fetchall()\n>>> print(row)\n[]\n>>>\n>>> # Fetch data using ibm_db\n>>> stmt_select = ibm_db.exec_immediate(ibm_db_conn, select)\n>>> cols = ibm_db.fetch_tuple( stmt_select )\n>>> print(\"%s, %s\" % (cols[0], cols[1]))\n1, Sanders\n>>> cols = ibm_db.fetch_tuple( stmt_select )\n>>> print(\"%s, %s\" % (cols[0], cols[1]))\n2, Pernal\n>>> cols = ibm_db.fetch_tuple( stmt_select )\n>>> print(\"%s, %s\" % (cols[0], cols[1]))\n3, OBrien\n>>> cols = ibm_db.fetch_tuple( stmt_select )\n>>> print(cols)\nFalse\n>>>\n>>> # Close connections\n>>> cur.close()\nTrue\n>>> # Dropping the table created\n>>> drop = \"drop table mytable\"\n>>> stmt_delete = ibm_db.exec_immediate(ibm_db_conn,drop)\n>>> conn1.tables('DB2INST1','MY%')\n[]\n>>>\n>>> ibm_db.close(ibm_db_conn)\nTrue\n```\n\n## Logging\n\n### Logging in ibm_db Module\n\nYou can enable logging in the ibm_db module to debug and trace activities.\nLogging can be directed to the console or a specified file.\n\nTo enable logging:\n\n```\nimport ibm_db\n\n# Log to console\nibm_db.debug(True)\n\n# Log to a file (e.g., log.txt)\nibm_db.debug(\"log.txt\")\n\n# stop logging\nibm_db.debug(False)\n```\n\nCalling ibm_db.debug(True) with boolean True argument will output logs to the console.\n\nCalling ibm_db.debug(\"log.txt\") will log messages to the specified file (log.txt in this example).\n\nCalling ibm_db.debug(False) with boolean False argument will stop logging.\n\n### Logging in ibm_db_dbi Module\n\nYou can enable logging in the ibm_db_dbi module to debug and trace activities.\nLogging can be directed to the console or a specified file.\n\nTo enable logging:\n\n```\nimport ibm_db_dbi as dbi\n\n# Log to console\ndbi.debug(True)\n\n# Log to a file (e.g., log.txt)\ndbi.debug(\"log.txt\")\n\n# stop logging\ndbi.debug(False)\n```\n\nCalling dbi.debug(True) with boolean True argument will output logs to the console.\n\nCalling dbi.debug(\"log.txt\") will log messages to the specified file (log.txt in this example).\n\nCalling dbi.debug(False) with boolean False argument will stop logging.\n\n## Example of SSL Connection String\n\n- **Secure Database Connection using SSL/TSL** - ibm_db supports secure connection to Database Server over SSL same as ODBC/CLI driver. If you have SSL Certificate from server or an CA signed certificate, just use it in connection string as below:\n\n```\nUsing SSLServerCertificate keyword\n\nconnStr = \"DATABASE=<DATABASE_NAME>;HOSTNAME=<HOSTNAME>;PORT=<SSL_PORT>;UID=<USER_ID>;PWD=<PASSWORD>;\" +\n          \"SECURITY=SSL;SSLServerCertificate=<FULL_PATH_TO_SERVER_CERTIFICATE>;\"\nconn = ibm_db.connect(connStr,'','')\n```\n\n> Note the two extra keywords **Security** and **SSLServerCertificate** used in connection string. `SSLServerCertificate` should point to the SSL Certificate from server or an CA signed certificate. Also, `PORT` must be `SSL` port and not the TCPI/IP port. Make sure Db2 server is configured to accept connection on SSL port else `ibm_db` will throw SQL30081N error.\n\n> Value of `SSLServerCertificate` keyword must be full path of a certificate file generated for client authentication.\n> It normally has `*.arm` or `*.cert` or `*.pem` extension. `ibm_db` do not support `*.jks` format file as it is not a\n> certificate file but a Java KeyStore file, extract certificate from it using keytool and then use the \\*.cert file.\n\n> `ibm_db` uses IBM ODBC/CLI Driver for connectivity and it do not support a `*.jks` file as keystoredb as `keystore.jks` is meant for Java applications.\n> Note that `*.jks` file is a `Java Key Store` file and it is not an SSL Certificate file. You can extract SSL certificate from JKS file using below `keytool` command:\n\n```\nkeytool -exportcert -alias your_certificate_alias -file client_cert.cert -keystore  keystore.jks\n```\n\nNow, you can use the generated `client_cert.cert` as the value of `SSLServerCertificate` in connection string.\n\n> Do not use keyworkds like `sslConnection=true` in connection string as it is a JDBC connection keyword and ibm_db\n> ignores it. Corresponding ibm_db connection keyword for `sslConnection` is `Security` hence, use `Security=SSL;` in\n> connection string instead.\n\n> `ibm_db` supports only ODBC/CLI Driver keywords in connection string: https://www.ibm.com/docs/en/db2/12.1?topic=odbc-cliodbc-configuration-keywords\n\n- To connect to dashDB in IBM Cloud, use below connection string:\n\n```\nconnStr = \"DATABASE=database;HOSTNAME=hostname;PORT=port;PROTOCOL=TCPIP;UID=username;PWD=passwd;Security=SSL\";\n```\n\n> We just need to add **Security=SSL** in connection string to have a secure connection against Db2 server in IBM Cloud.\n\n**Note:** You can also create a KeyStore DB using GSKit command line tool and use it in connection string along with other keywords as documented in [DB2 Documentation](https://www.ibm.com/docs/en/db2/12.1.0?topic=ctsidc-configuring-tls-support-in-non-java-db2-clients).\n\n- If you have created a KeyStore DB using GSKit using password or you have got _.kdb file with _.sth file:\n\n```\nUsing SSLClientKeyStoreDB and SSLClientKeyStoreDBPassword keyword\n\nconnStr = \"DATABASE=<DATABASE_NAME>;HOSTNAME=<HOSTNAME>;PORT=<SSL_PORT>;UID=<USER_ID>;PWD=<PASSWORD>;\" +\n          \"SECURITY=SSL;SSLClientKeyStoreDB=<FULL_PATH_TO_KEY_STORE_DB>;SSLClientKeyStoreDBPassword=<KEYSTORE_PASSWD>;\"\nconn = ibm_db.connect(connStr,'','')\n```\n\n```\nUsing SSLClientKeyStoreDB and SSLClientKeyStash keyword\n\nconnStr = \"DATABASE=<DATABASE_NAME>;HOSTNAME=<HOSTNAME>;PORT=<SSL_PORT>;UID=<USER_ID>;PWD=<PASSWORD>;\" +\n          \"SECURITY=SSL;SSLClientKeyStoreDB=<FULL_PATH_TO_KEY_STORE_DB>;\" +\n          \"SSLClientKeyStash=<FULL_PATH_TO_CLIENT_KEY_STASH>;\"\nconn = ibm_db.connect(connStr,'','')\n```\n\n> If you have downloaded `IBMCertTrustStore` from IBM site, ibm*db will not work with it; you need to\n> download `Secure Connection Certificates.zip` file that comes for IBM DB2 Command line tool(CLP).\n> `Secure Connection Certificates.zip` has *.kdb and \\_.sth files that should be used as the value of\n> `SSLClientKeystoreDB` and `SSLClientKeystash` in connection string.\n\n- More examples can be found under ['ibm_db_tests'](https://github.com/ibmdb/python-ibmdb/tree/master/IBM_DB/ibm_db/ibm_db_tests) folder.\n\n- [API Documentation](https://github.com/ibmdb/python-ibmdb/wiki/APIs) has examples for each API.\n\n- **Jupyter Notebook** examples can be found here -> [Other Examples](https://github.com/IBM/db2-python/tree/master/Jupyter_Notebooks)\n\n## <a name=\"SQL0805NError\"></a>SQL0805N Error - Rebind packages\n\n- Connecting first time to `Db2 for z/OS` from distributed platforms will result in error **SQL0805N** Package \"_location_.NULLID.SYSSH200.\\_\\_\\_\" or variation of package name.\n- To solve it, the bind packages are available within the `ibm_db` python install. Do the following:\n\n  ```\n   # Change directory to where your pip package was installed locally, e.g.:\n    cd .local/lib/python3.10/site-packages/clidriver/bin\n   # Run the bind command using db2cli utility from there, e.g:\n   ./db2cli bind ../bnd/@db2cli.lst -database _dbname_ : _hostname_ : _port_ -user _userid_  -passwd _password_ -options \"grant public action replace blocking no\"\n  ```\n\n## <a name=\"Licenserequirements\"></a>For z/OS and iSeries Connectivity and SQL1598N error\n\n- Connection to `Db2 for z/OS` or `Db2 for i`(AS400) Server using `ibm_db` driver from distributed platforms (Linux, Unix, Windows and MacOS) is not free. It requires either client side or server side license. See note below about license activation.\n\n- Connection to `Db2 for LUW` Server using `ibm_db` driver is free.\n\n- `ibm_db` returns SQL1598N error in absence of a valid db2connect license. SQL1598N error is returned by the Db2 Server to client.\n  To suppress this error, Db2 server must be activated with db2connectactivate utility OR a client side db2connect license file must exist.\n\n- Db2connect license can be applied on database server or client side. A **db2connect license of version 12.1** is required for ibm_db.\n\n- For MacOSx64(Intel processor) and Linuxx64, **db2connect license of version 11.5** is required.\n\n- clidriver v12.1 on Linux uses x86_64_v2 instruction set which is not supported by `cibuildwheel` and wheel image creation [fails](https://github.com/pypa/manylinux/issues/1725) using v12.1 clidriver. So, default version of clidriver on Linux platform is v11.5.9 only.\n\n- For activating server side license, you can purchase either `Db2 Connect Unlimited Edition for System z®` or `Db2 Connect Unlimited Edition for System i®` license from IBM.\n\n- Ask your DBA to run db2connectactivate utility on Server to activate db2connect license.\n\n- If database Server is enabled for db2connect, no need to apply client side db2connect license.\n\n- If Db2 Server is not db2connectactivated to accept unlimited number of client connection, you must need to apply client side db2connect license.\n\n- db2connectactivate utility and client side db2connect license both comes together from IBM in a single zip file.\n\n- Client side db2connect license is a `db2con*.lic` file that must be copied under `clidriver\\license` directory and it must not be a **symlink** [file](https://github.com/ibmdb/python-ibmdb/issues/1019#issuecomment-3072461389).\n\n- If you have a `db2jcc_license_cisuz.jar` file, it will not work for ibm_db. `db2jcc_license_cisuz.jar` is a db2connect license file for Java Driver. For non-Java Driver, client side db2connect license comes as a file name `db2con*.lic`.\n\n- If environment variable `IBM_DB_HOME` or `IBM_DB_INSTALLER_URL` is not set, `ibm_db` automatically downloads open source driver specific clidriver from https://public.dhe.ibm.com/ibmdl/export/pub/software/data/db2/drivers/odbc_cli and save as `site_packages\\clidriver`. Ignores any other installation.\n\n- If `IBM_DB_HOME` or `IBM_DB_INSTALLER_URL` is set, you need to have same version of db2connect license as installed db2 client. Check db2 client version using `db2level` command to know version of required db2connect license. The license file should get copied under `$IBM_DB_HOME\\license` directory.\n\n- If you do not have db2connect license, contact [IBM Customer Support](https://www.ibm.com/mysupport/s/?language=en_US) to buy db2connect license. Find the `db2con*.lic` file in the db2connect license shared by IBM and copy it under `.../site_packages/clidriver/license` directory or `$IBM_DB_HOME\\license` directory (if IBM_DB_HOME is set), to be effective.\n\n- To know more about license and purchasing cost, please contact [IBM Customer Support](https://www.ibm.com/mysupport/s/?language=en_US).\n\n- To know more about server based licensing viz db2connectactivate, follow below links:\n\n* [Activating the license certificate file for Db2 Connect Unlimited Edition](https://www.ibm.com/docs/en/db2/12.1.0?topic=dswnls-activating-license-key-db2-connect-unlimited-edition-system-z).\n* [Unlimited licensing using db2connectactivate utility](https://www.ibm.com/docs/en/db2/12.1.0?topic=z-db2connectactivate-server-license-activation-utility).\n\n#### Troubleshooting SQL1598N Error:\n\nIf you have copied db2con\\*.lic file under clidriver/license directory, but still getting SQL1598N Error; try below options:\n\n- `cd clidriver/bin` directory and run `./db2level` command. Make sure you have the db2connect license of same major and minor version as of clidriver.\n\n- Make sure the user running python program has read permission for license file.\n\n- Make sure the user running python program has read-write permission for `clidriver/license` and `clidriver/cfgcache` directories as license check utility need to create some cache files under `cfgcache` and `license` directories.\n\n- Validate your license file and connectivity using below db2cli command:\n\n```\n  db2cli validate -connstring \"connection string as used in python program\" -displaylic\n\n  OR\n\n  db2cli validate -database \"dbname:hostname:port\" -user dbuser -passwd dbpasswd -connect -displaylic\n```\n\n- Installed license file under your `DB2_RTC*` client, but it is not working, please read [this comment](https://github.com/ibmdb/python-ibmdb/issues/1023#issuecomment-3062805368).\n\nIf you intend to install the clidriver manually, Following are the details of the client driver versions that you can download from [CLIDRIVER](https://public.dhe.ibm.com/ibmdl/export/pub/software/data/db2/drivers/odbc_cli/) to be able to connect to databases on non-LUW servers. You would need the client side license file as per Version for corresponding installation.:\n\n#### <a name=\"LicenseDetails\"></a> CLIDriver and Client license versions for Specific Platform and Architecture\n\n| Platform | Architecture |        Cli Driver         | Supported |   Version    |\n| :------: | :----------: | :-----------------------: | :-------: | :----------: |\n|   AIX    |     ppc      |   aix32_odbc_cli.tar.gz   |    Yes    |   V12.1.0    |\n|          |    others    |   aix64_odbc_cli.tar.gz   |    Yes    |   V12.1.0    |\n|  Darwin  |     x64      |  macos64_odbc_cli.tar.gz  |    Yes    | Till V11.5.9 |\n|          |    arm64     | macarm64_odbc_cli.tar.gz  |    Yes    | From V12.1.0 |\n|  Linux   |     x64      | linuxx64_odbc_cli.tar.gz  |    Yes    |   V12.1.0    |\n|          |    s390x     |  s390x64_odbc_cli.tar.gz  |    Yes    |   V12.1.0    |\n|          |     s390     |   s390_odbc_cli.tar.gz    |    Yes    |    V11.1     |\n|          |  ppc64 (LE)  |  ppc64le_odbc_cli.tar.gz  |    Yes    |   V12.1.0    |\n|          |    ppc64     |   ppc64_odbc_cli.tar.gz   |    Yes    |    V10.5     |\n|          |    ppc32     |   ppc32_odbc_cli.tar.gz   |    Yes    |    V10.5     |\n|          |    others    | linuxia32_odbc_cli.tar.gz |    Yes    |   V12.1.0    |\n| Windows  |     x64      |    ntx64_odbc_cli.zip     |    Yes    |   V12.1.0    |\n|          |     x32      |     nt32_odbc_cli.zip     |    Yes    |   V12.1.0    |\n|   Sun    |    i86pc     | sunamd64_odbc_cli.tar.gz  |    Yes    |    V10.5     |\n|          |              | sunamd32_odbc_cli.tar.gz  |    Yes    |    V10.5     |\n|          |    sparc     |   sun64_odbc_cli.tar.gz   |    Yes    |    V11.1     |\n|          |    sparc     |   sun32_odbc_cli.tar.gz   |    Yes    |    V11.1     |\n\n<a name='downloads'></a>\n\n## Downloads\n\nUse following pypi web location for downloading source code and binaries\n**ibm_db**: https://pypi.python.org/pypi/ibm_db .\nYou can also get the source code by cloning the ibm_db github repository as :\n\n```\ngit clone git@github.com:ibmdb/python-ibmdb.git\n```\n\n<a name='support'></a>\n\n## Support & feedback\n\n**Your feedback is very much appreciated and expected through project ibm-db:**\n\n- ibm-db issues reports: **https://github.com/ibmdb/python-ibmdb/issues**\n- ibm_db discuss: **http://groups.google.com/group/ibm_db**\n\n<a name='contributing-to-the-ibm_db-python-project'></a>\n\n## Contributing to the ibm_db python project\n\nSee [CONTRIBUTING](https://github.com/ibmdb/python-ibmdb/blob/master/contributing/CONTRIBUTING.md)\n\n```\nThe developer sign-off should include the reference to the DCO in remarks(example below):\nDCO 1.1 Signed-off-by: Random J Developer <random@developer.org>\n```\n\n<a name='KnownIssues'></a>\n\n## Some common issues\n\n## 1. Installation Issues for missing python.h file\n\n### Always use the latest pip\n\n`python3 -m pip install --upgrade pip`\n\n### Install the package python3-devel that delivers the python.h header file\n\n```\nFor RHEL use\nsudo yum install python3-devel\n```\n\n```\nFor Ubuntu use\nsudo apt-get install python3-devel\n```\n\n- Once the above steps works fine, try re-installing ibm_db.\n\n## 2. SQL30081N Error\n\nIf connection fails with SQL30081N error - means `ibm_db` installation is correct and there is some issue with connection string. Please check database connection info and use correct connection string. If you are using SSL connection, port must be SSL port and connection string must have `Security=SSL;` and `SSLServerCertificate=<full path of cert.arm file>;`.\n\n## 3. Issues with MAC OS X\n\n- If `import ibm_db` fails with `Symbol not found: ___cxa_throw_bad_array_new_length` error or `malloc` error: Please follow instructions as documented [here](INSTALL.md#symbolerror).\n\n- If you run into errors for libdb2.dylib as below:\n\n```python\n>>> import ibm_db\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nImportError: dlopen(/usr/local/lib/python3.5/site-packages/ibm_db.cpython-35m-darwin.so, 2): Library not loaded: libdb2.dylib\n  Referenced from: /usr/local/lib/python3.5/site-packages/ibm_db.cpython-35m-darwin.so\n  Reason: image not found\n\n```\n\nYou would need to set DYLD_LIBRARY_PATH to point to lib folder as per the installation location of clidriver in your environment. Assuming the driver is installed at /usr/local/lib/python3.5/site-packages/clidriver, you can set the path as:\n\n```\nexport DYLD_LIBRARY_PATH=/usr/local/lib/python3.5/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH\n\n```\n\nIf the issue is not resolved even after setting DYLD_LIBRARY_PATH, you could refer:\n[MAC OS Hints and Tips](https://medium.com/@sudhanvalp/overcome-ibm-db-import-error-image-not-found-on-macos-578f07b70762)\n\n### Resolving SQL1042C error\n\nIf you hit following error while attempting to connect to a database:\n\n```python\n>>> import ibm_db\n>>> ibm_db.connect(\"my_connection_string\", \"\", \"\")\n Traceback (most recent call last):\n   File \"<stdin>\", line 1, in <module>\n Exception: [IBM][CLI Driver] SQL1042C An unexpected system error occurred. SQLSTATE=58004 SQLCODE=-1042\n```\n\nSet DYLD_LIBRARY_PATH to point to icc folder as per the installation location of clidriver in your environment.\n\n```\nexport DYLD_LIBRARY_PATH=/usr/local/lib/python3.5/site-packages/clidriver/lib/icc:$DYLD_LIBRARY_PATH\n```\n\nIn case of similar issue in windows platform\n\n```\nset PATH=<clidriver_folder_path>\\bin\\amd64.VC12.CRT;%PATH%\n```\n\n## 4. ERROR: Failed building wheel for ibm_db\n\nIn case of the error seen while building wheel use the following flag along with ibm_db for installation\n\n```\nTo install the package ibm_db it is necessary at first to install the build dependency package - wheel:\npip3 install wheel\nInstall ibm_db with the pip flag --no-build-isolation:\npip3 install ibm_db --no-build-isolation\n```\n\n## 5. For Issues on IBM iSeries System (AS400)\n\n- If you have installed `ibm_db` on IBM i and need help, please open an issue [here](https://github.com/kadler/python-ibmdb/issues).\n\n- If you have installed `ibm_db` on distributed platform and want to connect to AS400 server, you must have to use db2connect license. `ibm_db` do not work with `IBM i Access` driver.\n\n<a name='testing'></a>\n\n# Testing\n\nTests displaying Python ibm_db driver code examples are located in the ibm_db_tests\ndirectory. A valid config.py will need to be created to configure your Db2\nsettings. A config.py.sample exists that can be copied and modified for your\nenvironment.\n\n- Set Environment Variables DB2_USER, DB2_PASSWD accordingly.\n\n```\nFor example, by sourcing the following ENV variables:\nFor Linux\nexport DB2_USER=<Username>\nexport DB2_PASSWD=<Password>\n\nFor windows\nset DB2_USER=<Username>\nset DB2_PASSWD=<Password>\n\n```\n\n- OR\n\n```\nIf not using environment variables, update user and password information in\nconfig.json file.\n\n```\n\nThe config.py should look like this:\n\n```python\ntest_dir =      'ibm_db_tests'         # Location of testsuite file (relative to current directory)\nfile_path = 'config.json'\n\nwith open(file_path, 'r') as file:\n    data = json.load(file)\n\ndatabase = data['database']               # Database to connect to\nhostname = data['hostname']               # Hostname\nport = data['port']                       # Port Number\n\nenv_not_set = False\nif 'DB2_USER' in os.environ:\n     user = os.getenv('DB2_USER')         # User ID to connect with\nelse:\n    user = data['user']\n    env_not_set = True\nif 'DB2_PASSWD' in os.environ:\n    password = os.getenv('DB2_PASSWD')    # Password for given User ID\nelse:\n    password = data['password']\n    env_not_set = True\n\nif env_not_set == True:\n    warnings.warn(\"Warning: Environment variable DB2_USER or DB2_PASSWD is not set.\")\n    print(\"Please set it before running test file and avoid\")\n    print(\"hardcoded password in config.json file.\" )\n```\n\nPoint the database to mydatabase as created by the following command.\n\nThe tests that ibm_db driver uses depends on a UTF-8 database. This can be\ncreated by running:\n\n```\n  CREATE DATABASE mydatabase USING CODESET UTF-8 TERRITORY US\n```\n\nSome of the tests utilize XML functionality only available in version 9 or\nlater of Db2. While Db2 v8.x is fully supported, two of the tests\n(test_195.py and test_52949.py) utilize XML functionality. These tests will\nfail on version 8.x of Db2.\n\n## Running the driver testsuite on Linux\n\nIn order to run the entire python driver testsuite on Linux, run this\ncommand at the command prompt:\n\n```\n  python ibmdb_tests.py\n```\n\nTo run a single test, set the environment variable, **SINGLE_PYTHON_TEST**, to\nthe test filename you would like to run, followed by the previous command.\n\n## Running the driver testsuite on Windows\n\nIn order to run the entire python driver testsuite on Windows, run this\ncommand at the command prompt:\n\n```\n  python ibmdb_tests.py\n```\n\nTo run a single test, set the environment variable, **SINGLE_PYTHON_TEST**, to\nthe test filename you would like to run, followed by the previous command.\n\n## Known Limitations for the Python driver\n\nIf trusted context is not set up, there will be two failures related to trusted context. When thick client has been used then additional three failures related to create, recreate DB.\n\n## Known Limitations for the Python wrapper\n\n1. The rowcount for select statements can not be generated.\n2. Some warnings from the drivers are not caught by the wrapper.\n   As such these might go unnoticed.\n\nHappy coding!\n"
+    }
+  ],
+  "review_state": "complete_with_explicit_unresolved_distribution_items",
+  "legal_approval": false,
+  "completed_at": "2026-11-01T01:17:02.252911+00:00",
+  "prior_candidate_sha256": "438d8a7b3ed19a207e2d9dc99be8e1767b1694522b4cec30c2837f8e964a14d7",
+  "method": "Review of immutable final-CI license JSON plus <=1MiB exact-version official PyPI metadata and same-tag upstream license/source text; no local Docker, package installation or wheel download.",
+  "ci_inputs": [
+    {
+      "path": "ci/final-fac92ea/selected/release/licenses/api.json",
+      "bytes": 164152,
+      "sha256": "b4c7eba7f7bd32fe1192dea7a278b668b812752682f032a61f48640172689679"
+    },
+    {
+      "path": "ci/final-fac92ea/selected/release/licenses/langflow.json",
+      "bytes": 1114046,
+      "sha256": "e6cba07610da7a14e9c630bfef3a5f75295cd3175023470424cb51ee65f0e02a"
+    },
+    {
+      "path": "ci/final-fac92ea/selected/release/licenses/web.json",
+      "bytes": 95767,
+      "sha256": "079b270b29efc27575c5359187839ba61c5a25eff4b651f60b7cc99c1c6f9454"
+    },
+    {
+      "path": "ci/final-fac92ea/selected/release/licenses/manifest.json",
+      "bytes": 1613,
+      "sha256": "b7e322d0e52a856629f2b20e246449b312044a12a0457232a48db74babe8f172"
+    }
+  ],
+  "exact_image_bindings": {
+    "api": {
+      "image_id": "sha256:8f2f6f8d6916153043c8388c0f524bfc13c2e7945212dd7329c6e5cc8fdfa4f5",
+      "collection_state": "collected_with_explicit_scope",
+      "producer_sha256": "ff35b8802893434d785cfe1453f2540bf5831fe1caea01255f4e66a7d1fad0e8",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "-i",
+        "--read-only",
+        "--network",
+        "none",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--memory",
+        "512m",
+        "--pids-limit",
+        "64",
+        "--log-driver",
+        "none",
+        "--entrypoint",
+        "python",
+        "sha256:8f2f6f8d6916153043c8388c0f524bfc13c2e7945212dd7329c6e5cc8fdfa4f5",
+        "-",
+        "--_collect",
+        "api",
+        "{\"files\": 100, \"bytes\": 8388608}"
+      ],
+      "started_at": "2026-11-01T01:11:50.989070+00:00",
+      "ended_at": "2026-11-01T01:11:51.504802+00:00",
+      "project_or_web_files": [
+        {
+          "path": "/app/LICENSE",
+          "state": "recorded",
+          "bytes": 9110,
+          "sha256": "934d07684b0f32ebaa86f8f165a7bd944e9fc5c45615a0c16676bb60b1b29ced",
+          "reason": null
+        },
+        {
+          "path": "/app/THIRD_PARTY_NOTICES.md",
+          "state": "recorded",
+          "bytes": 2797,
+          "sha256": "68290895652305b03cdebfb54504627941a545b1d9482334b47b130d1b05895f",
+          "reason": null
+        },
+        {
+          "path": "/app/docs/DEPENDENCY_LICENSES.md",
+          "state": "recorded",
+          "bytes": 8044,
+          "sha256": "74fd10fe8a29b5ec2b9b1b194b470f4c35d3af0a14810c6a84b7dbdfe25e4c7c",
+          "reason": null
+        },
+        {
+          "path": "/app/review_core/assets/OFL.txt",
+          "state": "recorded",
+          "bytes": 4387,
+          "sha256": "babcfe66c8a098b2fa279bc724a3a342f8124f77ce18941fbcc1bbb39823cded",
+          "reason": null
+        },
+        {
+          "path": "/app/review_core/assets/NotoSansSC-Regular.ttf",
+          "state": "hashed_only",
+          "bytes": 10595932,
+          "sha256": "e3b799e4230233500ff152d1cc81ade6c64acb34958c90cd6b6e02927a2923a9",
+          "reason": null
+        }
+      ]
+    },
+    "langflow": {
+      "image_id": "sha256:33960b31a9600466b019713f12a7779d720e94443cd09935d3dc0640ab019dc2",
+      "collection_state": "collected_with_explicit_scope",
+      "producer_sha256": "ff35b8802893434d785cfe1453f2540bf5831fe1caea01255f4e66a7d1fad0e8",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "-i",
+        "--read-only",
+        "--network",
+        "none",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--memory",
+        "512m",
+        "--pids-limit",
+        "64",
+        "--log-driver",
+        "none",
+        "--entrypoint",
+        "python",
+        "sha256:33960b31a9600466b019713f12a7779d720e94443cd09935d3dc0640ab019dc2",
+        "-",
+        "--_collect",
+        "langflow",
+        "{\"files\": 86, \"bytes\": 8248006}"
+      ],
+      "started_at": "2026-11-01T01:11:51.507283+00:00",
+      "ended_at": "2026-11-01T01:11:52.574572+00:00",
+      "project_or_web_files": [
+        {
+          "path": "/app/LICENSE",
+          "state": "recorded",
+          "bytes": 9110,
+          "sha256": "934d07684b0f32ebaa86f8f165a7bd944e9fc5c45615a0c16676bb60b1b29ced",
+          "reason": null
+        },
+        {
+          "path": "/app/THIRD_PARTY_NOTICES.md",
+          "state": "recorded",
+          "bytes": 2797,
+          "sha256": "68290895652305b03cdebfb54504627941a545b1d9482334b47b130d1b05895f",
+          "reason": null
+        },
+        {
+          "path": "/app/docs/DEPENDENCY_LICENSES.md",
+          "state": "recorded",
+          "bytes": 8044,
+          "sha256": "74fd10fe8a29b5ec2b9b1b194b470f4c35d3af0a14810c6a84b7dbdfe25e4c7c",
+          "reason": null
+        },
+        {
+          "path": "/app/review_core/assets/OFL.txt",
+          "state": "recorded",
+          "bytes": 4387,
+          "sha256": "babcfe66c8a098b2fa279bc724a3a342f8124f77ce18941fbcc1bbb39823cded",
+          "reason": null
+        },
+        {
+          "path": "/app/review_core/assets/NotoSansSC-Regular.ttf",
+          "state": "hashed_only",
+          "bytes": 10595932,
+          "sha256": "e3b799e4230233500ff152d1cc81ade6c64acb34958c90cd6b6e02927a2923a9",
+          "reason": null
+        }
+      ]
+    },
+    "web": {
+      "image_id": "sha256:43c964da1c549cad88ef332222b7739c7e9b7c15e4a8d05829b5db992d8fd231",
+      "collection_state": "collected_with_explicit_scope",
+      "producer_sha256": "ff35b8802893434d785cfe1453f2540bf5831fe1caea01255f4e66a7d1fad0e8",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "-i",
+        "--read-only",
+        "--network",
+        "none",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--memory",
+        "512m",
+        "--pids-limit",
+        "64",
+        "--log-driver",
+        "none",
+        "--entrypoint",
+        "tar",
+        "sha256:43c964da1c549cad88ef332222b7739c7e9b7c15e4a8d05829b5db992d8fd231",
+        "-c",
+        "-C",
+        "/usr/share/nginx/html/licenses",
+        "THIRD_PARTY_LICENSES.md",
+        "IBM-Plex-OFL-1.1.txt",
+        "PROJECT-Apache-2.0.txt"
+      ],
+      "started_at": "2026-11-01T01:11:52.588145+00:00",
+      "ended_at": "2026-11-01T01:11:52.752857+00:00",
+      "project_or_web_files": [
+        {
+          "path": "/usr/share/nginx/html/licenses/THIRD_PARTY_LICENSES.md",
+          "state": "recorded",
+          "bytes": 78111,
+          "sha256": "86067bb78a1c7ba2d852e1d9a0117de90658d8494c21c6f8d0430473fa6e1a65",
+          "reason": null
+        },
+        {
+          "path": "/usr/share/nginx/html/licenses/IBM-Plex-OFL-1.1.txt",
+          "state": "recorded",
+          "bytes": 4456,
+          "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+          "reason": null
+        },
+        {
+          "path": "/usr/share/nginx/html/licenses/PROJECT-Apache-2.0.txt",
+          "state": "recorded",
+          "bytes": 9110,
+          "sha256": "934d07684b0f32ebaa86f8f165a7bd944e9fc5c45615a0c16676bb60b1b29ced",
+          "reason": null
+        }
+      ]
+    }
+  },
+  "langflow_25_additional_pins": [
+    {
+      "name": "aiohttp",
+      "old_version": "3.14.3",
+      "version": "3.14.4",
+      "license_expression": "Apache-2.0 AND MIT",
+      "license_metadata": null,
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/aiohttp-3.14.4.dist-info/licenses/LICENSE.txt",
+          "bytes": 11313,
+          "sha256": "2e4be5fc6c4c72a466fcb665d726e049a6891981fe536c4f04b6366749461d23",
+          "state": "recorded"
+        },
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/aiohttp-3.14.4.dist-info/licenses/vendor/llhttp/LICENSE",
+          "bytes": 1069,
+          "sha256": "628168d68bb5a8a17e0bbefb3bd74e326e1edc20583d76f52f457c82c921867d",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "Authlib",
+      "old_version": "1.7.2",
+      "version": "1.9.1",
+      "license_expression": null,
+      "license_metadata": "BSD-3-Clause",
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/authlib-1.9.1.dist-info/licenses/LICENSE",
+          "bytes": 1514,
+          "sha256": "8e1b48518de9c6cd00cb48c7fe5b8023fd90d5552ca12ebe7362a0df30ddbe45",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "black",
+      "old_version": "26.5.1",
+      "version": "26.10.1",
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/black-26.10.1.dist-info/licenses/LICENSE",
+          "bytes": 1080,
+          "sha256": "9c0428f0c3b4779850cf5bd96e11aaa8afc72d4a86d4a36223d7aba2e58d6e00",
+          "state": "recorded"
+        },
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/blib2to3/LICENSE",
+          "bytes": 12762,
+          "sha256": "5789881b8aeb9c91f5835f5bb7cabe84a0fecd4bb2be2f54c9e6957a78ec799d",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "brotli",
+      "old_version": "1.2.0",
+      "version": "1.2.1",
+      "license_expression": null,
+      "license_metadata": "MIT",
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/brotli-1.2.1.dist-info/licenses/LICENSE",
+          "bytes": 1084,
+          "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "dnspython",
+      "old_version": "2.8.0",
+      "version": "2.9.0",
+      "license_expression": "ISC",
+      "license_metadata": null,
+      "license_texts": [],
+      "identification_state": "exact_release_metadata_and_upstream_license_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "fastmcp",
+      "old_version": "3.4.4",
+      "version": "3.4.10",
+      "license_expression": "Apache-2.0",
+      "license_metadata": null,
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/fastmcp-3.4.10.dist-info/licenses/LICENSE",
+          "bytes": 11356,
+          "sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "fastmcp-slim",
+      "old_version": "3.4.4",
+      "version": "3.4.10",
+      "license_expression": "Apache-2.0",
+      "license_metadata": null,
+      "license_texts": [],
+      "identification_state": "exact_release_metadata_and_upstream_license_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "fsspec",
+      "old_version": "2026.2.0",
+      "version": "2026.6.0",
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": null,
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/fsspec-2026.6.0.dist-info/licenses/LICENSE",
+          "bytes": 1513,
+          "sha256": "2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "GitPython",
+      "old_version": "3.1.59",
+      "version": "3.2.1",
+      "license_expression": null,
+      "license_metadata": "BSD-3-Clause",
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/gitpython-3.2.1.dist-info/licenses/LICENSE",
+          "bytes": 1503,
+          "sha256": "86fc94c321a9afbc11514713511bafded225f25100dcc0f7350e82bc231b8beb",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "joserfc",
+      "old_version": "1.7.4",
+      "version": "1.7.6",
+      "license_expression": null,
+      "license_metadata": "BSD-3-Clause",
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/joserfc-1.7.6.dist-info/licenses/LICENSE",
+          "bytes": 1501,
+          "sha256": "19ee1fafcc9ec4217fc32b8a651d820538c789cf4041cb4e46b4b176a5f2a9c8",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "langchain-nvidia-ai-endpoints",
+      "old_version": "1.0.4",
+      "version": "1.5.0",
+      "license_expression": null,
+      "license_metadata": "MIT",
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/langchain_nvidia_ai_endpoints-1.5.0.dist-info/licenses/LICENSE",
+          "bytes": 1072,
+          "sha256": "0e9a6675825549cd637746a2a3aa6d9cc527e6d207add021435d927251017c18",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "langgraph",
+      "old_version": "1.2.9",
+      "version": "1.2.14",
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/langgraph-1.2.14.dist-info/licenses/LICENSE",
+          "bytes": 1072,
+          "sha256": "d9bb52f2e3540d60ff50d8f0f5b6ba649b7fd346948c4c3d086c8afb120763c7",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "langgraph-sdk",
+      "old_version": "0.4.2",
+      "version": "0.4.6",
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/langgraph_sdk-0.4.6.dist-info/licenses/LICENSE",
+          "bytes": 1072,
+          "sha256": "d9bb52f2e3540d60ff50d8f0f5b6ba649b7fd346948c4c3d086c8afb120763c7",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "litellm",
+      "old_version": "1.93.0",
+      "version": "1.103.1",
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/litellm-1.103.1.dist-info/licenses/LICENSE",
+          "bytes": 1419,
+          "sha256": "b170d6bf8e8835dd357e011681db028f4d51e2fb0ea892058f56e01fb39b8273",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "Mako",
+      "old_version": "1.3.12",
+      "version": "1.4.2",
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/mako-1.4.2.dist-info/licenses/LICENSE",
+          "bytes": 1098,
+          "sha256": "8c1d171bc5d341ad9cd33d5e2c39b96a82c7bd49b3ae89a470c37e5822232054",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "mcp",
+      "old_version": "1.28.1",
+      "version": "1.30.0",
+      "license_expression": null,
+      "license_metadata": "MIT",
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/mcp-1.30.0.dist-info/licenses/LICENSE",
+          "bytes": 1071,
+          "sha256": "5e13dbbc1d120fc2a03cecde7c91424ae2d7de11b63d58ded2f4431e261ee50d",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "mem0ai",
+      "old_version": "2.0.14",
+      "version": "2.0.18",
+      "license_expression": "Apache-2.0",
+      "license_metadata": null,
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/mem0ai-2.0.18.dist-info/licenses/LICENSE",
+          "bytes": 11349,
+          "sha256": "0bbcbe931c353293a2fafce08326181dfeea0e568c566afd4ce8337a70f5e219",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "multidict",
+      "old_version": "6.7.1",
+      "version": "6.9.1",
+      "license_expression": null,
+      "license_metadata": "Apache License 2.0",
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/multidict-6.9.1.dist-info/licenses/LICENSE",
+          "bytes": 11313,
+          "sha256": "2e4be5fc6c4c72a466fcb665d726e049a6891981fe536c4f04b6366749461d23",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "nltk",
+      "old_version": "3.10.3",
+      "version": "3.10.4",
+      "license_expression": null,
+      "license_metadata": "Apache License, Version 2.0",
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/nltk-3.10.4.dist-info/licenses/LICENSE.txt",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "pyasn1",
+      "old_version": "0.6.4",
+      "version": "0.6.5",
+      "license_expression": null,
+      "license_metadata": "BSD-2-Clause",
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/pyasn1-0.6.5.dist-info/licenses/LICENSE.rst",
+          "bytes": 1334,
+          "sha256": "2aad5fc00f705c4a1addb83eed10a6a75d286a3779f0cf8519d87e62bc4735fd",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "PyJWT",
+      "old_version": "2.13.0",
+      "version": "2.15.0",
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/pyjwt-2.15.0.dist-info/licenses/LICENSE",
+          "bytes": 1085,
+          "sha256": "797a7a20231d4c433e9f1911db1731d06b5828b98f499819a034f7c0f56f5ce5",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "pymongo",
+      "old_version": "4.17.0",
+      "version": "4.18.3",
+      "license_expression": "Apache-2.0",
+      "license_metadata": null,
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/pymongo-4.18.3.dist-info/licenses/LICENSE",
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "transformers",
+      "old_version": "5.8.1",
+      "version": "5.10.0",
+      "license_expression": null,
+      "license_metadata": "Apache 2.0 License",
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/transformers-5.10.0.dist-info/licenses/LICENSE",
+          "bytes": 11418,
+          "sha256": "77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "urllib3",
+      "old_version": "2.7.0",
+      "version": "2.8.0",
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/urllib3-2.8.0.dist-info/licenses/LICENSE.txt",
+          "bytes": 1093,
+          "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    },
+    {
+      "name": "yarl",
+      "old_version": "1.24.5",
+      "version": "1.25.1",
+      "license_expression": null,
+      "license_metadata": "Apache-2.0",
+      "license_texts": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/yarl-1.25.1.dist-info/licenses/LICENSE",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "state": "recorded"
+        },
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/yarl-1.25.1.dist-info/licenses/NOTICE",
+          "bytes": 609,
+          "sha256": "56d6ac6c8105c0a51304c21db060e361af9a8ea0af9a75c239c28b5d13693838",
+          "state": "recorded"
+        }
+      ],
+      "identification_state": "installed_license_text_identified",
+      "distribution_obligations_fulfilled": false
+    }
+  ],
+  "langflow_initial_two_pin_updates": [
+    {
+      "name": "certifi",
+      "version": "2026.10.23",
+      "license_expression": null,
+      "license_metadata": "MPL-2.0",
+      "license_files": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/certifi-2026.10.23.dist-info/licenses/LICENSE",
+          "bytes": 989,
+          "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+          "state": "recorded"
+        }
+      ]
+    },
+    {
+      "name": "pypdf",
+      "version": "6.21.4",
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": null,
+      "license_files": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/pypdf-6.21.4.dist-info/licenses/LICENSE",
+          "bytes": 1605,
+          "sha256": "a97ac230e5f33ef10a5367a850eb01f91f1a0b064e34742c7794d2294557f524",
+          "state": "recorded"
+        }
+      ]
+    }
+  ],
+  "langflow_selected_package_count": 46,
+  "langflow_selected_with_genuine_license_text": 42,
+  "langflow_selected_without_genuine_license_text": [
+    {
+      "name": "dnspython",
+      "version": "2.9.0",
+      "license_expression": "ISC",
+      "license_metadata": null
+    },
+    {
+      "name": "fastmcp-slim",
+      "version": "3.4.10",
+      "license_expression": "Apache-2.0",
+      "license_metadata": null
+    },
+    {
+      "name": "lfx",
+      "version": "1.11.6",
+      "license_expression": null,
+      "license_metadata": null
+    },
+    {
+      "name": "zep-python",
+      "version": "2.0.2",
+      "license_expression": null,
+      "license_metadata": null
+    }
+  ],
+  "missing_declared_text_resolutions": {
+    "dnspython": {
+      "license": "ISC",
+      "identification": "Exact installed metadata License-Expression ISC, exact PyPI2.9.0 metadata ISC, upstream v2.9.0 LICENSE and pyproject both read. Not a license-unknown package.",
+      "material_gap": "No declared LICENSE captured in installed wheel. Carry the verified copyright/permission/disclaimer text when distributing this component."
+    },
+    "fastmcp-slim": {
+      "license": "Apache-2.0",
+      "identification": "Exact installed and PyPI3.4.10 License-Expression Apache-2.0; upstream v3.4.10 fastmcp_slim/pyproject declares Apache-2.0 and workspace root LICENSE supplies full text.",
+      "material_gap": "Installed slim wheel declares no captured LICENSE; same-release fastmcp package full Apache text is present, but complete distribution notices must still be assessed."
+    },
+    "lfx": {
+      "license": "MIT",
+      "identification": "Previously verified exact Langflow v1.11.6 monorepo root MIT and src/lfx version1.11.6; same final installed version.",
+      "material_gap": "Wheel omits a declared license text. Do not infer all Langflow dependencies inherit MIT."
+    },
+    "zep-python": {
+      "license": null,
+      "identification": "Exact installed2.0.2 metadata and declared files still have no license; prior exact PyPI sdist and official v2.0.2 tag analysis remains applicable.",
+      "material_gap": "Exact release permission unresolved; old oss branch license is not enough."
+    }
+  },
+  "new_python_packages_vs_previous_image": [
+    {
+      "name": "ibm_db",
+      "version": "3.2.9",
+      "location": "/app/.venv/lib64/python3.14/site-packages",
+      "license_expression": null,
+      "license_metadata": "Apache License 2.0",
+      "identified_license": "Apache-2.0 for Python binding source; bundled native driver conditions not concluded",
+      "new_unknown_license_after_upstream_check": false,
+      "installed_license_text_collected_in_ci": false,
+      "distribution_approval": false
+    },
+    {
+      "name": "tree-sitter",
+      "version": "0.26.0",
+      "location": "/app/.venv/lib64/python3.14/site-packages",
+      "license_expression": null,
+      "license_metadata": null,
+      "identified_license": "MIT, exact PyPI classifier and v0.26.0 upstream LICENSE",
+      "new_unknown_license_after_upstream_check": false,
+      "installed_license_text_collected_in_ci": false,
+      "distribution_approval": false
+    },
+    {
+      "name": "tree-sitter-javascript",
+      "version": "0.25.0",
+      "location": "/app/.venv/lib64/python3.14/site-packages",
+      "license_expression": null,
+      "license_metadata": "MIT",
+      "identified_license": "MIT, exact PyPI license and v0.25.0 upstream LICENSE",
+      "new_unknown_license_after_upstream_check": false,
+      "installed_license_text_collected_in_ci": false,
+      "distribution_approval": false
+    },
+    {
+      "name": "tree-sitter-typescript",
+      "version": "0.23.2",
+      "location": "/app/.venv/lib64/python3.14/site-packages",
+      "license_expression": null,
+      "license_metadata": "MIT",
+      "identified_license": "MIT, exact PyPI license/classifier and v0.23.2 upstream LICENSE",
+      "new_unknown_license_after_upstream_check": false,
+      "installed_license_text_collected_in_ci": false,
+      "distribution_approval": false
+    }
+  ],
+  "python_distribution_counts": {
+    "baseline": 544,
+    "final_ci": 548,
+    "removed": [],
+    "added": 4
+  },
+  "metadata_unknown_count_comparability": "Final collector exports License-Expression/License but not Classifier; the historical SBOM included license classifiers. Apparent metadata-empty totals are not comparable and do not imply newly unlicensed packages. All four added package license identities were checked using exact release metadata and matching upstream version.",
+  "heuristic_false_positive_files": [
+    "/app/.venv/lib64/python3.14/site-packages/litellm/proxy/auth/__pycache__/litellm_license.cpython-314.pyc",
+    "/app/.venv/lib64/python3.14/site-packages/litellm/proxy/auth/litellm_license.py",
+    "/app/.venv/lib64/python3.14/site-packages/mem0/memory/__pycache__/notices.cpython-314.pyc",
+    "/app/.venv/lib64/python3.14/site-packages/mem0/memory/notices.py"
+  ],
+  "heuristic_limit": "Collector basename matching also captured Python .py/.pyc files with license/notices in their names. They remain raw evidence but were excluded from the genuine license-text count and are not legal declarations.",
+  "new_component_conditions": {
+    "ibm_db": {
+      "python_binding_license": "Apache-2.0 confirmed by exact3.2.9 metadata and same-tag LICENSE",
+      "bundled_native_driver": "Official exact3.2.9 description and README state wheels include clidriver; CI metadata alone does not establish native driver redistribution terms or complete contents.",
+      "conditional_use": "Official same-tag README requires Db2 Connect licensing for z/OS and IBM i connectivity; LUW use is described as free. This project has not authorized or exercised these integrations, and no paid license was purchased or accepted.",
+      "status": "Native driver distribution materials/terms still require verification before full backend image redistribution; not automatically covered by Python Apache-2.0."
+    },
+    "tree_sitter_family": "All three newly installed bindings/grammars have exact-release MIT identification; actual image text collection did not select them, so upstream-source confirmation is the evidence scope."
+  },
+  "remaining_distribution_items": [
+    "zep-python2.0.2 exact release permission remains unresolved.",
+    "Carry verified dnspython/fastmcp-slim/LFX license texts and applicable notices with a future distributed artifact.",
+    "Complete native bundled-library notices and corresponding-source delivery/access handling, including psycopg/native libraries, additional bundled reportlab font notices and new ibm_db clidriver terms.",
+    "No full backend image distribution approval or residual-risk acceptance has been given."
+  ],
+  "deployment_or_paid_service_authorization": false
+}

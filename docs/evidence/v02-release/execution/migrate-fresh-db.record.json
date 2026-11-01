@@ -1,0 +1,37 @@
+{
+  "command": [
+    "docker",
+    "compose",
+    "--project-directory",
+    "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1",
+    "--env-file",
+    "/dev/null",
+    "-p",
+    "ai-review-console-release",
+    "-f",
+    "docker-compose.yml",
+    "-f",
+    "/private/tmp/arc-v02-release-close.p3RyvK/runtime-override.json",
+    "run",
+    "--no-deps",
+    "migrate"
+  ],
+  "cwd": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1",
+  "started_at": "2026-11-01T00:49:48.273663+00:00",
+  "ended_at": "2026-11-01T00:49:50.740594+00:00",
+  "elapsed_seconds": 2.4654831669759005,
+  "exit_code": 0,
+  "stop_reason": null,
+  "files": {
+    "stdout": {
+      "path": "/private/tmp/arc-v02-release-close.p3RyvK/steps/migrate-fresh-db.stdout",
+      "bytes": 17,
+      "sha256": "fc0b406e171ac834601bceea6d3edd8e0ecfedefbe465ad289f3d7b1c184fea9"
+    },
+    "stderr": {
+      "path": "/private/tmp/arc-v02-release-close.p3RyvK/steps/migrate-fresh-db.stderr",
+      "bytes": 288,
+      "sha256": "072ea83de0c6fd049d7ce8201b66a274a65231b5f1ee4c54d5b18225ac46cd6a"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "argv": [
+    ".venv/bin/pip",
+    "install",
+    "--requirement",
+    "requirements.lock",
+    "--report",
+    "/private/tmp/arc-v02-release-close.p3RyvK/python/install-report.json"
+  ],
+  "exit_code": 0,
+  "stdout": "install.stdout",
+  "stderr": "install.stderr",
+  "cwd": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1",
+  "time_instrumentation": "original invocation not instrumented; output file mtime recorded",
+  "output_mtime_utc": "2026-11-01T00:43:28.791589+00:00",
+  "outputs": {
+    "stdout": {
+      "file": "install.stdout",
+      "sha256": "259fde20ee9a3b6561cb573bcfd3ecd5e9d736d2b10d53eb98b802cee9888736"
+    },
+    "stderr": {
+      "file": "install.stderr",
+      "sha256": "0be839de0c7dfc4bd50e6bbb7b1bb22a25e7d7c0d62a30ff2a34dbe5fde5f1ff"
+    }
+  }
+}

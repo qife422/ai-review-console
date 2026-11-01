@@ -1,0 +1,17 @@
+time="2026-10-31T18:18:27-07:00" level=warning msg="Found orphan containers ([ai-review-console-release-flow-init-run-bd5e4a738acf ai-review-console-release-migrate-run-c5e7f0ede07c ai-review-console-release-storage-init-run-881d6f0391f7]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container ai-review-console-release-api-1  Recreate
+ Container ai-review-console-release-api-1  Recreated
+ Container ai-review-console-release-web-1  Recreate
+ Container ai-review-console-release-worker-1  Recreate
+ Container ai-review-console-release-web-1  Recreated
+ Container ai-review-console-release-worker-1  Recreated
+ Container ai-review-console-release-api-1  Starting
+ Container ai-review-console-release-api-1  Started
+ Container ai-review-console-release-api-1  Waiting
+ Container ai-review-console-release-api-1  Waiting
+ Container ai-review-console-release-api-1  Healthy
+ Container ai-review-console-release-api-1  Healthy
+ Container ai-review-console-release-web-1  Starting
+ Container ai-review-console-release-worker-1  Starting
+ Container ai-review-console-release-web-1  Started
+ Container ai-review-console-release-worker-1  Started

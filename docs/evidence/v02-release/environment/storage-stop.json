@@ -1,0 +1,24 @@
+{
+  "observed_at": "2026-11-01T00:57:02.931243+00:00",
+  "environment_blocker": "host ENOSPC and Docker build EROFS after host free-space omission",
+  "action": "owned Docker build stopped; no automatic cleanup; new material generation paused",
+  "user_decision_pending": {
+    "action": "delete",
+    "exact_target": "/private/tmp/arc-v02-release-close.p3RyvK/tool-cache/grype-db",
+    "bytes": 2966994944,
+    "classification": "aborted cache; one database file; no active consumer; not formal evidence"
+  },
+  "pip_recovery_readback": {
+    "module": "25.0.1",
+    "metadata": "25.0.1",
+    "three_console_scripts_exist": true,
+    "upgrade_did_not_complete": true
+  },
+  "protected_hashes_unchanged": [
+    "review_console.sqlite3",
+    "docs/UPGRADE_SPEC.md",
+    "docs/spec-baseline.json",
+    "docs/evidence/v02-acceptance/manifest.json"
+  ],
+  "independent_work": "existing GitHub CI and read-only result inspection"
+}

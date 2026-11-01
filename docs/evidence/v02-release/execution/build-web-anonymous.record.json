@@ -1,0 +1,30 @@
+{
+  "command": [
+    "docker",
+    "build",
+    "--progress=plain",
+    "--file",
+    "/private/tmp/arc-v02-release-close.p3RyvK/web-context/docker/web.Dockerfile",
+    "--tag",
+    "ai-review-console-web:v02-release",
+    "/private/tmp/arc-v02-release-close.p3RyvK/web-context"
+  ],
+  "cwd": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1",
+  "started_at": "2026-11-01T00:47:17.932144+00:00",
+  "ended_at": "2026-11-01T00:47:22.012547+00:00",
+  "elapsed_seconds": 4.080339667154476,
+  "exit_code": 0,
+  "stop_reason": null,
+  "files": {
+    "stdout": {
+      "path": "/private/tmp/arc-v02-release-close.p3RyvK/steps/build-web-anonymous.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "/private/tmp/arc-v02-release-close.p3RyvK/steps/build-web-anonymous.stderr",
+      "bytes": 3997,
+      "sha256": "ebc5e6ab06c43052c30c2b5d54cef0264c8523e1382681ed555a6c95eeba255e"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from web.Dockerfile
+#1 transferring dockerfile: 314B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/nginx:1.30.6-alpine@sha256:0e52bd054126cdc040b1276c0af347aeb02a41b9cfe305d6094767ac30e97949
+#2 DONE 1.6s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.96MB 0.0s done
+#4 DONE 0.1s
+
+#5 [1/4] FROM docker.io/library/nginx:1.30.6-alpine@sha256:0e52bd054126cdc040b1276c0af347aeb02a41b9cfe305d6094767ac30e97949
+#5 resolve docker.io/library/nginx:1.30.6-alpine@sha256:0e52bd054126cdc040b1276c0af347aeb02a41b9cfe305d6094767ac30e97949 0.0s done
+#5 DONE 0.1s
+
+#5 [1/4] FROM docker.io/library/nginx:1.30.6-alpine@sha256:0e52bd054126cdc040b1276c0af347aeb02a41b9cfe305d6094767ac30e97949
+#5 sha256:0ecf77f7365c28357ffc7e5dc1e72d8a361ed5c62d47e46354757f57f3bc76f5 0B / 19.86MB 0.2s
+#5 sha256:cd5ae81ea1c7cd39693d9451176a717fb7b3dbb5588b3eb8c2f28f4517ac8941 1.40kB / 1.40kB 0.3s done
+#5 sha256:29fdff62bf433f4391a2e27b3938e1eb083c12d2403ecb06062e62405929d454 0B / 1.21kB 0.2s
+#5 sha256:e10bb963239e76f8e01f42977cf9adc2a56c34afd6b932f52e4b37f723ea6ea3 0B / 404B 0.2s
+#5 sha256:0ecf77f7365c28357ffc7e5dc1e72d8a361ed5c62d47e46354757f57f3bc76f5 13.63MB / 19.86MB 0.3s
+#5 sha256:29fdff62bf433f4391a2e27b3938e1eb083c12d2403ecb06062e62405929d454 1.21kB / 1.21kB 0.3s done
+#5 sha256:e10bb963239e76f8e01f42977cf9adc2a56c34afd6b932f52e4b37f723ea6ea3 404B / 404B 0.3s done
+#5 sha256:0750db6b002e7d071b429e51d22c08a1ee7598ac4dc725a79dbb9985f85f467f 963B / 963B 0.2s
+#5 sha256:0ecf77f7365c28357ffc7e5dc1e72d8a361ed5c62d47e46354757f57f3bc76f5 19.86MB / 19.86MB 0.4s done
+#5 sha256:0750db6b002e7d071b429e51d22c08a1ee7598ac4dc725a79dbb9985f85f467f 963B / 963B 0.2s done
+#5 sha256:87319ffcbc38f43c3b1b33cac15895c5d807a8c8907d8bb6068e25435f59c8db 627B / 627B 0.1s done
+#5 sha256:872998b8576e5aa2dd875c0a156f30bb6bc2573fddce2652fce6884a9893952d 1.90MB / 1.90MB 0.2s done
+#5 sha256:d3531b7a4f217bdc3426c57bcff84c170f086f456a39689d4a615c6d026c4be0 4.19MB / 4.19MB 0.1s done
+#5 extracting sha256:d3531b7a4f217bdc3426c57bcff84c170f086f456a39689d4a615c6d026c4be0 0.0s done
+#5 extracting sha256:872998b8576e5aa2dd875c0a156f30bb6bc2573fddce2652fce6884a9893952d 0.0s done
+#5 extracting sha256:87319ffcbc38f43c3b1b33cac15895c5d807a8c8907d8bb6068e25435f59c8db done
+#5 DONE 0.8s
+
+#5 [1/4] FROM docker.io/library/nginx:1.30.6-alpine@sha256:0e52bd054126cdc040b1276c0af347aeb02a41b9cfe305d6094767ac30e97949
+#5 extracting sha256:0750db6b002e7d071b429e51d22c08a1ee7598ac4dc725a79dbb9985f85f467f done
+#5 extracting sha256:e10bb963239e76f8e01f42977cf9adc2a56c34afd6b932f52e4b37f723ea6ea3 done
+#5 extracting sha256:29fdff62bf433f4391a2e27b3938e1eb083c12d2403ecb06062e62405929d454 done
+#5 extracting sha256:cd5ae81ea1c7cd39693d9451176a717fb7b3dbb5588b3eb8c2f28f4517ac8941 done
+#5 extracting sha256:0ecf77f7365c28357ffc7e5dc1e72d8a361ed5c62d47e46354757f57f3bc76f5
+#5 extracting sha256:0ecf77f7365c28357ffc7e5dc1e72d8a361ed5c62d47e46354757f57f3bc76f5 0.5s done
+#5 DONE 1.3s
+
+#6 [2/4] COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
+#6 DONE 0.1s
+
+#7 [3/4] COPY frontend/dist /usr/share/nginx/html
+#7 DONE 0.0s
+
+#8 [4/4] COPY LICENSE /usr/share/nginx/html/licenses/PROJECT-Apache-2.0.txt
+#8 DONE 0.0s
+
+#9 exporting to image
+#9 exporting layers 0.1s done
+#9 exporting manifest sha256:4f0a670bb5c537dbba233b5c87329cb6bfb2d17d79bfd35df3ef059a757b640d 0.0s done
+#9 exporting config sha256:8f9e626505b0fa2b96677bee4ca21e4d32add94b14baa47eee929b63c6dd5ee3 0.0s done
+#9 exporting attestation manifest sha256:55dcf32d86b32ce6e438b5d2cf011166e7424df591a5c8fd72074712c82245d0 0.0s done
+#9 exporting manifest list sha256:34509f24effc7e00ac347a69e1bf10f6de498ef57c4ba8a3212f27b13bf7f37d done
+#9 naming to docker.io/library/ai-review-console-web:v02-release done
+#9 unpacking to docker.io/library/ai-review-console-web:v02-release 0.0s done
+#9 DONE 0.3s

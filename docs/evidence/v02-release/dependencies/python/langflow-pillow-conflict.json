@@ -1,0 +1,23 @@
+{
+  "time": "2026-11-01T00:43:38.377180+00:00",
+  "target_pillow": "13.0.0",
+  "base_image": "sha256:ff0f5cc380743034c05b4bfcf587be0e714da1610799f0c7c41d45902a5267c4",
+  "active_requirement_conflicts": [
+    {
+      "package": "langflow-base",
+      "version": "0.11.6",
+      "requirement": "pillow<13.0.0,>=12.3.0"
+    },
+    {
+      "package": "lfx",
+      "version": "1.11.6",
+      "requirement": "pillow<13.0.0,>=12.3.0"
+    },
+    {
+      "package": "docling-core",
+      "version": "2.88.0",
+      "requirement": "pillow<13.0.0,>=10.0.0"
+    }
+  ],
+  "action": "do not override dependency metadata or force incompatible Pillow; fix API, certifi and pypdf; Langflow Pillow remains release issue"
+}

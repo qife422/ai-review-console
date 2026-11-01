@@ -1,0 +1,52 @@
+{
+  "distro": {
+    "NAME": "Red Hat Enterprise Linux",
+    "VERSION": "10.2 (Coughlan)",
+    "RELEASE_TYPE": "stable",
+    "ID": "rhel",
+    "ID_LIKE": "centos fedora",
+    "VERSION_ID": "10.2",
+    "PLATFORM_ID": "platform:el10",
+    "PRETTY_NAME": "Red Hat Enterprise Linux 10.2 (Coughlan)",
+    "ANSI_COLOR": "0;31",
+    "LOGO": "fedora-logo-icon",
+    "CPE_NAME": "cpe:/o:redhat:enterprise_linux:10.2",
+    "HOME_URL": "https://www.redhat.com/",
+    "VENDOR_NAME": "Red Hat",
+    "VENDOR_URL": "https://www.redhat.com/",
+    "DOCUMENTATION_URL": "https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/10",
+    "BUG_REPORT_URL": "https://issues.redhat.com/",
+    "REDHAT_BUGZILLA_PRODUCT": "Red Hat Enterprise Linux 10",
+    "REDHAT_BUGZILLA_PRODUCT_VERSION": "10.2",
+    "REDHAT_SUPPORT_PRODUCT": "Red Hat Enterprise Linux",
+    "REDHAT_SUPPORT_PRODUCT_VERSION": "10.2"
+  },
+  "identity": {
+    "id": "sha256:33960b31a9600466b019713f12a7779d720e94443cd09935d3dc0640ab019dc2",
+    "architecture": "amd64"
+  },
+  "ecosystems": [
+    "Red Hat:enterprise_linux:10.2",
+    "Red Hat:enterprise_linux:10::appstream",
+    "Red Hat:enterprise_linux:10::baseos"
+  ],
+  "bindings": [
+    {
+      "content_set": "rhel-10-for-x86_64-appstream-rpms",
+      "cpes": [
+        "cpe:/a:redhat:enterprise_linux:10::appstream",
+        "cpe:/o:redhat:enterprise_linux:10.2"
+      ],
+      "manifest_source": "/root/buildinfo/content-sets.json"
+    },
+    {
+      "content_set": "rhel-10-for-x86_64-baseos-rpms",
+      "cpes": [
+        "cpe:/o:redhat:enterprise_linux:10.2",
+        "cpe:/o:redhat:enterprise_linux:10::baseos"
+      ],
+      "manifest_source": "/root/buildinfo/content-sets.json"
+    }
+  ],
+  "repository_map_url": "https://www.redhat.com/security/data/metrics/repository-to-cpe.json"
+}

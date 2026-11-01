@@ -1,0 +1,28 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "--no-cache-dir",
+    "pip==26.2.2"
+  ],
+  "cwd": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1",
+  "started_at": "2026-11-01T00:54:24.785953+00:00",
+  "ended_at": "2026-11-01T00:54:27.506911+00:00",
+  "elapsed_seconds": 2.720606416929513,
+  "exit_code": 1,
+  "stop_reason": null,
+  "files": {
+    "stdout": {
+      "path": "/private/tmp/arc-v02-release-close.p3RyvK/steps/local-installer-fix.stdout",
+      "bytes": 1521,
+      "sha256": "2e5d97ab6ab7a2677bb41e42836ddfa455b54d019ff7d3128f31c1dd8b6cb0ba"
+    },
+    "stderr": {
+      "path": "/private/tmp/arc-v02-release-close.p3RyvK/steps/local-installer-fix.stderr",
+      "bytes": 1278,
+      "sha256": "8f57433cf1b0b780f5b1471ed32846bb08ac0e59ee88ae6a8aa6b4a7ef75a7f0"
+    }
+  }
+}

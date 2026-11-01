@@ -1,0 +1,27 @@
+{
+  "command": [
+    "docker",
+    "desktop",
+    "restart",
+    "--timeout",
+    "90"
+  ],
+  "cwd": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1",
+  "started_at": "2026-11-01T01:04:21.177511+00:00",
+  "ended_at": "2026-11-01T01:05:51.673921+00:00",
+  "elapsed_seconds": 90.49764766683802,
+  "exit_code": 1,
+  "stop_reason": null,
+  "files": {
+    "stdout": {
+      "path": "/private/tmp/arc-v02-release-close.p3RyvK/steps/docker-recovery-restart.stdout",
+      "bytes": 35,
+      "sha256": "94cf0f568e59aae48b9f1c949ef789e188da8ed648ca39a49980c7c2b0d3486a"
+    },
+    "stderr": {
+      "path": "/private/tmp/arc-v02-release-close.p3RyvK/steps/docker-recovery-restart.stderr",
+      "bytes": 777,
+      "sha256": "345843b69c908d0ec53777b4c0e63f2f95532fc0b4c84ce3cff26912a8a13ce7"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "method": "SIGTERM exact GUI/backend after Desktop restart reported stop timeout; no force kill, settings, images or volume deletion",
+  "processes": {
+    "15108": "/Applications/Docker.app/Contents/MacOS/Docker Desktop.app/Contents/MacOS/Docker Desktop --analytics-enabled=true --name=login",
+    "14987": "/Applications/Docker.app/Contents/MacOS/com.docker.backend"
+  },
+  "at": "2026-11-01T01:06:48.497238+00:00"
+}

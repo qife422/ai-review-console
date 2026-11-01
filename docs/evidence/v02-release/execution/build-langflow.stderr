@@ -1,0 +1,9 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from langflow.Dockerfile
+#1 transferring dockerfile: 634B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/langflowai/langflow:1.11.6@sha256:5338f6851fbab3d0476f7701dacbe749f58fa81a4c1317ad1d52164ce1231a14
+#2 CANCELED
+ERROR: failed to build: failed to solve: Canceled: context canceled

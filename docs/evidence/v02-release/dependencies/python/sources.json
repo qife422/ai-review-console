@@ -1,0 +1,20 @@
+{
+  "at": "2026-11-01T00:43:06.526889+00:00",
+  "sources": [
+    {
+      "url": "https://pypi.org/pypi/certifi/json",
+      "file": "certifi-pypi.json",
+      "sha256": "08bd0534b646a844c933436e3f16632b0dbfabc2458fe7022250411f2909e1cb"
+    },
+    {
+      "url": "https://pypi.org/pypi/pillow/json",
+      "file": "pillow-pypi.json",
+      "sha256": "56cd02ba0c8d44417b3f5e6b5bff96861810d89a4f14ba2863a91f619f86a842"
+    },
+    {
+      "url": "https://pypi.org/pypi/pypdf/json",
+      "file": "pypdf-pypi.json",
+      "sha256": "a6c305a4a3849cd33d56e421f2a93616a43e134cc22f77999a39ad1a9c281aba"
+    }
+  ]
+}

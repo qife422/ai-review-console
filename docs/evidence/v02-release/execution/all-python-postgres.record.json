@@ -1,0 +1,24 @@
+{
+  "command": [
+    ".venv/bin/pytest",
+    "--junitxml=/private/tmp/arc-v02-release-close.p3RyvK/python-postgres.xml"
+  ],
+  "cwd": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1",
+  "started_at": "2026-11-01T00:49:49.504482+00:00",
+  "ended_at": "2026-11-01T00:49:53.617201+00:00",
+  "elapsed_seconds": 4.112541334005073,
+  "exit_code": 0,
+  "stop_reason": null,
+  "files": {
+    "stdout": {
+      "path": "/private/tmp/arc-v02-release-close.p3RyvK/steps/all-python-postgres.stdout",
+      "bytes": 795,
+      "sha256": "d020ad4bd048e86d78a516f5fe85efc5020f887201a51afa24a6fd2b3ec2bd99"
+    },
+    "stderr": {
+      "path": "/private/tmp/arc-v02-release-close.p3RyvK/steps/all-python-postgres.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

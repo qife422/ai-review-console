@@ -1,0 +1,37 @@
+{
+  "command": [
+    "docker",
+    "compose",
+    "--project-directory",
+    "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1",
+    "--env-file",
+    "/dev/null",
+    "-p",
+    "ai-review-console-release",
+    "-f",
+    "docker-compose.yml",
+    "-f",
+    "/private/tmp/arc-v02-release-close.p3RyvK/runtime-override.json",
+    "run",
+    "--no-deps",
+    "storage-init"
+  ],
+  "cwd": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1",
+  "started_at": "2026-11-01T00:49:47.019863+00:00",
+  "ended_at": "2026-11-01T00:49:48.241911+00:00",
+  "elapsed_seconds": 1.2219402089249343,
+  "exit_code": 0,
+  "stop_reason": null,
+  "files": {
+    "stdout": {
+      "path": "/private/tmp/arc-v02-release-close.p3RyvK/steps/init-fresh-storage.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "/private/tmp/arc-v02-release-close.p3RyvK/steps/init-fresh-storage.stderr",
+      "bytes": 115,
+      "sha256": "0ca1df66eba5d76085a271279c2b540d262bf3d16e9da7cc918d281db5a94a8c"
+    }
+  }
+}

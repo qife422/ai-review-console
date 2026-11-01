@@ -1,0 +1,459 @@
+{
+  "time": "2026-11-01T00:53:19.148861+00:00",
+  "selected_pins": {
+    "pyjwt": "2.15.0",
+    "gitpython": "3.2.1",
+    "authlib": "1.9.1",
+    "aiohttp": "3.14.4",
+    "pymongo": "4.18.3",
+    "mcp": "1.30.0",
+    "pyasn1": "0.6.5",
+    "litellm": "1.103.1",
+    "urllib3": "2.8.0",
+    "joserfc": "1.7.6",
+    "langgraph-sdk": "0.4.6",
+    "nltk": "3.10.4",
+    "transformers": "5.10.0",
+    "mako": "1.4.2",
+    "black": "26.10.1",
+    "brotli": "1.2.1",
+    "dnspython": "2.9.0",
+    "fastmcp": "3.4.10",
+    "fastmcp-slim": "3.4.10",
+    "fsspec": "2026.6.0",
+    "langchain-nvidia-ai-endpoints": "1.5.0",
+    "langgraph": "1.2.14",
+    "mem0ai": "2.0.18",
+    "multidict": "6.9.1",
+    "yarl": "1.25.1"
+  },
+  "active_constraints_conflicts": [],
+  "graph_method": "replace selected package metadata in existing exact inventory, evaluate all current+new active requirements on Linux/aarch64 Python3.14.7 with default extra; final pip resolution/check and runtime required",
+  "candidate_osv_query": {
+    "queries": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "aiohttp"
+        },
+        "version": "3.14.4"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "authlib"
+        },
+        "version": "1.9.1"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "black"
+        },
+        "version": "26.10.1"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "brotli"
+        },
+        "version": "1.2.1"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "dnspython"
+        },
+        "version": "2.9.0"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "fastmcp"
+        },
+        "version": "3.4.10"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "fastmcp-slim"
+        },
+        "version": "3.4.10"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "fsspec"
+        },
+        "version": "2026.6.0"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "gitpython"
+        },
+        "version": "3.2.1"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "joserfc"
+        },
+        "version": "1.7.6"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "langchain-nvidia-ai-endpoints"
+        },
+        "version": "1.5.0"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "langgraph"
+        },
+        "version": "1.2.14"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "langgraph-sdk"
+        },
+        "version": "0.4.6"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "litellm"
+        },
+        "version": "1.103.1"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "mako"
+        },
+        "version": "1.4.2"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "mcp"
+        },
+        "version": "1.30.0"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "mem0ai"
+        },
+        "version": "2.0.18"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "multidict"
+        },
+        "version": "6.9.1"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "nltk"
+        },
+        "version": "3.10.4"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "pyasn1"
+        },
+        "version": "0.6.5"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "pyjwt"
+        },
+        "version": "2.15.0"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "pymongo"
+        },
+        "version": "4.18.3"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "transformers"
+        },
+        "version": "5.10.0"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "urllib3"
+        },
+        "version": "2.8.0"
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "yarl"
+        },
+        "version": "1.25.1"
+      }
+    ]
+  },
+  "candidate_osv_response": {
+    "results": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "candidate_checks": [
+    {
+      "name": "aiohttp",
+      "version": "3.14.4",
+      "advisory_ids": []
+    },
+    {
+      "name": "authlib",
+      "version": "1.9.1",
+      "advisory_ids": []
+    },
+    {
+      "name": "black",
+      "version": "26.10.1",
+      "advisory_ids": []
+    },
+    {
+      "name": "brotli",
+      "version": "1.2.1",
+      "advisory_ids": []
+    },
+    {
+      "name": "dnspython",
+      "version": "2.9.0",
+      "advisory_ids": []
+    },
+    {
+      "name": "fastmcp",
+      "version": "3.4.10",
+      "advisory_ids": []
+    },
+    {
+      "name": "fastmcp-slim",
+      "version": "3.4.10",
+      "advisory_ids": []
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.6.0",
+      "advisory_ids": []
+    },
+    {
+      "name": "gitpython",
+      "version": "3.2.1",
+      "advisory_ids": []
+    },
+    {
+      "name": "joserfc",
+      "version": "1.7.6",
+      "advisory_ids": []
+    },
+    {
+      "name": "langchain-nvidia-ai-endpoints",
+      "version": "1.5.0",
+      "advisory_ids": []
+    },
+    {
+      "name": "langgraph",
+      "version": "1.2.14",
+      "advisory_ids": []
+    },
+    {
+      "name": "langgraph-sdk",
+      "version": "0.4.6",
+      "advisory_ids": []
+    },
+    {
+      "name": "litellm",
+      "version": "1.103.1",
+      "advisory_ids": []
+    },
+    {
+      "name": "mako",
+      "version": "1.4.2",
+      "advisory_ids": []
+    },
+    {
+      "name": "mcp",
+      "version": "1.30.0",
+      "advisory_ids": []
+    },
+    {
+      "name": "mem0ai",
+      "version": "2.0.18",
+      "advisory_ids": []
+    },
+    {
+      "name": "multidict",
+      "version": "6.9.1",
+      "advisory_ids": []
+    },
+    {
+      "name": "nltk",
+      "version": "3.10.4",
+      "advisory_ids": []
+    },
+    {
+      "name": "pyasn1",
+      "version": "0.6.5",
+      "advisory_ids": []
+    },
+    {
+      "name": "pyjwt",
+      "version": "2.15.0",
+      "advisory_ids": []
+    },
+    {
+      "name": "pymongo",
+      "version": "4.18.3",
+      "advisory_ids": []
+    },
+    {
+      "name": "transformers",
+      "version": "5.10.0",
+      "advisory_ids": []
+    },
+    {
+      "name": "urllib3",
+      "version": "2.8.0",
+      "advisory_ids": []
+    },
+    {
+      "name": "yarl",
+      "version": "1.25.1",
+      "advisory_ids": []
+    }
+  ],
+  "reasons": {
+    "yarl": "required existing dependency minor upgrade for aiohttp3.14.4 security patch",
+    "fastmcp-slim": "update exact paired dependency with fastmcp3.4.10",
+    "langchain-nvidia-ai-endpoints": "security fixed1.4.2 conflicted aiohttp<3.14; current1.5.0 supports<3.15 and installed langchain-core1.5.1"
+  },
+  "not_selected": [
+    {
+      "name": "pillow",
+      "installed": "12.3.0",
+      "time": "2026-11-01T00:52:29.036370+00:00",
+      "latest_stable": "13.0.0",
+      "rss_url": "https://pypi.org/rss/project/pillow/releases.xml",
+      "rss_sha256": "66238844e4aa7bb56dcb3bdfb22b4510e75706a9dc3f0869b89db025c070e968",
+      "selection": "no compatible same-major security fixed candidate",
+      "forward_conflicts": []
+    },
+    {
+      "name": "filelock",
+      "installed": "3.32.0",
+      "time": "2026-11-01T00:52:29.036638+00:00",
+      "latest_stable": "4.2.6",
+      "rss_url": "https://pypi.org/rss/project/filelock/releases.xml",
+      "rss_sha256": "dcf3f646820f8060dcf413bac8d54afd120969e5ab13efd59ec1464c9faff497",
+      "selection": "no compatible same-major security fixed candidate",
+      "forward_conflicts": []
+    },
+    {
+      "name": "chromadb",
+      "installed": "1.5.9",
+      "time": "2026-11-01T00:52:29.375103+00:00",
+      "latest_stable": "1.5.9",
+      "rss_url": "https://pypi.org/rss/project/chromadb/releases.xml",
+      "rss_sha256": "232f062d383abdb38830dbacc2c204df9e994f38e624e5017f62479ee2487bc0",
+      "selection": "no compatible same-major security fixed candidate",
+      "forward_conflicts": []
+    },
+    {
+      "name": "oauthlib",
+      "installed": "3.3.1",
+      "time": "2026-11-01T00:52:29.529530+00:00",
+      "latest_stable": "4.0.1",
+      "rss_url": "https://pypi.org/rss/project/oauthlib/releases.xml",
+      "rss_sha256": "355d2b9bd906bc6a394e30d7493fa435f740d4f36766600b81c83494ea3f11d7",
+      "selection": "no compatible same-major security fixed candidate",
+      "forward_conflicts": []
+    },
+    {
+      "name": "couchbase",
+      "installed": "4.6.2",
+      "time": "2026-11-01T00:52:30.252017+00:00",
+      "latest_stable": "4.6.4",
+      "rss_url": "https://pypi.org/rss/project/couchbase/releases.xml",
+      "rss_sha256": "e5d01d7e3466265e6cbd30e1f74b9e0135353ac59720d47cde0f89d2f193c6d0",
+      "selection": "no compatible same-major security fixed candidate",
+      "forward_conflicts": []
+    },
+    {
+      "name": "datamodel-code-generator",
+      "installed": "0.71.0",
+      "time": "2026-11-01T00:52:30.322328+00:00",
+      "latest_stable": "0.87.0",
+      "rss_url": "https://pypi.org/rss/project/datamodel-code-generator/releases.xml",
+      "rss_sha256": "04852f32e15cc25e26ad5457f1e27a284bd2f74f7584e9ad86d562a9a03701bb",
+      "selection": "no compatible same-major security fixed candidate",
+      "forward_conflicts": []
+    },
+    {
+      "name": "opentelemetry-api",
+      "installed": "1.44.0",
+      "time": "2026-11-01T00:52:31.025835+00:00",
+      "latest_stable": "1.45.2",
+      "rss_url": "https://pypi.org/rss/project/opentelemetry-api/releases.xml",
+      "rss_sha256": "7944776605aba107863f3a61a9e97c34860aee8126922616f7b1f8a12ed81b75",
+      "selection": "no compatible same-major security fixed candidate",
+      "forward_conflicts": []
+    },
+    {
+      "name": "setuptools",
+      "installed": "83.0.0",
+      "time": "2026-11-01T00:52:31.039218+00:00",
+      "latest_stable": "84.2.1",
+      "rss_url": "https://pypi.org/rss/project/setuptools/releases.xml",
+      "rss_sha256": "67256b82cc5392bb8d25e93f44c3422957ea83b7be7671dba075001348b30b23",
+      "selection": "no compatible same-major security fixed candidate",
+      "forward_conflicts": []
+    }
+  ],
+  "limitations": [
+    "Metadata graph compatibility is not runtime proof.",
+    "Optional extras constraints evaluated by final pip resolver; default-extra precheck cannot infer selected historical extras.",
+    "Security patches with no available same-major/minor candidate remain findings."
+  ]
+}

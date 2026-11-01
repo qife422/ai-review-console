@@ -1,0 +1,28 @@
+{
+  "services": {
+    "api": {
+      "image": "sha256:ec611a3c036474e409e9e94e212a382fe14c67ef06d62b83db2d8e9ecfd533cb"
+    },
+    "worker": {
+      "image": "sha256:ec611a3c036474e409e9e94e212a382fe14c67ef06d62b83db2d8e9ecfd533cb"
+    },
+    "migrate": {
+      "image": "sha256:ec611a3c036474e409e9e94e212a382fe14c67ef06d62b83db2d8e9ecfd533cb"
+    },
+    "storage-init": {
+      "image": "sha256:ec611a3c036474e409e9e94e212a382fe14c67ef06d62b83db2d8e9ecfd533cb"
+    },
+    "flow-init": {
+      "image": "sha256:ec611a3c036474e409e9e94e212a382fe14c67ef06d62b83db2d8e9ecfd533cb"
+    },
+    "langflow": {
+      "image": "sha256:865e7348409fecd375f86f622c99f1510d98f31f833ab1dad2c9b2bd16a85751"
+    },
+    "web": {
+      "image": "sha256:0cd661b2e5b9c028aebb7b2b616c2f56cf87885da167ce6a4e001f0341345deb"
+    },
+    "postgres": {
+      "image": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+    }
+  }
+}

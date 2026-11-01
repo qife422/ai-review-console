@@ -1,0 +1,66 @@
+{
+  "at": "2026-11-01T01:26:34.291270+00:00",
+  "cache": {
+    "roots": [
+      {
+        "path": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1/.venv",
+        "bytes": 270450966,
+        "files": 9638
+      },
+      {
+        "path": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1/frontend/node_modules",
+        "bytes": 380052094,
+        "files": 36045
+      },
+      {
+        "path": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1/frontend/dist",
+        "bytes": 2839030,
+        "files": 94
+      },
+      {
+        "path": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1/online-demo",
+        "bytes": 13205331,
+        "files": 516
+      },
+      {
+        "path": "/private/tmp/arc-v02-release-close.p3RyvK/tool-cache",
+        "bytes": 296261550,
+        "files": 2558
+      },
+      {
+        "path": "/private/tmp/arc-v02-release-close.p3RyvK/frontend/dist",
+        "bytes": 2943258,
+        "files": 96
+      },
+      {
+        "path": "/private/tmp/arc-v02-release-close.p3RyvK/web-context",
+        "bytes": 2953221,
+        "files": 99
+      }
+    ],
+    "bytes": 968705450,
+    "files": 49046,
+    "within_4GiB_100000_files": true
+  },
+  "temporary": {
+    "bytes": 47000915,
+    "files": 534
+  },
+  "candidate_before_final_manifest": {
+    "bytes": 26935952,
+    "files": 401
+  },
+  "source_input_files": 107,
+  "source_input_list_sha256": "7791df3ec465be7df6288b7c617e20deea33064002464c1926e4a0d476eeee51",
+  "docker_global_report": [
+    "{\"Active\":\"12\",\"Reclaimable\":\"14.87GB (67%)\",\"Size\":\"21.87GB\",\"TotalCount\":\"18\",\"Type\":\"Images\"}",
+    "{\"Active\":\"0\",\"Reclaimable\":\"31.94MB (100%)\",\"Size\":\"31.94MB\",\"TotalCount\":\"35\",\"Type\":\"Containers\"}",
+    "{\"Active\":\"15\",\"Reclaimable\":\"4.683GB (86%)\",\"Size\":\"5.399GB\",\"TotalCount\":\"17\",\"Type\":\"Local Volumes\"}",
+    "{\"Active\":\"0\",\"Reclaimable\":\"2.893GB\",\"Size\":\"2.893GB\",\"TotalCount\":\"259\",\"Type\":\"Build Cache\"}"
+  ],
+  "docker_growth": "warning; stopped further builds; global/shared physical attribution not claimed exact",
+  "free_bytes": 9873551360,
+  "pending_cleanup": true,
+  "authorised_cleanup_completed": "single aborted Grype DB only",
+  "automatic_other_cleanup": false
+}

@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/private/tmp/arc-v02-release-close.p3RyvK/tool-cache/grype-tool/grype",
+    "sbom:docs/evidence/v02-acceptance/release/images/langflow.cdx.json",
+    "--distro",
+    "debian:12",
+    "--output",
+    "json"
+  ],
+  "cwd": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1",
+  "started_at": "2026-11-01T00:44:26.129717+00:00",
+  "ended_at": "2026-11-01T00:44:28.154762+00:00",
+  "elapsed_seconds": 2.024925250094384,
+  "exit_code": 1,
+  "stop_reason": null,
+  "files": {
+    "stdout": {
+      "path": "/private/tmp/arc-v02-release-close.p3RyvK/steps/old-langflow-grype.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "/private/tmp/arc-v02-release-close.p3RyvK/steps/old-langflow-grype.stderr",
+      "bytes": 70,
+      "sha256": "70bdc4cdbd5d76dc68791b528742ff992a45a87dbf728159b951582821f53e3c"
+    }
+  }
+}

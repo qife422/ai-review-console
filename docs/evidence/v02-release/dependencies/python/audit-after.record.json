@@ -1,0 +1,48 @@
+{
+  "command": [
+    ".venv/bin/pip-audit",
+    "--requirement",
+    "requirements.lock",
+    "--no-deps",
+    "--disable-pip",
+    "--strict",
+    "--timeout",
+    "30",
+    "--progress-spinner",
+    "off",
+    "--cache-dir",
+    "/private/tmp/arc-v02-release-close.p3RyvK/tool-cache/python/audit",
+    "--format",
+    "json"
+  ],
+  "cwd": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1",
+  "started_at": "2026-11-01T00:43:44.879470+00:00",
+  "ended_at": "2026-11-01T00:43:45.755151+00:00",
+  "exit_code": 0,
+  "inputs": [
+    {
+      "path": "pyproject.toml",
+      "sha256": "0790d1eb0f720f67ae32fef9d50873d4a69a6610fc69039d4767bda37fb6732a"
+    },
+    {
+      "path": "requirements.lock",
+      "sha256": "bd4dd5f664ea44ae6575d0d8d204de4d9f1cc765f2fb9d9bc24958b7d0c46e71"
+    },
+    {
+      "path": "docker/langflow.Dockerfile",
+      "sha256": "733dfbe8f677bbaaff4d5462df15f74f2651884a2b14ec5fb0c5aebe09b6f11d"
+    }
+  ],
+  "outputs": {
+    "stdout": {
+      "name": "audit-after.stdout",
+      "bytes": 1905,
+      "sha256": "3847af796b322493ce109110cc0a6de85e3f01f494e12063edfc3a13e02b9a5f"
+    },
+    "stderr": {
+      "name": "audit-after.stderr",
+      "bytes": 265,
+      "sha256": "79d30422388543b2563e1dde76bb7e7857d7ef0c6fdf05c8c71598633ca07e1e"
+    }
+  }
+}

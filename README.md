@@ -25,7 +25,9 @@ Langflow-powered document review console with deterministic redaction, explainab
 
 固定实施 Contract 为 [Spec计划书](docs/UPGRADE_SPEC.md) `ARC-UPGRADE@0.1.0`。实际验收、内容指纹和剩余边界见 [当前状态](docs/CURRENT_STATE.md)及[Spec索引](docs/SPEC_INDEX.md)。本地技术验证与负责人最终接受分开；没有生产或收费模型授权。
 
-活动状态与索引已对齐。逐项结果、源码/环境指纹和最小证据见 [v0.2 收尾验收](docs/evidence/v02-acceptance/README.md)。**发布检查 AC-19 尚未通过**：依赖审计有漏洞匹配，镜像漏洞扫描受 Docker 登录条件阻塞，部分许可证需复核。完整 v0.2 尚未标记技术验收通过，最终接受仍待负责人决定；固定 Spec 和历史证据保持原字节。
+2026-10-31 已修补应用 Python 与前端依赖，两个范围的审计均为 0；兼容修补 Langflow 依赖、固定运行基础与维护包，并把精确镜像的包级扫描和许可证材料采集纳入 CI。代码 `fac92ea` 的 [完整 CI](https://github.com/qife422/ai-review-console/actions/runs/41259579902) 已通过 **154 Python / 29 前端测试**、真实工作流及双主题双尺寸浏览器验收。本机原生镜像的真实 Flow、29 个显式 Langflow pin、旧虚构案件和报告保全也已复验。
+
+**发布检查 AC-19 仍未关闭**：Langflow 和部分系统包仍有漏洞记录，Zep 精确版本及完整镜像分发材料尚未确认。不是完整发布验收通过或风险接受。已解决项、具体剩余问题、扫描范围与后续计划统一见 [v0.2 发布验收](docs/evidence/v02-release/README.md)；[上轮收尾记录](docs/evidence/v02-acceptance/README.md)及固定 Spec 保持原字节。
 
 ## 基于 Langflow
 
@@ -96,6 +98,7 @@ docs/ + compliance/        Contract、历史记录、许可证与扫描候选
 
 ```bash
 python3.12 -m venv .venv
+.venv/bin/python -m pip install --no-cache-dir pip==26.2.2
 .venv/bin/pip install -r requirements.lock
 .venv/bin/pip install -e '.[dev]'
 .venv/bin/python -m api.app.migrations

@@ -1,0 +1,10 @@
+{
+  "tested_source_commit": "fac92ea797c96cd8d12581bf616d0295e8312186",
+  "followup_change": "documentation-only README/CHANGELOG/CURRENT_STATE/SPEC_INDEX and sealed evidence",
+  "README_tested_sha256": "3a682d70c3ce0a1673b1649dc74ebb6d8fbe583e7a5f6e340afbd288bbbd0361",
+  "README_updated_sha256": "397467c0495f87ee3cc3332dacea33bc4e0139a6a3724280bc9d31b52e86130f",
+  "packaging_effect": "README is copied into API image and used as wheel description; the exact tested/scanned image IDs remain those built from fac92ea, not newly rebuilt docs images",
+  "runtime_impact": "application/test/lock/Flow/CI/config/license inputs in source-inputs.json unchanged; no new functionality/authority/data or dependency changes",
+  "verification_scope": "do not claim the subsequent documentation commit itself completed another full CI; preserve actual run41259579902 binding",
+  "setup_note": "fresh local environment first upgrades pip to the exact version already installed and verified this turn"
+}

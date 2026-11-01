@@ -1,0 +1,2300 @@
+{
+  "api": {
+    "image_id": "sha256:2fd8f05220ac2d4e60479eeefdcaef460d51b6e0a8b5b80f2a24dc5ab3917311",
+    "observed_ids": 126,
+    "alias_groups": 120,
+    "ecosystems": {
+      "Debian:12": {
+        "ids": 114,
+        "alias_groups": 114
+      },
+      "PyPI": {
+        "ids": 12,
+        "alias_groups": 6
+      }
+    },
+    "package_triage": [
+      {
+        "package": "libc-bin",
+        "installed": "2.36-9+deb12u14",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "glibc"
+          },
+          "version": "2.36-9+deb12u14"
+        },
+        "ids": 24,
+        "alias_groups": 24,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libc6",
+        "installed": "2.36-9+deb12u14",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "glibc"
+          },
+          "version": "2.36-9+deb12u14"
+        },
+        "ids": 24,
+        "alias_groups": 24,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "bsdutils",
+        "installed": "1:2.38.1-5+deb12u3",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "util-linux"
+          },
+          "version": "2.38.1-5+deb12u3"
+        },
+        "ids": 10,
+        "alias_groups": 10,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libblkid1",
+        "installed": "2.38.1-5+deb12u3",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "util-linux"
+          },
+          "version": "2.38.1-5+deb12u3"
+        },
+        "ids": 10,
+        "alias_groups": 10,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libmount1",
+        "installed": "2.38.1-5+deb12u3",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "util-linux"
+          },
+          "version": "2.38.1-5+deb12u3"
+        },
+        "ids": 10,
+        "alias_groups": 10,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libsmartcols1",
+        "installed": "2.38.1-5+deb12u3",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "util-linux"
+          },
+          "version": "2.38.1-5+deb12u3"
+        },
+        "ids": 10,
+        "alias_groups": 10,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libuuid1",
+        "installed": "2.38.1-5+deb12u3",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "util-linux"
+          },
+          "version": "2.38.1-5+deb12u3"
+        },
+        "ids": 10,
+        "alias_groups": 10,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "mount",
+        "installed": "2.38.1-5+deb12u3",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "util-linux"
+          },
+          "version": "2.38.1-5+deb12u3"
+        },
+        "ids": 10,
+        "alias_groups": 10,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "util-linux",
+        "installed": "2.38.1-5+deb12u3",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "util-linux"
+          },
+          "version": "2.38.1-5+deb12u3"
+        },
+        "ids": 10,
+        "alias_groups": 10,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "util-linux-extra",
+        "installed": "2.38.1-5+deb12u3",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "util-linux"
+          },
+          "version": "2.38.1-5+deb12u3"
+        },
+        "ids": 10,
+        "alias_groups": 10,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libsqlite3-0",
+        "installed": "3.40.1-2+deb12u2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "sqlite3"
+          },
+          "version": "3.40.1-2+deb12u2"
+        },
+        "ids": 9,
+        "alias_groups": 9,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libgnutls30",
+        "installed": "3.7.9-2+deb12u7",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "gnutls28"
+          },
+          "version": "3.7.9-2+deb12u7"
+        },
+        "ids": 7,
+        "alias_groups": 7,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libsystemd0",
+        "installed": "252.39-1~deb12u2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "systemd"
+          },
+          "version": "252.39-1~deb12u2"
+        },
+        "ids": 7,
+        "alias_groups": 7,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libudev1",
+        "installed": "252.39-1~deb12u2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "systemd"
+          },
+          "version": "252.39-1~deb12u2"
+        },
+        "ids": 7,
+        "alias_groups": 7,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libgssapi-krb5-2",
+        "installed": "1.20.1-2+deb12u5",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "krb5"
+          },
+          "version": "1.20.1-2+deb12u5"
+        },
+        "ids": 6,
+        "alias_groups": 6,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libk5crypto3",
+        "installed": "1.20.1-2+deb12u5",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "krb5"
+          },
+          "version": "1.20.1-2+deb12u5"
+        },
+        "ids": 6,
+        "alias_groups": 6,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libkrb5-3",
+        "installed": "1.20.1-2+deb12u5",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "krb5"
+          },
+          "version": "1.20.1-2+deb12u5"
+        },
+        "ids": 6,
+        "alias_groups": 6,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libkrb5support0",
+        "installed": "1.20.1-2+deb12u5",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "krb5"
+          },
+          "version": "1.20.1-2+deb12u5"
+        },
+        "ids": 6,
+        "alias_groups": 6,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "pip",
+        "installed": "25.0.1",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "pip"
+          },
+          "version": "25.0.1"
+        },
+        "ids": 12,
+        "alias_groups": 6,
+        "matching_ecosystem_fixed_versions": [
+          "25.3",
+          "26.0",
+          "26.1",
+          "26.1.2",
+          "26.2",
+          "26.2.0"
+        ]
+      },
+      {
+        "package": "coreutils",
+        "installed": "9.1-1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "coreutils"
+          },
+          "version": "9.1-1"
+        },
+        "ids": 5,
+        "alias_groups": 5,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "gpgv",
+        "installed": "2.2.40-1.1+deb12u2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "gnupg2"
+          },
+          "version": "2.2.40-1.1+deb12u2"
+        },
+        "ids": 5,
+        "alias_groups": 5,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "perl-base",
+        "installed": "5.36.0-7+deb12u4",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "perl"
+          },
+          "version": "5.36.0-7+deb12u4"
+        },
+        "ids": 5,
+        "alias_groups": 5,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "tar",
+        "installed": "1.34+dfsg-1.2+deb12u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "tar"
+          },
+          "version": "1.34+dfsg-1.2+deb12u1"
+        },
+        "ids": 4,
+        "alias_groups": 4,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "gcc-12-base",
+        "installed": "12.2.0-14+deb12u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "gcc-12"
+          },
+          "version": "12.2.0-14+deb12u1"
+        },
+        "ids": 3,
+        "alias_groups": 3,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libgcc-s1",
+        "installed": "12.2.0-14+deb12u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "gcc-12"
+          },
+          "version": "12.2.0-14+deb12u1"
+        },
+        "ids": 3,
+        "alias_groups": 3,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libncursesw6",
+        "installed": "6.4-4",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "ncurses"
+          },
+          "version": "6.4-4"
+        },
+        "ids": 3,
+        "alias_groups": 3,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libpam-modules",
+        "installed": "1.5.2-6+deb12u2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "pam"
+          },
+          "version": "1.5.2-6+deb12u2"
+        },
+        "ids": 3,
+        "alias_groups": 3,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libpam-modules-bin",
+        "installed": "1.5.2-6+deb12u2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "pam"
+          },
+          "version": "1.5.2-6+deb12u2"
+        },
+        "ids": 3,
+        "alias_groups": 3,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libpam-runtime",
+        "installed": "1.5.2-6+deb12u2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "pam"
+          },
+          "version": "1.5.2-6+deb12u2"
+        },
+        "ids": 3,
+        "alias_groups": 3,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libpam0g",
+        "installed": "1.5.2-6+deb12u2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "pam"
+          },
+          "version": "1.5.2-6+deb12u2"
+        },
+        "ids": 3,
+        "alias_groups": 3,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libstdc++6",
+        "installed": "12.2.0-14+deb12u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "gcc-12"
+          },
+          "version": "12.2.0-14+deb12u1"
+        },
+        "ids": 3,
+        "alias_groups": 3,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libtinfo6",
+        "installed": "6.4-4",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "ncurses"
+          },
+          "version": "6.4-4"
+        },
+        "ids": 3,
+        "alias_groups": 3,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "ncurses-base",
+        "installed": "6.4-4",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "ncurses"
+          },
+          "version": "6.4-4"
+        },
+        "ids": 3,
+        "alias_groups": 3,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "ncurses-bin",
+        "installed": "6.4-4",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "ncurses"
+          },
+          "version": "6.4-4"
+        },
+        "ids": 3,
+        "alias_groups": 3,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "zlib1g",
+        "installed": "1:1.2.13.dfsg-1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "zlib"
+          },
+          "version": "1:1.2.13.dfsg-1"
+        },
+        "ids": 3,
+        "alias_groups": 3,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "dash",
+        "installed": "0.5.12-2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "dash"
+          },
+          "version": "0.5.12-2"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "gzip",
+        "installed": "1.12-1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "gzip"
+          },
+          "version": "1.12-1"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libacl1",
+        "installed": "2.3.1-3",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "acl"
+          },
+          "version": "2.3.1-3"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libgcrypt20",
+        "installed": "1.10.1-3+deb12u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "libgcrypt20"
+          },
+          "version": "1.10.1-3+deb12u1"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libp11-kit0",
+        "installed": "0.24.1-2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "p11-kit"
+          },
+          "version": "0.24.1-2"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libtirpc-common",
+        "installed": "1.3.3+ds-1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "libtirpc"
+          },
+          "version": "1.3.3+ds-1"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libtirpc3",
+        "installed": "1.3.3+ds-1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "libtirpc"
+          },
+          "version": "1.3.3+ds-1"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "login",
+        "installed": "1:4.13+dfsg1-1+deb12u2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "shadow"
+          },
+          "version": "1:4.13+dfsg1-1+deb12u2"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "passwd",
+        "installed": "1:4.13+dfsg1-1+deb12u2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "shadow"
+          },
+          "version": "1:4.13+dfsg1-1+deb12u2"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "apt",
+        "installed": "2.6.1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "apt"
+          },
+          "version": "2.6.1"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "diffutils",
+        "installed": "1:3.8-4",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "diffutils"
+          },
+          "version": "1:3.8-4"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libapt-pkg6.0",
+        "installed": "2.6.1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "apt"
+          },
+          "version": "2.6.1"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libattr1",
+        "installed": "1:2.5.1-4",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "attr"
+          },
+          "version": "1:2.5.1-4"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libbz2-1.0",
+        "installed": "1.0.8-5+b1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "bzip2"
+          },
+          "version": "1.0.8-5"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libssl3",
+        "installed": "3.0.22-1~deb12u2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "openssl"
+          },
+          "version": "3.0.22-1~deb12u2"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libtasn1-6",
+        "installed": "4.19.0-2+deb12u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "libtasn1-6"
+          },
+          "version": "4.19.0-2+deb12u1"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "openssl",
+        "installed": "3.0.22-1~deb12u2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:12",
+            "name": "openssl"
+          },
+          "version": "3.0.22-1~deb12u2"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": []
+      }
+    ]
+  },
+  "langflow": {
+    "image_id": "sha256:7a9404bcf318e1db1ba232e60390310b90a2272c97d0dafe917d4ce0834758ec",
+    "observed_ids": 207,
+    "alias_groups": 144,
+    "ecosystems": {
+      "PyPI": {
+        "ids": 207,
+        "alias_groups": 144
+      }
+    },
+    "package_triage": [
+      {
+        "package": "pillow",
+        "installed": "12.3.0",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "pillow"
+          },
+          "version": "12.3.0"
+        },
+        "ids": 59,
+        "alias_groups": 41,
+        "matching_ecosystem_fixed_versions": [
+          "13.0.0"
+        ]
+      },
+      {
+        "package": "PyJWT",
+        "installed": "2.13.0",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "pyjwt"
+          },
+          "version": "2.13.0"
+        },
+        "ids": 29,
+        "alias_groups": 15,
+        "matching_ecosystem_fixed_versions": [
+          "2.14.0",
+          "2.15.0"
+        ]
+      },
+      {
+        "package": "filelock",
+        "installed": "3.32.0",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "filelock"
+          },
+          "version": "3.32.0"
+        },
+        "ids": 12,
+        "alias_groups": 12,
+        "matching_ecosystem_fixed_versions": [
+          "4.0.9",
+          "4.2.1"
+        ]
+      },
+      {
+        "package": "GitPython",
+        "installed": "3.1.59",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "gitpython"
+          },
+          "version": "3.1.59"
+        },
+        "ids": 13,
+        "alias_groups": 11,
+        "matching_ecosystem_fixed_versions": [
+          "3.1.60",
+          "3.1.62",
+          "3.2.0",
+          "3.2.1"
+        ]
+      },
+      {
+        "package": "Authlib",
+        "installed": "1.7.2",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "authlib"
+          },
+          "version": "1.7.2"
+        },
+        "ids": 16,
+        "alias_groups": 9,
+        "matching_ecosystem_fixed_versions": [
+          "1.8.0",
+          "1.9.0",
+          "1.9.1"
+        ]
+      },
+      {
+        "package": "aiohttp",
+        "installed": "3.14.3",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "aiohttp"
+          },
+          "version": "3.14.3"
+        },
+        "ids": 8,
+        "alias_groups": 8,
+        "matching_ecosystem_fixed_versions": [
+          "3.14.4"
+        ]
+      },
+      {
+        "package": "pymongo",
+        "installed": "4.17.0",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "pymongo"
+          },
+          "version": "4.17.0"
+        },
+        "ids": 9,
+        "alias_groups": 5,
+        "matching_ecosystem_fixed_versions": [
+          "4.18.1",
+          "4.18.2",
+          "4.18.3"
+        ]
+      },
+      {
+        "package": "chromadb",
+        "installed": "1.5.9",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "chromadb"
+          },
+          "version": "1.5.9"
+        },
+        "ids": 8,
+        "alias_groups": 4,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "mcp",
+        "installed": "1.28.1",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "mcp"
+          },
+          "version": "1.28.1"
+        },
+        "ids": 4,
+        "alias_groups": 4,
+        "matching_ecosystem_fixed_versions": [
+          "1.30.0",
+          "2.2.0"
+        ]
+      },
+      {
+        "package": "oauthlib",
+        "installed": "3.3.1",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "oauthlib"
+          },
+          "version": "3.3.1"
+        },
+        "ids": 6,
+        "alias_groups": 4,
+        "matching_ecosystem_fixed_versions": [
+          "4.0.0"
+        ]
+      },
+      {
+        "package": "pyasn1",
+        "installed": "0.6.4",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "pyasn1"
+          },
+          "version": "0.6.4"
+        },
+        "ids": 4,
+        "alias_groups": 4,
+        "matching_ecosystem_fixed_versions": [
+          "0.6.5"
+        ]
+      },
+      {
+        "package": "litellm",
+        "installed": "1.93.0",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "litellm"
+          },
+          "version": "1.93.0"
+        },
+        "ids": 4,
+        "alias_groups": 3,
+        "matching_ecosystem_fixed_versions": [
+          "1.100.4",
+          "1.101.3",
+          "1.102.2",
+          "1.103.1",
+          "1.104.0rc2",
+          "1.88.6",
+          "1.89.7",
+          "1.90.7",
+          "1.91.5",
+          "1.92.2",
+          "1.93.2",
+          "1.94.3",
+          "1.95.0",
+          "1.95.1",
+          "1.96.2"
+        ]
+      },
+      {
+        "package": "urllib3",
+        "installed": "2.7.0",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "urllib3"
+          },
+          "version": "2.7.0"
+        },
+        "ids": 6,
+        "alias_groups": 3,
+        "matching_ecosystem_fixed_versions": [
+          "2.8.0"
+        ]
+      },
+      {
+        "package": "joserfc",
+        "installed": "1.7.4",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "joserfc"
+          },
+          "version": "1.7.4"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": [
+          "1.7.5",
+          "1.7.6"
+        ]
+      },
+      {
+        "package": "langgraph-sdk",
+        "installed": "0.4.2",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "langgraph-sdk"
+          },
+          "version": "0.4.2"
+        },
+        "ids": 3,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": [
+          "0.4.4",
+          "0.4.6"
+        ]
+      },
+      {
+        "package": "nltk",
+        "installed": "3.10.3",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "nltk"
+          },
+          "version": "3.10.3"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": [
+          "3.10.4"
+        ]
+      },
+      {
+        "package": "transformers",
+        "installed": "5.8.1",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "transformers"
+          },
+          "version": "5.8.1"
+        },
+        "ids": 4,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": [
+          "5.10.0"
+        ]
+      },
+      {
+        "package": "Mako",
+        "installed": "1.3.12",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "mako"
+          },
+          "version": "1.3.12"
+        },
+        "ids": 2,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": [
+          "1.4.2"
+        ]
+      },
+      {
+        "package": "black",
+        "installed": "26.5.1",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "black"
+          },
+          "version": "26.5.1"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": [
+          "26.10.1"
+        ]
+      },
+      {
+        "package": "brotli",
+        "installed": "1.2.0",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "brotli"
+          },
+          "version": "1.2.0"
+        },
+        "ids": 2,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": [
+          "1.2.1"
+        ]
+      },
+      {
+        "package": "couchbase",
+        "installed": "4.6.2",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "couchbase"
+          },
+          "version": "4.6.2"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "datamodel-code-generator",
+        "installed": "0.71.0",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "datamodel-code-generator"
+          },
+          "version": "0.71.0"
+        },
+        "ids": 2,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": [
+          "0.81.0"
+        ]
+      },
+      {
+        "package": "dnspython",
+        "installed": "2.8.0",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "dnspython"
+          },
+          "version": "2.8.0"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": [
+          "2.9.0"
+        ]
+      },
+      {
+        "package": "fastmcp",
+        "installed": "3.4.4",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "fastmcp"
+          },
+          "version": "3.4.4"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": [
+          "3.4.10",
+          "4.1.2"
+        ]
+      },
+      {
+        "package": "fastmcp-slim",
+        "installed": "3.4.4",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "fastmcp-slim"
+          },
+          "version": "3.4.4"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": [
+          "3.4.10",
+          "4.1.2"
+        ]
+      },
+      {
+        "package": "fsspec",
+        "installed": "2026.2.0",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "fsspec"
+          },
+          "version": "2026.2.0"
+        },
+        "ids": 2,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": [
+          "2026.6.0"
+        ]
+      },
+      {
+        "package": "langchain-nvidia-ai-endpoints",
+        "installed": "1.0.4",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "langchain-nvidia-ai-endpoints"
+          },
+          "version": "1.0.4"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": [
+          "1.4.2"
+        ]
+      },
+      {
+        "package": "langgraph",
+        "installed": "1.2.9",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "langgraph"
+          },
+          "version": "1.2.9"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": [
+          "1.2.14"
+        ]
+      },
+      {
+        "package": "mem0ai",
+        "installed": "2.0.14",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "mem0ai"
+          },
+          "version": "2.0.14"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": [
+          "2.0.18"
+        ]
+      },
+      {
+        "package": "multidict",
+        "installed": "6.7.1",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "multidict"
+          },
+          "version": "6.7.1"
+        },
+        "ids": 2,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": [
+          "6.9.1"
+        ]
+      },
+      {
+        "package": "opentelemetry-api",
+        "installed": "1.44.0",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "opentelemetry-api"
+          },
+          "version": "1.44.0"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": [
+          "1.45.1"
+        ]
+      },
+      {
+        "package": "setuptools",
+        "installed": "83.0.0",
+        "query": {
+          "package": {
+            "ecosystem": "PyPI",
+            "name": "setuptools"
+          },
+          "version": "83.0.0"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": [
+          "84.1.0"
+        ]
+      }
+    ]
+  },
+  "web": {
+    "image_id": "sha256:34509f24effc7e00ac347a69e1bf10f6de498ef57c4ba8a3212f27b13bf7f37d",
+    "observed_ids": 25,
+    "alias_groups": 25,
+    "ecosystems": {
+      "Alpine:v3.24": {
+        "ids": 25,
+        "alias_groups": 25
+      }
+    },
+    "package_triage": [
+      {
+        "package": "curl",
+        "installed": "8.22.0-r0",
+        "query": {
+          "package": {
+            "ecosystem": "Alpine:v3.24",
+            "name": "curl"
+          },
+          "version": "8.22.0-r0"
+        },
+        "ids": 24,
+        "alias_groups": 24,
+        "matching_ecosystem_fixed_versions": [
+          "8.23.0-r0"
+        ]
+      },
+      {
+        "package": "libcurl",
+        "installed": "8.22.0-r0",
+        "query": {
+          "package": {
+            "ecosystem": "Alpine:v3.24",
+            "name": "curl"
+          },
+          "version": "8.22.0-r0"
+        },
+        "ids": 24,
+        "alias_groups": 24,
+        "matching_ecosystem_fixed_versions": [
+          "8.23.0-r0"
+        ]
+      },
+      {
+        "package": "brotli-libs",
+        "installed": "1.2.0-r1",
+        "query": {
+          "package": {
+            "ecosystem": "Alpine:v3.24",
+            "name": "brotli"
+          },
+          "version": "1.2.0-r1"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": [
+          "1.2.1-r0"
+        ]
+      }
+    ]
+  },
+  "postgres": {
+    "image_id": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c",
+    "observed_ids": 116,
+    "alias_groups": 116,
+    "ecosystems": {
+      "Debian:13": {
+        "ids": 116,
+        "alias_groups": 116
+      }
+    },
+    "package_triage": [
+      {
+        "package": "libc-bin",
+        "installed": "2.41-12+deb13u4",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "glibc"
+          },
+          "version": "2.41-12+deb13u4"
+        },
+        "ids": 22,
+        "alias_groups": 22,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libc-l10n",
+        "installed": "2.41-12+deb13u4",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "glibc"
+          },
+          "version": "2.41-12+deb13u4"
+        },
+        "ids": 22,
+        "alias_groups": 22,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libc6",
+        "installed": "2.41-12+deb13u4",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "glibc"
+          },
+          "version": "2.41-12+deb13u4"
+        },
+        "ids": 22,
+        "alias_groups": 22,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "locales",
+        "installed": "2.41-12+deb13u4",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "glibc"
+          },
+          "version": "2.41-12+deb13u4"
+        },
+        "ids": 22,
+        "alias_groups": 22,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libxml2",
+        "installed": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "libxml2"
+          },
+          "version": "2.12.7+dfsg+really2.9.14-2.1+deb13u3"
+        },
+        "ids": 12,
+        "alias_groups": 12,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libgnutls30t64",
+        "installed": "3.8.9-3+deb13u4",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "gnutls28"
+          },
+          "version": "3.8.9-3+deb13u4"
+        },
+        "ids": 7,
+        "alias_groups": 7,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libsystemd0",
+        "installed": "257.13-1~deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "systemd"
+          },
+          "version": "257.13-1~deb13u1"
+        },
+        "ids": 7,
+        "alias_groups": 7,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libudev1",
+        "installed": "257.13-1~deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "systemd"
+          },
+          "version": "257.13-1~deb13u1"
+        },
+        "ids": 7,
+        "alias_groups": 7,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "bsdutils",
+        "installed": "1:2.41.5-0+deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "util-linux"
+          },
+          "version": "2.41.5-0+deb13u1"
+        },
+        "ids": 6,
+        "alias_groups": 6,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libblkid1",
+        "installed": "2.41.5-0+deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "util-linux"
+          },
+          "version": "2.41.5-0+deb13u1"
+        },
+        "ids": 6,
+        "alias_groups": 6,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libgssapi-krb5-2",
+        "installed": "1.21.3-5+deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "krb5"
+          },
+          "version": "1.21.3-5+deb13u1"
+        },
+        "ids": 6,
+        "alias_groups": 6,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libk5crypto3",
+        "installed": "1.21.3-5+deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "krb5"
+          },
+          "version": "1.21.3-5+deb13u1"
+        },
+        "ids": 6,
+        "alias_groups": 6,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libkrb5-3",
+        "installed": "1.21.3-5+deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "krb5"
+          },
+          "version": "1.21.3-5+deb13u1"
+        },
+        "ids": 6,
+        "alias_groups": 6,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libkrb5support0",
+        "installed": "1.21.3-5+deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "krb5"
+          },
+          "version": "1.21.3-5+deb13u1"
+        },
+        "ids": 6,
+        "alias_groups": 6,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "liblastlog2-2",
+        "installed": "2.41.5-0+deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "util-linux"
+          },
+          "version": "2.41.5-0+deb13u1"
+        },
+        "ids": 6,
+        "alias_groups": 6,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libmount1",
+        "installed": "2.41.5-0+deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "util-linux"
+          },
+          "version": "2.41.5-0+deb13u1"
+        },
+        "ids": 6,
+        "alias_groups": 6,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libsmartcols1",
+        "installed": "2.41.5-0+deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "util-linux"
+          },
+          "version": "2.41.5-0+deb13u1"
+        },
+        "ids": 6,
+        "alias_groups": 6,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libuuid1",
+        "installed": "2.41.5-0+deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "util-linux"
+          },
+          "version": "2.41.5-0+deb13u1"
+        },
+        "ids": 6,
+        "alias_groups": 6,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "login",
+        "installed": "1:4.16.0-2+really2.41.5-0+deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "util-linux"
+          },
+          "version": "2.41.5-0+deb13u1"
+        },
+        "ids": 6,
+        "alias_groups": 6,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "mount",
+        "installed": "2.41.5-0+deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "util-linux"
+          },
+          "version": "2.41.5-0+deb13u1"
+        },
+        "ids": 6,
+        "alias_groups": 6,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "util-linux",
+        "installed": "2.41.5-0+deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "util-linux"
+          },
+          "version": "2.41.5-0+deb13u1"
+        },
+        "ids": 6,
+        "alias_groups": 6,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "dirmngr",
+        "installed": "2.4.7-21+deb13u1+b5",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "gnupg2"
+          },
+          "version": "2.4.7-21+deb13u1"
+        },
+        "ids": 5,
+        "alias_groups": 5,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "gnupg",
+        "installed": "2.4.7-21+deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "gnupg2"
+          },
+          "version": "2.4.7-21+deb13u1"
+        },
+        "ids": 5,
+        "alias_groups": 5,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "gnupg-l10n",
+        "installed": "2.4.7-21+deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "gnupg2"
+          },
+          "version": "2.4.7-21+deb13u1"
+        },
+        "ids": 5,
+        "alias_groups": 5,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "gpg",
+        "installed": "2.4.7-21+deb13u1+b5",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "gnupg2"
+          },
+          "version": "2.4.7-21+deb13u1"
+        },
+        "ids": 5,
+        "alias_groups": 5,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "gpg-agent",
+        "installed": "2.4.7-21+deb13u1+b5",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "gnupg2"
+          },
+          "version": "2.4.7-21+deb13u1"
+        },
+        "ids": 5,
+        "alias_groups": 5,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "gpgconf",
+        "installed": "2.4.7-21+deb13u1+b5",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "gnupg2"
+          },
+          "version": "2.4.7-21+deb13u1"
+        },
+        "ids": 5,
+        "alias_groups": 5,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "gpgsm",
+        "installed": "2.4.7-21+deb13u1+b5",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "gnupg2"
+          },
+          "version": "2.4.7-21+deb13u1"
+        },
+        "ids": 5,
+        "alias_groups": 5,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libldap2",
+        "installed": "2.6.10+dfsg-1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "openldap"
+          },
+          "version": "2.6.10+dfsg-1"
+        },
+        "ids": 5,
+        "alias_groups": 5,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libsqlite3-0",
+        "installed": "3.46.1-7+deb13u2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "sqlite3"
+          },
+          "version": "3.46.1-7+deb13u2"
+        },
+        "ids": 5,
+        "alias_groups": 5,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "coreutils",
+        "installed": "9.7-3",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "coreutils"
+          },
+          "version": "9.7-3"
+        },
+        "ids": 4,
+        "alias_groups": 4,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libperl5.40",
+        "installed": "5.40.1-6+deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "perl"
+          },
+          "version": "5.40.1-6+deb13u1"
+        },
+        "ids": 4,
+        "alias_groups": 4,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "perl",
+        "installed": "5.40.1-6+deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "perl"
+          },
+          "version": "5.40.1-6+deb13u1"
+        },
+        "ids": 4,
+        "alias_groups": 4,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "perl-base",
+        "installed": "5.40.1-6+deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "perl"
+          },
+          "version": "5.40.1-6+deb13u1"
+        },
+        "ids": 4,
+        "alias_groups": 4,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "perl-modules-5.40",
+        "installed": "5.40.1-6+deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "perl"
+          },
+          "version": "5.40.1-6+deb13u1"
+        },
+        "ids": 4,
+        "alias_groups": 4,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "tar",
+        "installed": "1.35+dfsg-3.1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "tar"
+          },
+          "version": "1.35+dfsg-3.1"
+        },
+        "ids": 4,
+        "alias_groups": 4,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libllvm19",
+        "installed": "1:19.1.7-3+b1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "llvm-toolchain-19"
+          },
+          "version": "1:19.1.7-3"
+        },
+        "ids": 3,
+        "alias_groups": 3,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libxslt1.1",
+        "installed": "1.1.35-1.2+deb13u3",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "libxslt"
+          },
+          "version": "1.1.35-1.2+deb13u3"
+        },
+        "ids": 3,
+        "alias_groups": 3,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "dash",
+        "installed": "0.5.12-12",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "dash"
+          },
+          "version": "0.5.12-12"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "gcc-14-base",
+        "installed": "14.2.0-19",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "gcc-14"
+          },
+          "version": "14.2.0-19"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libacl1",
+        "installed": "2.3.2-2+b1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "acl"
+          },
+          "version": "2.3.2-2"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libgcc-s1",
+        "installed": "14.2.0-19",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "gcc-14"
+          },
+          "version": "14.2.0-19"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libgcrypt20",
+        "installed": "1.11.0-7+deb13u1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "libgcrypt20"
+          },
+          "version": "1.11.0-7+deb13u1"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libncursesw6",
+        "installed": "6.5+20250216-2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "ncurses"
+          },
+          "version": "6.5+20250216-2"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libp11-kit0",
+        "installed": "0.25.5-3",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "p11-kit"
+          },
+          "version": "0.25.5-3"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libpam-modules",
+        "installed": "1.7.0-5",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "pam"
+          },
+          "version": "1.7.0-5"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libpam-modules-bin",
+        "installed": "1.7.0-5",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "pam"
+          },
+          "version": "1.7.0-5"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libpam-runtime",
+        "installed": "1.7.0-5",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "pam"
+          },
+          "version": "1.7.0-5"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libpam0g",
+        "installed": "1.7.0-5",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "pam"
+          },
+          "version": "1.7.0-5"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libstdc++6",
+        "installed": "14.2.0-19",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "gcc-14"
+          },
+          "version": "14.2.0-19"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libtinfo6",
+        "installed": "6.5+20250216-2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "ncurses"
+          },
+          "version": "6.5+20250216-2"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "login.defs",
+        "installed": "1:4.17.4-2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "shadow"
+          },
+          "version": "1:4.17.4-2"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "ncurses-base",
+        "installed": "6.5+20250216-2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "ncurses"
+          },
+          "version": "6.5+20250216-2"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "ncurses-bin",
+        "installed": "6.5+20250216-2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "ncurses"
+          },
+          "version": "6.5+20250216-2"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "passwd",
+        "installed": "1:4.17.4-2",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "shadow"
+          },
+          "version": "1:4.17.4-2"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "zlib1g",
+        "installed": "1:1.3.dfsg+really1.3.1-1+b1",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "zlib"
+          },
+          "version": "1:1.3.dfsg+really1.3.1-1"
+        },
+        "ids": 2,
+        "alias_groups": 2,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "apt",
+        "installed": "3.0.3",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "apt"
+          },
+          "version": "3.0.3"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "diffutils",
+        "installed": "1:3.10-4",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "diffutils"
+          },
+          "version": "1:3.10-4"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libapt-pkg7.0",
+        "installed": "3.0.3",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "apt"
+          },
+          "version": "3.0.3"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libattr1",
+        "installed": "1:2.5.2-3",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "attr"
+          },
+          "version": "1:2.5.2-3"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libbz2-1.0",
+        "installed": "1.0.8-6",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "bzip2"
+          },
+          "version": "1.0.8-6"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libsasl2-2",
+        "installed": "2.1.28+dfsg1-9",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "cyrus-sasl2"
+          },
+          "version": "2.1.28+dfsg1-9"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": []
+      },
+      {
+        "package": "libsasl2-modules-db",
+        "installed": "2.1.28+dfsg1-9",
+        "query": {
+          "package": {
+            "ecosystem": "Debian:13",
+            "name": "cyrus-sasl2"
+          },
+          "version": "2.1.28+dfsg1-9"
+        },
+        "ids": 1,
+        "alias_groups": 1,
+        "matching_ecosystem_fixed_versions": []
+      }
+    ]
+  },
+  "langflow_rpm_supplement": {
+    "image_id": "sha256:7a9404bcf318e1db1ba232e60390310b90a2272c97d0dafe917d4ce0834758ec",
+    "observed_ids": 23,
+    "alias_groups": 23,
+    "rpm_software": 223,
+    "metadata_public_keys": 3,
+    "matched_software": 50,
+    "unknown": 0
+  },
+  "method": {
+    "at": "2026-11-01T00:51:25.666185+00:00",
+    "alias_groups": "union only upstream declared id/aliases, symmetric/transitive; no merging RHSA CVE references",
+    "fixed_versions": "only affected records matching exact query ecosystem and package; empty means no such fixed event in this service record, not proof no patch exists",
+    "scope": "potential package matches, not exploitability; no invented severity; no risk acceptance",
+    "inputs": [
+      {
+        "path": "images/summary.json",
+        "sha256": "2054159ef4cd8b7e2b8601fcf676774c008aae62407628322fdeffa7462e7d7d"
+      },
+      {
+        "path": "images/vulnerabilities.json",
+        "sha256": "030b7e33e8fd7e5734e642bc5cfe91d9c10fdcd4836458c5a09e34641a606a9e"
+      },
+      {
+        "path": "postgres/summary.json",
+        "sha256": "6d1d62ae586dd4e28efed7af502c865480cf84244b07701e244297a61511e821"
+      },
+      {
+        "path": "postgres/vulnerabilities.json",
+        "sha256": "75fb5d643722f9e5972254547c111c555b61e31408514bc867346224f72f18a8"
+      },
+      {
+        "path": "rhel/summary.json",
+        "sha256": "165f5f908d13e40c30065f45b09f233052e8fb2d2c4e9e99691c70722b108ba5"
+      },
+      {
+        "path": "rhel/vulnerabilities.json",
+        "sha256": "fbf5a9e1d13bcd5481c6f003c451db53ac0519c7a4c00f192d75d1b0fe492a81"
+      }
+    ]
+  }
+}

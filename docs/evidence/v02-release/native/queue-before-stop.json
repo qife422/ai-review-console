@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-01T01:20:10.999133+00:00",
+  "states": {
+    "failed": 4,
+    "succeeded": 14
+  },
+  "active_jobs": 0,
+  "method": "read-only SELECT workflow_jobs group by state on task-owned isolated release database"
+}

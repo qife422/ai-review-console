@@ -1,0 +1,14 @@
+
+(!) outDir /private/tmp/arc-v02-release-close.p3RyvK/frontend/dist is not inside project root and will not be emptied.
+Use --emptyOutDir to override.
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[33m[PLUGIN_TIMINGS] [0mYour build spent 98% of 5.9s inside plugin hooks (5.7s).
+Measured inside the callback, so queue time is excluded and time the callback itself awaited is not:
+  - vite:css transform (96%, 5.7s, 1 call)
+See https://rolldown.rs/reference/InputOptions.checks#plugintimings for more details.
+

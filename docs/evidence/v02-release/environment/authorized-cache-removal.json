@@ -1,0 +1,16 @@
+{
+  "authorized_by": "2026-10-31 user reply: 允许删除这项缓存并继续（推荐）",
+  "exact_target": "/private/tmp/arc-v02-release-close.p3RyvK/tool-cache/grype-db",
+  "classification": "aborted newly generated DB cache, not evidence",
+  "contents": [
+    {
+      "path": "grype-db-download254135768/vulnerability.db",
+      "bytes": 2966994944
+    }
+  ],
+  "before_free_bytes": 8516956160,
+  "started_at": "2026-11-01T01:06:22.443575+00:00",
+  "target_absent": true,
+  "after_free_bytes": 11494453248,
+  "ended_at": "2026-11-01T01:06:26.216664+00:00"
+}

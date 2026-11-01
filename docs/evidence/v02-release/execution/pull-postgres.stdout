@@ -1,0 +1,46 @@
+docker.io/library/postgres@sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c: Pulling from library/postgres
+2b70e040f7d1: Pulling fs layer
+cf2bffa63afa: Pulling fs layer
+d056b4173d10: Pulling fs layer
+d24ad6406b14: Pulling fs layer
+8efed7921649: Pulling fs layer
+1666717a30cc: Pulling fs layer
+799ec0c29631: Pulling fs layer
+0c662641eb4e: Pulling fs layer
+cfd0730e8b44: Pulling fs layer
+50dc702eaf05: Pulling fs layer
+284c79db9f3e: Pulling fs layer
+e8d8b84da68a: Pulling fs layer
+b432fb757bf0: Pulling fs layer
+97f9b0a89f6b: Pulling fs layer
+d24ad6406b14: Download complete
+97f9b0a89f6b: Download complete
+d056b4173d10: Download complete
+1666717a30cc: Download complete
+e8d8b84da68a: Download complete
+8efed7921649: Download complete
+b432fb757bf0: Download complete
+cf2bffa63afa: Download complete
+799ec0c29631: Download complete
+284c79db9f3e: Download complete
+0c662641eb4e: Download complete
+2b70e040f7d1: Download complete
+cfd0730e8b44: Download complete
+2b70e040f7d1: Pull complete
+50dc702eaf05: Download complete
+1666717a30cc: Pull complete
+0c662641eb4e: Pull complete
+284c79db9f3e: Pull complete
+b432fb757bf0: Pull complete
+cf2bffa63afa: Pull complete
+799ec0c29631: Pull complete
+cfd0730e8b44: Pull complete
+d24ad6406b14: Pull complete
+97f9b0a89f6b: Pull complete
+d056b4173d10: Pull complete
+e8d8b84da68a: Pull complete
+8efed7921649: Pull complete
+50dc702eaf05: Pull complete
+Digest: sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c
+Status: Downloaded newer image for postgres@sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c
+docker.io/library/postgres:16.15-trixie@sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c

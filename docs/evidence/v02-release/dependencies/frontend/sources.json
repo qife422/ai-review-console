@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-11-01T00:46:43.976494+00:00",
+  "sources": [
+    {
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-9jrq-w75r-8gcw",
+      "supports": "Vite 8.2.4 is patched within existing 8.2 maintenance line."
+    },
+    {
+      "url": "https://github.com/vitest-dev/vitest/security/advisories/GHSA-xp26-3454-mjgp",
+      "supports": "Vitest mocker 4.1.12 patches Windows redirect traversal bypass."
+    },
+    {
+      "url": "https://github.com/nodejs/undici/security/advisories/GHSA-2m5v-pch6-74hx",
+      "supports": "Undici 7.30.1 patches Agent TLS option loss."
+    },
+    {
+      "url": "https://vite.dev/config/build-options#build-license",
+      "supports": "Vite build.license emits bundled dependency license text to configured outDir fileName."
+    },
+    {
+      "url": "https://registry.npmjs.org",
+      "supports": "Exact package/version metadata and fresh all/runtime audit API results; local captured JSON and commands are authoritative observed result."
+    }
+  ],
+  "failed_lookup": {
+    "url": "https://github.com/7rulnik/source-map-js/security/advisories/GHSA-68fv-2mgg-jv7q",
+    "observed": "HTTP404; not used as evidence of patched version, npm audit and exact registry package metadata used."
+  },
+  "remaining_scope": "Public online demo was not redeployed; exact-source npm ci and browser workflow deferred to root CI."
+}

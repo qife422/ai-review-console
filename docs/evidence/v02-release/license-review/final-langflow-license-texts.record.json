@@ -1,0 +1,23 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "-i",
+    "--read-only",
+    "--network",
+    "none",
+    "--cap-drop",
+    "ALL",
+    "--entrypoint",
+    "python",
+    "sha256:7a9404bcf318e1db1ba232e60390310b90a2272c97d0dafe917d4ce0834758ec",
+    "-",
+    "langflow"
+  ],
+  "started_at": "2026-11-01T00:48:23.249747+00:00",
+  "ended_at": "2026-11-01T00:48:24.982997+00:00",
+  "exit_code": 0,
+  "producer_sha256": "8507b92a7fc3f9d49f364481a6fb32c78be889a61cf6477973684df824c2ac8b",
+  "output_sha256": "afde3fb0a5b33b5d01b5a64867b0b7eda9ba235e1fdf26eaa2f6c2973b2ba29c"
+}

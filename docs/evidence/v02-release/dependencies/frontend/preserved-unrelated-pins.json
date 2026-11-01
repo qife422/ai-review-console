@@ -1,0 +1,17 @@
+{
+  "pins": [
+    {
+      "name": "@types/estree",
+      "version": "1.0.9"
+    },
+    {
+      "name": "chai",
+      "version": "6.2.2"
+    },
+    {
+      "name": "tinyrainbow",
+      "version": "3.1.1"
+    }
+  ],
+  "reason": "Existing versions satisfy all patched Vitest and Vite dependency ranges; preserve unrelated pins."
+}

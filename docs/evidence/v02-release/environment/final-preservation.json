@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-01T01:21:55.155693+00:00",
+  "docker_engine_healthy": true,
+  "running_containers": 0,
+  "task_project": "ai-review-console-release",
+  "active_jobs_before_stop": 0,
+  "original_sqlite": {
+    "bytes": 57344,
+    "sha256": "980ad5d23d866a52e4101966594e5a24ee67edef08475afc63ff9c3e1f6fca1f"
+  },
+  "preservation": "original/historical volumes were not migrated or cleaned; task-owned release volumes, cases, reports and all images retained; only explicitly authorized aborted Grype DB removed"
+}

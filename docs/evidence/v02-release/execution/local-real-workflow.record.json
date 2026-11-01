@@ -1,0 +1,28 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "scripts/validate_langflow.py",
+    "--api-url",
+    "http://127.0.0.1:8080",
+    "--evidence",
+    "/private/tmp/arc-v02-release-close.p3RyvK/workflow.json"
+  ],
+  "cwd": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1",
+  "started_at": "2026-11-01T00:51:02.464931+00:00",
+  "ended_at": "2026-11-01T00:51:26.208315+00:00",
+  "elapsed_seconds": 23.743161667138338,
+  "exit_code": 0,
+  "stop_reason": null,
+  "files": {
+    "stdout": {
+      "path": "/private/tmp/arc-v02-release-close.p3RyvK/steps/local-real-workflow.stdout",
+      "bytes": 7096,
+      "sha256": "a413580d68346bfd5a5ef0f22b53d79fe725b9e1b0d0a1c20bed6b97c7f4946d"
+    },
+    "stderr": {
+      "path": "/private/tmp/arc-v02-release-close.p3RyvK/steps/local-real-workflow.stderr",
+      "bytes": 238,
+      "sha256": "f96a0b1e4617c707ee72d761c24e908ac78538398de9b192b7e51fd8fea09312"
+    }
+  }
+}

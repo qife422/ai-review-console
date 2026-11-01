@@ -1,0 +1,31 @@
+{
+  "downloaded_at": "2026-11-01T01:07:27.701306+00:00",
+  "producer": "GitHub connector download_workflow_artifact file URI fetched with bounded urllib",
+  "artifact_id": 13064393009,
+  "source_commit": "fac92ea797c96cd8d12581bf616d0295e8312186",
+  "run_id": 41259579902,
+  "zip_bytes": 3523,
+  "zip_sha256": "3c2788d53df02fc786f9996606d3230388d9a276aac51feff20ab8f389288525",
+  "all_zip_entries": [
+    {
+      "path": "arc-unit.xml",
+      "bytes": 21224,
+      "compressed_bytes": 3385
+    }
+  ],
+  "selected": [
+    "arc-unit.xml"
+  ],
+  "junit_suites": [
+    {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "154",
+      "time": "4.943",
+      "timestamp": "2026-11-01T01:06:06.425605+00:00",
+      "hostname": "runnervm48cm3"
+    }
+  ]
+}

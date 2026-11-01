@@ -1,0 +1,615 @@
+{
+  "artifact_id": 13064656647,
+  "source_commit": "fac92ea797c96cd8d12581bf616d0295e8312186",
+  "run_id": 41259579902,
+  "downloaded_at": "2026-11-01T01:13:36.620132+00:00",
+  "zip_bytes": 3907183,
+  "zip_sha256": "149845eed584d727ed3727dab639f7e8ef492937cd5f0adac98c918f8fa63a59",
+  "groups": {
+    "browser": {
+      "files": 21,
+      "bytes": 3253169
+    },
+    "chinese-browser-font-version.txt": {
+      "files": 1,
+      "bytes": 233
+    },
+    "chinese-browser-font.txt": {
+      "files": 1,
+      "bytes": 13
+    },
+    "release": {
+      "files": 89,
+      "bytes": 13827448
+    },
+    "runtime.log": {
+      "files": 1,
+      "bytes": 16206
+    },
+    "services.json": {
+      "files": 1,
+      "bytes": 8945
+    },
+    "workflow.json": {
+      "files": 1,
+      "bytes": 7093
+    }
+  },
+  "files": [
+    {
+      "path": "browser/commands.log",
+      "bytes": 509108,
+      "compressed_bytes": 30049
+    },
+    {
+      "path": "browser/dashboard-1440-dark.png",
+      "bytes": 214051,
+      "compressed_bytes": 201412
+    },
+    {
+      "path": "browser/dashboard-1440-light.png",
+      "bytes": 213670,
+      "compressed_bytes": 201073
+    },
+    {
+      "path": "browser/dashboard-390-dark.png",
+      "bytes": 203163,
+      "compressed_bytes": 191701
+    },
+    {
+      "path": "browser/dashboard-390-light.png",
+      "bytes": 199297,
+      "compressed_bytes": 186928
+    },
+    {
+      "path": "browser/dashboard-loading-390-light.png",
+      "bytes": 15033,
+      "compressed_bytes": 12068
+    },
+    {
+      "path": "browser/dashboard-offline-390-light.png",
+      "bytes": 20512,
+      "compressed_bytes": 17659
+    },
+    {
+      "path": "browser/intake-completed-1440-dark.png",
+      "bytes": 209501,
+      "compressed_bytes": 199119
+    },
+    {
+      "path": "browser/intake-completed-1440-light.png",
+      "bytes": 208901,
+      "compressed_bytes": 198508
+    },
+    {
+      "path": "browser/intake-completed-390-dark.png",
+      "bytes": 197524,
+      "compressed_bytes": 186654
+    },
+    {
+      "path": "browser/intake-completed-390-light.png",
+      "bytes": 195645,
+      "compressed_bytes": 183801
+    },
+    {
+      "path": "browser/queue-empty-390-light.png",
+      "bytes": 47436,
+      "compressed_bytes": 44693
+    },
+    {
+      "path": "browser/reports-ready-1440-dark.png",
+      "bytes": 217247,
+      "compressed_bytes": 205866
+    },
+    {
+      "path": "browser/report-partial-retry-390-light.png",
+      "bytes": 50153,
+      "compressed_bytes": 46739
+    },
+    {
+      "path": "browser/reports-ready-1440-light.png",
+      "bytes": 216361,
+      "compressed_bytes": 205531
+    },
+    {
+      "path": "browser/report-integrity-error-390-light.png",
+      "bytes": 52001,
+      "compressed_bytes": 48439
+    },
+    {
+      "path": "browser/reports-ready-390-dark.png",
+      "bytes": 206007,
+      "compressed_bytes": 194771
+    },
+    {
+      "path": "browser/reports-ready-390-light.png",
+      "bytes": 203165,
+      "compressed_bytes": 191870
+    },
+    {
+      "path": "browser/result.json",
+      "bytes": 17125,
+      "compressed_bytes": 4054
+    },
+    {
+      "path": "browser/synthetic-intake.txt",
+      "bytes": 192,
+      "compressed_bytes": 174
+    },
+    {
+      "path": "browser/upload-modal-keyboard-390-light.png",
+      "bytes": 57077,
+      "compressed_bytes": 54679
+    },
+    {
+      "path": "chinese-browser-font-version.txt",
+      "bytes": 233,
+      "compressed_bytes": 132
+    },
+    {
+      "path": "chinese-browser-font.txt",
+      "bytes": 13,
+      "compressed_bytes": 15
+    },
+    {
+      "path": "release/api-container.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/api-image.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/api-image.stdout",
+      "bytes": 95,
+      "compressed_bytes": 81
+    },
+    {
+      "path": "release/api-container.stdout",
+      "bytes": 65,
+      "compressed_bytes": 54
+    },
+    {
+      "path": "release/api-pip-check.stderr",
+      "bytes": 266,
+      "compressed_bytes": 180
+    },
+    {
+      "path": "release/api-pip-check.stdout",
+      "bytes": 30,
+      "compressed_bytes": 32
+    },
+    {
+      "path": "release/image-audit.stdout",
+      "bytes": 152,
+      "compressed_bytes": 115
+    },
+    {
+      "path": "release/image-audit.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/image-licenses.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/image-licenses.stdout",
+      "bytes": 606,
+      "compressed_bytes": 315
+    },
+    {
+      "path": "release/images/api-identity.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/images/api-identity.stdout",
+      "bytes": 152,
+      "compressed_bytes": 127
+    },
+    {
+      "path": "release/images/api-inventory.json",
+      "bytes": 60494,
+      "compressed_bytes": 5262
+    },
+    {
+      "path": "release/images/api-licenses.json",
+      "bytes": 68061,
+      "compressed_bytes": 5312
+    },
+    {
+      "path": "release/images/api-os.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/images/api-os.stdout",
+      "bytes": 44689,
+      "compressed_bytes": 4530
+    },
+    {
+      "path": "release/images/api-python.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/images/api-python.stdout",
+      "bytes": 28437,
+      "compressed_bytes": 2457
+    },
+    {
+      "path": "release/images/api.cdx.json",
+      "bytes": 96126,
+      "compressed_bytes": 6608
+    },
+    {
+      "path": "release/images/api.spdx.json",
+      "bytes": 95416,
+      "compressed_bytes": 5079
+    },
+    {
+      "path": "release/images/http-records.json",
+      "bytes": 265627,
+      "compressed_bytes": 29912
+    },
+    {
+      "path": "release/images/langflow-identity.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/images/langflow-identity.stdout",
+      "bytes": 153,
+      "compressed_bytes": 127
+    },
+    {
+      "path": "release/images/langflow-inventory.json",
+      "bytes": 309099,
+      "compressed_bytes": 29087
+    },
+    {
+      "path": "release/images/langflow-licenses.json",
+      "bytes": 341462,
+      "compressed_bytes": 30626
+    },
+    {
+      "path": "release/images/langflow-os.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/images/langflow-os.stdout",
+      "bytes": 21395,
+      "compressed_bytes": 4584
+    },
+    {
+      "path": "release/images/langflow-python.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/images/langflow-python.stdout",
+      "bytes": 776248,
+      "compressed_bytes": 76169
+    },
+    {
+      "path": "release/images/langflow.cdx.json",
+      "bytes": 511248,
+      "compressed_bytes": 39128
+    },
+    {
+      "path": "release/images/langflow.spdx.json",
+      "bytes": 513392,
+      "compressed_bytes": 23895
+    },
+    {
+      "path": "release/images/manifest.json",
+      "bytes": 88997,
+      "compressed_bytes": 9351
+    },
+    {
+      "path": "release/images/package-mappings.json",
+      "bytes": 887942,
+      "compressed_bytes": 64368
+    },
+    {
+      "path": "release/images/postgres-identity.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/images/postgres-identity.stdout",
+      "bytes": 234,
+      "compressed_bytes": 179
+    },
+    {
+      "path": "release/images/postgres-inventory.json",
+      "bytes": 77818,
+      "compressed_bytes": 6342
+    },
+    {
+      "path": "release/images/postgres-licenses.json",
+      "bytes": 86454,
+      "compressed_bytes": 6320
+    },
+    {
+      "path": "release/images/postgres-os.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/images/postgres-os.stdout",
+      "bytes": 93776,
+      "compressed_bytes": 7601
+    },
+    {
+      "path": "release/images/postgres-python.stdout",
+      "bytes": 38,
+      "compressed_bytes": 40
+    },
+    {
+      "path": "release/images/postgres-python.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/images/postgres.cdx.json",
+      "bytes": 112593,
+      "compressed_bytes": 7802
+    },
+    {
+      "path": "release/images/postgres.spdx.json",
+      "bytes": 98726,
+      "compressed_bytes": 5184
+    },
+    {
+      "path": "release/images/summary.json",
+      "bytes": 65859,
+      "compressed_bytes": 5410
+    },
+    {
+      "path": "release/images/vulnerabilities.json",
+      "bytes": 1996166,
+      "compressed_bytes": 375833
+    },
+    {
+      "path": "release/images/web-identity.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/images/web-identity.stdout",
+      "bytes": 151,
+      "compressed_bytes": 126
+    },
+    {
+      "path": "release/images/web-inventory.json",
+      "bytes": 20965,
+      "compressed_bytes": 1749
+    },
+    {
+      "path": "release/images/web-licenses.json",
+      "bytes": 24005,
+      "compressed_bytes": 1740
+    },
+    {
+      "path": "release/images/web-os.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/images/web-python.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/images/web-os.stdout",
+      "bytes": 102872,
+      "compressed_bytes": 43211
+    },
+    {
+      "path": "release/images/web-python.stdout",
+      "bytes": 38,
+      "compressed_bytes": 40
+    },
+    {
+      "path": "release/images/web.spdx.json",
+      "bytes": 49463,
+      "compressed_bytes": 2807
+    },
+    {
+      "path": "release/images/web.cdx.json",
+      "bytes": 45377,
+      "compressed_bytes": 2745
+    },
+    {
+      "path": "release/langflow-container.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/langflow-container.stdout",
+      "bytes": 65,
+      "compressed_bytes": 54
+    },
+    {
+      "path": "release/langflow-image.stdout",
+      "bytes": 100,
+      "compressed_bytes": 86
+    },
+    {
+      "path": "release/langflow-pip-check.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/langflow-image.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/langflow-pip-check.stdout",
+      "bytes": 30,
+      "compressed_bytes": 32
+    },
+    {
+      "path": "release/licenses/api.json",
+      "bytes": 164152,
+      "compressed_bytes": 42598
+    },
+    {
+      "path": "release/licenses/langflow.json",
+      "bytes": 1114046,
+      "compressed_bytes": 185236
+    },
+    {
+      "path": "release/licenses/manifest.json",
+      "bytes": 1613,
+      "compressed_bytes": 749
+    },
+    {
+      "path": "release/licenses/web.json",
+      "bytes": 95767,
+      "compressed_bytes": 11864
+    },
+    {
+      "path": "release/manifest.json",
+      "bytes": 23287,
+      "compressed_bytes": 5101
+    },
+    {
+      "path": "release/postgres-container.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/postgres-container.stdout",
+      "bytes": 65,
+      "compressed_bytes": 54
+    },
+    {
+      "path": "release/postgres-image.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/postgres-image.stdout",
+      "bytes": 100,
+      "compressed_bytes": 87
+    },
+    {
+      "path": "release/rhel/http-records.json",
+      "bytes": 159070,
+      "compressed_bytes": 11237
+    },
+    {
+      "path": "release/rhel/langflow-identity.stdout",
+      "bytes": 104,
+      "compressed_bytes": 88
+    },
+    {
+      "path": "release/rhel/langflow-identity.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/rhel/langflow-os.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/rhel/langflow-os.stdout",
+      "bytes": 21395,
+      "compressed_bytes": 4584
+    },
+    {
+      "path": "release/rhel/langflow-redhat-metadata.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/rhel/langflow-redhat-metadata.stdout",
+      "bytes": 23106,
+      "compressed_bytes": 4800
+    },
+    {
+      "path": "release/rhel/manifest.json",
+      "bytes": 45955,
+      "compressed_bytes": 4971
+    },
+    {
+      "path": "release/rhel/product-bindings.json",
+      "bytes": 1807,
+      "compressed_bytes": 665
+    },
+    {
+      "path": "release/rhel/repository-to-cpe.json",
+      "bytes": 4368758,
+      "compressed_bytes": 161020
+    },
+    {
+      "path": "release/rhel/rpm-mappings.json",
+      "bytes": 330741,
+      "compressed_bytes": 17722
+    },
+    {
+      "path": "release/rhel/summary.json",
+      "bytes": 39124,
+      "compressed_bytes": 2573
+    },
+    {
+      "path": "release/rhel/vulnerabilities.json",
+      "bytes": 553143,
+      "compressed_bytes": 18334
+    },
+    {
+      "path": "release/rhel-audit.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/rhel-audit.stdout",
+      "bytes": 173,
+      "compressed_bytes": 122
+    },
+    {
+      "path": "release/web-container.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/web-container.stdout",
+      "bytes": 65,
+      "compressed_bytes": 54
+    },
+    {
+      "path": "release/web-image.stderr",
+      "bytes": 0,
+      "compressed_bytes": 2
+    },
+    {
+      "path": "release/web-image.stdout",
+      "bytes": 95,
+      "compressed_bytes": 81
+    },
+    {
+      "path": "runtime.log",
+      "bytes": 16206,
+      "compressed_bytes": 2003
+    },
+    {
+      "path": "services.json",
+      "bytes": 8945,
+      "compressed_bytes": 2316
+    },
+    {
+      "path": "workflow.json",
+      "bytes": 7093,
+      "compressed_bytes": 2409
+    }
+  ]
+}

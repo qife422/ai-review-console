@@ -1,0 +1,46 @@
+{
+  "node_modules/@vitest/expect": {
+    "before": "4.1.11",
+    "after": "4.1.12"
+  },
+  "node_modules/@vitest/mocker": {
+    "before": "4.1.11",
+    "after": "4.1.12"
+  },
+  "node_modules/@vitest/pretty-format": {
+    "before": "4.1.11",
+    "after": "4.1.12"
+  },
+  "node_modules/@vitest/runner": {
+    "before": "4.1.11",
+    "after": "4.1.12"
+  },
+  "node_modules/@vitest/snapshot": {
+    "before": "4.1.11",
+    "after": "4.1.12"
+  },
+  "node_modules/@vitest/spy": {
+    "before": "4.1.11",
+    "after": "4.1.12"
+  },
+  "node_modules/@vitest/utils": {
+    "before": "4.1.11",
+    "after": "4.1.12"
+  },
+  "node_modules/source-map-js": {
+    "before": "1.2.1",
+    "after": "1.2.2"
+  },
+  "node_modules/undici": {
+    "before": "7.29.0",
+    "after": "7.30.1"
+  },
+  "node_modules/vite": {
+    "before": "8.2.2",
+    "after": "8.2.4"
+  },
+  "node_modules/vitest": {
+    "before": "4.1.11",
+    "after": "4.1.12"
+  }
+}

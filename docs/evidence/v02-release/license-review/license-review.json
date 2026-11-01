@@ -1,0 +1,488 @@
+{
+  "created_at": "2026-11-01T00:45:23.125054+00:00",
+  "scope": "Exact baseline image license metadata triage, applicable notices and remaining distribution work; not independent legal approval",
+  "baseline_images": {
+    "api": "sha256:f0cf8dc583f3e7523675748fd1841dd708655ed3783f022fafb9955815a4c95a",
+    "langflow": "sha256:ff0f5cc380743034c05b4bfcf587be0e714da1610799f0c7c41d45902a5267c4",
+    "web": "sha256:827925e33497504894c22220231543a2eef36c4a7e5581d86349797d63220124"
+  },
+  "unknown_metadata_triage": [
+    {
+      "image": "api-baseline",
+      "package": "base-files",
+      "state": "copyright_text_identified",
+      "resolution": "GPL-2.0-or-later for package programs; bundled license texts retain their own terms",
+      "evidence": {
+        "path": "/usr/share/doc/base-files/copyright",
+        "sha256": "fd7e4aae7e7b05f217bcf2d02322825c360e66c52c4c2f1b28d784d6297a1c23",
+        "bytes": 1208
+      },
+      "limit": "This is manual identification of complete prose/multi-file notices; not a single SPDX expression or complete binary-source distribution signoff."
+    },
+    {
+      "image": "api-baseline",
+      "package": "debian-archive-keyring",
+      "state": "copyright_text_identified",
+      "resolution": "Keys not copyrighted; Debian support files GPL-2.0-or-later",
+      "evidence": {
+        "path": "/usr/share/doc/debian-archive-keyring/copyright",
+        "sha256": "b32aecaae84643700a33bc9ee83fa9b36938d35aa7b61b5042092eca77ddb732",
+        "bytes": 1243
+      },
+      "limit": "This is manual identification of complete prose/multi-file notices; not a single SPDX expression or complete binary-source distribution signoff."
+    },
+    {
+      "image": "api-baseline",
+      "package": "gcc-12-base",
+      "state": "copyright_text_identified",
+      "resolution": "GCC GPL-3.0-or-later; file-specific exceptions and additional terms in copyright",
+      "evidence": {
+        "path": "/usr/share/doc/gcc-12-base/copyright",
+        "sha256": "da8191658b3452ce9caf31638ba61dab31a38c619fa39df119812e050f592fd3",
+        "bytes": 68194
+      },
+      "limit": "This is manual identification of complete prose/multi-file notices; not a single SPDX expression or complete binary-source distribution signoff."
+    },
+    {
+      "image": "api-baseline",
+      "package": "libc-bin",
+      "state": "copyright_text_identified",
+      "resolution": "glibc utilities GPL-2.0-or-later; other bundled files retain listed terms",
+      "evidence": {
+        "path": "/usr/share/doc/libc-bin/copyright",
+        "sha256": "40c7e1f2118531f038ca22999bd976901254e1bc5cd1b0f0211bdd064c599987",
+        "bytes": 25467
+      },
+      "limit": "This is manual identification of complete prose/multi-file notices; not a single SPDX expression or complete binary-source distribution signoff."
+    },
+    {
+      "image": "api-baseline",
+      "package": "libc6",
+      "state": "copyright_text_identified",
+      "resolution": "glibc library predominantly LGPL-2.1-or-later; per-file additional notices retained",
+      "evidence": {
+        "path": "/usr/share/doc/libc6/copyright",
+        "sha256": "40c7e1f2118531f038ca22999bd976901254e1bc5cd1b0f0211bdd064c599987",
+        "bytes": 25467
+      },
+      "limit": "This is manual identification of complete prose/multi-file notices; not a single SPDX expression or complete binary-source distribution signoff."
+    },
+    {
+      "image": "api-baseline",
+      "package": "libcrypt1",
+      "state": "copyright_text_identified",
+      "resolution": "Overall LGPL-2.1-or-later plus per-file BSD/public-domain etc.",
+      "evidence": {
+        "path": "/usr/share/doc/libcrypt1/copyright",
+        "sha256": "5a5e7ca0e9f3f9679977e3a3e9ede45ad92885a3297ea78e766979f9866c5a16",
+        "bytes": 6010
+      },
+      "limit": "This is manual identification of complete prose/multi-file notices; not a single SPDX expression or complete binary-source distribution signoff."
+    },
+    {
+      "image": "api-baseline",
+      "package": "libgcc-s1",
+      "state": "copyright_text_identified",
+      "resolution": "GPL-3.0-or-later WITH GCC-exception-3.1 for libgcc runtime; retain full multi-file copyright",
+      "evidence": {
+        "path": "/usr/share/doc/libgcc-s1/copyright",
+        "sha256": "da8191658b3452ce9caf31638ba61dab31a38c619fa39df119812e050f592fd3",
+        "bytes": 68194
+      },
+      "limit": "This is manual identification of complete prose/multi-file notices; not a single SPDX expression or complete binary-source distribution signoff."
+    },
+    {
+      "image": "api-baseline",
+      "package": "libgcrypt20",
+      "state": "copyright_text_identified",
+      "resolution": "Library LGPL-2.1-or-later; manual/tools GPL-2.0-or-later; extra contribution notices",
+      "evidence": {
+        "path": "/usr/share/doc/libgcrypt20/copyright",
+        "sha256": "95db2f9da663f2bfe2aabe9c72fce9d6c9ae767b912f397d7823f50bd55a1a7d",
+        "bytes": 24896
+      },
+      "limit": "This is manual identification of complete prose/multi-file notices; not a single SPDX expression or complete binary-source distribution signoff."
+    },
+    {
+      "image": "api-baseline",
+      "package": "libgssapi-krb5-2",
+      "state": "copyright_text_identified",
+      "resolution": "MIT Kerberos BSD-style license and per-file notices; documents CC-BY-SA-3.0",
+      "evidence": {
+        "path": "/usr/share/doc/libgssapi-krb5-2/copyright",
+        "sha256": "936728f4181718f42951b881c1e8f1386bf6b2723c4fbc533c374d6f42c71816",
+        "bytes": 63047
+      },
+      "limit": "This is manual identification of complete prose/multi-file notices; not a single SPDX expression or complete binary-source distribution signoff."
+    },
+    {
+      "image": "api-baseline",
+      "package": "libk5crypto3",
+      "state": "copyright_text_identified",
+      "resolution": "MIT Kerberos BSD-style license and per-file notices; documents CC-BY-SA-3.0",
+      "evidence": {
+        "path": "/usr/share/doc/libk5crypto3/copyright",
+        "sha256": "936728f4181718f42951b881c1e8f1386bf6b2723c4fbc533c374d6f42c71816",
+        "bytes": 63047
+      },
+      "limit": "This is manual identification of complete prose/multi-file notices; not a single SPDX expression or complete binary-source distribution signoff."
+    },
+    {
+      "image": "api-baseline",
+      "package": "libkrb5-3",
+      "state": "copyright_text_identified",
+      "resolution": "MIT Kerberos BSD-style license and per-file notices; documents CC-BY-SA-3.0",
+      "evidence": {
+        "path": "/usr/share/doc/libkrb5-3/copyright",
+        "sha256": "936728f4181718f42951b881c1e8f1386bf6b2723c4fbc533c374d6f42c71816",
+        "bytes": 63047
+      },
+      "limit": "This is manual identification of complete prose/multi-file notices; not a single SPDX expression or complete binary-source distribution signoff."
+    },
+    {
+      "image": "api-baseline",
+      "package": "libkrb5support0",
+      "state": "copyright_text_identified",
+      "resolution": "MIT Kerberos BSD-style license and per-file notices; documents CC-BY-SA-3.0",
+      "evidence": {
+        "path": "/usr/share/doc/libkrb5support0/copyright",
+        "sha256": "936728f4181718f42951b881c1e8f1386bf6b2723c4fbc533c374d6f42c71816",
+        "bytes": 63047
+      },
+      "limit": "This is manual identification of complete prose/multi-file notices; not a single SPDX expression or complete binary-source distribution signoff."
+    },
+    {
+      "image": "api-baseline",
+      "package": "libselinux1",
+      "state": "copyright_text_identified",
+      "resolution": "libselinux public domain; other utilities/contributions GPL-2.0/LGPL-2.1-or-later per copyright",
+      "evidence": {
+        "path": "/usr/share/doc/libselinux1/copyright",
+        "sha256": "641806738b0c6a3d03168c2649e6b94205198bb66cd557e6bae3a20b71c9bb0b",
+        "bytes": 3131
+      },
+      "limit": "This is manual identification of complete prose/multi-file notices; not a single SPDX expression or complete binary-source distribution signoff."
+    },
+    {
+      "image": "api-baseline",
+      "package": "libsemanage-common",
+      "state": "copyright_text_identified",
+      "resolution": "LGPL-2.1-or-later, as stated in full copyright prose",
+      "evidence": {
+        "path": "/usr/share/doc/libsemanage-common/copyright",
+        "sha256": "e00e6a86c598f9e24ced0180a70a5f2f2e45e133d93adf2b17ce8a06ce4b1b51",
+        "bytes": 1830
+      },
+      "limit": "This is manual identification of complete prose/multi-file notices; not a single SPDX expression or complete binary-source distribution signoff."
+    },
+    {
+      "image": "api-baseline",
+      "package": "libsemanage2",
+      "state": "copyright_text_identified",
+      "resolution": "LGPL-2.1-or-later, as stated in full copyright prose",
+      "evidence": {
+        "path": "/usr/share/doc/libsemanage2/copyright",
+        "sha256": "e00e6a86c598f9e24ced0180a70a5f2f2e45e133d93adf2b17ce8a06ce4b1b51",
+        "bytes": 1830
+      },
+      "limit": "This is manual identification of complete prose/multi-file notices; not a single SPDX expression or complete binary-source distribution signoff."
+    },
+    {
+      "image": "api-baseline",
+      "package": "libstdc++6",
+      "state": "copyright_text_identified",
+      "resolution": "GPL-3.0-or-later WITH GCC-exception-3.1 for libstdc++ runtime; retain full multi-file copyright",
+      "evidence": {
+        "path": "/usr/share/doc/libstdc++6/copyright",
+        "sha256": "da8191658b3452ce9caf31638ba61dab31a38c619fa39df119812e050f592fd3",
+        "bytes": 68194
+      },
+      "limit": "This is manual identification of complete prose/multi-file notices; not a single SPDX expression or complete binary-source distribution signoff."
+    },
+    {
+      "image": "api-baseline",
+      "package": "libtasn1-6",
+      "state": "copyright_text_identified",
+      "resolution": "Library LGPL-2.1-or-later; build/tests/tools GPL-3.0-or-later",
+      "evidence": {
+        "path": "/usr/share/doc/libtasn1-6/copyright",
+        "sha256": "572ad60ad184d8f52c6dc66d83a61a68f137db560b3452ce00588c9ecf128a65",
+        "bytes": 3451
+      },
+      "limit": "This is manual identification of complete prose/multi-file notices; not a single SPDX expression or complete binary-source distribution signoff."
+    },
+    {
+      "image": "langflow-baseline",
+      "package": "google-crc32c",
+      "version": "1.8.0",
+      "state": "license_identified",
+      "resolution": "Apache-2.0",
+      "evidence": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/google_crc32c-1.8.0.dist-info/licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358
+        }
+      ],
+      "source": "installed package license file"
+    },
+    {
+      "image": "langflow-baseline",
+      "package": "llm-sandbox",
+      "version": "0.3.39",
+      "state": "license_identified",
+      "resolution": "MIT",
+      "evidence": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/llm_sandbox-0.3.39.dist-info/licenses/LICENSE",
+          "sha256": "f117e87366786f5e31afb19fce5142a0ef155f3876ef61721b09304a4653042f",
+          "bytes": 1066
+        }
+      ],
+      "source": "installed package license file"
+    },
+    {
+      "image": "langflow-baseline",
+      "package": "lfx",
+      "version": "1.11.6",
+      "state": "license_identified",
+      "resolution": "MIT (same-version Langflow monorepo root LICENSE, wheel omits text)",
+      "evidence": [],
+      "source": "v1.11.6/src/lfx version and monorepo root LICENSE"
+    },
+    {
+      "image": "langflow-baseline",
+      "package": "peewee",
+      "version": "4.2.6",
+      "state": "license_identified",
+      "resolution": "MIT",
+      "evidence": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/peewee-4.2.6.dist-info/licenses/LICENSE",
+          "sha256": "3740096125b08735a247b8dd08cd82e0ba984d3bebd9221d378576637e5240da",
+          "bytes": 1058
+        }
+      ],
+      "source": "installed package license file"
+    },
+    {
+      "image": "langflow-baseline",
+      "package": "smolagents",
+      "version": "1.26.0",
+      "state": "license_identified",
+      "resolution": "Apache-2.0",
+      "evidence": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/smolagents-1.26.0.dist-info/licenses/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        }
+      ],
+      "source": "installed package license file"
+    },
+    {
+      "image": "langflow-baseline",
+      "package": "langchain-mongodb",
+      "version": "0.11.0",
+      "state": "license_identified",
+      "resolution": "MIT",
+      "evidence": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/langchain_mongodb-0.11.0.dist-info/licenses/LICENSE",
+          "sha256": "d9bb52f2e3540d60ff50d8f0f5b6ba649b7fd346948c4c3d086c8afb120763c7",
+          "bytes": 1072
+        }
+      ],
+      "source": "installed package license file"
+    },
+    {
+      "image": "langflow-baseline",
+      "package": "agent-lifecycle-toolkit",
+      "version": "0.10.1",
+      "state": "license_identified",
+      "resolution": "Apache-2.0 notice references canonical full text",
+      "evidence": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/agent_lifecycle_toolkit-0.10.1.dist-info/licenses/LICENSE",
+          "sha256": "08d67faff2ff3bfa20cd50c65599c44b9328ad6fadeae15be6cccc28b796bf83",
+          "bytes": 590
+        }
+      ],
+      "source": "installed package license file"
+    },
+    {
+      "image": "langflow-baseline",
+      "package": "uncurl",
+      "version": "0.0.11",
+      "state": "license_identified",
+      "resolution": "Apache-2.0",
+      "evidence": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/uncurl-0.0.11.dist-info/LICENSE",
+          "sha256": "f12ef9fd396a13e90878630b1b4fab471c6ed9cb7a48cf2abb2516281632218e",
+          "bytes": 10834
+        }
+      ],
+      "source": "installed package license file"
+    },
+    {
+      "image": "langflow-baseline",
+      "package": "twelvelabs",
+      "version": "0.4.11",
+      "state": "license_identified",
+      "resolution": "Apache-2.0",
+      "evidence": [
+        {
+          "path": "/app/.venv/lib64/python3.14/site-packages/twelvelabs-0.4.11.dist-info/LICENSE",
+          "sha256": "b0aaec88641ffa1ce0462b911ab7160aed54465990285044d53c33b2eec1b1bf",
+          "bytes": 10306
+        }
+      ],
+      "source": "installed package license file"
+    },
+    {
+      "image": "langflow-baseline",
+      "package": "zep-python",
+      "version": "2.0.2",
+      "state": "unresolved_exact_release_license",
+      "resolution": null,
+      "evidence": [],
+      "source": "Exact PyPI metadata/wheel, PyPI sdist and official v2.0.2 tag lack license; old oss branch license not inherited"
+    }
+  ],
+  "summary": {
+    "prior_api_unknown": 17,
+    "api_copyright_texts_identified": 17,
+    "prior_langflow_unknown": 10,
+    "langflow_license_identified": 9,
+    "langflow_exact_release_unresolved": [
+      "zep-python==2.0.2"
+    ]
+  },
+  "special_cases": {
+    "psycopg": "LGPL-3.0-only, no removal or relicensing; upstream license and exact-version source location identified; API binary extension includes 16 native shared libraries requiring their own notices/source handling before binary image redistribution",
+    "grandalf": "Exact 0.8 package LICENSE offers GPL-2.0 OR EPL-1.0. It is not GPL-only. Distribution requires selecting and meeting one permitted route.",
+    "frozendict": "LGPL v3 confirmed in package license text",
+    "crc32c": "LGPL-2.1-or-later plus BSD notices from google-crc32c and slice-by-8",
+    "psycopg2-binary": "LGPL v3-or-later with package-specific OpenSSL linking exception; preserve exact license, bundled native dependencies have their own terms",
+    "certifi": "MPL-2.0 with CA bundle source notice, file-level source obligations on redistribution; not identified by GPL-only text heuristic",
+    "fonts": "Noto OFL1.1 exact hash/notice preserved; IBM Plex OFL1.1 must accompany web fonts"
+  },
+  "binary_distribution_not_closed": [
+    "zep-python2.0.2 exact release permission",
+    "Exact native bundled-library notices and corresponding source delivery/access for redistributed image binaries",
+    "Final upgraded image versions/notices readback pending root build"
+  ],
+  "files": [
+    {
+      "path": "baseline-api-license-texts.json",
+      "bytes": 676246,
+      "sha256": "4d113d1de8d0d9131bee6f44662495891ab3a61e7779967f323f952ab96d5129"
+    },
+    {
+      "path": "baseline-api-license-texts.record.json",
+      "bytes": 525,
+      "sha256": "9664708c4f25b76ffe2b9a81acb634f97ae8611e4b1e0e51703eb19e7b06e55e"
+    },
+    {
+      "path": "baseline-api-license-texts.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "baseline-langflow-license-texts.json",
+      "bytes": 143275,
+      "sha256": "9fb0a837ce93debb5d20170703e3c30f9887866354c785d77f9a7a569e9b2bae"
+    },
+    {
+      "path": "baseline-langflow-license-texts.record.json",
+      "bytes": 530,
+      "sha256": "c0be6d81052ff4053329f19d4c68ee2b53b3bd26efec83468898ac93800cf1be"
+    },
+    {
+      "path": "baseline-langflow-license-texts.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "extract_image_licenses.py",
+      "bytes": 2340,
+      "sha256": "076f768a42b3f30bb82124c30725b4c1054d9ce31b9c6a6150cefe0777717dbb"
+    },
+    {
+      "path": "lfx-1.11.6-pypi.json",
+      "bytes": 36121,
+      "sha256": "b2655a5cc0a35ee20383c3d1cc146df7e99109f69b07a133146427859582cda5"
+    },
+    {
+      "path": "lfx-upstream-license.txt",
+      "bytes": 1065,
+      "sha256": "48d4a7496209a9e1f2f549384251b69319360c3a38127cf513473590be383359"
+    },
+    {
+      "path": "lfx-upstream-pyproject.txt",
+      "bytes": 6084,
+      "sha256": "5b1da6bebde37b4a9bf4d82ff1f63a92fc6c616eded6717d689c6cd7287e3101"
+    },
+    {
+      "path": "lgpl3-psycopg-upstream.txt",
+      "bytes": 7652,
+      "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118"
+    },
+    {
+      "path": "official-source-records.json",
+      "bytes": 1213,
+      "sha256": "38c14cdca9db68e103adc4966d56bd31cc56407e778c6c0508958ac7297e5fb6"
+    },
+    {
+      "path": "prior-license-review-list.json",
+      "bytes": 67911,
+      "sha256": "90f0a947bb374a5ee85e10b78e8b0164ec1ee4de5c3ec8c8dbd6903ab00c6cb7"
+    },
+    {
+      "path": "zep-oss-commits.txt",
+      "bytes": 12888,
+      "sha256": "f9fbb9ca805ec461bc8222180a072c50dc1b2251b48da944adbbf2baeb3ae471"
+    },
+    {
+      "path": "zep-python-2.0.2-pypi.json",
+      "bytes": 8265,
+      "sha256": "cfcee2923368fda5ffad101388041ee5908bb9f44624d3e21235996e83d02324"
+    },
+    {
+      "path": "zep-python-2.0.2-sdist-metadata.json",
+      "bytes": 1576,
+      "sha256": "c5aa171c3165be9ea27399da695a723b109eb8b4a54db0ccbe45895c665a5901"
+    },
+    {
+      "path": "zep-refs-branches.json",
+      "bytes": 6684,
+      "sha256": "84358bff7be78752848b97437601cbe1ebe1f1dbe9b270dd5bafa3783c1ab4e9"
+    },
+    {
+      "path": "zep-tags.json",
+      "bytes": 41185,
+      "sha256": "f0e92ddd4c8a5abca59f7762b0fdbe453c53fb81403b8e89c20532d71ea249ab"
+    },
+    {
+      "path": "zep-v2.0.2-pyproject.txt",
+      "bytes": 1376,
+      "sha256": "a8730c8bfb9d628119be06480a5716fb5f58f8b15256b472530f965b174ccbd8"
+    },
+    {
+      "path": "zep-v2.0.2-readme.txt",
+      "bytes": 5079,
+      "sha256": "7bdfe0aecc072c82008d9fab25ef118b59e113ac187901051408835c48d93f5d"
+    },
+    {
+      "path": "zep-v2.0.2-tree.json",
+      "bytes": 19099,
+      "sha256": "95e266165c3a7c774d6b20e825b8892c73f1ddb24c04413ad0d3ad5680fb478e"
+    },
+    {
+      "path": "zep_python-2.0.2.tar.gz",
+      "bytes": 22273,
+      "sha256": "919fd635ad5801f30d9ef6da0bb99e854ed4c3cd1357dc8ada4a39b8171a41bc"
+    }
+  ]
+}

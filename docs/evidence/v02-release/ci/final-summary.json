@@ -1,0 +1,259 @@
+{
+  "checked_at": "2026-11-01T01:16:39.743244+00:00",
+  "run": {
+    "attempt": 1,
+    "conclusion": "success",
+    "databaseId": 41259579902,
+    "event": "push",
+    "headSha": "fac92ea797c96cd8d12581bf616d0295e8312186",
+    "startedAt": "2026-11-01T01:05:27Z",
+    "status": "completed",
+    "updatedAt": "2026-11-01T01:11:58Z",
+    "url": "https://github.com/qife422/ai-review-console/actions/runs/41259579902",
+    "workflowName": "CI"
+  },
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "AC-19",
+    "affected regression AC-01..18"
+  ],
+  "final_unit": {
+    "tests": 154,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "warning": "Starlette TestClient httpx deprecation; no new framework migration attempted."
+  },
+  "frontend": {
+    "tests": 29,
+    "files": 5,
+    "fresh_npm_ci": "success",
+    "typescript_build": "success"
+  },
+  "workflow": {
+    "langflow_version": "1.11.6",
+    "components": 5,
+    "source_formats": [
+      "txt",
+      "docx",
+      "pdf",
+      "md"
+    ],
+    "decisions": [
+      "approved",
+      "rejected",
+      "changes_requested"
+    ],
+    "registered_report_downloads": 9,
+    "stored_flow_hashes_unchanged": true,
+    "failure_retry_result": "failed as expected; unscored; same case/version; one manual retry generation",
+    "benchmark": null
+  },
+  "browser": {
+    "outcome": "passed",
+    "cli_commands": 212,
+    "steps": 28,
+    "mode_counts": {
+      "tool": 1,
+      "real-ui": 16,
+      "browser-network-simulation": 2,
+      "browser-delay-simulation": 1,
+      "real-workflow": 6,
+      "browser-response-simulation": 2
+    },
+    "widths": [
+      390,
+      1440
+    ],
+    "themes": [
+      "white",
+      "g100"
+    ],
+    "download_formats": [
+      "json",
+      "html",
+      "pdf"
+    ],
+    "visual_review": "visual-review.json",
+    "raw_hidden_download_payloads": "Not in GitHub artifact (default excludes hidden CLI directory); only actual run hash assertions retained."
+  },
+  "release_scan": {
+    "collector_state": "collected",
+    "normal_exit_code": 2,
+    "rhel_exit_code": 1,
+    "combined_package_coverage": {
+      "normal_unknown_records": 226,
+      "normal_unknown_image_types": {
+        "langflow:rpm": 226
+      },
+      "same_image_id": true,
+      "normal_unknown_exact_name_version_arch_set_equals_rhel_entries": true,
+      "rhel_mapping_states": {
+        "mapped": 223,
+        "metadata_only_rpm_public_key_not_software": 3
+      },
+      "combined_remaining_mapping_query_detail_unknown": 0,
+      "qualification": "Coverage complete for enumerated installed package-manager/Python metadata after supplement; 3 RPM public-key metadata entries are not software and excluded with explicit status. This is not a full filesystem/static-binary scan or acceptance of findings. Original normal exit2 is preserved."
+    },
+    "advisory_identifiers": {
+      "normal": 231,
+      "rhel": 23,
+      "union": 254,
+      "intersection": 0,
+      "qualification": "Provider advisory identifiers, not deduplicated CVE count; same finding may occur in multiple image packages."
+    },
+    "findings_accepted": false
+  },
+  "licenses": {
+    "api": {
+      "image_id": "sha256:8f2f6f8d6916153043c8388c0f524bfc13c2e7945212dd7329c6e5cc8fdfa4f5",
+      "exit_code": 0,
+      "collection_state": "collected_with_explicit_scope",
+      "package_count": 35,
+      "selected_package_count": 7,
+      "selected_package_license_text_states": {
+        "recorded": 7
+      },
+      "selected_not_installed": [
+        "agent-lifecycle-toolkit",
+        "aiohttp",
+        "authlib",
+        "black",
+        "brotli",
+        "crc32c",
+        "dnspython",
+        "fastmcp",
+        "fastmcp-slim",
+        "frozendict",
+        "fsspec",
+        "gitpython",
+        "google-crc32c",
+        "grandalf",
+        "joserfc",
+        "langchain-mongodb",
+        "langchain-nvidia-ai-endpoints",
+        "langflow",
+        "langgraph",
+        "langgraph-sdk",
+        "lfx",
+        "litellm",
+        "llm-sandbox",
+        "mako",
+        "mcp",
+        "mem0ai",
+        "multidict",
+        "nltk",
+        "peewee",
+        "psycopg2-binary",
+        "pyasn1",
+        "pyjwt",
+        "pymongo",
+        "smolagents",
+        "transformers",
+        "twelvelabs",
+        "uncurl",
+        "urllib3",
+        "yarl",
+        "zep-python"
+      ],
+      "file_states": {
+        "recorded": 14,
+        "hashed_only": 1
+      },
+      "not_recorded_files": [],
+      "packages_without_text": [],
+      "legal_approval": false
+    },
+    "langflow": {
+      "image_id": "sha256:33960b31a9600466b019713f12a7779d720e94443cd09935d3dc0640ab019dc2",
+      "exit_code": 0,
+      "collection_state": "collected_with_explicit_scope",
+      "package_count": 548,
+      "selected_package_count": 46,
+      "selected_package_license_text_states": {
+        "recorded": 42,
+        "no_license_text_recorded": 4
+      },
+      "selected_not_installed": [
+        "psycopg-binary"
+      ],
+      "file_states": {
+        "recorded": 58,
+        "hashed_only": 1
+      },
+      "not_recorded_files": [],
+      "packages_without_text": [
+        {
+          "name": "dnspython",
+          "version": "2.9.0",
+          "license_text_state": "no_license_text_recorded",
+          "license_expression": "ISC",
+          "license_metadata": null,
+          "files": []
+        },
+        {
+          "name": "fastmcp-slim",
+          "version": "3.4.10",
+          "license_text_state": "no_license_text_recorded",
+          "license_expression": "Apache-2.0",
+          "license_metadata": null,
+          "files": []
+        },
+        {
+          "name": "lfx",
+          "version": "1.11.6",
+          "license_text_state": "no_license_text_recorded",
+          "license_expression": null,
+          "license_metadata": null,
+          "files": []
+        },
+        {
+          "name": "zep-python",
+          "version": "2.0.2",
+          "license_text_state": "no_license_text_recorded",
+          "license_expression": null,
+          "license_metadata": null,
+          "files": []
+        }
+      ],
+      "legal_approval": false
+    },
+    "web": {
+      "image_id": "sha256:43c964da1c549cad88ef332222b7739c7e9b7c15e4a8d05829b5db992d8fd231",
+      "exit_code": 0,
+      "collection_state": "collected_with_explicit_scope",
+      "package_count": 0,
+      "selected_package_count": 0,
+      "selected_package_license_text_states": {},
+      "selected_not_installed": [],
+      "file_states": {
+        "recorded": 3
+      },
+      "not_recorded_files": [],
+      "packages_without_text": [],
+      "legal_approval": false
+    }
+  },
+  "selection": {
+    "root": "/private/tmp/arc-v02-release-close.p3RyvK/ci/final-fac92ea/selected",
+    "files": 100,
+    "bytes": 15228951,
+    "hash_readback": "all 88 release collector payload, 44 images child, 12 RHEL child, 3 license child and selected browser files match recorded size/hash",
+    "zip_transport_only": [
+      "workflow-browser.zip",
+      "unit-verification.zip"
+    ],
+    "formal_selection_recommendation": "selected/ plus arc-unit.xml, verify-job.log, workflow-browser-job.log, run-final.json, jobs-final.json, artifacts.json and small review/provenance JSON; exclude transport ZIPs, old checkpoint records and build/cache trees."
+  },
+  "limits": {
+    "zip_total_bytes": 3910706,
+    "selected_limit_bytes": 41943040,
+    "selected_limit_files": 600,
+    "disk_free_after": 11138764800
+  },
+  "tool_fallbacks": [
+    "GitHub connector only lists PR-triggered runs by commit, so gh located main push run and overall status.",
+    "Connector job log180KB exceeded apply_patch hook128KiB input; gh api --allow-escape-sequences wrote exact raw job log to authorized temp. First gh call refused ANSI output; explicit local-file raw escape output enabled, no hook changes."
+  ],
+  "release_acceptance": "Not granted by CI success; vulnerabilities and redistribution issues remain for root report."
+}

@@ -1,0 +1,20 @@
+{
+  "label": "verified-build",
+  "command": [
+    "node",
+    "node_modules/vite/bin/vite.js",
+    "build",
+    "--outDir",
+    "/private/tmp/arc-v02-release-close.p3RyvK/frontend/dist"
+  ],
+  "cwd": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1/frontend",
+  "started_at": "2026-11-01T00:46:24.009084+00:00",
+  "input_hashes": {
+    "frontend/package.json": "31de4ff938a2b13804c3cd139685b04383e433df5992f2cf2eba985474ebe8a1",
+    "frontend/package-lock.json": "c887f8c63172bc87d022265f925e9fdb5c4b4b79151a5d8d86176f789a7c5a3e",
+    "frontend/vite.config.ts": "2bc600fe5fbed94fcef8b67d24c2e0ef6c1ff8efe04dcbe3b74518b5684c8cf2",
+    "frontend/public/licenses/IBM-Plex-OFL-1.1.txt": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+  },
+  "exit_code": 0,
+  "ended_at": "2026-11-01T00:46:30.297838+00:00"
+}

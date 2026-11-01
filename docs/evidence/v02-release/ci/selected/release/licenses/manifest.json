@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-11-01T01:11:52.754064+00:00",
+  "producer": "scripts/verify_image_licenses.py",
+  "producer_sha256": "ff35b8802893434d785cfe1453f2540bf5831fe1caea01255f4e66a7d1fad0e8",
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "RELEASE-001",
+    "AC-19"
+  ],
+  "images": [
+    {
+      "image_name": "api",
+      "image_id": "sha256:8f2f6f8d6916153043c8388c0f524bfc13c2e7945212dd7329c6e5cc8fdfa4f5",
+      "collection_state": "collected_with_explicit_scope"
+    },
+    {
+      "image_name": "langflow",
+      "image_id": "sha256:33960b31a9600466b019713f12a7779d720e94443cd09935d3dc0640ab019dc2",
+      "collection_state": "collected_with_explicit_scope"
+    },
+    {
+      "image_name": "web",
+      "image_id": "sha256:43c964da1c549cad88ef332222b7739c7e9b7c15e4a8d05829b5db992d8fd231",
+      "collection_state": "collected_with_explicit_scope"
+    }
+  ],
+  "files": [
+    {
+      "path": "api.json",
+      "bytes": 164152,
+      "sha256": "b4c7eba7f7bd32fe1192dea7a278b668b812752682f032a61f48640172689679"
+    },
+    {
+      "path": "langflow.json",
+      "bytes": 1114046,
+      "sha256": "e6cba07610da7a14e9c630bfef3a5f75295cd3175023470424cb51ee65f0e02a"
+    },
+    {
+      "path": "web.json",
+      "bytes": 95767,
+      "sha256": "079b270b29efc27575c5359187839ba61c5a25eff4b651f60b7cc99c1c6f9454"
+    }
+  ],
+  "text_limits": {
+    "per_file_bytes": 262144,
+    "files": 100,
+    "total_bytes": 8388608
+  },
+  "remaining_budget": {
+    "files": 25,
+    "bytes": 7643346
+  },
+  "legal_approval": false,
+  "qualification": "Collection success is not full license/distribution approval."
+}

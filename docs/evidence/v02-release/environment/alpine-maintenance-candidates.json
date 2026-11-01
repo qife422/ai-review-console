@@ -1,0 +1,68 @@
+[
+  {
+    "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/aarch64/APKINDEX.tar.gz",
+    "response_bytes": 529497,
+    "sha256": "67c8311434a125b5d2d6e017265e088cda6a5e0eeb59e28316348ca038edf91e",
+    "queried_at": "2026-11-01T00:51:50.563311+00:00",
+    "matching_packages": [
+      {
+        "C": "Q1rHqiZlNF678/d2WvcEx5SLmN5js=",
+        "P": "brotli-libs",
+        "V": "1.2.1-r0",
+        "A": "aarch64",
+        "S": "424994",
+        "I": "988752",
+        "T": "Generic lossless compressor (libraries)",
+        "U": "https://github.com/google/brotli",
+        "L": "MIT",
+        "o": "brotli",
+        "m": "prspkt <prspkt@protonmail.com>",
+        "t": "1792636353",
+        "c": "8313352127992a9d82e2c2024494f6c38a4dffb4",
+        "D": "so:libc.musl-aarch64.so.1",
+        "p": "so:libbrotlicommon.so.1=1.2.1 so:libbrotlidec.so.1=1.2.1 so:libbrotlienc.so.1=1.2.1"
+      },
+      {
+        "C": "Q131SeSrIqbYNRLf2Q7p1nlxMw5Oo=",
+        "P": "curl",
+        "V": "8.23.0-r0",
+        "A": "aarch64",
+        "S": "180122",
+        "I": "342598",
+        "T": "URL retrieval utility and library",
+        "U": "https://curl.se/",
+        "L": "curl",
+        "o": "curl",
+        "m": "Achill Gilgenast <achill@achill.org>",
+        "t": "1792943290",
+        "c": "c65a7b3f6d6bc4b3c0a8a6fff759d8fd05a167ce",
+        "D": "libcurl=8.23.0-r0 so:libc.musl-aarch64.so.1 so:libcurl.so.4 so:libz.so.1",
+        "p": "wcurl=8.23.0-r0 cmd:curl=8.23.0-r0 cmd:wcurl=8.23.0-r0"
+      },
+      {
+        "C": "Q1lexUIXAwSTJlGbHXmcyzQLluXkE=",
+        "P": "libcurl",
+        "V": "8.23.0-r0",
+        "A": "aarch64",
+        "S": "365707",
+        "I": "791931",
+        "T": "The multiprotocol file transfer library",
+        "U": "https://curl.se/",
+        "L": "curl",
+        "o": "curl",
+        "m": "Achill Gilgenast <achill@achill.org>",
+        "t": "1792943290",
+        "c": "c65a7b3f6d6bc4b3c0a8a6fff759d8fd05a167ce",
+        "D": "ca-certificates-bundle so:libbrotlidec.so.1 so:libc.musl-aarch64.so.1 so:libcares.so.2 so:libcrypto.so.3 so:libidn2.so.0 so:libnghttp2.so.14 so:libpsl.so.5 so:libssl.so.3 so:libz.so.1 so:libzstd.so.1",
+        "p": "so:libcurl.so.4=4.8.0"
+      }
+    ]
+  },
+  {
+    "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/community/aarch64/APKINDEX.tar.gz",
+    "response_bytes": 2505923,
+    "sha256": "f648ba6416c9a3c50fc57f749aac14d78d0650abe516ff591c5b82605051f642",
+    "queried_at": "2026-11-01T00:51:50.999411+00:00",
+    "matching_packages": []
+  }
+]

@@ -1,0 +1,401 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from langflow.Dockerfile
+#1 transferring dockerfile: 1.20kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/langflowai/langflow:1.11.6@sha256:5338f6851fbab3d0476f7701dacbe749f58fa81a4c1317ad1d52164ce1231a14
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 134B done
+#3 DONE 0.0s
+
+#4 [ 1/10] FROM docker.io/langflowai/langflow:1.11.6@sha256:5338f6851fbab3d0476f7701dacbe749f58fa81a4c1317ad1d52164ce1231a14
+#4 resolve docker.io/langflowai/langflow:1.11.6@sha256:5338f6851fbab3d0476f7701dacbe749f58fa81a4c1317ad1d52164ce1231a14 done
+#4 DONE 0.0s
+
+#5 [ 2/10] WORKDIR /app
+#5 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 49.88kB 0.0s done
+#6 DONE 0.0s
+
+#7 [ 3/10] RUN pip install --no-cache-dir --timeout 120 --retries 10     certifi==2026.10.23 pypdf==6.21.4 python-docx==1.2.0 reportlab==4.5.1     aiohttp==3.14.4 authlib==1.9.1 black==26.10.1 brotli==1.2.1     dnspython==2.9.0 fastmcp==3.4.10 fastmcp-slim==3.4.10 fsspec==2026.6.0     gitpython==3.2.1 joserfc==1.7.6 langchain-nvidia-ai-endpoints==1.5.0     langgraph==1.2.14 langgraph-sdk==0.4.6 litellm==1.103.1 mako==1.4.2     mcp==1.30.0 mem0ai==2.0.18 multidict==6.9.1 nltk==3.10.4     pyasn1==0.6.5 pyjwt==2.15.0 pymongo==4.18.3 transformers==5.10.0     urllib3==2.8.0 yarl==1.25.1
+#7 1.197 Collecting certifi==2026.10.23
+#7 1.327   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+#7 1.365 Collecting pypdf==6.21.4
+#7 1.383   Downloading pypdf-6.21.4-py3-none-any.whl.metadata (7.6 kB)
+#7 1.387 Requirement already satisfied: python-docx==1.2.0 in ./.venv/lib64/python3.14/site-packages (1.2.0)
+#7 1.542 Collecting reportlab==4.5.1
+#7 1.560   Downloading reportlab-4.5.1-py3-none-any.whl.metadata (1.7 kB)
+#7 1.916 Collecting aiohttp==3.14.4
+#7 1.935   Downloading aiohttp-3.14.4-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (8.3 kB)
+#7 1.957 Collecting authlib==1.9.1
+#7 1.975   Downloading authlib-1.9.1-py2.py3-none-any.whl.metadata (10 kB)
+#7 2.024 Collecting black==26.10.1
+#7 2.039   Downloading black-26.10.1-py3-none-any.whl.metadata (108 kB)
+#7 2.106 Collecting brotli==1.2.1
+#7 2.126   Downloading brotli-1.2.1-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.whl.metadata (6.1 kB)
+#7 2.153 Collecting dnspython==2.9.0
+#7 2.172   Downloading dnspython-2.9.0-py3-none-any.whl.metadata (5.7 kB)
+#7 2.198 Collecting fastmcp==3.4.10
+#7 2.210   Downloading fastmcp-3.4.10-py3-none-any.whl.metadata (8.5 kB)
+#7 2.236 Collecting fastmcp-slim==3.4.10
+#7 2.259   Downloading fastmcp_slim-3.4.10-py3-none-any.whl.metadata (10 kB)
+#7 2.284 Collecting fsspec==2026.6.0
+#7 2.301   Downloading fsspec-2026.6.0-py3-none-any.whl.metadata (10 kB)
+#7 2.336 Collecting gitpython==3.2.1
+#7 2.360   Downloading gitpython-3.2.1-py3-none-any.whl.metadata (13 kB)
+#7 2.392 Collecting joserfc==1.7.6
+#7 2.410   Downloading joserfc-1.7.6-py3-none-any.whl.metadata (3.2 kB)
+#7 2.509 Collecting langchain-nvidia-ai-endpoints==1.5.0
+#7 2.525   Downloading langchain_nvidia_ai_endpoints-1.5.0-py3-none-any.whl.metadata (23 kB)
+#7 2.552 Collecting langgraph==1.2.14
+#7 2.577   Downloading langgraph-1.2.14-py3-none-any.whl.metadata (4.9 kB)
+#7 2.606 Collecting langgraph-sdk==0.4.6
+#7 2.626   Downloading langgraph_sdk-0.4.6-py3-none-any.whl.metadata (5.1 kB)
+#7 2.720 Collecting litellm==1.103.1
+#7 2.733   Downloading litellm-1.103.1-cp310-abi3-manylinux_2_28_aarch64.whl.metadata (42 kB)
+#7 2.892 Collecting mako==1.4.2
+#7 2.931   Downloading mako-1.4.2-py3-none-any.whl.metadata (2.9 kB)
+#7 2.958 Collecting mcp==1.30.0
+#7 2.980   Downloading mcp-1.30.0-py3-none-any.whl.metadata (9.3 kB)
+#7 3.096 Collecting mem0ai==2.0.18
+#7 3.191   Downloading mem0ai-2.0.18-py3-none-any.whl.metadata (15 kB)
+#7 3.471 Collecting multidict==6.9.1
+#7 3.489   Downloading multidict-6.9.1-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (5.3 kB)
+#7 3.514 Collecting nltk==3.10.4
+#7 3.533   Downloading nltk-3.10.4-py3-none-any.whl.metadata (5.0 kB)
+#7 3.565 Collecting pyasn1==0.6.5
+#7 3.583   Downloading pyasn1-0.6.5-py3-none-any.whl.metadata (8.4 kB)
+#7 3.608 Collecting pyjwt==2.15.0
+#7 3.630   Downloading pyjwt-2.15.0-py3-none-any.whl.metadata (3.5 kB)
+#7 3.751 Collecting pymongo==4.18.3
+#7 3.773   Downloading pymongo-4.18.3-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (10 kB)
+#7 3.816 Collecting transformers==5.10.0
+#7 3.833   Downloading transformers-5.10.0-py3-none-any.whl.metadata (33 kB)
+#7 3.871 Collecting urllib3==2.8.0
+#7 3.892   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+#7 3.992 Collecting yarl==1.25.1
+#7 4.011   Downloading yarl-1.25.1-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (111 kB)
+#7 4.022 Requirement already satisfied: lxml>=3.1.0 in ./.venv/lib64/python3.14/site-packages (from python-docx==1.2.0) (6.1.1)
+#7 4.022 Requirement already satisfied: typing_extensions>=4.9.0 in ./.venv/lib64/python3.14/site-packages (from python-docx==1.2.0) (4.16.0)
+#7 4.022 Requirement already satisfied: pillow>=9.0.0 in ./.venv/lib64/python3.14/site-packages (from reportlab==4.5.1) (12.3.0)
+#7 4.023 Requirement already satisfied: charset-normalizer in ./.venv/lib64/python3.14/site-packages (from reportlab==4.5.1) (3.4.9)
+#7 4.023 Requirement already satisfied: aiohappyeyeballs>=2.5.0 in ./.venv/lib64/python3.14/site-packages (from aiohttp==3.14.4) (2.7.1)
+#7 4.023 Requirement already satisfied: aiosignal>=1.4.0 in ./.venv/lib64/python3.14/site-packages (from aiohttp==3.14.4) (1.4.0)
+#7 4.024 Requirement already satisfied: attrs>=17.3.0 in ./.venv/lib64/python3.14/site-packages (from aiohttp==3.14.4) (26.1.0)
+#7 4.024 Requirement already satisfied: frozenlist>=1.1.1 in ./.venv/lib64/python3.14/site-packages (from aiohttp==3.14.4) (1.8.0)
+#7 4.024 Requirement already satisfied: propcache>=0.2.0 in ./.venv/lib64/python3.14/site-packages (from aiohttp==3.14.4) (0.5.2)
+#7 4.025 Requirement already satisfied: idna>=2.0 in ./.venv/lib64/python3.14/site-packages (from yarl==1.25.1) (3.18)
+#7 4.026 Requirement already satisfied: cryptography>=45.0.1 in ./.venv/lib64/python3.14/site-packages (from authlib==1.9.1) (50.0.0)
+#7 4.027 Requirement already satisfied: click>=8.0.0 in ./.venv/lib64/python3.14/site-packages (from black==26.10.1) (8.4.2)
+#7 4.027 Requirement already satisfied: mypy-extensions>=0.4.3 in ./.venv/lib64/python3.14/site-packages (from black==26.10.1) (1.1.0)
+#7 4.027 Requirement already satisfied: packaging>=22.0 in ./.venv/lib64/python3.14/site-packages (from black==26.10.1) (24.2)
+#7 4.027 Requirement already satisfied: pathspec>=1.0.0 in ./.venv/lib64/python3.14/site-packages (from black==26.10.1) (1.1.1)
+#7 4.027 Requirement already satisfied: platformdirs>=2 in ./.venv/lib64/python3.14/site-packages (from black==26.10.1) (4.11.0)
+#7 4.028 Requirement already satisfied: pytokens~=0.4.0 in ./.venv/lib64/python3.14/site-packages (from black==26.10.1) (0.4.1)
+#7 4.029 Requirement already satisfied: pydantic-settings>=2.0.0 in ./.venv/lib64/python3.14/site-packages (from fastmcp-slim==3.4.10) (2.14.2)
+#7 4.030 Requirement already satisfied: pydantic>=2.11.7 in ./.venv/lib64/python3.14/site-packages (from pydantic[email]>=2.11.7->fastmcp-slim==3.4.10) (2.13.4)
+#7 4.030 Requirement already satisfied: python-dotenv>=1.1.0 in ./.venv/lib64/python3.14/site-packages (from fastmcp-slim==3.4.10) (1.2.2)
+#7 4.030 Requirement already satisfied: rich>=13.9.4 in ./.venv/lib64/python3.14/site-packages (from fastmcp-slim==3.4.10) (13.9.4)
+#7 4.031 Requirement already satisfied: gitdb<5,>=4.0.1 in ./.venv/lib64/python3.14/site-packages (from gitpython==3.2.1) (4.0.12)
+#7 4.032 Requirement already satisfied: langchain-core<2.0.0,>=1.4.7 in ./.venv/lib64/python3.14/site-packages (from langchain-nvidia-ai-endpoints==1.5.0) (1.5.1)
+#7 4.033 Requirement already satisfied: requests>=2.28.0 in ./.venv/lib64/python3.14/site-packages (from langchain-nvidia-ai-endpoints==1.5.0) (2.34.2)
+#7 4.033 Requirement already satisfied: langgraph-checkpoint<5.0.0,>=4.1.0 in ./.venv/lib64/python3.14/site-packages (from langgraph==1.2.14) (4.1.1)
+#7 4.033 Requirement already satisfied: langgraph-prebuilt<1.2.0,>=1.1.0 in ./.venv/lib64/python3.14/site-packages (from langgraph==1.2.14) (1.1.0)
+#7 4.034 Requirement already satisfied: xxhash>=3.5.0 in ./.venv/lib64/python3.14/site-packages (from langgraph==1.2.14) (3.8.1)
+#7 4.034 Requirement already satisfied: httpx>=0.25.2 in ./.venv/lib64/python3.14/site-packages (from langgraph-sdk==0.4.6) (0.28.1)
+#7 4.034 Requirement already satisfied: langchain-protocol>=0.0.15 in ./.venv/lib64/python3.14/site-packages (from langgraph-sdk==0.4.6) (0.0.18)
+#7 4.034 Requirement already satisfied: orjson>=3.11.5 in ./.venv/lib64/python3.14/site-packages (from langgraph-sdk==0.4.6) (3.11.9)
+#7 4.034 Requirement already satisfied: websockets<17,>=14 in ./.venv/lib64/python3.14/site-packages (from langgraph-sdk==0.4.6) (15.0.1)
+#7 4.035 Requirement already satisfied: fastuuid<1.0,>=0.14.0 in ./.venv/lib64/python3.14/site-packages (from litellm==1.103.1) (0.14.0)
+#7 4.035 Requirement already satisfied: openai<3.0.0,>=2.20.0 in ./.venv/lib64/python3.14/site-packages (from litellm==1.103.1) (2.48.0)
+#7 4.036 Requirement already satisfied: tiktoken<1.0,>=0.12.0 in ./.venv/lib64/python3.14/site-packages (from litellm==1.103.1) (0.13.0)
+#7 4.036 Requirement already satisfied: importlib-metadata<9.0,>=8.0.0 in ./.venv/lib64/python3.14/site-packages (from litellm==1.103.1) (8.9.0)
+#7 4.036 Requirement already satisfied: tokenizers<1.0,>=0.21.0 in ./.venv/lib64/python3.14/site-packages (from litellm==1.103.1) (0.22.2)
+#7 4.036 Requirement already satisfied: jinja2<4.0,>=3.1.6 in ./.venv/lib64/python3.14/site-packages (from litellm==1.103.1) (3.1.6)
+#7 4.037 Requirement already satisfied: jsonschema<5.0,>=4.0.0 in ./.venv/lib64/python3.14/site-packages (from litellm==1.103.1) (4.26.0)
+#7 4.038 Requirement already satisfied: boto3<2.0,>=1.43.1 in ./.venv/lib64/python3.14/site-packages (from litellm==1.103.1) (1.43.46)
+#7 4.039 Requirement already satisfied: MarkupSafe>=2.0 in ./.venv/lib64/python3.14/site-packages (from mako==1.4.2) (3.0.2)
+#7 4.039 Requirement already satisfied: anyio>=4.5 in ./.venv/lib64/python3.14/site-packages (from mcp==1.30.0) (4.14.2)
+#7 4.039 Requirement already satisfied: httpx-sse>=0.4 in ./.venv/lib64/python3.14/site-packages (from mcp==1.30.0) (0.4.3)
+#7 4.040 Requirement already satisfied: python-multipart>=0.0.9 in ./.venv/lib64/python3.14/site-packages (from mcp==1.30.0) (0.0.32)
+#7 4.040 Requirement already satisfied: sse-starlette>=1.6.1 in ./.venv/lib64/python3.14/site-packages (from mcp==1.30.0) (3.4.6)
+#7 4.040 Requirement already satisfied: starlette>=0.48.0 in ./.venv/lib64/python3.14/site-packages (from mcp==1.30.0) (1.3.1)
+#7 4.040 Requirement already satisfied: typing-inspection>=0.4.1 in ./.venv/lib64/python3.14/site-packages (from mcp==1.30.0) (0.4.2)
+#7 4.041 Requirement already satisfied: uvicorn>=0.31.1 in ./.venv/lib64/python3.14/site-packages (from mcp==1.30.0) (0.51.0)
+#7 4.041 Requirement already satisfied: posthog>=7.14.0 in ./.venv/lib64/python3.14/site-packages (from mem0ai==2.0.18) (7.30.1)
+#7 4.041 Requirement already satisfied: protobuf<7.0.0,>=5.29.6 in ./.venv/lib64/python3.14/site-packages (from mem0ai==2.0.18) (5.29.6)
+#7 4.042 Requirement already satisfied: pytz>=2024.1 in ./.venv/lib64/python3.14/site-packages (from mem0ai==2.0.18) (2026.3.post1)
+#7 4.042 Requirement already satisfied: qdrant-client>=1.12.0 in ./.venv/lib64/python3.14/site-packages (from mem0ai==2.0.18) (1.18.0)
+#7 4.042 Requirement already satisfied: sqlalchemy>=2.0.31 in ./.venv/lib64/python3.14/site-packages (from mem0ai==2.0.18) (2.0.51)
+#7 4.042 Requirement already satisfied: defusedxml in ./.venv/lib64/python3.14/site-packages (from nltk==3.10.4) (0.7.1)
+#7 4.043 Requirement already satisfied: joblib in ./.venv/lib64/python3.14/site-packages (from nltk==3.10.4) (1.5.3)
+#7 4.043 Requirement already satisfied: regex>=2021.8.3 in ./.venv/lib64/python3.14/site-packages (from nltk==3.10.4) (2026.7.19)
+#7 4.043 Requirement already satisfied: tqdm in ./.venv/lib64/python3.14/site-packages (from nltk==3.10.4) (4.70.0)
+#7 4.044 Requirement already satisfied: huggingface-hub<2.0,>=1.5.0 in ./.venv/lib64/python3.14/site-packages (from transformers==5.10.0) (1.25.1)
+#7 4.045 Requirement already satisfied: numpy>=1.17 in ./.venv/lib64/python3.14/site-packages (from transformers==5.10.0) (2.5.1)
+#7 4.045 Requirement already satisfied: pyyaml>=5.1 in ./.venv/lib64/python3.14/site-packages (from transformers==5.10.0) (6.0.3)
+#7 4.045 Requirement already satisfied: typer in ./.venv/lib64/python3.14/site-packages (from transformers==5.10.0) (0.24.2)
+#7 4.045 Requirement already satisfied: safetensors>=0.4.3 in ./.venv/lib64/python3.14/site-packages (from transformers==5.10.0) (0.8.0)
+#7 4.047 Requirement already satisfied: exceptiongroup>=1.2.2 in ./.venv/lib64/python3.14/site-packages (from fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (1.3.1)
+#7 4.048 Requirement already satisfied: opentelemetry-api>=1.20.0 in ./.venv/lib64/python3.14/site-packages (from fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (1.44.0)
+#7 4.048 Requirement already satisfied: py-key-value-aio<0.5.0,>=0.4.4 in ./.venv/lib64/python3.14/site-packages (from py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4; extra == "client"->fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (0.4.5)
+#7 4.049 Requirement already satisfied: cyclopts>=4.0.0 in ./.venv/lib64/python3.14/site-packages (from fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (4.22.2)
+#7 4.050 Requirement already satisfied: griffelib>=2.0.0 in ./.venv/lib64/python3.14/site-packages (from fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (2.1.0)
+#7 4.050 Requirement already satisfied: jsonref>=1.1.0 in ./.venv/lib64/python3.14/site-packages (from fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (1.1.0)
+#7 4.051 Requirement already satisfied: jsonschema-path>=0.3.4 in ./.venv/lib64/python3.14/site-packages (from fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (0.5.0)
+#7 4.051 Requirement already satisfied: openapi-pydantic>=0.5.1 in ./.venv/lib64/python3.14/site-packages (from fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (0.5.1)
+#7 4.052 Requirement already satisfied: pyperclip>=1.9.0 in ./.venv/lib64/python3.14/site-packages (from fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (1.11.0)
+#7 4.052 Requirement already satisfied: uncalled-for>=0.2.0 in ./.venv/lib64/python3.14/site-packages (from fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (0.3.2)
+#7 4.053 Requirement already satisfied: watchfiles>=1.0.0 in ./.venv/lib64/python3.14/site-packages (from fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (1.2.0)
+#7 4.055 Requirement already satisfied: botocore<1.44.0,>=1.43.46 in ./.venv/lib64/python3.14/site-packages (from boto3<2.0,>=1.43.1->litellm==1.103.1) (1.43.46)
+#7 4.055 Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in ./.venv/lib64/python3.14/site-packages (from boto3<2.0,>=1.43.1->litellm==1.103.1) (1.0.1)
+#7 4.055 Requirement already satisfied: s3transfer<0.20.0,>=0.19.0 in ./.venv/lib64/python3.14/site-packages (from boto3<2.0,>=1.43.1->litellm==1.103.1) (0.19.2)
+#7 4.057 Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in ./.venv/lib64/python3.14/site-packages (from botocore<1.44.0,>=1.43.46->boto3<2.0,>=1.43.1->litellm==1.103.1) (2.9.0.post0)
+#7 4.059 Requirement already satisfied: smmap<6,>=3.0.1 in ./.venv/lib64/python3.14/site-packages (from gitdb<5,>=4.0.1->gitpython==3.2.1) (5.0.3)
+#7 4.060 Requirement already satisfied: httpcore==1.* in ./.venv/lib64/python3.14/site-packages (from httpx>=0.25.2->langgraph-sdk==0.4.6) (1.0.9)
+#7 4.061 Requirement already satisfied: h11>=0.16 in ./.venv/lib64/python3.14/site-packages (from httpcore==1.*->httpx>=0.25.2->langgraph-sdk==0.4.6) (0.16.0)
+#7 4.062 Requirement already satisfied: h2<5,>=3 in ./.venv/lib64/python3.14/site-packages (from httpx[http2]<1.0,>=0.28.0->litellm==1.103.1) (4.4.1)
+#7 4.063 Requirement already satisfied: hyperframe<7,>=6.1 in ./.venv/lib64/python3.14/site-packages (from h2<5,>=3->httpx[http2]<1.0,>=0.28.0->litellm==1.103.1) (6.1.0)
+#7 4.063 Requirement already satisfied: hpack<5,>=4.2 in ./.venv/lib64/python3.14/site-packages (from h2<5,>=3->httpx[http2]<1.0,>=0.28.0->litellm==1.103.1) (4.2.0)
+#7 4.065 Requirement already satisfied: filelock>=3.10.0 in ./.venv/lib64/python3.14/site-packages (from huggingface-hub<2.0,>=1.5.0->transformers==5.10.0) (3.32.0)
+#7 4.066 Requirement already satisfied: hf-xet<2.0.0,>=1.5.1 in ./.venv/lib64/python3.14/site-packages (from huggingface-hub<2.0,>=1.5.0->transformers==5.10.0) (1.5.2)
+#7 4.069 Requirement already satisfied: zipp>=3.20 in ./.venv/lib64/python3.14/site-packages (from importlib-metadata<9.0,>=8.0.0->litellm==1.103.1) (4.1.0)
+#7 4.071 Requirement already satisfied: jsonschema-specifications>=2023.03.6 in ./.venv/lib64/python3.14/site-packages (from jsonschema<5.0,>=4.0.0->litellm==1.103.1) (2025.9.1)
+#7 4.072 Requirement already satisfied: referencing>=0.28.4 in ./.venv/lib64/python3.14/site-packages (from jsonschema<5.0,>=4.0.0->litellm==1.103.1) (0.37.0)
+#7 4.072 Requirement already satisfied: rpds-py>=0.25.0 in ./.venv/lib64/python3.14/site-packages (from jsonschema<5.0,>=4.0.0->litellm==1.103.1) (2026.6.3)
+#7 4.073 Requirement already satisfied: jsonpatch<2.0.0,>=1.33.0 in ./.venv/lib64/python3.14/site-packages (from langchain-core<2.0.0,>=1.4.7->langchain-nvidia-ai-endpoints==1.5.0) (1.33)
+#7 4.073 Requirement already satisfied: langsmith<1.0.0,>=0.3.45 in ./.venv/lib64/python3.14/site-packages (from langchain-core<2.0.0,>=1.4.7->langchain-nvidia-ai-endpoints==1.5.0) (0.10.10)
+#7 4.073 Requirement already satisfied: tenacity!=8.4.0,<10.0.0,>=8.1.0 in ./.venv/lib64/python3.14/site-packages (from langchain-core<2.0.0,>=1.4.7->langchain-nvidia-ai-endpoints==1.5.0) (8.5.0)
+#7 4.074 Requirement already satisfied: uuid-utils<1.0,>=0.12.0 in ./.venv/lib64/python3.14/site-packages (from langchain-core<2.0.0,>=1.4.7->langchain-nvidia-ai-endpoints==1.5.0) (0.17.0)
+#7 4.074 Requirement already satisfied: jsonpointer>=1.9 in ./.venv/lib64/python3.14/site-packages (from jsonpatch<2.0.0,>=1.33.0->langchain-core<2.0.0,>=1.4.7->langchain-nvidia-ai-endpoints==1.5.0) (3.1.1)
+#7 4.075 Requirement already satisfied: ormsgpack>=1.12.0 in ./.venv/lib64/python3.14/site-packages (from langgraph-checkpoint<5.0.0,>=4.1.0->langgraph==1.2.14) (1.12.2)
+#7 4.077 Requirement already satisfied: distro>=1.7.0 in ./.venv/lib64/python3.14/site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.4.7->langchain-nvidia-ai-endpoints==1.5.0) (1.9.0)
+#7 4.077 Requirement already satisfied: requests-toolbelt>=1.0.0 in ./.venv/lib64/python3.14/site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.4.7->langchain-nvidia-ai-endpoints==1.5.0) (1.0.0)
+#7 4.078 Requirement already satisfied: sniffio>=1.1 in ./.venv/lib64/python3.14/site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.4.7->langchain-nvidia-ai-endpoints==1.5.0) (1.3.1)
+#7 4.078 Requirement already satisfied: zstandard>=0.23.0 in ./.venv/lib64/python3.14/site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.4.7->langchain-nvidia-ai-endpoints==1.5.0) (0.25.0)
+#7 4.080 Requirement already satisfied: jiter<1,>=0.10.0 in ./.venv/lib64/python3.14/site-packages (from openai<3.0.0,>=2.20.0->litellm==1.103.1) (0.16.0)
+#7 4.085 Requirement already satisfied: beartype>=0.20.0 in ./.venv/lib64/python3.14/site-packages (from py-key-value-aio<0.5.0,>=0.4.4->py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4; extra == "client"->fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (0.22.9)
+#7 4.087 Requirement already satisfied: aiofile>=3.5.0 in ./.venv/lib64/python3.14/site-packages (from py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4; extra == "client"->fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (3.11.1)
+#7 4.087 Requirement already satisfied: keyring>=25.6.0 in ./.venv/lib64/python3.14/site-packages (from py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4; extra == "client"->fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (25.7.0)
+#7 4.087 Requirement already satisfied: cachetools>=5.0.0 in ./.venv/lib64/python3.14/site-packages (from py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4; extra == "client"->fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (7.1.6)
+#7 4.089 Requirement already satisfied: annotated-types>=0.6.0 in ./.venv/lib64/python3.14/site-packages (from pydantic>=2.11.7->pydantic[email]>=2.11.7->fastmcp-slim==3.4.10) (0.8.0)
+#7 4.089 Requirement already satisfied: pydantic-core==2.46.4 in ./.venv/lib64/python3.14/site-packages (from pydantic>=2.11.7->pydantic[email]>=2.11.7->fastmcp-slim==3.4.10) (2.46.4)
+#7 4.092 Requirement already satisfied: six>=1.5 in ./.venv/lib64/python3.14/site-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.44.0,>=1.43.46->boto3<2.0,>=1.43.1->litellm==1.103.1) (1.17.0)
+#7 4.102 Requirement already satisfied: caio~=0.9.0 in ./.venv/lib64/python3.14/site-packages (from aiofile>=3.5.0->py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4; extra == "client"->fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (0.9.25)
+#7 4.112 Requirement already satisfied: cffi>=2.0.0 in ./.venv/lib64/python3.14/site-packages (from cryptography>=45.0.1->authlib==1.9.1) (2.1.0)
+#7 4.113 Requirement already satisfied: pycparser in ./.venv/lib64/python3.14/site-packages (from cffi>=2.0.0->cryptography>=45.0.1->authlib==1.9.1) (3.0)
+#7 4.115 Requirement already satisfied: docstring-parser<4.0,>=0.15 in ./.venv/lib64/python3.14/site-packages (from cyclopts>=4.0.0->fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (0.18.0)
+#7 4.115 Requirement already satisfied: rich-rst<3.0.0,>=1.3.1 in ./.venv/lib64/python3.14/site-packages (from cyclopts>=4.0.0->fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (2.1.0)
+#7 4.117 Requirement already satisfied: pygments>=2.0.0 in ./.venv/lib64/python3.14/site-packages (from rich-rst<3.0.0,>=1.3.1->cyclopts>=4.0.0->fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (2.20.0)
+#7 4.125 Requirement already satisfied: pathable<0.7.0,>=0.6.0 in ./.venv/lib64/python3.14/site-packages (from jsonschema-path>=0.3.4->fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (0.6.0)
+#7 4.130 Requirement already satisfied: SecretStorage>=3.2 in ./.venv/lib64/python3.14/site-packages (from keyring>=25.6.0->py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4; extra == "client"->fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (3.5.0)
+#7 4.131 Requirement already satisfied: jeepney>=0.4.2 in ./.venv/lib64/python3.14/site-packages (from keyring>=25.6.0->py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4; extra == "client"->fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (0.9.0)
+#7 4.131 Requirement already satisfied: jaraco.classes in ./.venv/lib64/python3.14/site-packages (from keyring>=25.6.0->py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4; extra == "client"->fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (3.4.0)
+#7 4.131 Requirement already satisfied: jaraco.functools in ./.venv/lib64/python3.14/site-packages (from keyring>=25.6.0->py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4; extra == "client"->fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (4.6.0)
+#7 4.131 Requirement already satisfied: jaraco.context in ./.venv/lib64/python3.14/site-packages (from keyring>=25.6.0->py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4; extra == "client"->fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (6.1.2)
+#7 4.144 Requirement already satisfied: backoff>=1.10.0 in ./.venv/lib64/python3.14/site-packages (from posthog>=7.14.0->mem0ai==2.0.18) (2.2.1)
+#7 4.154 Requirement already satisfied: email-validator>=2.0.0 in ./.venv/lib64/python3.14/site-packages (from pydantic[email]>=2.11.7->fastmcp-slim==3.4.10) (2.3.0)
+#7 4.162 Requirement already satisfied: grpcio>=1.41.0 in ./.venv/lib64/python3.14/site-packages (from qdrant-client>=1.12.0->mem0ai==2.0.18) (1.83.0)
+#7 4.162 Requirement already satisfied: portalocker<4.0,>=2.7.0 in ./.venv/lib64/python3.14/site-packages (from qdrant-client>=1.12.0->mem0ai==2.0.18) (3.2.0)
+#7 4.169 Requirement already satisfied: markdown-it-py>=2.2.0 in ./.venv/lib64/python3.14/site-packages (from rich>=13.9.4->fastmcp-slim==3.4.10) (4.2.0)
+#7 4.170 Requirement already satisfied: mdurl~=0.1 in ./.venv/lib64/python3.14/site-packages (from markdown-it-py>=2.2.0->rich>=13.9.4->fastmcp-slim==3.4.10) (0.1.2)
+#7 4.177 Requirement already satisfied: greenlet>=1 in ./.venv/lib64/python3.14/site-packages (from sqlalchemy>=2.0.31->mem0ai==2.0.18) (3.5.4)
+#7 4.193 Requirement already satisfied: more-itertools in ./.venv/lib64/python3.14/site-packages (from jaraco.classes->keyring>=25.6.0->py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4; extra == "client"->fastmcp-slim[client,server]==3.4.10->fastmcp==3.4.10) (11.1.0)
+#7 4.200 Requirement already satisfied: shellingham>=1.3.0 in ./.venv/lib64/python3.14/site-packages (from typer->transformers==5.10.0) (1.5.4)
+#7 4.201 Requirement already satisfied: annotated-doc>=0.0.2 in ./.venv/lib64/python3.14/site-packages (from typer->transformers==5.10.0) (0.0.4)
+#7 4.205 WARNING: The candidate selected for download or install is a yanked version: 'transformers' candidate (version 5.10.0 at https://files.pythonhosted.org/packages/d9/19/448dd8054ac95d61718105bea048ded00a60551824e08b4280cd31770039/transformers-5.10.0-py3-none-any.whl (from https://pypi.org/simple/transformers/) (requires-python:>=3.10.0))
+#7 4.205 Reason for being yanked: We pushed from a week old main branch. It does include the latest model but uncertain its gonna be working properly and mostly it is missing a bunch of fixes!
+#7 4.217 Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+#7 4.238 Downloading pypdf-6.21.4-py3-none-any.whl (410 kB)
+#7 4.276 Downloading reportlab-4.5.1-py3-none-any.whl (2.0 MB)
+#7 4.307    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 65.8 MB/s  0:00:00
+#7 4.328 Downloading aiohttp-3.14.4-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (1.9 MB)
+#7 4.342    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 246.7 MB/s  0:00:00
+#7 4.360 Downloading multidict-6.9.1-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (329 kB)
+#7 4.389 Downloading yarl-1.25.1-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (116 kB)
+#7 4.413 Downloading authlib-1.9.1-py2.py3-none-any.whl (266 kB)
+#7 4.435 Downloading black-26.10.1-py3-none-any.whl (239 kB)
+#7 4.468 Downloading brotli-1.2.1-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.whl (1.4 MB)
+#7 4.743    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 4.2 MB/s  0:00:00
+#7 4.762 Downloading dnspython-2.9.0-py3-none-any.whl (354 kB)
+#7 4.785 Downloading fastmcp-3.4.10-py3-none-any.whl (8.0 kB)
+#7 4.808 Downloading fastmcp_slim-3.4.10-py3-none-any.whl (785 kB)
+#7 4.815    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 785.9/785.9 kB 133.4 MB/s  0:00:00
+#7 4.830 Downloading fsspec-2026.6.0-py3-none-any.whl (203 kB)
+#7 4.848 Downloading gitpython-3.2.1-py3-none-any.whl (231 kB)
+#7 4.873 Downloading joserfc-1.7.6-py3-none-any.whl (71 kB)
+#7 4.898 Downloading langchain_nvidia_ai_endpoints-1.5.0-py3-none-any.whl (89 kB)
+#7 4.924 Downloading langgraph-1.2.14-py3-none-any.whl (255 kB)
+#7 4.944 Downloading langgraph_sdk-0.4.6-py3-none-any.whl (162 kB)
+#7 5.052 Downloading litellm-1.103.1-cp310-abi3-manylinux_2_28_aarch64.whl (27.5 MB)
+#7 7.590    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 27.5/27.5 MB 10.8 MB/s  0:00:02
+#7 7.625 Downloading mako-1.4.2-py3-none-any.whl (80 kB)
+#7 7.645 Downloading mcp-1.30.0-py3-none-any.whl (234 kB)
+#7 7.666 Downloading mem0ai-2.0.18-py3-none-any.whl (344 kB)
+#7 7.695 Downloading nltk-3.10.4-py3-none-any.whl (1.7 MB)
+#7 7.709    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 147.7 MB/s  0:00:00
+#7 7.729 Downloading pyasn1-0.6.5-py3-none-any.whl (84 kB)
+#7 7.754 Downloading pyjwt-2.15.0-py3-none-any.whl (33 kB)
+#7 7.880 Downloading pymongo-4.18.3-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (1.1 MB)
+#7 7.962    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 10.2 MB/s  0:00:00
+#7 8.091 Downloading transformers-5.10.0-py3-none-any.whl (10.9 MB)
+#7 9.334    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.9/10.9 MB 8.6 MB/s  0:00:01
+#7 9.356 Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+#7 9.786 Installing collected packages: brotli, urllib3, reportlab, pypdf, pyjwt, pyasn1, nltk, multidict, mako, fsspec, dnspython, certifi, black, yarl, pymongo, gitpython, joserfc, aiohttp, mcp, fastmcp-slim, authlib, transformers, mem0ai, litellm, langgraph-sdk, langchain-nvidia-ai-endpoints, fastmcp, langgraph
+#7 9.786   Attempting uninstall: brotli
+#7 9.788     Found existing installation: brotli 1.2.0
+#7 9.790     Uninstalling brotli-1.2.0:
+#7 11.64       Successfully uninstalled brotli-1.2.0
+#7 11.66   Attempting uninstall: urllib3
+#7 11.67     Found existing installation: urllib3 2.7.0
+#7 11.67     Uninstalling urllib3-2.7.0:
+#7 11.70       Successfully uninstalled urllib3-2.7.0
+#7 12.05   Attempting uninstall: pypdf
+#7 12.05     Found existing installation: pypdf 6.15.0
+#7 12.06     Uninstalling pypdf-6.15.0:
+#7 12.11       Successfully uninstalled pypdf-6.15.0
+#7 12.28   Attempting uninstall: pyjwt
+#7 12.29     Found existing installation: PyJWT 2.13.0
+#7 12.29     Uninstalling PyJWT-2.13.0:
+#7 12.30       Successfully uninstalled PyJWT-2.13.0
+#7 12.31   Attempting uninstall: pyasn1
+#7 12.31     Found existing installation: pyasn1 0.6.4
+#7 12.32     Uninstalling pyasn1-0.6.4:
+#7 12.34       Successfully uninstalled pyasn1-0.6.4
+#7 12.37   Attempting uninstall: nltk
+#7 12.37     Found existing installation: nltk 3.10.3
+#7 12.40     Uninstalling nltk-3.10.3:
+#7 12.61       Successfully uninstalled nltk-3.10.3
+#7 13.88   Attempting uninstall: multidict
+#7 13.89     Found existing installation: multidict 6.7.1
+#7 13.89     Uninstalling multidict-6.7.1:
+#7 13.93       Successfully uninstalled multidict-6.7.1
+#7 13.94   Attempting uninstall: mako
+#7 13.95     Found existing installation: Mako 1.3.12
+#7 13.95     Uninstalling Mako-1.3.12:
+#7 13.97       Successfully uninstalled Mako-1.3.12
+#7 14.00   Attempting uninstall: fsspec
+#7 14.01     Found existing installation: fsspec 2026.2.0
+#7 14.01     Uninstalling fsspec-2026.2.0:
+#7 14.04       Successfully uninstalled fsspec-2026.2.0
+#7 14.11   Attempting uninstall: dnspython
+#7 14.11     Found existing installation: dnspython 2.8.0
+#7 14.12     Uninstalling dnspython-2.8.0:
+#7 14.17       Successfully uninstalled dnspython-2.8.0
+#7 14.28   Attempting uninstall: certifi
+#7 14.29     Found existing installation: certifi 2026.7.22
+#7 14.29     Uninstalling certifi-2026.7.22:
+#7 14.30       Successfully uninstalled certifi-2026.7.22
+#7 14.30   Attempting uninstall: black
+#7 14.31     Found existing installation: black 26.5.1
+#7 14.31     Uninstalling black-26.5.1:
+#7 14.70       Successfully uninstalled black-26.5.1
+#7 14.77   Attempting uninstall: yarl
+#7 14.78     Found existing installation: yarl 1.24.5
+#7 14.78     Uninstalling yarl-1.24.5:
+#7 14.79       Successfully uninstalled yarl-1.24.5
+#7 14.80   Attempting uninstall: pymongo
+#7 14.81     Found existing installation: pymongo 4.17.0
+#7 14.81     Uninstalling pymongo-4.17.0:
+#7 14.98       Successfully uninstalled pymongo-4.17.0
+#7 15.26   Attempting uninstall: gitpython
+#7 15.26     Found existing installation: GitPython 3.1.59
+#7 15.27     Uninstalling GitPython-3.1.59:
+#7 15.34       Successfully uninstalled GitPython-3.1.59
+#7 15.51   Attempting uninstall: joserfc
+#7 15.51     Found existing installation: joserfc 1.7.4
+#7 15.52     Uninstalling joserfc-1.7.4:
+#7 15.58       Successfully uninstalled joserfc-1.7.4
+#7 15.62   Attempting uninstall: aiohttp
+#7 15.62     Found existing installation: aiohttp 3.14.3
+#7 15.63     Uninstalling aiohttp-3.14.3:
+#7 15.72       Successfully uninstalled aiohttp-3.14.3
+#7 15.93   Attempting uninstall: mcp
+#7 15.93     Found existing installation: mcp 1.28.1
+#7 15.94     Uninstalling mcp-1.28.1:
+#7 16.03       Successfully uninstalled mcp-1.28.1
+#7 16.14   Attempting uninstall: fastmcp-slim
+#7 16.14     Found existing installation: fastmcp-slim 3.4.4
+#7 16.16     Uninstalling fastmcp-slim-3.4.4:
+#7 16.39       Successfully uninstalled fastmcp-slim-3.4.4
+#7 16.72   Attempting uninstall: authlib
+#7 16.73     Found existing installation: Authlib 1.7.2
+#7 16.75     Uninstalling Authlib-1.7.2:
+#7 17.17       Successfully uninstalled Authlib-1.7.2
+#7 17.28   Attempting uninstall: transformers
+#7 17.28     Found existing installation: transformers 5.8.1
+#7 17.42     Uninstalling transformers-5.8.1:
+#7 22.79       Successfully uninstalled transformers-5.8.1
+#7 26.72   Rolling back uninstall of transformers
+#7 26.72   Moving to /app/.venv/bin/transformers
+#7 26.72    from /tmp/pip-uninstall-jd57ggxf/transformers
+#7 26.72   Moving to /app/.venv/lib/python3.14/site-packages/transformers-5.8.1.dist-info/
+#7 26.72    from /app/.venv/lib/python3.14/site-packages/~ransformers-5.8.1.dist-info
+#7 26.72   Moving to /app/.venv/lib/python3.14/site-packages/transformers/
+#7 26.72    from /app/.venv/lib/python3.14/site-packages/~ransformers
+#7 26.72   ERROR: Failed to restore /app/.venv/bin/transformers
+#7 26.72   ERROR: Failed to restore /app/.venv/lib/python3.14/site-packages/transformers-5.8.1.dist-info/
+#7 29.75   ERROR: Failed to restore /app/.venv/lib/python3.14/site-packages/transformers/
+#7 32.81   WARNING: Failed to remove contents in a temporary directory '/tmp/pip-uninstall-jd57ggxf'.
+#7 32.81   You can safely remove it manually.
+#7 35.86   WARNING: Failed to remove contents in a temporary directory '/app/.venv/lib/python3.14/site-packages/~ransformers-5.8.1.dist-info'.
+#7 35.86   You can safely remove it manually.
+#7 41.97   WARNING: Failed to remove contents in a temporary directory '/app/.venv/lib/python3.14/site-packages/~ransformers'.
+#7 41.97   You can safely remove it manually.
+#7 41.97 ERROR: Could not install packages due to an OSError: [Errno 30] Read-only file system: '/app/.venv/bin/transformers'
+#7 41.97 
+#7 45.02 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-build-tracker-lhjuan7z'.
+#7 45.02 You can safely remove it manually.
+#7 48.11 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-unpack-vhwxd9o4'.
+#7 48.11 You can safely remove it manually.
+#7 51.13 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-metadata-6fdxsu30'.
+#7 51.13 You can safely remove it manually.
+#7 54.17 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-unpack-t_56ax82'.
+#7 54.17 You can safely remove it manually.
+#7 57.20 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-metadata-mepsdm38'.
+#7 57.20 You can safely remove it manually.
+#7 60.22 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-unpack-404fxvku'.
+#7 60.22 You can safely remove it manually.
+#7 63.28 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-metadata-jkysun3y'.
+#7 63.28 You can safely remove it manually.
+#7 66.30 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-unpack-3kto7_8j'.
+#7 66.30 You can safely remove it manually.
+#7 66.94 
+#7 69.37 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-metadata-yszf3i4y'.
+#7 69.37 You can safely remove it manually.
+#7 72.43 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-unpack-rh32ugyt'.
+#7 72.43 You can safely remove it manually.
+#7 75.50 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-metadata-yp0bilf2'.
+#7 75.50 You can safely remove it manually.
+#7 78.55 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-unpack-ynh1hmgb'.
+#7 78.55 You can safely remove it manually.
+#7 81.60 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-metadata-n7bwvrjm'.
+#7 81.60 You can safely remove it manually.
+#7 84.63 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-unpack-cfhzk389'.
+#7 84.63 You can safely remove it manually.
+#7 87.69 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-metadata-4_1889us'.
+#7 87.69 You can safely remove it manually.
+#7 90.74 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-unpack-i__3vuve'.
+#7 90.74 You can safely remove it manually.
+#7 93.78 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-metadata-e9igovlh'.
+#7 93.78 You can safely remove it manually.
+#7 96.83 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-unpack-g50b47nw'.
+#7 96.83 You can safely remove it manually.
+#7 99.88 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-metadata-zys_ydgy'.
+#7 99.88 You can safely remove it manually.
+#7 102.9 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-unpack-lazr886u'.
+#7 102.9 You can safely remove it manually.
+#7 106.0 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-metadata-1ew0q1kt'.
+#7 106.0 You can safely remove it manually.
+#7 109.0 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-unpack-nq54p856'.
+#7 109.0 You can safely remove it manually.
+#7 112.1 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-metadata-5ng4pq86'.
+#7 112.1 You can safely remove it manually.
+#7 115.1 WARNING: Failed to remove contents in a temporary directory '/tmp/pip-unpack-jc9swheh'.
+#7 115.1 You can safely remove it manually.
+ERROR: failed to build: failed to solve: Canceled: context canceled

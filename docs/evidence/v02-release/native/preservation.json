@@ -1,0 +1,173 @@
+{
+  "at": "2026-11-01T01:18:46.996549+00:00",
+  "source_commit": "fac92ea797c96cd8d12581bf616d0295e8312186",
+  "images": {
+    "api": "sha256:ec611a3c036474e409e9e94e212a382fe14c67ef06d62b83db2d8e9ecfd533cb",
+    "langflow": "sha256:865e7348409fecd375f86f622c99f1510d98f31f833ab1dad2c9b2bd16a85751",
+    "web": "sha256:0cd661b2e5b9c028aebb7b2b616c2f56cf87885da167ce6a4e001f0341345deb",
+    "postgres": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+  },
+  "claims": "native dependency consistency, exact selected pins, and pre-failure synthetic case/report preservation only",
+  "langflow_exact_pins": {
+    "aiohttp": "3.14.4",
+    "authlib": "1.9.1",
+    "black": "26.10.1",
+    "brotli": "1.2.1",
+    "certifi": "2026.10.23",
+    "dnspython": "2.9.0",
+    "fastmcp": "3.4.10",
+    "fastmcp-slim": "3.4.10",
+    "fsspec": "2026.6.0",
+    "gitpython": "3.2.1",
+    "joserfc": "1.7.6",
+    "langchain-nvidia-ai-endpoints": "1.5.0",
+    "langgraph": "1.2.14",
+    "langgraph-sdk": "0.4.6",
+    "litellm": "1.103.1",
+    "mako": "1.4.2",
+    "mcp": "1.30.0",
+    "mem0ai": "2.0.18",
+    "multidict": "6.9.1",
+    "nltk": "3.10.4",
+    "pyasn1": "0.6.5",
+    "pyjwt": "2.15.0",
+    "pymongo": "4.18.3",
+    "pypdf": "6.21.4",
+    "python-docx": "1.2.0",
+    "reportlab": "4.5.1",
+    "transformers": "5.10.0",
+    "urllib3": "2.8.0",
+    "yarl": "1.25.1"
+  },
+  "preserved_cases": [
+    {
+      "case_id": "RC-f7b9ab39616f4537acbda695e5204481",
+      "decision_id": "DC-412b6d40129e41589076a27a0ab24654",
+      "document_hash": "07bc646062dbdae30b9273efdd96c0b33a57ba8c414cd8a486e29058b5c6c896",
+      "reports": [
+        {
+          "format": "json",
+          "sha256": "496aa5dc8342da3c58a6a62b0ee4feb9280572166306999d0a51ef0e384cb777",
+          "bytes": 3136
+        },
+        {
+          "format": "html",
+          "sha256": "3c9841bb747e4775b176ec6f2497c379ce27694d9a5357d4da70c10712571db8",
+          "bytes": 7615
+        },
+        {
+          "format": "pdf",
+          "sha256": "587903598eec7f0015d229d78bc36a7158050312932c71262cb599f18c1e414e",
+          "bytes": 38337
+        }
+      ]
+    },
+    {
+      "case_id": "RC-e91b15c722ed4bb5aec0978887e40adb",
+      "decision_id": "DC-d58247efd955420787681ac351a9c722",
+      "document_hash": "df8d42038e3e03dfdff3ac8e84f4303e0876fa95a53e3e6c8c9c4b3166b10520",
+      "reports": [
+        {
+          "format": "json",
+          "sha256": "40b6f5497c9d2fde39b0e9ed6b8bfadc8ad5d065b9b2fab34da956ff9d1ca071",
+          "bytes": 3606
+        },
+        {
+          "format": "html",
+          "sha256": "9bd9979d82819e97b4e03bb6e3b615e48469ef0ac5d198ee7a76d9bb0286eb54",
+          "bytes": 8559
+        },
+        {
+          "format": "pdf",
+          "sha256": "1fac954c39d384c6358ef6dd8b4f02bf0761228658bcf82bd5067ffe557db840",
+          "bytes": 40746
+        }
+      ]
+    },
+    {
+      "case_id": "RC-6665b822ade24a1d832915b6f2b9e8fb",
+      "decision_id": "DC-9831667a15924849a98dbbf58f242a72",
+      "document_hash": "ebbd56300bb6df53f002ddf172ec52714199ca7a3c7316cb462014c42a4fc601",
+      "reports": [
+        {
+          "format": "json",
+          "sha256": "6e1f9d7b12237b522ad4bffba18f47e6aaad604b4a1f4da544d2ac5564488b47",
+          "bytes": 3721
+        },
+        {
+          "format": "html",
+          "sha256": "1f049882873d211df38533a025c191e2e4bb62307e0cab1e99e43ce6a5bf1078",
+          "bytes": 8787
+        },
+        {
+          "format": "pdf",
+          "sha256": "b07c24e23348ce3c5694854479fc8ea7328ff9dce2ed4678f1aeb912ec3d2086",
+          "bytes": 41465
+        }
+      ]
+    },
+    {
+      "case_id": "RC-7615c5d0de4942e292746997f960c402",
+      "state": "pending_approval",
+      "preserved": true
+    },
+    {
+      "case_id": "RC-6819175effad49e6969c9a0f03bfefca",
+      "state": "failed",
+      "preserved": true
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "--entrypoint",
+        "python",
+        "sha256:ec611a3c036474e409e9e94e212a382fe14c67ef06d62b83db2d8e9ecfd533cb",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "stdout": "No broken requirements found.\n",
+      "stderr": "WARNING: The directory '/home/appuser/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.\n"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "--entrypoint",
+        "python",
+        "sha256:865e7348409fecd375f86f622c99f1510d98f31f833ab1dad2c9b2bd16a85751",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "stdout": "No broken requirements found.\n",
+      "stderr": ""
+    }
+  ],
+  "result": "passed"
+}

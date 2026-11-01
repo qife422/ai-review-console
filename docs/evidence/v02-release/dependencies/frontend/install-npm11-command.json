@@ -1,0 +1,27 @@
+{
+  "command": [
+    "npm",
+    "exec",
+    "--yes",
+    "--package=npm@11.21.1",
+    "--cache=/private/tmp/arc-v02-release-close.p3RyvK/tool-cache/npm",
+    "--",
+    "npm",
+    "install",
+    "--prefix",
+    "frontend",
+    "--save-dev",
+    "--save-exact",
+    "vite@8.2.4",
+    "vitest@4.1.12",
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund",
+    "--registry=https://registry.npmjs.org",
+    "--cache=/private/tmp/arc-v02-release-close.p3RyvK/tool-cache/npm"
+  ],
+  "started_at": "2026-11-01T00:44:00.335918+00:00",
+  "cwd": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1",
+  "exit_code": 0,
+  "ended_at": "2026-11-01T00:44:11.991939+00:00"
+}

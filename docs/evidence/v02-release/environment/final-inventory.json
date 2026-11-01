@@ -1,0 +1,28 @@
+{
+  "at": "2026-11-01T01:23:54.272275+00:00",
+  "business_volumes": [
+    {
+      "category": "source",
+      "bytes": 105332,
+      "files": 10
+    },
+    {
+      "category": "reports",
+      "bytes": 311937,
+      "files": 18
+    }
+  ],
+  "volume_limit": {
+    "bytes": 1073741824,
+    "files": 5000
+  },
+  "source_files": 107,
+  "source_fingerprint": "7791df3ec465be7df6288b7c617e20deea33064002464c1926e4a0d476eeee51",
+  "cache_recheck": "cache-recheck.json",
+  "cache_note": "authorised single Grype DB removal completed; other caches retained",
+  "docker": "engine responsive, no running containers after quiescent stop; all volumes and images retained",
+  "docker_growth_warning": "docker-growth-warning.json",
+  "free_bytes": 11093315584,
+  "pending_cleanup": true,
+  "method": "read-only task-owned source/report volume metadata only; global Docker report is not exact project physical attribution"
+}

@@ -2,6 +2,17 @@
 
 本文件记录主要功能与交接边界；精确代码差异以 Git 提交为准。开发快照不是正式发布，源码备份不是运行数据库备份。
 
+## 2026-10-31 — v0.2 依赖修补与发布检查
+
+- 应用运行锁修补 certifi、Pillow、pypdf，33 包审计由本轮 67 原始结果 / 66 alias 组变为 0；前端 Vite/Vitest 及相关 family、source-map-js/undici 修补后 npm 全量及运行范围均 0，保留无关 pin。
+- 固定 Python 3.12.16、Nginx 1.30.6、PostgreSQL 16.15 digest，修补 API pip 26.2.2、Web curl/libcurl 8.23.0 与 brotli 1.2.1；保留 Langflow 1.11.6，加入 25 个有依据的兼容 pin，真实 installed metadata/pip check 与 Flow 均复核。
+- 最终代码 `fac92ea` 的 [CI 41259579902](https://github.com/qife422/ai-review-console/actions/runs/41259579902) 实际全部 success：154 Python、29 前端、四格式/三决定/九下载、负向重试、双主题双尺寸浏览器。字体改用仓库固定 Noto，保留字节 SHA 与四图人工观察。
+- 新增不下载大漏洞数据库的有界 OSV 镜像包级扫描，覆盖精确运行的 API/Langflow/Web/PostgreSQL；Red Hat 以实际 content_set、CPE、epoch 及架构补扫。默认 unknown 的原 exit 2 保留，合并 RPM 补扫的覆盖范围按同 ID 和相等条目集合核实，不改写为全绿。
+- 普通前端构建携带实际 24 个 bundle 依赖许可、Plex OFL 和项目许可；新增真实镜像许可文本采集。Zep 2.0.2、IBM driver 及完整 native/二进制材料仍未关闭，没有给出镜像分发批准或风险接受。
+- 修补与检查结果不等于发布通过：最终镜像仍有已记录的包级匹配；Langflow 8 个 Python 包和系统项的具体约束、兼容工作或缺补丁依据，以及下一步均见 [发布验收记录](docs/evidence/v02-release/README.md)。不把跨架构/服务口径的计数差直接当漏洞修复数量。
+- 本地磁盘空间故障已如实保留；按负责人明确授权，仅删除本轮中止的单个 Grype DB 缓存 2,966,994,944 字节，恢复 Docker/本机 pip；原库、历史卷及旧证据不清理。最新原生镜像重新通过真实工作流，故障前 5 个虚构案件及 9 份报告仍可核验。active=0 后停验收服务，库卷和其他缓存保留。
+- Docker 报告量的增长代理达到警戒后停止进一步构建，归属/容量局限与待处理状态单列；未自动 prune。代码、固定证据和文档同步 GitHub，不发布真实后端。
+
 ## 2026-10-28 — v0.2 收尾验收与状态对齐
 
 - 更新活动状态及 Spec 索引，保留已批准 `ARC-UPGRADE@0.1.0` 的固定字节；明确已实现、已验证、发布未通过和最终接受待定的范围。

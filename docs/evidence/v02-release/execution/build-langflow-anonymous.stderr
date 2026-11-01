@@ -1,0 +1,86 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from langflow.Dockerfile
+#1 transferring dockerfile: 742B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/langflowai/langflow:1.11.6@sha256:5338f6851fbab3d0476f7701dacbe749f58fa81a4c1317ad1d52164ce1231a14
+#2 DONE 0.6s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 134B done
+#3 DONE 0.0s
+
+#4 [ 1/10] FROM docker.io/langflowai/langflow:1.11.6@sha256:5338f6851fbab3d0476f7701dacbe749f58fa81a4c1317ad1d52164ce1231a14
+#4 resolve docker.io/langflowai/langflow:1.11.6@sha256:5338f6851fbab3d0476f7701dacbe749f58fa81a4c1317ad1d52164ce1231a14 done
+#4 DONE 0.0s
+
+#5 [ 2/10] WORKDIR /app
+#5 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 10.86MB 0.1s done
+#6 DONE 0.1s
+
+#7 [ 3/10] RUN pip install --no-cache-dir --timeout 120 --retries 10     certifi==2026.10.23 pypdf==6.21.4 python-docx==1.2.0 reportlab==4.5.1
+#7 1.804 Collecting certifi==2026.10.23
+#7 1.920   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+#7 1.950 Collecting pypdf==6.21.4
+#7 1.970   Downloading pypdf-6.21.4-py3-none-any.whl.metadata (7.6 kB)
+#7 1.973 Requirement already satisfied: python-docx==1.2.0 in ./.venv/lib64/python3.14/site-packages (1.2.0)
+#7 2.070 Collecting reportlab==4.5.1
+#7 2.085   Downloading reportlab-4.5.1-py3-none-any.whl.metadata (1.7 kB)
+#7 2.088 Requirement already satisfied: lxml>=3.1.0 in ./.venv/lib64/python3.14/site-packages (from python-docx==1.2.0) (6.1.1)
+#7 2.089 Requirement already satisfied: typing_extensions>=4.9.0 in ./.venv/lib64/python3.14/site-packages (from python-docx==1.2.0) (4.16.0)
+#7 2.089 Requirement already satisfied: pillow>=9.0.0 in ./.venv/lib64/python3.14/site-packages (from reportlab==4.5.1) (12.3.0)
+#7 2.090 Requirement already satisfied: charset-normalizer in ./.venv/lib64/python3.14/site-packages (from reportlab==4.5.1) (3.4.9)
+#7 2.120 Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+#7 2.175 Downloading pypdf-6.21.4-py3-none-any.whl (410 kB)
+#7 2.230 Downloading reportlab-4.5.1-py3-none-any.whl (2.0 MB)
+#7 2.267    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 54.9 MB/s  0:00:00
+#7 2.597 Installing collected packages: reportlab, pypdf, certifi
+#7 3.016   Attempting uninstall: pypdf
+#7 3.021     Found existing installation: pypdf 6.15.0
+#7 3.028     Uninstalling pypdf-6.15.0:
+#7 3.102       Successfully uninstalled pypdf-6.15.0
+#7 3.275   Attempting uninstall: certifi
+#7 3.282     Found existing installation: certifi 2026.7.22
+#7 3.285     Uninstalling certifi-2026.7.22:
+#7 3.298       Successfully uninstalled certifi-2026.7.22
+#7 3.305 
+#7 3.322 Successfully installed certifi-2026.10.23 pypdf-6.21.4 reportlab-4.5.1
+#7 DONE 3.8s
+
+#8 [ 4/10] COPY review_core /app/review_core
+#8 DONE 0.1s
+
+#9 [ 5/10] COPY custom_components /app/custom_components
+#9 DONE 0.0s
+
+#10 [ 6/10] COPY flows /app/flows
+#10 DONE 0.0s
+
+#11 [ 7/10] COPY fixtures /app/fixtures
+#11 DONE 0.0s
+
+#12 [ 8/10] COPY LICENSE THIRD_PARTY_NOTICES.md /app/
+#12 DONE 0.0s
+
+#13 [ 9/10] COPY docs/DEPENDENCY_LICENSES.md /app/docs/DEPENDENCY_LICENSES.md
+#13 DONE 0.0s
+
+#14 [10/10] RUN mkdir -p /app/artifacts && chown -R 1000:1000 /app/review_core /app/custom_components /app/flows /app/artifacts
+#14 DONE 0.4s
+
+#15 exporting to image
+#15 exporting layers
+#15 exporting layers 0.5s done
+#15 exporting manifest sha256:88f2e46f3ed0e8f7e0b642f2c2f6131543c160c9e857e47d6c35dae886244418
+#15 exporting manifest sha256:88f2e46f3ed0e8f7e0b642f2c2f6131543c160c9e857e47d6c35dae886244418 done
+#15 exporting config sha256:f873d2a6ae2f554fa0c17993d0b3df2b0bd9ecb68b91043e91ca3883c748d8b2 done
+#15 exporting attestation manifest sha256:77a33a3172af9676b0e0d0dd961ac7cfc11710f9d239ca8250e18fce57b1b087 done
+#15 exporting manifest list sha256:7a9404bcf318e1db1ba232e60390310b90a2272c97d0dafe917d4ce0834758ec done
+#15 naming to docker.io/library/ai-review-console-langflow:v02-release done
+#15 unpacking to docker.io/library/ai-review-console-langflow:v02-release
+#15 unpacking to docker.io/library/ai-review-console-langflow:v02-release 0.2s done
+#15 DONE 0.7s

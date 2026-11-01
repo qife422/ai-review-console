@@ -1,0 +1,34 @@
+{
+  "argv": [
+    ".venv/bin/pip-audit",
+    "--requirement",
+    "requirements.lock",
+    "--no-deps",
+    "--disable-pip",
+    "--strict",
+    "--timeout",
+    "30",
+    "--progress-spinner",
+    "off",
+    "--cache-dir",
+    "/private/tmp/arc-v02-release-close.p3RyvK/tool-cache/python/audit",
+    "--format",
+    "json"
+  ],
+  "exit_code": 1,
+  "stdout": "audit-before.json",
+  "stderr": "audit-before.stderr",
+  "cwd": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1",
+  "time_instrumentation": "original invocation not instrumented; output file mtime recorded",
+  "output_mtime_utc": "2026-11-01T00:43:11.881426+00:00",
+  "outputs": {
+    "stdout": {
+      "file": "audit-before.json",
+      "sha256": "4183360ff1c6b47c01ec050e8a4a47ab3114a60e8ad318de8ee134784d0b4b8f"
+    },
+    "stderr": {
+      "file": "audit-before.stderr",
+      "sha256": "f3c556ce2ef91a4d4b730a51bf97b4a8e3dc0636b021c78e2fe3f6519f059c91"
+    }
+  }
+}

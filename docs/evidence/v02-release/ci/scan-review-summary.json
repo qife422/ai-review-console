@@ -1,0 +1,114 @@
+{
+  "created_at": "2026-11-01T01:14:47.033640+00:00",
+  "source_commit": "fac92ea797c96cd8d12581bf616d0295e8312186",
+  "run_id": 41259579902,
+  "normal_scan": {
+    "contract": "ARC-UPGRADE@0.1.0",
+    "acceptance": [
+      "RELEASE-001",
+      "AC-19"
+    ],
+    "producer": "scripts/scan_images_osv.py",
+    "started_at": "2026-11-01T01:11:29.346539+00:00",
+    "service": "https://api.osv.dev/v1",
+    "database_snapshot_date": null,
+    "online_package_metadata_sending": true,
+    "result": "queried_with_findings",
+    "unique_queries": 795,
+    "observed_unique_advisory_ids": 231,
+    "mapping_unknown": 226,
+    "query_unknown": 0,
+    "detail_unknown": 0
+  },
+  "images": {
+    "api": {
+      "image_id": "sha256:8f2f6f8d6916153043c8388c0f524bfc13c2e7945212dd7329c6e5cc8fdfa4f5",
+      "inventory_packages": 140,
+      "unknown_packages": 0,
+      "matched_binary_or_python_packages": 51,
+      "observed_unique_advisory_ids": 114,
+      "detail_unknown": 0,
+      "upstream_severity_labels": {
+        "unknown": 114
+      }
+    },
+    "langflow": {
+      "image_id": "sha256:33960b31a9600466b019713f12a7779d720e94443cd09935d3dc0640ab019dc2",
+      "inventory_packages": 774,
+      "unknown_packages": 226,
+      "matched_binary_or_python_packages": 8,
+      "observed_unique_advisory_ids": 90,
+      "detail_unknown": 0,
+      "upstream_severity_labels": {
+        "unknown": 26,
+        "HIGH": 29,
+        "MODERATE": 25,
+        "LOW": 3,
+        "CRITICAL": 7
+      }
+    },
+    "web": {
+      "image_id": "sha256:43c964da1c549cad88ef332222b7739c7e9b7c15e4a8d05829b5db992d8fd231",
+      "inventory_packages": 71,
+      "unknown_packages": 0,
+      "matched_binary_or_python_packages": 0,
+      "observed_unique_advisory_ids": 0,
+      "detail_unknown": 0,
+      "upstream_severity_labels": {}
+    },
+    "postgres": {
+      "image_id": "sha256:74d436cb49d3398cf7b5d7b33635d43623d9e4da4b93c22db453f7d5d81181b1",
+      "inventory_packages": 142,
+      "unknown_packages": 0,
+      "matched_binary_or_python_packages": 63,
+      "observed_unique_advisory_ids": 116,
+      "detail_unknown": 0,
+      "upstream_severity_labels": {
+        "unknown": 116
+      }
+    }
+  },
+  "rhel_supplement": {
+    "contract": "ARC-UPGRADE@0.1.0",
+    "acceptance": [
+      "AC-19",
+      "RELEASE-001"
+    ],
+    "producer": "scripts/scan_images_osv.py --redhat-only",
+    "started_at": "2026-11-01T01:11:46.991805+00:00",
+    "image_id": "sha256:33960b31a9600466b019713f12a7779d720e94443cd09935d3dc0640ab019dc2",
+    "service": "https://api.osv.dev/v1",
+    "result": "queried_with_findings",
+    "database_snapshot_date": null,
+    "rpm_entries": 226,
+    "metadata_only_public_keys": 3,
+    "mapped_software_packages": 223,
+    "unique_queries": 669,
+    "observed_unique_advisory_ids": 23,
+    "matched_software_packages": 50,
+    "mapping_unknown": 0,
+    "query_unknown": 0,
+    "detail_unknown": 0
+  },
+  "combined_package_coverage": {
+    "normal_unknown_records": 226,
+    "normal_unknown_image_types": {
+      "langflow:rpm": 226
+    },
+    "same_image_id": true,
+    "normal_unknown_exact_name_version_arch_set_equals_rhel_entries": true,
+    "rhel_mapping_states": {
+      "mapped": 223,
+      "metadata_only_rpm_public_key_not_software": 3
+    },
+    "combined_remaining_mapping_query_detail_unknown": 0,
+    "qualification": "Coverage complete for enumerated installed package-manager/Python metadata after supplement; 3 RPM public-key metadata entries are not software and excluded with explicit status. This is not a full filesystem/static-binary scan or acceptance of findings. Original normal exit2 is preserved."
+  },
+  "provider_advisory_identifiers": {
+    "normal": 231,
+    "rhel": 23,
+    "union": 254,
+    "intersection": 0,
+    "qualification": "Provider advisory identifiers, not deduplicated CVE count; same finding may occur in multiple image packages."
+  }
+}

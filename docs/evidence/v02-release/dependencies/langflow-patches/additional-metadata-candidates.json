@@ -1,0 +1,53 @@
+[
+  {
+    "name": "yarl",
+    "candidate": "1.25.1",
+    "metadata_url": "https://pypi.org/pypi/yarl/1.25.1/json",
+    "time": "2026-11-01T00:52:59.125065+00:00",
+    "metadata_sha256": "a07cf3b564a15e3be66faacf0c81a23497ebfbf1ec849a3a77b494ba4b60cf0f",
+    "requires_python": ">=3.10",
+    "requires_dist": [
+      "idna>=2.0",
+      "multidict>=4.0",
+      "propcache>=0.2.1"
+    ],
+    "vulnerability_ids": [],
+    "reverse_requirements": [
+      {
+        "package": "aiohttp",
+        "requirement": "yarl<2.0,>=1.17.0"
+      },
+      {
+        "package": "postgrest",
+        "requirement": "yarl>=1.20.1"
+      },
+      {
+        "package": "storage3",
+        "requirement": "yarl>=1.20.1"
+      },
+      {
+        "package": "supabase",
+        "requirement": "yarl>=1.22.0"
+      },
+      {
+        "package": "supabase-functions",
+        "requirement": "yarl>=1.20.1"
+      }
+    ]
+  },
+  {
+    "name": "langchain-nvidia-ai-endpoints",
+    "candidate": "1.5.0",
+    "metadata_url": "https://pypi.org/pypi/langchain-nvidia-ai-endpoints/1.5.0/json",
+    "time": "2026-11-01T00:52:59.383354+00:00",
+    "metadata_sha256": "54159f299f247cde413a43f82faf298bc1af60584661c5efc59010081bfecaf7",
+    "requires_python": "<4.0.0,>=3.10.0",
+    "requires_dist": [
+      "aiohttp<3.15.0,>=3.13.3",
+      "langchain-core<2.0.0,>=1.4.7",
+      "requests>=2.28.0"
+    ],
+    "vulnerability_ids": [],
+    "reverse_requirements": []
+  }
+]

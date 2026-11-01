@@ -1,0 +1,66 @@
+{
+  "image_id": "sha256:34509f24effc7e00ac347a69e1bf10f6de498ef57c4ba8a3212f27b13bf7f37d",
+  "created_at": "2026-11-01T00:48:41.229001+00:00",
+  "files": {
+    "IBM-Plex-OFL-1.1.txt": {
+      "container_path": "/usr/share/nginx/html/licenses/IBM-Plex-OFL-1.1.txt",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--read-only",
+        "--network",
+        "none",
+        "--cap-drop",
+        "ALL",
+        "--entrypoint",
+        "cat",
+        "sha256:34509f24effc7e00ac347a69e1bf10f6de498ef57c4ba8a3212f27b13bf7f37d",
+        "/usr/share/nginx/html/licenses/IBM-Plex-OFL-1.1.txt"
+      ],
+      "exit_code": 0,
+      "bytes": 4456,
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+    },
+    "THIRD_PARTY_LICENSES.md": {
+      "container_path": "/usr/share/nginx/html/licenses/THIRD_PARTY_LICENSES.md",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--read-only",
+        "--network",
+        "none",
+        "--cap-drop",
+        "ALL",
+        "--entrypoint",
+        "cat",
+        "sha256:34509f24effc7e00ac347a69e1bf10f6de498ef57c4ba8a3212f27b13bf7f37d",
+        "/usr/share/nginx/html/licenses/THIRD_PARTY_LICENSES.md"
+      ],
+      "exit_code": 0,
+      "bytes": 78111,
+      "sha256": "86067bb78a1c7ba2d852e1d9a0117de90658d8494c21c6f8d0430473fa6e1a65"
+    },
+    "PROJECT-Apache-2.0.txt": {
+      "container_path": "/usr/share/nginx/html/licenses/PROJECT-Apache-2.0.txt",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--read-only",
+        "--network",
+        "none",
+        "--cap-drop",
+        "ALL",
+        "--entrypoint",
+        "cat",
+        "sha256:34509f24effc7e00ac347a69e1bf10f6de498ef57c4ba8a3212f27b13bf7f37d",
+        "/usr/share/nginx/html/licenses/PROJECT-Apache-2.0.txt"
+      ],
+      "exit_code": 0,
+      "bytes": 9110,
+      "sha256": "934d07684b0f32ebaa86f8f165a7bd944e9fc5c45615a0c16676bb60b1b29ced"
+    }
+  }
+}

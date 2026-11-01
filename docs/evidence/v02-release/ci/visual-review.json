@@ -1,0 +1,65 @@
+{
+  "reviewed_at": "2026-11-01T01:15:14.636517+00:00",
+  "reviewer": "Codex sub-agent visual inspection, not independent human acceptance",
+  "source_commit": "fac92ea797c96cd8d12581bf616d0295e8312186",
+  "run_id": 41259579902,
+  "screenshots": [
+    {
+      "path": "browser/reports-ready-1440-light.png",
+      "bytes": 216361,
+      "sha256": "9befe4c6cda29b414806df30ac06b54f333d374c2e95bc8dac894df554c74f7c",
+      "width": 1440,
+      "height": 1660,
+      "observations": [
+        "Chinese heading, decision reason, report labels, rules and footer render as Chinese glyphs, not tofu boxes.",
+        "Report JSON/HTML/PDF ready/download controls are visible without overlap.",
+        "Desktop has two-column content; mobile stacks metrics, decision and report formats with long identifiers wrapping.",
+        "No clipped page edges or overlapping controls observed in this screenshot."
+      ],
+      "method": "view_image visual inspection of original screenshot; 390px images were displayed resized to244px, exact source dimensions/hash preserved."
+    },
+    {
+      "path": "browser/reports-ready-1440-dark.png",
+      "bytes": 217247,
+      "sha256": "9d3d643bbf943530727faa5f75ed86a5488b053db5c8512cafa453c1b34e357a",
+      "width": 1440,
+      "height": 1660,
+      "observations": [
+        "Chinese heading, decision reason, report labels, rules and footer render as Chinese glyphs, not tofu boxes.",
+        "Report JSON/HTML/PDF ready/download controls are visible without overlap.",
+        "Desktop has two-column content; mobile stacks metrics, decision and report formats with long identifiers wrapping.",
+        "No clipped page edges or overlapping controls observed in this screenshot."
+      ],
+      "method": "view_image visual inspection of original screenshot; 390px images were displayed resized to244px, exact source dimensions/hash preserved."
+    },
+    {
+      "path": "browser/reports-ready-390-light.png",
+      "bytes": 203165,
+      "sha256": "906fd2adf575d7bd82470b7365c91d59527990c72cacd3dd4790458de4eb5da1",
+      "width": 390,
+      "height": 3269,
+      "observations": [
+        "Chinese heading, decision reason, report labels, rules and footer render as Chinese glyphs, not tofu boxes.",
+        "Report JSON/HTML/PDF ready/download controls are visible without overlap.",
+        "Desktop has two-column content; mobile stacks metrics, decision and report formats with long identifiers wrapping.",
+        "No clipped page edges or overlapping controls observed in this screenshot."
+      ],
+      "method": "view_image visual inspection of original screenshot; 390px images were displayed resized to244px, exact source dimensions/hash preserved."
+    },
+    {
+      "path": "browser/reports-ready-390-dark.png",
+      "bytes": 206007,
+      "sha256": "362516780440e7a7a54fb5467c3da05d692ce0c22d5e145d5995781458141895",
+      "width": 390,
+      "height": 3269,
+      "observations": [
+        "Chinese heading, decision reason, report labels, rules and footer render as Chinese glyphs, not tofu boxes.",
+        "Report JSON/HTML/PDF ready/download controls are visible without overlap.",
+        "Desktop has two-column content; mobile stacks metrics, decision and report formats with long identifiers wrapping.",
+        "No clipped page edges or overlapping controls observed in this screenshot."
+      ],
+      "method": "view_image visual inspection of original screenshot; 390px images were displayed resized to244px, exact source dimensions/hash preserved."
+    }
+  ],
+  "limits": "Screenshot review covers these four captured reports-ready states. Keyboard interactions and no-overflow assertions rely on real CLI result.json/commands, not screenshots alone."
+}

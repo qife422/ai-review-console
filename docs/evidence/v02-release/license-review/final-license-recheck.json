@@ -1,0 +1,935 @@
+{
+  "created_at": "2026-11-01T00:48:54.629111+00:00",
+  "method": "No-network/read-only/cap-drop-all/no-mount disposable containers bound to exact final image IDs; unchanged license texts compared with baseline hashes; changed versions read directly. No downloads.",
+  "images": {
+    "api": {
+      "image_id": "sha256:2fd8f05220ac2d4e60479eeefdcaef460d51b6e0a8b5b80f2a24dc5ab3917311",
+      "package_license_checks": [
+        {
+          "name": "pypdf",
+          "version": "6.21.4",
+          "previous_version": null,
+          "license_expression": "BSD-3-Clause",
+          "license_metadata": null,
+          "license_files": [
+            {
+              "path": "/usr/local/lib/python3.12/site-packages/pypdf-6.21.4.dist-info/licenses/LICENSE",
+              "bytes": 1605,
+              "sha256": "a97ac230e5f33ef10a5367a850eb01f91f1a0b064e34742c7794d2294557f524"
+            }
+          ],
+          "license_text_hashes_unchanged": null,
+          "bundled_library_count": 0
+        },
+        {
+          "name": "certifi",
+          "version": "2026.10.23",
+          "previous_version": "2026.7.22",
+          "license_expression": null,
+          "license_metadata": "MPL-2.0",
+          "license_files": [
+            {
+              "path": "/usr/local/lib/python3.12/site-packages/certifi-2026.10.23.dist-info/licenses/LICENSE",
+              "bytes": 989,
+              "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+            }
+          ],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 0
+        },
+        {
+          "name": "psycopg",
+          "version": "3.3.5",
+          "previous_version": "3.3.5",
+          "license_expression": "LGPL-3.0-only",
+          "license_metadata": null,
+          "license_files": [
+            {
+              "path": "/usr/local/lib/python3.12/site-packages/psycopg-3.3.5.dist-info/licenses/LICENSE.txt",
+              "bytes": 7652,
+              "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118"
+            }
+          ],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 0
+        },
+        {
+          "name": "pillow",
+          "version": "13.0.0",
+          "previous_version": "12.3.0",
+          "license_expression": "MIT-CMU",
+          "license_metadata": null,
+          "license_files": [
+            {
+              "path": "/usr/local/lib/python3.12/site-packages/pillow-13.0.0.dist-info/licenses/LICENSE",
+              "bytes": 70307,
+              "sha256": "dda12a98c1979cf3d94df1cff45d27a4cb3f04a60c76f76902ac54cac03ec0ce"
+            }
+          ],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 18
+        },
+        {
+          "name": "psycopg-binary",
+          "version": "3.3.5",
+          "previous_version": "3.3.5",
+          "license_expression": "LGPL-3.0-only",
+          "license_metadata": null,
+          "license_files": [
+            {
+              "path": "/usr/local/lib/python3.12/site-packages/psycopg_binary-3.3.5.dist-info/licenses/LICENSE.txt",
+              "bytes": 7652,
+              "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118"
+            }
+          ],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 16
+        },
+        {
+          "name": "lxml",
+          "version": "6.1.2",
+          "previous_version": "6.1.2",
+          "license_expression": null,
+          "license_metadata": "BSD-3-Clause",
+          "license_files": [
+            {
+              "path": "/usr/local/lib/python3.12/site-packages/lxml-6.1.2.dist-info/licenses/LICENSE.txt",
+              "bytes": 1507,
+              "sha256": "8fc2b568133516e46845d2147917adeee1648e70ae9ab5ed6c5417afef4ce855"
+            },
+            {
+              "path": "/usr/local/lib/python3.12/site-packages/lxml-6.1.2.dist-info/licenses/LICENSES.txt",
+              "bytes": 6221,
+              "sha256": "388fa99f3bde4447cd5a4cbb114037be026854db6cfe89e112691c1d8abdcf3c"
+            }
+          ],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 0
+        }
+      ],
+      "baseline_unknown_os_text_checks": [
+        {
+          "name": "base-files",
+          "text_present": true,
+          "sha256": "fd7e4aae7e7b05f217bcf2d02322825c360e66c52c4c2f1b28d784d6297a1c23",
+          "unchanged_from_baseline": true
+        },
+        {
+          "name": "debian-archive-keyring",
+          "text_present": true,
+          "sha256": "b32aecaae84643700a33bc9ee83fa9b36938d35aa7b61b5042092eca77ddb732",
+          "unchanged_from_baseline": true
+        },
+        {
+          "name": "gcc-12-base",
+          "text_present": true,
+          "sha256": "da8191658b3452ce9caf31638ba61dab31a38c619fa39df119812e050f592fd3",
+          "unchanged_from_baseline": true
+        },
+        {
+          "name": "libc-bin",
+          "text_present": true,
+          "sha256": "40c7e1f2118531f038ca22999bd976901254e1bc5cd1b0f0211bdd064c599987",
+          "unchanged_from_baseline": true
+        },
+        {
+          "name": "libc6",
+          "text_present": true,
+          "sha256": "40c7e1f2118531f038ca22999bd976901254e1bc5cd1b0f0211bdd064c599987",
+          "unchanged_from_baseline": true
+        },
+        {
+          "name": "libcrypt1",
+          "text_present": true,
+          "sha256": "5a5e7ca0e9f3f9679977e3a3e9ede45ad92885a3297ea78e766979f9866c5a16",
+          "unchanged_from_baseline": true
+        },
+        {
+          "name": "libgcc-s1",
+          "text_present": true,
+          "sha256": "da8191658b3452ce9caf31638ba61dab31a38c619fa39df119812e050f592fd3",
+          "unchanged_from_baseline": true
+        },
+        {
+          "name": "libgcrypt20",
+          "text_present": true,
+          "sha256": "95db2f9da663f2bfe2aabe9c72fce9d6c9ae767b912f397d7823f50bd55a1a7d",
+          "unchanged_from_baseline": true
+        },
+        {
+          "name": "libgssapi-krb5-2",
+          "text_present": true,
+          "sha256": "936728f4181718f42951b881c1e8f1386bf6b2723c4fbc533c374d6f42c71816",
+          "unchanged_from_baseline": true
+        },
+        {
+          "name": "libk5crypto3",
+          "text_present": true,
+          "sha256": "936728f4181718f42951b881c1e8f1386bf6b2723c4fbc533c374d6f42c71816",
+          "unchanged_from_baseline": true
+        },
+        {
+          "name": "libkrb5-3",
+          "text_present": true,
+          "sha256": "936728f4181718f42951b881c1e8f1386bf6b2723c4fbc533c374d6f42c71816",
+          "unchanged_from_baseline": true
+        },
+        {
+          "name": "libkrb5support0",
+          "text_present": true,
+          "sha256": "936728f4181718f42951b881c1e8f1386bf6b2723c4fbc533c374d6f42c71816",
+          "unchanged_from_baseline": true
+        },
+        {
+          "name": "libselinux1",
+          "text_present": true,
+          "sha256": "641806738b0c6a3d03168c2649e6b94205198bb66cd557e6bae3a20b71c9bb0b",
+          "unchanged_from_baseline": true
+        },
+        {
+          "name": "libsemanage-common",
+          "text_present": true,
+          "sha256": "e00e6a86c598f9e24ced0180a70a5f2f2e45e133d93adf2b17ce8a06ce4b1b51",
+          "unchanged_from_baseline": true
+        },
+        {
+          "name": "libsemanage2",
+          "text_present": true,
+          "sha256": "e00e6a86c598f9e24ced0180a70a5f2f2e45e133d93adf2b17ce8a06ce4b1b51",
+          "unchanged_from_baseline": true
+        },
+        {
+          "name": "libstdc++6",
+          "text_present": true,
+          "sha256": "da8191658b3452ce9caf31638ba61dab31a38c619fa39df119812e050f592fd3",
+          "unchanged_from_baseline": true
+        },
+        {
+          "name": "libtasn1-6",
+          "text_present": true,
+          "sha256": "572ad60ad184d8f52c6dc66d83a61a68f137db560b3452ce00588c9ecf128a65",
+          "unchanged_from_baseline": true
+        }
+      ],
+      "project_notice_font_checks": [
+        {
+          "path": "/app/THIRD_PARTY_NOTICES.md",
+          "exists": true,
+          "bytes": 2797,
+          "sha256": "68290895652305b03cdebfb54504627941a545b1d9482334b47b130d1b05895f",
+          "worktree_sha256": "68290895652305b03cdebfb54504627941a545b1d9482334b47b130d1b05895f",
+          "matches_worktree": true
+        },
+        {
+          "path": "/app/docs/DEPENDENCY_LICENSES.md",
+          "exists": true,
+          "bytes": 8031,
+          "sha256": "fc3e55064817837a05fe1d55ce51929120b7dd610d0577f877bfa6a7a4fd28e5",
+          "worktree_sha256": "fc3e55064817837a05fe1d55ce51929120b7dd610d0577f877bfa6a7a4fd28e5",
+          "matches_worktree": true
+        },
+        {
+          "path": "/app/LICENSE",
+          "exists": true,
+          "bytes": 9110,
+          "sha256": "934d07684b0f32ebaa86f8f165a7bd944e9fc5c45615a0c16676bb60b1b29ced",
+          "worktree_sha256": "934d07684b0f32ebaa86f8f165a7bd944e9fc5c45615a0c16676bb60b1b29ced",
+          "matches_worktree": true
+        },
+        {
+          "path": "/app/review_core/assets/OFL.txt",
+          "exists": true,
+          "bytes": 4387,
+          "sha256": "babcfe66c8a098b2fa279bc724a3a342f8124f77ce18941fbcc1bbb39823cded",
+          "worktree_sha256": "babcfe66c8a098b2fa279bc724a3a342f8124f77ce18941fbcc1bbb39823cded",
+          "matches_worktree": true
+        },
+        {
+          "path": "/app/review_core/assets/NotoSansSC-Regular.ttf",
+          "exists": true,
+          "bytes": 10595932,
+          "sha256": "e3b799e4230233500ff152d1cc81ade6c64acb34958c90cd6b6e02927a2923a9",
+          "worktree_sha256": "e3b799e4230233500ff152d1cc81ade6c64acb34958c90cd6b6e02927a2923a9",
+          "matches_worktree": true
+        }
+      ],
+      "all_worktree_notice_and_font_hashes_match": true,
+      "outcome": "known exact licenses confirmed within scope; unresolved Zep/native redistribution items remain"
+    },
+    "langflow": {
+      "image_id": "sha256:7a9404bcf318e1db1ba232e60390310b90a2272c97d0dafe917d4ce0834758ec",
+      "package_license_checks": [
+        {
+          "name": "google-crc32c",
+          "version": "1.8.0",
+          "previous_version": "1.8.0",
+          "license_expression": null,
+          "license_metadata": null,
+          "license_files": [
+            {
+              "path": "/app/.venv/lib64/python3.14/site-packages/google_crc32c-1.8.0.dist-info/licenses/LICENSE",
+              "bytes": 11358,
+              "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+            }
+          ],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 1
+        },
+        {
+          "name": "frozendict",
+          "version": "2.4.7",
+          "previous_version": "2.4.7",
+          "license_expression": null,
+          "license_metadata": "LGPL v3",
+          "license_files": [
+            {
+              "path": "/app/.venv/lib64/python3.14/site-packages/frozendict-2.4.7.dist-info/licenses/LICENSE.txt",
+              "bytes": 7652,
+              "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118"
+            }
+          ],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 0
+        },
+        {
+          "name": "llm-sandbox",
+          "version": "0.3.39",
+          "previous_version": "0.3.39",
+          "license_expression": null,
+          "license_metadata": null,
+          "license_files": [
+            {
+              "path": "/app/.venv/lib64/python3.14/site-packages/llm_sandbox-0.3.39.dist-info/licenses/LICENSE",
+              "bytes": 1066,
+              "sha256": "f117e87366786f5e31afb19fce5142a0ef155f3876ef61721b09304a4653042f"
+            }
+          ],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 0
+        },
+        {
+          "name": "lfx",
+          "version": "1.11.6",
+          "previous_version": "1.11.6",
+          "license_expression": null,
+          "license_metadata": null,
+          "license_files": [],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 0
+        },
+        {
+          "name": "peewee",
+          "version": "4.2.6",
+          "previous_version": "4.2.6",
+          "license_expression": null,
+          "license_metadata": null,
+          "license_files": [
+            {
+              "path": "/app/.venv/lib64/python3.14/site-packages/peewee-4.2.6.dist-info/licenses/LICENSE",
+              "bytes": 1058,
+              "sha256": "3740096125b08735a247b8dd08cd82e0ba984d3bebd9221d378576637e5240da"
+            }
+          ],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 0
+        },
+        {
+          "name": "langflow",
+          "version": "1.11.6",
+          "previous_version": "1.11.6",
+          "license_expression": "MIT",
+          "license_metadata": null,
+          "license_files": [
+            {
+              "path": "/app/.venv/lib64/python3.14/site-packages/langflow-1.11.6.dist-info/licenses/LICENSE",
+              "bytes": 1065,
+              "sha256": "48d4a7496209a9e1f2f549384251b69319360c3a38127cf513473590be383359"
+            }
+          ],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 0
+        },
+        {
+          "name": "smolagents",
+          "version": "1.26.0",
+          "previous_version": "1.26.0",
+          "license_expression": null,
+          "license_metadata": null,
+          "license_files": [
+            {
+              "path": "/app/.venv/lib64/python3.14/site-packages/smolagents-1.26.0.dist-info/licenses/LICENSE",
+              "bytes": 11357,
+              "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+            }
+          ],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 0
+        },
+        {
+          "name": "langchain-mongodb",
+          "version": "0.11.0",
+          "previous_version": "0.11.0",
+          "license_expression": null,
+          "license_metadata": null,
+          "license_files": [
+            {
+              "path": "/app/.venv/lib64/python3.14/site-packages/langchain_mongodb-0.11.0.dist-info/licenses/LICENSE",
+              "bytes": 1072,
+              "sha256": "d9bb52f2e3540d60ff50d8f0f5b6ba649b7fd346948c4c3d086c8afb120763c7"
+            }
+          ],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 0
+        },
+        {
+          "name": "grandalf",
+          "version": "0.8",
+          "previous_version": "0.8",
+          "license_expression": null,
+          "license_metadata": "GPLv2 | EPLv1",
+          "license_files": [
+            {
+              "path": "/app/.venv/lib64/python3.14/site-packages/grandalf-0.8.dist-info/LICENSE",
+              "bytes": 29733,
+              "sha256": "bedb74de285adb9f5206e3c22e13de9c1216dc52382bbb87f83687377b233c46"
+            }
+          ],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 0
+        },
+        {
+          "name": "crc32c",
+          "version": "2.8",
+          "previous_version": "2.8",
+          "license_expression": null,
+          "license_metadata": "LGPL-2.1-or-later",
+          "license_files": [
+            {
+              "path": "/app/.venv/lib64/python3.14/site-packages/crc32c-2.8.dist-info/licenses/AUTHORS.google-crc32c",
+              "bytes": 414,
+              "sha256": "ef4f57a978a9ea5cbd1b30eaa271c7d30eee8da8f3106d7b415021479507ee87"
+            },
+            {
+              "path": "/app/.venv/lib64/python3.14/site-packages/crc32c-2.8.dist-info/licenses/LICENSE",
+              "bytes": 26530,
+              "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+            },
+            {
+              "path": "/app/.venv/lib64/python3.14/site-packages/crc32c-2.8.dist-info/licenses/LICENSE.google-crc32c",
+              "bytes": 1460,
+              "sha256": "a1f30b77c01e0995fa32a00119e00749e8731ee8a3c4c3549bce74083c72b0b6"
+            },
+            {
+              "path": "/app/.venv/lib64/python3.14/site-packages/crc32c-2.8.dist-info/licenses/LICENSE.slice-by-8",
+              "bytes": 1902,
+              "sha256": "7890b6a914d1a5164dad78d642f20b4565d128f3375f75b861133026ad016d07"
+            }
+          ],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 0
+        },
+        {
+          "name": "psycopg",
+          "version": "3.3.4",
+          "previous_version": "3.3.4",
+          "license_expression": "LGPL-3.0-only",
+          "license_metadata": null,
+          "license_files": [
+            {
+              "path": "/app/.venv/lib64/python3.14/site-packages/psycopg-3.3.4.dist-info/licenses/LICENSE.txt",
+              "bytes": 7652,
+              "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118"
+            }
+          ],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 0
+        },
+        {
+          "name": "agent-lifecycle-toolkit",
+          "version": "0.10.1",
+          "previous_version": "0.10.1",
+          "license_expression": null,
+          "license_metadata": null,
+          "license_files": [
+            {
+              "path": "/app/.venv/lib64/python3.14/site-packages/agent_lifecycle_toolkit-0.10.1.dist-info/licenses/LICENSE",
+              "bytes": 590,
+              "sha256": "08d67faff2ff3bfa20cd50c65599c44b9328ad6fadeae15be6cccc28b796bf83"
+            }
+          ],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 0
+        },
+        {
+          "name": "uncurl",
+          "version": "0.0.11",
+          "previous_version": "0.0.11",
+          "license_expression": null,
+          "license_metadata": "UNKNOWN",
+          "license_files": [
+            {
+              "path": "/app/.venv/lib64/python3.14/site-packages/uncurl-0.0.11.dist-info/LICENSE",
+              "bytes": 10834,
+              "sha256": "f12ef9fd396a13e90878630b1b4fab471c6ed9cb7a48cf2abb2516281632218e"
+            }
+          ],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 0
+        },
+        {
+          "name": "twelvelabs",
+          "version": "0.4.11",
+          "previous_version": "0.4.11",
+          "license_expression": null,
+          "license_metadata": "UNKNOWN",
+          "license_files": [
+            {
+              "path": "/app/.venv/lib64/python3.14/site-packages/twelvelabs-0.4.11.dist-info/LICENSE",
+              "bytes": 10306,
+              "sha256": "b0aaec88641ffa1ce0462b911ab7160aed54465990285044d53c33b2eec1b1bf"
+            }
+          ],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 0
+        },
+        {
+          "name": "psycopg2-binary",
+          "version": "2.9.12",
+          "previous_version": "2.9.12",
+          "license_expression": null,
+          "license_metadata": "LGPL with exceptions",
+          "license_files": [
+            {
+              "path": "/app/.venv/lib64/python3.14/site-packages/psycopg2_binary-2.9.12.dist-info/licenses/LICENSE",
+              "bytes": 2238,
+              "sha256": "9614b85dfc9a72c5b2ca33144c1d7e1ed3b1c297459d9fb28a6a5762c2e8d71b"
+            }
+          ],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 16
+        },
+        {
+          "name": "zep-python",
+          "version": "2.0.2",
+          "previous_version": "2.0.2",
+          "license_expression": null,
+          "license_metadata": null,
+          "license_files": [],
+          "license_text_hashes_unchanged": true,
+          "bundled_library_count": 0
+        },
+        {
+          "name": "pypdf",
+          "version": "6.21.4",
+          "previous_version": null,
+          "license_expression": "BSD-3-Clause",
+          "license_metadata": null,
+          "license_files": [
+            {
+              "path": "/app/.venv/lib64/python3.14/site-packages/pypdf-6.21.4.dist-info/licenses/LICENSE",
+              "bytes": 1605,
+              "sha256": "a97ac230e5f33ef10a5367a850eb01f91f1a0b064e34742c7794d2294557f524"
+            }
+          ],
+          "license_text_hashes_unchanged": null,
+          "bundled_library_count": 0
+        },
+        {
+          "name": "certifi",
+          "version": "2026.10.23",
+          "previous_version": null,
+          "license_expression": null,
+          "license_metadata": "MPL-2.0",
+          "license_files": [
+            {
+              "path": "/app/.venv/lib64/python3.14/site-packages/certifi-2026.10.23.dist-info/licenses/LICENSE",
+              "bytes": 989,
+              "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+            }
+          ],
+          "license_text_hashes_unchanged": null,
+          "bundled_library_count": 0
+        }
+      ],
+      "baseline_unknown_os_text_checks": [],
+      "project_notice_font_checks": [
+        {
+          "path": "/app/THIRD_PARTY_NOTICES.md",
+          "exists": true,
+          "bytes": 2797,
+          "sha256": "68290895652305b03cdebfb54504627941a545b1d9482334b47b130d1b05895f",
+          "worktree_sha256": "68290895652305b03cdebfb54504627941a545b1d9482334b47b130d1b05895f",
+          "matches_worktree": true
+        },
+        {
+          "path": "/app/docs/DEPENDENCY_LICENSES.md",
+          "exists": true,
+          "bytes": 8031,
+          "sha256": "fc3e55064817837a05fe1d55ce51929120b7dd610d0577f877bfa6a7a4fd28e5",
+          "worktree_sha256": "fc3e55064817837a05fe1d55ce51929120b7dd610d0577f877bfa6a7a4fd28e5",
+          "matches_worktree": true
+        },
+        {
+          "path": "/app/LICENSE",
+          "exists": true,
+          "bytes": 9110,
+          "sha256": "934d07684b0f32ebaa86f8f165a7bd944e9fc5c45615a0c16676bb60b1b29ced",
+          "worktree_sha256": "934d07684b0f32ebaa86f8f165a7bd944e9fc5c45615a0c16676bb60b1b29ced",
+          "matches_worktree": true
+        },
+        {
+          "path": "/app/review_core/assets/OFL.txt",
+          "exists": true,
+          "bytes": 4387,
+          "sha256": "babcfe66c8a098b2fa279bc724a3a342f8124f77ce18941fbcc1bbb39823cded",
+          "worktree_sha256": "babcfe66c8a098b2fa279bc724a3a342f8124f77ce18941fbcc1bbb39823cded",
+          "matches_worktree": true
+        },
+        {
+          "path": "/app/review_core/assets/NotoSansSC-Regular.ttf",
+          "exists": true,
+          "bytes": 10595932,
+          "sha256": "e3b799e4230233500ff152d1cc81ade6c64acb34958c90cd6b6e02927a2923a9",
+          "worktree_sha256": "e3b799e4230233500ff152d1cc81ade6c64acb34958c90cd6b6e02927a2923a9",
+          "matches_worktree": true
+        }
+      ],
+      "all_worktree_notice_and_font_hashes_match": true,
+      "outcome": "known exact licenses confirmed within scope; unresolved Zep/native redistribution items remain"
+    },
+    "web": {
+      "image_id": "sha256:34509f24effc7e00ac347a69e1bf10f6de498ef57c4ba8a3212f27b13bf7f37d",
+      "license_files": {
+        "IBM-Plex-OFL-1.1.txt": {
+          "container_path": "/usr/share/nginx/html/licenses/IBM-Plex-OFL-1.1.txt",
+          "command": [
+            "docker",
+            "run",
+            "--rm",
+            "--read-only",
+            "--network",
+            "none",
+            "--cap-drop",
+            "ALL",
+            "--entrypoint",
+            "cat",
+            "sha256:34509f24effc7e00ac347a69e1bf10f6de498ef57c4ba8a3212f27b13bf7f37d",
+            "/usr/share/nginx/html/licenses/IBM-Plex-OFL-1.1.txt"
+          ],
+          "exit_code": 0,
+          "bytes": 4456,
+          "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+          "matches_installed_plex_text": true
+        },
+        "THIRD_PARTY_LICENSES.md": {
+          "container_path": "/usr/share/nginx/html/licenses/THIRD_PARTY_LICENSES.md",
+          "command": [
+            "docker",
+            "run",
+            "--rm",
+            "--read-only",
+            "--network",
+            "none",
+            "--cap-drop",
+            "ALL",
+            "--entrypoint",
+            "cat",
+            "sha256:34509f24effc7e00ac347a69e1bf10f6de498ef57c4ba8a3212f27b13bf7f37d",
+            "/usr/share/nginx/html/licenses/THIRD_PARTY_LICENSES.md"
+          ],
+          "exit_code": 0,
+          "bytes": 78111,
+          "sha256": "86067bb78a1c7ba2d852e1d9a0117de90658d8494c21c6f8d0430473fa6e1a65"
+        },
+        "PROJECT-Apache-2.0.txt": {
+          "container_path": "/usr/share/nginx/html/licenses/PROJECT-Apache-2.0.txt",
+          "command": [
+            "docker",
+            "run",
+            "--rm",
+            "--read-only",
+            "--network",
+            "none",
+            "--cap-drop",
+            "ALL",
+            "--entrypoint",
+            "cat",
+            "sha256:34509f24effc7e00ac347a69e1bf10f6de498ef57c4ba8a3212f27b13bf7f37d",
+            "/usr/share/nginx/html/licenses/PROJECT-Apache-2.0.txt"
+          ],
+          "exit_code": 0,
+          "bytes": 9110,
+          "sha256": "934d07684b0f32ebaa86f8f165a7bd944e9fc5c45615a0c16676bb60b1b29ced",
+          "matches_project_license": true
+        }
+      },
+      "bundle_license_rows": [
+        {
+          "name": "@babel/runtime",
+          "version": "7.29.7",
+          "license": "MIT",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "@carbon/feature-flags",
+          "version": "1.8.0",
+          "license": "Apache-2.0",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "@carbon/icon-helpers",
+          "version": "10.81.0",
+          "license": "Apache-2.0",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "@carbon/icons-react",
+          "version": "11.87.0",
+          "license": "Apache-2.0",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "@carbon/layout",
+          "version": "11.58.0",
+          "license": "Apache-2.0",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "@carbon/react",
+          "version": "1.115.0",
+          "license": "Apache-2.0",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "@floating-ui/core",
+          "version": "1.8.0",
+          "license": "MIT",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "@floating-ui/dom",
+          "version": "1.8.0",
+          "license": "MIT",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "@floating-ui/react-dom",
+          "version": "2.1.9",
+          "license": "MIT",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "@floating-ui/react",
+          "version": "0.27.20",
+          "license": "MIT",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "@floating-ui/utils",
+          "version": "0.2.12",
+          "license": "MIT",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "classnames",
+          "version": "2.5.1",
+          "license": "MIT",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "compute-scroll-into-view",
+          "version": "3.1.1",
+          "license": "MIT",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "copy-to-clipboard",
+          "version": "4.0.2",
+          "license": "MIT",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "downshift",
+          "version": "9.4.0",
+          "license": "MIT",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "es-toolkit",
+          "version": "1.52.0",
+          "license": "MIT",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "invariant",
+          "version": "2.2.4",
+          "license": "MIT",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "prop-types",
+          "version": "15.8.1",
+          "license": "MIT",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "react-dom",
+          "version": "19.2.8",
+          "license": "MIT",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "react-fast-compare",
+          "version": "3.2.2",
+          "license": "MIT",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "react-is",
+          "version": "18.3.1",
+          "license": "MIT",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "react",
+          "version": "19.2.8",
+          "license": "MIT",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "scheduler",
+          "version": "0.27.0",
+          "license": "MIT",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        },
+        {
+          "name": "tabbable",
+          "version": "6.5.0",
+          "license": "MIT",
+          "full_text_nonempty": true,
+          "lock_has_exact_name_version": true
+        }
+      ],
+      "bundled_js_dependency_licenses": 24,
+      "all_nonempty_and_exact_lock_version": true,
+      "outcome": "24 actual bundled JavaScript dependency full texts, IBM Plex OFL and project Apache text present; no claim of complete Alpine binary redistribution signoff"
+    }
+  },
+  "limitations": [
+    "Not complete binary-source distribution signoff.",
+    "zep-python2.0.2 exact-release license still unresolved.",
+    "Shared native libraries still require complete notices and corresponding-source handling before image redistribution."
+  ],
+  "temp_bytes_after": 2100265,
+  "temp_files_after": 39,
+  "producer_files": [
+    {
+      "path": "extract_image_licenses.py",
+      "sha256": "076f768a42b3f30bb82124c30725b4c1054d9ce31b9c6a6150cefe0777717dbb"
+    },
+    {
+      "path": "extract_final_licenses.py",
+      "sha256": "8507b92a7fc3f9d49f364481a6fb32c78be889a61cf6477973684df824c2ac8b"
+    }
+  ],
+  "evidence_files": [
+    {
+      "path": "final-api-license-texts.json",
+      "bytes": 681487,
+      "sha256": "f7a2e66a865683c38a6bfaa3c998c15e124ca1c7a21a6a7013e7739939d4658a"
+    },
+    {
+      "path": "final-api-license-texts.record.json",
+      "bytes": 575,
+      "sha256": "697b3df676390989aa2e212735f8db61ffcbecf9e27ade0ca8b974c86a85a3b4"
+    },
+    {
+      "path": "final-api-license-texts.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "final-langflow-license-texts.json",
+      "bytes": 201341,
+      "sha256": "afde3fb0a5b33b5d01b5a64867b0b7eda9ba235e1fdf26eaa2f6c2973b2ba29c"
+    },
+    {
+      "path": "final-langflow-license-texts.record.json",
+      "bytes": 580,
+      "sha256": "93e21c5ad42da6292ee5a13ad3567accf20bfe3954d6a854b0eda893f22c09dc"
+    },
+    {
+      "path": "final-langflow-license-texts.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "final-web-IBM-Plex-OFL-1.1.txt",
+      "bytes": 4456,
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+    },
+    {
+      "path": "final-web-PROJECT-Apache-2.0.txt",
+      "bytes": 9110,
+      "sha256": "934d07684b0f32ebaa86f8f165a7bd944e9fc5c45615a0c16676bb60b1b29ced"
+    },
+    {
+      "path": "final-web-THIRD_PARTY_LICENSES.md",
+      "bytes": 78111,
+      "sha256": "86067bb78a1c7ba2d852e1d9a0117de90658d8494c21c6f8d0430473fa6e1a65"
+    },
+    {
+      "path": "final-web-license-list.record.json",
+      "bytes": 617,
+      "sha256": "1d93fd04d972aa591c6174a5d186460a0d0843d2d122bd9b3972d99edbd6e7a7"
+    },
+    {
+      "path": "final-web-license-list.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "final-web-license-list.stdout",
+      "bytes": 259,
+      "sha256": "8a7a21599a4205864131ec0365b0301b5bd4c76bc12e81c386e1304307edd089"
+    },
+    {
+      "path": "final-web-license-texts.record.json",
+      "bytes": 1977,
+      "sha256": "37edfad855cfc9fdca8492c26cd188d17e1dce5d7b09e5918c849513710a13f7"
+    },
+    {
+      "path": "license-review.json",
+      "bytes": 20071,
+      "sha256": "468f3a8c5386882ce6ced18b997ec865c567c988492ea4529e3de38847cf130f"
+    },
+    {
+      "path": "official-source-records.json",
+      "bytes": 1213,
+      "sha256": "38c14cdca9db68e103adc4966d56bd31cc56407e778c6c0508958ac7297e5fb6"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-11-01T01:15:40.115099+00:00",
+  "child_manifests": [
+    {
+      "manifest": "release/manifest.json",
+      "files": 88,
+      "errors": [],
+      "sha256": "f8c7e0feef7ff9438dfa104a55dc0d9fff13108098837945cae847733d32511d"
+    },
+    {
+      "manifest": "release/images/manifest.json",
+      "files": 44,
+      "errors": [],
+      "sha256": "c3ec3f9784746fc3aa6541c65268217497c8ae7025a3687b5032be1308ea2bae"
+    },
+    {
+      "manifest": "release/rhel/manifest.json",
+      "files": 12,
+      "errors": [],
+      "sha256": "67cd64c5e2b2daee95c3a1022abee981d62c34408940ade9b1838510f130c1c8"
+    },
+    {
+      "manifest": "release/licenses/manifest.json",
+      "files": 3,
+      "errors": [],
+      "sha256": "b7e322d0e52a856629f2b20e246449b312044a12a0457232a48db74babe8f172"
+    }
+  ],
+  "selected_browser_hash_checks": [
+    {
+      "path": "reports-ready-390-light.png",
+      "hash_matches_browser_manifest": true
+    },
+    {
+      "path": "commands.log",
+      "hash_matches_browser_manifest": true
+    },
+    {
+      "path": "reports-ready-1440-dark.png",
+      "hash_matches_browser_manifest": true
+    },
+    {
+      "path": "reports-ready-1440-light.png",
+      "hash_matches_browser_manifest": true
+    },
+    {
+      "path": "reports-ready-390-dark.png",
+      "hash_matches_browser_manifest": true
+    }
+  ],
+  "missing_payload_qualification": "Browser original result.json records hidden CLI snapshots/downloads which GitHub upload-artifact default did not include. Those entries are original producer history, not retained active payload claims. Real download hashes were checked by CLI during CI, and workflow.json records nine verified report downloads; only selected screenshots/commands/result are retained here."
+}

@@ -1,0 +1,41 @@
+{
+  "command": [
+    "docker",
+    "compose",
+    "--project-directory",
+    "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1",
+    "--env-file",
+    "/dev/null",
+    "-p",
+    "ai-review-console-release",
+    "-f",
+    "docker-compose.yml",
+    "-f",
+    "/private/tmp/arc-v02-release-close.p3RyvK/native/runtime.json",
+    "up",
+    "-d",
+    "--no-build",
+    "--pull",
+    "never",
+    "postgres",
+    "langflow"
+  ],
+  "cwd": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1",
+  "started_at": "2026-11-01T01:16:49.345068+00:00",
+  "ended_at": "2026-11-01T01:17:00.931261+00:00",
+  "elapsed_seconds": 11.586723749991506,
+  "exit_code": 0,
+  "stop_reason": null,
+  "files": {
+    "stdout": {
+      "path": "/private/tmp/arc-v02-release-close.p3RyvK/steps/native-start-stores.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "/private/tmp/arc-v02-release-close.p3RyvK/steps/native-start-stores.stderr",
+      "bytes": 853,
+      "sha256": "3d98836030ccb4132d2f8cd4d596d4be88eb34b3206eaa1956ad4d26041f03fa"
+    }
+  }
+}

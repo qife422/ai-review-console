@@ -1,0 +1,42 @@
+{
+  "old-langflow": {
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--entrypoint",
+      "sh",
+      "sha256:ff0f5cc380743034c05b4bfcf587be0e714da1610799f0c7c41d45902a5267c4",
+      "-c",
+      "cat /etc/os-release; python --version; python -m pip check"
+    ],
+    "exit_code": 0
+  },
+  "new-langflow": {
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--entrypoint",
+      "sh",
+      "sha256:7a9404bcf318e1db1ba232e60390310b90a2272c97d0dafe917d4ce0834758ec",
+      "-c",
+      "cat /etc/os-release; python --version; python -m pip check"
+    ],
+    "exit_code": 0
+  }
+}

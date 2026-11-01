@@ -1,0 +1,56 @@
+Requirement already satisfied: annotated-doc==0.0.5 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 7)) (0.0.5)
+Requirement already satisfied: annotated-types==0.8.0 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 9)) (0.8.0)
+Requirement already satisfied: anyio==4.14.2 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 11)) (4.14.2)
+Collecting certifi==2026.10.23 (from -r requirements.lock (line 16))
+  Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+Requirement already satisfied: charset-normalizer==3.5.1 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 21)) (3.5.1)
+Requirement already satisfied: click==8.5.0 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 23)) (8.5.0)
+Requirement already satisfied: fastapi==0.141.1 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 25)) (0.141.1)
+Collecting greenlet==3.5.5 (from -r requirements.lock (line 27))
+  Downloading greenlet-3.5.5-cp312-cp312-macosx_11_0_universal2.whl.metadata (3.8 kB)
+Requirement already satisfied: h11==0.16.0 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 29)) (0.16.0)
+Requirement already satisfied: httpcore==1.0.9 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 33)) (1.0.9)
+Requirement already satisfied: httptools==0.8.0 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 35)) (0.8.0)
+Requirement already satisfied: httpx==0.28.1 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 37)) (0.28.1)
+Requirement already satisfied: idna==3.19 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 39)) (3.19)
+Requirement already satisfied: lxml==6.1.2 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 43)) (6.1.2)
+Collecting pillow==13.0.0 (from -r requirements.lock (line 45))
+  Downloading pillow-13.0.0-cp312-cp312-macosx_11_0_arm64.whl.metadata (9.1 kB)
+Requirement already satisfied: psycopg==3.3.5 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 49)) (3.3.5)
+Requirement already satisfied: psycopg-binary==3.3.5 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 51)) (3.3.5)
+Requirement already satisfied: pydantic==2.13.5 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 53)) (2.13.5)
+Requirement already satisfied: pydantic-core==2.46.5 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 57)) (2.46.5)
+Collecting pypdf==6.21.4 (from -r requirements.lock (line 59))
+  Downloading pypdf-6.21.4-py3-none-any.whl.metadata (7.6 kB)
+Requirement already satisfied: python-docx==1.2.0 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 61)) (1.2.0)
+Requirement already satisfied: python-dotenv==1.2.3 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 63)) (1.2.3)
+Requirement already satisfied: python-multipart==0.0.32 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 65)) (0.0.32)
+Requirement already satisfied: pyyaml==6.0.3 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 67)) (6.0.3)
+Requirement already satisfied: reportlab==4.5.1 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 69)) (4.5.1)
+Requirement already satisfied: sqlalchemy==2.0.52 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 71)) (2.0.52)
+Requirement already satisfied: starlette==1.6.0 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 73)) (1.6.0)
+Requirement already satisfied: typing-extensions==4.16.0 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 75)) (4.16.0)
+Requirement already satisfied: typing-inspection==0.4.4 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 86)) (0.4.4)
+Requirement already satisfied: uvicorn==0.52.4 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 90)) (0.52.4)
+Requirement already satisfied: uvloop==0.22.1 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 92)) (0.22.1)
+Requirement already satisfied: watchfiles==1.2.0 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 94)) (1.2.0)
+Requirement already satisfied: websockets==17.1 in ./.venv/lib/python3.12/site-packages (from -r requirements.lock (line 96)) (17.1)
+Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+Downloading greenlet-3.5.5-cp312-cp312-macosx_11_0_universal2.whl (295 kB)
+Downloading pillow-13.0.0-cp312-cp312-macosx_11_0_arm64.whl (4.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 45.4 MB/s eta 0:00:00
+Downloading pypdf-6.21.4-py3-none-any.whl (410 kB)
+Installing collected packages: pypdf, pillow, greenlet, certifi
+  Attempting uninstall: pypdf
+    Found existing installation: pypdf 6.16.2
+    Uninstalling pypdf-6.16.2:
+      Successfully uninstalled pypdf-6.16.2
+  Attempting uninstall: pillow
+    Found existing installation: pillow 12.3.0
+    Uninstalling pillow-12.3.0:
+      Successfully uninstalled pillow-12.3.0
+  Attempting uninstall: certifi
+    Found existing installation: certifi 2026.7.22
+    Uninstalling certifi-2026.7.22:
+      Successfully uninstalled certifi-2026.7.22
+Successfully installed certifi-2026.10.23 greenlet-3.5.5 pillow-13.0.0 pypdf-6.21.4

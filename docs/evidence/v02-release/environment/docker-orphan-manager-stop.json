@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-01T01:08:59.245378+00:00",
+  "target_pid": 14987,
+  "exact_command": "/Applications/Docker.app/Contents/MacOS/com.docker.backend",
+  "reason": "graceful Desktop shutdown and SIGTERM ended all GUI/engine children but orphan manager remained; no child or open Docker disk image; daemon unavailable",
+  "children": [],
+  "docker_disk_handles": [],
+  "method": "SIGKILL orphan Docker manager only; no settings/data/image/volume removal"
+}
