@@ -4,7 +4,8 @@ ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
 WORKDIR /app
 RUN useradd --create-home --uid 10001 appuser
 COPY requirements.lock ./
-RUN pip install --no-cache-dir --no-deps --timeout 120 --retries 10 -r requirements.lock
+RUN pip install --no-cache-dir --timeout 120 --retries 10 pip==26.2.2 \
+    && pip install --no-cache-dir --no-deps --timeout 120 --retries 10 -r requirements.lock
 COPY pyproject.toml README.md LICENSE THIRD_PARTY_NOTICES.md ./
 COPY docs/DEPENDENCY_LICENSES.md ./docs/DEPENDENCY_LICENSES.md
 COPY review_core ./review_core

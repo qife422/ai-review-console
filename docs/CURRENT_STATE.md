@@ -64,6 +64,8 @@
 
 ## 待解决的发布问题
 
+2026-10-31 续作进行中：应用 Python 锁及 Node 全量/运行依赖审计已取得零结果，新提交 `eb19090` 的 CI 已通过 136 Python/29 前端，真实工作流步骤亦已通过，浏览器作业尚在进行。进一步镜像检查发现可兼容修补项，候选已准备；宿主机空间不足导致后续 Langflow 构建 EROFS，已停止本轮构建。本轮中止的单个 Grype DB 缓存约 2.76GiB 未入选证据，正在请求对其精确删除的授权；未自动清理历史或正式证据。当前不把未构建/未复验候选记为通过。
+
 - Python 锁定运行依赖 `certifi 2026.7.22`、`Pillow 12.3.0`、`pypdf 6.16.2`，上游返回 60 条原始结果，按包/advisory alias 归并 **59 组**。上游 JSON 未提供 severity 的项保持未知，不编造等级；修补兼容性和回归尚未实施。
 - Node 全依赖审计 **5 个 affected packages**（3 high / 2 moderate）；`--omit=dev` 仍列 `source-map-js` high。锁文件生产标记、构建 peer 与实际浏览器 bundle 可达性须分别分析，不能仅由标记断言线上可利用或完全无影响。完整条目、来源、版本及查询时间见发布证据。
 - 镜像 SBOM/依赖和许可证元数据已选入，但 Scout 登录条件阻止完整镜像漏洞扫描，结果是未知 `findings=null`。Python `psycopg`/`psycopg-binary` LGPL 元数据及镜像内 unknown/review 项需按实际分发复核；元数据收集不等于许可证批准。

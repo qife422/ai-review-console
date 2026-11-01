@@ -8,7 +8,7 @@
 |---|---|---|
 | GitHub 源码 | 本项目 Apache-2.0 源码、Langflow 许可副本、Noto 字体及 OFL；依赖通过锁文件安装 | 保留项目及第三方归属；本项目 `LICENSE` 不替代各依赖许可证 |
 | 公开浏览器沙盒 | 编译后的前端 JavaScript、CSS、IBM Plex 字体及许可目录；没有 Python、Langflow 或数据库运行时 | 应核对实际 bundle 的传递依赖声明，保留 React / Carbon / Plex 等许可；本轮没有重新部署线上站点 |
-| 本地后端镜像 | Debian/Alpine 用户空间、Python 包和 wheel 内原生库，以及 Langflow 的大量预装集成 | 已核实下面的缺失元数据及特殊许可；完整镜像对外分发仍有明确待解决事项 |
+| 本地后端镜像 | Debian、RHEL/UBI、Alpine 用户空间、Python 包和 wheel 内原生库，以及 Langflow 的大量预装集成 | 已核实下面的缺失元数据及特殊许可；完整镜像对外分发仍有明确待解决事项 |
 
 浏览器沙盒的许可范围不能替代 API / Langflow 镜像的许可检查；同样，容器里的 GPL 工具也不能仅由聚合标签推断本项目所有源码必须改为 GPL。应按各文件、组件、组合方式及实际分发行为判断。
 
