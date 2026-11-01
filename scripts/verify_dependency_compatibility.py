@@ -175,6 +175,60 @@ def datamodel_probe(root: Path) -> dict:
     }
 
 
+def propagation_length_probe(
+    propagator, read_context, traceparent: str, expected_trace_id: int, baseline: bool
+) -> dict:
+    """Test the inbound cap at extract(), where upstream actually enforces it.
+
+    TraceState.from_header is a lower-level linear parser; its valid 32-member
+    input may exceed the inbound cap. The combined-header guard belongs to the
+    propagator, before calling that parser (upstream v1.45.1 tracecontext.py).
+    """
+    members = [f"k{i:02d}=" + "a" * 256 for i in range(32)]
+    single = ",".join(members)
+    split = [",".join(members[:16]), ",".join(members[16:])]
+
+    class HeaderGetter:
+        def get(self, carrier, key):
+            value = carrier.get(key)
+            return value if isinstance(value, list) else [value] if value is not None else None
+
+        def keys(self, carrier):
+            return list(carrier)
+
+    results = []
+    for name, headers in [("single", [single]), ("split", split)]:
+        combined = sum(len(h) for h in headers) + len(headers) - 1
+        assert combined == 8351 and combined > 8192
+        if name == "split":
+            assert all(len(h) <= 8192 for h in headers)
+        context = read_context(
+            propagator.extract(
+                {"traceparent": traceparent, "tracestate": headers},
+                getter=HeaderGetter(),
+            )
+        )
+        assert context.is_valid and context.trace_id == expected_trace_id
+        discarded = len(context.trace_state) == 0
+        if not baseline:
+            assert discarded, f"Oversized {name} inbound tracestate was retained"
+        results.append(
+            {
+                "case": name,
+                "header_fields": len(headers),
+                "combined_bytes": combined,
+                "discarded": discarded,
+                "trace_id_preserved": True,
+            }
+        )
+    return {
+        "entrypoint": "TraceContextTextMapPropagator.extract",
+        "limit_bytes": 8192,
+        "cases": results,
+        "all_discarded": all(r["discarded"] for r in results),
+    }
+
+
 def otel_probe(baseline: bool) -> dict:
     import importlib
     import threading
@@ -234,10 +288,27 @@ def otel_probe(baseline: bool) -> dict:
         spans = exporter.get_finished_spans()
         assert any(s.name == "synthetic-parent" for s in spans)
         assert any("/synthetic" in s.name for s in spans)
+        length_result = propagation_length_probe(
+            propagator,
+            lambda value: trace.get_current_span(value).get_span_context(),
+            carrier["traceparent"],
+            restored.trace_id,
+            baseline,
+        )
         long_header = ",".join(f"k{i:02d}=" + "a" * 256 for i in range(32))
-        long_state = TraceState.from_header([long_header])
-        if not baseline:
-            assert len(long_state) == 0, "Oversized tracestate header was retained"
+        direct_entries = len(TraceState.from_header([long_header]))
+        module_sources = []
+        for name in ["opentelemetry.trace.span", "opentelemetry.trace.propagation.tracecontext"]:
+            module = importlib.import_module(name)
+            path = Path(module.__file__)
+            module_sources.append(
+                {
+                    "module": name,
+                    "path": str(path),
+                    "resolved_path": str(path.resolve()),
+                    "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+                }
+            )
         return {
             "in_memory_spans": len(spans),
             "propagation": "passed",
@@ -245,8 +316,11 @@ def otel_probe(baseline: bool) -> dict:
             "fastapi_instrumentation": "passed",
             "instrumentor_modules": modules,
             "oversized_tracestate_bytes": len(long_header),
-            "oversized_tracestate_discarded": len(long_state) == 0,
-            "baseline_old_tracestate_expected": baseline and len(long_state) != 0,
+            "oversized_tracestate_discarded": length_result["all_discarded"],
+            "tracestate_ingress": length_result,
+            "direct_low_level_parser_entries_observed": direct_entries,
+            "actual_imported_sources": module_sources,
+            "baseline_old_tracestate_expected": baseline and not length_result["all_discarded"],
         }
     finally:
         instrumentor.uninstrument()

@@ -45,3 +45,35 @@ def test_scratch_guard_rejects_excess_file_count(tmp_path: Path) -> None:
 def test_probe_network_guard_rejects_any_destination() -> None:
     with pytest.raises(RuntimeError, match="forbids network"):
         prohibit_network(("provider.invalid", 443))
+
+
+def test_length_probe_uses_inbound_propagator_and_preserves_trace_identity() -> None:
+    from types import SimpleNamespace
+
+    from scripts.verify_dependency_compatibility import propagation_length_probe
+
+    class Propagator:
+        def __init__(self, discard):
+            self.discard = discard
+            self.header_counts = []
+
+        def extract(self, carrier, getter):
+            assert getter.get(carrier, "traceparent") == ["synthetic-parent"]
+            headers = getter.get(carrier, "tracestate")
+            self.header_counts.append(len(headers))
+            assert sum(len(h) for h in headers) + len(headers) - 1 == 8351
+            return SimpleNamespace(
+                is_valid=True,
+                trace_id=42,
+                trace_state={} if self.discard else {"retained": "value"},
+            )
+
+    good = Propagator(True)
+    result = propagation_length_probe(good, lambda x: x, "synthetic-parent", 42, False)
+    assert result["all_discarded"] and good.header_counts == [1, 2]
+    with pytest.raises(AssertionError, match="inbound tracestate"):
+        propagation_length_probe(Propagator(False), lambda x: x, "synthetic-parent", 42, False)
+    baseline = propagation_length_probe(
+        Propagator(False), lambda x: x, "synthetic-parent", 42, True
+    )
+    assert not baseline["all_discarded"]
