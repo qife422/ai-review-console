@@ -38,3 +38,12 @@ The exact license of Langflow's installed `zep-python 2.0.2` dependency remains 
 ## Dependency review status
 
 The 2026-10-31 review and distribution requirements are recorded in [docs/DEPENDENCY_LICENSES.md](docs/DEPENDENCY_LICENSES.md). License texts, exact package/image identities, source locations and remaining issues are preserved in release evidence. Source publication, the static browser demo and complete backend image redistribution have different scopes. Full backend image redistribution has not received a complete license signoff.
+
+
+## Additional exact-version license copies
+
+- Dnspython 2.9.0: ISC copyright and permission text at `licenses/dnspython-2.9.0-ISC.txt`.
+- FastMCP / fastmcp-slim 3.4.10: Apache-2.0 text at `licenses/FastMCP-3.4.10-LICENSE.txt`; the slim package's same-version workspace declaration was checked.
+- LFX 1.11.6: the same-version Langflow root MIT text is represented by `licenses/Langflow-LICENSE.txt`.
+
+These copies address known missing package-level texts; they do not authorize full backend image redistribution. Exact native versions, source archive hashes, retained notices and remaining source/binary correspondence work are listed in `docs/DEPENDENCY_LICENSES.md`. Zep 2.0.2 remains unresolved; tags for the separately named `zep-cloud` package are not its license evidence.

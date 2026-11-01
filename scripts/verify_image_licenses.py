@@ -75,6 +75,29 @@ SELECTED_PACKAGES = frozenset(
         "uncurl",
         "twelvelabs",
         "zep-python",
+        "oauthlib",
+        "datamodel-code-generator",
+        "opentelemetry-api",
+        "opentelemetry-sdk",
+        "opentelemetry-proto",
+        "opentelemetry-exporter-otlp",
+        "opentelemetry-exporter-otlp-proto-common",
+        "opentelemetry-exporter-otlp-proto-grpc",
+        "opentelemetry-exporter-otlp-proto-http",
+        "opentelemetry-exporter-otlp-common",
+        "opentelemetry-exporter-http-transport",
+        "opentelemetry-exporter-prometheus",
+        "opentelemetry-semantic-conventions",
+        "opentelemetry-instrumentation",
+        "opentelemetry-util-http",
+        "opentelemetry-instrumentation-asgi",
+        "opentelemetry-instrumentation-fastapi",
+        "opentelemetry-instrumentation-logging",
+        "opentelemetry-instrumentation-redis",
+        "opentelemetry-instrumentation-requests",
+        "opentelemetry-instrumentation-sqlalchemy",
+        "opentelemetry-instrumentation-threading",
+        "opentelemetry-instrumentation-urllib3",
     ]
 )
 PROJECT_FILES = (
@@ -82,6 +105,11 @@ PROJECT_FILES = (
     "/app/THIRD_PARTY_NOTICES.md",
     "/app/docs/DEPENDENCY_LICENSES.md",
     "/app/review_core/assets/OFL.txt",
+)
+LANGFLOW_LICENSE_FILES = (
+    "/app/licenses/dnspython-2.9.0-ISC.txt",
+    "/app/licenses/FastMCP-3.4.10-LICENSE.txt",
+    "/app/licenses/Langflow-LICENSE.txt",
 )
 FONT_PATH = "/app/review_core/assets/NotoSansSC-Regular.ttf"
 WEB_ROOT = "/usr/share/nginx/html/licenses"
@@ -210,6 +238,26 @@ def collect_python(name: str, budget: TextBudget) -> dict:
                 ):
                     continue
                 path = Path(distribution.locate_file(declared_file))
+                if "__pycache__" in path.parts or path.suffix.lower() in {
+                    ".py",
+                    ".pyc",
+                    ".pyo",
+                    ".so",
+                    ".pyd",
+                    ".dll",
+                    ".dylib",
+                    ".exe",
+                }:
+                    files.append(
+                        {
+                            "path": str(path),
+                            "declared_file": str(declared_file),
+                            "state": "excluded",
+                            "reason": "source_or_binary_filename_is_not_license_text",
+                            "sha256": None,
+                        }
+                    )
+                    continue
                 record = read_file(path, root, budget)
                 files.append(record | {"declared_file": str(declared_file)})
         selected.append(
@@ -223,7 +271,8 @@ def collect_python(name: str, budget: TextBudget) -> dict:
                 "missing_text_is_not_permission": True,
             }
         )
-    project = [read_file(Path(p), Path("/app"), budget) for p in PROJECT_FILES]
+    project_paths = PROJECT_FILES + (LANGFLOW_LICENSE_FILES if name == "langflow" else ())
+    project = [read_file(Path(p), Path("/app"), budget) for p in project_paths]
     project.append(read_file(Path(FONT_PATH), Path("/app"), budget, text=False))
     installed_names = {normalize(p["name"]) for p in packages}
     return {

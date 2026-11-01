@@ -129,3 +129,29 @@ def test_write_json_preserves_existing_evidence(tmp_path):
     with pytest.raises(FileExistsError):
         collector.write_json(path, {"source": "replacement"})
     assert collector.digest(path.read_bytes()) == first["sha256"]
+
+
+@pytest.mark.parametrize("with_text", [False, True])
+def test_license_named_source_and_bytecode_are_not_legal_text(tmp_path, monkeypatch, with_text):
+    (tmp_path / "pkg").mkdir()
+    (tmp_path / "pkg/license.py").write_text("raise RuntimeError('source, not a license')")
+    (tmp_path / "pkg/license.pyc").write_bytes(b"\x00bytecode")
+    files = [Path("pkg/license.py"), Path("pkg/license.pyc")]
+    if with_text:
+        (tmp_path / "pkg/LICENSE.txt").write_text("MIT license fixture")
+        files.append(Path("pkg/LICENSE.txt"))
+    distribution = SimpleNamespace(
+        metadata={"Name": "litellm", "License": "MIT"},
+        version="1.103.1",
+        files=files,
+        locate_file=lambda p: tmp_path / p,
+    )
+    monkeypatch.setattr(collector.importlib.metadata, "distributions", lambda: [distribution])
+    monkeypatch.setattr(collector, "PROJECT_FILES", ())
+    monkeypatch.setattr(collector, "FONT_PATH", str(tmp_path / "absent-font"))
+    budget = collector.TextBudget(files=1)
+    report = collector.collect_python("langflow", budget)["selected_packages"][0]
+    assert report["license_text_state"] == ("recorded" if with_text else "no_license_text_recorded")
+    excluded = [r for r in report["license_files"] if r["state"] == "excluded"]
+    assert len(excluded) == 2 and all("text" not in r for r in excluded)
+    assert budget.files_left == (0 if with_text else 1)

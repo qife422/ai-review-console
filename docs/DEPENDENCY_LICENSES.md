@@ -41,10 +41,33 @@ Langflow 基线镜像 `ff0f5cc38074` 的 10 个 `unknown` 中，8 个包内许�
 
 Web 基线镜像没有 `unknown`。Debian/Alpine 镜像中的 GPL/LGPL 系统包确有保留版权、许可及适用源码提供义务；自动扫描的 `review` 数量不是禁止分发数量，也不是这些义务已经全部履行的证明。
 
+## 本轮已落实的随包许可材料
+
+补充了 [dnspython 2.9.0 ISC 原文](../licenses/dnspython-2.9.0-ISC.txt)（SHA-256 `c3ea3ff5654b329c19d3bc5f7481af623c3dded4a6145585499f843ad3d741cd`）和 [FastMCP 3.4.10 Apache-2.0 原文](../licenses/FastMCP-3.4.10-LICENSE.txt)（`43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1`）。它们直接复用上轮已封存的精确版本官方响应，没有改动旧证据。`fastmcp-slim 3.4.10` 的同版本 workspace 声明为 Apache-2.0；LFX 1.11.6 的同版本根 MIT 文本复用 [Langflow 许可副本](../licenses/Langflow-LICENSE.txt)。这些是三个已识别许可组件缺少随包原文的具体补充；最终镜像是否实际携带副本须核对构建后的文件哈希，不由 Dockerfile 文本推断。
+
+## 原生库与对应源码材料矩阵
+
+本轮在已存在的 Linux/arm64 API `ec611a3c0364`、Langflow `865e7348409f` 精确镜像中只读核实了声明文件的路径/哈希与可调用的版本接口，未构建、拉取或下载源码树。API 共 51、Langflow 共 50 个 native 文件，总哈希输入 95,522,697 字节。全批原计划 100 路径，实际按每镜像限额实现而合计 101，偏差与原始 producer/输出保留；不能把本次结果说成满足全批 100 路径。新镜像重验要重新绑定这些字节。以下版本是实际接口返回值，SONAME 没有被当作源码版本；运行版本也不证明厂商补丁或完整对应源码。
+
+| 精确组件/实际版本 | 已有许可材料与官方来源 | 精确源码定位及 SHA-256 | 仍未满足的材料/核实 |
+|---|---|---|---|
+| API `psycopg 3.3.5` / `psycopg-binary 3.3.5`；Langflow `psycopg 3.3.4`、`psycopg2-binary 2.9.12` | 各 dist-info 的 `licenses/LICENSE.txt` / `licenses/LICENSE`，LGPL 条款及 psycopg2 特定例外已实读 | 官方 PyPI：`psycopg-3.3.5.tar.gz` `d0a3d9ccf5788af054cbd745278cb02401b5c312aeaafbf2c6144460aec47da4`；`psycopg_c-3.3.5.tar.gz` `5e11edaa0040a64d0af351a8fd3e276a824cd92fe34abc350cd67aa07ad36c55`；`psycopg-3.3.4.tar.gz` `e21207764952cff81b6b8bdacad9a3939f2793367fdac2987b3aac36a651b5bc`；`psycopg2-2.9.12.tar.gz` `1dedb1c7a1d8552c4a6044c6b1c41a52e6a8e2d144af83eccac758076b1b7c15` | 已定位源码档案，未下载/验证源码可重建此 wheel；C 扩展与 bundled 库的构建脚本、补丁、对应源码及允许替换库的交付方式仍需复核 |
+| API libpq **18.6**；Langflow libpq **17.9** | PostgreSQL 许可；`PQlibVersion()` 分别为 180006 / 170009，库路径及字节哈希已记录 | [18.6 官方源码及校验](https://ftp.postgresql.org/pub/source/v18.6/postgresql-18.6.tar.bz2.sha256)：`555610c24d53e4316da5b7d3fc25c279d96856d5e0e23ee308c328c5fa881d9f`；[17.9](https://ftp.postgresql.org/pub/source/v17.9/postgresql-17.9.tar.bz2.sha256)：`3b9a62538a8da151e807a3ddb1198e8605f2032544d78f403ae883d27ecf1ee4` | 这些是官方上游同版本档案校验值；尚未证明 wheel 的补丁/构建对应，也未随镜像交付 libpq 完整通知 |
+| API OpenSSL **3.5.8**；Langflow **3.5.6** | `OpenSSL_version(0)` 实读；3.x 为 Apache-2.0 | 官方 GitHub release 的 `openssl-3.5.8.tar.gz.sha256`：`a8f84a39918ec6415ce765d9b429d313ba97b8143169c172e734b9514464f5b2`；3.5.6：`deae7c80cba99c4b4f940ecadb3c3338b13cb77418409238e57d7f31f2a3b736` | 对照原生文件哈希、wheel 构建及 notices；不能仅以 Python 包 LGPL/Apache 代替 OpenSSL 原文 |
+| 两镜像另含 **OpenSSL 1.1.1k FIPS** | 实读完整版本字符串；旧双重 OpenSSL/SSLeay 条款，不能套用 3.x 的 Apache 文本 | [1.1.1k 官方源码校验](https://www.openssl.org/source/old/1.1.1/openssl-1.1.1k.tar.gz.sha256)：`892a0875b9872acd04a9fde79b1f943075d5ea162415de3047c327df33fbaee5` | 该上游校验值**不证明 FIPS/厂商构建对应**。需取得 wheel 所用厂商 source package、FIPS 模块/补丁与完整旧许可通知；当前保留未满足 |
+| API Pillow **13.0.0**；Langflow **12.3.0** | 各包 `licenses/LICENSE` 包含自身及多项原生库条款；native 文件逐项有路径/哈希 | [Pillow 13.0.0 官方 PyPI](https://pypi.org/project/pillow/13.0.0/) sdist `cdcd1ba258178f7356d74170c9a81ba4eab6a5d55748bc402a5a2a6fe6be3510` | 真实接口：FreeType 2.14.3、LittleCMS 2.19、WebP 1.6.0、AVIF 1.4.2、OpenJPEG 2.5.4、zlib-ng 2.3.3；API/LF libjpeg-turbo 为 3.2.0 / 3.1.4.1，libtiff 为 4.7.2 / 4.7.1。尚需每库对应源码/补丁与许可段映射；未报告版本的 XCB、其他 `.libs` 项逐文件保留未知，不能仅按父包 MIT-CMU 完成分发批准 |
+| API lxml **6.1.2**；Langflow **6.1.1**，两者编译/运行 libxml **2.14.6**、libxslt **1.1.43** | BSD 主许可及 `LICENSES.txt` 中 ElementTree/PSF 等条款已记录，版本属性实读 | 官方 PyPI sdist：6.1.2 `1055241852f2b02068af4a625a5d32c087db193c12251928af2562ecd2239f18`；6.1.1 `ba96ae44888e0185281e937633a743ea90d5a196c6000f82565ebb0580012d40` | wheel 内静态结合部分仍需核对 libxml/libxslt 对应源码、编译参数和逐文件通知；lxml sdist 本身不是全部原生源码的证明 |
+| ReportLab **4.5.1** 的随包字体；项目 Noto / 前端 Plex | ReportLab 内有 DarkGarden GPL、其他字体条款；项目实际 PDF 使用固定 Noto，字体二进制/OFL 哈希未变；Web 已携带 Plex OFL | ReportLab 官方 PyPI sdist `9fdf68f4de9171ec66acb4a5feed8f8ca2af43479e707a6fbb0daa75d88e5494`；Noto 来源、转换与 SHA 见字体记录 | 不因当前报告仅使用 Noto 就忽略完整镜像仍携带的 ReportLab 字体。需按实际分发文件保留相应文本并满足所选条件 |
+| AMD64 CI 新增 `ibm_db 3.2.9` 与 clidriver | Python 源码同版本 tag 为 Apache-2.0；官方同版本说明 wheel 包含 clidriver，二者分开判断 | [官方 PyPI 3.2.9](https://pypi.org/project/ibm-db/3.2.9/) sdist `0ad6dc4575519a5563fd7f845fc6bc00d688020e1d3ae78d382e79183bc32b0b`；精确 Python tag 的 LICENSE 已读取 | ARM64 当前没有该包，不拿 ARM 结果代替 AMD64 driver 检查。clidriver 的实际文件、版本、`license/` 条款及分发条件需在 AMD64 精确制品读取；Python sdist 不覆盖 driver。官方区分 LUW 与 z/OS/IBM i 的连接许可，当前未启用这些集成或购买许可 |
+
+上述 PyPI 源码可通过 `https://pypi.org/pypi/<包>/<精确版本>/json` 的 `urls` 中 `packagetype=sdist` 找到下载地址，再按已记录 SHA-256 校验；PostgreSQL/OpenSSL 的官方校验响应、URL、响应哈希和获取时间另行记录。这里只取得元数据和小体量许可/校验文本，未下载上述源码档案；**已定位官方源码、文件哈希、许可副本、实际交付及源/二进制对应验证是不同事项**。
+
+Debian / RPM / Alpine 的包管理器清单继续绑定各包精确版本、source package / source RPM、架构和原始许可字段；发行版用户空间不是上述 wheel 原生库的对应源码来源。不得用宿主 glibc 或发行版同名库替代 wheel 的独立副本；对 GPL/LGPL 系统包的完整源码交付材料仍保留未完成。
+
 ## 尚未关闭的镜像分发事项
 
-1. **`zep-python 2.0.2` 的精确版本许可仍未确认。** 已读取安装 wheel 的文件清单、[精确 PyPI 版本](https://pypi.org/project/zep-python/2.0.2/)、SHA-256 固定的 sdist，以及[官方 `v2.0.2` tag 对应源码](https://github.com/getzep/zep-python/tree/c5f9144aa065706294c7e43ae1b954fd0a8d9039)。这些输入没有许可声明或 LICENSE。旧 `oss` 分支存在 Apache-2.0 文本，但它不是此 release 的充分许可依据。完整 Langflow 镜像对外分发前，需取得上游对该版本的明确许可依据，或评估许可明确的替代依赖/上游版本并重新验证。
-2. **镜像内原生库、GPL/LGPL 组件的完整分发材料仍需落实。** 已确认相关条款及包内文本存在；尚未制作并验证覆盖所有对应版本的源码交付/获取材料，也未把 Python wheel 自带的全部原生库逐一归属。当前不能把“上游有源码链接”写成“我们已履行全部二进制分发义务”。
+1. **`zep-python 2.0.2` 的精确版本许可仍未确认。** 已读取安装 wheel 的文件清单、[精确 PyPI 版本](https://pypi.org/project/zep-python/2.0.2/)、SHA-256 固定的 sdist，以及[官方 `v2.0.2` tag 对应源码](https://github.com/getzep/zep-python/tree/c5f9144aa065706294c7e43ae1b954fd0a8d9039)。这些输入没有许可声明或 LICENSE。旧 `oss` 分支存在 Apache-2.0 文本，但它不是此 release 的充分许可依据。本轮进一步核对：当前 `langflow-base` 的 Zep extra 与 `lfx-bundles` 的 all/all-no-torch/zep extra 均精确要求 `zep-python==2.0.2`，官方 `lfx-bundles 1.2.0` 仍如此。1.5.0 的许可明确但还要求 `httpx<0.25`；它不满足当前 exact pin。`v2.0.0` tag 虽有 Apache 文本，同 tag 实际包名为 `zep-cloud`，不能给 PyPI `zep-python 2.0.0` 套用。因此未找到在当前允许反向约束内、许可依据和包身份均明确的可直接替换版本，不能靠忽略 extras 或强降版本关闭。完整 Langflow 镜像对外分发前，需取得 2.0.2 明确许可依据，或在明确范围下选择不包含该 extra 的受支持运行时并重测；没有向上游发送消息/issue。
+2. **镜像内原生库、GPL/LGPL 组件的完整分发材料仍需落实。** 已落实上表的真实版本、文件哈希、许可文件、官方源码档案/校验及逐项缺口；厂商 FIPS 补丁、若干原生库的源码版本、AMD64 IBM driver 条款和完整源码交付尚未满足。当前不能把“上游有源码链接”写成“我们已履行全部二进制分发义务”。
 3. **本记录不授权公开后端镜像或接受残余风险。** 本轮许可核实支持源码与既有静态展示范围；完整后端镜像的分发批准保留未完成，待第 1、2 项关闭后按精确制品复核。
 
 以上待解决项不以删除既有证据、忽略 unknown 或把所有依赖统称 MIT 的方式关闭。当前公开站点仍是仅虚构数据的前端沙盒，不包含这些后端库。

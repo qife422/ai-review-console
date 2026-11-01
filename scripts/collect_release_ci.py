@@ -58,9 +58,13 @@ class Collector:
         self.project = project
         self.commands: list[dict] = []
 
-    def run(self, label: str, argv: list[str], timeout: int = 240) -> tuple[int, str]:
+    def run(
+        self, label: str, argv: list[str], timeout: int = 240, *, payload: bytes | None = None
+    ) -> tuple[int, str]:
         if not re.fullmatch(r"[a-z0-9-]+", label):
             raise ValueError("Invalid record label")
+        if payload is not None and len(payload) > 64 * 1024:
+            raise ValueError("Bounded probe stdin exceeds 64 KiB")
         stdout = self.root / (label + ".stdout")
         stderr = self.root / (label + ".stderr")
         started = now()
@@ -69,11 +73,16 @@ class Collector:
         with stdout.open("xb") as out, stderr.open("xb") as err:
             proc = subprocess.Popen(
                 argv,
+                stdin=subprocess.PIPE if payload is not None else subprocess.DEVNULL,
                 stdout=out,
                 stderr=err,
                 start_new_session=True,
                 env=os.environ | {"PYTHONDONTWRITEBYTECODE": "1"},
             )
+            if payload is not None:
+                assert proc.stdin is not None
+                proc.stdin.write(payload)
+                proc.stdin.close()
             while proc.poll() is None:
                 size, count = usage(self.root)
                 if time.monotonic() - begin > timeout:
@@ -98,6 +107,10 @@ class Collector:
                 "ended_at": now(),
                 "exit_code": code,
                 "stop_reason": stop,
+                "stdin_bytes": len(payload) if payload is not None else 0,
+                "stdin_sha256": hashlib.sha256(payload).hexdigest()
+                if payload is not None
+                else None,
                 "stdout": stdout.name,
                 "stderr": stderr.name,
             }
@@ -175,6 +188,40 @@ def main() -> None:
             )
             if code:
                 raise RuntimeError(name + " installed dependency consistency failed")
+        probe = Path("scripts/verify_dependency_compatibility.py").read_bytes()
+        code, _ = collector.run(
+            "dependency-compatibility",
+            [
+                "docker",
+                "run",
+                "--rm",
+                "--network",
+                "none",
+                "--read-only",
+                "--tmpfs",
+                "/tmp:rw,noexec,nosuid,size=32m",
+                "--cap-drop",
+                "ALL",
+                "--security-opt",
+                "no-new-privileges",
+                "--memory",
+                "512m",
+                "--pids-limit",
+                "64",
+                "--env",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "-i",
+                "--entrypoint",
+                "python",
+                targets["langflow"],
+                "-B",
+                "-",
+            ],
+            timeout=90,
+            payload=probe,
+        )
+        if code:
+            raise RuntimeError("Offline dependency compatibility contract failed")
         audits = {}
         command = [
             sys.executable,
@@ -246,6 +293,7 @@ def main() -> None:
                     "scripts/scan_images_osv.py",
                     "scripts/scan_release.py",
                     "scripts/verify_image_licenses.py",
+                    "scripts/verify_dependency_compatibility.py",
                     "docs/UPGRADE_SPEC.md",
                 ]
                 if Path(path).is_file()
