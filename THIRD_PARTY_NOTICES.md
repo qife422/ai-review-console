@@ -22,6 +22,19 @@ This project is built on Langflow and includes or depends on third-party open-so
 - Source URL, original resource hash and one-time FontTools conversion method: `review_core/assets/README.md`.
 - Chinese reports embed the subset of this resource; no Apple system fonts are redistributed.
 
-## Dependency report status
+## Frontend runtime and fonts
 
-The complete Python, Node.js and container dependency notices are generated from locked dependencies during the release process. Unknown or restricted licenses must be reviewed before distribution. This document is not legal advice.
+- React and React DOM are MIT-licensed; retain their copyright and license text with distributed bundles.
+- Carbon React and Carbon icons are Apache-2.0-licensed; retain applicable licenses and attribution notices.
+- IBM Plex Web fonts are under SIL OFL 1.1. Their license accompanies the public-demo license directory.
+- Frontend build dependencies and Python/container dependencies are separate scopes; a package present in a lockfile is not by itself evidence that its code is in a browser bundle.
+
+## Python libraries and container contents
+
+Psycopg 3 and its binary extension are LGPL-3.0-only. Langflow also installs LGPL libraries and a GPL-2.0-or-EPL-1.0 dual-licensed package. These components keep their own licenses. Binary wheels may bundle native libraries with additional notices and source requirements; the project's Apache-2.0 license does not replace those terms.
+
+The exact license of Langflow's installed `zep-python 2.0.2` dependency remains unresolved: its installed package, exact PyPI source distribution and official release tag do not contain a license declaration. Do not infer permission for this release from an older branch's license.
+
+## Dependency review status
+
+The 2026-10-31 review and distribution requirements are recorded in [docs/DEPENDENCY_LICENSES.md](docs/DEPENDENCY_LICENSES.md). License texts, exact package/image identities, source locations and remaining issues are preserved in release evidence. Source publication, the static browser demo and complete backend image redistribution have different scopes. Full backend image redistribution has not received a complete license signoff.

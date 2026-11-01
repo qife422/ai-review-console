@@ -4,6 +4,9 @@ import { defineConfig } from "vitest/config";
 export default defineConfig(({ mode }) => ({
   envDir: mode === "public-demo" ? false : undefined,
   plugins: [react()],
+  build: {
+    license: { fileName: "licenses/THIRD_PARTY_LICENSES.md" },
+  },
   server: {
     port: 5173,
     proxy: {

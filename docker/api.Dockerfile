@@ -1,11 +1,12 @@
-FROM python:3.12.11-slim-bookworm@sha256:519591d6871b7bc437060736b9f7456b8731f1499a57e22e6c285135ae657bf7
+FROM python:3.12.16-slim-bookworm@sha256:e697c81897302a4c4333bade000d98038fbb21eb064f8ee1fd42d02ebcd9d337
 
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
 WORKDIR /app
 RUN useradd --create-home --uid 10001 appuser
 COPY requirements.lock ./
 RUN pip install --no-cache-dir --no-deps --timeout 120 --retries 10 -r requirements.lock
-COPY pyproject.toml README.md LICENSE ./
+COPY pyproject.toml README.md LICENSE THIRD_PARTY_NOTICES.md ./
+COPY docs/DEPENDENCY_LICENSES.md ./docs/DEPENDENCY_LICENSES.md
 COPY review_core ./review_core
 COPY custom_components ./custom_components
 COPY api ./api
