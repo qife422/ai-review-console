@@ -32,6 +32,10 @@ PRIOR_HASH_INPUT = 95_522_697
 GOAL_HASH_LIMIT = 200 * 1024 * 1024
 TARGETS = ("ibm_db", "psycopg_binary", "psycopg2_binary")
 IMAGE_RE = re.compile(r"(api|langflow)=(sha256:[a-f0-9]{64})\Z")
+BASELINE_SHA256 = "eadfcf4078cf6143e97fb373335ec257737edc14d006ff0aa2be184c6a291903"
+FOLLOWUP_REMAINING = dict(files=10, input_bytes=26_931_253, text_bytes=4_105_982)
+FOLLOWUP_KNOWN_INPUT = 135_700_308
+APPROVED_LIB_DIRS = ("psycopg_binary.libs", "psycopg2_binary.libs")
 
 
 def now():
@@ -325,6 +329,138 @@ def image_argument(value):
     return match.group(1), match.group(2)
 
 
+def load_baseline(path):
+    """Accept only the reviewed fixed input; a fabricated quota cannot reset it."""
+    with path.open("rb") as stream:
+        raw = stream.read(32 * 1024 + 1)
+    if len(raw) > 32 * 1024 or digest(raw) != BASELINE_SHA256:
+        raise ValueError("Native baseline fingerprint mismatch; no budget reset allowed")
+    baseline = json.loads(raw)
+    if (
+        baseline["remaining_budget"] != FOLLOWUP_REMAINING
+        or baseline["known_goal_input_bytes"] != FOLLOWUP_KNOWN_INPUT
+    ):
+        raise ValueError("Native baseline measured budget mismatch")
+    if (
+        digest(baseline["original_native_manifest_utf8"].encode())
+        != baseline["original_native_manifest_sha256"]
+    ):
+        raise ValueError("Original native manifest fingerprint mismatch")
+    return baseline
+
+
+def collect_followup(name, budget):
+    """Read only the missed IBM texts and legacy crypto in two known dirs."""
+    if any(budget.remaining()[k] > v for k, v in FOLLOWUP_REMAINING.items()):
+        raise ValueError("Follow-up exceeds carried remaining quota")
+    roots = sorted({Path(sysconfig.get_path(k)).resolve() for k in ("purelib", "platlib")})
+    listings, candidates, files = [], [], []
+
+    def shallow(directory, purpose):
+        try:
+            if not directory.resolve().is_relative_to(root):
+                raise ValueError("directory_outside_site_packages")
+            if not directory.is_dir():
+                listings.append(dict(path=str(directory), state="missing_directory"))
+                return []
+            entries = sorted(directory.iterdir())
+            if len(entries) > 256:
+                listings.append(
+                    dict(
+                        path=str(directory), state="directory_entry_limit", entry_count=len(entries)
+                    )
+                )
+                return []
+            listings.append(
+                dict(
+                    path=str(directory), purpose=purpose, entries=[entry.name for entry in entries]
+                )
+            )
+            return entries
+        except (OSError, ValueError, RuntimeError) as error:
+            listings.append(
+                dict(path=str(directory), state="listing_error", error_type=type(error).__name__)
+            )
+            return []
+
+    for root in roots:
+        if name == "langflow":
+            driver = root / "clidriver"
+            # The prior actual listing proves these names. No REDIST/SWID/libdb2
+            # reopen and no entitlement .lic contents, even if present here.
+            license_entries = shallow(driver / "license", "known_driver_legal_directory")
+            for entry in license_entries:
+                if entry.name == "odbc_notices.txt":
+                    candidates.append((entry, root, "driver_notices"))
+            unix = driver / "license" / "UNIX"
+            if unix.is_file():
+                candidates.append((unix, root, "driver_unix_agreement"))
+                unix_entries = []
+            else:
+                unix_entries = shallow(unix, "known_unix_agreement_directory")
+            for entry in unix_entries:
+                lower = entry.name.lower()
+                english = lower in ("li", "la", "li_en", "la_en", "english", "english.txt")
+                english = english or lower.startswith(("li_en.", "la_en.", "li_en_", "la_en_"))
+                if english and entry.suffix.lower() != ".lic":
+                    candidates.append((entry, root, "driver_english_agreement"))
+                else:
+                    files.append(
+                        dict(
+                            path=str(entry),
+                            state="excluded",
+                            sha256=None,
+                            reason="not_selected_english_agreement; no_content_read",
+                        )
+                    )
+        for dirname in APPROVED_LIB_DIRS:
+            entries = shallow(root / dirname, "approved_native_directory_names_only")
+            for entry in entries:
+                if entry.name.startswith("libcrypto") and ".so.1." in entry.name:
+                    candidates.append((entry, root, "legacy_openssl_build_id"))
+    seen = set()
+    for path, root, purpose in candidates:
+        try:
+            key = str(path.resolve())
+        except (OSError, RuntimeError):
+            key = str(path)
+        if key in seen:
+            continue
+        seen.add(key)
+        record, raw = read_target(path, root, budget, text=purpose != "legacy_openssl_build_id")
+        if raw is not None and purpose == "legacy_openssl_build_id":
+            # Static byte strings only; never dlopen/execute the library. A
+            # version string is evidence of its bytes, not vendor source proof.
+            versions = re.findall(rb"OpenSSL [0-9][ -~]{0,100}", raw)
+            record["elf"] = elf_build_ids(raw)
+            record["embedded_openssl_strings"] = sorted(
+                {value.split(b"\0", 1)[0].decode("ascii") for value in versions}
+            )[:16]
+        files.append(
+            record
+            | dict(
+                purpose=purpose,
+                owner_basis="known layout; cross-check exact-image license inventory",
+                metadata_or_record_reread=False,
+            )
+        )
+    return dict(
+        image_name=name,
+        collected_at=now(),
+        architecture=__import__("platform").machine(),
+        mode="targeted_followup",
+        files=files,
+        directory_listing=listings,
+        remaining_budget=budget.remaining(),
+        legal_approval=False,
+        qualifications=[
+            "No selected METADATA/RECORD or prior REDIST/SWID/libdb2 reread.",
+            "Directory names establish candidates, not legal permission or source provenance.",
+            "Owner/version must be cross-checked against generic inventory for this image ID.",
+        ],
+    )
+
+
 def prepare_output(path):
     if path.is_symlink():
         raise ValueError("Output symlink rejected")
@@ -384,12 +520,20 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--image", action="append", type=image_argument, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
+    parser.add_argument("--followup", action="store_true")
+    parser.add_argument("--baseline-manifest", type=Path)
     args = parser.parse_args()
     if len(args.image) > 2 or len({n for n, _ in args.image}) != len(args.image):
         parser.error("At most two distinct API/Langflow images")
+    if args.followup != (args.baseline_manifest is not None):
+        parser.error("--followup and --baseline-manifest must be used together")
+    baseline = load_baseline(args.baseline_manifest) if args.followup else None
     output = prepare_output(args.output_dir)
     producer = Path(__file__).read_bytes()
-    budget, results, failed = Budget(), [], False
+    budget = Budget(**baseline["remaining_budget"]) if baseline else Budget()
+    starting_budget = budget.remaining()
+    known_input_start = baseline["known_goal_input_bytes"] if baseline else PRIOR_HASH_INPUT
+    results, failed = [], False
     # Driver-bearing image first; one remaining budget is passed into the next.
     for name, image_id in sorted(args.image, key=lambda pair: pair[0] != "langflow"):
         command = [
@@ -416,7 +560,7 @@ def main():
             "python",
             image_id,
             "-",
-            "--_collect",
+            "--_followup" if args.followup else "--_collect",
             name,
             json.dumps(budget.remaining()),
         ]
@@ -470,7 +614,24 @@ def main():
             paths=101, planned_paths=100, deviation_retained=True, input_bytes=PRIOR_HASH_INPUT
         ),
         goal_hash_input_limit_bytes=GOAL_HASH_LIMIT,
-        goal_known_input_bytes=PRIOR_HASH_INPUT + MAX_INPUT - budget.input_bytes,
+        goal_known_input_bytes=known_input_start
+        + starting_budget["input_bytes"]
+        - budget.input_bytes,
+        starting_budget=starting_budget,
+        current_invocation_read_files=starting_budget["files"] - budget.files,
+        current_invocation_input_bytes=starting_budget["input_bytes"] - budget.input_bytes,
+        baseline=(
+            dict(
+                path=str(args.baseline_manifest),
+                sha256=BASELINE_SHA256,
+                source_commit=baseline["source_commit"],
+                original_materials_sha256=baseline["materials_sha256"],
+                known_goal_input_bytes=known_input_start,
+            )
+            if baseline
+            else None
+        ),
+        mode="targeted_followup" if args.followup else "initial",
     )
     raw = encode(report)
     if len(raw) >= MAX_JSON:
@@ -506,13 +667,14 @@ def main():
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 5 and sys.argv[1] == "--_collect":
+    if len(sys.argv) == 5 and sys.argv[1] in ("--_collect", "--_followup"):
         # stdin invocation: '-' is argv[0], then exactly three private arguments.
         raise SystemExit("Invalid helper argument count")
-    if len(sys.argv) == 4 and sys.argv[1] == "--_collect":
+    if len(sys.argv) == 4 and sys.argv[1] in ("--_collect", "--_followup"):
         if sys.argv[2] not in ("api", "langflow"):
             raise SystemExit("Invalid private helper image alias")
-        result = collect(sys.argv[2], Budget(**json.loads(sys.argv[3])))
+        method = collect_followup if sys.argv[1] == "--_followup" else collect
+        result = method(sys.argv[2], Budget(**json.loads(sys.argv[3])))
         # Reserve room for the second image and host manifest before emitting.
         if len(encode(result)) > MAX_JSON // 3:
             for item in result["files"]:

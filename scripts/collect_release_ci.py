@@ -387,18 +387,23 @@ def main() -> None:
                 "License collector failed; missing license remains a separate finding"
             )
         if collect_native:
+            continuation = Path("compliance/native-baseline.json")
+            native_command = [
+                sys.executable,
+                "scripts/verify_native_materials.py",
+                "--image",
+                "api=" + targets["api"],
+                "--image",
+                "langflow=" + targets["langflow"],
+                "--output-dir",
+                str(collector.root / "native"),
+            ]
+            if continuation.is_file():
+                native_command += ["--followup", "--baseline-manifest", str(continuation)]
+                result["native_scope"] = "remaining_budget_from_fixed_prior_batch"
             code, _ = collector.run(
                 "native-materials",
-                [
-                    sys.executable,
-                    "scripts/verify_native_materials.py",
-                    "--image",
-                    "api=" + targets["api"],
-                    "--image",
-                    "langflow=" + targets["langflow"],
-                    "--output-dir",
-                    str(collector.root / "native"),
-                ],
+                native_command,
                 timeout=240,
             )
             if code:
@@ -435,6 +440,7 @@ def main() -> None:
                     "scripts/verify_dependency_compatibility.py",
                     "scripts/apply_system_updates.py",
                     "scripts/verify_native_materials.py",
+                    "compliance/native-baseline.json",
                     "docs/UPGRADE_SPEC.md",
                 ]
                 if Path(path).is_file()
