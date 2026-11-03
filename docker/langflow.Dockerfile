@@ -2,6 +2,9 @@ FROM langflowai/langflow:1.11.6@sha256:5338f6851fbab3d0476f7701dacbe749f58fa81a4
 
 USER root
 WORKDIR /app
+COPY scripts/apply_system_updates.py /usr/local/libexec/arc-apply-system-updates.py
+RUN python /usr/local/libexec/arc-apply-system-updates.py \
+    --output-dir /usr/share/arc-system-maintenance
 RUN pip install --no-cache-dir --timeout 120 --retries 10 \
     certifi==2026.10.23 pypdf==6.21.4 python-docx==1.2.0 reportlab==4.5.1 \
     aiohttp==3.14.4 authlib==1.9.1 black==26.10.1 brotli==1.2.1 \

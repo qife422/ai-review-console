@@ -37,7 +37,9 @@ The exact license of Langflow's installed `zep-python 2.0.2` dependency remains 
 
 ## Dependency review status
 
-The 2026-10-31 review and distribution requirements are recorded in [docs/DEPENDENCY_LICENSES.md](docs/DEPENDENCY_LICENSES.md). License texts, exact package/image identities, source locations and remaining issues are preserved in release evidence. Source publication, the static browser demo and complete backend image redistribution have different scopes. Full backend image redistribution has not received a complete license signoff.
+The 2026-10-31 review and 2026-11-02 targeted follow-up are recorded in [docs/DEPENDENCY_LICENSES.md](docs/DEPENDENCY_LICENSES.md). License texts, exact package/image identities, source locations and remaining issues are preserved in release evidence. Source publication, the static browser demo and complete backend image redistribution have different scopes. Full backend image redistribution has not received a complete license signoff.
+
+Exact Psycopg 3.3.5/3.3.4 upstream build recipes have now been located and fingerprinted. They do not establish correspondence for the installed wheels or their vendor OpenSSL 1.1.1k FIPS libraries. The IBM Python wrapper's Apache-2.0 license is distinct from bundled clidriver agreements and redistribution lists; these require exact AMD64 artifact inspection. Zep 2.0.2 remains unresolved.
 
 
 ## Additional exact-version license copies

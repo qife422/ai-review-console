@@ -9,6 +9,7 @@ Short-lived read-only helper containers use their normal removal lifecycle.
 from __future__ import annotations
 
 import argparse
+import base64
 import hashlib
 import json
 import os
@@ -23,6 +24,63 @@ from pathlib import Path
 
 LIMIT = 60 * 1024 * 1024
 FILE_LIMIT = 600
+SYSTEM_LIMIT = 4 * 1024 * 1024
+SYSTEM_PRODUCER = b"""import base64,hashlib,json,stat
+from pathlib import Path
+root=Path("/usr/share/arc-system-maintenance")
+assert not root.is_symlink() and root.is_dir()
+paths=sorted(root.iterdir())
+assert len(paths)<=32
+files=[];total=0
+for p in paths:
+    assert not p.is_symlink() and stat.S_ISREG(p.stat().st_mode)
+    total+=p.stat().st_size
+    assert total<=4*1024*1024+65536
+    data=p.read_bytes()
+    files.append({"path":p.name,"bytes":len(data),"sha256":hashlib.sha256(data).hexdigest(),"base64":base64.b64encode(data).decode()})
+print(json.dumps({"files":files},separators=(",",":")))
+"""
+
+
+def extract_system_records(raw: str, destination: Path) -> dict:
+    """Validate the entire bounded export before writing any selected image bytes."""
+    if destination.exists() or destination.is_symlink():
+        raise ValueError("System evidence output must not exist")
+    records = json.loads(raw)["files"]
+    if not isinstance(records, list) or len(records) > 32:
+        raise ValueError("System record count limit")
+    selected = {}
+    total = 0
+    for record in records:
+        name = record["path"]
+        if name != "manifest.json" and not re.fullmatch(r"[a-z-]+\.(stdout|stderr)", name):
+            raise ValueError("Unexpected system record path")
+        if name in selected:
+            raise ValueError("Duplicate system record")
+        data = base64.b64decode(record["base64"], validate=True)
+        total += len(data)
+        if total > SYSTEM_LIMIT + 65536:
+            raise ValueError("System record byte limit")
+        if len(data) != record["bytes"] or hashlib.sha256(data).hexdigest() != record["sha256"]:
+            raise ValueError("System transport integrity mismatch")
+        selected[name] = data
+    manifest = json.loads(selected["manifest.json"])
+    if manifest["status"] != "completed":
+        raise ValueError("System update did not complete")
+    declared = {f["path"]: f for f in manifest["files"]}
+    if set(declared) != set(selected) - {"manifest.json"}:
+        raise ValueError("System manifest file set mismatch")
+    for name, entry in declared.items():
+        data = selected[name]
+        if entry["bytes"] != len(data) or entry["sha256"] != hashlib.sha256(data).hexdigest():
+            raise ValueError("System manifest integrity mismatch")
+    if not {"rpm-before.stdout", "rpm-after.stdout", "update.stdout"} <= set(selected):
+        raise ValueError("Missing system transaction records")
+    destination.mkdir()
+    for name, data in selected.items():
+        with (destination / name).open("xb") as stream:
+            stream.write(data)
+    return {"files": len(selected), "bytes": total, "status": manifest["status"]}
 
 
 def now() -> str:
@@ -59,12 +117,20 @@ class Collector:
         self.commands: list[dict] = []
 
     def run(
-        self, label: str, argv: list[str], timeout: int = 240, *, payload: bytes | None = None
+        self,
+        label: str,
+        argv: list[str],
+        timeout: int = 240,
+        *,
+        payload: bytes | None = None,
+        max_stdout_bytes: int = 2 * 1024 * 1024,
     ) -> tuple[int, str]:
         if not re.fullmatch(r"[a-z0-9-]+", label):
             raise ValueError("Invalid record label")
         if payload is not None and len(payload) > 64 * 1024:
             raise ValueError("Bounded probe stdin exceeds 64 KiB")
+        if not 0 < max_stdout_bytes <= 6 * 1024 * 1024:
+            raise ValueError("Command summary limit exceeds 6 MiB")
         stdout = self.root / (label + ".stdout")
         stderr = self.root / (label + ".stderr")
         started = now()
@@ -108,6 +174,7 @@ class Collector:
                 "exit_code": code,
                 "stop_reason": stop,
                 "stdin_bytes": len(payload) if payload is not None else 0,
+                "max_stdout_bytes": max_stdout_bytes,
                 "stdin_sha256": hashlib.sha256(payload).hexdigest()
                 if payload is not None
                 else None,
@@ -117,7 +184,7 @@ class Collector:
         )
         if stop:
             raise RuntimeError(stop)
-        if stdout.stat().st_size > 2 * 1024 * 1024:
+        if stdout.stat().st_size > max_stdout_bytes:
             raise RuntimeError("Unexpectedly large command summary")
         return code, stdout.read_text()
 
@@ -222,6 +289,39 @@ def main() -> None:
         )
         if code:
             raise RuntimeError("Offline dependency compatibility contract failed")
+        code, raw = collector.run(
+            "system-materials",
+            [
+                "docker",
+                "run",
+                "--rm",
+                "--network",
+                "none",
+                "--read-only",
+                "--cap-drop",
+                "ALL",
+                "--security-opt",
+                "no-new-privileges",
+                "--memory",
+                "128m",
+                "--pids-limit",
+                "32",
+                "--env",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "-i",
+                "--entrypoint",
+                "python",
+                targets["langflow"],
+                "-B",
+                "-",
+            ],
+            timeout=60,
+            payload=SYSTEM_PRODUCER,
+            max_stdout_bytes=6 * 1024 * 1024,
+        )
+        if code:
+            raise RuntimeError("System maintenance evidence export failed")
+        result["system_materials"] = extract_system_records(raw, collector.root / "system")
         audits = {}
         command = [
             sys.executable,
@@ -270,6 +370,22 @@ def main() -> None:
             raise RuntimeError(
                 "License collector failed; missing license remains a separate finding"
             )
+        code, _ = collector.run(
+            "native-materials",
+            [
+                sys.executable,
+                "scripts/verify_native_materials.py",
+                "--image",
+                "api=" + targets["api"],
+                "--image",
+                "langflow=" + targets["langflow"],
+                "--output-dir",
+                str(collector.root / "native"),
+            ],
+            timeout=240,
+        )
+        if code:
+            raise RuntimeError("Native material collector failed")
         result.update(
             collection_state="collected",
             audits=audits,
@@ -294,6 +410,8 @@ def main() -> None:
                     "scripts/scan_release.py",
                     "scripts/verify_image_licenses.py",
                     "scripts/verify_dependency_compatibility.py",
+                    "scripts/apply_system_updates.py",
+                    "scripts/verify_native_materials.py",
                     "docs/UPGRADE_SPEC.md",
                 ]
                 if Path(path).is_file()

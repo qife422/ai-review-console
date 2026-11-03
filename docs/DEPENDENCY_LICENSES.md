@@ -1,6 +1,6 @@
 # 依赖许可证核实
 
-核实日期：2026-10-31（America/Los_Angeles）。适用 `ARC-UPGRADE@0.1.0` 的 `RELEASE-001 / AC-19`。本记录区分许可证识别、应履行的分发条件和实际履行状态，不把 SBOM 中的 `recorded` 或自动扫描器的 `review` 标签当作分发批准。
+核实日期：2026-11-02（America/Los_Angeles）；保留 2026-10-31 的已封存核实及偏差。适用 `ARC-UPGRADE@0.1.0` 的 `RELEASE-001 / AC-19`。本记录区分许可证识别、应履行的分发条件和实际履行状态，不把 SBOM 中的 `recorded` 或自动扫描器的 `review` 标签当作分发批准。
 
 ## 交付范围
 
@@ -63,6 +63,24 @@ Web 基线镜像没有 `unknown`。Debian/Alpine 镜像中的 GPL/LGPL 系统包
 上述 PyPI 源码可通过 `https://pypi.org/pypi/<包>/<精确版本>/json` 的 `urls` 中 `packagetype=sdist` 找到下载地址，再按已记录 SHA-256 校验；PostgreSQL/OpenSSL 的官方校验响应、URL、响应哈希和获取时间另行记录。这里只取得元数据和小体量许可/校验文本，未下载上述源码档案；**已定位官方源码、文件哈希、许可副本、实际交付及源/二进制对应验证是不同事项**。
 
 Debian / RPM / Alpine 的包管理器清单继续绑定各包精确版本、source package / source RPM、架构和原始许可字段；发行版用户空间不是上述 wheel 原生库的对应源码来源。不得用宿主 glibc 或发行版同名库替代 wheel 的独立副本；对 GPL/LGPL 系统包的完整源码交付材料仍保留未完成。
+
+## WP-05 精确构建材料与定向核实
+
+已取得 Psycopg **3.3.5、3.3.4** 同版本 tag 的三个小体量原文：`.github/workflows/packages-bin.yml`、`tools/ci/wheel_linux_before_all.sh`、`tools/ci/build_libpq.sh`。它们记录 wheel 构建入口、上游源码地址、构建参数及 libpq 的 GSS 默认值与 socket 目录修改，关闭“未找到上游构建配方”的材料缺口；没有下载、重建或声称复现源码档案。
+
+| 原文 | 3.3.5 SHA-256 | 3.3.4 SHA-256 |
+|---|---|---|
+| `packages-bin.yml` | `763c6ab0014cee4c1a1263f2c943dd7683bc6c9a56231b3fc77a41ffcbe168f5` | `e488ff682ed842d4edbcef68ad8197064dd64e75e80d2111513a610f516707c0` |
+| `wheel_linux_before_all.sh` | `239552169c742123b245a6a1143740eef78720e495b2f4b1c765c4cbb2eb1b86` | `239552169c742123b245a6a1143740eef78720e495b2f4b1c765c4cbb2eb1b86` |
+| `build_libpq.sh` | `2cb45ac4c8bb5e8fc3c738c597817bcb2d224bc66073d10023f15665bee9cb8b` | `c66cc2fbea0e54d7a6ce9abbd0029662e7f7779b8e96ae3ea88f1b93bdb6ccc7` |
+
+来源为 [3.3.5 workflow](https://github.com/psycopg/psycopg/blob/3.3.5/.github/workflows/packages-bin.yml)、[3.3.5 源码构建脚本](https://github.com/psycopg/psycopg/blob/3.3.5/tools/ci/build_libpq.sh)、[3.3.4 workflow](https://github.com/psycopg/psycopg/blob/3.3.4/.github/workflows/packages-bin.yml) 及各 tag 下相同相对路径。3.3.5 配方指定 libpq 18.6 / OpenSSL 3.5.8；**3.3.4 tag 配方默认 18.0 / 3.5.4，与既有 Langflow 实读的 17.9 / 3.5.6 不同**。二者均使用构建缓存及 manylinux 基础环境；不能从 tag、配方或版本吻合推断实际 wheel 的完整厂商来源。OpenSSL 1.1.1k FIPS 的 source RPM/NVR、补丁、构建环境关联仍未取得，原有对应源码缺口不关闭。
+
+新增定向采集入口 `scripts/verify_native_materials.py` 供隔离 CI 对 API/Langflow **精确 image ID** 核实：优先收集 AMD64 `ibm_db` 的 `clidriver` 许可、`redist.txt`、版本文件及 driver/旧 OpenSSL 的 ELF GNU build-id。它不执行原生库，不下载、不挂载、不联网；全批累计最多实际读取 20 个文件（包括所读 METADATA/RECORD）、64 MiB 输入、4 MiB 文本、每个文本 256 KiB，输出 JSON 合计小于 2 MiB。目录与 RECORD 名单不是已读取正文；缺失、越界、过大及限额均需显式记录。过大 driver 如仅取得前缀，记录前缀哈希而非完整文件哈希。此次新增输入与前轮 95,522,697 字节合计仍不得超过 200 MiB；前轮 101/100 路径偏差永久保留。
+
+IBM 的 Python [3.2.9 源码声明](https://github.com/ibmdb/python-ibmdb/blob/v3.2.9/setup.py) 为 Apache-2.0，Linux 安装脚本默认请求 clidriver v11.5.9；这不是实际 wheel 的 driver 版本证明，也不是 driver 的许可。IBM 的[分发说明](https://www.ibm.com/docs/en/db2/12.1.x?topic=cli-deploying-database-applications)要求对照分发许可及 `redist.txt` 的允许文件；[连接许可说明](https://www.ibm.com/docs/en/db2/11.5.x?topic=applications-license-requirements)区分常规 LUW 与 Db2 Connect 场景。闭项需实际制品中的 agreement/redist、版本及文件范围逐项对应；许可证密钥或 entitlement 文件不采集。当前未完成该对应，也未授权新购买、启用 IBM 集成或公开后端镜像。
+
+Langflow 1.13.0 的[默认依赖](https://github.com/langflow-ai/langflow/blob/v1.13.0/pyproject.toml)将 `lfx-bundles` 变为显式 extra；[base](https://github.com/langflow-ai/langflow/blob/v1.13.0/src/backend/base/pyproject.toml)仍保留 Zep exact extra，[bundles 1.2.4](https://github.com/langflow-ai/langflow/blob/v1.13.0/src/bundles/lfx-bundles/pyproject.toml)也仍要求 `zep-python==2.0.2`。这仅提供“全新且不选相关 extra”的候选核实路径；现有胖镜像内已安装包不会因为改依赖声明就自动移除。尚未验证该候选镜像不含 Zep、全部项目组件/Flow 兼容，或消除 IBM driver；当前运行基线仍为 1.11.6，Zep 的精确许可继续未知。
 
 ## 尚未关闭的镜像分发事项
 
