@@ -36,8 +36,12 @@ def test_only_explicit_default_ubi_repositories_are_used(tmp_path):
     assert len(result) == 2
     args = manager_args(result)
     assert "--disablerepo=*" in args
-    assert "--setopt=gpgcheck=1" in args
-    assert "--setopt=sslverify=1" in args
+    # microdnf3.10.1 only accepts these as repo_id.option_name setopts.
+    assert "--setopt=gpgcheck=1" not in args
+    assert "--setopt=sslverify=1" not in args
+    for repo in result:
+        assert "--setopt=" + repo["id"] + ".gpgcheck=1" in args
+        assert "--setopt=" + repo["id"] + ".sslverify=1" in args
     assert not any("paid-rhel" in value for value in args)
 
 

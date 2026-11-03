@@ -101,8 +101,11 @@ def manager_args(repos: list[dict[str, str]]) -> list[str]:
         "microdnf",
         "--disablerepo=*",
         *["--enablerepo=" + r["id"] for r in repos],
-        "--setopt=gpgcheck=1",
-        "--setopt=sslverify=1",
+        *[
+            "--setopt=" + r["id"] + "." + setting + "=1"
+            for r in repos
+            for setting in ["gpgcheck", "sslverify"]
+        ],
         "--setopt=install_weak_deps=0",
         "--setopt=keepcache=0",
     ]
@@ -152,6 +155,7 @@ class Recorder:
             }
         )
         if code or stop:
+            print(label + " stderr (bounded):\n" + errpath.read_text()[:8192], flush=True)
             raise RuntimeError(f"{label} failed: exit={code}, stop={stop}")
         return outpath.read_text()
 

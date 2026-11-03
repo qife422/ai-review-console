@@ -61,14 +61,39 @@ jobs:
           retention-days: 7
 
   workflow-browser:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: ubuntu-latest
+            arch: amd64
+            native_profile: complete
+          - runner: ubuntu-24.04-arm
+            arch: arm64
+            native_profile: arm-backend
+    runs-on: ${{ matrix.runner }}
     timeout-minutes: 35
     env:
-      COMPOSE_PROJECT_NAME: arc-ci-${{ github.run_id }}
+      COMPOSE_PROJECT_NAME: arc-ci-${{ github.run_id }}-${{ matrix.arch }}
       COMPOSE_BAKE: "false"
       LANGFLOW_SUPERUSER_PASSWORD: synthetic-demo-change-me
       REVIEW_SERVICE_TOKEN: synthetic-demo-service-token
     steps:
+      - name: Record runner architecture and require 12 GiB available
+        run: |
+          mkdir -p "$RUNNER_TEMP/arc-ci-evidence"
+          {
+            echo 'matrix_arch=${{ matrix.arch }}'
+            echo 'runner_arch=${{ runner.arch }}'
+            uname -a
+            df -B1 "$RUNNER_TEMP"
+          } | tee "$RUNNER_TEMP/arc-ci-evidence/runner-capacity.txt"
+          arc_available_bytes="$(df -B1 --output=avail "$RUNNER_TEMP" | tail -n 1 | tr -d '[:space:]')"
+          echo "available_bytes=$arc_available_bytes minimum_bytes=12884901888" | tee -a "$RUNNER_TEMP/arc-ci-evidence/runner-capacity.txt"
+          test "$arc_available_bytes" -ge 12884901888 || {
+            echo 'Less than 12 GiB free; stopping before installs or image builds.' >&2
+            exit 1
+          }
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
@@ -99,15 +124,18 @@ jobs:
           .venv/bin/python scripts/validate_langflow.py --api-url http://localhost:8080 \
             --evidence "$RUNNER_TEMP/arc-ci-evidence/workflow.json"
       - name: Install bounded browser CLI runtime
+        if: matrix.arch == 'amd64'
         run: |
           npm install --global @playwright/cli@0.1.22
           command -v google-chrome || playwright-cli install-browser chrome
       - name: Install pinned Chinese browser font
+        if: matrix.arch == 'amd64'
         run: |
           mkdir -p "$HOME/.local/share/fonts/arc"
           install -m 644 review_core/assets/NotoSansSC-Regular.ttf "$HOME/.local/share/fonts/arc/NotoSansSC-Regular.ttf"
           fc-cache -f "$HOME/.local/share/fonts/arc"
       - name: Verify Chinese browser font availability
+        if: matrix.arch == 'amd64'
         run: |
           mkdir -p "$RUNNER_TEMP/arc-ci-evidence"
           fc-match --format='%{family}\n' 'sans-serif:lang=zh-cn' | tee "$RUNNER_TEMP/arc-ci-evidence/chinese-browser-font.txt"
@@ -115,6 +143,7 @@ jobs:
           echo 'e3b799e4230233500ff152d1cc81ade6c64acb34958c90cd6b6e02927a2923a9  review_core/assets/NotoSansSC-Regular.ttf' | sha256sum --check
           sha256sum review_core/assets/NotoSansSC-Regular.ttf "$HOME/.local/share/fonts/arc/NotoSansSC-Regular.ttf" > "$RUNNER_TEMP/arc-ci-evidence/chinese-browser-font-version.txt"
       - name: Keyboard upload to decision and downloadable reports
+        if: matrix.arch == 'amd64'
         env:
           ARC_UI_APPROVE: "1"
           ARC_UI_BASE_URL: http://localhost:8080
@@ -123,7 +152,8 @@ jobs:
         run: node frontend/scripts/verify-ui-cli.mjs
       - name: Collect bounded image and license evidence (not release acceptance)
         run: |
-          .venv/bin/python scripts/collect_release_ci.py --output-dir "$RUNNER_TEMP/arc-ci-evidence/release"
+          .venv/bin/python scripts/collect_release_ci.py --output-dir "$RUNNER_TEMP/arc-ci-evidence/release" \
+            --native-profile '${{ matrix.native_profile }}'
       - name: Preserve compact runtime diagnostics
         if: always()
         run: |
@@ -133,6 +163,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: workflow-browser-verification
+          name: workflow-browser-verification-${{ matrix.arch }}
           path: ${{ runner.temp }}/arc-ci-evidence
           retention-days: 7

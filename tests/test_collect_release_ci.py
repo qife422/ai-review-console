@@ -6,7 +6,12 @@ from pathlib import Path
 
 import pytest
 
-from scripts.collect_release_ci import Collector, extract_system_records, identity
+from scripts.collect_release_ci import (
+    Collector,
+    collect_native_for_profile,
+    extract_system_records,
+    identity,
+)
 
 
 def test_container_identity_requires_exact_current_project_service_and_full_digest() -> None:
@@ -94,3 +99,14 @@ def test_system_export_checks_manifest_and_preserves_existing_output(tmp_path: P
     with pytest.raises(ValueError, match="must not exist"):
         extract_system_records(raw, target)
     assert (target / "rpm-after.stdout").read_bytes() == original
+
+
+@pytest.mark.parametrize("system,machine", [("Linux", "x86_64"), ("Darwin", "arm64")])
+def test_native_skip_cannot_silently_apply_to_other_platforms(system: str, machine: str) -> None:
+    with pytest.raises(ValueError, match="Linux ARM"):
+        collect_native_for_profile("arm-backend", system, machine)
+
+
+def test_native_profile_limits_the_arm_job_without_resetting_another_batch() -> None:
+    assert collect_native_for_profile("complete", "Linux", "x86_64")
+    assert not collect_native_for_profile("arm-backend", "Linux", "aarch64")

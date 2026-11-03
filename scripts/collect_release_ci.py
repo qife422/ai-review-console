@@ -13,6 +13,7 @@ import base64
 import hashlib
 import json
 import os
+import platform
 import re
 import shutil
 import signal
@@ -83,6 +84,14 @@ def extract_system_records(raw: str, destination: Path) -> dict:
     return {"files": len(selected), "bytes": total, "status": manifest["status"]}
 
 
+def collect_native_for_profile(profile: str, system: str, machine: str) -> bool:
+    if profile == "complete":
+        return True
+    if profile == "arm-backend" and system == "Linux" and machine in {"aarch64", "arm64"}:
+        return False
+    raise ValueError("The native-budget skip profile is only for the Linux ARM backend job")
+
+
 def now() -> str:
     return datetime.now(UTC).isoformat()
 
@@ -105,7 +114,7 @@ def usage(root: Path) -> tuple[int, int]:
 
 class Collector:
     def __init__(self, root: Path, project: str):
-        if not re.fullmatch(r"arc-ci-[0-9]+", project):
+        if not re.fullmatch(r"arc-ci-[0-9]+(?:-(?:amd64|arm64))?", project):
             raise ValueError("This collector only reads the current arc-ci-<run_id> project")
         if root.is_symlink() or (root.exists() and (not root.is_dir() or any(root.iterdir()))):
             raise ValueError("Output must be absent or empty, never replace existing evidence")
@@ -211,7 +220,11 @@ class Collector:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path, required=True)
+    parser.add_argument("--native-profile", choices=["complete", "arm-backend"], default="complete")
     args = parser.parse_args()
+    collect_native = collect_native_for_profile(
+        args.native_profile, platform.system(), platform.machine()
+    )
     collector = Collector(args.output_dir, os.environ.get("COMPOSE_PROJECT_NAME", ""))
     result = {
         "contract": "ARC-UPGRADE@0.1.0",
@@ -221,6 +234,9 @@ def main() -> None:
         "release_acceptance": "pending_review_not_granted_by_collection",
         "project": collector.project,
         "historical_or_user_artifact_cleanup": False,
+        "runner_system": platform.system(),
+        "runner_machine": platform.machine(),
+        "native_materials_profile": args.native_profile,
     }
     try:
         targets = collector.images()
@@ -370,22 +386,29 @@ def main() -> None:
             raise RuntimeError(
                 "License collector failed; missing license remains a separate finding"
             )
-        code, _ = collector.run(
-            "native-materials",
-            [
-                sys.executable,
-                "scripts/verify_native_materials.py",
-                "--image",
-                "api=" + targets["api"],
-                "--image",
-                "langflow=" + targets["langflow"],
-                "--output-dir",
-                str(collector.root / "native"),
-            ],
-            timeout=240,
-        )
-        if code:
-            raise RuntimeError("Native material collector failed")
+        if collect_native:
+            code, _ = collector.run(
+                "native-materials",
+                [
+                    sys.executable,
+                    "scripts/verify_native_materials.py",
+                    "--image",
+                    "api=" + targets["api"],
+                    "--image",
+                    "langflow=" + targets["langflow"],
+                    "--output-dir",
+                    str(collector.root / "native"),
+                ],
+                timeout=240,
+            )
+            if code:
+                raise RuntimeError("Native material collector failed")
+        else:
+            result["native_materials"] = {
+                "state": "not_collected_on_arm_backend",
+                "reason": "This round's shared targeted-native input budget is reserved for AMD64.",
+                "distribution_approval": False,
+            }
         result.update(
             collection_state="collected",
             audits=audits,
