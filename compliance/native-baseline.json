@@ -1,17 +1,17 @@
 {
-  "schema": 1,
-  "source_commit": "2e45bee8c61dfab347edd107aebb6a3488567761",
-  "ci_run": 41586599463,
-  "artifact_id": 13208706419,
-  "materials_sha256": "cf205390853df3a4c77d2123bbc897a0f63a6b32f8291907f0b83de445bbed1d",
-  "original_native_manifest_utf8": "{\n  \"created_at\": \"2026-11-03T06:02:33.916059+00:00\",\n  \"producer_sha256\": \"bedc118a499831587e71be6a71030621486540acc4c06c4b54a18085f94462b5\",\n  \"legal_approval\": false,\n  \"files\": [\n    {\n      \"path\": \"materials.json\",\n      \"bytes\": 19517,\n      \"sha256\": \"cf205390853df3a4c77d2123bbc897a0f63a6b32f8291907f0b83de445bbed1d\"\n    }\n  ],\n  \"qualification\": \"Collection success is not source correspondence or distribution approval.\"\n}\n",
-  "original_native_manifest_sha256": "8a3307116c234e05e221dcd72247607aead3eabb1952fc54e995c804873168fa",
+  "schema": 2,
+  "source_commit": "185848006c2ea97ad24bead72f726c3a0d467dd4",
+  "ci_run": 41588865769,
+  "artifact_id": 13209590935,
+  "materials_sha256": "557010a4b7d40eb40176cd926df59946603d95e843047ed51826e64a2e7fc60b",
+  "original_native_manifest_utf8": "{\n  \"created_at\": \"2026-11-03T06:23:19.781350+00:00\",\n  \"producer_sha256\": \"57cc7fc1e73b0cc08cc1253957f35383f0f58ee3d74f9a2284105055b3b10faf\",\n  \"legal_approval\": false,\n  \"files\": [\n    {\n      \"path\": \"materials.json\",\n      \"bytes\": 37517,\n      \"sha256\": \"557010a4b7d40eb40176cd926df59946603d95e843047ed51826e64a2e7fc60b\"\n    }\n  ],\n  \"qualification\": \"Collection success is not source correspondence or distribution approval.\"\n}\n",
+  "original_native_manifest_sha256": "159e153f9a8d2d768963025b478a9670ad3b9423d806e7e7a8f447f9af4f3873",
   "remaining_budget": {
-    "files": 10,
-    "input_bytes": 26931253,
-    "text_bytes": 4105982
+    "files": 9,
+    "input_bytes": 26907808,
+    "text_bytes": 4082537
   },
-  "known_goal_input_bytes": 135700308,
+  "known_goal_input_bytes": 135723753,
   "prior_inventory": {
     "paths": 101,
     "planned_paths": 100,
@@ -27,7 +27,8 @@
       "/app/.venv/lib/python3.14/site-packages/clidriver/license/odbc_REDIST.txt",
       "/app/.venv/lib/python3.14/site-packages/clidriver/properties/version/ibm.com_IBM_Data_Server_Driver_for_ODBC_and_CLI-11.5.0.swidtag",
       "/app/.venv/lib/python3.14/site-packages/clidriver/lib/libdb2.so",
-      "/app/.venv/lib/python3.14/site-packages/clidriver/lib/libdb2.so.1"
+      "/app/.venv/lib/python3.14/site-packages/clidriver/lib/libdb2.so.1",
+      "/app/.venv/lib/python3.14/site-packages/clidriver/license/odbc_notices.txt"
     ],
     "api": [
       "/usr/local/lib/python3.12/site-packages/psycopg_binary-3.3.5.dist-info/METADATA",
@@ -36,42 +37,64 @@
   },
   "previous_images": [
     {
-      "name": "langflow",
-      "image_id": "sha256:8db643cf50f215d67257fdd1f85c9e286092c9877d93d54e0117925850dd7c21",
+      "name": "api",
+      "image_id": "sha256:dac5965a840be8d2da28d1bb3e2098b42ea4fe9aeefa010357344f0a43166e10",
+      "generic_inventory_sha256": "38bb0a2ccca5e78de92f746b2aa89446b0c06b824be9d4a3534ee0e7b87542a2",
       "packages": [
         {
-          "name": "ibm_db",
-          "version": "3.2.9",
-          "license_expression": null,
-          "root": "/app/.venv/lib/python3.14/site-packages",
-          "dist_info": "/app/.venv/lib/python3.14/site-packages/ibm_db-3.2.9.dist-info",
-          "declared_file_state": "available"
+          "name": "psycopg",
+          "version": "3.3.5",
+          "location": "/usr/local/lib/python3.12/site-packages",
+          "license_expression": "LGPL-3.0-only",
+          "license_metadata": null
         },
         {
-          "name": "psycopg2-binary",
-          "version": "2.9.12",
-          "license_expression": null,
-          "root": "/app/.venv/lib/python3.14/site-packages",
-          "dist_info": "/app/.venv/lib/python3.14/site-packages/psycopg2_binary-2.9.12.dist-info",
-          "declared_file_state": "available"
+          "name": "psycopg-binary",
+          "version": "3.3.5",
+          "location": "/usr/local/lib/python3.12/site-packages",
+          "license_expression": "LGPL-3.0-only",
+          "license_metadata": null
         }
       ]
     },
     {
-      "name": "api",
-      "image_id": "sha256:9553a52c06f048ffeaeb6965975be61bf68cfebedf1d1cc494706e9ad1354470",
+      "name": "langflow",
+      "image_id": "sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+      "generic_inventory_sha256": "e847895b72b052b0890169815364cf8947cc56d61c052d8c7b98a68c8d512bb8",
       "packages": [
         {
-          "name": "psycopg-binary",
-          "version": "3.3.5",
+          "name": "ibm_db",
+          "version": "3.2.9",
+          "location": "/app/.venv/lib64/python3.14/site-packages",
+          "license_expression": null,
+          "license_metadata": "Apache License 2.0"
+        },
+        {
+          "name": "psycopg",
+          "version": "3.3.4",
+          "location": "/app/.venv/lib64/python3.14/site-packages",
           "license_expression": "LGPL-3.0-only",
-          "root": "/usr/local/lib/python3.12/site-packages",
-          "dist_info": "/usr/local/lib/python3.12/site-packages/psycopg_binary-3.3.5.dist-info",
-          "declared_file_state": "available"
+          "license_metadata": null
+        },
+        {
+          "name": "psycopg2-binary",
+          "version": "2.9.12",
+          "location": "/app/.venv/lib64/python3.14/site-packages",
+          "license_expression": null,
+          "license_metadata": "LGPL with exceptions"
+        },
+        {
+          "name": "zep-python",
+          "version": "2.0.2",
+          "location": "/app/.venv/lib64/python3.14/site-packages",
+          "license_expression": null,
+          "license_metadata": null
         }
       ]
     }
   ],
-  "qualification": "Fixed carry-forward input. Preserves prior raw native manifest and measured remaining quota; not redistribution approval.",
+  "previous_baseline_utf8": "{\n  \"schema\": 1,\n  \"source_commit\": \"2e45bee8c61dfab347edd107aebb6a3488567761\",\n  \"ci_run\": 41586599463,\n  \"artifact_id\": 13208706419,\n  \"materials_sha256\": \"cf205390853df3a4c77d2123bbc897a0f63a6b32f8291907f0b83de445bbed1d\",\n  \"original_native_manifest_utf8\": \"{\\n  \\\"created_at\\\": \\\"2026-11-03T06:02:33.916059+00:00\\\",\\n  \\\"producer_sha256\\\": \\\"bedc118a499831587e71be6a71030621486540acc4c06c4b54a18085f94462b5\\\",\\n  \\\"legal_approval\\\": false,\\n  \\\"files\\\": [\\n    {\\n      \\\"path\\\": \\\"materials.json\\\",\\n      \\\"bytes\\\": 19517,\\n      \\\"sha256\\\": \\\"cf205390853df3a4c77d2123bbc897a0f63a6b32f8291907f0b83de445bbed1d\\\"\\n    }\\n  ],\\n  \\\"qualification\\\": \\\"Collection success is not source correspondence or distribution approval.\\\"\\n}\\n\",\n  \"original_native_manifest_sha256\": \"8a3307116c234e05e221dcd72247607aead3eabb1952fc54e995c804873168fa\",\n  \"remaining_budget\": {\n    \"files\": 10,\n    \"input_bytes\": 26931253,\n    \"text_bytes\": 4105982\n  },\n  \"known_goal_input_bytes\": 135700308,\n  \"prior_inventory\": {\n    \"paths\": 101,\n    \"planned_paths\": 100,\n    \"deviation_retained\": true,\n    \"input_bytes\": 95522697\n  },\n  \"already_read_paths\": {\n    \"langflow\": [\n      \"/app/.venv/lib/python3.14/site-packages/ibm_db-3.2.9.dist-info/METADATA\",\n      \"/app/.venv/lib/python3.14/site-packages/ibm_db-3.2.9.dist-info/RECORD\",\n      \"/app/.venv/lib/python3.14/site-packages/psycopg2_binary-2.9.12.dist-info/METADATA\",\n      \"/app/.venv/lib/python3.14/site-packages/psycopg2_binary-2.9.12.dist-info/RECORD\",\n      \"/app/.venv/lib/python3.14/site-packages/clidriver/license/odbc_REDIST.txt\",\n      \"/app/.venv/lib/python3.14/site-packages/clidriver/properties/version/ibm.com_IBM_Data_Server_Driver_for_ODBC_and_CLI-11.5.0.swidtag\",\n      \"/app/.venv/lib/python3.14/site-packages/clidriver/lib/libdb2.so\",\n      \"/app/.venv/lib/python3.14/site-packages/clidriver/lib/libdb2.so.1\"\n    ],\n    \"api\": [\n      \"/usr/local/lib/python3.12/site-packages/psycopg_binary-3.3.5.dist-info/METADATA\",\n      \"/usr/local/lib/python3.12/site-packages/psycopg_binary-3.3.5.dist-info/RECORD\"\n    ]\n  },\n  \"previous_images\": [\n    {\n      \"name\": \"langflow\",\n      \"image_id\": \"sha256:8db643cf50f215d67257fdd1f85c9e286092c9877d93d54e0117925850dd7c21\",\n      \"packages\": [\n        {\n          \"name\": \"ibm_db\",\n          \"version\": \"3.2.9\",\n          \"license_expression\": null,\n          \"root\": \"/app/.venv/lib/python3.14/site-packages\",\n          \"dist_info\": \"/app/.venv/lib/python3.14/site-packages/ibm_db-3.2.9.dist-info\",\n          \"declared_file_state\": \"available\"\n        },\n        {\n          \"name\": \"psycopg2-binary\",\n          \"version\": \"2.9.12\",\n          \"license_expression\": null,\n          \"root\": \"/app/.venv/lib/python3.14/site-packages\",\n          \"dist_info\": \"/app/.venv/lib/python3.14/site-packages/psycopg2_binary-2.9.12.dist-info\",\n          \"declared_file_state\": \"available\"\n        }\n      ]\n    },\n    {\n      \"name\": \"api\",\n      \"image_id\": \"sha256:9553a52c06f048ffeaeb6965975be61bf68cfebedf1d1cc494706e9ad1354470\",\n      \"packages\": [\n        {\n          \"name\": \"psycopg-binary\",\n          \"version\": \"3.3.5\",\n          \"license_expression\": \"LGPL-3.0-only\",\n          \"root\": \"/usr/local/lib/python3.12/site-packages\",\n          \"dist_info\": \"/usr/local/lib/python3.12/site-packages/psycopg_binary-3.3.5.dist-info\",\n          \"declared_file_state\": \"available\"\n        }\n      ]\n    }\n  ],\n  \"qualification\": \"Fixed carry-forward input. Preserves prior raw native manifest and measured remaining quota; not redistribution approval.\",\n  \"legal_approval\": false\n}\n",
+  "previous_baseline_sha256": "eadfcf4078cf6143e97fb373335ec257737edc14d006ff0aa2be184c6a291903",
+  "qualification": "Advanced fixed carry-forward input from actual185 result, preserving the earlier fixed input byte for byte. Final target is only the already-listed English odbc_LI_en; no notice, metadata, REDIST, SWID, libdb2 or native crypto reread.",
   "legal_approval": false
 }

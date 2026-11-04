@@ -89,7 +89,10 @@ def test_followup_restores_exact_fixed_budget_and_rejects_tampering(tmp_path):
     source = Path(__file__).resolve().parents[1] / "compliance/native-baseline.json"
     baseline = collector.load_baseline(source)
     assert baseline["remaining_budget"] == collector.FOLLOWUP_REMAINING
-    assert baseline["known_goal_input_bytes"] == 135700308
+    assert baseline["known_goal_input_bytes"] == 135723753
+    assert collector.digest(baseline["previous_baseline_utf8"].encode()) == (
+        collector.PREVIOUS_BASELINE_SHA256
+    )
     altered = json.loads(source.read_text())
     altered["remaining_budget"]["files"] = 20
     destination = tmp_path / "altered-baseline.json"
@@ -103,15 +106,18 @@ def test_followup_cannot_start_with_fresh_twenty_file_budget():
         collector.collect_followup("langflow", collector.Budget())
 
 
-def test_followup_reads_only_missed_english_text_and_legacy_crypto(tmp_path, monkeypatch):
+def test_followup_reads_actual_odbc_prefixed_english_only_without_old_content(
+    tmp_path, monkeypatch
+):
     root = tmp_path / "site-packages"
     license_dir = root / "clidriver/license"
     unix = license_dir / "UNIX"
     unix.mkdir(parents=True)
     (license_dir / "odbc_notices.txt").write_text("IBM notices")
     (license_dir / "odbc_REDIST.txt").write_text("prior fixed input; never reopen")
-    (unix / "LI_en").write_text("English information")
-    (unix / "LI_de").write_text("unselected translation")
+    (unix / "odbc_LI_en").write_text("English information")
+    (unix / "odbc_LI_de").write_text("unselected translation")
+    (unix / "LI_en").write_text("generic name is outside this exact follow-up")
     (unix / "entitlement.lic").write_text("secret license key")
     native = root / "psycopg2_binary.libs"
     native.mkdir()
@@ -120,17 +126,27 @@ def test_followup_reads_only_missed_english_text_and_legacy_crypto(tmp_path, mon
     (root / "unexpected.libs").mkdir()
     (root / "unexpected.libs/libcrypto.so.1.1").write_bytes(b"outside approved dirs")
     monkeypatch.setattr(collector.sysconfig, "get_path", lambda key: str(root))
+    opened = []
+    original_open = Path.open
+
+    def track_open(path, *args, **kwargs):
+        opened.append(path)
+        return original_open(path, *args, **kwargs)
+
+    monkeypatch.setattr(Path, "open", track_open)
     budget = collector.Budget(**collector.FOLLOWUP_REMAINING)
     result = collector.collect_followup("langflow", budget)
     recorded = [item for item in result["files"] if "bytes_read" in item]
-    assert {Path(item["path"]).name for item in recorded} == {
-        "odbc_notices.txt",
-        "LI_en",
-        "libcrypto-old.so.1.0.2k",
-    }
-    assert budget.files == 7
-    crypto = next(item for item in recorded if item["purpose"] == "legacy_openssl_build_id")
-    assert crypto["embedded_openssl_strings"] == ["OpenSSL 1.0.2k-fips"]
+    assert {Path(item["path"]).name for item in recorded} == {"odbc_LI_en"}
+    assert opened == [unix / "odbc_LI_en"]
+    assert budget.files == 8
+    excluded = next(item for item in result["files"] if item["state"] == "excluded")
+    assert Path(excluded["path"]).name == "odbc_notices.txt"
+    assert "no_content_reread" in excluded["reason"]
     assert not any("secret license key" in item.get("text", "") for item in result["files"])
     assert all(item.get("metadata_or_record_reread") is False for item in recorded)
     assert "unexpected.libs" not in str(result["directory_listing"])
+    assert result["directory_listing"] == []
+    api_start = budget.remaining()
+    assert collector.collect_followup("api", budget)["files"] == []
+    assert budget.remaining() == api_start

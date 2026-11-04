@@ -32,10 +32,10 @@ PRIOR_HASH_INPUT = 95_522_697
 GOAL_HASH_LIMIT = 200 * 1024 * 1024
 TARGETS = ("ibm_db", "psycopg_binary", "psycopg2_binary")
 IMAGE_RE = re.compile(r"(api|langflow)=(sha256:[a-f0-9]{64})\Z")
-BASELINE_SHA256 = "eadfcf4078cf6143e97fb373335ec257737edc14d006ff0aa2be184c6a291903"
-FOLLOWUP_REMAINING = dict(files=10, input_bytes=26_931_253, text_bytes=4_105_982)
-FOLLOWUP_KNOWN_INPUT = 135_700_308
-APPROVED_LIB_DIRS = ("psycopg_binary.libs", "psycopg2_binary.libs")
+BASELINE_SHA256 = "ba73fb69a3d4644b5d0b49d64d32928ef9d1628716ea7d5289524e949ea4ce81"
+FOLLOWUP_REMAINING = dict(files=9, input_bytes=26_907_808, text_bytes=4_082_537)
+FOLLOWUP_KNOWN_INPUT = 135_723_753
+PREVIOUS_BASELINE_SHA256 = "eadfcf4078cf6143e97fb373335ec257737edc14d006ff0aa2be184c6a291903"
 
 
 def now():
@@ -346,117 +346,56 @@ def load_baseline(path):
         != baseline["original_native_manifest_sha256"]
     ):
         raise ValueError("Original native manifest fingerprint mismatch")
+    if digest(baseline["previous_baseline_utf8"].encode()) != PREVIOUS_BASELINE_SHA256:
+        raise ValueError("Earlier native baseline chain mismatch")
+    if baseline["previous_baseline_sha256"] != PREVIOUS_BASELINE_SHA256:
+        raise ValueError("Earlier baseline identifier mismatch")
     return baseline
 
 
 def collect_followup(name, budget):
-    """Read only the missed IBM texts and legacy crypto in two known dirs."""
+    """Read only the exact English agreement identified in actual185 listing."""
     if any(budget.remaining()[k] > v for k, v in FOLLOWUP_REMAINING.items()):
         raise ValueError("Follow-up exceeds carried remaining quota")
     roots = sorted({Path(sysconfig.get_path(k)).resolve() for k in ("purelib", "platlib")})
-    listings, candidates, files = [], [], []
-
-    def shallow(directory, purpose):
-        try:
-            if not directory.resolve().is_relative_to(root):
-                raise ValueError("directory_outside_site_packages")
-            if not directory.is_dir():
-                listings.append(dict(path=str(directory), state="missing_directory"))
-                return []
-            entries = sorted(directory.iterdir())
-            if len(entries) > 256:
-                listings.append(
-                    dict(
-                        path=str(directory), state="directory_entry_limit", entry_count=len(entries)
-                    )
-                )
-                return []
-            listings.append(
-                dict(
-                    path=str(directory), purpose=purpose, entries=[entry.name for entry in entries]
-                )
-            )
-            return entries
-        except (OSError, ValueError, RuntimeError) as error:
-            listings.append(
-                dict(path=str(directory), state="listing_error", error_type=type(error).__name__)
-            )
-            return []
-
-    for root in roots:
-        if name == "langflow":
+    files = []
+    if name == "langflow":
+        for root in roots:
             driver = root / "clidriver"
-            # The prior actual listing proves these names. No REDIST/SWID/libdb2
-            # reopen and no entitlement .lic contents, even if present here.
-            license_entries = shallow(driver / "license", "known_driver_legal_directory")
-            for entry in license_entries:
-                if entry.name == "odbc_notices.txt":
-                    candidates.append((entry, root, "driver_notices"))
-            unix = driver / "license" / "UNIX"
-            if unix.is_file():
-                candidates.append((unix, root, "driver_unix_agreement"))
-                unix_entries = []
-            else:
-                unix_entries = shallow(unix, "known_unix_agreement_directory")
-            for entry in unix_entries:
-                lower = entry.name.lower()
-                english = lower in ("li", "la", "li_en", "la_en", "english", "english.txt")
-                english = english or lower.startswith(("li_en.", "la_en.", "li_en_", "la_en_"))
-                if english and entry.suffix.lower() != ".lic":
-                    candidates.append((entry, root, "driver_english_agreement"))
-                else:
-                    files.append(
-                        dict(
-                            path=str(entry),
-                            state="excluded",
-                            sha256=None,
-                            reason="not_selected_english_agreement; no_content_read",
-                        )
-                    )
-        for dirname in APPROVED_LIB_DIRS:
-            entries = shallow(root / dirname, "approved_native_directory_names_only")
-            for entry in entries:
-                if entry.name.startswith("libcrypto") and ".so.1." in entry.name:
-                    candidates.append((entry, root, "legacy_openssl_build_id"))
-    seen = set()
-    for path, root, purpose in candidates:
-        try:
-            key = str(path.resolve())
-        except (OSError, RuntimeError):
-            key = str(path)
-        if key in seen:
-            continue
-        seen.add(key)
-        record, raw = read_target(path, root, budget, text=purpose != "legacy_openssl_build_id")
-        if raw is not None and purpose == "legacy_openssl_build_id":
-            # Static byte strings only; never dlopen/execute the library. A
-            # version string is evidence of its bytes, not vendor source proof.
-            versions = re.findall(rb"OpenSSL [0-9][ -~]{0,100}", raw)
-            record["elf"] = elf_build_ids(raw)
-            record["embedded_openssl_strings"] = sorted(
-                {value.split(b"\0", 1)[0].decode("ascii") for value in versions}
-            )[:16]
-        files.append(
-            record
-            | dict(
-                purpose=purpose,
-                owner_basis="known layout; cross-check exact-image license inventory",
-                metadata_or_record_reread=False,
+            # Do not even stat/read old notices: only this exact known English
+            # filename is approved. Its odbc_ prefix is covered by regression.
+            files.append(
+                dict(
+                    path=str(driver / "license/odbc_notices.txt"),
+                    state="excluded",
+                    sha256=None,
+                    reason="already_read_in185_baseline; no_content_reread",
+                )
             )
-        )
+            path = driver / "license/UNIX/odbc_LI_en"
+            record, _ = read_target(path, root, budget, text=True)
+            files.append(
+                record
+                | dict(
+                    purpose="driver_exact_english_agreement",
+                    owner_basis="known185layout; cross-check same-image generic inventory",
+                    metadata_or_record_reread=False,
+                )
+            )
     return dict(
         image_name=name,
         collected_at=now(),
         architecture=__import__("platform").machine(),
         mode="targeted_followup",
         files=files,
-        directory_listing=listings,
+        directory_listing=[],
+        exact_scope="only clidriver/license/UNIX/odbc_LI_en on Langflow; no API targets",
         remaining_budget=budget.remaining(),
         legal_approval=False,
         qualifications=[
-            "No selected METADATA/RECORD or prior REDIST/SWID/libdb2 reread.",
-            "Directory names establish candidates, not legal permission or source provenance.",
-            "Owner/version must be cross-checked against generic inventory for this image ID.",
+            "No directory inventory or legacycrypto reread in this final follow-up.",
+            "No notices/METADATA/RECORD/REDIST/SWID/libdb2 reread.",
+            "English agreement text is evidence, not fulfilled redistribution approval.",
         ],
     )
 
