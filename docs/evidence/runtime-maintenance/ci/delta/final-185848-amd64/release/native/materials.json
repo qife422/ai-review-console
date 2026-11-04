@@ -1,0 +1,369 @@
+{
+  "created_at": "2026-11-03T06:23:19.780656+00:00",
+  "producer": "scripts/verify_native_materials.py",
+  "producer_sha256": "57cc7fc1e73b0cc08cc1253957f35383f0f58ee3d74f9a2284105055b3b10faf",
+  "images": [
+    {
+      "image_name": "langflow",
+      "image_id": "sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "-i",
+        "--pull",
+        "never",
+        "--read-only",
+        "--network",
+        "none",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--memory",
+        "512m",
+        "--pids-limit",
+        "64",
+        "--log-driver",
+        "none",
+        "--entrypoint",
+        "python",
+        "sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+        "-",
+        "--_followup",
+        "langflow",
+        "{\"files\": 10, \"input_bytes\": 26931253, \"text_bytes\": 4105982}"
+      ],
+      "started_at": "2026-11-03T06:23:19.099745+00:00",
+      "ended_at": "2026-11-03T06:23:19.365012+00:00",
+      "producer_sha256": "57cc7fc1e73b0cc08cc1253957f35383f0f58ee3d74f9a2284105055b3b10faf",
+      "stdin_sha256": "57cc7fc1e73b0cc08cc1253957f35383f0f58ee3d74f9a2284105055b3b10faf",
+      "stdout_sha256": "0a17ee49644a01ed3cb1934ee413c71a401fc9d03afdd42414f3084407a9bf02",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stderr": "",
+      "collection_state": "collected_with_explicit_scope",
+      "result": {
+        "image_name": "langflow",
+        "collected_at": "2026-11-03T06:23:19.278525+00:00",
+        "architecture": "x86_64",
+        "mode": "targeted_followup",
+        "files": [
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_cs",
+            "state": "excluded",
+            "sha256": null,
+            "reason": "not_selected_english_agreement; no_content_read"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_de",
+            "state": "excluded",
+            "sha256": null,
+            "reason": "not_selected_english_agreement; no_content_read"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_el",
+            "state": "excluded",
+            "sha256": null,
+            "reason": "not_selected_english_agreement; no_content_read"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_en",
+            "state": "excluded",
+            "sha256": null,
+            "reason": "not_selected_english_agreement; no_content_read"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_es",
+            "state": "excluded",
+            "sha256": null,
+            "reason": "not_selected_english_agreement; no_content_read"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_fr",
+            "state": "excluded",
+            "sha256": null,
+            "reason": "not_selected_english_agreement; no_content_read"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_in",
+            "state": "excluded",
+            "sha256": null,
+            "reason": "not_selected_english_agreement; no_content_read"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_it",
+            "state": "excluded",
+            "sha256": null,
+            "reason": "not_selected_english_agreement; no_content_read"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_ja",
+            "state": "excluded",
+            "sha256": null,
+            "reason": "not_selected_english_agreement; no_content_read"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_ko",
+            "state": "excluded",
+            "sha256": null,
+            "reason": "not_selected_english_agreement; no_content_read"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_lt",
+            "state": "excluded",
+            "sha256": null,
+            "reason": "not_selected_english_agreement; no_content_read"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_pl",
+            "state": "excluded",
+            "sha256": null,
+            "reason": "not_selected_english_agreement; no_content_read"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_pt",
+            "state": "excluded",
+            "sha256": null,
+            "reason": "not_selected_english_agreement; no_content_read"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_ru",
+            "state": "excluded",
+            "sha256": null,
+            "reason": "not_selected_english_agreement; no_content_read"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_sl",
+            "state": "excluded",
+            "sha256": null,
+            "reason": "not_selected_english_agreement; no_content_read"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_tr",
+            "state": "excluded",
+            "sha256": null,
+            "reason": "not_selected_english_agreement; no_content_read"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_zh",
+            "state": "excluded",
+            "sha256": null,
+            "reason": "not_selected_english_agreement; no_content_read"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_zh_TW",
+            "state": "excluded",
+            "sha256": null,
+            "reason": "not_selected_english_agreement; no_content_read"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/odbc_notices.txt",
+            "state": "recorded",
+            "sha256": "2b17aff0579ec93c70fb9b5553dcb20778c6a5ca76dd613fd280414a1dc573fe",
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/odbc_notices.txt",
+            "file_bytes": 23445,
+            "bytes_read": 23445,
+            "text": "NOTICES AND INFORMATION\r\n\r\nIBM Data Server Driver for ODBC and CLI v11.5\r\n\r\nThe IBM license agreement and any applicable information on the web\r\ndownload page for IBM products refers Licensee to this file for details\r\nconcerning notices applicable to code included in the products listed\r\nabove (\"the Program\").\r\n\r\nNotwithstanding the terms and conditions of any other agreement Licensee\r\nmay have with IBM or any of its related or affiliated entities\r\n(collectively \"IBM\"), the third party code identified below is subject\r\nto the terms and conditions of the IBM license agreement for the Program\r\nand not the license terms that may be contained in the notices below.\r\nThe notices are provided for informational purposes.\r\n\r\nPlease note: This Notices file may identify information that is not used\r\nby, or that was not shipped with, the Program as Licensee installed it.\r\n\r\nIMPORTANT: IBM does not represent or warrant that the information in this\r\nNOTICES file is accurate. Third party websites are independent of IBM and\r\nIBM does not represent or warrant that the information on any third party\r\nwebsite referenced in this NOTICES file is accurate. IBM disclaims any\r\nand all liability for errors and omissions or for any damages accruing\r\nfrom the use of this NOTICES file or its contents, including without\r\nlimitation URLs or references to any third party websites.\r\n\r\n\n APACHE CODE II.  The following are notices and other important information with respect to this third party code. The Program includes all or portions of the following software developed by the Apache Software Foundation.  This software consists of voluntary contributions made by many individuals on behalf of the Apache Software Foundation.  For more information on the Apache Software Foundation, please see http://www.apache.org.  The following is the list of third party governed under V2.0 of the Apache license:\n\nXML4C V5.8 \n\nIBM obtained the right to use the software under the following license from the Apache Software Foundation:  \n\n/*\n *                                 Apache License\n *                           Version 2.0, January 2004\n *                        http://www.apache.org/licenses/\n *\n *   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n *\n *   1. Definitions.\n *\n *      \"License\" shall mean the terms and conditions for use, reproduction,\n *      and distribution as defined by Sections 1 through 9 of this document.\n *\n *      \"Licensor\" shall mean the copyright owner or entity authorized by\n *      the copyright owner that is granting the License.\n *\n *      \"Legal Entity\" shall mean the union of the acting entity and all\n *      other entities that control, are controlled by, or are under common\n *      control with that entity. For the purposes of this definition,\n *      \"control\" means (i) the power, direct or indirect, to cause the\n *      direction or management of such entity, whether by contract or\n *      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n *      outstanding shares, or (iii) beneficial ownership of such entity.\n *\n *      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n *      exercising permissions granted by this License.\n *\n *      \"Source\" form shall mean the preferred form for making modifications,\n *      including but not limited to software source code, documentation\n *      source, and configuration files.\n *\n *      \"Object\" form shall mean any form resulting from mechanical\n *      transformation or translation of a Source form, including but\n *      not limited to compiled object code, generated documentation,\n *      and conversions to other media types.\n *\n *      \"Work\" shall mean the work of authorship, whether in Source or\n *      Object form, made available under the License, as indicated by a\n *      copyright notice that is included in or attached to the work\n *      (an example is provided in the Appendix below).\n *\n *      \"Derivative Works\" shall mean any work, whether in Source or Object\n *      form, that is based on (or derived from) the Work and for which the\n *      editorial revisions, annotations, elaborations, or other \n *      modifications\n *      represent, as a whole, an original work of authorship. For the \n *      purposes\n *      of this License, Derivative Works shall not include works that remain\n *      separable from, or merely link (or bind by name) to the interfaces\n *      of, the Work and Derivative Works thereof.\n *\n *      \"Contribution\" shall mean any work of authorship, including\n *      the original version of the Work and any modifications or additions\n *      to that Work or Derivative Works thereof, that is intentionally\n *      submitted to Licensor for inclusion in the Work by the copyright  \n *      owner\n *      or by an individual or Legal Entity authorized to submit on behalf of\n *      the copyright owner. For the purposes of this definition, \"submitted\"\n *      means any form of electronic, verbal, or written communication sent\n *      to the Licensor or its representatives, including but not limited to\n *      communication on electronic mailing lists, source code control \n *      systems,and issue tracking systems that are managed by, or on \n *      behalf of, the Licensor for the purpose of discussing and improving\n *      the Work, but excluding communication that is conspicuously marked\n *      or otherwise designated in writing by the copyright owner as\n *      \"Not a Contribution.\"\n *\n *      \"Contributor\" shall mean Licensor and any individual or Legal Entity\n *      on behalf of whom a Contribution has been received by Licensor and\n *      subsequently incorporated within the Work.\n *\n *   2. Grant of Copyright License. Subject to the terms and conditions of\n *      this License, each Contributor hereby grants to You a perpetual,\n *      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n *      copyright license to reproduce, prepare Derivative Works of,\n *      publicly display, publicly perform, sublicense, and distribute the\n *      Work and such Derivative Works in Source or Object form.\n *\n *   3. Grant of Patent License. Subject to the terms and conditions of\n *      this License, each Contributor hereby grants to You a perpetual,\n *      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n *      (except as stated in this section) patent license to make, have made,\n *      use, offer to sell, sell, import, and otherwise transfer the Work,\n *      where such license applies only to those patent claims licensable\n *      by such Contributor that are necessarily infringed by their\n *      Contribution(s) alone or by combination of their Contribution(s)\n *      with the Work to which such Contribution(s) was submitted. If You\n *      institute patent litigation against any entity (including a\n *      cross-claim or counterclaim in a lawsuit) alleging that the Work\n *      or a Contribution incorporated within the Work constitutes direct\n *      or contributory patent infringement, then any patent licenses\n *      granted to You under this License for that Work shall terminate\n *      as of the date such litigation is filed.\n *\n *   4. Redistribution. You may reproduce and distribute copies of the\n *      Work or Derivative Works thereof in any medium, with or without\n *      modifications, and in Source or Object form, provided that You\n *      meet the following conditions:\n *\n *      (a) You must give any other recipients of the Work or\n *          Derivative Works a copy of this License; and\n *\n *      (b) You must cause any modified files to carry prominent notices\n *          stating that You changed the files; and\n *\n *      (c) You must retain, in the Source form of any Derivative Works\n *          that You distribute, all copyright, patent, trademark, and\n *          attribution notices from the Source form of the Work,\n *          excluding those notices that do not pertain to any part of\n *          the Derivative Works; and\n *\n *      (d) If the Work includes a \"NOTICE\" text file as part of its\n *          distribution, then any Derivative Works that You distribute must\n *          include a readable copy of the attribution notices contained\n *          within such NOTICE file, excluding those notices that do not\n *          pertain to any part of the Derivative Works, in at least one\n *          of the following places: within a NOTICE text file distributed\n *          as part of the Derivative Works; within the Source form or\n *          documentation, if provided along with the Derivative Works; or,\n *          within a display generated by the Derivative Works, if and\n *          wherever such third-party notices normally appear. The contents\n *          of the NOTICE file are for informational purposes only and\n *          do not modify the License. You may add Your own attribution\n *          notices within Derivative Works that You distribute, alongside\n *          or as an addendum to the NOTICE text from the Work, provided\n *          that such additional attribution notices cannot be construed\n *          as modifying the License.\n *\n *      You may add Your own copyright statement to Your modifications and\n *      may provide additional or different license terms and conditions\n *      for use, reproduction, or distribution of Your modifications, or\n *      for any such Derivative Works as a whole, provided Your use,\n *      reproduction, and distribution of the Work otherwise complies with\n *      the conditions stated in this License.\n *\n *   5. Submission of Contributions. Unless You explicitly state otherwise,\n *      any Contribution intentionally submitted for inclusion in the Work\n *      by You to the Licensor shall be under the terms and conditions of\n *      this License, without any additional terms or conditions.\n *      Notwithstanding the above, nothing herein shall supersede or modify\n *      the terms of any separate license agreement you may have executed\n *      with Licensor regarding such Contributions.\n *\n *   6. Trademarks. This License does not grant permission to use the trade\n *      names, trademarks, service marks, or product names of the Licensor,\n *      except as required for reasonable and customary use in describing the\n *      origin of the Work and reproducing the content of the NOTICE file.\n *\n *   7. Disclaimer of Warranty. Unless required by applicable law or\n *      agreed to in writing, Licensor provides the Work (and each\n *      Contributor provides its Contributions) on an \"AS IS\" BASIS,\n *      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\n *      implied, including, without limitation, any warranties or conditions\n *      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\n *      PARTICULAR PURPOSE. You are solely responsible for determining the\n *      appropriateness of using or redistributing the Work and assume any\n *      risks associated with Your exercise of permissions under this\n *      License.\n *\n *   8. Limitation of Liability. In no event and under no legal theory,\n *      whether in tort (including negligence), contract, or otherwise,\n *      unless required by applicable law (such as deliberate and grossly\n *      negligent acts) or agreed to in writing, shall any Contributor be\n *      liable to You for damages, including any direct, indirect, special,\n *      incidental, or consequential damages of any character arising as a\n *      result of this License or out of the use or inability to use the\n *      Work (including but not limited to damages for loss of goodwill,\n *      work stoppage, computer failure or malfunction, or any and all\n *      other commercial damages or losses), even if such Contributor\n *      has been advised of the possibility of such damages.\n *\n *   9. Accepting Warranty or Additional Liability. While redistributing\n *      the Work or Derivative Works thereof, You may choose to offer,\n *      and charge a fee for, acceptance of support, warranty, indemnity,\n *      or other liability obligations and/or rights consistent with this\n *      License. However, in accepting such obligations, You may act only\n *      on Your own behalf and on Your sole responsibility, not on behalf\n *      of any other Contributor, and only if You agree to indemnify,\n *      defend, and hold each Contributor harmless for any liability\n *      incurred by, or claims asserted against, such Contributor by reason\n *      of your accepting any such warranty or additional liability.\n *\n *   END OF TERMS AND CONDITIONS\n *\n *   APPENDIX: How to apply the Apache License to your work.\n *\n *      To apply the Apache License to your work, attach the following\n *      boilerplate notice, with the fields enclosed by brackets \"[ ]\"\n *      replaced with your own identifying information. (Don't include\n *      the brackets!)  The text should be enclosed in the appropriate\n *      comment syntax for the file format. We also recommend that a\n *      file or class name and description of purpose be included on the\n *      same \"printed page\" as the copyright notice for easier\n *      identification within third-party archives.\n *\n *   Copyright [yyyy] [name of copyright owner]\n *\n *   Licensed under the Apache License, Version 2.0 (the \"License\");\n *   you may not use this file except in compliance with the License.\n *   You may obtain a copy of the License at\n *\n *       http://www.apache.org/licenses/LICENSE-2.0\n *\n *   Unless required by applicable law or agreed to in writing, software\n *   distributed under the License is distributed on an \"AS IS\" BASIS,\n *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n *   See the License for the specific language governing permissions and\n *   limitations under the License.\n */\n\nEND OF APACHE II NOTICES AND INFORMATION\n===========================================================================\n\nThe following are notices and other important information with respect to this third party code.\n\nThe GSKit V8 program includes the following:\n\n1)  OpenSSL  \n2)  zLIb  \n3)  ICU  \n \n\n1) OpenSSL\n \n  LICENSE ISSUES\n  -------------- \n\n  The OpenSSL toolkit stays under a dual license, i.e. both the conditions of\n  the OpenSSL License and the original SSLeay license apply to the toolkit.\n  See below for the actual license texts. Actually both licenses are BSD-style\n  Open Source licenses. In case of any license issues related to OpenSSL\n  please contact openssl-core@openssl.org.\n\n  a)  OpenSSL License\n   \n\n/*  \n * Copyright (c) 1998-2008 The OpenSSL Project.  All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n *\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n *\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in\n *    the documentation and/or other materials provided with the\n *    distribution.\n *\n * 3. All advertising materials mentioning features or use of this\n *    software must display the following acknowledgment:\n *    \"This product includes software developed by the OpenSSL Project\n *    for use in the OpenSSL Toolkit. (http://www.openssl.org/)\"\n *\n * 4. The names \"OpenSSL Toolkit\" and \"OpenSSL Project\" must not be used to\n *    endorse or promote products derived from this software without\n *    prior written permission. For written permission, please contact\n *    openssl-core@openssl.org.\n *\n * 5. Products derived from this software may not be called \"OpenSSL\"\n *    nor may \"OpenSSL\" appear in their names without prior written\n *    permission of the OpenSSL Project.\n *\n * 6. Redistributions of any form whatsoever must retain the following\n *    acknowledgment:\n *    \"This product includes software developed by the OpenSSL Project\n *    for use in the OpenSSL Toolkit (http://www.openssl.org/)\"\n *\n * THIS SOFTWARE IS PROVIDED BY THE OpenSSL PROJECT ``AS IS'' AND ANY\n * EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR\n * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE OpenSSL PROJECT OR\n * ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT\n * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\n * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,\n * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)\n * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED\n * OF THE POSSIBILITY OF SUCH DAMAGE.\n *  \n *\n * This product includes cryptographic software written by Eric Young\n * (eay@cryptsoft.com).  This product includes software written by Tim\n * Hudson (tjh@cryptsoft.com).\n *\n */\n\n b) Original SSLeay License\n    \n\n/* Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)\n * All rights reserved.\n *\n * This package is an SSL implementation written\n * by Eric Young (eay@cryptsoft.com).\n * The implementation was written so as to conform with Netscapes SSL.\n *\n * This library is free for commercial and non-commercial use as long as\n * the following conditions are aheared to.  The following conditions\n * apply to all code found in this distribution, be it the RC4, RSA,\n * lhash, DES, etc., code; not just the SSL code.  The SSL documentation\n * included with this distribution is covered by the same copyright terms\n * except that the holder is Tim Hudson (tjh@cryptsoft.com).\n *\n * Copyright remains Eric Young's, and as such any Copyright notices in\n * the code are not to be removed.\n * If this package is used in a product, Eric Young should be given attribution\n * as the author of the parts of the library used.\n * This can be in the form of a textual message at program startup or\n * in documentation (online or textual) provided with the package.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n * 3. All advertising materials mentioning features or use of this software\n *    must display the following acknowledgement:\n *    \"This product includes cryptographic software written by\n *     Eric Young (eay@cryptsoft.com)\"\n *    The word 'cryptographic' can be left out if the rouines from the library\n *    being used are not cryptographic related :-).\n * 4. If you include any Windows specific code (or a derivative thereof) from\n *    the apps directory (application code) you must include an acknowledgement:\n *    \"This product includes software written by Tim Hudson (tjh@cryptsoft.com)\"\n *\n * THIS SOFTWARE IS PROVIDED BY ERIC YOUNG ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n *\n * The licence and distribution terms for any publically available version or\n * derivative of this code cannot be changed.  i.e. this code cannot simply be\n * copied and put under another distribution licence\n * [including the GNU Public Licence.]\n */\n\n\nEnd of OpenSSL License\n**********************************************************\n\n\nzlib License \n\n/* zlib.h -- interface of the 'zlib' general purpose compression library\n  version 1.2.4, March 14th, 2010\n\n  Copyright (C) 1995-2010 Jean-loup Gailly and Mark Adler\n\n  This software is provided 'as-is', without any express or implied\n  warranty.  In no event will the authors be held liable for any damages\n  arising from the use of this software.\n\n  Permission is granted to anyone to use this software for any purpose,\n  including commercial applications, and to alter it and redistribute it\n  freely, subject to the following restrictions:\n\n  1. The origin of this software must not be misrepresented; you must not\n     claim that you wrote the original software. If you use this software\n     in a product, an acknowledgment in the product documentation would be\n     appreciated but is not required.\n  2. Altered source versions must be plainly marked as such, and must not be\n     misrepresented as being the original software.\n  3. This notice may not be removed or altered from any source distribution.\n\n  Jean-loup Gailly\n  Mark Adler\n\n*/\n\n\nEnd of zlib License\n\n\n\n**********************************************************\n\n3) ICU License - ICU 1.8.1 and later\nCOPYRIGHT AND PERMISSION NOTICE\nCopyright (c) 1995-2010 International Business Machines Corporation and others \nAll rights reserved. \nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, provided that the above copyright notice(s) and this permission notice appear in all copies of the Software and that both the above copyright notice(s) and this permission notice appear in supporting documentation. \nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. \nExcept as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder. \nAll trademarks and registered trademarks mentioned herein are the property of their respective owners. \n\nEnd of ICU License\n**********************************************************\nEnd of GSKit V8 License\n===========================================================================\n\n\n \n\r\n\r\nL/N:  L-XHUG-BAFKQ7\r\nD/N:  L-XHUG-BAFKQ7\r\nP/N:  L-XHUG-BAFKQ7",
+            "purpose": "driver_notices",
+            "owner_basis": "known layout; cross-check exact-image license inventory",
+            "metadata_or_record_reread": false
+          }
+        ],
+        "directory_listing": [
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license",
+            "purpose": "known_driver_legal_directory",
+            "entries": [
+              "UNIX",
+              "odbc_REDIST.txt",
+              "odbc_notices.txt"
+            ]
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX",
+            "purpose": "known_unix_agreement_directory",
+            "entries": [
+              "odbc_LI_cs",
+              "odbc_LI_de",
+              "odbc_LI_el",
+              "odbc_LI_en",
+              "odbc_LI_es",
+              "odbc_LI_fr",
+              "odbc_LI_in",
+              "odbc_LI_it",
+              "odbc_LI_ja",
+              "odbc_LI_ko",
+              "odbc_LI_lt",
+              "odbc_LI_pl",
+              "odbc_LI_pt",
+              "odbc_LI_ru",
+              "odbc_LI_sl",
+              "odbc_LI_tr",
+              "odbc_LI_zh",
+              "odbc_LI_zh_TW"
+            ]
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/psycopg_binary.libs",
+            "state": "missing_directory"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/psycopg2_binary.libs",
+            "purpose": "approved_native_directory_names_only",
+            "entries": [
+              "libcom_err-2abe824b.so.2.1",
+              "libcrypt-13f4f5d0.so.1",
+              "libcrypto-88208852.so.3",
+              "libgssapi_krb5-497db0c6.so.2.2",
+              "libk5crypto-b1f99d5c.so.3.1",
+              "libkeyutils-dfe70bd6.so.1.5",
+              "libkrb5-fcafa220.so.3.3",
+              "libkrb5support-d0bcff84.so.0.1",
+              "liblber-314cbfbf.so.2.0.200",
+              "libldap-331dad9d.so.2.0.200",
+              "libpcre-9513aab5.so.1.2.0",
+              "libpq-f521cc7d.so.5.17",
+              "libsasl2-84219a89.so.3.0.0",
+              "libselinux-0922c95c.so.1",
+              "libssl-fe1b61af.so.3"
+            ]
+          }
+        ],
+        "remaining_budget": {
+          "files": 9,
+          "input_bytes": 26907808,
+          "text_bytes": 4082537
+        },
+        "legal_approval": false,
+        "qualifications": [
+          "No selected METADATA/RECORD or prior REDIST/SWID/libdb2 reread.",
+          "Directory names establish candidates, not legal permission or source provenance.",
+          "Owner/version must be cross-checked against generic inventory for this image ID."
+        ]
+      }
+    },
+    {
+      "image_name": "api",
+      "image_id": "sha256:dac5965a840be8d2da28d1bb3e2098b42ea4fe9aeefa010357344f0a43166e10",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "-i",
+        "--pull",
+        "never",
+        "--read-only",
+        "--network",
+        "none",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--memory",
+        "512m",
+        "--pids-limit",
+        "64",
+        "--log-driver",
+        "none",
+        "--entrypoint",
+        "python",
+        "sha256:dac5965a840be8d2da28d1bb3e2098b42ea4fe9aeefa010357344f0a43166e10",
+        "-",
+        "--_followup",
+        "api",
+        "{\"files\": 9, \"input_bytes\": 26907808, \"text_bytes\": 4082537}"
+      ],
+      "started_at": "2026-11-03T06:23:19.365270+00:00",
+      "ended_at": "2026-11-03T06:23:19.780534+00:00",
+      "producer_sha256": "57cc7fc1e73b0cc08cc1253957f35383f0f58ee3d74f9a2284105055b3b10faf",
+      "stdin_sha256": "57cc7fc1e73b0cc08cc1253957f35383f0f58ee3d74f9a2284105055b3b10faf",
+      "stdout_sha256": "07bfeec741c05e4a2e6c75ae4e71747f009f46271e0b26c5130f09435ce8015d",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stderr": "",
+      "collection_state": "collected_with_explicit_scope",
+      "result": {
+        "image_name": "api",
+        "collected_at": "2026-11-03T06:23:19.689418+00:00",
+        "architecture": "x86_64",
+        "mode": "targeted_followup",
+        "files": [],
+        "directory_listing": [
+          {
+            "path": "/usr/local/lib/python3.12/site-packages/psycopg_binary.libs",
+            "purpose": "approved_native_directory_names_only",
+            "entries": [
+              "libcom_err-2abe824b.so.2.1",
+              "libcrypt-bc2db45e.so.1",
+              "libcrypto-d2905bf5.so.3",
+              "libgssapi_krb5-497db0c6.so.2.2",
+              "libk5crypto-b1f99d5c.so.3.1",
+              "libkeyutils-dfe70bd6.so.1.5",
+              "libkrb5-fcafa220.so.3.3",
+              "libkrb5support-d0bcff84.so.0.1",
+              "liblber-0e410f4d.so.2.0.200",
+              "libldap-0b2a3054.so.2.0.200",
+              "libpcre-9513aab5.so.1.2.0",
+              "libpq-e9b5c9ac.so.5.18",
+              "libsasl2-84219a89.so.3.0.0",
+              "libselinux-0922c95c.so.1",
+              "libssl-8bd944e8.so.3"
+            ]
+          },
+          {
+            "path": "/usr/local/lib/python3.12/site-packages/psycopg2_binary.libs",
+            "state": "missing_directory"
+          }
+        ],
+        "remaining_budget": {
+          "files": 9,
+          "input_bytes": 26907808,
+          "text_bytes": 4082537
+        },
+        "legal_approval": false,
+        "qualifications": [
+          "No selected METADATA/RECORD or prior REDIST/SWID/libdb2 reread.",
+          "Directory names establish candidates, not legal permission or source provenance.",
+          "Owner/version must be cross-checked against generic inventory for this image ID."
+        ]
+      }
+    }
+  ],
+  "remaining_budget": {
+    "files": 9,
+    "input_bytes": 26907808,
+    "text_bytes": 4082537
+  },
+  "legal_approval": false,
+  "limits": {
+    "files": 20,
+    "input_bytes": 67108864,
+    "text_bytes": 4194304,
+    "per_text_file_bytes": 262144,
+    "json_bytes": 2097152
+  },
+  "prior_inventory": {
+    "paths": 101,
+    "planned_paths": 100,
+    "deviation_retained": true,
+    "input_bytes": 95522697
+  },
+  "goal_hash_input_limit_bytes": 209715200,
+  "goal_known_input_bytes": 135723753,
+  "starting_budget": {
+    "files": 10,
+    "input_bytes": 26931253,
+    "text_bytes": 4105982
+  },
+  "current_invocation_read_files": 1,
+  "current_invocation_input_bytes": 23445,
+  "baseline": {
+    "path": "compliance/native-baseline.json",
+    "sha256": "eadfcf4078cf6143e97fb373335ec257737edc14d006ff0aa2be184c6a291903",
+    "source_commit": "2e45bee8c61dfab347edd107aebb6a3488567761",
+    "original_materials_sha256": "cf205390853df3a4c77d2123bbc897a0f63a6b32f8291907f0b83de445bbed1d",
+    "known_goal_input_bytes": 135700308
+  },
+  "mode": "targeted_followup"
+}

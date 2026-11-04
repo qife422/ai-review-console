@@ -1,0 +1,280 @@
+{
+  "started_at": "2026-11-03T06:18:23.470340+00:00",
+  "scope": "new_image_public_UBI10_only",
+  "release_acceptance": "pending",
+  "producer": "scripts/apply_system_updates.py",
+  "os_before": {
+    "NAME": "Red Hat Enterprise Linux",
+    "VERSION": "10.2 (Coughlan)",
+    "RELEASE_TYPE": "stable",
+    "ID": "rhel",
+    "ID_LIKE": "centos fedora",
+    "VERSION_ID": "10.2",
+    "PLATFORM_ID": "platform:el10",
+    "PRETTY_NAME": "Red Hat Enterprise Linux 10.2 (Coughlan)",
+    "ANSI_COLOR": "0;31",
+    "LOGO": "fedora-logo-icon",
+    "CPE_NAME": "cpe:/o:redhat:enterprise_linux:10.2",
+    "HOME_URL": "https://www.redhat.com/",
+    "VENDOR_NAME": "Red Hat",
+    "VENDOR_URL": "https://www.redhat.com/",
+    "DOCUMENTATION_URL": "https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/10",
+    "BUG_REPORT_URL": "https://issues.redhat.com/",
+    "REDHAT_BUGZILLA_PRODUCT": "Red Hat Enterprise Linux 10",
+    "REDHAT_BUGZILLA_PRODUCT_VERSION": "10.2",
+    "REDHAT_SUPPORT_PRODUCT": "Red Hat Enterprise Linux",
+    "REDHAT_SUPPORT_PRODUCT_VERSION": "10.2"
+  },
+  "repositories": [
+    {
+      "id": "ubi-10-appstream-rpms",
+      "baseurl": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/$basearch/appstream/os",
+      "gpgkey": "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release",
+      "gpgcheck": "1",
+      "sslverify": "1",
+      "config_path": "/etc/yum.repos.d/ubi.repo",
+      "config_sha256": "ef7160b63c0df5008fdd156978ba658e109659316b34eaf13f9017cba75e3a14",
+      "component": "appstream"
+    },
+    {
+      "id": "ubi-10-baseos-rpms",
+      "baseurl": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/$basearch/baseos/os",
+      "gpgkey": "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release",
+      "gpgcheck": "1",
+      "sslverify": "1",
+      "config_path": "/etc/yum.repos.d/ubi.repo",
+      "config_sha256": "ef7160b63c0df5008fdd156978ba658e109659316b34eaf13f9017cba75e3a14",
+      "component": "baseos"
+    }
+  ],
+  "redhat_release_key_sha256": "d5ddf4a09b2dccc41c27e06f70dc7b2009704723115b5f824873b8d5133f84e2",
+  "os_after": {
+    "NAME": "Red Hat Enterprise Linux",
+    "VERSION": "10.2 (Coughlan)",
+    "RELEASE_TYPE": "stable",
+    "ID": "rhel",
+    "ID_LIKE": "centos fedora",
+    "VERSION_ID": "10.2",
+    "PLATFORM_ID": "platform:el10",
+    "PRETTY_NAME": "Red Hat Enterprise Linux 10.2 (Coughlan)",
+    "ANSI_COLOR": "0;31",
+    "LOGO": "fedora-logo-icon",
+    "CPE_NAME": "cpe:/o:redhat:enterprise_linux:10.2",
+    "HOME_URL": "https://www.redhat.com/",
+    "VENDOR_NAME": "Red Hat",
+    "VENDOR_URL": "https://www.redhat.com/",
+    "DOCUMENTATION_URL": "https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/10",
+    "BUG_REPORT_URL": "https://issues.redhat.com/",
+    "REDHAT_BUGZILLA_PRODUCT": "Red Hat Enterprise Linux 10",
+    "REDHAT_BUGZILLA_PRODUCT_VERSION": "10.2",
+    "REDHAT_SUPPORT_PRODUCT": "Red Hat Enterprise Linux",
+    "REDHAT_SUPPORT_PRODUCT_VERSION": "10.2"
+  },
+  "status": "completed",
+  "ended_at": "2026-11-03T06:18:35.497499+00:00",
+  "commands": [
+    {
+      "argv": [
+        "rpm",
+        "-qa",
+        "--qf",
+        "%{NAME}\t%{EPOCHNUM}:%{VERSION}-%{RELEASE}\t%{ARCH}\t%{RSAHEADER:pgpsig}\n"
+      ],
+      "started_at": "2026-11-03T06:18:23.472053+00:00",
+      "ended_at": "2026-11-03T06:18:23.673093+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdout": "rpm-before.stdout",
+      "stderr": "rpm-before.stderr"
+    },
+    {
+      "argv": [
+        "rpm",
+        "-q",
+        "gpg-pubkey",
+        "--qf",
+        "%{NAME}-%{VERSION}-%{RELEASE}\n"
+      ],
+      "started_at": "2026-11-03T06:18:23.673222+00:00",
+      "ended_at": "2026-11-03T06:18:23.874321+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdout": "trusted-keys.stdout",
+      "stderr": "trusted-keys.stderr"
+    },
+    {
+      "argv": [
+        "microdnf",
+        "--disablerepo=*",
+        "--enablerepo=ubi-10-appstream-rpms",
+        "--enablerepo=ubi-10-baseos-rpms",
+        "--setopt=ubi-10-appstream-rpms.gpgcheck=1",
+        "--setopt=ubi-10-appstream-rpms.sslverify=1",
+        "--setopt=ubi-10-baseos-rpms.gpgcheck=1",
+        "--setopt=ubi-10-baseos-rpms.sslverify=1",
+        "--setopt=install_weak_deps=0",
+        "--setopt=keepcache=0",
+        "repolist"
+      ],
+      "started_at": "2026-11-03T06:18:23.874443+00:00",
+      "ended_at": "2026-11-03T06:18:24.075546+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdout": "repositories.stdout",
+      "stderr": "repositories.stderr"
+    },
+    {
+      "argv": [
+        "microdnf",
+        "--disablerepo=*",
+        "--enablerepo=ubi-10-appstream-rpms",
+        "--enablerepo=ubi-10-baseos-rpms",
+        "--setopt=ubi-10-appstream-rpms.gpgcheck=1",
+        "--setopt=ubi-10-appstream-rpms.sslverify=1",
+        "--setopt=ubi-10-baseos-rpms.gpgcheck=1",
+        "--setopt=ubi-10-baseos-rpms.sslverify=1",
+        "--setopt=install_weak_deps=0",
+        "--setopt=keepcache=0",
+        "--refresh",
+        "makecache"
+      ],
+      "started_at": "2026-11-03T06:18:24.075659+00:00",
+      "ended_at": "2026-11-03T06:18:24.476939+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdout": "metadata-refresh.stdout",
+      "stderr": "metadata-refresh.stderr"
+    },
+    {
+      "argv": [
+        "microdnf",
+        "--disablerepo=*",
+        "--enablerepo=ubi-10-appstream-rpms",
+        "--enablerepo=ubi-10-baseos-rpms",
+        "--setopt=ubi-10-appstream-rpms.gpgcheck=1",
+        "--setopt=ubi-10-appstream-rpms.sslverify=1",
+        "--setopt=ubi-10-baseos-rpms.gpgcheck=1",
+        "--setopt=ubi-10-baseos-rpms.sslverify=1",
+        "--setopt=install_weak_deps=0",
+        "--setopt=keepcache=0",
+        "--refresh",
+        "update",
+        "-y"
+      ],
+      "started_at": "2026-11-03T06:18:24.477045+00:00",
+      "ended_at": "2026-11-03T06:18:35.094857+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdout": "update.stdout",
+      "stderr": "update.stderr"
+    },
+    {
+      "argv": [
+        "rpm",
+        "-qa",
+        "--qf",
+        "%{NAME}\t%{EPOCHNUM}:%{VERSION}-%{RELEASE}\t%{ARCH}\t%{RSAHEADER:pgpsig}\n"
+      ],
+      "started_at": "2026-11-03T06:18:35.095014+00:00",
+      "ended_at": "2026-11-03T06:18:35.296060+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdout": "rpm-after.stdout",
+      "stderr": "rpm-after.stderr"
+    },
+    {
+      "argv": [
+        "microdnf",
+        "--disablerepo=*",
+        "--enablerepo=ubi-10-appstream-rpms",
+        "--enablerepo=ubi-10-baseos-rpms",
+        "--setopt=ubi-10-appstream-rpms.gpgcheck=1",
+        "--setopt=ubi-10-appstream-rpms.sslverify=1",
+        "--setopt=ubi-10-baseos-rpms.gpgcheck=1",
+        "--setopt=ubi-10-baseos-rpms.sslverify=1",
+        "--setopt=install_weak_deps=0",
+        "--setopt=keepcache=0",
+        "clean",
+        "all"
+      ],
+      "started_at": "2026-11-03T06:18:35.296254+00:00",
+      "ended_at": "2026-11-03T06:18:35.497401+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdout": "image-cache-clean.stdout",
+      "stderr": "image-cache-clean.stderr"
+    }
+  ],
+  "files": [
+    {
+      "path": "image-cache-clean.stderr",
+      "bytes": 170,
+      "sha256": "37ec735fc8f2760014e084226a7ca5d022c2465912655e0b4379436d2171e861"
+    },
+    {
+      "path": "image-cache-clean.stdout",
+      "bytes": 10,
+      "sha256": "d9158dba466706073b9359557167b7d68c1c5e5fe5dc7139cb95fd7c53ab996b"
+    },
+    {
+      "path": "metadata-refresh.stderr",
+      "bytes": 166,
+      "sha256": "7fb34ee7edee8819fd82d0ec7aa1079e8f3456a374d9b37eeedecb35955d2586"
+    },
+    {
+      "path": "metadata-refresh.stdout",
+      "bytes": 72,
+      "sha256": "199d049b1dc95ccc87c2835867225f01f603c61f094ccf70516a316328f2045b"
+    },
+    {
+      "path": "repositories.stderr",
+      "bytes": 164,
+      "sha256": "c398bdb032eab59f3382118ded3b97ed71cc48215e29335caf9824eda1807534"
+    },
+    {
+      "path": "repositories.stdout",
+      "bytes": 175,
+      "sha256": "0ffe702a45ebd746468ea401862b5cdf99977843c0422bcd1c3e8d89e5a7f3d4"
+    },
+    {
+      "path": "rpm-after.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rpm-after.stdout",
+      "bytes": 23912,
+      "sha256": "e546e71e11411660bd63b58cf7d69f73a374404d092a9cb131f40143b662a43c"
+    },
+    {
+      "path": "rpm-before.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rpm-before.stdout",
+      "bytes": 23790,
+      "sha256": "abc88073fef6df7eb8fa9b1df68eea84f3086382a16422beb8da9ccc85d0d676"
+    },
+    {
+      "path": "trusted-keys.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "trusted-keys.stdout",
+      "bytes": 87,
+      "sha256": "c6ece077551b266b6e45ed3ad78c101da32b431b1d28a3eaf67c513f41a4000e"
+    },
+    {
+      "path": "update.stderr",
+      "bytes": 166,
+      "sha256": "8fdfbc22ed71d5a814bb3718f8fd04889f95188ecf1ae306e46c4bc7ea886856"
+    },
+    {
+      "path": "update.stdout",
+      "bytes": 19615,
+      "sha256": "1bc4bf276bd07d396951405724446a6bfca3cb83feb4017495bde72f09a93bae"
+    }
+  ]
+}

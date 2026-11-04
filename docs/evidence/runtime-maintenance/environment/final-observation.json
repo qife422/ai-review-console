@@ -1,0 +1,264 @@
+{
+  "created_at": "2026-11-04T02:35:09.749337+00:00",
+  "code_ci_conclusion": "success",
+  "source_commit": "adb93c4b9f6af508188f696b8d7d1ef1dc5668ac",
+  "code_ci_run": 41760412382,
+  "python_passed": 191,
+  "frontend_passed": 29,
+  "ci_short": "191 Python/29前端；AMD完整工作流/浏览器、Linux ARM后端全部success；只定向补采唯一English协议",
+  "report_result": "本轮有限切片已完成：在固定Langflow1.11.6上实施系统维护、修复Web libexpat并完成双架构回归；评估候选版本及补齐精确许可证材料。**v0.2完整发布验收仍未通过**：AC-19、Zep/native/完整后端分发条件和残余扫描记录保留open；没有接受残余风险。\n\n| 功能检查点 | 实际结果 |\n|---|---|\n| `2e45bee` / CI41586599463 | 188 Python/29前端；系统维护修复后首次双架构成功 |\n| `1858480` / CI41588865769 | 191 Python/29前端；Web libexpat2.10.0修复、定向notices补采成功 |\n| `adb93c4` / [CI41760412382](https://github.com/qife422/ai-review-console/actions/runs/41760412382) | 191 Python/29前端；AMD完整工作流/浏览器、Linux ARM后端全部成功，精确English协议补采成功 |\n\n最后两个检查点分别执行于11-02与11-03，扫描数据按各自查询快照理解；测试绿色不等于零漏洞或完整后端可分发。",
+  "report_regression": "最后实际CI再次测得：两架构从226条RPM记录变为227条（软件223→224，均另含3个公钥），60个既有软件EVR变化、新增perl-Unicode-Normalize、无移除。glibc变为2.39-145.el10_2，openssl-libs变为3.5.8-2.el10_2，expat为2.7.3-1.el10_2.7，Python3.14为3.14.8-1.el10_2。前后输入、签名头和事务原件按11-02详细包保留，11-03新计算及输入指纹在`ci/native-close/selection.json`；不能把派生选择字段冒称保存了第四轮全部原件。\n\n两架构RHEL补扫：224软件包及3公钥，provider IDs/匹配/映射、查询、详情unknown均0。主扫描原exit2和227个RPM unknown保留；在同一exact LF image ID上核对默认RPM集合、系统post-update fullEVR及补扫集合，清单内合并unknown0。该覆盖不包含全部文件系统、静态或内嵌二进制，也不是可利用性证明。\n\nWeb在两架构均安装libexpat2.10.0-r0，11-02原先2.9.0-r0的4个Alpine provider IDs不再匹配，最后11-03扫描仍为0。API126个Debian IDs、PostgreSQL130个Debian IDs；LF仍有5个Python包/81 IDs/59 alias组（Pillow12.3.0、filelock3.32.0、chromadb1.5.9、setuptools83.0.0、couchbase4.6.2），全镜像provider ID并集236。IDs/alias组不是独立CVE或可利用漏洞数量；旧114/116/23RHSA是历史快照，不能据跨日差值声称修复数量。\n\n最后191 Python测试0失败/错误/跳过，29前端测试通过；两个runtime的52pins、pip check及离线兼容探针通过。两架构实际运行5组件、两Flow、4格式、3决定、9次报告下载。失败重试属于预期仍失败的负向用例：同case/version、一次手动重试代次去重，并未证明成功案件的故障恢复。AMD浏览器CLI结果passed；未选本轮新PNG，人工视觉检查仍明确属于前一2e45来源的4张图。ARM明确未执行浏览器和第二份定向native。旧全故障、隔离恢复及性能没有在新系统补丁下完整重跑。",
+  "report_native": "首次AMD实采10文件/40,177,611B，包括ibm_db3.2.9实际driver、V11.5REDIST、SWID及相关owner字段；SWID记录产品11.5.0，不能从setup默认值认定实际二进制fixpack。第三轮新增notices23,445B，记录LI L-XHUG-BAFKQ7和第三方声明；该notices标识与最后英文LI标识不同用途，不把它当作现行完整协议ID；同轮仅在批准的两处psycopg native目录列名，均未见libcrypto.so.1.*，这一观察仅限该AMD镜像和目录，不消除旧ARM的FIPS/source问题。\n\n最后将英文选择器纠正为实际`license/UNIX/odbc_LI_en`，唯一新增读取55,713B，SHA-256 `0e83c4ba0bc0da1a24fd6a828002575acf4933e48f43cb5569ad02436ff5fb6e`。正文标明IBM Data Server Driver v11.5.9、LI L-ASUX-ZXSTFM并附IPLA；可以关闭英文协议漏选/缺失，协议标识不等于对libdb2二进制fixpack的独立测定。正文列出随增值应用的object-code分发范围、仅支持该应用、版权/notices保留、营销商标授权和终端协议等条件，仍需逐项核对履行；取得文本不代替负责人接受，也不自动证明完整镜像满足REDIST清单。\n\n全批额度未重置：本轮共12文件/40,256,769B；加此前95,522,697B，已知累计135,779,466B，剩8文件/26,852,095B输入/4,026,824B文本。本次没有重读40MB driver、notices或METADATA/RECORD，不读任何entitlement .lic，不执行native代码。固定基线保留第三轮manifest及嵌套前轮原文/SHA链；最后真实材料与producer指纹见`ci/native-close/amd64/release/native/`。",
+  "state_scan": "系统维护在两架构实际更新60个既有软件EVR、新增1软件无移除；227条RPM=224软件+3公钥。RHEL补扫0ID/0unknown，主扫描exit2与227RPM unknown原记录保留，由同exactimage/fullEVR集合补扫覆盖，清单内合并unknown0。Web libexpat2.10.0-r0扫描0；API126、PostgreSQL130个Debian IDs；LF仍5个Python包/81 IDs/59 alias组，provider并集236。这些不是独立CVE/可利用性计数，也不覆盖全部内嵌文件。\n\n最终实际191 Python/29前端、52pins/pip check/兼容探针、5组件/2Flow/4格式/3决定/9下载通过；AMD浏览器passed，ARM仅后端。负向失败重试保持同case/version并一次重试代次，仍failed是预期，不标成成功恢复。详细指标和精确source/image、未选范围见本轮证据。",
+  "state_native": "已补齐Psycopg3.3.5与Psycopg2-binary2.9.12各自精确recipe/patch来源，纠正跨owner配方比较；实际AMD取得IBM REDIST、notices和55,713B英文协议。协议标识v11.5.9/LI L-ASUX-ZXSTFM，不能据此独立断定libdb2二进制fixpack。新增本轮12文件/40,256,769B，加旧输入累计135,779,466B；最后沿共享剩余额度只读唯一English路径，剩8文件/26,852,095B输入/4,026,824B文本。许可文本取得关闭材料缺失，分发条件/全清单符合与厂商源码仍未批准。",
+  "changelog_text": "- 固定Langflow1.11.6/base digest与52显式Python pins，新增公共UBI10补丁层和可审计RPM/信任记录；两架构60既有软件更新、1新增、无移除。\n- Web libexpat固定2.10.0-r0；两架构Web/RHEL扫描在各自范围为0，保留主扫描exit2和剩余Python/Debian记录。\n- 最终[功能代码CI41760412382](https://github.com/qife422/ai-review-console/actions/runs/41760412382)通过191Python/29前端、AMD工作流及浏览器、Linux ARM后端；负向重试不冒称成功恢复。\n- 补Psycopg/Psycopg2精确配方、IBM REDIST/notices/English协议；Zep、native/source、完整后端分发条件仍open，v0.2完整发布验收未通过。\n- 候选元数据评估保持当前运行时；统一状态、残余问题与[后续计划](docs/evidence/runtime-maintenance/README.md)，历史证据与原库不变。纯文档封存提交使用[skip ci]，不把跳过视为通过。",
+  "license_doc_text": "在精确AMD镜像中取得ibm_db3.2.9 driver的REDIST、SWID、notices及实际英文协议。最后唯一补读`odbc_LI_en`55,713B（SHA-256 `0e83c4ba0bc0da1a24fd6a828002575acf4933e48f43cb5569ad02436ff5fb6e`），标识v11.5.9/LI L-ASUX-ZXSTFM并附IPLA。前一notices为LI L-XHUG-BAFKQ7/v11.5，和最后英文LI不同用途，不作为现行完整协议ID。SWID产品11.5.0及协议版本不替代实际libdb2二进制fixpack测定。随增值应用的object-code分发范围、该应用支持限制、版权/notices、商标和终端协议等条件仍需逐项履行；未认定完整后端镜像符合所有REDIST文件范围，也未代替用户接受条款。\n\n同轮只在批准的两处psycopg native目录列名未见libcrypto.so.1.*，限该AMD观察，不关闭旧ARM的FIPS/厂商对应源码问题。精确同镜像owner已交叉核对：API psycopg-binary3.3.5，LF psycopg2-binary2.9.12、psycopg3.3.4、ibm_db3.2.9、zep-python2.0.2。Zep精确许可、完整native对应源码与后端二进制分发条件仍open。最终共享批次12文件/40,256,769B，加此前输入累计135,779,466B，未重置额度或读取entitlement .lic。",
+  "source4_evidence": "ci/native-close/selection.json",
+  "source4_scans": {
+    "amd64": {
+      "provider_union": 236,
+      "default_unknown": {
+        "mapping_unknown": 227,
+        "query_unknown": 0,
+        "detail_unknown": 0
+      },
+      "images": {
+        "api": {
+          "image_id": "sha256:0b8f9853c44b93671f39ebc1391ee4675be367816e09ff39a9e61fe672052051",
+          "inventory_packages": 140,
+          "unknown_packages": 0,
+          "matched_binary_or_python_packages": 51,
+          "observed_unique_advisory_ids": 126,
+          "detail_unknown": 0
+        },
+        "langflow": {
+          "image_id": "sha256:fd6d66658d49008b53095d2669de17f88360038cbfc8238aa509ffd2e1aaa02c",
+          "inventory_packages": 777,
+          "unknown_packages": 227,
+          "matched_binary_or_python_packages": 5,
+          "observed_unique_advisory_ids": 81,
+          "detail_unknown": 0
+        },
+        "web": {
+          "image_id": "sha256:5306b256b8dc6446bdb28b8349ffdbe77402f527f063de9b38eba5c2f33a92e6",
+          "inventory_packages": 71,
+          "unknown_packages": 0,
+          "matched_binary_or_python_packages": 0,
+          "observed_unique_advisory_ids": 0,
+          "detail_unknown": 0
+        },
+        "postgres": {
+          "image_id": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c",
+          "inventory_packages": 142,
+          "unknown_packages": 0,
+          "matched_binary_or_python_packages": 63,
+          "observed_unique_advisory_ids": 130,
+          "detail_unknown": 0
+        }
+      },
+      "rhel": {
+        "rpm_entries": 227,
+        "mapped_software_packages": 224,
+        "metadata_only_public_keys": 3,
+        "observed_unique_advisory_ids": 0,
+        "mapping_unknown": 0,
+        "query_unknown": 0,
+        "detail_unknown": 0
+      }
+    },
+    "arm64": {
+      "provider_union": 236,
+      "default_unknown": {
+        "mapping_unknown": 227,
+        "query_unknown": 0,
+        "detail_unknown": 0
+      },
+      "images": {
+        "api": {
+          "image_id": "sha256:1ea8231e5971e458759a3c86ddf65627921dec2b30d78e6558a205f3fc35792b",
+          "inventory_packages": 140,
+          "unknown_packages": 0,
+          "matched_binary_or_python_packages": 51,
+          "observed_unique_advisory_ids": 126,
+          "detail_unknown": 0
+        },
+        "langflow": {
+          "image_id": "sha256:32d4afd618fe80051cb4d2ee3c34d71a409ae43c471c5212a22eb52807388e2d",
+          "inventory_packages": 773,
+          "unknown_packages": 227,
+          "matched_binary_or_python_packages": 5,
+          "observed_unique_advisory_ids": 81,
+          "detail_unknown": 0
+        },
+        "web": {
+          "image_id": "sha256:33d3468c5718afd5148e72f39484893e846bde5f02c89775f0616d1f78569d39",
+          "inventory_packages": 71,
+          "unknown_packages": 0,
+          "matched_binary_or_python_packages": 0,
+          "observed_unique_advisory_ids": 0,
+          "detail_unknown": 0
+        },
+        "postgres": {
+          "image_id": "sha256:6162f3765f7563b273a879894c5751d41285f922dd75ba0ba508a89e024e43ca",
+          "inventory_packages": 142,
+          "unknown_packages": 0,
+          "matched_binary_or_python_packages": 63,
+          "observed_unique_advisory_ids": 130,
+          "detail_unknown": 0
+        }
+      },
+      "rhel": {
+        "rpm_entries": 227,
+        "mapped_software_packages": 224,
+        "metadata_only_public_keys": 3,
+        "observed_unique_advisory_ids": 0,
+        "mapping_unknown": 0,
+        "query_unknown": 0,
+        "detail_unknown": 0
+      }
+    }
+  },
+  "source4_system": {
+    "amd64": {
+      "rpm_rows_before": 226,
+      "rpm_rows_after": 227,
+      "software_evr_changed": 60,
+      "software_added": [
+        "perl-Unicode-Normalize"
+      ],
+      "software_removed": [],
+      "key_installed_evrs": {
+        "sqlite-libs": "0:3.46.1-6.el10_2",
+        "glibc": "0:2.39-145.el10_2",
+        "openssl-libs": "1:3.5.8-2.el10_2",
+        "libxml2": "0:2.12.5-10.el10_2.4",
+        "expat": "0:2.7.3-1.el10_2.7",
+        "python3.14": "0:3.14.8-1.el10_2",
+        "pcre2": "0:10.44-1.5.el10_2",
+        "curl": "0:8.12.1-4.el10_2.7"
+      },
+      "exact_same_langflow_image_id": "sha256:fd6d66658d49008b53095d2669de17f88360038cbfc8238aa509ffd2e1aaa02c",
+      "default_RPM_set_equals_supplement": true,
+      "post_update_full_EVR_set_equals_supplement": true,
+      "primary_unknown_rows": 227,
+      "other_uncovered_unknown_rows": 0,
+      "default_exit_code_preserved": 2,
+      "input_original_members": [
+        {
+          "path": "release/system/rpm-before.stdout",
+          "bytes": 23633,
+          "sha256": "6331f46a11e7d1c06353fbba0906738eb83cac3f5765fa90878ab8543ed919a1"
+        },
+        {
+          "path": "release/system/rpm-after.stdout",
+          "bytes": 23754,
+          "sha256": "bd866069424571ba5fe2101f75a8508f7c486e2545924aa41a58eae1036ff34d"
+        },
+        {
+          "path": "release/images/langflow-inventory.json",
+          "bytes": 310263,
+          "sha256": "2d1ea2371dbacff979ccebf4d82a8abc8a628da5b4b4ab1124b3ccd6c17a0a73"
+        },
+        {
+          "path": "release/images/package-mappings.json",
+          "bytes": 890714,
+          "sha256": "a515d0aa66208ded10b267a4291a3e7b5a20926136ad7de26518dc8c24eec1a4"
+        },
+        {
+          "path": "release/rhel/rpm-mappings.json",
+          "bytes": 330365,
+          "sha256": "1d3e05410604e80cd848ef3a38d10a7a3545de65d04e4e2bfde104253de8c5fd"
+        }
+      ],
+      "scope": "Derived from current source4 ZIP only. Detailed inventories/maps are not stored as new raw payload here; their original fingerprints are retained. This does not assess filesystem/embedded binaries or exploitability."
+    },
+    "arm64": {
+      "rpm_rows_before": 226,
+      "rpm_rows_after": 227,
+      "software_evr_changed": 60,
+      "software_added": [
+        "perl-Unicode-Normalize"
+      ],
+      "software_removed": [],
+      "key_installed_evrs": {
+        "sqlite-libs": "0:3.46.1-6.el10_2",
+        "glibc": "0:2.39-145.el10_2",
+        "openssl-libs": "1:3.5.8-2.el10_2",
+        "libxml2": "0:2.12.5-10.el10_2.4",
+        "expat": "0:2.7.3-1.el10_2.7",
+        "python3.14": "0:3.14.8-1.el10_2",
+        "pcre2": "0:10.44-1.5.el10_2",
+        "curl": "0:8.12.1-4.el10_2.7"
+      },
+      "exact_same_langflow_image_id": "sha256:32d4afd618fe80051cb4d2ee3c34d71a409ae43c471c5212a22eb52807388e2d",
+      "default_RPM_set_equals_supplement": true,
+      "post_update_full_EVR_set_equals_supplement": true,
+      "primary_unknown_rows": 227,
+      "other_uncovered_unknown_rows": 0,
+      "default_exit_code_preserved": 2,
+      "input_original_members": [
+        {
+          "path": "release/system/rpm-before.stdout",
+          "bytes": 23790,
+          "sha256": "abc88073fef6df7eb8fa9b1df68eea84f3086382a16422beb8da9ccc85d0d676"
+        },
+        {
+          "path": "release/system/rpm-after.stdout",
+          "bytes": 23912,
+          "sha256": "e546e71e11411660bd63b58cf7d69f73a374404d092a9cb131f40143b662a43c"
+        },
+        {
+          "path": "release/images/langflow-inventory.json",
+          "bytes": 308811,
+          "sha256": "8e91aa2c83d4db5b7e979e07764fc13ffa893f81492c3b5141bd6ec1d10dd5cd"
+        },
+        {
+          "path": "release/images/package-mappings.json",
+          "bytes": 887668,
+          "sha256": "a489895f08f45cdd9484e79014f0fbbf85fa6661631eff9b89059e200adbacbc"
+        },
+        {
+          "path": "release/rhel/rpm-mappings.json",
+          "bytes": 330523,
+          "sha256": "8e8fd39d3261e6ccdba26cdb4e2d68718597ce06750e63ba02d383bfd29ca386"
+        }
+      ],
+      "scope": "Derived from current source4 ZIP only. Detailed inventories/maps are not stored as new raw payload here; their original fingerprints are retained. This does not assess filesystem/embedded binaries or exploitability."
+    }
+  },
+  "native": {
+    "remaining_budget": {
+      "files": 8,
+      "input_bytes": 26852095,
+      "text_bytes": 4026824
+    },
+    "prior_inventory": {
+      "paths": 101,
+      "planned_paths": 100,
+      "deviation_retained": true,
+      "input_bytes": 95522697
+    },
+    "goal_known_input_bytes": 135779466,
+    "current_invocation_read_files": 1,
+    "current_invocation_input_bytes": 55713,
+    "starting_budget": {
+      "files": 9,
+      "input_bytes": 26907808,
+      "text_bytes": 4082537
+    },
+    "baseline": {
+      "path": "compliance/native-baseline.json",
+      "sha256": "ba73fb69a3d4644b5d0b49d64d32928ef9d1628716ea7d5289524e949ea4ce81",
+      "source_commit": "185848006c2ea97ad24bead72f726c3a0d467dd4",
+      "original_materials_sha256": "557010a4b7d40eb40176cd926df59946603d95e843047ed51826e64a2e7fc60b",
+      "known_goal_input_bytes": 135723753
+    }
+  },
+  "release_ac19": "not_passed",
+  "full_v02_last_verified": null,
+  "final_acceptance": "pending",
+  "residual_risk_accepted": false,
+  "online_demo_redeployed": false,
+  "local_Docker_mutated": false,
+  "native_final_review": "licenses/native-english-final-review.json"
+}

@@ -1,0 +1,428 @@
+{
+  "commit": "bb34edbb61ea874718974d51ecebfcfdf45beb60",
+  "run": 41586088930,
+  "url": "https://github.com/qife422/ai-review-console/actions/runs/41586088930",
+  "jobs": {
+    "jobs": [
+      {
+        "id": 125751796925,
+        "name": "workflow-browser",
+        "status": "completed",
+        "conclusion": "failure",
+        "run_id": 41586088930,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run python -m venv .venv && .venv/bin/pip install -r requirements.lock",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Run npm ci && npm run build",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Build exact application images",
+            "status": "completed",
+            "conclusion": "failure",
+            "number": 7
+          },
+          {
+            "name": "Start isolated stores and workflow runtime",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 8
+          },
+          {
+            "name": "Wait for API and Web",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 9
+          },
+          {
+            "name": "Real uploads, Intake, three decisions, nine downloads, failure and retry",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 10
+          },
+          {
+            "name": "Install bounded browser CLI runtime",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 11
+          },
+          {
+            "name": "Install pinned Chinese browser font",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 12
+          },
+          {
+            "name": "Verify Chinese browser font availability",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 13
+          },
+          {
+            "name": "Keyboard upload to decision and downloadable reports",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 14
+          },
+          {
+            "name": "Collect bounded image and license evidence (not release acceptance)",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 15
+          },
+          {
+            "name": "Preserve compact runtime diagnostics",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 32
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 33
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 34
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 35
+          }
+        ]
+      },
+      {
+        "id": 125751797229,
+        "name": "verify",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 41586088930,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Initialize containers",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Run python -m pip install --upgrade pip",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Run pip install -r requirements.lock",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Run pip install -e '.[dev]'",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Run ruff check .",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Run pytest --junitxml=\"$RUNNER_TEMP/arc-unit.xml\"",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9
+          },
+          {
+            "name": "Reject common committed secret formats",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11
+          },
+          {
+            "name": "Run npm ci",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 12
+          },
+          {
+            "name": "Run npm test -- --run",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13
+          },
+          {
+            "name": "Run npm run build",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14
+          },
+          {
+            "name": "Run docker compose config --quiet",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 29
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 30
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 31
+          },
+          {
+            "name": "Stop containers",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 32
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 33
+          }
+        ]
+      }
+    ]
+  },
+  "observed_system_manifest": {
+    "started_at": "2026-11-03T05:50:38.689936+00:00",
+    "scope": "new_image_public_UBI10_only",
+    "release_acceptance": "pending",
+    "producer": "scripts/apply_system_updates.py",
+    "os_before": {
+      "NAME": "Red Hat Enterprise Linux",
+      "VERSION": "10.2 (Coughlan)",
+      "RELEASE_TYPE": "stable",
+      "ID": "rhel",
+      "ID_LIKE": "centos fedora",
+      "VERSION_ID": "10.2",
+      "PLATFORM_ID": "platform:el10",
+      "PRETTY_NAME": "Red Hat Enterprise Linux 10.2 (Coughlan)",
+      "ANSI_COLOR": "0;31",
+      "LOGO": "fedora-logo-icon",
+      "CPE_NAME": "cpe:/o:redhat:enterprise_linux:10.2",
+      "HOME_URL": "https://www.redhat.com/",
+      "VENDOR_NAME": "Red Hat",
+      "VENDOR_URL": "https://www.redhat.com/",
+      "DOCUMENTATION_URL": "https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/10",
+      "BUG_REPORT_URL": "https://issues.redhat.com/",
+      "REDHAT_BUGZILLA_PRODUCT": "Red Hat Enterprise Linux 10",
+      "REDHAT_BUGZILLA_PRODUCT_VERSION": "10.2",
+      "REDHAT_SUPPORT_PRODUCT": "Red Hat Enterprise Linux",
+      "REDHAT_SUPPORT_PRODUCT_VERSION": "10.2"
+    },
+    "repositories": [
+      {
+        "id": "ubi-10-appstream-rpms",
+        "baseurl": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/$basearch/appstream/os",
+        "gpgkey": "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release",
+        "gpgcheck": "1",
+        "sslverify": "1",
+        "config_path": "/etc/yum.repos.d/ubi.repo",
+        "config_sha256": "ef7160b63c0df5008fdd156978ba658e109659316b34eaf13f9017cba75e3a14",
+        "component": "appstream"
+      },
+      {
+        "id": "ubi-10-baseos-rpms",
+        "baseurl": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/$basearch/baseos/os",
+        "gpgkey": "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release",
+        "gpgcheck": "1",
+        "sslverify": "1",
+        "config_path": "/etc/yum.repos.d/ubi.repo",
+        "config_sha256": "ef7160b63c0df5008fdd156978ba658e109659316b34eaf13f9017cba75e3a14",
+        "component": "baseos"
+      }
+    ],
+    "redhat_release_key_sha256": "d5ddf4a09b2dccc41c27e06f70dc7b2009704723115b5f824873b8d5133f84e2",
+    "status": "failed",
+    "error": "RuntimeError: repositories failed: exit=1, stop=None",
+    "ended_at": "2026-11-03T05:50:39.295859+00:00",
+    "commands": [
+      {
+        "argv": [
+          "rpm",
+          "-qa",
+          "--qf",
+          "%{NAME}\t%{EPOCHNUM}:%{VERSION}-%{RELEASE}\t%{ARCH}\t%{RSAHEADER:pgpsig}\n"
+        ],
+        "started_at": "2026-11-03T05:50:38.691902+00:00",
+        "ended_at": "2026-11-03T05:50:38.893255+00:00",
+        "exit_code": 0,
+        "stop_reason": null,
+        "stdout": "rpm-before.stdout",
+        "stderr": "rpm-before.stderr"
+      },
+      {
+        "argv": [
+          "rpm",
+          "-q",
+          "gpg-pubkey",
+          "--qf",
+          "%{NAME}-%{VERSION}-%{RELEASE}\n"
+        ],
+        "started_at": "2026-11-03T05:50:38.893399+00:00",
+        "ended_at": "2026-11-03T05:50:39.094502+00:00",
+        "exit_code": 0,
+        "stop_reason": null,
+        "stdout": "trusted-keys.stdout",
+        "stderr": "trusted-keys.stderr"
+      },
+      {
+        "argv": [
+          "microdnf",
+          "--disablerepo=*",
+          "--enablerepo=ubi-10-appstream-rpms",
+          "--enablerepo=ubi-10-baseos-rpms",
+          "--setopt=gpgcheck=1",
+          "--setopt=sslverify=1",
+          "--setopt=install_weak_deps=0",
+          "--setopt=keepcache=0",
+          "repolist"
+        ],
+        "started_at": "2026-11-03T05:50:39.094639+00:00",
+        "ended_at": "2026-11-03T05:50:39.295824+00:00",
+        "exit_code": 1,
+        "stop_reason": null,
+        "stdout": "repositories.stdout",
+        "stderr": "repositories.stderr"
+      }
+    ],
+    "files": [
+      {
+        "path": "repositories.stderr",
+        "bytes": 47,
+        "sha256": "30c47e8f6aa44545458e71d4b95933a87726744c5b46bc33adf8bdbec5cde3e0"
+      },
+      {
+        "path": "repositories.stdout",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "rpm-before.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "rpm-before.stdout",
+        "bytes": 23633,
+        "sha256": "6331f46a11e7d1c06353fbba0906738eb83cac3f5765fa90878ab8543ed919a1"
+      },
+      {
+        "path": "trusted-keys.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "trusted-keys.stdout",
+        "bytes": 87,
+        "sha256": "c6ece077551b266b6e45ed3ad78c101da32b431b1d28a3eaf67c513f41a4000e"
+      }
+    ]
+  },
+  "cause": {
+    "official_source": "https://github.com/rpm-software-management/microdnf/blob/3.10.1/dnf/dnf-main.c",
+    "official_source_blob": "661dfee7726e9cc2fe5b2e5b7373c61bf1e16342",
+    "source_bytes": 26578,
+    "matched_stderr": "error: (--setopt) Unable to handle: gpgcheck=1\n",
+    "bytes": 47,
+    "sha256": "30c47e8f6aa44545458e71d4b95933a87726744c5b46bc33adf8bdbec5cde3e0",
+    "method": "Exact upstream error format reproduces the CI-recorded stderr length and SHA256; failed-layer original bytes were not exported. Source accepts repo_id.option_name and rejects unlisted global options.",
+    "correction": "Per-validated-UBI-repository .gpgcheck=1 and .sslverify=1, preserving policy; bounded direct stderr emitted on subsequent failures.",
+    "classification": "producer CLI compatibility failure, no package transaction executed; this run is not acceptance"
+  }
+}

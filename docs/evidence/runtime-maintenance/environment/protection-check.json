@@ -1,0 +1,57 @@
+{
+  "at": "2026-11-04T02:36:30.772608+00:00",
+  "method": "Hash fixed original files and every payload explicitly listed by all3old sealed manifests; no writes to protected inputs",
+  "fixed_files": [
+    {
+      "path": "review_console.sqlite3",
+      "sha256": "980ad5d23d866a52e4101966594e5a24ee67edef08475afc63ff9c3e1f6fca1f",
+      "unchanged": true
+    },
+    {
+      "path": "docs/UPGRADE_SPEC.md",
+      "sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753",
+      "unchanged": true
+    },
+    {
+      "path": "docs/spec-baseline.json",
+      "sha256": "5ad13f524e74554b9c8cb30b9809ffbbbbed8e3d7fa4ede5625bb1b7d781bf2e",
+      "unchanged": true
+    },
+    {
+      "path": "docs/evidence/v02-acceptance/manifest.json",
+      "sha256": "6e3fa0159c396b1d422b32d90ccabb772b82db5d5cbeddb6e385e0e54138ba1c",
+      "unchanged": true
+    },
+    {
+      "path": "docs/evidence/v02-release/manifest.json",
+      "sha256": "c2a9cba23f3653e7c507654631f74568ee7490f80212ffe382c92323a4547f36",
+      "unchanged": true
+    },
+    {
+      "path": "docs/evidence/release-compatibility/manifest.json",
+      "sha256": "0466646bd5eecd32768e9fc61bf138815853292049a41a95dc1d98927e2081ef",
+      "unchanged": true
+    }
+  ],
+  "old_packets": [
+    {
+      "evidence": "v02-acceptance",
+      "verified_payload_files": 187,
+      "verified_payload_bytes": 5181623,
+      "unchanged": true
+    },
+    {
+      "evidence": "v02-release",
+      "verified_payload_files": 404,
+      "verified_payload_bytes": 26939835,
+      "unchanged": true
+    },
+    {
+      "evidence": "release-compatibility",
+      "verified_payload_files": 222,
+      "verified_payload_bytes": 16596288,
+      "unchanged": true
+    }
+  ],
+  "historical_volumes": "not started/mounted/migrated/deleted; no new host Docker inventory possible"
+}

@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-11-03T05:42:55.715355+00:00",
+  "display_date": "2026-11-02 America/Los_Angeles",
+  "contract": "ARC-UPGRADE@0.1.0",
+  "scope": "WP-05 system maintenance and exact materials; Langflow candidate evaluation without replacing fixed1.11.6 by inference",
+  "source_head": "7ded074e172bcd23be07bb708adffbc021dd8ffc",
+  "budget": {
+    "same_goal_id": "cfd2d589-0c13-4ee0-bd93-8316c3f556a4",
+    "minutes_total": 180,
+    "previous_elapsed_seconds": 5258.222990036011,
+    "decision_ref": "2026-11-02 user replied 可以 to cumulative180minute confirmation, then asked next plan"
+  },
+  "model_estimate": "rough additional20k–40k tokens, not measured usage or billing",
+  "execution": "local Docker daemon is stopped/unavailable; no start/build/pull/cache expansion; official-source HTTP metadata and local source/test work permitted, existing isolated GitHub CI for build and actual image regression",
+  "roots": {
+    "temporary": "/private/tmp/arc-runtime-maintenance.wT9huB",
+    "candidate": "artifacts/evidence-candidates/runtime-maintenance",
+    "formal": "docs/evidence/runtime-maintenance"
+  },
+  "limits": {
+    "new_run_temporary_bytes": 41943040,
+    "temporary_files": 10000,
+    "evidence_bytes_each": 104857600,
+    "evidence_files_each": 1000,
+    "ci_selected_bytes": 20971520,
+    "ci_selected_files": 200,
+    "source_requests_total_bytes": 8388608,
+    "source_requests_files": 100,
+    "native_new_targeted_paths": 20,
+    "native_new_hash_input_bytes": 67108864,
+    "native_prior_paths": 101,
+    "native_prior_hash_input_bytes": 95522697,
+    "native_path_prior_deviation_retained": true,
+    "native_goal_hash_input_limit_bytes": 209715200,
+    "cache_bytes": 4294967296,
+    "cache_files": 100000,
+    "docker_project_bytes": 12884901888,
+    "docker_wp_growth_bytes": 3221225472,
+    "amplification": "above1GiB AND100x measured764861-byte author baseline; vendor fonts and deps separate"
+  },
+  "native_scope": "new focused driver license/version/redist and ELF source identifiers only; no repeat fullnative inventory and no broad filesystem traversal",
+  "cleanup_authorized": false,
+  "image_owned_build_metadata": "package-manager transient lifecycle of new CI build only; never host/user cache, image, volume or historical removal",
+  "protected": [
+    "original SQLite and historical database/volumes",
+    "accepted Spec/baseline",
+    "all three previously sealed evidence packets",
+    "previous candidate/temp/cache roots"
+  ],
+  "host_free_bytes": 23628980224,
+  "fixed_files": [
+    {
+      "path": "review_console.sqlite3",
+      "bytes": 57344,
+      "sha256": "980ad5d23d866a52e4101966594e5a24ee67edef08475afc63ff9c3e1f6fca1f"
+    },
+    {
+      "path": "docs/UPGRADE_SPEC.md",
+      "bytes": 50489,
+      "sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753"
+    },
+    {
+      "path": "docs/spec-baseline.json",
+      "bytes": 8731,
+      "sha256": "5ad13f524e74554b9c8cb30b9809ffbbbbed8e3d7fa4ede5625bb1b7d781bf2e"
+    },
+    {
+      "path": "docs/evidence/release-compatibility/manifest.json",
+      "bytes": 48823,
+      "sha256": "0466646bd5eecd32768e9fc61bf138815853292049a41a95dc1d98927e2081ef"
+    }
+  ]
+}

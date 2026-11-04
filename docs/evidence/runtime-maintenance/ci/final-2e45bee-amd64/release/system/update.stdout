@@ -1,0 +1,255 @@
+Package                                                          Repository                Size
+Installing:                                                                                    
+ perl-Unicode-Normalize-1.32-511.el10.x86_64                     ubi-10-appstream-rpms  80.2 kB
+Upgrading:                                                                                     
+ ca-certificates-2026.2.92_v9.0.319-100.3.el10_2.noarch          ubi-10-baseos-rpms      1.2 MB
+  replacing ca-certificates-2025.2.80_v9.0.305-102.el10_1.noarch                               
+ coreutils-single-9.5-8.el10_2.1.x86_64                          ubi-10-baseos-rpms    657.7 kB
+  replacing coreutils-single-9.5-8.el10_2.x86_64                                               
+ curl-8.12.1-4.el10_2.7.x86_64                                   ubi-10-baseos-rpms    229.6 kB
+  replacing curl-8.12.1-4.el10_2.4.x86_64                                                      
+ expat-2.7.3-1.el10_2.7.x86_64                                   ubi-10-baseos-rpms    131.2 kB
+  replacing expat-2.7.3-1.el10_2.1.x86_64                                                      
+ gawk-5.3.0-6.el10_2.1.x86_64                                    ubi-10-baseos-rpms      1.1 MB
+  replacing gawk-5.3.0-6.el10.x86_64                                                           
+ glib2-2.80.4-12.el10_2.22.x86_64                                ubi-10-baseos-rpms      3.2 MB
+  replacing glib2-2.80.4-12.el10_2.21.x86_64                                                   
+ glibc-2.39-145.el10_2.x86_64                                    ubi-10-baseos-rpms      2.2 MB
+  replacing glibc-2.39-128.el10_2.x86_64                                                       
+ glibc-common-2.39-145.el10_2.x86_64                             ubi-10-baseos-rpms    334.1 kB
+  replacing glibc-common-2.39-128.el10_2.x86_64                                                
+ glibc-langpack-en-2.39-145.el10_2.x86_64                        ubi-10-baseos-rpms    687.1 kB
+  replacing glibc-langpack-en-2.39-128.el10_2.x86_64                                           
+ glibc-minimal-langpack-2.39-145.el10_2.x86_64                   ubi-10-baseos-rpms     32.4 kB
+  replacing glibc-minimal-langpack-2.39-128.el10_2.x86_64                                      
+ gnutls-3.8.10-5.el10_2.x86_64                                   ubi-10-baseos-rpms      1.6 MB
+  replacing gnutls-3.8.10-4.el10_2.x86_64                                                      
+ libarchive-3.7.7-11.el10_2.x86_64                               ubi-10-baseos-rpms    430.1 kB
+  replacing libarchive-3.7.7-10.el10_2.x86_64                                                  
+ libblkid-2.40.2-18.el10_2.20.x86_64                             ubi-10-baseos-rpms    133.6 kB
+  replacing libblkid-2.40.2-18.el10.x86_64                                                     
+ libcurl-minimal-8.12.1-4.el10_2.7.x86_64                        ubi-10-baseos-rpms    309.0 kB
+  replacing libcurl-minimal-8.12.1-4.el10_2.4.x86_64                                           
+ libevent-2.1.13-1.el10_2.x86_64                                 ubi-10-baseos-rpms    274.1 kB
+  replacing libevent-2.1.12-16.el10.x86_64                                                     
+ libfdisk-2.40.2-18.el10_2.20.x86_64                             ubi-10-baseos-rpms    170.4 kB
+  replacing libfdisk-2.40.2-18.el10.x86_64                                                     
+ libmount-2.40.2-18.el10_2.20.x86_64                             ubi-10-baseos-rpms    167.2 kB
+  replacing libmount-2.40.2-18.el10.x86_64                                                     
+ libsmartcols-2.40.2-18.el10_2.20.x86_64                         ubi-10-baseos-rpms     90.8 kB
+  replacing libsmartcols-2.40.2-18.el10.x86_64                                                 
+ libuuid-2.40.2-18.el10_2.20.x86_64                              ubi-10-baseos-rpms     34.7 kB
+  replacing libuuid-2.40.2-18.el10.x86_64                                                      
+ libxml2-2.12.5-10.el10_2.4.x86_64                               ubi-10-baseos-rpms    715.1 kB
+  replacing libxml2-2.12.5-10.el10_2.3.x86_64                                                  
+ openssh-9.9p1-29.el10_2.x86_64                                  ubi-10-baseos-rpms    368.7 kB
+  replacing openssh-9.9p1-25.el10_2.x86_64                                                     
+ openssh-clients-9.9p1-29.el10_2.x86_64                          ubi-10-baseos-rpms    792.2 kB
+  replacing openssh-clients-9.9p1-25.el10_2.x86_64                                             
+ openssl-libs-1:3.5.8-2.el10_2.x86_64                            ubi-10-baseos-rpms      2.4 MB
+  replacing openssl-libs-1:3.5.5-6.el10_2.x86_64                                               
+ pcre2-10.44-1.5.el10_2.x86_64                                   ubi-10-baseos-rpms    258.2 kB
+  replacing pcre2-10.44-1.el10.3.x86_64                                                        
+ pcre2-syntax-10.44-1.5.el10_2.noarch                            ubi-10-baseos-rpms    159.6 kB
+  replacing pcre2-syntax-10.44-1.el10.3.noarch                                                 
+ perl-AutoLoader-5.74-515.el10_2.noarch                          ubi-10-appstream-rpms  26.4 kB
+  replacing perl-AutoLoader-5.74-512.2.el10_0.noarch                                           
+ perl-B-1.89-515.el10_2.x86_64                                   ubi-10-appstream-rpms 187.6 kB
+  replacing perl-B-1.89-512.2.el10_0.x86_64                                                    
+ perl-Class-Struct-0.68-515.el10_2.noarch                        ubi-10-appstream-rpms  27.3 kB
+  replacing perl-Class-Struct-0.68-512.2.el10_0.noarch                                         
+ perl-DynaLoader-1.56-515.el10_2.x86_64                          ubi-10-appstream-rpms  31.3 kB
+  replacing perl-DynaLoader-1.56-512.2.el10_0.x86_64                                           
+ perl-Errno-1.38-515.el10_2.x86_64                               ubi-10-appstream-rpms  20.0 kB
+  replacing perl-Errno-1.38-512.2.el10_0.x86_64                                                
+ perl-Fcntl-1.18-515.el10_2.x86_64                               ubi-10-appstream-rpms  35.2 kB
+  replacing perl-Fcntl-1.18-512.2.el10_0.x86_64                                                
+ perl-File-Basename-2.86-515.el10_2.noarch                       ubi-10-appstream-rpms  22.3 kB
+  replacing perl-File-Basename-2.86-512.2.el10_0.noarch                                        
+ perl-File-stat-1.14-515.el10_2.noarch                           ubi-10-appstream-rpms  22.1 kB
+  replacing perl-File-stat-1.14-512.2.el10_0.noarch                                            
+ perl-FileHandle-2.05-515.el10_2.noarch                          ubi-10-appstream-rpms  20.5 kB
+  replacing perl-FileHandle-2.05-512.2.el10_0.noarch                                           
+ perl-Getopt-Std-1.14-515.el10_2.noarch                          ubi-10-appstream-rpms  20.7 kB
+  replacing perl-Getopt-Std-1.14-512.2.el10_0.noarch                                           
+ perl-IO-1.55-515.el10_2.x86_64                                  ubi-10-appstream-rpms  87.9 kB
+  replacing perl-IO-1.55-512.2.el10_0.x86_64                                                   
+ perl-IPC-Open3-1.22-515.el10_2.noarch                           ubi-10-appstream-rpms  27.1 kB
+  replacing perl-IPC-Open3-1.22-512.2.el10_0.noarch                                            
+ perl-NDBM_File-1.17-515.el10_2.x86_64                           ubi-10-appstream-rpms  27.9 kB
+  replacing perl-NDBM_File-1.17-512.2.el10_0.x86_64                                            
+ perl-POSIX-2.20-515.el10_2.x86_64                               ubi-10-appstream-rpms 103.7 kB
+  replacing perl-POSIX-2.20-512.2.el10_0.x86_64                                                
+ perl-SelectSaver-1.02-515.el10_2.noarch                         ubi-10-appstream-rpms  16.7 kB
+  replacing perl-SelectSaver-1.02-512.2.el10_0.noarch                                          
+ perl-Symbol-1.09-515.el10_2.noarch                              ubi-10-appstream-rpms  19.2 kB
+  replacing perl-Symbol-1.09-512.2.el10_0.noarch                                               
+ perl-URI-5.27-3.el10_2.1.noarch                                 ubi-10-appstream-rpms 143.1 kB
+  replacing perl-URI-5.27-3.el10.noarch                                                        
+ perl-base-2.27-515.el10_2.noarch                                ubi-10-appstream-rpms  21.3 kB
+  replacing perl-base-2.27-512.2.el10_0.noarch                                                 
+ perl-if-0.61.000-515.el10_2.noarch                              ubi-10-appstream-rpms  19.0 kB
+  replacing perl-if-0.61.000-512.2.el10_0.noarch                                               
+ perl-interpreter-4:5.40.2-515.el10_2.x86_64                     ubi-10-appstream-rpms  78.6 kB
+  replacing perl-interpreter-4:5.40.2-512.2.el10_0.x86_64                                      
+ perl-lib-0.65-515.el10_2.x86_64                                 ubi-10-appstream-rpms  20.0 kB
+  replacing perl-lib-0.65-512.2.el10_0.x86_64                                                  
+ perl-libs-4:5.40.2-515.el10_2.x86_64                            ubi-10-appstream-rpms   2.5 MB
+  replacing perl-libs-4:5.40.2-512.2.el10_0.x86_64                                             
+ perl-locale-1.12-515.el10_2.noarch                              ubi-10-appstream-rpms  18.6 kB
+  replacing perl-locale-1.12-512.2.el10_0.noarch                                               
+ perl-mro-1.29-515.el10_2.x86_64                                 ubi-10-appstream-rpms  35.5 kB
+  replacing perl-mro-1.29-512.2.el10_0.x86_64                                                  
+ perl-overload-1.37-515.el10_2.noarch                            ubi-10-appstream-rpms  51.3 kB
+  replacing perl-overload-1.37-512.2.el10_0.noarch                                             
+ perl-overloading-0.02-515.el10_2.noarch                         ubi-10-appstream-rpms  17.9 kB
+  replacing perl-overloading-0.02-512.2.el10_0.noarch                                          
+ perl-vars-1.05-515.el10_2.noarch                                ubi-10-appstream-rpms  18.0 kB
+  replacing perl-vars-1.05-512.2.el10_0.noarch                                                 
+ python3.14-3.14.8-1.el10_2.x86_64                               ubi-10-appstream-rpms  35.7 kB
+  replacing python3.14-3.14.7-2.el10_2.x86_64                                                  
+ python3.14-libs-3.14.8-1.el10_2.x86_64                          ubi-10-appstream-rpms  10.4 MB
+  replacing python3.14-libs-3.14.7-2.el10_2.x86_64                                             
+ rpm-sequoia-1.10.2.1-1.el10_2.x86_64                            ubi-10-baseos-rpms    999.2 kB
+  replacing rpm-sequoia-1.10.1.1-2.el10.x86_64                                                 
+ tzdata-2026e-1.el10_2.noarch                                    ubi-10-baseos-rpms    936.7 kB
+  replacing tzdata-2026c-1.el10_2.noarch                                                       
+ util-linux-2.40.2-18.el10_2.20.x86_64                           ubi-10-baseos-rpms      1.3 MB
+  replacing util-linux-2.40.2-18.el10.x86_64                                                   
+ util-linux-core-2.40.2-18.el10_2.20.x86_64                      ubi-10-baseos-rpms    574.5 kB
+  replacing util-linux-core-2.40.2-18.el10.x86_64                                              
+ xz-1:5.6.2-4.el10_2.1.x86_64                                    ubi-10-baseos-rpms    498.6 kB
+  replacing xz-1:5.6.2-4.el10_0.x86_64                                                         
+ xz-libs-1:5.6.2-4.el10_2.1.x86_64                               ubi-10-baseos-rpms    120.2 kB
+   replacing xz-libs-1:5.6.2-4.el10_0.x86_64                                                   
+Transaction Summary:
+ Installing:        1 packages
+ Reinstalling:      0 packages
+ Upgrading:        60 packages
+ Obsoleting:        0 packages
+ Removing:          0 packages
+ Downgrading:       0 packages
+Downloading packages...
+Running transaction test...
+Updating: tzdata;2026e-1.el10_2;noarch;ubi-10-baseos-rpms
+Updating: glibc-common;2.39-145.el10_2;x86_64;ubi-10-baseos-rpms
+Updating: glibc-langpack-en;2.39-145.el10_2;x86_64;ubi-10-baseos-rpms
+Updating: glibc-minimal-langpack;2.39-145.el10_2;x86_64;ubi-10-baseos-rpms
+Updating: glibc;2.39-145.el10_2;x86_64;ubi-10-baseos-rpms
+Updating: libuuid;2.40.2-18.el10_2.20;x86_64;ubi-10-baseos-rpms
+Updating: libblkid;2.40.2-18.el10_2.20;x86_64;ubi-10-baseos-rpms
+Updating: xz-libs;1:5.6.2-4.el10_2.1;x86_64;ubi-10-baseos-rpms
+Updating: libmount;2.40.2-18.el10_2.20;x86_64;ubi-10-baseos-rpms
+Updating: coreutils-single;9.5-8.el10_2.1;x86_64;ubi-10-baseos-rpms
+Updating: libsmartcols;2.40.2-18.el10_2.20;x86_64;ubi-10-baseos-rpms
+Updating: util-linux-core;2.40.2-18.el10_2.20;x86_64;ubi-10-baseos-rpms
+Updating: ca-certificates;2026.2.92_v9.0.319-100.3.el10_2;noarch;ubi-10-baseos-rpms
+Updating: openssl-libs;1:3.5.8-2.el10_2;x86_64;ubi-10-baseos-rpms
+Updating: libcurl-minimal;8.12.1-4.el10_2.7;x86_64;ubi-10-baseos-rpms
+Updating: libxml2;2.12.5-10.el10_2.4;x86_64;ubi-10-baseos-rpms
+Updating: libfdisk;2.40.2-18.el10_2.20;x86_64;ubi-10-baseos-rpms
+Updating: util-linux;2.40.2-18.el10_2.20;x86_64;ubi-10-baseos-rpms
+Updating: openssh;9.9p1-29.el10_2;x86_64;ubi-10-baseos-rpms
+Updating: expat;2.7.3-1.el10_2.7;x86_64;ubi-10-baseos-rpms
+Updating: python3.14;3.14.8-1.el10_2;x86_64;ubi-10-appstream-rpms
+Updating: python3.14-libs;3.14.8-1.el10_2;x86_64;ubi-10-appstream-rpms
+Updating: gnutls;3.8.10-5.el10_2;x86_64;ubi-10-baseos-rpms
+Updating: perl-NDBM_File;1.17-515.el10_2;x86_64;ubi-10-appstream-rpms
+Updating: perl-DynaLoader;1.56-515.el10_2;x86_64;ubi-10-appstream-rpms
+Updating: perl-libs;4:5.40.2-515.el10_2;x86_64;ubi-10-appstream-rpms
+Updating: perl-vars;1.05-515.el10_2;noarch;ubi-10-appstream-rpms
+Updating: perl-Fcntl;1.18-515.el10_2;x86_64;ubi-10-appstream-rpms
+Updating: perl-Symbol;1.09-515.el10_2;noarch;ubi-10-appstream-rpms
+Updating: perl-POSIX;2.20-515.el10_2;x86_64;ubi-10-appstream-rpms
+Updating: perl-locale;1.12-515.el10_2;noarch;ubi-10-appstream-rpms
+Updating: perl-overloading;0.02-515.el10_2;noarch;ubi-10-appstream-rpms
+Updating: perl-SelectSaver;1.02-515.el10_2;noarch;ubi-10-appstream-rpms
+Installing: perl-Unicode-Normalize;1.32-511.el10;x86_64;ubi-10-appstream-rpms
+Updating: perl-Class-Struct;0.68-515.el10_2;noarch;ubi-10-appstream-rpms
+Updating: perl-Errno;1.38-515.el10_2;x86_64;ubi-10-appstream-rpms
+Updating: perl-base;2.27-515.el10_2;noarch;ubi-10-appstream-rpms
+Updating: perl-if;0.61.000-515.el10_2;noarch;ubi-10-appstream-rpms
+Updating: perl-mro;1.29-515.el10_2;x86_64;ubi-10-appstream-rpms
+Updating: perl-overload;1.37-515.el10_2;noarch;ubi-10-appstream-rpms
+Updating: perl-File-stat;1.14-515.el10_2;noarch;ubi-10-appstream-rpms
+Updating: perl-IO;1.55-515.el10_2;x86_64;ubi-10-appstream-rpms
+Updating: pcre2-syntax;10.44-1.5.el10_2;noarch;ubi-10-baseos-rpms
+Updating: pcre2;10.44-1.5.el10_2;x86_64;ubi-10-baseos-rpms
+Updating: glib2;2.80.4-12.el10_2.22;x86_64;ubi-10-baseos-rpms
+Updating: perl-FileHandle;2.05-515.el10_2;noarch;ubi-10-appstream-rpms
+Updating: perl-IPC-Open3;1.22-515.el10_2;noarch;ubi-10-appstream-rpms
+Updating: perl-URI;5.27-3.el10_2.1;noarch;ubi-10-appstream-rpms
+Updating: perl-B;1.89-515.el10_2;x86_64;ubi-10-appstream-rpms
+Updating: perl-AutoLoader;5.74-515.el10_2;noarch;ubi-10-appstream-rpms
+Updating: perl-File-Basename;2.86-515.el10_2;noarch;ubi-10-appstream-rpms
+Updating: perl-Getopt-Std;1.14-515.el10_2;noarch;ubi-10-appstream-rpms
+Updating: perl-interpreter;4:5.40.2-515.el10_2;x86_64;ubi-10-appstream-rpms
+Updating: perl-lib;0.65-515.el10_2;x86_64;ubi-10-appstream-rpms
+Updating: openssh-clients;9.9p1-29.el10_2;x86_64;ubi-10-baseos-rpms
+Updating: libarchive;3.7.7-11.el10_2;x86_64;ubi-10-baseos-rpms
+Updating: curl;8.12.1-4.el10_2.7;x86_64;ubi-10-baseos-rpms
+Updating: libevent;2.1.13-1.el10_2;x86_64;ubi-10-baseos-rpms
+Updating: rpm-sequoia;1.10.2.1-1.el10_2;x86_64;ubi-10-baseos-rpms
+Updating: xz;1:5.6.2-4.el10_2.1;x86_64;ubi-10-baseos-rpms
+Updating: gawk;5.3.0-6.el10_2.1;x86_64;ubi-10-baseos-rpms
+Cleanup: glib2;2.80.4-12.el10_2.21;x86_64;installed
+Cleanup: libarchive;3.7.7-10.el10_2;x86_64;installed
+Cleanup: libevent;2.1.12-16.el10;x86_64;installed
+Cleanup: libxml2;2.12.5-10.el10_2.3;x86_64;installed
+Cleanup: xz;1:5.6.2-4.el10_0;x86_64;installed
+Cleanup: rpm-sequoia;1.10.1.1-2.el10;x86_64;installed
+Cleanup: openssh-clients;9.9p1-25.el10_2;x86_64;installed
+Cleanup: openssh;9.9p1-25.el10_2;x86_64;installed
+Cleanup: util-linux;2.40.2-18.el10;x86_64;installed
+Cleanup: util-linux-core;2.40.2-18.el10;x86_64;installed
+Cleanup: libmount;2.40.2-18.el10;x86_64;installed
+Cleanup: libfdisk;2.40.2-18.el10;x86_64;installed
+Cleanup: gawk;5.3.0-6.el10;x86_64;installed
+Cleanup: libblkid;2.40.2-18.el10;x86_64;installed
+Cleanup: gnutls;3.8.10-4.el10_2;x86_64;installed
+Cleanup: perl-B;1.89-512.2.el10_0;x86_64;installed
+Cleanup: curl;8.12.1-4.el10_2.4;x86_64;installed
+Cleanup: perl-IPC-Open3;1.22-512.2.el10_0;noarch;installed
+Cleanup: perl-URI;5.27-3.el10;noarch;installed
+Cleanup: perl-FileHandle;2.05-512.2.el10_0;noarch;installed
+Cleanup: perl-File-Basename;2.86-512.2.el10_0;noarch;installed
+Cleanup: perl-base;2.27-512.2.el10_0;noarch;installed
+Cleanup: perl-lib;0.65-512.2.el10_0;x86_64;installed
+Cleanup: perl-Getopt-Std;1.14-512.2.el10_0;noarch;installed
+Cleanup: perl-AutoLoader;5.74-512.2.el10_0;noarch;installed
+Cleanup: perl-POSIX;2.20-512.2.el10_0;x86_64;installed
+Cleanup: perl-IO;1.55-512.2.el10_0;x86_64;installed
+Cleanup: libcurl-minimal;8.12.1-4.el10_2.4;x86_64;installed
+Cleanup: libsmartcols;2.40.2-18.el10;x86_64;installed
+Cleanup: perl-interpreter;4:5.40.2-512.2.el10_0;x86_64;installed
+Cleanup: pcre2;10.44-1.el10.3;x86_64;installed
+Cleanup: perl-File-stat;1.14-512.2.el10_0;noarch;installed
+Cleanup: python3.14;3.14.7-2.el10_2;x86_64;installed
+Cleanup: perl-overload;1.37-512.2.el10_0;noarch;installed
+Cleanup: perl-Class-Struct;0.68-512.2.el10_0;noarch;installed
+Cleanup: perl-Errno;1.38-512.2.el10_0;x86_64;installed
+Cleanup: perl-locale;1.12-512.2.el10_0;noarch;installed
+Cleanup: perl-overloading;0.02-512.2.el10_0;noarch;installed
+Cleanup: perl-SelectSaver;1.02-512.2.el10_0;noarch;installed
+Cleanup: perl-Symbol;1.09-512.2.el10_0;noarch;installed
+Cleanup: perl-if;0.61.000-512.2.el10_0;noarch;installed
+Cleanup: pcre2-syntax;10.44-1.el10.3;noarch;installed
+Cleanup: python3.14-libs;3.14.7-2.el10_2;x86_64;installed
+Cleanup: openssl-libs;1:3.5.5-6.el10_2;x86_64;installed
+Cleanup: expat;2.7.3-1.el10_2.1;x86_64;installed
+Cleanup: xz-libs;1:5.6.2-4.el10_0;x86_64;installed
+Cleanup: libuuid;2.40.2-18.el10;x86_64;installed
+Cleanup: perl-mro;1.29-512.2.el10_0;x86_64;installed
+Cleanup: perl-Fcntl;1.18-512.2.el10_0;x86_64;installed
+Cleanup: ca-certificates;2025.2.80_v9.0.305-102.el10_1;noarch;installed
+Cleanup: coreutils-single;9.5-8.el10_2;x86_64;installed
+Cleanup: perl-vars;1.05-512.2.el10_0;noarch;installed
+Cleanup: perl-DynaLoader;1.56-512.2.el10_0;x86_64;installed
+Cleanup: perl-NDBM_File;1.17-512.2.el10_0;x86_64;installed
+Cleanup: perl-libs;4:5.40.2-512.2.el10_0;x86_64;installed
+Cleanup: glibc;2.39-128.el10_2;x86_64;installed
+Cleanup: glibc-langpack-en;2.39-128.el10_2;x86_64;installed
+Cleanup: glibc-minimal-langpack;2.39-128.el10_2;x86_64;installed
+Cleanup: glibc-common;2.39-128.el10_2;x86_64;installed
+Cleanup: tzdata;2026c-1.el10_2;noarch;installed
+Complete.

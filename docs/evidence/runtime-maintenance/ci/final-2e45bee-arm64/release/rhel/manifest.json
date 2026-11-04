@@ -1,0 +1,185 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "AC-19",
+    "RELEASE-001"
+  ],
+  "producer": "scripts/scan_images_osv.py --redhat-only",
+  "started_at": "2026-11-03T05:58:47.325172+00:00",
+  "image_id": "sha256:5f59c490e6c10de3774d424092f2bb2f2b3a75b49386c7c5a1a7acf949c41e4b",
+  "service": "https://api.osv.dev/v1",
+  "result": "queried_no_match",
+  "database_snapshot_date": null,
+  "rpm_entries": 227,
+  "metadata_only_public_keys": 3,
+  "mapped_software_packages": 224,
+  "unique_queries": 672,
+  "observed_unique_advisory_ids": 0,
+  "matched_software_packages": 0,
+  "findings": [],
+  "mapping_unknown": 0,
+  "query_unknown": 0,
+  "detail_unknown": 0,
+  "ended_at": "2026-11-03T05:58:50.228122+00:00",
+  "commands": [
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"architecture\":{{json .Architecture}}}",
+        "sha256:5f59c490e6c10de3774d424092f2bb2f2b3a75b49386c7c5a1a7acf949c41e4b"
+      ],
+      "started_at": "2026-11-03T05:58:47.325186+00:00",
+      "ended_at": "2026-11-03T05:58:47.338320+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "7821ede1aed2bb9bbcc48ef754394970665bc6579968e80ad5e823bc119c2b1c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "512m",
+        "--user",
+        "0:0",
+        "--entrypoint",
+        "python",
+        "sha256:5f59c490e6c10de3774d424092f2bb2f2b3a75b49386c7c5a1a7acf949c41e4b",
+        "-c",
+        "\nimport pathlib,json,subprocess\nrecords=[]\ntotal=0\nfor f in pathlib.Path('/root/buildinfo').rglob('*.json'):\n    size=f.stat().st_size\n    if len(records)>=30 or size>1048576 or total+size>2097152:\n        raise RuntimeError('bounded Red Hat product metadata exceeded')\n    data=f.read_text()\n    total+=len(data.encode())\n    records.append({'path':str(f),'content':json.loads(data)})\nprint(json.dumps({'content_manifests':records,'rpm_query':subprocess.check_output([\n    'rpm','-qa','--qf','%{NAME}\\t%{EPOCHNUM}:%{VERSION}-%{RELEASE}\\t%{ARCH}\\t%{SOURCERPM}\\t%{VENDOR}\\n'\n]).decode()}))\n"
+      ],
+      "started_at": "2026-11-03T05:58:47.338346+00:00",
+      "ended_at": "2026-11-03T05:58:47.705595+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "67e8630ebc8f63a8cf0f040738cfe9397deddadd25783277ad7dc5708af648fe",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "512m",
+        "--user",
+        "0:0",
+        "--entrypoint",
+        "sh",
+        "sha256:5f59c490e6c10de3774d424092f2bb2f2b3a75b49386c7c5a1a7acf949c41e4b",
+        "-c",
+        "\nprintf '===os-release===\\n'\nif [ -r /etc/os-release ]; then cat /etc/os-release; fi\nprintf '\\n===apk===\\n'\nif [ -r /lib/apk/db/installed ]; then cat /lib/apk/db/installed; fi\nprintf '\\n===dpkg===\\n'\nif command -v dpkg-query >/dev/null 2>&1; then\n dpkg_fmt='${binary:Package}\\t${Version}\\t${Architecture}'\n dpkg_fmt=\"$dpkg_fmt\"'\\t${source:Package}\\t${source:Version}\\n'\n dpkg-query -W -f=\"$dpkg_fmt\"\nfi\nprintf '\\n===dpkg-licenses===\\n'\nfor copyright_path in /usr/share/doc/*/copyright; do\n [ -r \"$copyright_path\" ] || continue\n package_path=${copyright_path%/copyright}\n printf '%s\\t' \"${package_path##*/}\"\n awk '/^License:/ {gsub(/\\t/, \" \"); printf \"%s;\", $0}' \"$copyright_path\"\n printf '\\n'\ndone\nprintf '\\n===rpm===\\n'\nif command -v rpm >/dev/null 2>&1; then\n rpm -qa --qf '%{NAME}\\t%{VERSION}-%{RELEASE}\\t%{ARCH}\\t%{LICENSE}\\n'\nfi\n"
+      ],
+      "started_at": "2026-11-03T05:58:47.705703+00:00",
+      "ended_at": "2026-11-03T05:58:47.997909+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "a24b7941a4e39b5004366369a22cddd509a2465faf3df5d80745ed27a2bc3719",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "source_inputs": [
+    {
+      "path": "scripts/scan_images_osv.py",
+      "sha256": "0358ef68c8d866847f870f08770716d32cb2968b3eb684d2f00cb5088b9001db"
+    },
+    {
+      "path": "scripts/scan_release.py",
+      "sha256": "f3f353ff9a50651aa864aa75dbb480da9481dc78aaacaac2b74a90616558ea0c"
+    }
+  ],
+  "files": [
+    {
+      "path": "langflow-identity.stdout",
+      "bytes": 104,
+      "sha256": "7821ede1aed2bb9bbcc48ef754394970665bc6579968e80ad5e823bc119c2b1c"
+    },
+    {
+      "path": "langflow-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "langflow-redhat-metadata.stdout",
+      "bytes": 23387,
+      "sha256": "67e8630ebc8f63a8cf0f040738cfe9397deddadd25783277ad7dc5708af648fe"
+    },
+    {
+      "path": "langflow-redhat-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "langflow-os.stdout",
+      "bytes": 21641,
+      "sha256": "a24b7941a4e39b5004366369a22cddd509a2465faf3df5d80745ed27a2bc3719"
+    },
+    {
+      "path": "langflow-os.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "repository-to-cpe.json",
+      "bytes": 4379662,
+      "sha256": "b0ee1f3f15d2043971f64e04c9c39cbf6f8e608edc26a07faea8bbb9393d2bb7"
+    },
+    {
+      "path": "product-bindings.json",
+      "bytes": 1809,
+      "sha256": "6c3537eb99e4d1f1fb7b8aa9941224f59519eebcdabe5481f6f2fd8c13591572"
+    },
+    {
+      "path": "rpm-mappings.json",
+      "bytes": 330523,
+      "sha256": "8e8fd39d3261e6ccdba26cdb4e2d68718597ce06750e63ba02d383bfd29ca386"
+    },
+    {
+      "path": "vulnerabilities.json",
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 670,
+      "sha256": "d3ba7374b82642fcca03aeb73c3e5f2a3826c264d39165ff64bd15a8df37f966"
+    },
+    {
+      "path": "http-records.json",
+      "bytes": 142105,
+      "sha256": "61dd4f21ca3229ff56be0dfb709640132593ca5be7e5c18495609522764f8255"
+    }
+  ],
+  "limitations": [
+    "Supplement scans RPM software only; prior same-image Python scan retained.",
+    "RPM binary names and full installed epoch:version-release are sent to OSV.",
+    "Red Hat content_set plus official repository mapping selects current minor and main streams; other minor/EUS streams are excluded.",
+    "Installed gpg-pubkey RPM metadata records are classified as keys, not code.",
+    "No full filesystem/static binary scan; no exposed OSV DB snapshot date.",
+    "No match is not proof of safety; unknown mappings/results remain unknown.",
+    "OSV Red Hat schema and official repository mapping are required inputs.",
+    "Findings are potential package impact; module/product applicability is not independently evaluated beyond installed epoch/arch and bound repository CPEs."
+  ],
+  "output_limit_bytes": 41943040,
+  "output_limit_files": 200
+}

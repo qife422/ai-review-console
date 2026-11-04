@@ -1,0 +1,52 @@
+{
+  "source": "2e45bee8c61dfab347edd107aebb6a3488567761",
+  "run": 41586599463,
+  "method": "Manual visual inspection using view_image of the existing four CI PNG originals; no new browser run or UI change.",
+  "observations": [
+    "Chinese headings, navigation, labels and synthetic-data footer render legibly without tofu in both themes and widths.",
+    "1440-wide dashboard retains sidebar, four metric cards and chart/category columns.",
+    "390-wide dashboard stacks metric cards and review entries; labels and footer fit the screenshot width.",
+    "Keyboard focus outlines are visible on heading/theme controls; mobile runtime timestamp wraps across lines within its column. No new layout blocker observed in these four snapshots."
+  ],
+  "limits": "Only these four dashboard screenshots were manually viewed. Wider interactions/states are covered by the preserved browser result and actual CLI commands, not by this observation. ARM has no browser lane.",
+  "images": [
+    {
+      "path": "final-2e45bee-amd64/browser/dashboard-1440-light.png",
+      "bytes": 213862,
+      "sha256": "0fa05c177acac6930ae7ae907069e565d16887a30bb25dcfa1272a391bd448e4",
+      "dimensions": [
+        1440,
+        1868
+      ]
+    },
+    {
+      "path": "final-2e45bee-amd64/browser/dashboard-1440-dark.png",
+      "bytes": 214113,
+      "sha256": "4192f47b15dd2189a4a955a06a4303733a63e2b0721fe427ce0338cf4b36656e",
+      "dimensions": [
+        1440,
+        1868
+      ]
+    },
+    {
+      "path": "final-2e45bee-amd64/browser/dashboard-390-light.png",
+      "bytes": 199805,
+      "sha256": "f782d2d8e4d04a02ea3b6bd5f18d2d23c1259909fd72a78b745013d8d388d873",
+      "dimensions": [
+        390,
+        3476
+      ]
+    },
+    {
+      "path": "final-2e45bee-amd64/browser/dashboard-390-dark.png",
+      "bytes": 203530,
+      "sha256": "c5b48712055cc9da2b5dd4fd082a788ecdd32050337d72b6b2624ac92f37bad8",
+      "dimensions": [
+        390,
+        3476
+      ]
+    }
+  ],
+  "command_record": "final-2e45bee-amd64/browser/commands.log",
+  "result_record": "final-2e45bee-amd64/browser/result.json"
+}

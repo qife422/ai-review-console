@@ -1,0 +1,2022 @@
+{
+  "architecture_comparison": {
+    "amd64_only_pypi": {
+      "ibm-db": "3.2.9",
+      "tree-sitter": "0.26.0",
+      "tree-sitter-javascript": "0.25.0",
+      "tree-sitter-typescript": "0.23.2"
+    },
+    "arm64_only_pypi": {},
+    "same_current_provider_id_union": true,
+    "same_repository_map_bytes": true,
+    "same_rpm_names_full_evr_ignoring_arch": true,
+    "shared_pypi_version_mismatches": {}
+  },
+  "architectures": {
+    "amd64": {
+      "coverage": {
+        "default_227_unknowns_equal_all_same_image_rpm_entries": true,
+        "default_exit2_retained": true,
+        "repository_map_sha256": "b0ee1f3f15d2043971f64e04c9c39cbf6f8e608edc26a07faea8bbb9393d2bb7",
+        "same_exact_image_id": true,
+        "system_after_full_epoch_nevra_equals_rhel": true
+      },
+      "ids_absent_vs_2e45_query": [
+        "ALPINE-CVE-2026-113351",
+        "ALPINE-CVE-2026-115506",
+        "ALPINE-CVE-2026-117610",
+        "ALPINE-CVE-2026-118370"
+      ],
+      "ids_added_vs_2e45_same_arch_query": [],
+      "image_finding_counts": {
+        "api": 126,
+        "langflow": 81,
+        "postgres": 130,
+        "web": 0
+      },
+      "images": {
+        "api": "sha256:dac5965a840be8d2da28d1bb3e2098b42ea4fe9aeefa010357344f0a43166e10",
+        "langflow": "sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+        "postgres": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c",
+        "web": "sha256:7d7a54dd6c684b161a122c17d245d458a3c744cb389833e555dea571baae73f6"
+      },
+      "langflow_version": "1.11.6",
+      "native": {
+        "actual_read_files": [
+          {
+            "bytes_read": 23445,
+            "image_id": "sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+            "image_name": "langflow",
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/odbc_notices.txt",
+            "purpose": "driver_notices",
+            "sha256": "2b17aff0579ec93c70fb9b5553dcb20778c6a5ca76dd613fd280414a1dc573fe",
+            "state": "recorded"
+          }
+        ],
+        "baseline": {
+          "known_goal_input_bytes": 135700308,
+          "original_materials_sha256": "cf205390853df3a4c77d2123bbc897a0f63a6b32f8291907f0b83de445bbed1d",
+          "path": "compliance/native-baseline.json",
+          "sha256": "eadfcf4078cf6143e97fb373335ec257737edc14d006ff0aa2be184c6a291903",
+          "source_commit": "2e45bee8c61dfab347edd107aebb6a3488567761"
+        },
+        "current_invocation_input_bytes": 23445,
+        "current_invocation_read_files": 1,
+        "goal_known_input_bytes": 135723753,
+        "legal_approval": false,
+        "mode": "targeted_followup",
+        "remaining_budget": {
+          "files": 9,
+          "input_bytes": 26907808,
+          "text_bytes": 4082537
+        },
+        "scope": "This actual followup read1 notices file only. No new UNIX/legacy crypto bytes were collected; old hashes are not new-image byte correspondence.",
+        "starting_budget": {
+          "files": 10,
+          "input_bytes": 26931253,
+          "text_bytes": 4105982
+        }
+      },
+      "offline_probe": {
+        "actual_imported_sources": [
+          {
+            "module": "opentelemetry.trace.span",
+            "path": "/app/.venv/lib64/python3.14/site-packages/opentelemetry/trace/span.py",
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/opentelemetry/trace/span.py",
+            "sha256": "67886d3802f7d87adcc6bc26d790ecef0b1fb89b1aed3e28f7c6d73b0b739e38"
+          },
+          {
+            "module": "opentelemetry.trace.propagation.tracecontext",
+            "path": "/app/.venv/lib64/python3.14/site-packages/opentelemetry/trace/propagation/tracecontext.py",
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/opentelemetry/trace/propagation/tracecontext.py",
+            "sha256": "ac6fbcf1610a51ebf9d9161e42e9e98d4e22a50552c57bb37596a62963e00776"
+          }
+        ],
+        "scratch": {
+          "bytes": 447,
+          "files": 1
+        },
+        "security_and_compatibility_assertions": "passed",
+        "tracestate_ingress": {
+          "all_discarded": true,
+          "cases": [
+            {
+              "case": "single",
+              "combined_bytes": 8351,
+              "discarded": true,
+              "header_fields": 1,
+              "trace_id_preserved": true
+            },
+            {
+              "case": "split",
+              "combined_bytes": 8351,
+              "discarded": true,
+              "header_fields": 2,
+              "trace_id_preserved": true
+            }
+          ],
+          "entrypoint": "TraceContextTextMapPropagator.extract",
+          "limit_bytes": 8192
+        },
+        "versions": {
+          "datamodel-code-generator": "0.81.0",
+          "oauthlib": "4.0.0",
+          "opentelemetry-api": "1.45.1",
+          "opentelemetry-instrumentation": "0.66b1",
+          "opentelemetry-sdk": "1.45.1"
+        }
+      },
+      "pins": {
+        "all_exact_installed": true,
+        "count": 52,
+        "versions": {
+          "aiohttp": "3.14.4",
+          "authlib": "1.9.1",
+          "black": "26.10.1",
+          "brotli": "1.2.1",
+          "certifi": "2026.10.23",
+          "datamodel-code-generator": "0.81.0",
+          "dnspython": "2.9.0",
+          "fastmcp": "3.4.10",
+          "fastmcp-slim": "3.4.10",
+          "fsspec": "2026.6.0",
+          "gitpython": "3.2.1",
+          "joserfc": "1.7.6",
+          "langchain-nvidia-ai-endpoints": "1.5.0",
+          "langgraph": "1.2.14",
+          "langgraph-sdk": "0.4.6",
+          "litellm": "1.103.1",
+          "mako": "1.4.2",
+          "mcp": "1.30.0",
+          "mem0ai": "2.0.18",
+          "multidict": "6.9.1",
+          "nltk": "3.10.4",
+          "oauthlib": "4.0.0",
+          "opentelemetry-api": "1.45.1",
+          "opentelemetry-exporter-http-transport": "0.66b1",
+          "opentelemetry-exporter-otlp": "1.45.1",
+          "opentelemetry-exporter-otlp-common": "0.66b1",
+          "opentelemetry-exporter-otlp-proto-common": "1.45.1",
+          "opentelemetry-exporter-otlp-proto-grpc": "1.45.1",
+          "opentelemetry-exporter-otlp-proto-http": "1.45.1",
+          "opentelemetry-exporter-prometheus": "0.66b1",
+          "opentelemetry-instrumentation": "0.66b1",
+          "opentelemetry-instrumentation-asgi": "0.66b1",
+          "opentelemetry-instrumentation-fastapi": "0.66b1",
+          "opentelemetry-instrumentation-logging": "0.66b1",
+          "opentelemetry-instrumentation-redis": "0.66b1",
+          "opentelemetry-instrumentation-requests": "0.66b1",
+          "opentelemetry-instrumentation-sqlalchemy": "0.66b1",
+          "opentelemetry-instrumentation-threading": "0.66b1",
+          "opentelemetry-instrumentation-urllib3": "0.66b1",
+          "opentelemetry-proto": "1.45.1",
+          "opentelemetry-sdk": "1.45.1",
+          "opentelemetry-semantic-conventions": "0.66b1",
+          "opentelemetry-util-http": "0.66b1",
+          "pyasn1": "0.6.5",
+          "pyjwt": "2.15.0",
+          "pymongo": "4.18.3",
+          "pypdf": "6.21.4",
+          "python-docx": "1.2.0",
+          "reportlab": "4.5.1",
+          "transformers": "5.10.0",
+          "urllib3": "2.8.0",
+          "yarl": "1.25.1"
+        }
+      },
+      "pip_checks": "passed",
+      "provider_id_union": 236,
+      "pypi_distribution_count": 550,
+      "python_version": "3.14.8 (main, Oct  1 2026, 00:00:00) [GCC 14.3.1 20251022 (Red Hat 14.3.1-4)]",
+      "remaining_langflow_python": {
+        "advisory_ids": 81,
+        "alias_connected_groups": 59,
+        "package_count": 5,
+        "packages": [
+          {
+            "advisory_count": 1,
+            "advisory_ids": [
+              "PYSEC-2023-235"
+            ],
+            "alias_group_count": 1,
+            "aliases_union": [
+              "CVE-2023-45875",
+              "PYSEC-2023-235"
+            ],
+            "ids_absent_vs_2e45": [],
+            "ids_added_vs_2e45": [],
+            "package": "couchbase",
+            "version": "4.6.2",
+            "version_matches_prior": true
+          },
+          {
+            "advisory_count": 59,
+            "advisory_ids": [
+              "GHSA-22hg-r758-rrw9",
+              "GHSA-24rc-8hj2-v98c",
+              "GHSA-254f-3936-288h",
+              "GHSA-27h8-gf7j-v5hc",
+              "GHSA-332p-7hrc-92wf",
+              "GHSA-3j72-p6qg-6xp7",
+              "GHSA-4558-3h8r-v8xp",
+              "GHSA-462x-pgg6-55fp",
+              "GHSA-4rm8-3hmm-39fg",
+              "GHSA-4rr5-89j8-mwwm",
+              "GHSA-58r4-6rv3-gfh8",
+              "GHSA-5x8w-8jj5-q52h",
+              "GHSA-5xm2-6676-qcp9",
+              "GHSA-654x-cwwv-5j9c",
+              "GHSA-65qm-jvmh-6pqg",
+              "GHSA-74r2-7ff9-mjj2",
+              "GHSA-78g4-xqwv-q3g8",
+              "GHSA-7mwm-ghpf-9vrm",
+              "GHSA-8g5g-8vmr-9782",
+              "GHSA-9v9v-9qvf-h2hj",
+              "GHSA-c6hw-5grf-ff96",
+              "GHSA-cp9v-662q-vvx9",
+              "GHSA-f2g6-542v-9j58",
+              "GHSA-fc9g-5qg7-mf45",
+              "GHSA-g4qv-2jxx-769h",
+              "GHSA-g7cr-3p24-7wf7",
+              "GHSA-g842-9rc4-69pw",
+              "GHSA-gg2r-wvfm-q9rx",
+              "GHSA-j4m9-6w36-pw47",
+              "GHSA-jg86-v3jv-hrpm",
+              "GHSA-mrfp-p49p-3hf2",
+              "GHSA-p4wg-p73j-c528",
+              "GHSA-p8hx-v2p6-rp84",
+              "GHSA-pchr-8j38-3x4p",
+              "GHSA-q45j-58j2-45rg",
+              "GHSA-rfgq-q3w2-pmv2",
+              "GHSA-v9pv-5gc8-w2m6",
+              "GHSA-vx6w-vv9f-6gvg",
+              "GHSA-w889-685w-c8fh",
+              "GHSA-xgh8-jp6q-p5x8",
+              "GHSA-xvh5-g6gv-559v",
+              "PYSEC-2026-4326",
+              "PYSEC-2026-4327",
+              "PYSEC-2026-4328",
+              "PYSEC-2026-4329",
+              "PYSEC-2026-4330",
+              "PYSEC-2026-4331",
+              "PYSEC-2026-4332",
+              "PYSEC-2026-4333",
+              "PYSEC-2026-4334",
+              "PYSEC-2026-4335",
+              "PYSEC-2026-4336",
+              "PYSEC-2026-4337",
+              "PYSEC-2026-4338",
+              "PYSEC-2026-4339",
+              "PYSEC-2026-4340",
+              "PYSEC-2026-4341",
+              "PYSEC-2026-4342",
+              "PYSEC-2026-4343"
+            ],
+            "alias_group_count": 41,
+            "aliases_union": [
+              "BIT-pillow-2026-112390",
+              "BIT-pillow-2026-112391",
+              "BIT-pillow-2026-112392",
+              "BIT-pillow-2026-112393",
+              "BIT-pillow-2026-112394",
+              "BIT-pillow-2026-112395",
+              "BIT-pillow-2026-112396",
+              "BIT-pillow-2026-112397",
+              "BIT-pillow-2026-112398",
+              "BIT-pillow-2026-112399",
+              "BIT-pillow-2026-112400",
+              "BIT-pillow-2026-112401",
+              "BIT-pillow-2026-112402",
+              "BIT-pillow-2026-112403",
+              "BIT-pillow-2026-112404",
+              "BIT-pillow-2026-112405",
+              "BIT-pillow-2026-112406",
+              "BIT-pillow-2026-112891",
+              "BIT-pillow-2026-112892",
+              "BIT-pillow-2026-112893",
+              "BIT-pillow-2026-112894",
+              "BIT-pillow-2026-112895",
+              "BIT-pillow-2026-112896",
+              "BIT-pillow-2026-112897",
+              "BIT-pillow-2026-112898",
+              "BIT-pillow-2026-112900",
+              "BIT-pillow-2026-112901",
+              "BIT-pillow-2026-114501",
+              "BIT-pillow-2026-96636",
+              "BIT-pillow-2026-96637",
+              "BIT-pillow-2026-96638",
+              "BIT-pillow-2026-96639",
+              "BIT-pillow-2026-96640",
+              "BIT-pillow-2026-96641",
+              "BIT-pillow-2026-96642",
+              "BIT-pillow-2026-96643",
+              "BIT-pillow-2026-96644",
+              "BIT-pillow-2026-96778",
+              "CVE-2026-112390",
+              "CVE-2026-112391",
+              "CVE-2026-112392",
+              "CVE-2026-112393",
+              "CVE-2026-112394",
+              "CVE-2026-112395",
+              "CVE-2026-112396",
+              "CVE-2026-112397",
+              "CVE-2026-112398",
+              "CVE-2026-112399",
+              "CVE-2026-112400",
+              "CVE-2026-112401",
+              "CVE-2026-112402",
+              "CVE-2026-112403",
+              "CVE-2026-112404",
+              "CVE-2026-112405",
+              "CVE-2026-112406",
+              "CVE-2026-112891",
+              "CVE-2026-112892",
+              "CVE-2026-112893",
+              "CVE-2026-112894",
+              "CVE-2026-112895",
+              "CVE-2026-112896",
+              "CVE-2026-112897",
+              "CVE-2026-112898",
+              "CVE-2026-112899",
+              "CVE-2026-112900",
+              "CVE-2026-112901",
+              "CVE-2026-112902",
+              "CVE-2026-114501",
+              "CVE-2026-96636",
+              "CVE-2026-96637",
+              "CVE-2026-96638",
+              "CVE-2026-96639",
+              "CVE-2026-96640",
+              "CVE-2026-96641",
+              "CVE-2026-96642",
+              "CVE-2026-96643",
+              "CVE-2026-96644",
+              "CVE-2026-96778",
+              "GHSA-22hg-r758-rrw9",
+              "GHSA-24rc-8hj2-v98c",
+              "GHSA-254f-3936-288h",
+              "GHSA-27h8-gf7j-v5hc",
+              "GHSA-332p-7hrc-92wf",
+              "GHSA-3j72-p6qg-6xp7",
+              "GHSA-4558-3h8r-v8xp",
+              "GHSA-462x-pgg6-55fp",
+              "GHSA-4rm8-3hmm-39fg",
+              "GHSA-4rr5-89j8-mwwm",
+              "GHSA-58r4-6rv3-gfh8",
+              "GHSA-5x8w-8jj5-q52h",
+              "GHSA-5xm2-6676-qcp9",
+              "GHSA-654x-cwwv-5j9c",
+              "GHSA-65qm-jvmh-6pqg",
+              "GHSA-74r2-7ff9-mjj2",
+              "GHSA-78g4-xqwv-q3g8",
+              "GHSA-7mwm-ghpf-9vrm",
+              "GHSA-8g5g-8vmr-9782",
+              "GHSA-9v9v-9qvf-h2hj",
+              "GHSA-c6hw-5grf-ff96",
+              "GHSA-cp9v-662q-vvx9",
+              "GHSA-f2g6-542v-9j58",
+              "GHSA-fc9g-5qg7-mf45",
+              "GHSA-g4qv-2jxx-769h",
+              "GHSA-g7cr-3p24-7wf7",
+              "GHSA-g842-9rc4-69pw",
+              "GHSA-gg2r-wvfm-q9rx",
+              "GHSA-j4m9-6w36-pw47",
+              "GHSA-jg86-v3jv-hrpm",
+              "GHSA-mrfp-p49p-3hf2",
+              "GHSA-p4wg-p73j-c528",
+              "GHSA-p8hx-v2p6-rp84",
+              "GHSA-pchr-8j38-3x4p",
+              "GHSA-q45j-58j2-45rg",
+              "GHSA-rfgq-q3w2-pmv2",
+              "GHSA-v9pv-5gc8-w2m6",
+              "GHSA-vx6w-vv9f-6gvg",
+              "GHSA-w889-685w-c8fh",
+              "GHSA-xgh8-jp6q-p5x8",
+              "GHSA-xvh5-g6gv-559v",
+              "PYSEC-2026-4326",
+              "PYSEC-2026-4327",
+              "PYSEC-2026-4328",
+              "PYSEC-2026-4329",
+              "PYSEC-2026-4330",
+              "PYSEC-2026-4331",
+              "PYSEC-2026-4332",
+              "PYSEC-2026-4333",
+              "PYSEC-2026-4334",
+              "PYSEC-2026-4335",
+              "PYSEC-2026-4336",
+              "PYSEC-2026-4337",
+              "PYSEC-2026-4338",
+              "PYSEC-2026-4339",
+              "PYSEC-2026-4340",
+              "PYSEC-2026-4341",
+              "PYSEC-2026-4342",
+              "PYSEC-2026-4343"
+            ],
+            "ids_absent_vs_2e45": [],
+            "ids_added_vs_2e45": [],
+            "package": "pillow",
+            "version": "12.3.0",
+            "version_matches_prior": true
+          },
+          {
+            "advisory_count": 1,
+            "advisory_ids": [
+              "GHSA-xmj3-9gf7-h52w"
+            ],
+            "alias_group_count": 1,
+            "aliases_union": [
+              "GHSA-xmj3-9gf7-h52w"
+            ],
+            "ids_absent_vs_2e45": [],
+            "ids_added_vs_2e45": [],
+            "package": "setuptools",
+            "version": "83.0.0",
+            "version_matches_prior": true
+          },
+          {
+            "advisory_count": 8,
+            "advisory_ids": [
+              "GHSA-2wm9-hf6c-p5cr",
+              "GHSA-36p7-vc44-83pf",
+              "GHSA-f4j7-r4q5-qw2c",
+              "GHSA-xph7-9rjv-w5fr",
+              "PYSEC-2026-311",
+              "PYSEC-2026-3813",
+              "PYSEC-2026-3814",
+              "PYSEC-2026-3815"
+            ],
+            "alias_group_count": 4,
+            "aliases_union": [
+              "CVE-2026-45829",
+              "CVE-2026-45830",
+              "CVE-2026-45831",
+              "CVE-2026-45833",
+              "GHSA-2wm9-hf6c-p5cr",
+              "GHSA-36p7-vc44-83pf",
+              "GHSA-f4j7-r4q5-qw2c",
+              "GHSA-xph7-9rjv-w5fr",
+              "PYSEC-2026-311",
+              "PYSEC-2026-3813",
+              "PYSEC-2026-3814",
+              "PYSEC-2026-3815"
+            ],
+            "ids_absent_vs_2e45": [],
+            "ids_added_vs_2e45": [],
+            "package": "chromadb",
+            "version": "1.5.9",
+            "version_matches_prior": true
+          },
+          {
+            "advisory_count": 12,
+            "advisory_ids": [
+              "GHSA-567q-5qvw-pf92",
+              "GHSA-6627-m3xw-93mp",
+              "GHSA-69hj-f68j-2879",
+              "GHSA-8mx5-7m5m-r77g",
+              "GHSA-9c4x-gm8v-wgc4",
+              "GHSA-9vhv-jxww-xfm5",
+              "GHSA-cwqr-hh33-gh44",
+              "GHSA-fq56-3cx3-fjxp",
+              "GHSA-j8f7-rjxc-mr56",
+              "GHSA-m462-7rxw-wvpg",
+              "GHSA-rfpc-qcw5-3pc4",
+              "GHSA-v4x8-3wr5-3wq8"
+            ],
+            "alias_group_count": 12,
+            "aliases_union": [
+              "CVE-2026-112907",
+              "CVE-2026-112908",
+              "CVE-2026-112909",
+              "CVE-2026-112910",
+              "CVE-2026-112911",
+              "CVE-2026-112913",
+              "CVE-2026-112915",
+              "CVE-2026-112935",
+              "CVE-2026-112936",
+              "CVE-2026-112938",
+              "CVE-2026-112939",
+              "CVE-2026-112940",
+              "GHSA-567q-5qvw-pf92",
+              "GHSA-6627-m3xw-93mp",
+              "GHSA-69hj-f68j-2879",
+              "GHSA-8mx5-7m5m-r77g",
+              "GHSA-9c4x-gm8v-wgc4",
+              "GHSA-9vhv-jxww-xfm5",
+              "GHSA-cwqr-hh33-gh44",
+              "GHSA-fq56-3cx3-fjxp",
+              "GHSA-j8f7-rjxc-mr56",
+              "GHSA-m462-7rxw-wvpg",
+              "GHSA-rfpc-qcw5-3pc4",
+              "GHSA-v4x8-3wr5-3wq8"
+            ],
+            "ids_absent_vs_2e45": [],
+            "ids_added_vs_2e45": [],
+            "package": "filelock",
+            "version": "3.32.0",
+            "version_matches_prior": true
+          }
+        ]
+      },
+      "rhel": {
+        "database_snapshot_date": null,
+        "detail_unknown": 0,
+        "mapped_software_packages": 224,
+        "mapping_unknown": 0,
+        "metadata_only_public_keys": 3,
+        "observed_unique_advisory_ids": 0,
+        "query_unknown": 0,
+        "result": "queried_no_match",
+        "rpm_entries": 227,
+        "started_at": "2026-11-03T06:23:13.097034+00:00",
+        "unique_queries": 672
+      },
+      "runner_machine": "x86_64",
+      "system": {
+        "added": [
+          "perl-Unicode-Normalize"
+        ],
+        "changes": [
+          {
+            "after": "0:2026.2.92_v9.0.319-100.3.el10_2",
+            "before": "0:2025.2.80_v9.0.305-102.el10_1",
+            "name": "ca-certificates"
+          },
+          {
+            "after": "0:9.5-8.el10_2.1",
+            "before": "0:9.5-8.el10_2",
+            "name": "coreutils-single"
+          },
+          {
+            "after": "0:8.12.1-4.el10_2.7",
+            "before": "0:8.12.1-4.el10_2.4",
+            "name": "curl"
+          },
+          {
+            "after": "0:2.7.3-1.el10_2.7",
+            "before": "0:2.7.3-1.el10_2.1",
+            "name": "expat"
+          },
+          {
+            "after": "0:5.3.0-6.el10_2.1",
+            "before": "0:5.3.0-6.el10",
+            "name": "gawk"
+          },
+          {
+            "after": "0:2.80.4-12.el10_2.22",
+            "before": "0:2.80.4-12.el10_2.21",
+            "name": "glib2"
+          },
+          {
+            "after": "0:2.39-145.el10_2",
+            "before": "0:2.39-128.el10_2",
+            "name": "glibc"
+          },
+          {
+            "after": "0:2.39-145.el10_2",
+            "before": "0:2.39-128.el10_2",
+            "name": "glibc-common"
+          },
+          {
+            "after": "0:2.39-145.el10_2",
+            "before": "0:2.39-128.el10_2",
+            "name": "glibc-langpack-en"
+          },
+          {
+            "after": "0:2.39-145.el10_2",
+            "before": "0:2.39-128.el10_2",
+            "name": "glibc-minimal-langpack"
+          },
+          {
+            "after": "0:3.8.10-5.el10_2",
+            "before": "0:3.8.10-4.el10_2",
+            "name": "gnutls"
+          },
+          {
+            "after": "0:3.7.7-11.el10_2",
+            "before": "0:3.7.7-10.el10_2",
+            "name": "libarchive"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "before": "0:2.40.2-18.el10",
+            "name": "libblkid"
+          },
+          {
+            "after": "0:8.12.1-4.el10_2.7",
+            "before": "0:8.12.1-4.el10_2.4",
+            "name": "libcurl-minimal"
+          },
+          {
+            "after": "0:2.1.13-1.el10_2",
+            "before": "0:2.1.12-16.el10",
+            "name": "libevent"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "before": "0:2.40.2-18.el10",
+            "name": "libfdisk"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "before": "0:2.40.2-18.el10",
+            "name": "libmount"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "before": "0:2.40.2-18.el10",
+            "name": "libsmartcols"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "before": "0:2.40.2-18.el10",
+            "name": "libuuid"
+          },
+          {
+            "after": "0:2.12.5-10.el10_2.4",
+            "before": "0:2.12.5-10.el10_2.3",
+            "name": "libxml2"
+          },
+          {
+            "after": "0:9.9p1-29.el10_2",
+            "before": "0:9.9p1-25.el10_2",
+            "name": "openssh"
+          },
+          {
+            "after": "0:9.9p1-29.el10_2",
+            "before": "0:9.9p1-25.el10_2",
+            "name": "openssh-clients"
+          },
+          {
+            "after": "1:3.5.8-2.el10_2",
+            "before": "1:3.5.5-6.el10_2",
+            "name": "openssl-libs"
+          },
+          {
+            "after": "0:10.44-1.5.el10_2",
+            "before": "0:10.44-1.el10.3",
+            "name": "pcre2"
+          },
+          {
+            "after": "0:10.44-1.5.el10_2",
+            "before": "0:10.44-1.el10.3",
+            "name": "pcre2-syntax"
+          },
+          {
+            "after": "0:5.74-515.el10_2",
+            "before": "0:5.74-512.2.el10_0",
+            "name": "perl-AutoLoader"
+          },
+          {
+            "after": "0:1.89-515.el10_2",
+            "before": "0:1.89-512.2.el10_0",
+            "name": "perl-B"
+          },
+          {
+            "after": "0:0.68-515.el10_2",
+            "before": "0:0.68-512.2.el10_0",
+            "name": "perl-Class-Struct"
+          },
+          {
+            "after": "0:1.56-515.el10_2",
+            "before": "0:1.56-512.2.el10_0",
+            "name": "perl-DynaLoader"
+          },
+          {
+            "after": "0:1.38-515.el10_2",
+            "before": "0:1.38-512.2.el10_0",
+            "name": "perl-Errno"
+          },
+          {
+            "after": "0:1.18-515.el10_2",
+            "before": "0:1.18-512.2.el10_0",
+            "name": "perl-Fcntl"
+          },
+          {
+            "after": "0:2.86-515.el10_2",
+            "before": "0:2.86-512.2.el10_0",
+            "name": "perl-File-Basename"
+          },
+          {
+            "after": "0:1.14-515.el10_2",
+            "before": "0:1.14-512.2.el10_0",
+            "name": "perl-File-stat"
+          },
+          {
+            "after": "0:2.05-515.el10_2",
+            "before": "0:2.05-512.2.el10_0",
+            "name": "perl-FileHandle"
+          },
+          {
+            "after": "0:1.14-515.el10_2",
+            "before": "0:1.14-512.2.el10_0",
+            "name": "perl-Getopt-Std"
+          },
+          {
+            "after": "0:1.55-515.el10_2",
+            "before": "0:1.55-512.2.el10_0",
+            "name": "perl-IO"
+          },
+          {
+            "after": "0:1.22-515.el10_2",
+            "before": "0:1.22-512.2.el10_0",
+            "name": "perl-IPC-Open3"
+          },
+          {
+            "after": "0:1.17-515.el10_2",
+            "before": "0:1.17-512.2.el10_0",
+            "name": "perl-NDBM_File"
+          },
+          {
+            "after": "0:2.20-515.el10_2",
+            "before": "0:2.20-512.2.el10_0",
+            "name": "perl-POSIX"
+          },
+          {
+            "after": "0:1.02-515.el10_2",
+            "before": "0:1.02-512.2.el10_0",
+            "name": "perl-SelectSaver"
+          },
+          {
+            "after": "0:1.09-515.el10_2",
+            "before": "0:1.09-512.2.el10_0",
+            "name": "perl-Symbol"
+          },
+          {
+            "after": "0:5.27-3.el10_2.1",
+            "before": "0:5.27-3.el10",
+            "name": "perl-URI"
+          },
+          {
+            "after": "0:2.27-515.el10_2",
+            "before": "0:2.27-512.2.el10_0",
+            "name": "perl-base"
+          },
+          {
+            "after": "0:0.61.000-515.el10_2",
+            "before": "0:0.61.000-512.2.el10_0",
+            "name": "perl-if"
+          },
+          {
+            "after": "4:5.40.2-515.el10_2",
+            "before": "4:5.40.2-512.2.el10_0",
+            "name": "perl-interpreter"
+          },
+          {
+            "after": "0:0.65-515.el10_2",
+            "before": "0:0.65-512.2.el10_0",
+            "name": "perl-lib"
+          },
+          {
+            "after": "4:5.40.2-515.el10_2",
+            "before": "4:5.40.2-512.2.el10_0",
+            "name": "perl-libs"
+          },
+          {
+            "after": "0:1.12-515.el10_2",
+            "before": "0:1.12-512.2.el10_0",
+            "name": "perl-locale"
+          },
+          {
+            "after": "0:1.29-515.el10_2",
+            "before": "0:1.29-512.2.el10_0",
+            "name": "perl-mro"
+          },
+          {
+            "after": "0:1.37-515.el10_2",
+            "before": "0:1.37-512.2.el10_0",
+            "name": "perl-overload"
+          },
+          {
+            "after": "0:0.02-515.el10_2",
+            "before": "0:0.02-512.2.el10_0",
+            "name": "perl-overloading"
+          },
+          {
+            "after": "0:1.05-515.el10_2",
+            "before": "0:1.05-512.2.el10_0",
+            "name": "perl-vars"
+          },
+          {
+            "after": "0:3.14.8-1.el10_2",
+            "before": "0:3.14.7-2.el10_2",
+            "name": "python3.14"
+          },
+          {
+            "after": "0:3.14.8-1.el10_2",
+            "before": "0:3.14.7-2.el10_2",
+            "name": "python3.14-libs"
+          },
+          {
+            "after": "0:1.10.2.1-1.el10_2",
+            "before": "0:1.10.1.1-2.el10",
+            "name": "rpm-sequoia"
+          },
+          {
+            "after": "0:2026e-1.el10_2",
+            "before": "0:2026c-1.el10_2",
+            "name": "tzdata"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "before": "0:2.40.2-18.el10",
+            "name": "util-linux"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "before": "0:2.40.2-18.el10",
+            "name": "util-linux-core"
+          },
+          {
+            "after": "1:5.6.2-4.el10_2.1",
+            "before": "1:5.6.2-4.el10_0",
+            "name": "xz"
+          },
+          {
+            "after": "1:5.6.2-4.el10_2.1",
+            "before": "1:5.6.2-4.el10_0",
+            "name": "xz-libs"
+          }
+        ],
+        "os_after": "10.2",
+        "os_before": "10.2",
+        "removed": [],
+        "rpm_rows_after": 227,
+        "rpm_rows_before": 226,
+        "software_after": 224,
+        "software_before": 223,
+        "software_changed": 60,
+        "status": "completed"
+      },
+      "web_actual_versions": {
+        "brotli-libs": "1.2.1-r0",
+        "curl": "8.23.0-r0",
+        "libcurl": "8.23.0-r0",
+        "libexpat": "2.10.0-r0"
+      },
+      "workflow": {
+        "benchmark": null,
+        "both_real_flow_job_ids_present": true,
+        "component_count": 5,
+        "decisions": 3,
+        "document_formats": 4,
+        "failure_retry_deduplicated": true,
+        "report_downloads": 9,
+        "result": "passed",
+        "stored_flow_hashes_unchanged": true
+      }
+    },
+    "arm64": {
+      "coverage": {
+        "default_227_unknowns_equal_all_same_image_rpm_entries": true,
+        "default_exit2_retained": true,
+        "repository_map_sha256": "b0ee1f3f15d2043971f64e04c9c39cbf6f8e608edc26a07faea8bbb9393d2bb7",
+        "same_exact_image_id": true,
+        "system_after_full_epoch_nevra_equals_rhel": true
+      },
+      "ids_absent_vs_2e45_query": [
+        "ALPINE-CVE-2026-113351",
+        "ALPINE-CVE-2026-115506",
+        "ALPINE-CVE-2026-117610",
+        "ALPINE-CVE-2026-118370"
+      ],
+      "ids_added_vs_2e45_same_arch_query": [],
+      "image_finding_counts": {
+        "api": 126,
+        "langflow": 81,
+        "postgres": 130,
+        "web": 0
+      },
+      "images": {
+        "api": "sha256:b93fb066c174a23a39368462ac4e324f2ddc23ded27674cc4a0e0cf19e811f22",
+        "langflow": "sha256:b71111291bb4aded994c5e695d139ab8695b925649917aa954c42ebebc5c3b75",
+        "postgres": "sha256:6162f3765f7563b273a879894c5751d41285f922dd75ba0ba508a89e024e43ca",
+        "web": "sha256:1afea987a94187f47113c5b3dfc1b33698401228847e6e0d23977753fc2ed3a0"
+      },
+      "langflow_version": "1.11.6",
+      "native": {
+        "distribution_approval": false,
+        "state": "not_collected_on_arm_backend"
+      },
+      "offline_probe": {
+        "actual_imported_sources": [
+          {
+            "module": "opentelemetry.trace.span",
+            "path": "/app/.venv/lib64/python3.14/site-packages/opentelemetry/trace/span.py",
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/opentelemetry/trace/span.py",
+            "sha256": "67886d3802f7d87adcc6bc26d790ecef0b1fb89b1aed3e28f7c6d73b0b739e38"
+          },
+          {
+            "module": "opentelemetry.trace.propagation.tracecontext",
+            "path": "/app/.venv/lib64/python3.14/site-packages/opentelemetry/trace/propagation/tracecontext.py",
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/opentelemetry/trace/propagation/tracecontext.py",
+            "sha256": "ac6fbcf1610a51ebf9d9161e42e9e98d4e22a50552c57bb37596a62963e00776"
+          }
+        ],
+        "scratch": {
+          "bytes": 447,
+          "files": 1
+        },
+        "security_and_compatibility_assertions": "passed",
+        "tracestate_ingress": {
+          "all_discarded": true,
+          "cases": [
+            {
+              "case": "single",
+              "combined_bytes": 8351,
+              "discarded": true,
+              "header_fields": 1,
+              "trace_id_preserved": true
+            },
+            {
+              "case": "split",
+              "combined_bytes": 8351,
+              "discarded": true,
+              "header_fields": 2,
+              "trace_id_preserved": true
+            }
+          ],
+          "entrypoint": "TraceContextTextMapPropagator.extract",
+          "limit_bytes": 8192
+        },
+        "versions": {
+          "datamodel-code-generator": "0.81.0",
+          "oauthlib": "4.0.0",
+          "opentelemetry-api": "1.45.1",
+          "opentelemetry-instrumentation": "0.66b1",
+          "opentelemetry-sdk": "1.45.1"
+        }
+      },
+      "pins": {
+        "all_exact_installed": true,
+        "count": 52,
+        "versions": {
+          "aiohttp": "3.14.4",
+          "authlib": "1.9.1",
+          "black": "26.10.1",
+          "brotli": "1.2.1",
+          "certifi": "2026.10.23",
+          "datamodel-code-generator": "0.81.0",
+          "dnspython": "2.9.0",
+          "fastmcp": "3.4.10",
+          "fastmcp-slim": "3.4.10",
+          "fsspec": "2026.6.0",
+          "gitpython": "3.2.1",
+          "joserfc": "1.7.6",
+          "langchain-nvidia-ai-endpoints": "1.5.0",
+          "langgraph": "1.2.14",
+          "langgraph-sdk": "0.4.6",
+          "litellm": "1.103.1",
+          "mako": "1.4.2",
+          "mcp": "1.30.0",
+          "mem0ai": "2.0.18",
+          "multidict": "6.9.1",
+          "nltk": "3.10.4",
+          "oauthlib": "4.0.0",
+          "opentelemetry-api": "1.45.1",
+          "opentelemetry-exporter-http-transport": "0.66b1",
+          "opentelemetry-exporter-otlp": "1.45.1",
+          "opentelemetry-exporter-otlp-common": "0.66b1",
+          "opentelemetry-exporter-otlp-proto-common": "1.45.1",
+          "opentelemetry-exporter-otlp-proto-grpc": "1.45.1",
+          "opentelemetry-exporter-otlp-proto-http": "1.45.1",
+          "opentelemetry-exporter-prometheus": "0.66b1",
+          "opentelemetry-instrumentation": "0.66b1",
+          "opentelemetry-instrumentation-asgi": "0.66b1",
+          "opentelemetry-instrumentation-fastapi": "0.66b1",
+          "opentelemetry-instrumentation-logging": "0.66b1",
+          "opentelemetry-instrumentation-redis": "0.66b1",
+          "opentelemetry-instrumentation-requests": "0.66b1",
+          "opentelemetry-instrumentation-sqlalchemy": "0.66b1",
+          "opentelemetry-instrumentation-threading": "0.66b1",
+          "opentelemetry-instrumentation-urllib3": "0.66b1",
+          "opentelemetry-proto": "1.45.1",
+          "opentelemetry-sdk": "1.45.1",
+          "opentelemetry-semantic-conventions": "0.66b1",
+          "opentelemetry-util-http": "0.66b1",
+          "pyasn1": "0.6.5",
+          "pyjwt": "2.15.0",
+          "pymongo": "4.18.3",
+          "pypdf": "6.21.4",
+          "python-docx": "1.2.0",
+          "reportlab": "4.5.1",
+          "transformers": "5.10.0",
+          "urllib3": "2.8.0",
+          "yarl": "1.25.1"
+        }
+      },
+      "pip_checks": "passed",
+      "provider_id_union": 236,
+      "pypi_distribution_count": 546,
+      "python_version": "3.14.8 (main, Oct  1 2026, 00:00:00) [GCC 14.3.1 20251022 (Red Hat 14.3.1-4)]",
+      "remaining_langflow_python": {
+        "advisory_ids": 81,
+        "alias_connected_groups": 59,
+        "package_count": 5,
+        "packages": [
+          {
+            "advisory_count": 8,
+            "advisory_ids": [
+              "GHSA-2wm9-hf6c-p5cr",
+              "GHSA-36p7-vc44-83pf",
+              "GHSA-f4j7-r4q5-qw2c",
+              "GHSA-xph7-9rjv-w5fr",
+              "PYSEC-2026-311",
+              "PYSEC-2026-3813",
+              "PYSEC-2026-3814",
+              "PYSEC-2026-3815"
+            ],
+            "alias_group_count": 4,
+            "aliases_union": [
+              "CVE-2026-45829",
+              "CVE-2026-45830",
+              "CVE-2026-45831",
+              "CVE-2026-45833",
+              "GHSA-2wm9-hf6c-p5cr",
+              "GHSA-36p7-vc44-83pf",
+              "GHSA-f4j7-r4q5-qw2c",
+              "GHSA-xph7-9rjv-w5fr",
+              "PYSEC-2026-311",
+              "PYSEC-2026-3813",
+              "PYSEC-2026-3814",
+              "PYSEC-2026-3815"
+            ],
+            "ids_absent_vs_2e45": [],
+            "ids_added_vs_2e45": [],
+            "package": "chromadb",
+            "version": "1.5.9",
+            "version_matches_prior": true
+          },
+          {
+            "advisory_count": 1,
+            "advisory_ids": [
+              "GHSA-xmj3-9gf7-h52w"
+            ],
+            "alias_group_count": 1,
+            "aliases_union": [
+              "GHSA-xmj3-9gf7-h52w"
+            ],
+            "ids_absent_vs_2e45": [],
+            "ids_added_vs_2e45": [],
+            "package": "setuptools",
+            "version": "83.0.0",
+            "version_matches_prior": true
+          },
+          {
+            "advisory_count": 59,
+            "advisory_ids": [
+              "GHSA-22hg-r758-rrw9",
+              "GHSA-24rc-8hj2-v98c",
+              "GHSA-254f-3936-288h",
+              "GHSA-27h8-gf7j-v5hc",
+              "GHSA-332p-7hrc-92wf",
+              "GHSA-3j72-p6qg-6xp7",
+              "GHSA-4558-3h8r-v8xp",
+              "GHSA-462x-pgg6-55fp",
+              "GHSA-4rm8-3hmm-39fg",
+              "GHSA-4rr5-89j8-mwwm",
+              "GHSA-58r4-6rv3-gfh8",
+              "GHSA-5x8w-8jj5-q52h",
+              "GHSA-5xm2-6676-qcp9",
+              "GHSA-654x-cwwv-5j9c",
+              "GHSA-65qm-jvmh-6pqg",
+              "GHSA-74r2-7ff9-mjj2",
+              "GHSA-78g4-xqwv-q3g8",
+              "GHSA-7mwm-ghpf-9vrm",
+              "GHSA-8g5g-8vmr-9782",
+              "GHSA-9v9v-9qvf-h2hj",
+              "GHSA-c6hw-5grf-ff96",
+              "GHSA-cp9v-662q-vvx9",
+              "GHSA-f2g6-542v-9j58",
+              "GHSA-fc9g-5qg7-mf45",
+              "GHSA-g4qv-2jxx-769h",
+              "GHSA-g7cr-3p24-7wf7",
+              "GHSA-g842-9rc4-69pw",
+              "GHSA-gg2r-wvfm-q9rx",
+              "GHSA-j4m9-6w36-pw47",
+              "GHSA-jg86-v3jv-hrpm",
+              "GHSA-mrfp-p49p-3hf2",
+              "GHSA-p4wg-p73j-c528",
+              "GHSA-p8hx-v2p6-rp84",
+              "GHSA-pchr-8j38-3x4p",
+              "GHSA-q45j-58j2-45rg",
+              "GHSA-rfgq-q3w2-pmv2",
+              "GHSA-v9pv-5gc8-w2m6",
+              "GHSA-vx6w-vv9f-6gvg",
+              "GHSA-w889-685w-c8fh",
+              "GHSA-xgh8-jp6q-p5x8",
+              "GHSA-xvh5-g6gv-559v",
+              "PYSEC-2026-4326",
+              "PYSEC-2026-4327",
+              "PYSEC-2026-4328",
+              "PYSEC-2026-4329",
+              "PYSEC-2026-4330",
+              "PYSEC-2026-4331",
+              "PYSEC-2026-4332",
+              "PYSEC-2026-4333",
+              "PYSEC-2026-4334",
+              "PYSEC-2026-4335",
+              "PYSEC-2026-4336",
+              "PYSEC-2026-4337",
+              "PYSEC-2026-4338",
+              "PYSEC-2026-4339",
+              "PYSEC-2026-4340",
+              "PYSEC-2026-4341",
+              "PYSEC-2026-4342",
+              "PYSEC-2026-4343"
+            ],
+            "alias_group_count": 41,
+            "aliases_union": [
+              "BIT-pillow-2026-112390",
+              "BIT-pillow-2026-112391",
+              "BIT-pillow-2026-112392",
+              "BIT-pillow-2026-112393",
+              "BIT-pillow-2026-112394",
+              "BIT-pillow-2026-112395",
+              "BIT-pillow-2026-112396",
+              "BIT-pillow-2026-112397",
+              "BIT-pillow-2026-112398",
+              "BIT-pillow-2026-112399",
+              "BIT-pillow-2026-112400",
+              "BIT-pillow-2026-112401",
+              "BIT-pillow-2026-112402",
+              "BIT-pillow-2026-112403",
+              "BIT-pillow-2026-112404",
+              "BIT-pillow-2026-112405",
+              "BIT-pillow-2026-112406",
+              "BIT-pillow-2026-112891",
+              "BIT-pillow-2026-112892",
+              "BIT-pillow-2026-112893",
+              "BIT-pillow-2026-112894",
+              "BIT-pillow-2026-112895",
+              "BIT-pillow-2026-112896",
+              "BIT-pillow-2026-112897",
+              "BIT-pillow-2026-112898",
+              "BIT-pillow-2026-112900",
+              "BIT-pillow-2026-112901",
+              "BIT-pillow-2026-114501",
+              "BIT-pillow-2026-96636",
+              "BIT-pillow-2026-96637",
+              "BIT-pillow-2026-96638",
+              "BIT-pillow-2026-96639",
+              "BIT-pillow-2026-96640",
+              "BIT-pillow-2026-96641",
+              "BIT-pillow-2026-96642",
+              "BIT-pillow-2026-96643",
+              "BIT-pillow-2026-96644",
+              "BIT-pillow-2026-96778",
+              "CVE-2026-112390",
+              "CVE-2026-112391",
+              "CVE-2026-112392",
+              "CVE-2026-112393",
+              "CVE-2026-112394",
+              "CVE-2026-112395",
+              "CVE-2026-112396",
+              "CVE-2026-112397",
+              "CVE-2026-112398",
+              "CVE-2026-112399",
+              "CVE-2026-112400",
+              "CVE-2026-112401",
+              "CVE-2026-112402",
+              "CVE-2026-112403",
+              "CVE-2026-112404",
+              "CVE-2026-112405",
+              "CVE-2026-112406",
+              "CVE-2026-112891",
+              "CVE-2026-112892",
+              "CVE-2026-112893",
+              "CVE-2026-112894",
+              "CVE-2026-112895",
+              "CVE-2026-112896",
+              "CVE-2026-112897",
+              "CVE-2026-112898",
+              "CVE-2026-112899",
+              "CVE-2026-112900",
+              "CVE-2026-112901",
+              "CVE-2026-112902",
+              "CVE-2026-114501",
+              "CVE-2026-96636",
+              "CVE-2026-96637",
+              "CVE-2026-96638",
+              "CVE-2026-96639",
+              "CVE-2026-96640",
+              "CVE-2026-96641",
+              "CVE-2026-96642",
+              "CVE-2026-96643",
+              "CVE-2026-96644",
+              "CVE-2026-96778",
+              "GHSA-22hg-r758-rrw9",
+              "GHSA-24rc-8hj2-v98c",
+              "GHSA-254f-3936-288h",
+              "GHSA-27h8-gf7j-v5hc",
+              "GHSA-332p-7hrc-92wf",
+              "GHSA-3j72-p6qg-6xp7",
+              "GHSA-4558-3h8r-v8xp",
+              "GHSA-462x-pgg6-55fp",
+              "GHSA-4rm8-3hmm-39fg",
+              "GHSA-4rr5-89j8-mwwm",
+              "GHSA-58r4-6rv3-gfh8",
+              "GHSA-5x8w-8jj5-q52h",
+              "GHSA-5xm2-6676-qcp9",
+              "GHSA-654x-cwwv-5j9c",
+              "GHSA-65qm-jvmh-6pqg",
+              "GHSA-74r2-7ff9-mjj2",
+              "GHSA-78g4-xqwv-q3g8",
+              "GHSA-7mwm-ghpf-9vrm",
+              "GHSA-8g5g-8vmr-9782",
+              "GHSA-9v9v-9qvf-h2hj",
+              "GHSA-c6hw-5grf-ff96",
+              "GHSA-cp9v-662q-vvx9",
+              "GHSA-f2g6-542v-9j58",
+              "GHSA-fc9g-5qg7-mf45",
+              "GHSA-g4qv-2jxx-769h",
+              "GHSA-g7cr-3p24-7wf7",
+              "GHSA-g842-9rc4-69pw",
+              "GHSA-gg2r-wvfm-q9rx",
+              "GHSA-j4m9-6w36-pw47",
+              "GHSA-jg86-v3jv-hrpm",
+              "GHSA-mrfp-p49p-3hf2",
+              "GHSA-p4wg-p73j-c528",
+              "GHSA-p8hx-v2p6-rp84",
+              "GHSA-pchr-8j38-3x4p",
+              "GHSA-q45j-58j2-45rg",
+              "GHSA-rfgq-q3w2-pmv2",
+              "GHSA-v9pv-5gc8-w2m6",
+              "GHSA-vx6w-vv9f-6gvg",
+              "GHSA-w889-685w-c8fh",
+              "GHSA-xgh8-jp6q-p5x8",
+              "GHSA-xvh5-g6gv-559v",
+              "PYSEC-2026-4326",
+              "PYSEC-2026-4327",
+              "PYSEC-2026-4328",
+              "PYSEC-2026-4329",
+              "PYSEC-2026-4330",
+              "PYSEC-2026-4331",
+              "PYSEC-2026-4332",
+              "PYSEC-2026-4333",
+              "PYSEC-2026-4334",
+              "PYSEC-2026-4335",
+              "PYSEC-2026-4336",
+              "PYSEC-2026-4337",
+              "PYSEC-2026-4338",
+              "PYSEC-2026-4339",
+              "PYSEC-2026-4340",
+              "PYSEC-2026-4341",
+              "PYSEC-2026-4342",
+              "PYSEC-2026-4343"
+            ],
+            "ids_absent_vs_2e45": [],
+            "ids_added_vs_2e45": [],
+            "package": "pillow",
+            "version": "12.3.0",
+            "version_matches_prior": true
+          },
+          {
+            "advisory_count": 12,
+            "advisory_ids": [
+              "GHSA-567q-5qvw-pf92",
+              "GHSA-6627-m3xw-93mp",
+              "GHSA-69hj-f68j-2879",
+              "GHSA-8mx5-7m5m-r77g",
+              "GHSA-9c4x-gm8v-wgc4",
+              "GHSA-9vhv-jxww-xfm5",
+              "GHSA-cwqr-hh33-gh44",
+              "GHSA-fq56-3cx3-fjxp",
+              "GHSA-j8f7-rjxc-mr56",
+              "GHSA-m462-7rxw-wvpg",
+              "GHSA-rfpc-qcw5-3pc4",
+              "GHSA-v4x8-3wr5-3wq8"
+            ],
+            "alias_group_count": 12,
+            "aliases_union": [
+              "CVE-2026-112907",
+              "CVE-2026-112908",
+              "CVE-2026-112909",
+              "CVE-2026-112910",
+              "CVE-2026-112911",
+              "CVE-2026-112913",
+              "CVE-2026-112915",
+              "CVE-2026-112935",
+              "CVE-2026-112936",
+              "CVE-2026-112938",
+              "CVE-2026-112939",
+              "CVE-2026-112940",
+              "GHSA-567q-5qvw-pf92",
+              "GHSA-6627-m3xw-93mp",
+              "GHSA-69hj-f68j-2879",
+              "GHSA-8mx5-7m5m-r77g",
+              "GHSA-9c4x-gm8v-wgc4",
+              "GHSA-9vhv-jxww-xfm5",
+              "GHSA-cwqr-hh33-gh44",
+              "GHSA-fq56-3cx3-fjxp",
+              "GHSA-j8f7-rjxc-mr56",
+              "GHSA-m462-7rxw-wvpg",
+              "GHSA-rfpc-qcw5-3pc4",
+              "GHSA-v4x8-3wr5-3wq8"
+            ],
+            "ids_absent_vs_2e45": [],
+            "ids_added_vs_2e45": [],
+            "package": "filelock",
+            "version": "3.32.0",
+            "version_matches_prior": true
+          },
+          {
+            "advisory_count": 1,
+            "advisory_ids": [
+              "PYSEC-2023-235"
+            ],
+            "alias_group_count": 1,
+            "aliases_union": [
+              "CVE-2023-45875",
+              "PYSEC-2023-235"
+            ],
+            "ids_absent_vs_2e45": [],
+            "ids_added_vs_2e45": [],
+            "package": "couchbase",
+            "version": "4.6.2",
+            "version_matches_prior": true
+          }
+        ]
+      },
+      "rhel": {
+        "database_snapshot_date": null,
+        "detail_unknown": 0,
+        "mapped_software_packages": 224,
+        "mapping_unknown": 0,
+        "metadata_only_public_keys": 3,
+        "observed_unique_advisory_ids": 0,
+        "query_unknown": 0,
+        "result": "queried_no_match",
+        "rpm_entries": 227,
+        "started_at": "2026-11-03T06:21:20.738653+00:00",
+        "unique_queries": 672
+      },
+      "runner_machine": "aarch64",
+      "system": {
+        "added": [
+          "perl-Unicode-Normalize"
+        ],
+        "changes": [
+          {
+            "after": "0:2026.2.92_v9.0.319-100.3.el10_2",
+            "before": "0:2025.2.80_v9.0.305-102.el10_1",
+            "name": "ca-certificates"
+          },
+          {
+            "after": "0:9.5-8.el10_2.1",
+            "before": "0:9.5-8.el10_2",
+            "name": "coreutils-single"
+          },
+          {
+            "after": "0:8.12.1-4.el10_2.7",
+            "before": "0:8.12.1-4.el10_2.4",
+            "name": "curl"
+          },
+          {
+            "after": "0:2.7.3-1.el10_2.7",
+            "before": "0:2.7.3-1.el10_2.1",
+            "name": "expat"
+          },
+          {
+            "after": "0:5.3.0-6.el10_2.1",
+            "before": "0:5.3.0-6.el10",
+            "name": "gawk"
+          },
+          {
+            "after": "0:2.80.4-12.el10_2.22",
+            "before": "0:2.80.4-12.el10_2.21",
+            "name": "glib2"
+          },
+          {
+            "after": "0:2.39-145.el10_2",
+            "before": "0:2.39-128.el10_2",
+            "name": "glibc"
+          },
+          {
+            "after": "0:2.39-145.el10_2",
+            "before": "0:2.39-128.el10_2",
+            "name": "glibc-common"
+          },
+          {
+            "after": "0:2.39-145.el10_2",
+            "before": "0:2.39-128.el10_2",
+            "name": "glibc-langpack-en"
+          },
+          {
+            "after": "0:2.39-145.el10_2",
+            "before": "0:2.39-128.el10_2",
+            "name": "glibc-minimal-langpack"
+          },
+          {
+            "after": "0:3.8.10-5.el10_2",
+            "before": "0:3.8.10-4.el10_2",
+            "name": "gnutls"
+          },
+          {
+            "after": "0:3.7.7-11.el10_2",
+            "before": "0:3.7.7-10.el10_2",
+            "name": "libarchive"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "before": "0:2.40.2-18.el10",
+            "name": "libblkid"
+          },
+          {
+            "after": "0:8.12.1-4.el10_2.7",
+            "before": "0:8.12.1-4.el10_2.4",
+            "name": "libcurl-minimal"
+          },
+          {
+            "after": "0:2.1.13-1.el10_2",
+            "before": "0:2.1.12-16.el10",
+            "name": "libevent"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "before": "0:2.40.2-18.el10",
+            "name": "libfdisk"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "before": "0:2.40.2-18.el10",
+            "name": "libmount"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "before": "0:2.40.2-18.el10",
+            "name": "libsmartcols"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "before": "0:2.40.2-18.el10",
+            "name": "libuuid"
+          },
+          {
+            "after": "0:2.12.5-10.el10_2.4",
+            "before": "0:2.12.5-10.el10_2.3",
+            "name": "libxml2"
+          },
+          {
+            "after": "0:9.9p1-29.el10_2",
+            "before": "0:9.9p1-25.el10_2",
+            "name": "openssh"
+          },
+          {
+            "after": "0:9.9p1-29.el10_2",
+            "before": "0:9.9p1-25.el10_2",
+            "name": "openssh-clients"
+          },
+          {
+            "after": "1:3.5.8-2.el10_2",
+            "before": "1:3.5.5-6.el10_2",
+            "name": "openssl-libs"
+          },
+          {
+            "after": "0:10.44-1.5.el10_2",
+            "before": "0:10.44-1.el10.3",
+            "name": "pcre2"
+          },
+          {
+            "after": "0:10.44-1.5.el10_2",
+            "before": "0:10.44-1.el10.3",
+            "name": "pcre2-syntax"
+          },
+          {
+            "after": "0:5.74-515.el10_2",
+            "before": "0:5.74-512.2.el10_0",
+            "name": "perl-AutoLoader"
+          },
+          {
+            "after": "0:1.89-515.el10_2",
+            "before": "0:1.89-512.2.el10_0",
+            "name": "perl-B"
+          },
+          {
+            "after": "0:0.68-515.el10_2",
+            "before": "0:0.68-512.2.el10_0",
+            "name": "perl-Class-Struct"
+          },
+          {
+            "after": "0:1.56-515.el10_2",
+            "before": "0:1.56-512.2.el10_0",
+            "name": "perl-DynaLoader"
+          },
+          {
+            "after": "0:1.38-515.el10_2",
+            "before": "0:1.38-512.2.el10_0",
+            "name": "perl-Errno"
+          },
+          {
+            "after": "0:1.18-515.el10_2",
+            "before": "0:1.18-512.2.el10_0",
+            "name": "perl-Fcntl"
+          },
+          {
+            "after": "0:2.86-515.el10_2",
+            "before": "0:2.86-512.2.el10_0",
+            "name": "perl-File-Basename"
+          },
+          {
+            "after": "0:1.14-515.el10_2",
+            "before": "0:1.14-512.2.el10_0",
+            "name": "perl-File-stat"
+          },
+          {
+            "after": "0:2.05-515.el10_2",
+            "before": "0:2.05-512.2.el10_0",
+            "name": "perl-FileHandle"
+          },
+          {
+            "after": "0:1.14-515.el10_2",
+            "before": "0:1.14-512.2.el10_0",
+            "name": "perl-Getopt-Std"
+          },
+          {
+            "after": "0:1.55-515.el10_2",
+            "before": "0:1.55-512.2.el10_0",
+            "name": "perl-IO"
+          },
+          {
+            "after": "0:1.22-515.el10_2",
+            "before": "0:1.22-512.2.el10_0",
+            "name": "perl-IPC-Open3"
+          },
+          {
+            "after": "0:1.17-515.el10_2",
+            "before": "0:1.17-512.2.el10_0",
+            "name": "perl-NDBM_File"
+          },
+          {
+            "after": "0:2.20-515.el10_2",
+            "before": "0:2.20-512.2.el10_0",
+            "name": "perl-POSIX"
+          },
+          {
+            "after": "0:1.02-515.el10_2",
+            "before": "0:1.02-512.2.el10_0",
+            "name": "perl-SelectSaver"
+          },
+          {
+            "after": "0:1.09-515.el10_2",
+            "before": "0:1.09-512.2.el10_0",
+            "name": "perl-Symbol"
+          },
+          {
+            "after": "0:5.27-3.el10_2.1",
+            "before": "0:5.27-3.el10",
+            "name": "perl-URI"
+          },
+          {
+            "after": "0:2.27-515.el10_2",
+            "before": "0:2.27-512.2.el10_0",
+            "name": "perl-base"
+          },
+          {
+            "after": "0:0.61.000-515.el10_2",
+            "before": "0:0.61.000-512.2.el10_0",
+            "name": "perl-if"
+          },
+          {
+            "after": "4:5.40.2-515.el10_2",
+            "before": "4:5.40.2-512.2.el10_0",
+            "name": "perl-interpreter"
+          },
+          {
+            "after": "0:0.65-515.el10_2",
+            "before": "0:0.65-512.2.el10_0",
+            "name": "perl-lib"
+          },
+          {
+            "after": "4:5.40.2-515.el10_2",
+            "before": "4:5.40.2-512.2.el10_0",
+            "name": "perl-libs"
+          },
+          {
+            "after": "0:1.12-515.el10_2",
+            "before": "0:1.12-512.2.el10_0",
+            "name": "perl-locale"
+          },
+          {
+            "after": "0:1.29-515.el10_2",
+            "before": "0:1.29-512.2.el10_0",
+            "name": "perl-mro"
+          },
+          {
+            "after": "0:1.37-515.el10_2",
+            "before": "0:1.37-512.2.el10_0",
+            "name": "perl-overload"
+          },
+          {
+            "after": "0:0.02-515.el10_2",
+            "before": "0:0.02-512.2.el10_0",
+            "name": "perl-overloading"
+          },
+          {
+            "after": "0:1.05-515.el10_2",
+            "before": "0:1.05-512.2.el10_0",
+            "name": "perl-vars"
+          },
+          {
+            "after": "0:3.14.8-1.el10_2",
+            "before": "0:3.14.7-2.el10_2",
+            "name": "python3.14"
+          },
+          {
+            "after": "0:3.14.8-1.el10_2",
+            "before": "0:3.14.7-2.el10_2",
+            "name": "python3.14-libs"
+          },
+          {
+            "after": "0:1.10.2.1-1.el10_2",
+            "before": "0:1.10.1.1-2.el10",
+            "name": "rpm-sequoia"
+          },
+          {
+            "after": "0:2026e-1.el10_2",
+            "before": "0:2026c-1.el10_2",
+            "name": "tzdata"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "before": "0:2.40.2-18.el10",
+            "name": "util-linux"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "before": "0:2.40.2-18.el10",
+            "name": "util-linux-core"
+          },
+          {
+            "after": "1:5.6.2-4.el10_2.1",
+            "before": "1:5.6.2-4.el10_0",
+            "name": "xz"
+          },
+          {
+            "after": "1:5.6.2-4.el10_2.1",
+            "before": "1:5.6.2-4.el10_0",
+            "name": "xz-libs"
+          }
+        ],
+        "os_after": "10.2",
+        "os_before": "10.2",
+        "removed": [],
+        "rpm_rows_after": 227,
+        "rpm_rows_before": 226,
+        "software_after": 224,
+        "software_before": 223,
+        "software_changed": 60,
+        "status": "completed"
+      },
+      "web_actual_versions": {
+        "brotli-libs": "1.2.1-r0",
+        "curl": "8.23.0-r0",
+        "libcurl": "8.23.0-r0",
+        "libexpat": "2.10.0-r0"
+      },
+      "workflow": {
+        "benchmark": null,
+        "both_real_flow_job_ids_present": true,
+        "component_count": 5,
+        "decisions": 3,
+        "document_formats": 4,
+        "failure_retry_deduplicated": true,
+        "report_downloads": 9,
+        "result": "passed",
+        "stored_flow_hashes_unchanged": true
+      }
+    }
+  },
+  "archives": {
+    "amd64": {
+      "bytes": 3887458,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/private/amd64-41588865769.zip",
+      "sha256": "a92329a65585e867bd940a31a6def2487edb1756ce28388b7d63512f7b46f068"
+    },
+    "arm64": {
+      "bytes": 1255048,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/private/arm64-41588865769.zip",
+      "sha256": "e66fb6a9f2b316a6a93cdb9f5787c593abc44b2090a8014c3ba449b8ce2e0eba"
+    },
+    "unit": {
+      "bytes": 4299,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/private/unit-41588865769.zip",
+      "sha256": "19cfbb0a8d3f1840db668d671715086dfd6f8c5e5abb310a5112fa6a2111e7ed"
+    }
+  },
+  "ci_run_id": 41588865769,
+  "created_at_utc": "2026-11-04T02:17:36.870296+00:00",
+  "documentation_skip_source": "https://docs.github.com/en/actions/how-tos/manage-workflow-runs/skip-workflow-runs",
+  "global_findings_comparison": {
+    "current_provider_id_union_across_both_arches": 236,
+    "previous_2e45_provider_id_union": 240,
+    "scope": "Provider-ID sets, not independent CVE/exploitability counts. Cross-date scan differences alone are not a measured count of fixed vulnerabilities; Web4 IDs also have actual same-ecosystem2.10.0 fixed-version evidence and installed-version change."
+  },
+  "local_inputs": [
+    {
+      "bytes": 92947,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/python/final-runtime-review.json",
+      "sha256": "0458a22f5074f46fad49688b8f615e2381fcdc103612fcae5884004deccacdbf"
+    },
+    {
+      "bytes": 66025,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-amd64/release/images/summary.json",
+      "sha256": "85380d0b6f33a8332b43fd6bf72f7de73db37da586946d04820d339ac5d560b8"
+    },
+    {
+      "bytes": 2412,
+      "path": "docker/langflow.Dockerfile",
+      "sha256": "bb38c30695ea422839935a6209786f8ab8728d054210756d2b1af1e9d6b59cb6"
+    },
+    {
+      "bytes": 407,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/delta/verify-count-excerpt.json",
+      "sha256": "e1a2de25168d425852c45d54bf77fe55371f45f7b820aa11a3ce24db085fea5c"
+    }
+  ],
+  "method": {
+    "algorithms": "Normalize PyPI names by collapsing [-_.] to hyphen and lowercase. Require all52 explicit Dockerfile pins equal installed versions. Alias grouping unions each fetched document id with all aliases, counting connected components among selected advisory IDs. Compare default RPM(name,version,arch) to RHEL(name,fullEVR stripped epoch,arch), and full epoch RHEL set to current systemafter. Calculate provider-ID union across images once per architecture; never sum overlapping image counts.",
+    "execution": "Inline stdlib Python in tools.exec_command; no new producer file, network, scan, build, container run, installation, artifact download or extraction. Existing ZIP JSON/text/XML members read in memory only.",
+    "helper_loading": "AST-extract only named function definitions; do not run prior producer main or write old output.",
+    "reused_functions": [
+      "alias_groups",
+      "norm",
+      "probe_review",
+      "rpm_rows",
+      "workflow_review"
+    ],
+    "reused_helper_file": "/private/tmp/arc-runtime-maintenance.wT9huB/python/review_final_runtime.py",
+    "reused_helper_sha256": "e960a0ff0a0c92cd82d5146b3b437e2de0d62cf14b6ef6d510d8e0b0e96e3495"
+  },
+  "prior_review_sha256": "0458a22f5074f46fad49688b8f615e2381fcdc103612fcae5884004deccacdbf",
+  "prior_sealed_packet_manifest_sha256": "0466646bd5eecd32768e9fc61bf138815853292049a41a95dc1d98927e2081ef",
+  "qualifications": [
+    "CI checks passed for this exact code source. AC-19/full release acceptance still pending with residual Python/Debian/native licensing findings.",
+    "RHEL no-match covers this exact package-manager inventory and CPE queries only; embedded/static libraries and vendor-source/patch correspondence remain outside it.",
+    "Native followup used carried quota and read only23445B notices. Old2e45 libdb2 hash remains bound to its old image; no claim of new-image full-byte equivalence.",
+    "ARM skips native/browsers; Linux ARM cloud acceptance does not replace a Mac host validation.",
+    "Final docs/evidence-only commit may use [skip ci] for push/pull_request per GitHub docs; skip is not pass or a new image build. Required checks may stay Pending.",
+    "Existing source2e45 review and previous sealed payload bytes remain unchanged."
+  ],
+  "schema": "arc.third-ci-independent-final-review.v1",
+  "source_commit": "185848006c2ea97ad24bead72f726c3a0d467dd4",
+  "unit_and_frontend": {
+    "architecture_scope": "191-unit and29frontend verify job is AMD64; ARM is the actual backend Flow/probe lane.",
+    "frontend": 29,
+    "frontend_log_excerpt": {
+      "job": 125760659526,
+      "lines": [
+        "2026-11-03T06:17:24.7999072Z 191 passed, 1 warning in 5.73s",
+        "2026-11-03T06:17:48.6502011Z  Test Files  5 passed (5)",
+        "2026-11-03T06:17:48.6502985Z       Tests  29 passed (29)"
+      ],
+      "method": "GitHub MCP decoded verify job logs; only count excerpt retained, ANSI removed",
+      "run": 41588865769,
+      "source": "185848006c2ea97ad24bead72f726c3a0d467dd4"
+    },
+    "junit": {
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "tests": 191
+    }
+  },
+  "zip_members_read_and_hashed": [
+    {
+      "archive_arch": "amd64",
+      "bytes": 30,
+      "member": "release/api-pip-check.stdout",
+      "root_manifest_hash_matched": true,
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "archive_arch": "amd64",
+      "bytes": 30,
+      "member": "release/langflow-pip-check.stdout",
+      "root_manifest_hash_matched": true,
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "archive_arch": "amd64",
+      "bytes": 2294,
+      "member": "release/dependency-compatibility.stdout",
+      "root_manifest_hash_matched": true,
+      "sha256": "1349d4b346fc7fb613c00e3189462b807ec15b77e5d5f9d3f4a4e1685dbfaa2c"
+    },
+    {
+      "archive_arch": "amd64",
+      "bytes": 7093,
+      "member": "workflow.json",
+      "root_manifest_hash_matched": false,
+      "sha256": "aac7e4107c4b79ad8b8c7846c7a17c476755b616e8c8690bd008d0987231dd7b"
+    },
+    {
+      "archive_arch": "amd64",
+      "bytes": 778942,
+      "member": "release/images/langflow-python.stdout",
+      "root_manifest_hash_matched": true,
+      "sha256": "5c6e53da4efe5bb4dcd5f9cda5054fe05102a717361b82cb65801a8b7f3a6c97"
+    },
+    {
+      "archive_arch": "amd64",
+      "bytes": 310263,
+      "member": "release/images/langflow-inventory.json",
+      "root_manifest_hash_matched": true,
+      "sha256": "8f003bd946b0fe9fbedd5190207969c3fcd45b43b6221e2e5a8ffcca4ae863ff"
+    },
+    {
+      "archive_arch": "amd64",
+      "bytes": 21080,
+      "member": "release/images/web-inventory.json",
+      "root_manifest_hash_matched": true,
+      "sha256": "9bdb5482138958dc90a1d440ebd3f192e385d2de8d57be67a852c85f7b7a5c1e"
+    },
+    {
+      "archive_arch": "amd64",
+      "bytes": 65527,
+      "member": "release/images/summary.json",
+      "root_manifest_hash_matched": true,
+      "sha256": "8ec9502da4e1b15b36ee74e3a2595facf82d88619cef3bcb158dfbf56a0c16e8"
+    },
+    {
+      "archive_arch": "amd64",
+      "bytes": 1979275,
+      "member": "release/images/vulnerabilities.json",
+      "root_manifest_hash_matched": true,
+      "sha256": "e65cca89c8c44a34c7db478bf373495cb24d893d4100ce7df6524b33761d8f91"
+    },
+    {
+      "archive_arch": "amd64",
+      "bytes": 9313,
+      "member": "release/system/manifest.json",
+      "root_manifest_hash_matched": true,
+      "sha256": "50a581d20ed9ea10e3c27ec4d69c61f661756b3a5792fe42ca51099bee746589"
+    },
+    {
+      "archive_arch": "amd64",
+      "bytes": 23633,
+      "member": "release/system/rpm-before.stdout",
+      "root_manifest_hash_matched": true,
+      "sha256": "6331f46a11e7d1c06353fbba0906738eb83cac3f5765fa90878ab8543ed919a1"
+    },
+    {
+      "archive_arch": "amd64",
+      "bytes": 23754,
+      "member": "release/system/rpm-after.stdout",
+      "root_manifest_hash_matched": true,
+      "sha256": "bd866069424571ba5fe2101f75a8508f7c486e2545924aa41a58eae1036ff34d"
+    },
+    {
+      "archive_arch": "amd64",
+      "bytes": 670,
+      "member": "release/rhel/summary.json",
+      "root_manifest_hash_matched": true,
+      "sha256": "270bb4564d5aa4956756b8051f948c088a2de50e2ee329e3f603ced592d11e7f"
+    },
+    {
+      "archive_arch": "amd64",
+      "bytes": 330365,
+      "member": "release/rhel/rpm-mappings.json",
+      "root_manifest_hash_matched": true,
+      "sha256": "1d3e05410604e80cd848ef3a38d10a7a3545de65d04e4e2bfde104253de8c5fd"
+    },
+    {
+      "archive_arch": "amd64",
+      "bytes": 890714,
+      "member": "release/images/package-mappings.json",
+      "root_manifest_hash_matched": true,
+      "sha256": "a515d0aa66208ded10b267a4291a3e7b5a20926136ad7de26518dc8c24eec1a4"
+    },
+    {
+      "archive_arch": "amd64",
+      "bytes": 7494,
+      "member": "release/rhel/manifest.json",
+      "root_manifest_hash_matched": true,
+      "sha256": "70bbd72bd93acce8586c29282e6291320c9405d39e639d764e0e8f7486cacebc"
+    },
+    {
+      "archive_arch": "amd64",
+      "bytes": 37517,
+      "member": "release/native/materials.json",
+      "root_manifest_hash_matched": true,
+      "sha256": "557010a4b7d40eb40176cd926df59946603d95e843047ed51826e64a2e7fc60b"
+    },
+    {
+      "archive_arch": "arm64",
+      "bytes": 30,
+      "member": "release/api-pip-check.stdout",
+      "root_manifest_hash_matched": true,
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "archive_arch": "arm64",
+      "bytes": 30,
+      "member": "release/langflow-pip-check.stdout",
+      "root_manifest_hash_matched": true,
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "archive_arch": "arm64",
+      "bytes": 2294,
+      "member": "release/dependency-compatibility.stdout",
+      "root_manifest_hash_matched": true,
+      "sha256": "1349d4b346fc7fb613c00e3189462b807ec15b77e5d5f9d3f4a4e1685dbfaa2c"
+    },
+    {
+      "archive_arch": "arm64",
+      "bytes": 7093,
+      "member": "workflow.json",
+      "root_manifest_hash_matched": false,
+      "sha256": "1c84c2fe62555cb48d5a5f828340e23550a47a957d10d68077593080320f1bb9"
+    },
+    {
+      "archive_arch": "arm64",
+      "bytes": 774610,
+      "member": "release/images/langflow-python.stdout",
+      "root_manifest_hash_matched": true,
+      "sha256": "bd59885c4c7416474b8538f2b8a779a9eacc7b83b9ed493dfa8cafc1e3ce6fcd"
+    },
+    {
+      "archive_arch": "arm64",
+      "bytes": 308811,
+      "member": "release/images/langflow-inventory.json",
+      "root_manifest_hash_matched": true,
+      "sha256": "571e6130a89549007f7b557816e7137ad03412110b69c2a01e5d646902640400"
+    },
+    {
+      "archive_arch": "arm64",
+      "bytes": 21037,
+      "member": "release/images/web-inventory.json",
+      "root_manifest_hash_matched": true,
+      "sha256": "aea03d8add0203aa264fdf62480d89354eb26e1ece16618fd184b399444eb60d"
+    },
+    {
+      "archive_arch": "arm64",
+      "bytes": 65527,
+      "member": "release/images/summary.json",
+      "root_manifest_hash_matched": true,
+      "sha256": "ad37e939308762130215c25f0a7b173916e67bee96b88ef00b7a4bbcaad0c9ee"
+    },
+    {
+      "archive_arch": "arm64",
+      "bytes": 1979275,
+      "member": "release/images/vulnerabilities.json",
+      "root_manifest_hash_matched": true,
+      "sha256": "d91f19c78de1e2a2b8c617729ba6b5507484852835c7d6d4c3b1a73697dccbde"
+    },
+    {
+      "archive_arch": "arm64",
+      "bytes": 9313,
+      "member": "release/system/manifest.json",
+      "root_manifest_hash_matched": true,
+      "sha256": "60ff85d1006497f3ea3c0ccd5fe0ad72436e8264ef4a2f99727c16eb2bc1c219"
+    },
+    {
+      "archive_arch": "arm64",
+      "bytes": 23790,
+      "member": "release/system/rpm-before.stdout",
+      "root_manifest_hash_matched": true,
+      "sha256": "abc88073fef6df7eb8fa9b1df68eea84f3086382a16422beb8da9ccc85d0d676"
+    },
+    {
+      "archive_arch": "arm64",
+      "bytes": 23912,
+      "member": "release/system/rpm-after.stdout",
+      "root_manifest_hash_matched": true,
+      "sha256": "e546e71e11411660bd63b58cf7d69f73a374404d092a9cb131f40143b662a43c"
+    },
+    {
+      "archive_arch": "arm64",
+      "bytes": 670,
+      "member": "release/rhel/summary.json",
+      "root_manifest_hash_matched": true,
+      "sha256": "ea6adca8c00c172d47e4824e469a76f3bbdb6ce8593fbaddb5cbde8612c36e3b"
+    },
+    {
+      "archive_arch": "arm64",
+      "bytes": 330523,
+      "member": "release/rhel/rpm-mappings.json",
+      "root_manifest_hash_matched": true,
+      "sha256": "8e8fd39d3261e6ccdba26cdb4e2d68718597ce06750e63ba02d383bfd29ca386"
+    },
+    {
+      "archive_arch": "arm64",
+      "bytes": 887668,
+      "member": "release/images/package-mappings.json",
+      "root_manifest_hash_matched": true,
+      "sha256": "a489895f08f45cdd9484e79014f0fbbf85fa6661631eff9b89059e200adbacbc"
+    },
+    {
+      "archive_arch": "arm64",
+      "bytes": 7494,
+      "member": "release/rhel/manifest.json",
+      "root_manifest_hash_matched": true,
+      "sha256": "11a2e9fd540f048fe1bc931a7067951b85aab9e2346f0c51421fb8502e7ea827"
+    },
+    {
+      "archive_arch": "unit",
+      "bytes": 26317,
+      "member": "arc-unit.xml",
+      "sha256": "aa717f3e1225eeec7d82b8287892eaeda01c8a8b9f828fee17f2a565fc90724c"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "arc.failed-collection-attempt.v1",
+  "recorded_at_utc": "2026-11-03T05:44:42.886205+00:00",
+  "actual_command": "python3 /private/tmp/arc-runtime-maintenance.wT9huB/python/collect_candidate_metadata.py",
+  "exit_code": 1,
+  "exception": "RuntimeError: No matching release in official history: stable",
+  "producer_sha256": "49b4b8e0e0891cbefb6a7b4335530bdd502c9f71c02eda051faeef17f6f595dd",
+  "subsequent_diagnostic": {
+    "url": "https://pypi.org/project/langflow-base/",
+    "status": 200,
+    "bytes": 3038,
+    "raw_response_sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea",
+    "html_title": "Client Challenge"
+  },
+  "limitation": "Initial failed process did not persist its in-memory response record; subsequent diagnostic is a separate request, not the initial byte identity."
+}

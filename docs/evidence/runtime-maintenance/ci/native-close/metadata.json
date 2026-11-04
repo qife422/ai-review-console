@@ -1,0 +1,491 @@
+{
+  "source": "adb93c4b9f6af508188f696b8d7d1ef1dc5668ac",
+  "run": 41760412382,
+  "method": "GitHub MCP workflow job and artifact APIs; source binding verified before member selection; signed download URLs not retained",
+  "jobs": [
+    {
+      "id": 126346526095,
+      "name": "workflow-browser (ubuntu-24.04-arm, arm64, arm-backend)",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 41760412382,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Record runner architecture and require 12 GiB available",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run python -m venv .venv && .venv/bin/pip install -r requirements.lock",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Run npm ci && npm run build",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Build exact application images",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Start isolated stores and workflow runtime",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Wait for API and Web",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Real uploads, Intake, three decisions, nine downloads, failure and retry",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Install bounded browser CLI runtime",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12
+        },
+        {
+          "name": "Install pinned Chinese browser font",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13
+        },
+        {
+          "name": "Verify Chinese browser font availability",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14
+        },
+        {
+          "name": "Keyboard upload to decision and downloadable reports",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15
+        },
+        {
+          "name": "Collect bounded image and license evidence (not release acceptance)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Preserve compact runtime diagnostics",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 34
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 35
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 36
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 37
+        }
+      ]
+    },
+    {
+      "id": 126346526283,
+      "name": "verify",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 41760412382,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Initialize containers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run python -m pip install --upgrade pip",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run pip install -r requirements.lock",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Run pip install -e '.[dev]'",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Run ruff check .",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Run pytest --junitxml=\"$RUNNER_TEMP/arc-unit.xml\"",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Reject common committed secret formats",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Run npm ci",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "Run npm test -- --run",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        },
+        {
+          "name": "Run npm run build",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14
+        },
+        {
+          "name": "Run docker compose config --quiet",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 30
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 31
+        },
+        {
+          "name": "Stop containers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 32
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 33
+        }
+      ]
+    },
+    {
+      "id": 126346526549,
+      "name": "workflow-browser (ubuntu-latest, amd64, complete)",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 41760412382,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Record runner architecture and require 12 GiB available",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run python -m venv .venv && .venv/bin/pip install -r requirements.lock",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Run npm ci && npm run build",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Build exact application images",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Start isolated stores and workflow runtime",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Wait for API and Web",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Real uploads, Intake, three decisions, nine downloads, failure and retry",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Install bounded browser CLI runtime",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "Install pinned Chinese browser font",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        },
+        {
+          "name": "Verify Chinese browser font availability",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14
+        },
+        {
+          "name": "Keyboard upload to decision and downloadable reports",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        },
+        {
+          "name": "Collect bounded image and license evidence (not release acceptance)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Preserve compact runtime diagnostics",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 34
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 35
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 36
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 37
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 13290541686,
+      "name": "workflow-browser-verification-amd64",
+      "size_in_bytes": 3893955,
+      "url": "https://api.github.com/repos/qife422/ai-review-console/actions/artifacts/13290541686",
+      "archive_download_url": "https://api.github.com/repos/qife422/ai-review-console/actions/artifacts/13290541686/zip",
+      "expired": false,
+      "created_at": "2026-11-04T02:30:58Z",
+      "expires_at": "2026-11-11T02:30:56Z",
+      "updated_at": "2026-11-04T02:30:58Z",
+      "digest": "sha256:3ed6d965d024c891888a154d303f7322b21988180ca7a95dc51b5a2c1db95504",
+      "workflow_run": {
+        "id": 41760412382,
+        "repository_id": 1417816141,
+        "head_repository_id": 1417816141,
+        "head_branch": "main",
+        "head_sha": "adb93c4b9f6af508188f696b8d7d1ef1dc5668ac"
+      }
+    },
+    {
+      "id": 13290356677,
+      "name": "unit-verification",
+      "size_in_bytes": 4254,
+      "url": "https://api.github.com/repos/qife422/ai-review-console/actions/artifacts/13290356677",
+      "archive_download_url": "https://api.github.com/repos/qife422/ai-review-console/actions/artifacts/13290356677/zip",
+      "expired": false,
+      "created_at": "2026-11-04T02:24:49Z",
+      "expires_at": "2026-11-11T02:24:49Z",
+      "updated_at": "2026-11-04T02:24:49Z",
+      "digest": "sha256:75ac0a0cb3b2514038296a850108ee8a06fecbd3384be145f5e21d0362bda952",
+      "workflow_run": {
+        "id": 41760412382,
+        "repository_id": 1417816141,
+        "head_repository_id": 1417816141,
+        "head_branch": "main",
+        "head_sha": "adb93c4b9f6af508188f696b8d7d1ef1dc5668ac"
+      }
+    },
+    {
+      "id": 13290317358,
+      "name": "workflow-browser-verification-arm64",
+      "size_in_bytes": 1255195,
+      "url": "https://api.github.com/repos/qife422/ai-review-console/actions/artifacts/13290317358",
+      "archive_download_url": "https://api.github.com/repos/qife422/ai-review-console/actions/artifacts/13290317358/zip",
+      "expired": false,
+      "created_at": "2026-11-04T02:28:44Z",
+      "expires_at": "2026-11-11T02:28:43Z",
+      "updated_at": "2026-11-04T02:28:44Z",
+      "digest": "sha256:a28cee959a0a109aa5b8b8c0a13f70ff220210ef0ebb661dc8089ce9c276f9cd",
+      "workflow_run": {
+        "id": 41760412382,
+        "repository_id": 1417816141,
+        "head_repository_id": 1417816141,
+        "head_branch": "main",
+        "head_sha": "adb93c4b9f6af508188f696b8d7d1ef1dc5668ac"
+      }
+    }
+  ],
+  "verify_count_excerpt": [
+    "2026-11-04T02:24:09.5437693Z 191 passed, 1 warning in 5.49s",
+    "2026-11-04T02:24:37.8411517Z  Test Files  5 passed (5)",
+    "2026-11-04T02:24:37.8412537Z       Tests  29 passed (29)"
+  ]
+}

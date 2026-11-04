@@ -1,0 +1,377 @@
+{
+  "created_at": "2026-11-03T06:02:33.915193+00:00",
+  "producer": "scripts/verify_native_materials.py",
+  "producer_sha256": "bedc118a499831587e71be6a71030621486540acc4c06c4b54a18085f94462b5",
+  "images": [
+    {
+      "image_name": "langflow",
+      "image_id": "sha256:8db643cf50f215d67257fdd1f85c9e286092c9877d93d54e0117925850dd7c21",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "-i",
+        "--pull",
+        "never",
+        "--read-only",
+        "--network",
+        "none",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--memory",
+        "512m",
+        "--pids-limit",
+        "64",
+        "--log-driver",
+        "none",
+        "--entrypoint",
+        "python",
+        "sha256:8db643cf50f215d67257fdd1f85c9e286092c9877d93d54e0117925850dd7c21",
+        "-",
+        "--_collect",
+        "langflow",
+        "{\"files\": 20, \"input_bytes\": 67108864, \"text_bytes\": 4194304}"
+      ],
+      "started_at": "2026-11-03T06:02:33.033234+00:00",
+      "ended_at": "2026-11-03T06:02:33.398829+00:00",
+      "producer_sha256": "bedc118a499831587e71be6a71030621486540acc4c06c4b54a18085f94462b5",
+      "stdin_sha256": "bedc118a499831587e71be6a71030621486540acc4c06c4b54a18085f94462b5",
+      "stdout_sha256": "a6cd2ea9442c236020229c56d39e9c7febcb5866d97f9579400b1d84d711a745",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stderr": "",
+      "collection_state": "collected_with_explicit_scope",
+      "result": {
+        "image_name": "langflow",
+        "collected_at": "2026-11-03T06:02:33.327990+00:00",
+        "architecture": "x86_64",
+        "packages": [
+          {
+            "name": "ibm_db",
+            "version": "3.2.9",
+            "license_expression": null,
+            "root": "/app/.venv/lib/python3.14/site-packages",
+            "dist_info": "/app/.venv/lib/python3.14/site-packages/ibm_db-3.2.9.dist-info",
+            "declared_file_state": "available"
+          },
+          {
+            "name": "psycopg2-binary",
+            "version": "2.9.12",
+            "license_expression": null,
+            "root": "/app/.venv/lib/python3.14/site-packages",
+            "dist_info": "/app/.venv/lib/python3.14/site-packages/psycopg2_binary-2.9.12.dist-info",
+            "declared_file_state": "available"
+          }
+        ],
+        "files": [
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/ibm_db-3.2.9.dist-info/METADATA",
+            "state": "recorded",
+            "sha256": "5232e86cc3a9dcc8dd219348e5a98cffb019bfe610630d77c76842870b1e3d1b",
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/ibm_db-3.2.9.dist-info/METADATA",
+            "file_bytes": 35811,
+            "bytes_read": 35811,
+            "purpose": "selected_distribution_metadata"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/ibm_db-3.2.9.dist-info/RECORD",
+            "state": "recorded",
+            "sha256": "9368be0a8c7b3d995e5822316e78f0b97dbb54f6f6ef820be62ba04cab1557f7",
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/ibm_db-3.2.9.dist-info/RECORD",
+            "file_bytes": 34157,
+            "bytes_read": 34157,
+            "purpose": "declared_file_list",
+            "package": "ibm_db"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/psycopg2_binary-2.9.12.dist-info/METADATA",
+            "state": "recorded",
+            "sha256": "8862662440db31080ef812221b3e5176c1b788730e5e1d1375490ac870cc5514",
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/psycopg2_binary-2.9.12.dist-info/METADATA",
+            "file_bytes": 4936,
+            "bytes_read": 4936,
+            "purpose": "selected_distribution_metadata"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/psycopg2_binary-2.9.12.dist-info/RECORD",
+            "state": "recorded",
+            "sha256": "4a299d827100763fc0f947e2c0754c3d653988b5411f915840f41b77cb251188",
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/psycopg2_binary-2.9.12.dist-info/RECORD",
+            "file_bytes": 3266,
+            "bytes_read": 3266,
+            "purpose": "declared_file_list",
+            "package": "psycopg2-binary"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license",
+            "state": "skipped",
+            "sha256": null,
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/clidriver/license",
+            "reason": "not_regular_file",
+            "purpose": "driver_legal_or_version",
+            "declared_owner": "ibm_db",
+            "owner_basis": "selected RECORD or explicit sibling clidriver directory; not vendor-source proof"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/odbc",
+            "state": "skipped",
+            "sha256": null,
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/odbc",
+            "reason": "missing_file",
+            "error_type": "FileNotFoundError",
+            "purpose": "driver_legal_or_version",
+            "declared_owner": "ibm_db",
+            "owner_basis": "selected RECORD or explicit sibling clidriver directory; not vendor-source proof"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/odbc_REDIST.txt",
+            "state": "recorded",
+            "sha256": "e0829289cddd2710efeed0d442085f3d13609e21c5cb226d383d228be78f93ec",
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/odbc_REDIST.txt",
+            "file_bytes": 3442,
+            "bytes_read": 3442,
+            "text": "IBM Data Server Driver for ODBC and CLI V11.5 Redistributables:\n\nThe following list includes files that are provided to Licensee pursuant to the Redistributables section of the IBM International Program License Agreements License Information that applies to this Program:\n\nList Redistributable files:\n\nCommon list for all OS - Unix,Linux,MacOS,Windows:\n\n04370923.cnv\n08500923.cnv\n08501252.cnv \n08600923.cnv\n08630923.cnv\n09230437.cnv\n09230850.cnv\n09230860.cnv\n09231043.cnv\n09231051.cnv\n09231114.cnv\n09231208.cnv\n09231252.cnv\n09231275.cnv\n09241252.cnv\n09370950.cnv\n10430923.cnv\n10510923.cnv\n11140923.cnv\n12080923.cnv\n12520850.cnv\n12520923.cnv\n12750923.cnv\n1388ucs2.cnv\n1399ucs2.cnv\n0939ucs2.cnv\n0930ucs2.cnv\n1390ucs2.cnv\nucs20943.cnv\n0954ucs2.cnv\n5039ucs2.cnv\n0943ucs2.cnv\nIBM00850.ucs\nIBM00923.ucs\nIBM01252.ucs\ndb2cli.ini.sample  \ndb2dsdriver.cfg.sample \ndb2dsdriver.xsd\nDigiCertGlobalRootCA.arm\ndb2dsdcfgfill  \ndb2ldcfg\ndb2lddrg\ndb2level\ndb2trc\ndb2drdat\ndb2cli\ndb2diag\ndb2support\ndb2admh.mo\ndb2adm.mo\ndb2caem.mo\ndb2supp.mo\ndb2cklog.mo\ndb2fodc.mo\ndb2stt.mo\ndb2clia1.lst\ndb2clias.lst\ndb2clih.mo\ndb2cli.mo\ndb2clit.mo\ndb2clp.mo\ndb2clp2.mo\ndb2diag.mo\ndb2sqlh.mo\ndb2sql.mo\nIBMOSauthclient.so  \nIBMOSauthclient.so.1\nIBMIAMauth.so\nIBMkrb5.so\nlibdb2clixml4c.so\nlibdb2clixml4c.so.1\nlibDB2xml4c.so\nlibDB2xml4c.so.58\nlibdb2.so\nlibdb2.so.1\nlibdb2o.so\nlibdb2o.so.1\nsqlda.h\nsqlcli1.h\nsqlsystm.h\nsqlca.h\nsqlcli.h\nsql.h\nsqlenv.h\nsqlunx.h\nsqlstate.h\nsqlext.h\nsqlucode.h\nsqltypes.h\ndb2cli.bnd\ndb2clipk.bnd\ndb2clist.bnd\ndb2ajgrt.bnd\ndb2spcdb.bnd\ndb2cli.lst\nddcsvm.lst\nddcsmvs.lst\nddcsvse.lst\nddcs400.lst\nconlic.bin\nodbc_notices.txt\nodbc_REDIST.txt\n\nFor AIX in addition to common files:\nlibdb2.a\nlibdb2clixml4c.a\nlibDB2xml4c.a\ndb2o.o\nlibdb2osse_db2.a\nIBMkrb5.a\nIBMIAMauth.a\nIBMOSauthclient.a  \n\nFor MacOS in addition to common files:\nlibdb2.dylib\nlibdb2o.dylib\nlibdb2clixml4c.dylib\nlibDB2xml4c.58.0.dylib\nlibDB2xml4c.58.dylib\nlibDB2xml4c.dylib\nIBMIAMauth.dylib\n\nFor Windows in addition to common files:\ndb2app.lib\ndb2app64.lib\ndb2cli.lib\ndb2cli64.lib\ndb2clio.lib\ndb2app.dll\ndb2app64.dll\ndb2cli.dll\ndb2cli64.dll\ndb2clio.dll\ndb2cli.exe\ndb2cli32.exe\ndb2clixml4c.dll\ndb2clixml4c64.dll\ndb2diag.exe\ndb2drdat.exe\ndb2dsdcfgfill.exe  \ndb2ldap.dll\ndb2ldap64.dll\ndb2ldapm.dll\ndb2ldapm64.dll\ndb2ldcfg.exe\ndb2level.exe\ndb2odbc.dll\ndb2odbc64.dll\ndb2odbch.dll\ndb2odbch64.dll\ndb2oreg1.exe\ndb2oreg132.exe\ndb2osse.dll\ndb2osse64.dll\ndb2support.exe\ndb2trc.exe\ndb2trc32.exe\ndb2trcapi.dll\ndb2trcapi64.dll\ndb2trcd.exe\ndb2trcd64.exe\nDB2xml4c_cli_5_8.dll\nDB2xml4c_cli64_5_8.dll\nDB2xml4c_cli_5_8.dll.2.manifest\nDB2xml4c_cli64_5_8.dll.2.manifest\nIBM.DB2.APP.manifest\nIBM.DB2.APP64.manifest\nIBM.DB2.CLI.manifest\nIBM.DB2.CLI64.manifest\nIBM.DB2.CLIO.manifest\nIBM.DB2.CLIXML4C.manifest\nIBM.DB2.CLIXML4C64.manifest\nIBM.DB2.LDAP.manifest\nIBM.DB2.LDAP64.manifest\nIBM.DB2.LDAPM.manifest\nIBM.DB2.LDAPM64.manifest\nIBM.DB2.ODBC.manifest\nIBM.DB2.ODBC64.manifest\nIBM.DB2.ODBCH.manifest\nIBM.DB2.ODBCH64.manifest\nIBM.DB2.SEC.manifest\nIBM.DB2.SEC64.manifest\nibmdadb2.dll\nibmdadb264.dll\nIBMIAMauth.dll\nIBMIAMauth64.dll\nIBMkrb5.dll\nIBMkrb5TwoPart.dll\nIBMkrb5TwoPart64.dll\nIBMkrb564.dll\nIBMLDAPauthclient.dll\nIBMLDAPauthclient64.dll\nIBMOSauthclient.dll\nIBMOSauthclient64.dll\nIBMOSauthclientTwoPart.dll\nIBMOSauthclientTwoPart64.dll\ndb2diag.log \nodbc_notices.rtf\ndb2cli.opt\ndb2clir.dll\ndb2clir64.dll\ndb2clir64.dll.2.manifest\ndb2istring_v115.dll.2.manifest\ndb2odbcr.dll\ndb2odbcr64.dll\ndb2odbcr64.dll.2.manifest\n\n",
+            "purpose": "driver_legal_or_version",
+            "declared_owner": "ibm_db",
+            "owner_basis": "selected RECORD or explicit sibling clidriver directory; not vendor-source proof"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/properties/version/ibm.com_IBM_Data_Server_Driver_for_ODBC_and_CLI-11.5.0.swidtag",
+            "state": "recorded",
+            "sha256": "0ee2493274a4a0e424a8922bcb300f6850ffdeb1bfad9f169566121933fea897",
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/clidriver/properties/version/ibm.com_IBM_Data_Server_Driver_for_ODBC_and_CLI-11.5.0.swidtag",
+            "file_bytes": 682,
+            "bytes_read": 682,
+            "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SoftwareIdentity name=\"IBM Data Server Driver for ODBC and CLI\" tagId=\"ibm.com-6c595317370547be91661b78bedb6ad6-11.5.0\" version=\"11.5.0\" versionScheme=\"multipartnumeric\" xml:lang=\"en\" xmlns=\"http://standards.iso.org/iso/19770/-2/2015/schema.xsd\" xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://standards.iso.org/iso/19770/-2/2015-current/schema.xsd schema.xsd\">\n    <Meta persistentId=\"6c595317370547be91661b78bedb6ad6\"/>\n    <Meta generator=\"4-1-20200120\"/>\n    <Entity name=\"IBM\" regid=\"ibm.com\" role=\"licensor tagCreator softwareCreator\"/>\n</SoftwareIdentity>\n",
+            "purpose": "driver_legal_or_version",
+            "declared_owner": "ibm_db",
+            "owner_basis": "selected RECORD or explicit sibling clidriver directory; not vendor-source proof"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/redist.txt",
+            "state": "skipped",
+            "sha256": null,
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/clidriver/redist.txt",
+            "reason": "missing_file",
+            "error_type": "FileNotFoundError",
+            "purpose": "driver_legal_or_version",
+            "declared_owner": "ibm_db",
+            "owner_basis": "selected RECORD or explicit sibling clidriver directory; not vendor-source proof"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/version.txt",
+            "state": "skipped",
+            "sha256": null,
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/clidriver/version.txt",
+            "reason": "missing_file",
+            "error_type": "FileNotFoundError",
+            "purpose": "driver_legal_or_version",
+            "declared_owner": "ibm_db",
+            "owner_basis": "selected RECORD or explicit sibling clidriver directory; not vendor-source proof"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/lib/libdb2.so",
+            "state": "hashed_only",
+            "sha256": "739792fb3f5bd0c6749f38a8d622cf5af84cb3776e34806255db847ca788f036",
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/clidriver/lib/libdb2.so",
+            "file_bytes": 39827145,
+            "bytes_read": 39827145,
+            "elf": {
+              "state": "note_outside_prefix",
+              "build_ids": []
+            },
+            "purpose": "driver_elf_identity",
+            "declared_owner": "ibm_db",
+            "owner_basis": "selected RECORD or explicit sibling clidriver directory; not vendor-source proof"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/lib/libdb2.so.1",
+            "state": "prefix_only",
+            "sha256": null,
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/clidriver/lib/libdb2.so.1",
+            "file_bytes": 39827145,
+            "bytes_read": 262144,
+            "prefix_sha256": "90049069095a16c37c29583658fe58bdf953f3ae46732cd65da6d1e08dd73999",
+            "reason": "full_file_exceeds_remaining_input; prefix_identification_only",
+            "elf": {
+              "state": "note_outside_prefix",
+              "build_ids": []
+            },
+            "purpose": "driver_elf_identity",
+            "declared_owner": "ibm_db",
+            "owner_basis": "selected RECORD or explicit sibling clidriver directory; not vendor-source proof"
+          }
+        ],
+        "driver_directory_listing": [
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver",
+            "entries": [
+              "__init__.py",
+              "__pycache__",
+              "bin",
+              "bnd",
+              "cfg",
+              "cfgcache",
+              "conv",
+              "db2dump",
+              "include",
+              "lib",
+              "license",
+              "msg",
+              "properties",
+              "scripts",
+              "security64"
+            ]
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license",
+            "entries": [
+              "UNIX",
+              "odbc_REDIST.txt",
+              "odbc_notices.txt"
+            ]
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/odbc",
+            "state": "missing_or_outside_root"
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/properties",
+            "entries": [
+              "version"
+            ]
+          },
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/properties/version",
+            "entries": [
+              "ibm.com_IBM_Data_Server_Driver_for_ODBC_and_CLI-11.5.0.swidtag"
+            ]
+          }
+        ],
+        "remaining_budget": {
+          "files": 12,
+          "input_bytes": 26937281,
+          "text_bytes": 4112010
+        },
+        "legal_approval": false,
+        "qualifications": [
+          "ELF build-id and file hash do not prove corresponding vendor source or patches.",
+          "Missing redist/agreement/version remains unresolved; no license-key bytes collected.",
+          "This is a targeted follow-up, not a rerun of the prior 101-file inventory."
+        ]
+      }
+    },
+    {
+      "image_name": "api",
+      "image_id": "sha256:9553a52c06f048ffeaeb6965975be61bf68cfebedf1d1cc494706e9ad1354470",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "-i",
+        "--pull",
+        "never",
+        "--read-only",
+        "--network",
+        "none",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--memory",
+        "512m",
+        "--pids-limit",
+        "64",
+        "--log-driver",
+        "none",
+        "--entrypoint",
+        "python",
+        "sha256:9553a52c06f048ffeaeb6965975be61bf68cfebedf1d1cc494706e9ad1354470",
+        "-",
+        "--_collect",
+        "api",
+        "{\"files\": 12, \"input_bytes\": 26937281, \"text_bytes\": 4112010}"
+      ],
+      "started_at": "2026-11-03T06:02:33.399115+00:00",
+      "ended_at": "2026-11-03T06:02:33.915028+00:00",
+      "producer_sha256": "bedc118a499831587e71be6a71030621486540acc4c06c4b54a18085f94462b5",
+      "stdin_sha256": "bedc118a499831587e71be6a71030621486540acc4c06c4b54a18085f94462b5",
+      "stdout_sha256": "07b87ffa8ddcff6ea50cbcf42fb81b4b01f9275561cc443a702c74e94d45e3a4",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stderr": "",
+      "collection_state": "collected_with_explicit_scope",
+      "result": {
+        "image_name": "api",
+        "collected_at": "2026-11-03T06:02:33.820993+00:00",
+        "architecture": "x86_64",
+        "packages": [
+          {
+            "name": "psycopg-binary",
+            "version": "3.3.5",
+            "license_expression": "LGPL-3.0-only",
+            "root": "/usr/local/lib/python3.12/site-packages",
+            "dist_info": "/usr/local/lib/python3.12/site-packages/psycopg_binary-3.3.5.dist-info",
+            "declared_file_state": "available"
+          }
+        ],
+        "files": [
+          {
+            "path": "/usr/local/lib/python3.12/site-packages/psycopg_binary-3.3.5.dist-info/METADATA",
+            "state": "recorded",
+            "sha256": "41aeaf3a3cfa334f8ac9d7361adf942c20604768f43f7f8df8c8f4b812c0dcf0",
+            "resolved_path": "/usr/local/lib/python3.12/site-packages/psycopg_binary-3.3.5.dist-info/METADATA",
+            "file_bytes": 2658,
+            "bytes_read": 2658,
+            "purpose": "selected_distribution_metadata"
+          },
+          {
+            "path": "/usr/local/lib/python3.12/site-packages/psycopg_binary-3.3.5.dist-info/RECORD",
+            "state": "recorded",
+            "sha256": "1f3a21f5e5576727bed291915b5e136f61970e1135845f4a366e6a21e879269c",
+            "resolved_path": "/usr/local/lib/python3.12/site-packages/psycopg_binary-3.3.5.dist-info/RECORD",
+            "file_bytes": 3370,
+            "bytes_read": 3370,
+            "purpose": "declared_file_list",
+            "package": "psycopg-binary"
+          }
+        ],
+        "driver_directory_listing": [],
+        "remaining_budget": {
+          "files": 10,
+          "input_bytes": 26931253,
+          "text_bytes": 4105982
+        },
+        "legal_approval": false,
+        "qualifications": [
+          "ELF build-id and file hash do not prove corresponding vendor source or patches.",
+          "Missing redist/agreement/version remains unresolved; no license-key bytes collected.",
+          "This is a targeted follow-up, not a rerun of the prior 101-file inventory."
+        ]
+      }
+    }
+  ],
+  "remaining_budget": {
+    "files": 10,
+    "input_bytes": 26931253,
+    "text_bytes": 4105982
+  },
+  "legal_approval": false,
+  "limits": {
+    "files": 20,
+    "input_bytes": 67108864,
+    "text_bytes": 4194304,
+    "per_text_file_bytes": 262144,
+    "json_bytes": 2097152
+  },
+  "prior_inventory": {
+    "paths": 101,
+    "planned_paths": 100,
+    "deviation_retained": true,
+    "input_bytes": 95522697
+  },
+  "goal_hash_input_limit_bytes": 209715200,
+  "goal_known_input_bytes": 135700308
+}

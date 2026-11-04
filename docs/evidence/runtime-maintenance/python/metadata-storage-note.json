@@ -1,0 +1,11 @@
+{
+  "schema": "arc.metadata-storage-note.v1",
+  "recorded_at_utc": "2026-11-03T05:45:22.043031+00:00",
+  "scope": "candidate-metadata.json / candidate-summary.json / candidate-run.json",
+  "retained": "Selected exact fields including complete verbatim Requires-Dist, Requires-Python, extras, exact file metadata, source URL/HTTP/UTC/raw SHA256; successful original JSON response bodies are not saved.",
+  "original_response_bodies_available": false,
+  "reason": "The successful collector process exited; response bytes were transient process-local variables. No second identical request was made solely to recreate raw bodies.",
+  "network_requests_successful": 9,
+  "network_response_total_bytes": 186936,
+  "integrity_limit": "Raw response hashes bind the observed remote bytes but cannot reconstruct discarded descriptions or unspecified JSON fields; derived fields can be reviewed against exact versioned official URLs and the preserved producer."
+}

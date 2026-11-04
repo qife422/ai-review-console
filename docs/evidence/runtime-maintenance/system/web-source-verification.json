@@ -1,0 +1,20 @@
+{
+  "at": "2026-11-03T06:14:35.745501+00:00",
+  "source": "docker/web.Dockerfile",
+  "parent_commit": "2e45bee8c61dfab347edd107aebb6a3488567761",
+  "before_sha256": "1face9009b31d64c177611d017c0b9f77885670f379663b7cdaab3627dd17eae",
+  "after_sha256": "e47b6a7329a34c940a7544a0ea9342936f5f8516551a9ba8e02f884e6485ceeb",
+  "scope": "Only append libexpat=2.10.0-r0 to existing apk upgrade invocation. Exact before\u2192after transformation asserted; every other source byte preserved.",
+  "candidate": "alpine-libexpat-candidate.json",
+  "checks": [
+    {
+      "command": "git diff --check -- docker/web.Dockerfile",
+      "exit_code": 0
+    },
+    {
+      "method": "Exact bytes transformation compare",
+      "result": "passed"
+    }
+  ],
+  "actual_installation_and_four_advisories": "pending isolated CI; no local Docker/APK payload downloads"
+}

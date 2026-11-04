@@ -1,0 +1,23 @@
+{
+  "source": "185848006c2ea97ad24bead72f726c3a0d467dd4",
+  "run": 41588865769,
+  "artifact_id": 13209341911,
+  "zip_sha256": "19cfbb0a8d3f1840db668d671715086dfd6f8c5e5abb310a5112fa6a2111e7ed",
+  "selected": {
+    "path": "arc-unit.xml",
+    "bytes": 26317,
+    "sha256": "aa717f3e1225eeec7d82b8287892eaeda01c8a8b9f828fee17f2a565fc90724c"
+  },
+  "suites": [
+    {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "191",
+      "time": "5.725",
+      "timestamp": "2026-11-03T06:17:18.552552+00:00",
+      "hostname": "runnervmnwato"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "at": "2026-11-03T05:52:21.313563+00:00",
+  "change": "Failure bb34edb: unsupported global gpgcheck/sslverify now explicit per-repository options per official microdnf3.10.1 source; bounded real stderr output for diagnosis.",
+  "validation": "13 tests passed in0.67s; ruff passed",
+  "tests_command": ".venv/bin/python -B -m pytest -p no:cacheprovider tests/test_apply_system_updates.py",
+  "source": [
+    {
+      "path": "scripts/apply_system_updates.py",
+      "bytes": 8491,
+      "sha256": "50ac38282e4bce3d2619d8dd3af46885c217fe6f9e3bf1e5b0ef58f39c3b8821"
+    },
+    {
+      "path": "tests/test_apply_system_updates.py",
+      "bytes": 3991,
+      "sha256": "55797c743b2aaecb203e309804566f88b859dc5571f3055829aed0a1e8c13f86"
+    }
+  ],
+  "official_source": {
+    "url": "https://github.com/rpm-software-management/microdnf/blob/3.10.1/dnf/dnf-main.c",
+    "blob": "661dfee7726e9cc2fe5b2e5b7373c61bf1e16342",
+    "raw_file": "microdnf-3.10.1-dnf-main.original.c",
+    "excluded_normalized_copy": "microdnf-3.10.1-dnf-main.c contains trailing newline normalization and is not the raw response; retain unselected"
+  },
+  "no_rerun_or_local_Docker": true
+}

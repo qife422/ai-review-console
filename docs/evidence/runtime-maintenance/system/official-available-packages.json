@@ -1,0 +1,233 @@
+{
+  "requests": [
+    {
+      "repo": "baseos",
+      "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/repodata/32db04f4482671db9d633d53d292d2a4b143557c18254bae198026e07a12d235-primary.xml.gz",
+      "at": "2026-11-03T05:43:51.142890+00:00",
+      "bytes": 182872,
+      "sha256": "32db04f4482671db9d633d53d292d2a4b143557c18254bae198026e07a12d235",
+      "expanded_bytes": 1294914,
+      "open_sha256": "094fc44b50539e08b1094d9a7493561c9db0ffb53b0e48bbefbc6521d4b61503"
+    },
+    {
+      "repo": "appstream",
+      "url": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/repodata/ce8593bd61a290ef806f7e51f158a990cdb3885054a17ee28ac8328df6de700a-primary.xml.gz",
+      "at": "2026-11-03T05:43:51.357018+00:00",
+      "bytes": 408910,
+      "sha256": "ce8593bd61a290ef806f7e51f158a990cdb3885054a17ee28ac8328df6de700a",
+      "expanded_bytes": 3143394,
+      "open_sha256": "0a9c6c2313061e5cc78f8d03b9aeb41d094315c230f98656dc1168f6d58a4bcf"
+    }
+  ],
+  "packages": [
+    {
+      "repo": "baseos",
+      "name": "coreutils-single",
+      "arch": "x86_64",
+      "evr": "0:9.5-8.el10_2.1",
+      "rpm_location": "Packages/c/coreutils-single-9.5-8.el10_2.1.x86_64.rpm",
+      "rpm_sha256": "dd0941ea9e7fb9c3c1cc008a9fa3ce03b8b062f0e556cb64e3a675fb20528b4b"
+    },
+    {
+      "repo": "baseos",
+      "name": "curl",
+      "arch": "x86_64",
+      "evr": "0:8.12.1-4.el10_2.7",
+      "rpm_location": "Packages/c/curl-8.12.1-4.el10_2.7.x86_64.rpm",
+      "rpm_sha256": "34ae03f0764cbd616c882572ae8c6f29330b82763148ba46645e5d26c0f001d4"
+    },
+    {
+      "repo": "baseos",
+      "name": "expat",
+      "arch": "x86_64",
+      "evr": "0:2.7.3-1.el10_2.7",
+      "rpm_location": "Packages/e/expat-2.7.3-1.el10_2.7.x86_64.rpm",
+      "rpm_sha256": "1d7b15b93b70ac8fbbf633e14a0ced5bc90da2a74e21ca7df6959a02cf0d78da"
+    },
+    {
+      "repo": "baseos",
+      "name": "gawk",
+      "arch": "x86_64",
+      "evr": "0:5.3.0-6.el10_2.1",
+      "rpm_location": "Packages/g/gawk-5.3.0-6.el10_2.1.x86_64.rpm",
+      "rpm_sha256": "15882a466a8ea7160191e644d182e1f9914d441ca9a4590b23c4d4362ad746a2"
+    },
+    {
+      "repo": "baseos",
+      "name": "glib2",
+      "arch": "x86_64",
+      "evr": "0:2.80.4-12.el10_2.22",
+      "rpm_location": "Packages/g/glib2-2.80.4-12.el10_2.22.x86_64.rpm",
+      "rpm_sha256": "c65fd718e376578cf857f809cb26de4adac985f60ccc57ad7d7eff5b7693f211"
+    },
+    {
+      "repo": "baseos",
+      "name": "glibc",
+      "arch": "x86_64",
+      "evr": "0:2.39-145.el10_2",
+      "rpm_location": "Packages/g/glibc-2.39-145.el10_2.x86_64.rpm",
+      "rpm_sha256": "58c3395be80343739e06e1b35f0aa95adc767d69d37d5dfbd9ab31bb3f8a3a7b"
+    },
+    {
+      "repo": "baseos",
+      "name": "glibc-common",
+      "arch": "x86_64",
+      "evr": "0:2.39-145.el10_2",
+      "rpm_location": "Packages/g/glibc-common-2.39-145.el10_2.x86_64.rpm",
+      "rpm_sha256": "475a7bec99ece4f629afc0ce490bc1eabdee143eb4ddad606b7e28bccecf744d"
+    },
+    {
+      "repo": "baseos",
+      "name": "glibc-langpack-en",
+      "arch": "x86_64",
+      "evr": "0:2.39-145.el10_2",
+      "rpm_location": "Packages/g/glibc-langpack-en-2.39-145.el10_2.x86_64.rpm",
+      "rpm_sha256": "022db96f8f5e07b95c224b6ce5f8b9a8fb1f2e6c6e7e6e060eaff0749d8c270f"
+    },
+    {
+      "repo": "baseos",
+      "name": "glibc-minimal-langpack",
+      "arch": "x86_64",
+      "evr": "0:2.39-145.el10_2",
+      "rpm_location": "Packages/g/glibc-minimal-langpack-2.39-145.el10_2.x86_64.rpm",
+      "rpm_sha256": "76d27e5e92d5024a7419f26fa48840314d8b8df8207cbc8a2e8aeb54ad84582a"
+    },
+    {
+      "repo": "baseos",
+      "name": "libarchive",
+      "arch": "x86_64",
+      "evr": "0:3.7.7-11.el10_2",
+      "rpm_location": "Packages/l/libarchive-3.7.7-11.el10_2.x86_64.rpm",
+      "rpm_sha256": "558bde64fece0035815971b98ef9a1debe00e8813d75a658d265170c0597467e"
+    },
+    {
+      "repo": "baseos",
+      "name": "libcurl-minimal",
+      "arch": "x86_64",
+      "evr": "0:8.12.1-4.el10_2.7",
+      "rpm_location": "Packages/l/libcurl-minimal-8.12.1-4.el10_2.7.x86_64.rpm",
+      "rpm_sha256": "d7143b5eff1e62d8ad2e519d155a395b9637404b11e9e5a980586fbc9114f67e"
+    },
+    {
+      "repo": "baseos",
+      "name": "libevent",
+      "arch": "x86_64",
+      "evr": "0:2.1.13-1.el10_2",
+      "rpm_location": "Packages/l/libevent-2.1.13-1.el10_2.x86_64.rpm",
+      "rpm_sha256": "ab7d30edcca15aacf17962e25430fad1bdb172c2ab05f27e67ca9f7ed14fdb03"
+    },
+    {
+      "repo": "baseos",
+      "name": "libxml2",
+      "arch": "x86_64",
+      "evr": "0:2.12.5-10.el10_2.4",
+      "rpm_location": "Packages/l/libxml2-2.12.5-10.el10_2.4.x86_64.rpm",
+      "rpm_sha256": "3aa7530edec2ff558820ca18e213b42f98244b94cd72fd26615a90b89a514805"
+    },
+    {
+      "repo": "baseos",
+      "name": "openssh",
+      "arch": "x86_64",
+      "evr": "0:9.9p1-29.el10_2",
+      "rpm_location": "Packages/o/openssh-9.9p1-29.el10_2.x86_64.rpm",
+      "rpm_sha256": "9b125fb3061c09e31ad61a463ce56001c4285c3a719a41865ce74141d2e5a7fa"
+    },
+    {
+      "repo": "baseos",
+      "name": "openssh-clients",
+      "arch": "x86_64",
+      "evr": "0:9.9p1-29.el10_2",
+      "rpm_location": "Packages/o/openssh-clients-9.9p1-29.el10_2.x86_64.rpm",
+      "rpm_sha256": "414b33d097c548724ca7127b400792d8e015275e5bca71e70128c358aee7c5aa"
+    },
+    {
+      "repo": "baseos",
+      "name": "openssl-libs",
+      "arch": "x86_64",
+      "evr": "1:3.5.8-2.el10_2",
+      "rpm_location": "Packages/o/openssl-libs-3.5.8-2.el10_2.x86_64.rpm",
+      "rpm_sha256": "988479c9ac55bdb48027523ffb4b3833befca3d62395bb479a10c5f00f6423a7"
+    },
+    {
+      "repo": "baseos",
+      "name": "pcre2",
+      "arch": "x86_64",
+      "evr": "0:10.44-1.5.el10_2",
+      "rpm_location": "Packages/p/pcre2-10.44-1.5.el10_2.x86_64.rpm",
+      "rpm_sha256": "b605b10ebf3de1177a3b4a913fca7d81d6d7c097420e7fe301f1534df0e71dc3"
+    },
+    {
+      "repo": "baseos",
+      "name": "pcre2-syntax",
+      "arch": "noarch",
+      "evr": "0:10.44-1.5.el10_2",
+      "rpm_location": "Packages/p/pcre2-syntax-10.44-1.5.el10_2.noarch.rpm",
+      "rpm_sha256": "69fc76ca29c629965ed2afb14e8a68fdda808b1b2936b414f07c0cf2875b075d"
+    },
+    {
+      "repo": "baseos",
+      "name": "rpm-sequoia",
+      "arch": "x86_64",
+      "evr": "0:1.10.2.1-1.el10_2",
+      "rpm_location": "Packages/r/rpm-sequoia-1.10.2.1-1.el10_2.x86_64.rpm",
+      "rpm_sha256": "e6e1d68424db0181b3e9ed6f08209d783f410825cf07c33e0d03006cfbecd4e1"
+    },
+    {
+      "repo": "baseos",
+      "name": "xz",
+      "arch": "x86_64",
+      "evr": "1:5.6.2-4.el10_2.1",
+      "rpm_location": "Packages/x/xz-5.6.2-4.el10_2.1.x86_64.rpm",
+      "rpm_sha256": "397ad3bdfe024aafd9f22c821a287c77befe430f32720105ae4b4506dcd10574"
+    },
+    {
+      "repo": "baseos",
+      "name": "xz-libs",
+      "arch": "x86_64",
+      "evr": "1:5.6.2-4.el10_2.1",
+      "rpm_location": "Packages/x/xz-libs-5.6.2-4.el10_2.1.x86_64.rpm",
+      "rpm_sha256": "02dc4d009c501fe7c4bd1e2174071fcd08b8d1133697777dce5726b43fee4998"
+    },
+    {
+      "repo": "appstream",
+      "name": "perl-URI",
+      "arch": "noarch",
+      "evr": "0:5.27-3.el10_2.1",
+      "rpm_location": "Packages/p/perl-URI-5.27-3.el10_2.1.noarch.rpm",
+      "rpm_sha256": "c0203a91034072a91427ff92195c140497e367dc8170f3f64c7e2e17f60ca033"
+    },
+    {
+      "repo": "appstream",
+      "name": "perl-interpreter",
+      "arch": "x86_64",
+      "evr": "4:5.40.2-515.el10_2",
+      "rpm_location": "Packages/p/perl-interpreter-5.40.2-515.el10_2.x86_64.rpm",
+      "rpm_sha256": "3e3e25218e1299a14cd9d48e83e666df212c1e828d433a53110f009d8da93d9d"
+    },
+    {
+      "repo": "appstream",
+      "name": "perl-libs",
+      "arch": "x86_64",
+      "evr": "4:5.40.2-515.el10_2",
+      "rpm_location": "Packages/p/perl-libs-5.40.2-515.el10_2.x86_64.rpm",
+      "rpm_sha256": "5e1303edcc1c5fdbeed8a1264af4cebee983acb3b6a3735245e151496b3366fd"
+    },
+    {
+      "repo": "appstream",
+      "name": "python3.14",
+      "arch": "x86_64",
+      "evr": "0:3.14.8-1.el10_2",
+      "rpm_location": "Packages/p/python3.14-3.14.8-1.el10_2.x86_64.rpm",
+      "rpm_sha256": "f0e174fb948a3f36ea963042f1538e64eb19c6f364b19694f6bb6c020f8fcac4"
+    },
+    {
+      "repo": "appstream",
+      "name": "python3.14-libs",
+      "arch": "x86_64",
+      "evr": "0:3.14.8-1.el10_2",
+      "rpm_location": "Packages/p/python3.14-libs-3.14.8-1.el10_2.x86_64.rpm",
+      "rpm_sha256": "6d7cd267c951144b988507cbf9a9a0e8aa4401ecc97fd4a1bf46fbf9317dae01"
+    }
+  ],
+  "scope": "official metadata availability, not installation or signature transaction verification"
+}

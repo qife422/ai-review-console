@@ -2,6 +2,14 @@
 
 本文件记录主要功能与交接边界；精确代码差异以 Git 提交为准。开发快照不是正式发布，源码备份不是运行数据库备份。
 
+## 2026-11-03 — v0.2 系统维护与候选评估
+
+- 固定Langflow1.11.6/base digest与52显式Python pins，新增公共UBI10补丁层和可审计RPM/信任记录；两架构60既有软件更新、1新增、无移除。
+- Web libexpat固定2.10.0-r0；两架构Web/RHEL扫描在各自范围为0，保留主扫描exit2和剩余Python/Debian记录。
+- 最终[功能代码CI41760412382](https://github.com/qife422/ai-review-console/actions/runs/41760412382)通过191Python/29前端、AMD工作流及浏览器、Linux ARM后端；负向重试不冒称成功恢复。
+- 补Psycopg/Psycopg2精确配方、IBM REDIST/notices/English协议；Zep、native/source、完整后端分发条件仍open，v0.2完整发布验收未通过。
+- 候选元数据评估保持当前运行时；统一状态、残余问题与[后续计划](docs/evidence/runtime-maintenance/README.md)，历史证据与原库不变。纯文档封存提交使用[skip ci]，不把跳过视为通过。
+
 ## 2026-10-31 — v0.2 兼容与许可补验
 
 - 先完成镜像/缓存精确盘点和二次回读：本地 layers/镜像/cache 集合与大小未增长；历史归属仍不足，继续暂停本地 build/pull，不 prune 或清理历史。

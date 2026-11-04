@@ -1,0 +1,48 @@
+{
+  "schema": "arc.independent-ci-collector-review.v1",
+  "at_utc": "2026-11-03T05:55:22.533964+00:00",
+  "source_commit": "2e45bee8c61dfab347edd107aebb6a3488567761",
+  "inputs": [
+    {
+      "path": "scripts/collect_release_ci.py",
+      "bytes": 17867,
+      "sha256": "0d93a4679448ee7ab02ba547fcbbe91ecb54f0a19b6c8b850e0c2a3d6caac0f2"
+    },
+    {
+      "path": "tests/test_collect_release_ci.py",
+      "bytes": 4171,
+      "sha256": "3e510f93f676df572fba774997e2e02cd71158ef58ab7a59086b1b3128d05d6b"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 6966,
+      "sha256": "c85fcb7c579021ac91aeb698550a6e97480299a7f6c1248aa9618b146f869166"
+    }
+  ],
+  "reviewer": "release_python",
+  "scope": "Read-only source and focused test source review; no duplicate test execution, image startup, scan or download.",
+  "material_findings": [],
+  "checked": [
+    "extract_system_records validates whole export names/count/transport hashes/lengths before any output mkdir or writes; duplicate paths and pre-existing output rejected.",
+    "Build manifest must report completed; selected file set and per-file hashes must match and include rpm-before/rpm-after/update stdout.",
+    "System raw input allowance4MiB+64KiB covers bounded command outputs plus manifest;6MiB command summary allowance covers base64 transport without relaxing60MiB aggregate cap.",
+    "Compose project regex accepts only original run ID plus optional amd64/arm64 suffix; exact container image/project/service identity checks remain.",
+    "arm-backend skip is accepted only on Linux ARM and creates explicitnot-collected/no-distribution-approval result; complete profile runs native collector.",
+    "Both profiles retain pip checks, offline probe, system transaction export, four-image package scan, RHEL supplemental scan and licenses.",
+    "Workflow matrix preserves35min timeout, separates artifact/project architecture, and limits all four existing browser/font/UI steps to AMD64."
+  ],
+  "tests_reviewed": {
+    "focused_expected": 30,
+    "breakdown": {
+      "system": 13,
+      "native": 8,
+      "collector": 9
+    },
+    "whole_python_expected": 188,
+    "whole_python_runtime_status": "Must be confirmed from actual CI JUnit; not passed by this source review."
+  },
+  "limitations": [
+    "No system package transaction, actual signature/versions, ARM Flow compatibility or new finding count validated before CI raw is available.",
+    "ARM native material collection is intentionally not repeated; AMD64 legal/native evidence does not establish ARM binary source correspondence."
+  ]
+}

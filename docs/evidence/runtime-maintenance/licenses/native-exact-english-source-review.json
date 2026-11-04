@@ -1,0 +1,40 @@
+{
+  "created_at": "2026-11-04T02:20:39.594687+00:00",
+  "scope": "Source audit for final single exact-English corrective follow-up; not yet CI execution or license signoff",
+  "sources": [
+    {
+      "path": "scripts/verify_native_materials.py",
+      "bytes": 25419,
+      "sha256": "dffe7c32d0fd61f41a6f3e4e0bf0f4affc201ff4ffdeb716c1c7811f9ebd8765"
+    },
+    {
+      "path": "tests/test_verify_native_materials.py",
+      "bytes": 6896,
+      "sha256": "88a5cea9765993edf907b878a815e527eae6c13bb81ac30f3100e2b4ec164b4b"
+    },
+    {
+      "path": "compliance/native-baseline.json",
+      "bytes": 8394,
+      "sha256": "ba73fb69a3d4644b5d0b49d64d32928ef9d1628716ea7d5289524e949ea4ce81"
+    }
+  ],
+  "baseline_source_commit": "185848006c2ea97ad24bead72f726c3a0d467dd4",
+  "baseline_original_manifest_sha256": "159e153f9a8d2d768963025b478a9670ad3b9423d806e7e7a8f447f9af4f3873",
+  "baseline_original_materials_sha256": "557010a4b7d40eb40176cd926df59946603d95e843047ed51826e64a2e7fc60b",
+  "baseline_previous_chain_sha256": "eadfcf4078cf6143e97fb373335ec257737edc14d006ff0aa2be184c6a291903",
+  "baseline_matches_actual185_remaining_and_known_goal": true,
+  "remaining": {
+    "files": 9,
+    "input_bytes": 26907808,
+    "text_bytes": 4082537
+  },
+  "known_goal_input_bytes": 135723753,
+  "only_actual_read_target": "Langflow sysconfig root/clidriver/license/UNIX/odbc_LI_en",
+  "actual_regression": "Path.open spy verified exactly that1 target; odbc_notices/REDIST/other-language/genericLI/crypto fixtures were not opened; API returns no targets without changing budget.",
+  "checks": {
+    "ruff": "passed",
+    "pytest": "20 passed:11native +9collector",
+    "local_docker": "not used"
+  },
+  "legal_approval": false
+}

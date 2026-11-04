@@ -1,0 +1,135 @@
+{
+  "created_at": "2026-11-03T06:10:54.857440+00:00",
+  "review": "Independent raw artifact follow-up; not distribution approval",
+  "source_commit": "2e45bee8c61dfab347edd107aebb6a3488567761",
+  "ci_run": 41586599463,
+  "artifact_id": 13208706419,
+  "artifact_zip_sha256": "582e7d09697bb314ecb0b69af8493cdfd997cb2195e60898c5a78c6ea749b6fb",
+  "raw": {
+    "root": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-amd64/release/native",
+    "materials_bytes": 19517,
+    "materials_sha256": "cf205390853df3a4c77d2123bbc897a0f63a6b32f8291907f0b83de445bbed1d",
+    "manifest_sha256": "8a3307116c234e05e221dcd72247607aead3eabb1952fc54e995c804873168fa",
+    "producer_sha256": "bedc118a499831587e71be6a71030621486540acc4c06c4b54a18085f94462b5",
+    "manifest_matches_actual_materials": true
+  },
+  "images": [
+    {
+      "image_name": "langflow",
+      "image_id": "sha256:8db643cf50f215d67257fdd1f85c9e286092c9877d93d54e0117925850dd7c21",
+      "architecture": "x86_64",
+      "source_command_qualified": true
+    },
+    {
+      "image_name": "api",
+      "image_id": "sha256:9553a52c06f048ffeaeb6965975be61bf68cfebedf1d1cc494706e9ad1354470",
+      "architecture": "x86_64",
+      "source_command_qualified": true
+    }
+  ],
+  "budget": {
+    "actual_opened_files": 10,
+    "actual_input_bytes": 40177611,
+    "actual_text_input_bytes_including_metadata": 88322,
+    "remaining": {
+      "files": 10,
+      "input_bytes": 26931253,
+      "text_bytes": 4105982
+    },
+    "shared_between_images_not_reset": true,
+    "within_20_files_64MiB_4MiB_text": true,
+    "within_256KiB_each_text": true,
+    "prior_101_of_100_deviation_retained": {
+      "paths": 101,
+      "planned_paths": 100,
+      "deviation_retained": true,
+      "input_bytes": 95522697
+    },
+    "cumulative_native_input_bytes": 135700308,
+    "cumulative_limit_bytes": 209715200,
+    "arm_profile": "explicitly not-collected; no second-runner budget reset or AMD64 driver inference"
+  },
+  "collected_original_texts": [
+    {
+      "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/odbc_REDIST.txt",
+      "bytes": 3442,
+      "sha256": "e0829289cddd2710efeed0d442085f3d13609e21c5cb226d383d228be78f93ec"
+    },
+    {
+      "path": "/app/.venv/lib/python3.14/site-packages/clidriver/properties/version/ibm.com_IBM_Data_Server_Driver_for_ODBC_and_CLI-11.5.0.swidtag",
+      "bytes": 682,
+      "sha256": "0ee2493274a4a0e424a8922bcb300f6850ffdeb1bfad9f169566121933fea897"
+    }
+  ],
+  "ibm": {
+    "python_wrapper": "Actual AMD64 ibm_db3.2.9; Apache License2.0 metadata independently matches exact upstream wrapper; not clidriver permission",
+    "redistributables_list": "Actual license/odbc_REDIST.txt names V11.5 and lists files subject to Redistributables section of the applicable IBM International Program License Agreement License Information. It includes libdb2.so/libdb2.so.1 and odbc_notices.txt/odbc_REDIST.txt; list is not the complete agreement or blanket permission.",
+    "version": "Actual SWID identifies product11.5.0. It does not establish exact installed fixpack11.5.9; setup default is not actual binary version evidence.",
+    "libdb2_so_sha256": "739792fb3f5bd0c6749f38a8d622cf5af84cb3776e34806255db847ca788f036",
+    "libdb2_so_bytes": 39827145,
+    "libdb2_so_1": "Only262144-byte prefix obtained; fullsha null. No ELF GNU build-id in collected prefix.",
+    "missing_or_not_collected": [
+      "license/odbc_notices.txt is present in directory listing but missed by name filter",
+      "license/UNIX directory is present but not inspected; agreement/LI/LA contents not collected",
+      "Only selected driver files fingerprinted; actual complete driver file list was not serialized or compared to REDIST",
+      "Exact fixpack/build version not established",
+      "Applicable driver agreement/License Information terms not read or fulfilled"
+    ],
+    "closed_subgaps": [
+      "Actual AMD64 driver presence and Python wrapper version established",
+      "Actual V11.5 redistributables list and product SWID preserved with exact image/path/hash",
+      "Actual libdb2.so full fingerprint available"
+    ],
+    "redistribution_approval": false
+  },
+  "fips": {
+    "actual_collected_legacy_openssl_records": 0,
+    "actual_collected_openssl_build_ids": [],
+    "reason_scope_insufficient": "Collector selected only filenames containing .so.1.1. Prior1.1.1kFIPS observation was ARM64; no AMD64 declared-native listing was emitted. Zero selected files does not establish AMD64 absence, a build-id or vendor-source correspondence.",
+    "still_unresolved": [
+      "Exact AMD64 legacy OpenSSL files/version/build-id",
+      "Vendor source package/NVR/FIPS patch identity and source/binary relationship",
+      "Manylinux build base/cache exact provenance"
+    ]
+  },
+  "owner_mapping": {
+    "api": "psycopg-binary3.3.5 / psycopg_binary.libs; exact3.3.5 recipe18.6/3.5.8",
+    "langflow": "psycopg2-binary2.9.12 / psycopg2_binary.libs; exact2.9.12 commit3a6d9d6ddc6b53eaa80b712f5fa6b23abbdc38db recipe17.9/3.5.6 matches prior ARM64 actual versions",
+    "correction": "Psycopg3.3.4 pure Python in LF is a different distribution; its tag recipe18.0/3.5.4 must not be called a mismatch for psycopg2_binary.libs",
+    "source_recipe_review": "licenses/psycopg2-source-review.json and licenses/psycopg-owner-clarification.json"
+  },
+  "zep": {
+    "actual_installed": "zep-python2.0.2 remains present in final AMD64 license metadata; no exact-release license metadata",
+    "permission_resolved": false
+  },
+  "skips": [
+    {
+      "image": "langflow",
+      "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license",
+      "reason": "not_regular_file",
+      "state": "skipped"
+    },
+    {
+      "image": "langflow",
+      "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/odbc",
+      "reason": "missing_file",
+      "state": "skipped"
+    },
+    {
+      "image": "langflow",
+      "path": "/app/.venv/lib/python3.14/site-packages/clidriver/redist.txt",
+      "reason": "missing_file",
+      "state": "skipped"
+    },
+    {
+      "image": "langflow",
+      "path": "/app/.venv/lib/python3.14/site-packages/clidriver/version.txt",
+      "reason": "missing_file",
+      "state": "skipped"
+    }
+  ],
+  "conclusion": "Targeted collection technically passed and limits were respected. IBM agreement/notices/scope/fixpack and FIPS identification remain materially incomplete. CI green is not license signoff; full backend image redistribution remains unapproved.",
+  "legal_approval": false,
+  "raw_files_modified": false,
+  "local_docker_used": false
+}

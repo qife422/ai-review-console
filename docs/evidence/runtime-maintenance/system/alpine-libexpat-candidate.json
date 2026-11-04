@@ -1,0 +1,95 @@
+{
+  "records": [
+    {
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/x86_64/APKINDEX.tar.gz",
+      "method": "GET",
+      "at": "2026-11-03T06:14:01.450293+00:00",
+      "status": 200,
+      "bytes": 528436,
+      "sha256": "5ae1483d3d60cca73ca30171643506c7cad4758ca6eff6c2a6c541e837f6bec5",
+      "raw_file": "alpine-3.24-main-x86_64-APKINDEX.tar.gz",
+      "index_bytes": 2370201,
+      "index_sha256": "b13764fc2e72d5f341c2f484742091a996589835fd4c7da2b997e98a6ab5b039",
+      "package": {
+        "C": "Q1sJ3mbRK300qoX/3bSQgNsvVLmDY=",
+        "P": "libexpat",
+        "V": "2.10.0-r0",
+        "A": "x86_64",
+        "S": "63634",
+        "I": "145088",
+        "T": "XML Parser library written in C (libraries)",
+        "U": "https://libexpat.github.io/",
+        "L": "MIT",
+        "o": "expat",
+        "m": "Carlo Landmeter <clandmeter@alpinelinux.org>",
+        "t": "1793625171",
+        "c": "af0fa42036cd6e626768c0d65fddaa1d1b30cf21",
+        "D": "so:libc.musl-x86_64.so.1",
+        "p": "so:libexpat.so.1=1.13.1"
+      },
+      "archive_members": [
+        {
+          "name": ".SIGN.RSA.alpine-devel@lists.alpinelinux.org-6165ee59.rsa.pub",
+          "bytes": 512
+        },
+        {
+          "name": "DESCRIPTION",
+          "bytes": 24
+        },
+        {
+          "name": "APKINDEX",
+          "bytes": 2370201
+        }
+      ],
+      "scope": "Official HTTPS metadata availability only. No APK payload downloaded or installed; package/index signature verification remains the actual apk transaction in isolated CI."
+    },
+    {
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.24/main/aarch64/APKINDEX.tar.gz",
+      "method": "GET",
+      "at": "2026-11-03T06:14:01.819147+00:00",
+      "status": 200,
+      "bytes": 529507,
+      "sha256": "53a29ff0128acca42db07e6d932133eba385bb36df0e926bb06029ac9ddea22c",
+      "raw_file": "alpine-3.24-main-aarch64-APKINDEX.tar.gz",
+      "index_bytes": 2387551,
+      "index_sha256": "ed2d6fc062d023063d40977c7aa2a3ad3a7833c7ec7a5deab8b912f362c26fb6",
+      "package": {
+        "C": "Q19LcY95xuLs+NZroFQQAq4LiZB10=",
+        "P": "libexpat",
+        "V": "2.10.0-r0",
+        "A": "aarch64",
+        "S": "63387",
+        "I": "198392",
+        "T": "XML Parser library written in C (libraries)",
+        "U": "https://libexpat.github.io/",
+        "L": "MIT",
+        "o": "expat",
+        "m": "Carlo Landmeter <clandmeter@alpinelinux.org>",
+        "t": "1793625171",
+        "c": "af0fa42036cd6e626768c0d65fddaa1d1b30cf21",
+        "D": "so:libc.musl-aarch64.so.1",
+        "p": "so:libexpat.so.1=1.13.1"
+      },
+      "archive_members": [
+        {
+          "name": ".SIGN.RSA.alpine-devel@lists.alpinelinux.org-616ae350.rsa.pub",
+          "bytes": 512
+        },
+        {
+          "name": "DESCRIPTION",
+          "bytes": 24
+        },
+        {
+          "name": "APKINDEX",
+          "bytes": 2387551
+        }
+      ],
+      "scope": "Official HTTPS metadata availability only. No APK payload downloaded or installed; package/index signature verification remains the actual apk transaction in isolated CI."
+    }
+  ],
+  "prior_source_response_bytes": 626083,
+  "new_index_response_bytes": 1057943,
+  "total_source_response_bytes": 1684026,
+  "limit": 2097152,
+  "source_response_files": 7
+}

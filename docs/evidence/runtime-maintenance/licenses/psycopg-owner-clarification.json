@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-11-03T05:56:55.381928+00:00",
+  "qualification": "Owner correction; not source/binary correspondence or distribution approval",
+  "api": {
+    "owner": "psycopg-binary3.3.5",
+    "native_prefix": "psycopg_binary.libs",
+    "recipe_commit": "ea542c9534cc9841d50450e0c156b549cc6c805a",
+    "libpq": "18.6",
+    "openssl": "3.5.8"
+  },
+  "langflow": {
+    "owner": "psycopg2-binary2.9.12",
+    "native_prefix": "psycopg2_binary.libs",
+    "recipe_commit": "3a6d9d6ddc6b53eaa80b712f5fa6b23abbdc38db",
+    "libpq": "17.9",
+    "openssl": "3.5.6",
+    "recipe_inputs_match_previous_actual_version_api": true
+  },
+  "clarification": "Psycopg3.3.4 tag defaults18.0/3.5.4 are not defaults of the LF psycopg2_binary.libs owner. The cross-package difference must not be called a mismatched build for one installed wheel.",
+  "patches": {
+    "psycopg3.3.5": [
+      "GSS mode prefer->disable embedded libpq patch",
+      "PG default socketdir->/var/run/postgresql"
+    ],
+    "psycopg2-binary2.9.12": [
+      "PG default socketdir->/var/run/postgresql; no GSS disable patch in exact build_libpq recipe"
+    ]
+  },
+  "remaining": [
+    "Old OpenSSL1.1.1kFIPS comes through wheel bundled dependencies; exact vendor build/source remains unknown",
+    "manylinux image tags and libpq caches are not exact package-source provenance",
+    "Need actual final CI build-id and driver agreement/redist/version evidence"
+  ],
+  "source_binary_correspondence_proven": false,
+  "legal_approval": false
+}

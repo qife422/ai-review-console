@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-11-03T05:56:41.239549+00:00",
+  "package": "psycopg2-binary",
+  "version": "2.9.12",
+  "tag": "2.9.12",
+  "commit": {
+    "sha": "3a6d9d6ddc6b53eaa80b712f5fa6b23abbdc38db",
+    "type": "commit",
+    "url": "https://api.github.com/repos/psycopg/psycopg2/git/commits/3a6d9d6ddc6b53eaa80b712f5fa6b23abbdc38db"
+  },
+  "records": [
+    {
+      "path": "psycopg2-2.9.12-tag-object.json",
+      "url": "https://api.github.com/repos/psycopg/psycopg2/git/tags/12ae8b02daf43281e1e2d6b0c3947b62f7e1dbad",
+      "bytes": 2194,
+      "sha256": "19f9cf94d507993af2120c611132b63efebefd12489de7aeae8c5f679f2ef662",
+      "fetched_at": "2026-11-03T05:56:40.120747+00:00"
+    },
+    {
+      "path": "psycopg2-2.9.12-packages.yml.txt",
+      "url": "https://raw.githubusercontent.com/psycopg/psycopg2/3a6d9d6ddc6b53eaa80b712f5fa6b23abbdc38db/.github/workflows/packages.yml",
+      "bytes": 8718,
+      "sha256": "fcb05cf21d5d30b38318780e3aeb7c27506d69e8ba2e453bb23bc5a594935154",
+      "fetched_at": "2026-11-03T05:56:40.352579+00:00"
+    },
+    {
+      "path": "psycopg2-2.9.12-build-and-cache-libpq.yml.txt",
+      "url": "https://raw.githubusercontent.com/psycopg/psycopg2/3a6d9d6ddc6b53eaa80b712f5fa6b23abbdc38db/.github/workflows/build-and-cache-libpq.yml",
+      "bytes": 4618,
+      "sha256": "f083352bfd64c48474cac1e7b68d325b94504bc2774663e0eafead2504cb83c1",
+      "fetched_at": "2026-11-03T05:56:40.568760+00:00"
+    },
+    {
+      "path": "psycopg2-2.9.12-wheel_linux_before_all.sh.txt",
+      "url": "https://raw.githubusercontent.com/psycopg/psycopg2/3a6d9d6ddc6b53eaa80b712f5fa6b23abbdc38db/scripts/build/wheel_linux_before_all.sh",
+      "bytes": 1575,
+      "sha256": "e96b7472bd53c4740b63dbf5bae22055dafe9470b93827caba89eff7cf978e1b",
+      "fetched_at": "2026-11-03T05:56:40.797025+00:00"
+    },
+    {
+      "path": "psycopg2-2.9.12-build_libpq.sh.txt",
+      "url": "https://raw.githubusercontent.com/psycopg/psycopg2/3a6d9d6ddc6b53eaa80b712f5fa6b23abbdc38db/scripts/build/build_libpq.sh",
+      "bytes": 6624,
+      "sha256": "f9f6a80a4a1362605ea34879e164345bb79cfa87d6f46e5f48121f29e75c4400",
+      "fetched_at": "2026-11-03T05:56:41.018367+00:00"
+    },
+    {
+      "path": "psycopg2-2.9.12-strip_wheel.sh.txt",
+      "url": "https://raw.githubusercontent.com/psycopg/psycopg2/3a6d9d6ddc6b53eaa80b712f5fa6b23abbdc38db/scripts/build/strip_wheel.sh",
+      "bytes": 1221,
+      "sha256": "633c6e006ad1420f22de4d9d83512597af9cf740669455c0e14308bded520192",
+      "fetched_at": "2026-11-03T05:56:41.239511+00:00"
+    }
+  ],
+  "actual_native_owner_basis": "prior sealed LF native-file-matrix: psycopg2_binary.libs, not psycopg_binary",
+  "legal_approval": false,
+  "source_binary_correspondence_proven": false
+}

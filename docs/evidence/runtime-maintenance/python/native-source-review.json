@@ -1,0 +1,35 @@
+{
+  "schema": "arc.independent-native-source-review.v1",
+  "at_utc": "2026-11-03T05:47:41.615753+00:00",
+  "reviewer": "release_python",
+  "inputs": [
+    {
+      "path": "scripts/verify_native_materials.py",
+      "bytes": 20614,
+      "sha256": "bedc118a499831587e71be6a71030621486540acc4c06c4b54a18085f94462b5"
+    },
+    {
+      "path": "tests/test_verify_native_materials.py",
+      "bytes": 3587,
+      "sha256": "b05526cce6970d03c0ef6d2d2a0d38f619cff5d227361fb2ba4af8eb0d430fda"
+    }
+  ],
+  "scope": "Independent read-only source/test review, not native runtime collection. No Docker/network/install/build or native execution.",
+  "material_findings": [],
+  "verified_source_properties": [
+    "Exact immutable API/Langflow image IDs only; no pull, mounts or network; read-only helper with memory/pid/capability limits.",
+    "One shared20-open-file/64MiB-input/4MiB-text budget flows from Langflow to API; METADATA and RECORD consume the same budget; failed child stops the batch rather than resetting unknown usage.",
+    "Only selected native distribution RECORD entries and five explicitly named shallow clidriver directories; outside-root resolved paths rejected and no arbitrary recursive walk.",
+    "License entitlement .lic files excluded from content reads.",
+    "Large native file gets prefix_sha256 with sha256=null and prefix_only state, not a whole-file hash.",
+    "ELF GNU build-id parsed from PT_NOTE structure without loading code; outside-prefix and malformed cases explicit.",
+    "Legal/source attribution remains qualified: installed RECORD/sibling location is not corresponding vendor-source proof; legal_approval remains false.",
+    "Current helper output may explicitly omit text while retaining file hash and omission label before reaching JSON cap.",
+    "Stdout and stderr bounded, timeout recorded; source stdin and producer SHA bind collection code."
+  ],
+  "runtime_unknowns": [
+    "Actual new CI image native file presence, legal/version text, full/prefix hashes and build IDs remain pending.",
+    "This review cannot close IBM redistribution rights, vendor FIPS patches or source correspondence from filenames/build IDs alone."
+  ],
+  "test_review": "Read8-case targeted test source; agent reported8passed/Ruffpass. Did not duplicate its test invocation."
+}

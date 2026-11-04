@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-03T05:44:08.455336+00:00",
+  "method": "docker version --format {{json .Server}} returned exit1/null and Unix socket connection failure; df -k source workspace",
+  "docker_state": "unavailable_not_inventory_verified",
+  "docker_connection": "unix:///Users/ffq/.docker/run/docker.sock",
+  "local_new_build_pull_start": false,
+  "host_free_bytes": 23623987200,
+  "prior_docker_inventory": {
+    "evidence": "docs/evidence/release-compatibility/capacity/execution-check.json",
+    "applies_only_to": "2026-11-01 prior point; no current-layer-size or running-container-count inference"
+  },
+  "capacity_policy": "prior warning preserved; no local Docker growth, no cleanup or history migration; fresh CI runner bounded by existing checks"
+}

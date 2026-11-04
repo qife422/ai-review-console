@@ -1,0 +1,228 @@
+{
+  "created_at": "2026-11-04T02:35:35.121600+00:00",
+  "review": "Final exact-English corrective evidence and license-condition identification; not license acceptance or distribution signoff",
+  "source_commit": "adb93c4b9f6af508188f696b8d7d1ef1dc5668ac",
+  "ci_run": 41760412382,
+  "artifact_id": 13290541686,
+  "artifact_zip_sha256": "3ed6d965d024c891888a154d303f7322b21988180ca7a95dc51b5a2c1db95504",
+  "raw": {
+    "root": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/native-close/amd64/release/native",
+    "materials_bytes": 62850,
+    "materials_sha256": "c2a686dbe72b2f622f08f39e192c75c134969e7292ff9b85a7e8a503ca3d06ce",
+    "manifest_sha256": "e05f5db2266561f62f3d4c059f72975b0ce0a564714ca312e1d90897f31c92f3",
+    "producer_sha256": "dffe7c32d0fd61f41a6f3e4e0bf0f4affc201ff4ffdeb716c1c7811f9ebd8765",
+    "child_manifest_matches_materials": true
+  },
+  "images": [
+    {
+      "image_name": "langflow",
+      "image_id": "sha256:fd6d66658d49008b53095d2669de17f88360038cbfc8238aa509ffd2e1aaa02c",
+      "architecture": "x86_64"
+    },
+    {
+      "image_name": "api",
+      "image_id": "sha256:0b8f9853c44b93671f39ebc1391ee4675be367816e09ff39a9e61fe672052051",
+      "architecture": "x86_64"
+    }
+  ],
+  "generic_exact_image_inventory": [
+    {
+      "image_name": "api",
+      "image_id": "sha256:0b8f9853c44b93671f39ebc1391ee4675be367816e09ff39a9e61fe672052051",
+      "zip_member": "release/licenses/api.json",
+      "raw_bytes": 178050,
+      "raw_sha256": "887f7d1776bbbecae06d83243f298e5169f6c2c9cf0a7cb5a57a5630ec9a31f0",
+      "child_manifest_verified": true,
+      "packages": [
+        {
+          "name": "psycopg",
+          "version": "3.3.5",
+          "location": "/usr/local/lib/python3.12/site-packages",
+          "license_expression": "LGPL-3.0-only",
+          "license_metadata": null
+        },
+        {
+          "name": "psycopg-binary",
+          "version": "3.3.5",
+          "location": "/usr/local/lib/python3.12/site-packages",
+          "license_expression": "LGPL-3.0-only",
+          "license_metadata": null
+        }
+      ]
+    },
+    {
+      "image_name": "langflow",
+      "image_id": "sha256:fd6d66658d49008b53095d2669de17f88360038cbfc8238aa509ffd2e1aaa02c",
+      "zip_member": "release/licenses/langflow.json",
+      "raw_bytes": 1026546,
+      "raw_sha256": "bd598283254d098e50a4721d04fc0badf3604960956fa40b07f15064b1a8762a",
+      "child_manifest_verified": true,
+      "packages": [
+        {
+          "name": "ibm_db",
+          "version": "3.2.9",
+          "location": "/app/.venv/lib64/python3.14/site-packages",
+          "license_expression": null,
+          "license_metadata": "Apache License 2.0"
+        },
+        {
+          "name": "psycopg",
+          "version": "3.3.4",
+          "location": "/app/.venv/lib64/python3.14/site-packages",
+          "license_expression": "LGPL-3.0-only",
+          "license_metadata": null
+        },
+        {
+          "name": "psycopg2-binary",
+          "version": "2.9.12",
+          "location": "/app/.venv/lib64/python3.14/site-packages",
+          "license_expression": null,
+          "license_metadata": "LGPL with exceptions"
+        },
+        {
+          "name": "zep-python",
+          "version": "2.0.2",
+          "location": "/app/.venv/lib64/python3.14/site-packages",
+          "license_expression": null,
+          "license_metadata": null
+        }
+      ]
+    }
+  ],
+  "agreement": {
+    "state": "actual_full_English_text_obtained",
+    "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_en",
+    "bytes": 55713,
+    "sha256": "0e83c4ba0bc0da1a24fd6a828002575acf4933e48f43cb5569ad02436ff5fb6e",
+    "program_name": "IBM Data Server Driver for ODBC and CLI v11.5.9 (Tool)",
+    "license_information_id": "L-ASUX-ZXSTFM",
+    "included_base_agreement": "International Program License Agreement i125-3301-15 (10-2021), including Country Required Terms",
+    "source_pointer": "images[0].result.files[1].text; source line numbers in this review are splitlines() 1-based",
+    "material_gap_closed": "Previously excluded real odbc_LI_en is now fully collected from exact final AMD64 Langflow image. Selector regression and missing English-agreement text are resolved.",
+    "notices_identifier_difference": "Previously collected notices footer L-XHUG-BAFKQ7 is a different identifier from current LI L-ASUX-ZXSTFM; informational notices are not substituted for this actual LI."
+  },
+  "redistributable_scope": {
+    "current_LI_contains_its_own_complete_lists": true,
+    "common_platform_file_count": 102,
+    "common_platform_list_sha256": "2f942304855516cf2336d145677d0f0a9b475dce0debc810f9b6992708df0032",
+    "normalization": "Nonblank trimmed lines between Common list... and For AIX...; UTF-8 names joined by newline, final newline.",
+    "known_entries": [
+      "libdb2.so",
+      "libdb2.so.1",
+      "odbc_notices.txt",
+      "odbc_REDIST.txt"
+    ],
+    "relation_to_previous_REDIST": "The actual LI itself enumerates the driver REDIST range and the named files seen previously. Earlier standalone REDIST belongs to its earlier image evidence; no old native reread or unsupported whole-list byte equality is asserted.",
+    "full_intended_driver_tree_compared": false,
+    "full_backend_distributable_scope_approved": false
+  },
+  "identified_conditions": [
+    {
+      "condition": "Only listed Redistributables, in object-code form, may accompany a value-added application developed using the Program, solely to support that application.",
+      "source_lines": [
+        14,
+        16,
+        20,
+        126
+      ],
+      "status": "Identified. Intended complete driver file selection and developed-using/value-added application conditions have not been demonstrated; no standalone-driver redistribution approval."
+    },
+    {
+      "condition": "Preserve copyright and notice files; marketing using IBM/supplier/distributor names or trademarks requires prior written consent.",
+      "source_lines": [
+        16
+      ],
+      "status": "Identified. Applicable notice preservation must be verified for the actual intended deliverable; no new marketing/trademark permission accepted or requested."
+    },
+    {
+      "condition": "End-user agreement must protect IBM at least as much as this agreement; redistribution is provided without IBM/supplier support or warranties.",
+      "source_lines": [
+        16,
+        18
+      ],
+      "status": "Identified. No end-user agreement equivalence or contractual assumption approved by this evidence review."
+    },
+    {
+      "condition": "LI supplements any previously agreed Program terms; otherwise included IPLA i125-3301-15 applies. Transaction documents and country amendments may affect governing conditions.",
+      "source_lines": [
+        3,
+        242,
+        244,
+        356,
+        358,
+        734
+      ],
+      "status": "Actual LI plus full IPLA/country text obtained. Applicable user/entity agreements, authorizations and jurisdiction not determined or accepted by the agent."
+    },
+    {
+      "condition": "IPLA covers authorized use/entitlements, copies and markings, restrictions on reverse engineering/separate use, hosting restrictions, transfer limits, applicable charges/verification, export and country terms.",
+      "source_lines": [
+        252,
+        270,
+        294,
+        308,
+        326,
+        328,
+        348
+      ],
+      "status": "Conditions identified, not an assertion that additional fees necessarily apply to this Tool or that current use violates a term. Authorized person must reconcile actual intended use/distribution with applicable LI/IPLA and law."
+    },
+    {
+      "condition": "Text contains acceptance-by-installation/use language and authority representation.",
+      "source_lines": [
+        238,
+        240
+      ],
+      "status": "No new acceptance or legal-consequence determination made by this material review; the agent does not represent that evidence extraction satisfies or waives these terms."
+    }
+  ],
+  "version": {
+    "license_declares": "v11.5.9",
+    "wrapper_inventory_confirms": "ibm_db3.2.9",
+    "closed": "Exact new-image vendor LI now names v11.5.9; prior SWID-only11.5.0 material limitation has improved.",
+    "still_not_verified": "Independent actual libdb2 binary fixpack/build identity and source correspondence were not measured in this single-text follow-up. A license title is not that binary provenance proof."
+  },
+  "budget": {
+    "starting": {
+      "files": 9,
+      "input_bytes": 26907808,
+      "text_bytes": 4082537
+    },
+    "this_invocation_files": 1,
+    "this_invocation_input_and_text_bytes": 55713,
+    "remaining": {
+      "files": 8,
+      "input_bytes": 26852095,
+      "text_bytes": 4026824
+    },
+    "starting_baseline_sha256": "ba73fb69a3d4644b5d0b49d64d32928ef9d1628716ea7d5289524e949ea4ce81",
+    "baseline_source_commit": "185848006c2ea97ad24bead72f726c3a0d467dd4",
+    "baseline_materials_sha256": "557010a4b7d40eb40176cd926df59946603d95e843047ed51826e64a2e7fc60b",
+    "known_goal_input_start": 135723753,
+    "known_goal_input_final": 135779466,
+    "known_goal_limit": 209715200,
+    "new_targeted_reads_cumulative": 12,
+    "new_targeted_input_cumulative": 40256769,
+    "prior_inventory_deviation_retained": {
+      "paths": 101,
+      "planned_paths": 100,
+      "deviation_retained": true,
+      "input_bytes": 95522697
+    },
+    "all_limits_respected": true,
+    "old_notices_explicitly_excluded_and_not_read": true,
+    "no_metadata_record_REDIST_SWID_libdb2_or_crypto_reread": true,
+    "arm_native": "Explicit not-collected profile; no second-runner quota reset"
+  },
+  "other_remaining": {
+    "native": "No crypto files read in this correction. Previous exact AMD approved-directory no-legacy candidate result is not global FIPS absence or a revalidation of historical ARM FIPS binaries. Vendor source/RPM/NVR/patch/build correspondence remains unresolved.",
+    "zep": "Exact final-image generic inventory still includes zep-python2.0.2 without exact-release license metadata; this has not been licensed by the IBM agreement or resolved otherwise.",
+    "backend_distribution": "Source publication and the synthetic static demo are distinct from the complete backend image; no new public backend-image redistribution approval or residual-risk acceptance."
+  },
+  "conclusion": "English IBM license-information material is now identified and collected, including concrete conditional redistribution terms. Material identification has progressed; fulfillment and applicable rights decisions remain open for full backend redistribution.",
+  "legal_approval": false,
+  "contractual_terms_accepted_by_agent": false,
+  "full_backend_redistribution_approved": false,
+  "raw_source_or_old_evidence_modified": false,
+  "new_research_download_install_or_native_execution": false
+}

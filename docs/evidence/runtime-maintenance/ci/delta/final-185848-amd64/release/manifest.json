@@ -1,0 +1,1013 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "AC-19",
+    "RELEASE-001"
+  ],
+  "started_at": "2026-11-03T06:22:52.133466+00:00",
+  "producer": "scripts/collect_release_ci.py",
+  "release_acceptance": "pending_review_not_granted_by_collection",
+  "project": "arc-ci-41588865769-amd64",
+  "historical_or_user_artifact_cleanup": false,
+  "runner_system": "Linux",
+  "runner_machine": "x86_64",
+  "native_materials_profile": "complete",
+  "images": {
+    "api": "sha256:dac5965a840be8d2da28d1bb3e2098b42ea4fe9aeefa010357344f0a43166e10",
+    "langflow": "sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+    "web": "sha256:7d7a54dd6c684b161a122c17d245d458a3c744cb389833e555dea571baae73f6",
+    "postgres": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+  },
+  "system_materials": {
+    "files": 15,
+    "bytes": 77242,
+    "status": "completed"
+  },
+  "native_scope": "remaining_budget_from_fixed_prior_batch",
+  "collection_state": "collected",
+  "audits": {
+    "package_scan_exit_code": 2,
+    "redhat_supplement_exit_code": 0
+  },
+  "note": "Exit 1 means findings; 2 means unknown/incomplete. RPM coverage is supplemented separately. No result accepts residual risk or grants binary redistribution.",
+  "ended_at": "2026-11-03T06:23:19.856639+00:00",
+  "commands": [
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "ps",
+        "-q",
+        "api"
+      ],
+      "started_at": "2026-11-03T06:22:52.133546+00:00",
+      "ended_at": "2026-11-03T06:22:52.534923+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdin_bytes": 0,
+      "max_stdout_bytes": 2097152,
+      "stdin_sha256": null,
+      "stdout": "api-container.stdout",
+      "stderr": "api-container.stderr"
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{.Image}} {{index .Config.Labels \"com.docker.compose.project\"}} {{index .Config.Labels \"com.docker.compose.service\"}}",
+        "ba1b543f9cb9c37cf98f92ff3af9053759a32af29edb83584de9487cbb4c6d48"
+      ],
+      "started_at": "2026-11-03T06:22:52.535195+00:00",
+      "ended_at": "2026-11-03T06:22:52.936596+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdin_bytes": 0,
+      "max_stdout_bytes": 2097152,
+      "stdin_sha256": null,
+      "stdout": "api-image.stdout",
+      "stderr": "api-image.stderr"
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-03T06:22:52.936862+00:00",
+      "ended_at": "2026-11-03T06:22:53.338157+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdin_bytes": 0,
+      "max_stdout_bytes": 2097152,
+      "stdin_sha256": null,
+      "stdout": "langflow-container.stdout",
+      "stderr": "langflow-container.stderr"
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{.Image}} {{index .Config.Labels \"com.docker.compose.project\"}} {{index .Config.Labels \"com.docker.compose.service\"}}",
+        "706752bcd51405bca60fb28d816d5d49a65a1a7337ed66093843afbfa45425dd"
+      ],
+      "started_at": "2026-11-03T06:22:53.338315+00:00",
+      "ended_at": "2026-11-03T06:22:53.739585+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdin_bytes": 0,
+      "max_stdout_bytes": 2097152,
+      "stdin_sha256": null,
+      "stdout": "langflow-image.stdout",
+      "stderr": "langflow-image.stderr"
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "ps",
+        "-q",
+        "web"
+      ],
+      "started_at": "2026-11-03T06:22:53.739748+00:00",
+      "ended_at": "2026-11-03T06:22:54.141103+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdin_bytes": 0,
+      "max_stdout_bytes": 2097152,
+      "stdin_sha256": null,
+      "stdout": "web-container.stdout",
+      "stderr": "web-container.stderr"
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{.Image}} {{index .Config.Labels \"com.docker.compose.project\"}} {{index .Config.Labels \"com.docker.compose.service\"}}",
+        "5224938979eb8f2b0658adda68a02c5631937122af8973e3f022ec661d3de3b4"
+      ],
+      "started_at": "2026-11-03T06:22:54.141261+00:00",
+      "ended_at": "2026-11-03T06:22:54.542635+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdin_bytes": 0,
+      "max_stdout_bytes": 2097152,
+      "stdin_sha256": null,
+      "stdout": "web-image.stdout",
+      "stderr": "web-image.stderr"
+    },
+    {
+      "argv": [
+        "docker",
+        "compose",
+        "ps",
+        "-q",
+        "postgres"
+      ],
+      "started_at": "2026-11-03T06:22:54.542794+00:00",
+      "ended_at": "2026-11-03T06:22:54.944318+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdin_bytes": 0,
+      "max_stdout_bytes": 2097152,
+      "stdin_sha256": null,
+      "stdout": "postgres-container.stdout",
+      "stderr": "postgres-container.stderr"
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "--format",
+        "{{.Image}} {{index .Config.Labels \"com.docker.compose.project\"}} {{index .Config.Labels \"com.docker.compose.service\"}}",
+        "a82d79ff46a06fa1d7811def83626da4ec7441932fec6ebce47f5741b7aefc16"
+      ],
+      "started_at": "2026-11-03T06:22:54.944477+00:00",
+      "ended_at": "2026-11-03T06:22:55.345971+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdin_bytes": 0,
+      "max_stdout_bytes": 2097152,
+      "stdin_sha256": null,
+      "stdout": "postgres-image.stdout",
+      "stderr": "postgres-image.stderr"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--memory",
+        "512m",
+        "--pids-limit",
+        "64",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "--entrypoint",
+        "python",
+        "sha256:dac5965a840be8d2da28d1bb3e2098b42ea4fe9aeefa010357344f0a43166e10",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "started_at": "2026-11-03T06:22:55.346128+00:00",
+      "ended_at": "2026-11-03T06:22:56.147935+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdin_bytes": 0,
+      "max_stdout_bytes": 2097152,
+      "stdin_sha256": null,
+      "stdout": "api-pip-check.stdout",
+      "stderr": "api-pip-check.stderr"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--memory",
+        "512m",
+        "--pids-limit",
+        "64",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "--entrypoint",
+        "python",
+        "sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "started_at": "2026-11-03T06:22:56.148128+00:00",
+      "ended_at": "2026-11-03T06:22:57.351187+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdin_bytes": 0,
+      "max_stdout_bytes": 2097152,
+      "stdin_sha256": null,
+      "stdout": "langflow-pip-check.stdout",
+      "stderr": "langflow-pip-check.stderr"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=32m",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--memory",
+        "512m",
+        "--pids-limit",
+        "64",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "-i",
+        "--entrypoint",
+        "python",
+        "sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+        "-B",
+        "-"
+      ],
+      "started_at": "2026-11-03T06:22:57.351399+00:00",
+      "ended_at": "2026-11-03T06:22:58.954843+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdin_bytes": 14280,
+      "max_stdout_bytes": 2097152,
+      "stdin_sha256": "6cd649ba0a3838f3de3ee8dadf920cd25130231c0d04fd36a2f2e1d0ce050cfc",
+      "stdout": "dependency-compatibility.stdout",
+      "stderr": "dependency-compatibility.stderr"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--memory",
+        "128m",
+        "--pids-limit",
+        "32",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "-i",
+        "--entrypoint",
+        "python",
+        "sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+        "-B",
+        "-"
+      ],
+      "started_at": "2026-11-03T06:22:58.955095+00:00",
+      "ended_at": "2026-11-03T06:22:59.356686+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdin_bytes": 579,
+      "max_stdout_bytes": 6291456,
+      "stdin_sha256": "928acb42e1aed5f878017cb31e8ebb329745061032a7541b23e4cf488bde45f8",
+      "stdout": "system-materials.stdout",
+      "stderr": "system-materials.stderr"
+    },
+    {
+      "argv": [
+        "/home/runner/work/ai-review-console/ai-review-console/.venv/bin/python",
+        "scripts/scan_images_osv.py",
+        "--output-dir",
+        "/home/runner/work/_temp/arc-ci-evidence/release/images",
+        "--image",
+        "api=sha256:dac5965a840be8d2da28d1bb3e2098b42ea4fe9aeefa010357344f0a43166e10",
+        "--image",
+        "langflow=sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+        "--image",
+        "web=sha256:7d7a54dd6c684b161a122c17d245d458a3c744cb389833e555dea571baae73f6",
+        "--image",
+        "postgres=sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+      ],
+      "started_at": "2026-11-03T06:22:59.358459+00:00",
+      "ended_at": "2026-11-03T06:23:13.012915+00:00",
+      "exit_code": 2,
+      "stop_reason": null,
+      "stdin_bytes": 0,
+      "max_stdout_bytes": 2097152,
+      "stdin_sha256": null,
+      "stdout": "image-audit.stdout",
+      "stderr": "image-audit.stderr"
+    },
+    {
+      "argv": [
+        "/home/runner/work/ai-review-console/ai-review-console/.venv/bin/python",
+        "scripts/scan_images_osv.py",
+        "--redhat-only",
+        "--image",
+        "langflow=sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+        "--output-dir",
+        "/home/runner/work/_temp/arc-ci-evidence/release/rhel"
+      ],
+      "started_at": "2026-11-03T06:23:13.013129+00:00",
+      "ended_at": "2026-11-03T06:23:16.632904+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdin_bytes": 0,
+      "max_stdout_bytes": 2097152,
+      "stdin_sha256": null,
+      "stdout": "rhel-audit.stdout",
+      "stderr": "rhel-audit.stderr"
+    },
+    {
+      "argv": [
+        "/home/runner/work/ai-review-console/ai-review-console/.venv/bin/python",
+        "scripts/verify_image_licenses.py",
+        "--output-dir",
+        "/home/runner/work/_temp/arc-ci-evidence/release/licenses",
+        "--image",
+        "api=sha256:dac5965a840be8d2da28d1bb3e2098b42ea4fe9aeefa010357344f0a43166e10",
+        "--image",
+        "langflow=sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+        "--image",
+        "web=sha256:7d7a54dd6c684b161a122c17d245d458a3c744cb389833e555dea571baae73f6"
+      ],
+      "started_at": "2026-11-03T06:23:16.633161+00:00",
+      "ended_at": "2026-11-03T06:23:19.051530+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdin_bytes": 0,
+      "max_stdout_bytes": 2097152,
+      "stdin_sha256": null,
+      "stdout": "image-licenses.stdout",
+      "stderr": "image-licenses.stderr"
+    },
+    {
+      "argv": [
+        "/home/runner/work/ai-review-console/ai-review-console/.venv/bin/python",
+        "scripts/verify_native_materials.py",
+        "--image",
+        "api=sha256:dac5965a840be8d2da28d1bb3e2098b42ea4fe9aeefa010357344f0a43166e10",
+        "--image",
+        "langflow=sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+        "--output-dir",
+        "/home/runner/work/_temp/arc-ci-evidence/release/native",
+        "--followup",
+        "--baseline-manifest",
+        "compliance/native-baseline.json"
+      ],
+      "started_at": "2026-11-03T06:23:19.051751+00:00",
+      "ended_at": "2026-11-03T06:23:19.856504+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "stdin_bytes": 0,
+      "max_stdout_bytes": 2097152,
+      "stdin_sha256": null,
+      "stdout": "native-materials.stdout",
+      "stderr": "native-materials.stderr"
+    }
+  ],
+  "limits": {
+    "bytes": 62914560,
+    "files": 600
+  },
+  "source_inputs": [
+    {
+      "path": "scripts/collect_release_ci.py",
+      "sha256": "4d7feedf23997471fd0b1202750c8d1df3f3bbcc72666562ad96dbfc84d8fd97"
+    },
+    {
+      "path": "scripts/scan_images_osv.py",
+      "sha256": "0358ef68c8d866847f870f08770716d32cb2968b3eb684d2f00cb5088b9001db"
+    },
+    {
+      "path": "scripts/scan_release.py",
+      "sha256": "f3f353ff9a50651aa864aa75dbb480da9481dc78aaacaac2b74a90616558ea0c"
+    },
+    {
+      "path": "scripts/verify_image_licenses.py",
+      "sha256": "b4021bd6e0a432acdb9557ba8bc5fe95d5829171fce0490ff8f8d5e962ba4a32"
+    },
+    {
+      "path": "scripts/verify_dependency_compatibility.py",
+      "sha256": "6cd649ba0a3838f3de3ee8dadf920cd25130231c0d04fd36a2f2e1d0ce050cfc"
+    },
+    {
+      "path": "scripts/apply_system_updates.py",
+      "sha256": "50ac38282e4bce3d2619d8dd3af46885c217fe6f9e3bf1e5b0ef58f39c3b8821"
+    },
+    {
+      "path": "scripts/verify_native_materials.py",
+      "sha256": "57cc7fc1e73b0cc08cc1253957f35383f0f58ee3d74f9a2284105055b3b10faf"
+    },
+    {
+      "path": "compliance/native-baseline.json",
+      "sha256": "eadfcf4078cf6143e97fb373335ec257737edc14d006ff0aa2be184c6a291903"
+    },
+    {
+      "path": "docs/UPGRADE_SPEC.md",
+      "sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753"
+    }
+  ],
+  "files": [
+    {
+      "path": "api-container.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "api-container.stdout",
+      "bytes": 65,
+      "sha256": "04a7d3c09f0cac8349d88474bf16e0dc9715d121fdb49cb19ba845339a79e83c"
+    },
+    {
+      "path": "api-image.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "api-image.stdout",
+      "bytes": 101,
+      "sha256": "7584d3088d6e89e4b0cedf5c5013ba2dff0549f00e1279d827a7dfa97db230a2"
+    },
+    {
+      "path": "api-pip-check.stderr",
+      "bytes": 266,
+      "sha256": "008cb6f70ed4af61f44bf24afe092613fa4ba3c1eb10ad4b6b26f20545063a3a"
+    },
+    {
+      "path": "api-pip-check.stdout",
+      "bytes": 30,
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "path": "dependency-compatibility.stderr",
+      "bytes": 589,
+      "sha256": "e2888b8cb2e5cf8f27a629124b84ff574eed34f0e669812db94b5fb5f61ea561"
+    },
+    {
+      "path": "dependency-compatibility.stdout",
+      "bytes": 2294,
+      "sha256": "1349d4b346fc7fb613c00e3189462b807ec15b77e5d5f9d3f4a4e1685dbfaa2c"
+    },
+    {
+      "path": "image-audit.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "image-audit.stdout",
+      "bytes": 152,
+      "sha256": "c4b42da2e0f0625b173ee011d9a7d2b6faa7d4389a18752431b4042ee9d59781"
+    },
+    {
+      "path": "image-licenses.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "image-licenses.stdout",
+      "bytes": 606,
+      "sha256": "e06d9cc67aa29931532d14d2c82865e0585c9e68297854bd6c35c226cd8ff2db"
+    },
+    {
+      "path": "images/api-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "images/api-identity.stdout",
+      "bytes": 247,
+      "sha256": "9c0b357bf387696e30f3651d842f3305916253a775d316a44a908dee3e21464c"
+    },
+    {
+      "path": "images/api-inventory.json",
+      "bytes": 60601,
+      "sha256": "468b18e64ebb6344918d1577bf2183882b78b7e5cf37e5bdb5442cfedb5db700"
+    },
+    {
+      "path": "images/api-licenses.json",
+      "bytes": 68061,
+      "sha256": "355a566b14c2643523bce49fbd9e2a0e2929a49b7c6111a47e272f92c4e9ea9d"
+    },
+    {
+      "path": "images/api-os.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "images/api-os.stdout",
+      "bytes": 44689,
+      "sha256": "91bcba6df860dbfe1b30c8b29427c9e389ccdc080afabbf30020f0f4c895efa5"
+    },
+    {
+      "path": "images/api-python.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "images/api-python.stdout",
+      "bytes": 28437,
+      "sha256": "3231e20ce98c03f1a3c4c93a517084c92b677194035fb5f3df965fe8d305bc8c"
+    },
+    {
+      "path": "images/api.cdx.json",
+      "bytes": 96126,
+      "sha256": "aa356f1a4d37c317ee3557fa32f7a17f1be64912f1056a7b68aa62c4521027aa"
+    },
+    {
+      "path": "images/api.spdx.json",
+      "bytes": 95513,
+      "sha256": "e42b5ebe0f037afe38d3f6a0cf2e525bcaf37c0ea7bd14044fa16580b9d316d7"
+    },
+    {
+      "path": "images/http-records.json",
+      "bytes": 270012,
+      "sha256": "2da2b30d0642ed05776acafec30d0df0bd27ab605682586c57e92cd0cac2f550"
+    },
+    {
+      "path": "images/langflow-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "images/langflow-identity.stdout",
+      "bytes": 253,
+      "sha256": "db279286d26893cb9d7b334ec3c7b02659b90a54309bf07d6d414fe6165e41ab"
+    },
+    {
+      "path": "images/langflow-inventory.json",
+      "bytes": 310263,
+      "sha256": "8f003bd946b0fe9fbedd5190207969c3fcd45b43b6221e2e5a8ffcca4ae863ff"
+    },
+    {
+      "path": "images/langflow-licenses.json",
+      "bytes": 342655,
+      "sha256": "82bb2b030c083f08fb67d482d9030b2ad70fc4c1a81504632cd44e32267105e4"
+    },
+    {
+      "path": "images/langflow-os.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "images/langflow-os.stdout",
+      "bytes": 21483,
+      "sha256": "0e78242e0a61e33e9f18e927f01e1eb6e67495390f21cc272b4ebd732939dc6d"
+    },
+    {
+      "path": "images/langflow-python.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "images/langflow-python.stdout",
+      "bytes": 778942,
+      "sha256": "5c6e53da4efe5bb4dcd5f9cda5054fe05102a717361b82cb65801a8b7f3a6c97"
+    },
+    {
+      "path": "images/langflow.cdx.json",
+      "bytes": 513178,
+      "sha256": "3e67d75d934b6a68dbccdf02a5135bf1d038dcaedf9dcea7e04e7b282dd3634c"
+    },
+    {
+      "path": "images/langflow.spdx.json",
+      "bytes": 515605,
+      "sha256": "cc68d417367f1573cca42a5693de475cbab9f69677943d32a30506fabc94ad22"
+    },
+    {
+      "path": "images/manifest.json",
+      "bytes": 88665,
+      "sha256": "274c8604dc87250e7818f92b6f18322028505546588fdb43eae8f4b0bb6dfbd6"
+    },
+    {
+      "path": "images/package-mappings.json",
+      "bytes": 890714,
+      "sha256": "a515d0aa66208ded10b267a4291a3e7b5a20926136ad7de26518dc8c24eec1a4"
+    },
+    {
+      "path": "images/postgres-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "images/postgres-identity.stdout",
+      "bytes": 234,
+      "sha256": "63ed038d6fb37749154bf286cf176765984c12cdb5359ce89128eb54c672a3c6"
+    },
+    {
+      "path": "images/postgres-inventory.json",
+      "bytes": 77818,
+      "sha256": "803be3fa8bea1e013c94cc408b89677602e8bf11175ff3a20d250ff3f9be38dd"
+    },
+    {
+      "path": "images/postgres-licenses.json",
+      "bytes": 86454,
+      "sha256": "60746a0c35d76b906d97c9e673835daa9324cbf6d70dca652e81395f27539de1"
+    },
+    {
+      "path": "images/postgres-os.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "images/postgres-os.stdout",
+      "bytes": 93776,
+      "sha256": "5d26897f6da40a586efac34b295920f78109224dd86d12c2c344a1ebf2e76919"
+    },
+    {
+      "path": "images/postgres-python.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "images/postgres-python.stdout",
+      "bytes": 38,
+      "sha256": "1030eb169431c4058cc0a7e032ca2c5cd75534d69d00e58d607fea877b0bc720"
+    },
+    {
+      "path": "images/postgres.cdx.json",
+      "bytes": 112593,
+      "sha256": "4db33c5aabd583ef091dba5f8f28b255f7e19d6ff095a6f4207ecc8c5876794e"
+    },
+    {
+      "path": "images/postgres.spdx.json",
+      "bytes": 98726,
+      "sha256": "75aea5bdfdbfb7bfb1efc45fad2b485f9ed4709b4160f3899c4c27bd5ff3e1de"
+    },
+    {
+      "path": "images/summary.json",
+      "bytes": 65527,
+      "sha256": "8ec9502da4e1b15b36ee74e3a2595facf82d88619cef3bcb158dfbf56a0c16e8"
+    },
+    {
+      "path": "images/vulnerabilities.json",
+      "bytes": 1979275,
+      "sha256": "e65cca89c8c44a34c7db478bf373495cb24d893d4100ce7df6524b33761d8f91"
+    },
+    {
+      "path": "images/web-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "images/web-identity.stdout",
+      "bytes": 253,
+      "sha256": "2163620d74a06a5f0ebf6c3e0cf0933c5160d2f842056ac1be1f098ba004008f"
+    },
+    {
+      "path": "images/web-inventory.json",
+      "bytes": 21080,
+      "sha256": "9bdb5482138958dc90a1d440ebd3f192e385d2de8d57be67a852c85f7b7a5c1e"
+    },
+    {
+      "path": "images/web-licenses.json",
+      "bytes": 24006,
+      "sha256": "fec3127b0a787919315d2e11027dd39fc22e2a2cda22c52b05449c73cfba84ce"
+    },
+    {
+      "path": "images/web-os.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "images/web-os.stdout",
+      "bytes": 102873,
+      "sha256": "02642508a76aa6df267c6ee9c567939d7080134250a5c61f31327c7c77475d30"
+    },
+    {
+      "path": "images/web-python.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "images/web-python.stdout",
+      "bytes": 38,
+      "sha256": "1030eb169431c4058cc0a7e032ca2c5cd75534d69d00e58d607fea877b0bc720"
+    },
+    {
+      "path": "images/web.cdx.json",
+      "bytes": 45380,
+      "sha256": "0dd7a5a3c45613e78ee47739d6927a3c2b9bdbe1370818910d8483becdd185c5"
+    },
+    {
+      "path": "images/web.spdx.json",
+      "bytes": 49569,
+      "sha256": "c7fd05fa2178eb45c504a51191670106451675f0330120c2b67e127a4c5d997c"
+    },
+    {
+      "path": "langflow-container.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "langflow-container.stdout",
+      "bytes": 65,
+      "sha256": "133568b1023cb8bc87d79b6aeb7ec64341647145704748007f2224a5bf59cb21"
+    },
+    {
+      "path": "langflow-image.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "langflow-image.stdout",
+      "bytes": 106,
+      "sha256": "d7b7b6a7658d1cff59a808ebd1fdf5e7c3cb81a883fcf085854b43e3c58a5bb9"
+    },
+    {
+      "path": "langflow-pip-check.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "langflow-pip-check.stdout",
+      "bytes": 30,
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "path": "licenses/api.json",
+      "bytes": 178050,
+      "sha256": "38bb0a2ccca5e78de92f746b2aa89446b0c06b824be9d4a3534ee0e7b87542a2"
+    },
+    {
+      "path": "licenses/langflow.json",
+      "bytes": 1026546,
+      "sha256": "e847895b72b052b0890169815364cf8947cc56d61c052d8c7b98a68c8d512bb8"
+    },
+    {
+      "path": "licenses/manifest.json",
+      "bytes": 1612,
+      "sha256": "6ab3b5393d643171f6c790bcb06295ce9caf62b6a47612bae06f4bf30e75968d"
+    },
+    {
+      "path": "licenses/web.json",
+      "bytes": 95767,
+      "sha256": "8769a4d4ae9122a21a732a4c524ef7f6509228885d27453cab2ce2f2199597e4"
+    },
+    {
+      "path": "native/manifest.json",
+      "bytes": 434,
+      "sha256": "159e153f9a8d2d768963025b478a9670ad3b9423d806e7e7a8f447f9af4f3873"
+    },
+    {
+      "path": "native/materials.json",
+      "bytes": 37517,
+      "sha256": "557010a4b7d40eb40176cd926df59946603d95e843047ed51826e64a2e7fc60b"
+    },
+    {
+      "path": "native-materials.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "native-materials.stdout",
+      "bytes": 115,
+      "sha256": "02739c88b857fc86c76aeae25894c88ddd9ce3957f5e4fda0f52460dac203a9a"
+    },
+    {
+      "path": "postgres-container.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "postgres-container.stdout",
+      "bytes": 65,
+      "sha256": "a6f8ba8e4af0aebc99a9e10784d9cb7bd9acf07ca9788a166b97104a7353c07f"
+    },
+    {
+      "path": "postgres-image.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "postgres-image.stdout",
+      "bytes": 106,
+      "sha256": "847a2bdf19515db99ac094b2219f181bfb990dff1a0697c2a2e8101461f36e80"
+    },
+    {
+      "path": "rhel/http-records.json",
+      "bytes": 142105,
+      "sha256": "79bf2cc37d009c6fd442d2ca0413f854c916ae7b0935781d8339858304e50d03"
+    },
+    {
+      "path": "rhel/langflow-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rhel/langflow-identity.stdout",
+      "bytes": 104,
+      "sha256": "7b83500c9786f1c63583e93c45fe3243a1f9e9be49685b26cfbe8fd8a3c951b3"
+    },
+    {
+      "path": "rhel/langflow-os.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rhel/langflow-os.stdout",
+      "bytes": 21483,
+      "sha256": "0e78242e0a61e33e9f18e927f01e1eb6e67495390f21cc272b4ebd732939dc6d"
+    },
+    {
+      "path": "rhel/langflow-redhat-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rhel/langflow-redhat-metadata.stdout",
+      "bytes": 23228,
+      "sha256": "33ec25b8623282d46b5614f55c253e27ad8646914b0cd82c6fc696d7a1ce0ae9"
+    },
+    {
+      "path": "rhel/manifest.json",
+      "bytes": 7494,
+      "sha256": "70bbd72bd93acce8586c29282e6291320c9405d39e639d764e0e8f7486cacebc"
+    },
+    {
+      "path": "rhel/product-bindings.json",
+      "bytes": 1807,
+      "sha256": "e45ecb35b0ceb7485a02ecc1b83df2770e1dcce508c590beac650885d30c5aff"
+    },
+    {
+      "path": "rhel/repository-to-cpe.json",
+      "bytes": 4379662,
+      "sha256": "b0ee1f3f15d2043971f64e04c9c39cbf6f8e608edc26a07faea8bbb9393d2bb7"
+    },
+    {
+      "path": "rhel/rpm-mappings.json",
+      "bytes": 330365,
+      "sha256": "1d3e05410604e80cd848ef3a38d10a7a3545de65d04e4e2bfde104253de8c5fd"
+    },
+    {
+      "path": "rhel/summary.json",
+      "bytes": 670,
+      "sha256": "270bb4564d5aa4956756b8051f948c088a2de50e2ee329e3f603ced592d11e7f"
+    },
+    {
+      "path": "rhel/vulnerabilities.json",
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "path": "rhel-audit.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rhel-audit.stdout",
+      "bytes": 167,
+      "sha256": "90f69dbcc2738fd08e7d31d4082d1f99bec012e66f51b68d537c6a9465862aea"
+    },
+    {
+      "path": "system/image-cache-clean.stderr",
+      "bytes": 170,
+      "sha256": "07da54469d2fc3ae58d11654ed788c555b9b4af867041eea4b376113ebdd28db"
+    },
+    {
+      "path": "system/image-cache-clean.stdout",
+      "bytes": 10,
+      "sha256": "d9158dba466706073b9359557167b7d68c1c5e5fe5dc7139cb95fd7c53ab996b"
+    },
+    {
+      "path": "system/manifest.json",
+      "bytes": 9313,
+      "sha256": "50a581d20ed9ea10e3c27ec4d69c61f661756b3a5792fe42ca51099bee746589"
+    },
+    {
+      "path": "system/metadata-refresh.stderr",
+      "bytes": 166,
+      "sha256": "d0deb090c56293a64925b587a7426193ef6b824abdc3a49c5c6b2de4027fe421"
+    },
+    {
+      "path": "system/metadata-refresh.stdout",
+      "bytes": 72,
+      "sha256": "199d049b1dc95ccc87c2835867225f01f603c61f094ccf70516a316328f2045b"
+    },
+    {
+      "path": "system/repositories.stderr",
+      "bytes": 164,
+      "sha256": "40053a8a8c5a18813a7dacb2e84f5969aa647c682f235fc8315842c076175b56"
+    },
+    {
+      "path": "system/repositories.stdout",
+      "bytes": 175,
+      "sha256": "0ffe702a45ebd746468ea401862b5cdf99977843c0422bcd1c3e8d89e5a7f3d4"
+    },
+    {
+      "path": "system/rpm-after.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "system/rpm-after.stdout",
+      "bytes": 23754,
+      "sha256": "bd866069424571ba5fe2101f75a8508f7c486e2545924aa41a58eae1036ff34d"
+    },
+    {
+      "path": "system/rpm-before.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "system/rpm-before.stdout",
+      "bytes": 23633,
+      "sha256": "6331f46a11e7d1c06353fbba0906738eb83cac3f5765fa90878ab8543ed919a1"
+    },
+    {
+      "path": "system/trusted-keys.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "system/trusted-keys.stdout",
+      "bytes": 87,
+      "sha256": "c6ece077551b266b6e45ed3ad78c101da32b431b1d28a3eaf67c513f41a4000e"
+    },
+    {
+      "path": "system/update.stderr",
+      "bytes": 166,
+      "sha256": "5286dd4cc140fe944f83edf74f05e27c75057856ad68a8283991afd6444bef4f"
+    },
+    {
+      "path": "system/update.stdout",
+      "bytes": 19532,
+      "sha256": "fce03041bde3b4bc71206cdfcea99b0d9ab1532afbf0c35f7c7b53dd0b687604"
+    },
+    {
+      "path": "system-materials.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "system-materials.stdout",
+      "bytes": 104973,
+      "sha256": "a4b4679c544bf1bb7fbb8e7f035bbe0eb05faeabd627215ee22fa515b3daa118"
+    },
+    {
+      "path": "web-container.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "web-container.stdout",
+      "bytes": 65,
+      "sha256": "b3cb2b2a88ebda780d80206dca488c812d3808f1a891df1f3ab04d3e25a2886e"
+    },
+    {
+      "path": "web-image.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "web-image.stdout",
+      "bytes": 101,
+      "sha256": "0ed4ab055c1832d1d806a0c21ad459f67b6b18959ee3e425c8fc5ef0ef1d849b"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "actual_command": "python3 /private/tmp/arc-runtime-maintenance.wT9huB/python/collect_candidate_metadata.py",
+  "argv": [
+    "/private/tmp/arc-runtime-maintenance.wT9huB/python/collect_candidate_metadata.py"
+  ],
+  "exit_code": 0,
+  "finished_at_utc": "2026-11-03T05:44:46.012837+00:00",
+  "http_request_count": 9,
+  "http_total_bytes": 186936,
+  "outputs": [
+    {
+      "bytes": 85766,
+      "path": "candidate-metadata.json",
+      "sha256": "4d544f0be1f01afac3512bc582424079f0151898eb3fdd6ff70ed3ffc7a55b9d"
+    },
+    {
+      "bytes": 9667,
+      "path": "candidate-summary.json",
+      "sha256": "bcc339bdb83dc32d04e4b77025cb525057f3a06655fba7b77ba91c1660d04bbd"
+    }
+  ],
+  "producer": {
+    "bytes": 9366,
+    "path": "/private/tmp/arc-runtime-maintenance.wT9huB/python/collect_candidate_metadata.py",
+    "sha256": "cdc2fa293f9d97ae36ee68a75cc30ef01dc462daf4079c1021a12171a823a823"
+  },
+  "remaining_scope": "Metadata-only assessment; no runtime adoption or release acceptance",
+  "requests": [
+    {
+      "content_type": "application/json",
+      "elapsed_seconds": 0.452869,
+      "final_url": "https://pypi.org/pypi/langflow/1.13.0/json",
+      "finished_at_utc": "2026-11-03T05:44:43.384773+00:00",
+      "raw_response_sha256": "abc2422cc95912a00a5ccd239ad645d958bd74eacf6305a4395e54c8ce3c5eec",
+      "response_bytes": 10144,
+      "server_date": "Tue, 03 Nov 2026 05:44:43 GMT",
+      "started_at_utc": "2026-11-03T05:44:42.931939+00:00",
+      "status": 200,
+      "url": "https://pypi.org/pypi/langflow/1.13.0/json"
+    },
+    {
+      "content_type": "application/json",
+      "elapsed_seconds": 0.248319,
+      "final_url": "https://pypi.org/pypi/langflow-base/1.13.0/json",
+      "finished_at_utc": "2026-11-03T05:44:43.634720+00:00",
+      "raw_response_sha256": "0f0e77a582b72e49f1305e2c6ef0a5194655752a293c910ac0149ec6c9a55cdf",
+      "response_bytes": 15006,
+      "server_date": "Tue, 03 Nov 2026 05:44:43 GMT",
+      "started_at_utc": "2026-11-03T05:44:43.386416+00:00",
+      "status": 200,
+      "url": "https://pypi.org/pypi/langflow-base/1.13.0/json"
+    },
+    {
+      "content_type": "application/json",
+      "elapsed_seconds": 0.469071,
+      "final_url": "https://pypi.org/pypi/lfx/1.13.0/json",
+      "finished_at_utc": "2026-11-03T05:44:44.104778+00:00",
+      "raw_response_sha256": "d2588c2b1ba4a9481e91118e78cb65dd3be716bc179de920c2b13e31343cc33a",
+      "response_bytes": 36733,
+      "server_date": "Tue, 03 Nov 2026 05:44:44 GMT",
+      "started_at_utc": "2026-11-03T05:44:43.635718+00:00",
+      "status": 200,
+      "url": "https://pypi.org/pypi/lfx/1.13.0/json"
+    },
+    {
+      "content_type": "application/json",
+      "elapsed_seconds": 0.317289,
+      "final_url": "https://pypi.org/pypi/langflow/1.13.1rc2/json",
+      "finished_at_utc": "2026-11-03T05:44:44.422634+00:00",
+      "raw_response_sha256": "a575bca64ef45db1050ce8f0782d35c4fdad9bdbdfbe6eb85bf8506cdeae3308",
+      "response_bytes": 10183,
+      "server_date": "Tue, 03 Nov 2026 05:44:44 GMT",
+      "started_at_utc": "2026-11-03T05:44:44.105356+00:00",
+      "status": 200,
+      "url": "https://pypi.org/pypi/langflow/1.13.1rc2/json"
+    },
+    {
+      "content_type": "application/json",
+      "elapsed_seconds": 0.327573,
+      "final_url": "https://pypi.org/pypi/langflow-base/1.13.1rc2/json",
+      "finished_at_utc": "2026-11-03T05:44:44.750558+00:00",
+      "raw_response_sha256": "cbfb7c76a9100dc8159e1c0158211b8cb819c199a4a9c2d8d82f0fbd06e98ab4",
+      "response_bytes": 15112,
+      "server_date": "Tue, 03 Nov 2026 05:44:44 GMT",
+      "started_at_utc": "2026-11-03T05:44:44.423014+00:00",
+      "status": 200,
+      "url": "https://pypi.org/pypi/langflow-base/1.13.1rc2/json"
+    },
+    {
+      "content_type": "application/json",
+      "elapsed_seconds": 0.471072,
+      "final_url": "https://pypi.org/pypi/lfx/1.13.1rc2/json",
+      "finished_at_utc": "2026-11-03T05:44:45.222503+00:00",
+      "raw_response_sha256": "1639d7ced778edd455ab51740d7a8ae7c53346a41af27d60b9954266e08c71a5",
+      "response_bytes": 36824,
+      "server_date": "Tue, 03 Nov 2026 05:44:45 GMT",
+      "started_at_utc": "2026-11-03T05:44:44.751454+00:00",
+      "status": 200,
+      "url": "https://pypi.org/pypi/lfx/1.13.1rc2/json"
+    },
+    {
+      "content_type": "application/json",
+      "elapsed_seconds": 0.205488,
+      "final_url": "https://pypi.org/pypi/langflow/1.14.0.dev14/json",
+      "finished_at_utc": "2026-11-03T05:44:45.428778+00:00",
+      "raw_response_sha256": "4f50a6b15a6ed60cd6c8fb01207816a199b586c6d7155d9ba8874a1f83254554",
+      "response_bytes": 10287,
+      "server_date": "Tue, 03 Nov 2026 05:44:45 GMT",
+      "started_at_utc": "2026-11-03T05:44:45.223267+00:00",
+      "status": 200,
+      "url": "https://pypi.org/pypi/langflow/1.14.0.dev14/json"
+    },
+    {
+      "content_type": "application/json",
+      "elapsed_seconds": 0.170125,
+      "final_url": "https://pypi.org/pypi/langflow-base/1.14.0.dev14/json",
+      "finished_at_utc": "2026-11-03T05:44:45.599409+00:00",
+      "raw_response_sha256": "49949813fbb4a5fefb9db4654c67201b0efa3b20f3b8938d6758b84ea2f0955a",
+      "response_bytes": 15598,
+      "server_date": "Tue, 03 Nov 2026 05:44:45 GMT",
+      "started_at_utc": "2026-11-03T05:44:45.429291+00:00",
+      "status": 200,
+      "url": "https://pypi.org/pypi/langflow-base/1.14.0.dev14/json"
+    },
+    {
+      "content_type": "application/json",
+      "elapsed_seconds": 0.407196,
+      "final_url": "https://pypi.org/pypi/lfx/1.14.0.dev14/json",
+      "finished_at_utc": "2026-11-03T05:44:46.007468+00:00",
+      "raw_response_sha256": "ac1b81273e51fd8da8d08af75c7474ce1d5e98b0074ee7ba0422ae2970bd23be",
+      "response_bytes": 37049,
+      "server_date": "Tue, 03 Nov 2026 05:44:45 GMT",
+      "started_at_utc": "2026-11-03T05:44:45.600293+00:00",
+      "status": 200,
+      "url": "https://pypi.org/pypi/lfx/1.14.0.dev14/json"
+    }
+  ],
+  "schema": "arc.command-record.v1",
+  "started_at_utc": "2026-11-03T05:44:42.931796+00:00"
+}

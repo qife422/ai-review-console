@@ -1,0 +1,297 @@
+{
+  "checked_at": "2026-11-04T02:35:34.610626+00:00",
+  "source": "adb93c4b9f6af508188f696b8d7d1ef1dc5668ac",
+  "run": 41760412382,
+  "run_url": "https://github.com/qife422/ai-review-console/actions/runs/41760412382",
+  "run_state": "completed/success",
+  "run_metadata_method": {
+    "url": "https://api.github.com/repos/qife422/ai-review-console/actions/runs/41760412382",
+    "response_bytes": 12837,
+    "response_sha256": "62df9b1ed54821641a7a595009a170e365608f0758004a27ccda31f2acc39c0a",
+    "raw_response_not_selected": true,
+    "fields": {
+      "id": 41760412382,
+      "head_sha": "adb93c4b9f6af508188f696b8d7d1ef1dc5668ac",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-04T02:23:19Z",
+      "updated_at": "2026-11-04T02:31:02Z",
+      "run_started_at": "2026-11-04T02:23:19Z"
+    }
+  },
+  "jobs": [
+    {
+      "id": 126346526095,
+      "name": "workflow-browser (ubuntu-24.04-arm, arm64, arm-backend)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 126346526283,
+      "name": "verify",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 126346526549,
+      "name": "workflow-browser (ubuntu-latest, amd64, complete)",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "unit": {
+    "raw": "unit/arc-unit.xml",
+    "suites": [
+      {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "191",
+        "time": "5.485",
+        "timestamp": "2026-11-04T02:24:03.625909+00:00",
+        "hostname": "runnervmwuk1x"
+      }
+    ],
+    "frontend_tests": 29,
+    "frontend_count_source": "metadata.json#verify_count_excerpt"
+  },
+  "current_observed_scans": {
+    "amd64": {
+      "provider_union": 236,
+      "default_unknown": {
+        "mapping_unknown": 227,
+        "query_unknown": 0,
+        "detail_unknown": 0
+      },
+      "images": {
+        "api": {
+          "image_id": "sha256:0b8f9853c44b93671f39ebc1391ee4675be367816e09ff39a9e61fe672052051",
+          "inventory_packages": 140,
+          "unknown_packages": 0,
+          "matched_binary_or_python_packages": 51,
+          "observed_unique_advisory_ids": 126,
+          "detail_unknown": 0
+        },
+        "langflow": {
+          "image_id": "sha256:fd6d66658d49008b53095d2669de17f88360038cbfc8238aa509ffd2e1aaa02c",
+          "inventory_packages": 777,
+          "unknown_packages": 227,
+          "matched_binary_or_python_packages": 5,
+          "observed_unique_advisory_ids": 81,
+          "detail_unknown": 0
+        },
+        "web": {
+          "image_id": "sha256:5306b256b8dc6446bdb28b8349ffdbe77402f527f063de9b38eba5c2f33a92e6",
+          "inventory_packages": 71,
+          "unknown_packages": 0,
+          "matched_binary_or_python_packages": 0,
+          "observed_unique_advisory_ids": 0,
+          "detail_unknown": 0
+        },
+        "postgres": {
+          "image_id": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c",
+          "inventory_packages": 142,
+          "unknown_packages": 0,
+          "matched_binary_or_python_packages": 63,
+          "observed_unique_advisory_ids": 130,
+          "detail_unknown": 0
+        }
+      },
+      "rhel": {
+        "rpm_entries": 227,
+        "mapped_software_packages": 224,
+        "metadata_only_public_keys": 3,
+        "observed_unique_advisory_ids": 0,
+        "mapping_unknown": 0,
+        "query_unknown": 0,
+        "detail_unknown": 0
+      }
+    },
+    "arm64": {
+      "provider_union": 236,
+      "default_unknown": {
+        "mapping_unknown": 227,
+        "query_unknown": 0,
+        "detail_unknown": 0
+      },
+      "images": {
+        "api": {
+          "image_id": "sha256:1ea8231e5971e458759a3c86ddf65627921dec2b30d78e6558a205f3fc35792b",
+          "inventory_packages": 140,
+          "unknown_packages": 0,
+          "matched_binary_or_python_packages": 51,
+          "observed_unique_advisory_ids": 126,
+          "detail_unknown": 0
+        },
+        "langflow": {
+          "image_id": "sha256:32d4afd618fe80051cb4d2ee3c34d71a409ae43c471c5212a22eb52807388e2d",
+          "inventory_packages": 773,
+          "unknown_packages": 227,
+          "matched_binary_or_python_packages": 5,
+          "observed_unique_advisory_ids": 81,
+          "detail_unknown": 0
+        },
+        "web": {
+          "image_id": "sha256:33d3468c5718afd5148e72f39484893e846bde5f02c89775f0616d1f78569d39",
+          "inventory_packages": 71,
+          "unknown_packages": 0,
+          "matched_binary_or_python_packages": 0,
+          "observed_unique_advisory_ids": 0,
+          "detail_unknown": 0
+        },
+        "postgres": {
+          "image_id": "sha256:6162f3765f7563b273a879894c5751d41285f922dd75ba0ba508a89e024e43ca",
+          "inventory_packages": 142,
+          "unknown_packages": 0,
+          "matched_binary_or_python_packages": 63,
+          "observed_unique_advisory_ids": 130,
+          "detail_unknown": 0
+        }
+      },
+      "rhel": {
+        "rpm_entries": 227,
+        "mapped_software_packages": 224,
+        "metadata_only_public_keys": 3,
+        "observed_unique_advisory_ids": 0,
+        "mapping_unknown": 0,
+        "query_unknown": 0,
+        "detail_unknown": 0
+      }
+    }
+  },
+  "fresh_system_and_coverage": {
+    "amd64": {
+      "rpm_rows_before": 226,
+      "rpm_rows_after": 227,
+      "software_evr_changed": 60,
+      "software_added": [
+        "perl-Unicode-Normalize"
+      ],
+      "software_removed": [],
+      "key_installed_evrs": {
+        "sqlite-libs": "0:3.46.1-6.el10_2",
+        "glibc": "0:2.39-145.el10_2",
+        "openssl-libs": "1:3.5.8-2.el10_2",
+        "libxml2": "0:2.12.5-10.el10_2.4",
+        "expat": "0:2.7.3-1.el10_2.7",
+        "python3.14": "0:3.14.8-1.el10_2",
+        "pcre2": "0:10.44-1.5.el10_2",
+        "curl": "0:8.12.1-4.el10_2.7"
+      },
+      "exact_same_langflow_image_id": "sha256:fd6d66658d49008b53095d2669de17f88360038cbfc8238aa509ffd2e1aaa02c",
+      "default_RPM_set_equals_supplement": true,
+      "post_update_full_EVR_set_equals_supplement": true,
+      "primary_unknown_rows": 227,
+      "other_uncovered_unknown_rows": 0,
+      "default_exit_code_preserved": 2,
+      "input_original_members": [
+        {
+          "path": "release/system/rpm-before.stdout",
+          "bytes": 23633,
+          "sha256": "6331f46a11e7d1c06353fbba0906738eb83cac3f5765fa90878ab8543ed919a1"
+        },
+        {
+          "path": "release/system/rpm-after.stdout",
+          "bytes": 23754,
+          "sha256": "bd866069424571ba5fe2101f75a8508f7c486e2545924aa41a58eae1036ff34d"
+        },
+        {
+          "path": "release/images/langflow-inventory.json",
+          "bytes": 310263,
+          "sha256": "2d1ea2371dbacff979ccebf4d82a8abc8a628da5b4b4ab1124b3ccd6c17a0a73"
+        },
+        {
+          "path": "release/images/package-mappings.json",
+          "bytes": 890714,
+          "sha256": "a515d0aa66208ded10b267a4291a3e7b5a20926136ad7de26518dc8c24eec1a4"
+        },
+        {
+          "path": "release/rhel/rpm-mappings.json",
+          "bytes": 330365,
+          "sha256": "1d3e05410604e80cd848ef3a38d10a7a3545de65d04e4e2bfde104253de8c5fd"
+        }
+      ],
+      "scope": "Derived from current source4 ZIP only. Detailed inventories/maps are not stored as new raw payload here; their original fingerprints are retained. This does not assess filesystem/embedded binaries or exploitability."
+    },
+    "arm64": {
+      "rpm_rows_before": 226,
+      "rpm_rows_after": 227,
+      "software_evr_changed": 60,
+      "software_added": [
+        "perl-Unicode-Normalize"
+      ],
+      "software_removed": [],
+      "key_installed_evrs": {
+        "sqlite-libs": "0:3.46.1-6.el10_2",
+        "glibc": "0:2.39-145.el10_2",
+        "openssl-libs": "1:3.5.8-2.el10_2",
+        "libxml2": "0:2.12.5-10.el10_2.4",
+        "expat": "0:2.7.3-1.el10_2.7",
+        "python3.14": "0:3.14.8-1.el10_2",
+        "pcre2": "0:10.44-1.5.el10_2",
+        "curl": "0:8.12.1-4.el10_2.7"
+      },
+      "exact_same_langflow_image_id": "sha256:32d4afd618fe80051cb4d2ee3c34d71a409ae43c471c5212a22eb52807388e2d",
+      "default_RPM_set_equals_supplement": true,
+      "post_update_full_EVR_set_equals_supplement": true,
+      "primary_unknown_rows": 227,
+      "other_uncovered_unknown_rows": 0,
+      "default_exit_code_preserved": 2,
+      "input_original_members": [
+        {
+          "path": "release/system/rpm-before.stdout",
+          "bytes": 23790,
+          "sha256": "abc88073fef6df7eb8fa9b1df68eea84f3086382a16422beb8da9ccc85d0d676"
+        },
+        {
+          "path": "release/system/rpm-after.stdout",
+          "bytes": 23912,
+          "sha256": "e546e71e11411660bd63b58cf7d69f73a374404d092a9cb131f40143b662a43c"
+        },
+        {
+          "path": "release/images/langflow-inventory.json",
+          "bytes": 308811,
+          "sha256": "8e91aa2c83d4db5b7e979e07764fc13ffa893f81492c3b5141bd6ec1d10dd5cd"
+        },
+        {
+          "path": "release/images/package-mappings.json",
+          "bytes": 887668,
+          "sha256": "a489895f08f45cdd9484e79014f0fbbf85fa6661631eff9b89059e200adbacbc"
+        },
+        {
+          "path": "release/rhel/rpm-mappings.json",
+          "bytes": 330523,
+          "sha256": "8e8fd39d3261e6ccdba26cdb4e2d68718597ce06750e63ba02d383bfd29ca386"
+        }
+      ],
+      "scope": "Derived from current source4 ZIP only. Detailed inventories/maps are not stored as new raw payload here; their original fingerprints are retained. This does not assess filesystem/embedded binaries or exploitability."
+    }
+  },
+  "native": {
+    "raw": "amd64/release/native/materials.json",
+    "english_agreement": [
+      {
+        "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_en",
+        "state": "recorded",
+        "sha256": "0e83c4ba0bc0da1a24fd6a828002575acf4933e48f43cb5569ad02436ff5fb6e",
+        "resolved_path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_en",
+        "file_bytes": 55713,
+        "bytes_read": 55713,
+        "purpose": "driver_exact_english_agreement",
+        "owner_basis": "known185layout; cross-check same-image generic inventory",
+        "metadata_or_record_reread": false
+      }
+    ],
+    "current_invocation_read_files": 1,
+    "current_invocation_input_bytes": 55713,
+    "remaining_budget": {
+      "files": 8,
+      "input_bytes": 26852095,
+      "text_bytes": 4026824
+    },
+    "known_goal_input_bytes": 135779466,
+    "legal_approval": false
+  },
+  "scope": "Fourth native-selector closure snapshot; includes only listed original members, explicitly derived field bindings, full ZIP/root/child integrity verification and current summary facts. It does not claim a new full raw packet, new screenshots, full binary/FIPS/source coverage, AC19 acceptance or distribution approval. Earlier source185848 full regression and exact-replay evidence remain independently scoped."
+}

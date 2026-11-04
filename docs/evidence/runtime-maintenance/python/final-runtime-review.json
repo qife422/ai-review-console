@@ -1,0 +1,2347 @@
+{
+  "architecture_comparison": {
+    "amd64_only_pypi": {
+      "ibm-db": "3.2.9",
+      "tree-sitter": "0.26.0",
+      "tree-sitter-javascript": "0.25.0",
+      "tree-sitter-typescript": "0.23.2"
+    },
+    "arm64_only_pypi": {},
+    "same_official_repository_map_bytes": true,
+    "same_rpm_name_full_evr_set_ignoring_arch": true,
+    "shared_pypi_version_differences": {}
+  },
+  "architectures": {
+    "amd64": {
+      "all_images_finding_counts": {
+        "api": {
+          "detail_unknown": 0,
+          "matched_binary_or_python_packages": 51,
+          "observed_unique_advisory_ids": 126,
+          "unknown_packages": 0
+        },
+        "langflow": {
+          "detail_unknown": 0,
+          "matched_binary_or_python_packages": 5,
+          "observed_unique_advisory_ids": 81,
+          "unknown_packages": 227
+        },
+        "postgres": {
+          "detail_unknown": 0,
+          "matched_binary_or_python_packages": 63,
+          "observed_unique_advisory_ids": 130,
+          "unknown_packages": 0
+        },
+        "web": {
+          "detail_unknown": 0,
+          "matched_binary_or_python_packages": 1,
+          "observed_unique_advisory_ids": 4,
+          "unknown_packages": 0
+        }
+      },
+      "images": {
+        "api": "sha256:9553a52c06f048ffeaeb6965975be61bf68cfebedf1d1cc494706e9ad1354470",
+        "langflow": "sha256:8db643cf50f215d67257fdd1f85c9e286092c9877d93d54e0117925850dd7c21",
+        "postgres": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c",
+        "web": "sha256:0616cd643c628a72d23c12ec9d9f456c2c4fd8cb454f11fd2730ade8406e261a"
+      },
+      "interpreter": {
+        "archive": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/private/amd64-41586599463.zip",
+        "bytes": 778942,
+        "interpreter": "/app/.venv/bin/python",
+        "member": "release/images/langflow-python.stdout",
+        "not_extracted": true,
+        "python_version": "3.14.8 (main, Oct  1 2026, 00:00:00) [GCC 14.3.1 20251022 (Red Hat 14.3.1-4)]",
+        "sha256": "5c6e53da4efe5bb4dcd5f9cda5054fe05102a717361b82cb65801a8b7f3a6c97",
+        "verified_against_child_manifest": true
+      },
+      "langflow_remaining_python": {
+        "alias_connected_groups": 59,
+        "package_count": 5,
+        "packages": [
+          {
+            "absent_ids_vs_prior_query": [],
+            "added_ids_vs_prior_query": [],
+            "advisory_count": 1,
+            "advisory_ids": [
+              "PYSEC-2023-235"
+            ],
+            "alias_connected_groups": 1,
+            "aliases_union": [
+              "CVE-2023-45875",
+              "PYSEC-2023-235"
+            ],
+            "old_version": "4.6.2",
+            "package": "couchbase",
+            "same_version_and_id_set_as_prior_query": true,
+            "version": "4.6.2"
+          },
+          {
+            "absent_ids_vs_prior_query": [],
+            "added_ids_vs_prior_query": [],
+            "advisory_count": 59,
+            "advisory_ids": [
+              "GHSA-22hg-r758-rrw9",
+              "GHSA-24rc-8hj2-v98c",
+              "GHSA-254f-3936-288h",
+              "GHSA-27h8-gf7j-v5hc",
+              "GHSA-332p-7hrc-92wf",
+              "GHSA-3j72-p6qg-6xp7",
+              "GHSA-4558-3h8r-v8xp",
+              "GHSA-462x-pgg6-55fp",
+              "GHSA-4rm8-3hmm-39fg",
+              "GHSA-4rr5-89j8-mwwm",
+              "GHSA-58r4-6rv3-gfh8",
+              "GHSA-5x8w-8jj5-q52h",
+              "GHSA-5xm2-6676-qcp9",
+              "GHSA-654x-cwwv-5j9c",
+              "GHSA-65qm-jvmh-6pqg",
+              "GHSA-74r2-7ff9-mjj2",
+              "GHSA-78g4-xqwv-q3g8",
+              "GHSA-7mwm-ghpf-9vrm",
+              "GHSA-8g5g-8vmr-9782",
+              "GHSA-9v9v-9qvf-h2hj",
+              "GHSA-c6hw-5grf-ff96",
+              "GHSA-cp9v-662q-vvx9",
+              "GHSA-f2g6-542v-9j58",
+              "GHSA-fc9g-5qg7-mf45",
+              "GHSA-g4qv-2jxx-769h",
+              "GHSA-g7cr-3p24-7wf7",
+              "GHSA-g842-9rc4-69pw",
+              "GHSA-gg2r-wvfm-q9rx",
+              "GHSA-j4m9-6w36-pw47",
+              "GHSA-jg86-v3jv-hrpm",
+              "GHSA-mrfp-p49p-3hf2",
+              "GHSA-p4wg-p73j-c528",
+              "GHSA-p8hx-v2p6-rp84",
+              "GHSA-pchr-8j38-3x4p",
+              "GHSA-q45j-58j2-45rg",
+              "GHSA-rfgq-q3w2-pmv2",
+              "GHSA-v9pv-5gc8-w2m6",
+              "GHSA-vx6w-vv9f-6gvg",
+              "GHSA-w889-685w-c8fh",
+              "GHSA-xgh8-jp6q-p5x8",
+              "GHSA-xvh5-g6gv-559v",
+              "PYSEC-2026-4326",
+              "PYSEC-2026-4327",
+              "PYSEC-2026-4328",
+              "PYSEC-2026-4329",
+              "PYSEC-2026-4330",
+              "PYSEC-2026-4331",
+              "PYSEC-2026-4332",
+              "PYSEC-2026-4333",
+              "PYSEC-2026-4334",
+              "PYSEC-2026-4335",
+              "PYSEC-2026-4336",
+              "PYSEC-2026-4337",
+              "PYSEC-2026-4338",
+              "PYSEC-2026-4339",
+              "PYSEC-2026-4340",
+              "PYSEC-2026-4341",
+              "PYSEC-2026-4342",
+              "PYSEC-2026-4343"
+            ],
+            "alias_connected_groups": 41,
+            "aliases_union": [
+              "BIT-pillow-2026-112390",
+              "BIT-pillow-2026-112391",
+              "BIT-pillow-2026-112392",
+              "BIT-pillow-2026-112393",
+              "BIT-pillow-2026-112394",
+              "BIT-pillow-2026-112395",
+              "BIT-pillow-2026-112396",
+              "BIT-pillow-2026-112397",
+              "BIT-pillow-2026-112398",
+              "BIT-pillow-2026-112399",
+              "BIT-pillow-2026-112400",
+              "BIT-pillow-2026-112401",
+              "BIT-pillow-2026-112402",
+              "BIT-pillow-2026-112403",
+              "BIT-pillow-2026-112404",
+              "BIT-pillow-2026-112405",
+              "BIT-pillow-2026-112406",
+              "BIT-pillow-2026-112891",
+              "BIT-pillow-2026-112892",
+              "BIT-pillow-2026-112893",
+              "BIT-pillow-2026-112894",
+              "BIT-pillow-2026-112895",
+              "BIT-pillow-2026-112896",
+              "BIT-pillow-2026-112897",
+              "BIT-pillow-2026-112898",
+              "BIT-pillow-2026-112900",
+              "BIT-pillow-2026-112901",
+              "BIT-pillow-2026-114501",
+              "BIT-pillow-2026-96636",
+              "BIT-pillow-2026-96637",
+              "BIT-pillow-2026-96638",
+              "BIT-pillow-2026-96639",
+              "BIT-pillow-2026-96640",
+              "BIT-pillow-2026-96641",
+              "BIT-pillow-2026-96642",
+              "BIT-pillow-2026-96643",
+              "BIT-pillow-2026-96644",
+              "BIT-pillow-2026-96778",
+              "CVE-2026-112390",
+              "CVE-2026-112391",
+              "CVE-2026-112392",
+              "CVE-2026-112393",
+              "CVE-2026-112394",
+              "CVE-2026-112395",
+              "CVE-2026-112396",
+              "CVE-2026-112397",
+              "CVE-2026-112398",
+              "CVE-2026-112399",
+              "CVE-2026-112400",
+              "CVE-2026-112401",
+              "CVE-2026-112402",
+              "CVE-2026-112403",
+              "CVE-2026-112404",
+              "CVE-2026-112405",
+              "CVE-2026-112406",
+              "CVE-2026-112891",
+              "CVE-2026-112892",
+              "CVE-2026-112893",
+              "CVE-2026-112894",
+              "CVE-2026-112895",
+              "CVE-2026-112896",
+              "CVE-2026-112897",
+              "CVE-2026-112898",
+              "CVE-2026-112899",
+              "CVE-2026-112900",
+              "CVE-2026-112901",
+              "CVE-2026-112902",
+              "CVE-2026-114501",
+              "CVE-2026-96636",
+              "CVE-2026-96637",
+              "CVE-2026-96638",
+              "CVE-2026-96639",
+              "CVE-2026-96640",
+              "CVE-2026-96641",
+              "CVE-2026-96642",
+              "CVE-2026-96643",
+              "CVE-2026-96644",
+              "CVE-2026-96778",
+              "GHSA-22hg-r758-rrw9",
+              "GHSA-24rc-8hj2-v98c",
+              "GHSA-254f-3936-288h",
+              "GHSA-27h8-gf7j-v5hc",
+              "GHSA-332p-7hrc-92wf",
+              "GHSA-3j72-p6qg-6xp7",
+              "GHSA-4558-3h8r-v8xp",
+              "GHSA-462x-pgg6-55fp",
+              "GHSA-4rm8-3hmm-39fg",
+              "GHSA-4rr5-89j8-mwwm",
+              "GHSA-58r4-6rv3-gfh8",
+              "GHSA-5x8w-8jj5-q52h",
+              "GHSA-5xm2-6676-qcp9",
+              "GHSA-654x-cwwv-5j9c",
+              "GHSA-65qm-jvmh-6pqg",
+              "GHSA-74r2-7ff9-mjj2",
+              "GHSA-78g4-xqwv-q3g8",
+              "GHSA-7mwm-ghpf-9vrm",
+              "GHSA-8g5g-8vmr-9782",
+              "GHSA-9v9v-9qvf-h2hj",
+              "GHSA-c6hw-5grf-ff96",
+              "GHSA-cp9v-662q-vvx9",
+              "GHSA-f2g6-542v-9j58",
+              "GHSA-fc9g-5qg7-mf45",
+              "GHSA-g4qv-2jxx-769h",
+              "GHSA-g7cr-3p24-7wf7",
+              "GHSA-g842-9rc4-69pw",
+              "GHSA-gg2r-wvfm-q9rx",
+              "GHSA-j4m9-6w36-pw47",
+              "GHSA-jg86-v3jv-hrpm",
+              "GHSA-mrfp-p49p-3hf2",
+              "GHSA-p4wg-p73j-c528",
+              "GHSA-p8hx-v2p6-rp84",
+              "GHSA-pchr-8j38-3x4p",
+              "GHSA-q45j-58j2-45rg",
+              "GHSA-rfgq-q3w2-pmv2",
+              "GHSA-v9pv-5gc8-w2m6",
+              "GHSA-vx6w-vv9f-6gvg",
+              "GHSA-w889-685w-c8fh",
+              "GHSA-xgh8-jp6q-p5x8",
+              "GHSA-xvh5-g6gv-559v",
+              "PYSEC-2026-4326",
+              "PYSEC-2026-4327",
+              "PYSEC-2026-4328",
+              "PYSEC-2026-4329",
+              "PYSEC-2026-4330",
+              "PYSEC-2026-4331",
+              "PYSEC-2026-4332",
+              "PYSEC-2026-4333",
+              "PYSEC-2026-4334",
+              "PYSEC-2026-4335",
+              "PYSEC-2026-4336",
+              "PYSEC-2026-4337",
+              "PYSEC-2026-4338",
+              "PYSEC-2026-4339",
+              "PYSEC-2026-4340",
+              "PYSEC-2026-4341",
+              "PYSEC-2026-4342",
+              "PYSEC-2026-4343"
+            ],
+            "old_version": "12.3.0",
+            "package": "pillow",
+            "same_version_and_id_set_as_prior_query": true,
+            "version": "12.3.0"
+          },
+          {
+            "absent_ids_vs_prior_query": [],
+            "added_ids_vs_prior_query": [],
+            "advisory_count": 1,
+            "advisory_ids": [
+              "GHSA-xmj3-9gf7-h52w"
+            ],
+            "alias_connected_groups": 1,
+            "aliases_union": [
+              "GHSA-xmj3-9gf7-h52w"
+            ],
+            "old_version": "83.0.0",
+            "package": "setuptools",
+            "same_version_and_id_set_as_prior_query": true,
+            "version": "83.0.0"
+          },
+          {
+            "absent_ids_vs_prior_query": [],
+            "added_ids_vs_prior_query": [],
+            "advisory_count": 8,
+            "advisory_ids": [
+              "GHSA-2wm9-hf6c-p5cr",
+              "GHSA-36p7-vc44-83pf",
+              "GHSA-f4j7-r4q5-qw2c",
+              "GHSA-xph7-9rjv-w5fr",
+              "PYSEC-2026-311",
+              "PYSEC-2026-3813",
+              "PYSEC-2026-3814",
+              "PYSEC-2026-3815"
+            ],
+            "alias_connected_groups": 4,
+            "aliases_union": [
+              "CVE-2026-45829",
+              "CVE-2026-45830",
+              "CVE-2026-45831",
+              "CVE-2026-45833",
+              "GHSA-2wm9-hf6c-p5cr",
+              "GHSA-36p7-vc44-83pf",
+              "GHSA-f4j7-r4q5-qw2c",
+              "GHSA-xph7-9rjv-w5fr",
+              "PYSEC-2026-311",
+              "PYSEC-2026-3813",
+              "PYSEC-2026-3814",
+              "PYSEC-2026-3815"
+            ],
+            "old_version": "1.5.9",
+            "package": "chromadb",
+            "same_version_and_id_set_as_prior_query": true,
+            "version": "1.5.9"
+          },
+          {
+            "absent_ids_vs_prior_query": [],
+            "added_ids_vs_prior_query": [],
+            "advisory_count": 12,
+            "advisory_ids": [
+              "GHSA-567q-5qvw-pf92",
+              "GHSA-6627-m3xw-93mp",
+              "GHSA-69hj-f68j-2879",
+              "GHSA-8mx5-7m5m-r77g",
+              "GHSA-9c4x-gm8v-wgc4",
+              "GHSA-9vhv-jxww-xfm5",
+              "GHSA-cwqr-hh33-gh44",
+              "GHSA-fq56-3cx3-fjxp",
+              "GHSA-j8f7-rjxc-mr56",
+              "GHSA-m462-7rxw-wvpg",
+              "GHSA-rfpc-qcw5-3pc4",
+              "GHSA-v4x8-3wr5-3wq8"
+            ],
+            "alias_connected_groups": 12,
+            "aliases_union": [
+              "CVE-2026-112907",
+              "CVE-2026-112908",
+              "CVE-2026-112909",
+              "CVE-2026-112910",
+              "CVE-2026-112911",
+              "CVE-2026-112913",
+              "CVE-2026-112915",
+              "CVE-2026-112935",
+              "CVE-2026-112936",
+              "CVE-2026-112938",
+              "CVE-2026-112939",
+              "CVE-2026-112940",
+              "GHSA-567q-5qvw-pf92",
+              "GHSA-6627-m3xw-93mp",
+              "GHSA-69hj-f68j-2879",
+              "GHSA-8mx5-7m5m-r77g",
+              "GHSA-9c4x-gm8v-wgc4",
+              "GHSA-9vhv-jxww-xfm5",
+              "GHSA-cwqr-hh33-gh44",
+              "GHSA-fq56-3cx3-fjxp",
+              "GHSA-j8f7-rjxc-mr56",
+              "GHSA-m462-7rxw-wvpg",
+              "GHSA-rfpc-qcw5-3pc4",
+              "GHSA-v4x8-3wr5-3wq8"
+            ],
+            "old_version": "3.32.0",
+            "package": "filelock",
+            "same_version_and_id_set_as_prior_query": true,
+            "version": "3.32.0"
+          }
+        ],
+        "unique_advisory_ids": 81
+      },
+      "native_materials_scope": {
+        "legal_approval": false,
+        "state": "collected_on_amd64"
+      },
+      "offline_probe": {
+        "actual_imported_sources": [
+          {
+            "module": "opentelemetry.trace.span",
+            "path": "/app/.venv/lib64/python3.14/site-packages/opentelemetry/trace/span.py",
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/opentelemetry/trace/span.py",
+            "sha256": "67886d3802f7d87adcc6bc26d790ecef0b1fb89b1aed3e28f7c6d73b0b739e38"
+          },
+          {
+            "module": "opentelemetry.trace.propagation.tracecontext",
+            "path": "/app/.venv/lib64/python3.14/site-packages/opentelemetry/trace/propagation/tracecontext.py",
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/opentelemetry/trace/propagation/tracecontext.py",
+            "sha256": "ac6fbcf1610a51ebf9d9161e42e9e98d4e22a50552c57bb37596a62963e00776"
+          }
+        ],
+        "scratch": {
+          "bytes": 447,
+          "files": 1
+        },
+        "security_and_compatibility_assertions": "passed",
+        "tracestate_ingress": {
+          "all_discarded": true,
+          "cases": [
+            {
+              "case": "single",
+              "combined_bytes": 8351,
+              "discarded": true,
+              "header_fields": 1,
+              "trace_id_preserved": true
+            },
+            {
+              "case": "split",
+              "combined_bytes": 8351,
+              "discarded": true,
+              "header_fields": 2,
+              "trace_id_preserved": true
+            }
+          ],
+          "entrypoint": "TraceContextTextMapPropagator.extract",
+          "limit_bytes": 8192
+        },
+        "versions": {
+          "datamodel-code-generator": "0.81.0",
+          "oauthlib": "4.0.0",
+          "opentelemetry-api": "1.45.1",
+          "opentelemetry-instrumentation": "0.66b1",
+          "opentelemetry-sdk": "1.45.1"
+        }
+      },
+      "package_scan_time": "2026-11-03T06:02:06.927945+00:00",
+      "pinned_versions": {
+        "all_exact_installed": true,
+        "count": 52,
+        "versions": {
+          "aiohttp": "3.14.4",
+          "authlib": "1.9.1",
+          "black": "26.10.1",
+          "brotli": "1.2.1",
+          "certifi": "2026.10.23",
+          "datamodel-code-generator": "0.81.0",
+          "dnspython": "2.9.0",
+          "fastmcp": "3.4.10",
+          "fastmcp-slim": "3.4.10",
+          "fsspec": "2026.6.0",
+          "gitpython": "3.2.1",
+          "joserfc": "1.7.6",
+          "langchain-nvidia-ai-endpoints": "1.5.0",
+          "langgraph": "1.2.14",
+          "langgraph-sdk": "0.4.6",
+          "litellm": "1.103.1",
+          "mako": "1.4.2",
+          "mcp": "1.30.0",
+          "mem0ai": "2.0.18",
+          "multidict": "6.9.1",
+          "nltk": "3.10.4",
+          "oauthlib": "4.0.0",
+          "opentelemetry-api": "1.45.1",
+          "opentelemetry-exporter-http-transport": "0.66b1",
+          "opentelemetry-exporter-otlp": "1.45.1",
+          "opentelemetry-exporter-otlp-common": "0.66b1",
+          "opentelemetry-exporter-otlp-proto-common": "1.45.1",
+          "opentelemetry-exporter-otlp-proto-grpc": "1.45.1",
+          "opentelemetry-exporter-otlp-proto-http": "1.45.1",
+          "opentelemetry-exporter-prometheus": "0.66b1",
+          "opentelemetry-instrumentation": "0.66b1",
+          "opentelemetry-instrumentation-asgi": "0.66b1",
+          "opentelemetry-instrumentation-fastapi": "0.66b1",
+          "opentelemetry-instrumentation-logging": "0.66b1",
+          "opentelemetry-instrumentation-redis": "0.66b1",
+          "opentelemetry-instrumentation-requests": "0.66b1",
+          "opentelemetry-instrumentation-sqlalchemy": "0.66b1",
+          "opentelemetry-instrumentation-threading": "0.66b1",
+          "opentelemetry-instrumentation-urllib3": "0.66b1",
+          "opentelemetry-proto": "1.45.1",
+          "opentelemetry-sdk": "1.45.1",
+          "opentelemetry-semantic-conventions": "0.66b1",
+          "opentelemetry-util-http": "0.66b1",
+          "pyasn1": "0.6.5",
+          "pyjwt": "2.15.0",
+          "pymongo": "4.18.3",
+          "pypdf": "6.21.4",
+          "python-docx": "1.2.0",
+          "reportlab": "4.5.1",
+          "transformers": "5.10.0",
+          "urllib3": "2.8.0",
+          "yarl": "1.25.1"
+        }
+      },
+      "pip_checks": "passed",
+      "pypi_package_count": 550,
+      "rhel_supplement": {
+        "database_snapshot_date": null,
+        "detail_unknown": 0,
+        "mapped_software_packages": 224,
+        "mapping_unknown": 0,
+        "metadata_only_public_keys": 3,
+        "observed_unique_advisory_ids": 0,
+        "query_unknown": 0,
+        "result": "queried_no_match",
+        "rpm_entries": 227,
+        "started_at": "2026-11-03T06:02:25.831099+00:00",
+        "unique_queries": 672
+      },
+      "rpm_coverage": {
+        "all_software_vendor_redhat": true,
+        "default_227_unknowns_exactly_same_rpm_set": true,
+        "default_inventory_equals_rhel_without_epoch": true,
+        "ecosystems": [
+          "Red Hat:enterprise_linux:10.2",
+          "Red Hat:enterprise_linux:10::appstream",
+          "Red Hat:enterprise_linux:10::baseos"
+        ],
+        "repository_map_sha256": "b0ee1f3f15d2043971f64e04c9c39cbf6f8e608edc26a07faea8bbb9393d2bb7",
+        "same_exact_image_id": true,
+        "system_after_full_epoch_nevra_equals_rhel": true
+      },
+      "system": {
+        "added": [
+          {
+            "arch": "x86_64",
+            "evr": "0:1.32-511.el10",
+            "name": "perl-Unicode-Normalize",
+            "signature": "RSA/SHA256, Thu 31 Oct 2024 05:54:21 PM UTC, Key ID 199e2f91fd431d51"
+          }
+        ],
+        "before_exact_matches_prior_amd64_rpm_set": true,
+        "changes": [
+          {
+            "after": "0:2026.2.92_v9.0.319-100.3.el10_2",
+            "after_signature": "RSA/SHA256, Thu 22 Oct 2026 03:09:23 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:2025.2.80_v9.0.305-102.el10_1",
+            "package": "ca-certificates"
+          },
+          {
+            "after": "0:9.5-8.el10_2.1",
+            "after_signature": "RSA/SHA256, Thu 10 Sep 2026 12:50:03 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:9.5-8.el10_2",
+            "package": "coreutils-single"
+          },
+          {
+            "after": "0:8.12.1-4.el10_2.7",
+            "after_signature": "RSA/SHA256, Fri 25 Sep 2026 09:22:37 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:8.12.1-4.el10_2.4",
+            "package": "curl"
+          },
+          {
+            "after": "0:2.7.3-1.el10_2.7",
+            "after_signature": "RSA/SHA256, Tue 20 Oct 2026 03:46:17 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:2.7.3-1.el10_2.1",
+            "package": "expat"
+          },
+          {
+            "after": "0:5.3.0-6.el10_2.1",
+            "after_signature": "RSA/SHA256, Wed 16 Sep 2026 09:01:27 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:5.3.0-6.el10",
+            "package": "gawk"
+          },
+          {
+            "after": "0:2.80.4-12.el10_2.22",
+            "after_signature": "RSA/SHA256, Wed 02 Sep 2026 10:45:49 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:2.80.4-12.el10_2.21",
+            "package": "glib2"
+          },
+          {
+            "after": "0:2.39-145.el10_2",
+            "after_signature": "RSA/SHA256, Wed 14 Oct 2026 01:07:44 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:2.39-128.el10_2",
+            "package": "glibc"
+          },
+          {
+            "after": "0:2.39-145.el10_2",
+            "after_signature": "RSA/SHA256, Wed 14 Oct 2026 01:06:46 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:2.39-128.el10_2",
+            "package": "glibc-common"
+          },
+          {
+            "after": "0:2.39-145.el10_2",
+            "after_signature": "RSA/SHA256, Wed 14 Oct 2026 01:22:36 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:2.39-128.el10_2",
+            "package": "glibc-langpack-en"
+          },
+          {
+            "after": "0:2.39-145.el10_2",
+            "after_signature": "RSA/SHA256, Wed 14 Oct 2026 01:13:15 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:2.39-128.el10_2",
+            "package": "glibc-minimal-langpack"
+          },
+          {
+            "after": "0:3.8.10-5.el10_2",
+            "after_signature": "RSA/SHA256, Mon 21 Sep 2026 06:03:02 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:3.8.10-4.el10_2",
+            "package": "gnutls"
+          },
+          {
+            "after": "0:3.7.7-11.el10_2",
+            "after_signature": "RSA/SHA256, Thu 20 Aug 2026 08:52:21 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:3.7.7-10.el10_2",
+            "package": "libarchive"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "after_signature": "RSA/SHA256, Thu 29 Oct 2026 10:47:54 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:2.40.2-18.el10",
+            "package": "libblkid"
+          },
+          {
+            "after": "0:8.12.1-4.el10_2.7",
+            "after_signature": "RSA/SHA256, Fri 25 Sep 2026 09:22:38 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:8.12.1-4.el10_2.4",
+            "package": "libcurl-minimal"
+          },
+          {
+            "after": "0:2.1.13-1.el10_2",
+            "after_signature": "RSA/SHA256, Fri 11 Sep 2026 11:36:11 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:2.1.12-16.el10",
+            "package": "libevent"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "after_signature": "RSA/SHA256, Thu 29 Oct 2026 10:48:06 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:2.40.2-18.el10",
+            "package": "libfdisk"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "after_signature": "RSA/SHA256, Thu 29 Oct 2026 10:47:23 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:2.40.2-18.el10",
+            "package": "libmount"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "after_signature": "RSA/SHA256, Thu 29 Oct 2026 10:47:03 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:2.40.2-18.el10",
+            "package": "libsmartcols"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "after_signature": "RSA/SHA256, Thu 29 Oct 2026 10:46:40 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:2.40.2-18.el10",
+            "package": "libuuid"
+          },
+          {
+            "after": "0:2.12.5-10.el10_2.4",
+            "after_signature": "RSA/SHA256, Tue 22 Sep 2026 12:14:53 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:2.12.5-10.el10_2.3",
+            "package": "libxml2"
+          },
+          {
+            "after": "0:9.9p1-29.el10_2",
+            "after_signature": "RSA/SHA256, Thu 08 Oct 2026 02:02:03 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:9.9p1-25.el10_2",
+            "package": "openssh"
+          },
+          {
+            "after": "0:9.9p1-29.el10_2",
+            "after_signature": "RSA/SHA256, Thu 08 Oct 2026 02:01:52 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:9.9p1-25.el10_2",
+            "package": "openssh-clients"
+          },
+          {
+            "after": "1:3.5.8-2.el10_2",
+            "after_signature": "RSA/SHA256, Mon 21 Sep 2026 12:03:56 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "1:3.5.5-6.el10_2",
+            "package": "openssl-libs"
+          },
+          {
+            "after": "0:10.44-1.5.el10_2",
+            "after_signature": "RSA/SHA256, Mon 05 Oct 2026 08:54:12 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:10.44-1.el10.3",
+            "package": "pcre2"
+          },
+          {
+            "after": "0:10.44-1.5.el10_2",
+            "after_signature": "RSA/SHA256, Mon 05 Oct 2026 08:54:27 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:10.44-1.el10.3",
+            "package": "pcre2-syntax"
+          },
+          {
+            "after": "0:5.74-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:31:21 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:5.74-512.2.el10_0",
+            "package": "perl-AutoLoader"
+          },
+          {
+            "after": "0:1.89-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:28:26 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:1.89-512.2.el10_0",
+            "package": "perl-B"
+          },
+          {
+            "after": "0:0.68-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:30:05 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:0.68-512.2.el10_0",
+            "package": "perl-Class-Struct"
+          },
+          {
+            "after": "0:1.56-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:28:47 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:1.56-512.2.el10_0",
+            "package": "perl-DynaLoader"
+          },
+          {
+            "after": "0:1.38-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:30:04 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:1.38-512.2.el10_0",
+            "package": "perl-Errno"
+          },
+          {
+            "after": "0:1.18-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:30:32 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:1.18-512.2.el10_0",
+            "package": "perl-Fcntl"
+          },
+          {
+            "after": "0:2.86-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:29:34 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:2.86-512.2.el10_0",
+            "package": "perl-File-Basename"
+          },
+          {
+            "after": "0:1.14-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:29:53 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:1.14-512.2.el10_0",
+            "package": "perl-File-stat"
+          },
+          {
+            "after": "0:2.05-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:32:00 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:2.05-512.2.el10_0",
+            "package": "perl-FileHandle"
+          },
+          {
+            "after": "0:1.14-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:31:51 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:1.14-512.2.el10_0",
+            "package": "perl-Getopt-Std"
+          },
+          {
+            "after": "0:1.55-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:28:53 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:1.55-512.2.el10_0",
+            "package": "perl-IO"
+          },
+          {
+            "after": "0:1.22-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:31:35 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:1.22-512.2.el10_0",
+            "package": "perl-IPC-Open3"
+          },
+          {
+            "after": "0:1.17-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:29:38 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:1.17-512.2.el10_0",
+            "package": "perl-NDBM_File"
+          },
+          {
+            "after": "0:2.20-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:31:30 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:2.20-512.2.el10_0",
+            "package": "perl-POSIX"
+          },
+          {
+            "after": "0:1.02-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:30:22 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:1.02-512.2.el10_0",
+            "package": "perl-SelectSaver"
+          },
+          {
+            "after": "0:1.09-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:31:49 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:1.09-512.2.el10_0",
+            "package": "perl-Symbol"
+          },
+          {
+            "after": "0:5.27-3.el10_2.1",
+            "after_signature": "RSA/SHA256, Thu 15 Oct 2026 07:46:02 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:5.27-3.el10",
+            "package": "perl-URI"
+          },
+          {
+            "after": "0:2.27-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:31:16 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:2.27-512.2.el10_0",
+            "package": "perl-base"
+          },
+          {
+            "after": "0:0.61.000-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:29:23 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:0.61.000-512.2.el10_0",
+            "package": "perl-if"
+          },
+          {
+            "after": "4:5.40.2-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:29:19 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "4:5.40.2-512.2.el10_0",
+            "package": "perl-interpreter"
+          },
+          {
+            "after": "0:0.65-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:30:44 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:0.65-512.2.el10_0",
+            "package": "perl-lib"
+          },
+          {
+            "after": "4:5.40.2-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:31:55 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "4:5.40.2-512.2.el10_0",
+            "package": "perl-libs"
+          },
+          {
+            "after": "0:1.12-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:29:20 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:1.12-512.2.el10_0",
+            "package": "perl-locale"
+          },
+          {
+            "after": "0:1.29-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:31:40 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:1.29-512.2.el10_0",
+            "package": "perl-mro"
+          },
+          {
+            "after": "0:1.37-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:28:12 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:1.37-512.2.el10_0",
+            "package": "perl-overload"
+          },
+          {
+            "after": "0:0.02-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:29:03 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:0.02-512.2.el10_0",
+            "package": "perl-overloading"
+          },
+          {
+            "after": "0:1.05-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:28:48 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:1.05-512.2.el10_0",
+            "package": "perl-vars"
+          },
+          {
+            "after": "0:3.14.8-1.el10_2",
+            "after_signature": "RSA/SHA256, Tue 06 Oct 2026 12:02:09 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:3.14.7-2.el10_2",
+            "package": "python3.14"
+          },
+          {
+            "after": "0:3.14.8-1.el10_2",
+            "after_signature": "RSA/SHA256, Tue 06 Oct 2026 12:02:02 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:3.14.7-2.el10_2",
+            "package": "python3.14-libs"
+          },
+          {
+            "after": "0:1.10.2.1-1.el10_2",
+            "after_signature": "RSA/SHA256, Fri 15 May 2026 04:54:17 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:1.10.1.1-2.el10",
+            "package": "rpm-sequoia"
+          },
+          {
+            "after": "0:2026e-1.el10_2",
+            "after_signature": "RSA/SHA256, Fri 02 Oct 2026 10:37:56 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:2026c-1.el10_2",
+            "package": "tzdata"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "after_signature": "RSA/SHA256, Thu 29 Oct 2026 10:47:57 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:2.40.2-18.el10",
+            "package": "util-linux"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "after_signature": "RSA/SHA256, Thu 29 Oct 2026 10:48:03 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "0:2.40.2-18.el10",
+            "package": "util-linux-core"
+          },
+          {
+            "after": "1:5.6.2-4.el10_2.1",
+            "after_signature": "RSA/SHA256, Thu 03 Sep 2026 02:48:39 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "1:5.6.2-4.el10_0",
+            "package": "xz"
+          },
+          {
+            "after": "1:5.6.2-4.el10_2.1",
+            "after_signature": "RSA/SHA256, Thu 03 Sep 2026 02:48:36 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "x86_64",
+            "before": "1:5.6.2-4.el10_0",
+            "package": "xz-libs"
+          }
+        ],
+        "commands_all_exit_zero": true,
+        "existing_software_version_changes": 60,
+        "os_after": {
+          "ANSI_COLOR": "0;31",
+          "BUG_REPORT_URL": "https://issues.redhat.com/",
+          "CPE_NAME": "cpe:/o:redhat:enterprise_linux:10.2",
+          "DOCUMENTATION_URL": "https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/10",
+          "HOME_URL": "https://www.redhat.com/",
+          "ID": "rhel",
+          "ID_LIKE": "centos fedora",
+          "LOGO": "fedora-logo-icon",
+          "NAME": "Red Hat Enterprise Linux",
+          "PLATFORM_ID": "platform:el10",
+          "PRETTY_NAME": "Red Hat Enterprise Linux 10.2 (Coughlan)",
+          "REDHAT_BUGZILLA_PRODUCT": "Red Hat Enterprise Linux 10",
+          "REDHAT_BUGZILLA_PRODUCT_VERSION": "10.2",
+          "REDHAT_SUPPORT_PRODUCT": "Red Hat Enterprise Linux",
+          "REDHAT_SUPPORT_PRODUCT_VERSION": "10.2",
+          "RELEASE_TYPE": "stable",
+          "VENDOR_NAME": "Red Hat",
+          "VENDOR_URL": "https://www.redhat.com/",
+          "VERSION": "10.2 (Coughlan)",
+          "VERSION_ID": "10.2"
+        },
+        "os_before": {
+          "ANSI_COLOR": "0;31",
+          "BUG_REPORT_URL": "https://issues.redhat.com/",
+          "CPE_NAME": "cpe:/o:redhat:enterprise_linux:10.2",
+          "DOCUMENTATION_URL": "https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/10",
+          "HOME_URL": "https://www.redhat.com/",
+          "ID": "rhel",
+          "ID_LIKE": "centos fedora",
+          "LOGO": "fedora-logo-icon",
+          "NAME": "Red Hat Enterprise Linux",
+          "PLATFORM_ID": "platform:el10",
+          "PRETTY_NAME": "Red Hat Enterprise Linux 10.2 (Coughlan)",
+          "REDHAT_BUGZILLA_PRODUCT": "Red Hat Enterprise Linux 10",
+          "REDHAT_BUGZILLA_PRODUCT_VERSION": "10.2",
+          "REDHAT_SUPPORT_PRODUCT": "Red Hat Enterprise Linux",
+          "REDHAT_SUPPORT_PRODUCT_VERSION": "10.2",
+          "RELEASE_TYPE": "stable",
+          "VENDOR_NAME": "Red Hat",
+          "VENDOR_URL": "https://www.redhat.com/",
+          "VERSION": "10.2 (Coughlan)",
+          "VERSION_ID": "10.2"
+        },
+        "redhat_release_key_sha256": "d5ddf4a09b2dccc41c27e06f70dc7b2009704723115b5f824873b8d5133f84e2",
+        "removed": [],
+        "repository_policy": [
+          {
+            "baseurl": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/$basearch/appstream/os",
+            "component": "appstream",
+            "config_path": "/etc/yum.repos.d/ubi.repo",
+            "config_sha256": "ef7160b63c0df5008fdd156978ba658e109659316b34eaf13f9017cba75e3a14",
+            "gpgcheck": "1",
+            "gpgkey": "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release",
+            "id": "ubi-10-appstream-rpms",
+            "sslverify": "1"
+          },
+          {
+            "baseurl": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/$basearch/baseos/os",
+            "component": "baseos",
+            "config_path": "/etc/yum.repos.d/ubi.repo",
+            "config_sha256": "ef7160b63c0df5008fdd156978ba658e109659316b34eaf13f9017cba75e3a14",
+            "gpgcheck": "1",
+            "gpgkey": "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release",
+            "id": "ubi-10-baseos-rpms",
+            "sslverify": "1"
+          }
+        ],
+        "rpm_rows_after": 227,
+        "rpm_rows_before": 226,
+        "software_after": 224,
+        "software_before": 223,
+        "three_public_key_nevras_unchanged": true
+      },
+      "workflow": {
+        "benchmark": null,
+        "both_real_flow_job_ids_present": true,
+        "component_count": 5,
+        "decisions": 3,
+        "document_formats": 4,
+        "failure_retry_deduplicated": true,
+        "report_downloads": 9,
+        "result": "passed",
+        "stored_flow_hashes_unchanged": true
+      }
+    },
+    "arm64": {
+      "all_images_finding_counts": {
+        "api": {
+          "detail_unknown": 0,
+          "matched_binary_or_python_packages": 51,
+          "observed_unique_advisory_ids": 126,
+          "unknown_packages": 0
+        },
+        "langflow": {
+          "detail_unknown": 0,
+          "matched_binary_or_python_packages": 5,
+          "observed_unique_advisory_ids": 81,
+          "unknown_packages": 227
+        },
+        "postgres": {
+          "detail_unknown": 0,
+          "matched_binary_or_python_packages": 63,
+          "observed_unique_advisory_ids": 130,
+          "unknown_packages": 0
+        },
+        "web": {
+          "detail_unknown": 0,
+          "matched_binary_or_python_packages": 1,
+          "observed_unique_advisory_ids": 4,
+          "unknown_packages": 0
+        }
+      },
+      "images": {
+        "api": "sha256:c3f1ce84c0f211780c3cde07bb29c5ef6c52a64fc267eb61b0edcd559d6e68a5",
+        "langflow": "sha256:5f59c490e6c10de3774d424092f2bb2f2b3a75b49386c7c5a1a7acf949c41e4b",
+        "postgres": "sha256:6162f3765f7563b273a879894c5751d41285f922dd75ba0ba508a89e024e43ca",
+        "web": "sha256:2c61b675966880e82872617409186aa1a7b15ae354a97eac3f886ac0ad04103e"
+      },
+      "interpreter": {
+        "archive": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/private/arm64-41586599463.zip",
+        "bytes": 774610,
+        "interpreter": "/app/.venv/bin/python",
+        "member": "release/images/langflow-python.stdout",
+        "not_extracted": true,
+        "python_version": "3.14.8 (main, Oct  1 2026, 00:00:00) [GCC 14.3.1 20251022 (Red Hat 14.3.1-4)]",
+        "sha256": "bd59885c4c7416474b8538f2b8a779a9eacc7b83b9ed493dfa8cafc1e3ce6fcd",
+        "verified_against_child_manifest": true
+      },
+      "langflow_remaining_python": {
+        "alias_connected_groups": 59,
+        "package_count": 5,
+        "packages": [
+          {
+            "absent_ids_vs_prior_query": [],
+            "added_ids_vs_prior_query": [],
+            "advisory_count": 8,
+            "advisory_ids": [
+              "GHSA-2wm9-hf6c-p5cr",
+              "GHSA-36p7-vc44-83pf",
+              "GHSA-f4j7-r4q5-qw2c",
+              "GHSA-xph7-9rjv-w5fr",
+              "PYSEC-2026-311",
+              "PYSEC-2026-3813",
+              "PYSEC-2026-3814",
+              "PYSEC-2026-3815"
+            ],
+            "alias_connected_groups": 4,
+            "aliases_union": [
+              "CVE-2026-45829",
+              "CVE-2026-45830",
+              "CVE-2026-45831",
+              "CVE-2026-45833",
+              "GHSA-2wm9-hf6c-p5cr",
+              "GHSA-36p7-vc44-83pf",
+              "GHSA-f4j7-r4q5-qw2c",
+              "GHSA-xph7-9rjv-w5fr",
+              "PYSEC-2026-311",
+              "PYSEC-2026-3813",
+              "PYSEC-2026-3814",
+              "PYSEC-2026-3815"
+            ],
+            "old_version": "1.5.9",
+            "package": "chromadb",
+            "same_version_and_id_set_as_prior_query": true,
+            "version": "1.5.9"
+          },
+          {
+            "absent_ids_vs_prior_query": [],
+            "added_ids_vs_prior_query": [],
+            "advisory_count": 1,
+            "advisory_ids": [
+              "GHSA-xmj3-9gf7-h52w"
+            ],
+            "alias_connected_groups": 1,
+            "aliases_union": [
+              "GHSA-xmj3-9gf7-h52w"
+            ],
+            "old_version": "83.0.0",
+            "package": "setuptools",
+            "same_version_and_id_set_as_prior_query": true,
+            "version": "83.0.0"
+          },
+          {
+            "absent_ids_vs_prior_query": [],
+            "added_ids_vs_prior_query": [],
+            "advisory_count": 59,
+            "advisory_ids": [
+              "GHSA-22hg-r758-rrw9",
+              "GHSA-24rc-8hj2-v98c",
+              "GHSA-254f-3936-288h",
+              "GHSA-27h8-gf7j-v5hc",
+              "GHSA-332p-7hrc-92wf",
+              "GHSA-3j72-p6qg-6xp7",
+              "GHSA-4558-3h8r-v8xp",
+              "GHSA-462x-pgg6-55fp",
+              "GHSA-4rm8-3hmm-39fg",
+              "GHSA-4rr5-89j8-mwwm",
+              "GHSA-58r4-6rv3-gfh8",
+              "GHSA-5x8w-8jj5-q52h",
+              "GHSA-5xm2-6676-qcp9",
+              "GHSA-654x-cwwv-5j9c",
+              "GHSA-65qm-jvmh-6pqg",
+              "GHSA-74r2-7ff9-mjj2",
+              "GHSA-78g4-xqwv-q3g8",
+              "GHSA-7mwm-ghpf-9vrm",
+              "GHSA-8g5g-8vmr-9782",
+              "GHSA-9v9v-9qvf-h2hj",
+              "GHSA-c6hw-5grf-ff96",
+              "GHSA-cp9v-662q-vvx9",
+              "GHSA-f2g6-542v-9j58",
+              "GHSA-fc9g-5qg7-mf45",
+              "GHSA-g4qv-2jxx-769h",
+              "GHSA-g7cr-3p24-7wf7",
+              "GHSA-g842-9rc4-69pw",
+              "GHSA-gg2r-wvfm-q9rx",
+              "GHSA-j4m9-6w36-pw47",
+              "GHSA-jg86-v3jv-hrpm",
+              "GHSA-mrfp-p49p-3hf2",
+              "GHSA-p4wg-p73j-c528",
+              "GHSA-p8hx-v2p6-rp84",
+              "GHSA-pchr-8j38-3x4p",
+              "GHSA-q45j-58j2-45rg",
+              "GHSA-rfgq-q3w2-pmv2",
+              "GHSA-v9pv-5gc8-w2m6",
+              "GHSA-vx6w-vv9f-6gvg",
+              "GHSA-w889-685w-c8fh",
+              "GHSA-xgh8-jp6q-p5x8",
+              "GHSA-xvh5-g6gv-559v",
+              "PYSEC-2026-4326",
+              "PYSEC-2026-4327",
+              "PYSEC-2026-4328",
+              "PYSEC-2026-4329",
+              "PYSEC-2026-4330",
+              "PYSEC-2026-4331",
+              "PYSEC-2026-4332",
+              "PYSEC-2026-4333",
+              "PYSEC-2026-4334",
+              "PYSEC-2026-4335",
+              "PYSEC-2026-4336",
+              "PYSEC-2026-4337",
+              "PYSEC-2026-4338",
+              "PYSEC-2026-4339",
+              "PYSEC-2026-4340",
+              "PYSEC-2026-4341",
+              "PYSEC-2026-4342",
+              "PYSEC-2026-4343"
+            ],
+            "alias_connected_groups": 41,
+            "aliases_union": [
+              "BIT-pillow-2026-112390",
+              "BIT-pillow-2026-112391",
+              "BIT-pillow-2026-112392",
+              "BIT-pillow-2026-112393",
+              "BIT-pillow-2026-112394",
+              "BIT-pillow-2026-112395",
+              "BIT-pillow-2026-112396",
+              "BIT-pillow-2026-112397",
+              "BIT-pillow-2026-112398",
+              "BIT-pillow-2026-112399",
+              "BIT-pillow-2026-112400",
+              "BIT-pillow-2026-112401",
+              "BIT-pillow-2026-112402",
+              "BIT-pillow-2026-112403",
+              "BIT-pillow-2026-112404",
+              "BIT-pillow-2026-112405",
+              "BIT-pillow-2026-112406",
+              "BIT-pillow-2026-112891",
+              "BIT-pillow-2026-112892",
+              "BIT-pillow-2026-112893",
+              "BIT-pillow-2026-112894",
+              "BIT-pillow-2026-112895",
+              "BIT-pillow-2026-112896",
+              "BIT-pillow-2026-112897",
+              "BIT-pillow-2026-112898",
+              "BIT-pillow-2026-112900",
+              "BIT-pillow-2026-112901",
+              "BIT-pillow-2026-114501",
+              "BIT-pillow-2026-96636",
+              "BIT-pillow-2026-96637",
+              "BIT-pillow-2026-96638",
+              "BIT-pillow-2026-96639",
+              "BIT-pillow-2026-96640",
+              "BIT-pillow-2026-96641",
+              "BIT-pillow-2026-96642",
+              "BIT-pillow-2026-96643",
+              "BIT-pillow-2026-96644",
+              "BIT-pillow-2026-96778",
+              "CVE-2026-112390",
+              "CVE-2026-112391",
+              "CVE-2026-112392",
+              "CVE-2026-112393",
+              "CVE-2026-112394",
+              "CVE-2026-112395",
+              "CVE-2026-112396",
+              "CVE-2026-112397",
+              "CVE-2026-112398",
+              "CVE-2026-112399",
+              "CVE-2026-112400",
+              "CVE-2026-112401",
+              "CVE-2026-112402",
+              "CVE-2026-112403",
+              "CVE-2026-112404",
+              "CVE-2026-112405",
+              "CVE-2026-112406",
+              "CVE-2026-112891",
+              "CVE-2026-112892",
+              "CVE-2026-112893",
+              "CVE-2026-112894",
+              "CVE-2026-112895",
+              "CVE-2026-112896",
+              "CVE-2026-112897",
+              "CVE-2026-112898",
+              "CVE-2026-112899",
+              "CVE-2026-112900",
+              "CVE-2026-112901",
+              "CVE-2026-112902",
+              "CVE-2026-114501",
+              "CVE-2026-96636",
+              "CVE-2026-96637",
+              "CVE-2026-96638",
+              "CVE-2026-96639",
+              "CVE-2026-96640",
+              "CVE-2026-96641",
+              "CVE-2026-96642",
+              "CVE-2026-96643",
+              "CVE-2026-96644",
+              "CVE-2026-96778",
+              "GHSA-22hg-r758-rrw9",
+              "GHSA-24rc-8hj2-v98c",
+              "GHSA-254f-3936-288h",
+              "GHSA-27h8-gf7j-v5hc",
+              "GHSA-332p-7hrc-92wf",
+              "GHSA-3j72-p6qg-6xp7",
+              "GHSA-4558-3h8r-v8xp",
+              "GHSA-462x-pgg6-55fp",
+              "GHSA-4rm8-3hmm-39fg",
+              "GHSA-4rr5-89j8-mwwm",
+              "GHSA-58r4-6rv3-gfh8",
+              "GHSA-5x8w-8jj5-q52h",
+              "GHSA-5xm2-6676-qcp9",
+              "GHSA-654x-cwwv-5j9c",
+              "GHSA-65qm-jvmh-6pqg",
+              "GHSA-74r2-7ff9-mjj2",
+              "GHSA-78g4-xqwv-q3g8",
+              "GHSA-7mwm-ghpf-9vrm",
+              "GHSA-8g5g-8vmr-9782",
+              "GHSA-9v9v-9qvf-h2hj",
+              "GHSA-c6hw-5grf-ff96",
+              "GHSA-cp9v-662q-vvx9",
+              "GHSA-f2g6-542v-9j58",
+              "GHSA-fc9g-5qg7-mf45",
+              "GHSA-g4qv-2jxx-769h",
+              "GHSA-g7cr-3p24-7wf7",
+              "GHSA-g842-9rc4-69pw",
+              "GHSA-gg2r-wvfm-q9rx",
+              "GHSA-j4m9-6w36-pw47",
+              "GHSA-jg86-v3jv-hrpm",
+              "GHSA-mrfp-p49p-3hf2",
+              "GHSA-p4wg-p73j-c528",
+              "GHSA-p8hx-v2p6-rp84",
+              "GHSA-pchr-8j38-3x4p",
+              "GHSA-q45j-58j2-45rg",
+              "GHSA-rfgq-q3w2-pmv2",
+              "GHSA-v9pv-5gc8-w2m6",
+              "GHSA-vx6w-vv9f-6gvg",
+              "GHSA-w889-685w-c8fh",
+              "GHSA-xgh8-jp6q-p5x8",
+              "GHSA-xvh5-g6gv-559v",
+              "PYSEC-2026-4326",
+              "PYSEC-2026-4327",
+              "PYSEC-2026-4328",
+              "PYSEC-2026-4329",
+              "PYSEC-2026-4330",
+              "PYSEC-2026-4331",
+              "PYSEC-2026-4332",
+              "PYSEC-2026-4333",
+              "PYSEC-2026-4334",
+              "PYSEC-2026-4335",
+              "PYSEC-2026-4336",
+              "PYSEC-2026-4337",
+              "PYSEC-2026-4338",
+              "PYSEC-2026-4339",
+              "PYSEC-2026-4340",
+              "PYSEC-2026-4341",
+              "PYSEC-2026-4342",
+              "PYSEC-2026-4343"
+            ],
+            "old_version": "12.3.0",
+            "package": "pillow",
+            "same_version_and_id_set_as_prior_query": true,
+            "version": "12.3.0"
+          },
+          {
+            "absent_ids_vs_prior_query": [],
+            "added_ids_vs_prior_query": [],
+            "advisory_count": 12,
+            "advisory_ids": [
+              "GHSA-567q-5qvw-pf92",
+              "GHSA-6627-m3xw-93mp",
+              "GHSA-69hj-f68j-2879",
+              "GHSA-8mx5-7m5m-r77g",
+              "GHSA-9c4x-gm8v-wgc4",
+              "GHSA-9vhv-jxww-xfm5",
+              "GHSA-cwqr-hh33-gh44",
+              "GHSA-fq56-3cx3-fjxp",
+              "GHSA-j8f7-rjxc-mr56",
+              "GHSA-m462-7rxw-wvpg",
+              "GHSA-rfpc-qcw5-3pc4",
+              "GHSA-v4x8-3wr5-3wq8"
+            ],
+            "alias_connected_groups": 12,
+            "aliases_union": [
+              "CVE-2026-112907",
+              "CVE-2026-112908",
+              "CVE-2026-112909",
+              "CVE-2026-112910",
+              "CVE-2026-112911",
+              "CVE-2026-112913",
+              "CVE-2026-112915",
+              "CVE-2026-112935",
+              "CVE-2026-112936",
+              "CVE-2026-112938",
+              "CVE-2026-112939",
+              "CVE-2026-112940",
+              "GHSA-567q-5qvw-pf92",
+              "GHSA-6627-m3xw-93mp",
+              "GHSA-69hj-f68j-2879",
+              "GHSA-8mx5-7m5m-r77g",
+              "GHSA-9c4x-gm8v-wgc4",
+              "GHSA-9vhv-jxww-xfm5",
+              "GHSA-cwqr-hh33-gh44",
+              "GHSA-fq56-3cx3-fjxp",
+              "GHSA-j8f7-rjxc-mr56",
+              "GHSA-m462-7rxw-wvpg",
+              "GHSA-rfpc-qcw5-3pc4",
+              "GHSA-v4x8-3wr5-3wq8"
+            ],
+            "old_version": "3.32.0",
+            "package": "filelock",
+            "same_version_and_id_set_as_prior_query": true,
+            "version": "3.32.0"
+          },
+          {
+            "absent_ids_vs_prior_query": [],
+            "added_ids_vs_prior_query": [],
+            "advisory_count": 1,
+            "advisory_ids": [
+              "PYSEC-2023-235"
+            ],
+            "alias_connected_groups": 1,
+            "aliases_union": [
+              "CVE-2023-45875",
+              "PYSEC-2023-235"
+            ],
+            "old_version": "4.6.2",
+            "package": "couchbase",
+            "same_version_and_id_set_as_prior_query": true,
+            "version": "4.6.2"
+          }
+        ],
+        "unique_advisory_ids": 81
+      },
+      "native_materials_scope": {
+        "distribution_approval": false,
+        "reason": "This round's shared targeted-native input budget is reserved for AMD64.",
+        "state": "not_collected_on_arm_backend"
+      },
+      "offline_probe": {
+        "actual_imported_sources": [
+          {
+            "module": "opentelemetry.trace.span",
+            "path": "/app/.venv/lib64/python3.14/site-packages/opentelemetry/trace/span.py",
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/opentelemetry/trace/span.py",
+            "sha256": "67886d3802f7d87adcc6bc26d790ecef0b1fb89b1aed3e28f7c6d73b0b739e38"
+          },
+          {
+            "module": "opentelemetry.trace.propagation.tracecontext",
+            "path": "/app/.venv/lib64/python3.14/site-packages/opentelemetry/trace/propagation/tracecontext.py",
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/opentelemetry/trace/propagation/tracecontext.py",
+            "sha256": "ac6fbcf1610a51ebf9d9161e42e9e98d4e22a50552c57bb37596a62963e00776"
+          }
+        ],
+        "scratch": {
+          "bytes": 447,
+          "files": 1
+        },
+        "security_and_compatibility_assertions": "passed",
+        "tracestate_ingress": {
+          "all_discarded": true,
+          "cases": [
+            {
+              "case": "single",
+              "combined_bytes": 8351,
+              "discarded": true,
+              "header_fields": 1,
+              "trace_id_preserved": true
+            },
+            {
+              "case": "split",
+              "combined_bytes": 8351,
+              "discarded": true,
+              "header_fields": 2,
+              "trace_id_preserved": true
+            }
+          ],
+          "entrypoint": "TraceContextTextMapPropagator.extract",
+          "limit_bytes": 8192
+        },
+        "versions": {
+          "datamodel-code-generator": "0.81.0",
+          "oauthlib": "4.0.0",
+          "opentelemetry-api": "1.45.1",
+          "opentelemetry-instrumentation": "0.66b1",
+          "opentelemetry-sdk": "1.45.1"
+        }
+      },
+      "package_scan_time": "2026-11-03T05:58:35.280976+00:00",
+      "pinned_versions": {
+        "all_exact_installed": true,
+        "count": 52,
+        "versions": {
+          "aiohttp": "3.14.4",
+          "authlib": "1.9.1",
+          "black": "26.10.1",
+          "brotli": "1.2.1",
+          "certifi": "2026.10.23",
+          "datamodel-code-generator": "0.81.0",
+          "dnspython": "2.9.0",
+          "fastmcp": "3.4.10",
+          "fastmcp-slim": "3.4.10",
+          "fsspec": "2026.6.0",
+          "gitpython": "3.2.1",
+          "joserfc": "1.7.6",
+          "langchain-nvidia-ai-endpoints": "1.5.0",
+          "langgraph": "1.2.14",
+          "langgraph-sdk": "0.4.6",
+          "litellm": "1.103.1",
+          "mako": "1.4.2",
+          "mcp": "1.30.0",
+          "mem0ai": "2.0.18",
+          "multidict": "6.9.1",
+          "nltk": "3.10.4",
+          "oauthlib": "4.0.0",
+          "opentelemetry-api": "1.45.1",
+          "opentelemetry-exporter-http-transport": "0.66b1",
+          "opentelemetry-exporter-otlp": "1.45.1",
+          "opentelemetry-exporter-otlp-common": "0.66b1",
+          "opentelemetry-exporter-otlp-proto-common": "1.45.1",
+          "opentelemetry-exporter-otlp-proto-grpc": "1.45.1",
+          "opentelemetry-exporter-otlp-proto-http": "1.45.1",
+          "opentelemetry-exporter-prometheus": "0.66b1",
+          "opentelemetry-instrumentation": "0.66b1",
+          "opentelemetry-instrumentation-asgi": "0.66b1",
+          "opentelemetry-instrumentation-fastapi": "0.66b1",
+          "opentelemetry-instrumentation-logging": "0.66b1",
+          "opentelemetry-instrumentation-redis": "0.66b1",
+          "opentelemetry-instrumentation-requests": "0.66b1",
+          "opentelemetry-instrumentation-sqlalchemy": "0.66b1",
+          "opentelemetry-instrumentation-threading": "0.66b1",
+          "opentelemetry-instrumentation-urllib3": "0.66b1",
+          "opentelemetry-proto": "1.45.1",
+          "opentelemetry-sdk": "1.45.1",
+          "opentelemetry-semantic-conventions": "0.66b1",
+          "opentelemetry-util-http": "0.66b1",
+          "pyasn1": "0.6.5",
+          "pyjwt": "2.15.0",
+          "pymongo": "4.18.3",
+          "pypdf": "6.21.4",
+          "python-docx": "1.2.0",
+          "reportlab": "4.5.1",
+          "transformers": "5.10.0",
+          "urllib3": "2.8.0",
+          "yarl": "1.25.1"
+        }
+      },
+      "pip_checks": "passed",
+      "pypi_package_count": 546,
+      "rhel_supplement": {
+        "database_snapshot_date": null,
+        "detail_unknown": 0,
+        "mapped_software_packages": 224,
+        "mapping_unknown": 0,
+        "metadata_only_public_keys": 3,
+        "observed_unique_advisory_ids": 0,
+        "query_unknown": 0,
+        "result": "queried_no_match",
+        "rpm_entries": 227,
+        "started_at": "2026-11-03T05:58:47.325172+00:00",
+        "unique_queries": 672
+      },
+      "rpm_coverage": {
+        "all_software_vendor_redhat": true,
+        "default_227_unknowns_exactly_same_rpm_set": true,
+        "default_inventory_equals_rhel_without_epoch": true,
+        "ecosystems": [
+          "Red Hat:enterprise_linux:10.2",
+          "Red Hat:enterprise_linux:10::appstream",
+          "Red Hat:enterprise_linux:10::baseos"
+        ],
+        "repository_map_sha256": "b0ee1f3f15d2043971f64e04c9c39cbf6f8e608edc26a07faea8bbb9393d2bb7",
+        "same_exact_image_id": true,
+        "system_after_full_epoch_nevra_equals_rhel": true
+      },
+      "system": {
+        "added": [
+          {
+            "arch": "aarch64",
+            "evr": "0:1.32-511.el10",
+            "name": "perl-Unicode-Normalize",
+            "signature": "RSA/SHA256, Thu 31 Oct 2024 05:54:21 PM UTC, Key ID 199e2f91fd431d51"
+          }
+        ],
+        "before_exact_matches_prior_amd64_rpm_set": null,
+        "changes": [
+          {
+            "after": "0:2026.2.92_v9.0.319-100.3.el10_2",
+            "after_signature": "RSA/SHA256, Thu 22 Oct 2026 03:09:23 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:2025.2.80_v9.0.305-102.el10_1",
+            "package": "ca-certificates"
+          },
+          {
+            "after": "0:9.5-8.el10_2.1",
+            "after_signature": "RSA/SHA256, Thu 10 Sep 2026 12:50:21 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:9.5-8.el10_2",
+            "package": "coreutils-single"
+          },
+          {
+            "after": "0:8.12.1-4.el10_2.7",
+            "after_signature": "RSA/SHA256, Fri 25 Sep 2026 09:22:40 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:8.12.1-4.el10_2.4",
+            "package": "curl"
+          },
+          {
+            "after": "0:2.7.3-1.el10_2.7",
+            "after_signature": "RSA/SHA256, Tue 20 Oct 2026 03:46:32 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:2.7.3-1.el10_2.1",
+            "package": "expat"
+          },
+          {
+            "after": "0:5.3.0-6.el10_2.1",
+            "after_signature": "RSA/SHA256, Wed 16 Sep 2026 09:01:29 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:5.3.0-6.el10",
+            "package": "gawk"
+          },
+          {
+            "after": "0:2.80.4-12.el10_2.22",
+            "after_signature": "RSA/SHA256, Wed 02 Sep 2026 10:45:59 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:2.80.4-12.el10_2.21",
+            "package": "glib2"
+          },
+          {
+            "after": "0:2.39-145.el10_2",
+            "after_signature": "RSA/SHA256, Wed 14 Oct 2026 01:23:58 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:2.39-128.el10_2",
+            "package": "glibc"
+          },
+          {
+            "after": "0:2.39-145.el10_2",
+            "after_signature": "RSA/SHA256, Wed 14 Oct 2026 01:06:47 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:2.39-128.el10_2",
+            "package": "glibc-common"
+          },
+          {
+            "after": "0:2.39-145.el10_2",
+            "after_signature": "RSA/SHA256, Wed 14 Oct 2026 01:16:21 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:2.39-128.el10_2",
+            "package": "glibc-langpack-en"
+          },
+          {
+            "after": "0:2.39-145.el10_2",
+            "after_signature": "RSA/SHA256, Wed 14 Oct 2026 01:07:50 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:2.39-128.el10_2",
+            "package": "glibc-minimal-langpack"
+          },
+          {
+            "after": "0:3.8.10-5.el10_2",
+            "after_signature": "RSA/SHA256, Mon 21 Sep 2026 06:03:17 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:3.8.10-4.el10_2",
+            "package": "gnutls"
+          },
+          {
+            "after": "0:3.7.7-11.el10_2",
+            "after_signature": "RSA/SHA256, Thu 20 Aug 2026 08:52:03 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:3.7.7-10.el10_2",
+            "package": "libarchive"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "after_signature": "RSA/SHA256, Thu 29 Oct 2026 10:47:04 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:2.40.2-18.el10",
+            "package": "libblkid"
+          },
+          {
+            "after": "0:8.12.1-4.el10_2.7",
+            "after_signature": "RSA/SHA256, Fri 25 Sep 2026 09:22:19 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:8.12.1-4.el10_2.4",
+            "package": "libcurl-minimal"
+          },
+          {
+            "after": "0:2.1.13-1.el10_2",
+            "after_signature": "RSA/SHA256, Fri 11 Sep 2026 11:36:20 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:2.1.12-16.el10",
+            "package": "libevent"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "after_signature": "RSA/SHA256, Thu 29 Oct 2026 10:46:43 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:2.40.2-18.el10",
+            "package": "libfdisk"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "after_signature": "RSA/SHA256, Thu 29 Oct 2026 10:48:10 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:2.40.2-18.el10",
+            "package": "libmount"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "after_signature": "RSA/SHA256, Thu 29 Oct 2026 10:47:13 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:2.40.2-18.el10",
+            "package": "libsmartcols"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "after_signature": "RSA/SHA256, Thu 29 Oct 2026 10:47:43 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:2.40.2-18.el10",
+            "package": "libuuid"
+          },
+          {
+            "after": "0:2.12.5-10.el10_2.4",
+            "after_signature": "RSA/SHA256, Tue 22 Sep 2026 12:14:29 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:2.12.5-10.el10_2.3",
+            "package": "libxml2"
+          },
+          {
+            "after": "0:9.9p1-29.el10_2",
+            "after_signature": "RSA/SHA256, Thu 08 Oct 2026 02:01:37 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:9.9p1-25.el10_2",
+            "package": "openssh"
+          },
+          {
+            "after": "0:9.9p1-29.el10_2",
+            "after_signature": "RSA/SHA256, Thu 08 Oct 2026 02:02:28 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:9.9p1-25.el10_2",
+            "package": "openssh-clients"
+          },
+          {
+            "after": "1:3.5.8-2.el10_2",
+            "after_signature": "RSA/SHA256, Mon 21 Sep 2026 12:03:55 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "1:3.5.5-6.el10_2",
+            "package": "openssl-libs"
+          },
+          {
+            "after": "0:10.44-1.5.el10_2",
+            "after_signature": "RSA/SHA256, Mon 05 Oct 2026 08:54:08 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:10.44-1.el10.3",
+            "package": "pcre2"
+          },
+          {
+            "after": "0:10.44-1.5.el10_2",
+            "after_signature": "RSA/SHA256, Mon 05 Oct 2026 08:54:27 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:10.44-1.el10.3",
+            "package": "pcre2-syntax"
+          },
+          {
+            "after": "0:5.74-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:31:21 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:5.74-512.2.el10_0",
+            "package": "perl-AutoLoader"
+          },
+          {
+            "after": "0:1.89-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:31:27 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:1.89-512.2.el10_0",
+            "package": "perl-B"
+          },
+          {
+            "after": "0:0.68-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:30:05 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:0.68-512.2.el10_0",
+            "package": "perl-Class-Struct"
+          },
+          {
+            "after": "0:1.56-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:30:43 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:1.56-512.2.el10_0",
+            "package": "perl-DynaLoader"
+          },
+          {
+            "after": "0:1.38-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:29:07 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:1.38-512.2.el10_0",
+            "package": "perl-Errno"
+          },
+          {
+            "after": "0:1.18-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:29:05 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:1.18-512.2.el10_0",
+            "package": "perl-Fcntl"
+          },
+          {
+            "after": "0:2.86-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:29:34 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:2.86-512.2.el10_0",
+            "package": "perl-File-Basename"
+          },
+          {
+            "after": "0:1.14-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:29:53 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:1.14-512.2.el10_0",
+            "package": "perl-File-stat"
+          },
+          {
+            "after": "0:2.05-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:32:00 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:2.05-512.2.el10_0",
+            "package": "perl-FileHandle"
+          },
+          {
+            "after": "0:1.14-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:31:51 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:1.14-512.2.el10_0",
+            "package": "perl-Getopt-Std"
+          },
+          {
+            "after": "0:1.55-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:32:08 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:1.55-512.2.el10_0",
+            "package": "perl-IO"
+          },
+          {
+            "after": "0:1.22-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:31:35 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:1.22-512.2.el10_0",
+            "package": "perl-IPC-Open3"
+          },
+          {
+            "after": "0:1.17-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:28:33 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:1.17-512.2.el10_0",
+            "package": "perl-NDBM_File"
+          },
+          {
+            "after": "0:2.20-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:31:20 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:2.20-512.2.el10_0",
+            "package": "perl-POSIX"
+          },
+          {
+            "after": "0:1.02-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:30:22 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:1.02-512.2.el10_0",
+            "package": "perl-SelectSaver"
+          },
+          {
+            "after": "0:1.09-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:31:49 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:1.09-512.2.el10_0",
+            "package": "perl-Symbol"
+          },
+          {
+            "after": "0:5.27-3.el10_2.1",
+            "after_signature": "RSA/SHA256, Thu 15 Oct 2026 07:46:02 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:5.27-3.el10",
+            "package": "perl-URI"
+          },
+          {
+            "after": "0:2.27-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:31:16 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:2.27-512.2.el10_0",
+            "package": "perl-base"
+          },
+          {
+            "after": "0:0.61.000-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:29:23 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:0.61.000-512.2.el10_0",
+            "package": "perl-if"
+          },
+          {
+            "after": "4:5.40.2-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:28:58 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "4:5.40.2-512.2.el10_0",
+            "package": "perl-interpreter"
+          },
+          {
+            "after": "0:0.65-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:31:03 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:0.65-512.2.el10_0",
+            "package": "perl-lib"
+          },
+          {
+            "after": "4:5.40.2-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:28:51 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "4:5.40.2-512.2.el10_0",
+            "package": "perl-libs"
+          },
+          {
+            "after": "0:1.12-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:29:20 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:1.12-512.2.el10_0",
+            "package": "perl-locale"
+          },
+          {
+            "after": "0:1.29-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:28:38 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:1.29-512.2.el10_0",
+            "package": "perl-mro"
+          },
+          {
+            "after": "0:1.37-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:28:12 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:1.37-512.2.el10_0",
+            "package": "perl-overload"
+          },
+          {
+            "after": "0:0.02-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:29:03 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:0.02-512.2.el10_0",
+            "package": "perl-overloading"
+          },
+          {
+            "after": "0:1.05-515.el10_2",
+            "after_signature": "RSA/SHA256, Tue 08 Sep 2026 07:28:48 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:1.05-512.2.el10_0",
+            "package": "perl-vars"
+          },
+          {
+            "after": "0:3.14.8-1.el10_2",
+            "after_signature": "RSA/SHA256, Tue 06 Oct 2026 12:01:50 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:3.14.7-2.el10_2",
+            "package": "python3.14"
+          },
+          {
+            "after": "0:3.14.8-1.el10_2",
+            "after_signature": "RSA/SHA256, Tue 06 Oct 2026 12:01:56 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:3.14.7-2.el10_2",
+            "package": "python3.14-libs"
+          },
+          {
+            "after": "0:1.10.2.1-1.el10_2",
+            "after_signature": "RSA/SHA256, Fri 15 May 2026 04:54:12 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:1.10.1.1-2.el10",
+            "package": "rpm-sequoia"
+          },
+          {
+            "after": "0:2026e-1.el10_2",
+            "after_signature": "RSA/SHA256, Fri 02 Oct 2026 10:37:56 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "noarch",
+            "before": "0:2026c-1.el10_2",
+            "package": "tzdata"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "after_signature": "RSA/SHA256, Thu 29 Oct 2026 10:47:10 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:2.40.2-18.el10",
+            "package": "util-linux"
+          },
+          {
+            "after": "0:2.40.2-18.el10_2.20",
+            "after_signature": "RSA/SHA256, Thu 29 Oct 2026 10:47:12 AM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "0:2.40.2-18.el10",
+            "package": "util-linux-core"
+          },
+          {
+            "after": "1:5.6.2-4.el10_2.1",
+            "after_signature": "RSA/SHA256, Thu 03 Sep 2026 02:48:49 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "1:5.6.2-4.el10_0",
+            "package": "xz"
+          },
+          {
+            "after": "1:5.6.2-4.el10_2.1",
+            "after_signature": "RSA/SHA256, Thu 03 Sep 2026 02:49:02 PM UTC, Key ID 199e2f91fd431d51",
+            "arch": "aarch64",
+            "before": "1:5.6.2-4.el10_0",
+            "package": "xz-libs"
+          }
+        ],
+        "commands_all_exit_zero": true,
+        "existing_software_version_changes": 60,
+        "os_after": {
+          "ANSI_COLOR": "0;31",
+          "BUG_REPORT_URL": "https://issues.redhat.com/",
+          "CPE_NAME": "cpe:/o:redhat:enterprise_linux:10.2",
+          "DOCUMENTATION_URL": "https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/10",
+          "HOME_URL": "https://www.redhat.com/",
+          "ID": "rhel",
+          "ID_LIKE": "centos fedora",
+          "LOGO": "fedora-logo-icon",
+          "NAME": "Red Hat Enterprise Linux",
+          "PLATFORM_ID": "platform:el10",
+          "PRETTY_NAME": "Red Hat Enterprise Linux 10.2 (Coughlan)",
+          "REDHAT_BUGZILLA_PRODUCT": "Red Hat Enterprise Linux 10",
+          "REDHAT_BUGZILLA_PRODUCT_VERSION": "10.2",
+          "REDHAT_SUPPORT_PRODUCT": "Red Hat Enterprise Linux",
+          "REDHAT_SUPPORT_PRODUCT_VERSION": "10.2",
+          "RELEASE_TYPE": "stable",
+          "VENDOR_NAME": "Red Hat",
+          "VENDOR_URL": "https://www.redhat.com/",
+          "VERSION": "10.2 (Coughlan)",
+          "VERSION_ID": "10.2"
+        },
+        "os_before": {
+          "ANSI_COLOR": "0;31",
+          "BUG_REPORT_URL": "https://issues.redhat.com/",
+          "CPE_NAME": "cpe:/o:redhat:enterprise_linux:10.2",
+          "DOCUMENTATION_URL": "https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/10",
+          "HOME_URL": "https://www.redhat.com/",
+          "ID": "rhel",
+          "ID_LIKE": "centos fedora",
+          "LOGO": "fedora-logo-icon",
+          "NAME": "Red Hat Enterprise Linux",
+          "PLATFORM_ID": "platform:el10",
+          "PRETTY_NAME": "Red Hat Enterprise Linux 10.2 (Coughlan)",
+          "REDHAT_BUGZILLA_PRODUCT": "Red Hat Enterprise Linux 10",
+          "REDHAT_BUGZILLA_PRODUCT_VERSION": "10.2",
+          "REDHAT_SUPPORT_PRODUCT": "Red Hat Enterprise Linux",
+          "REDHAT_SUPPORT_PRODUCT_VERSION": "10.2",
+          "RELEASE_TYPE": "stable",
+          "VENDOR_NAME": "Red Hat",
+          "VENDOR_URL": "https://www.redhat.com/",
+          "VERSION": "10.2 (Coughlan)",
+          "VERSION_ID": "10.2"
+        },
+        "redhat_release_key_sha256": "d5ddf4a09b2dccc41c27e06f70dc7b2009704723115b5f824873b8d5133f84e2",
+        "removed": [],
+        "repository_policy": [
+          {
+            "baseurl": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/$basearch/appstream/os",
+            "component": "appstream",
+            "config_path": "/etc/yum.repos.d/ubi.repo",
+            "config_sha256": "ef7160b63c0df5008fdd156978ba658e109659316b34eaf13f9017cba75e3a14",
+            "gpgcheck": "1",
+            "gpgkey": "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release",
+            "id": "ubi-10-appstream-rpms",
+            "sslverify": "1"
+          },
+          {
+            "baseurl": "https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/$basearch/baseos/os",
+            "component": "baseos",
+            "config_path": "/etc/yum.repos.d/ubi.repo",
+            "config_sha256": "ef7160b63c0df5008fdd156978ba658e109659316b34eaf13f9017cba75e3a14",
+            "gpgcheck": "1",
+            "gpgkey": "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release",
+            "id": "ubi-10-baseos-rpms",
+            "sslverify": "1"
+          }
+        ],
+        "rpm_rows_after": 227,
+        "rpm_rows_before": 226,
+        "software_after": 224,
+        "software_before": 223,
+        "three_public_key_nevras_unchanged": true
+      },
+      "workflow": {
+        "benchmark": null,
+        "both_real_flow_job_ids_present": true,
+        "component_count": 5,
+        "decisions": 3,
+        "document_formats": 4,
+        "failure_retry_deduplicated": true,
+        "report_downloads": 9,
+        "result": "passed",
+        "stored_flow_hashes_unchanged": true
+      }
+    }
+  },
+  "ci_run_id": 41586599463,
+  "created_at_utc": "2026-11-03T06:11:17.701200+00:00",
+  "input_fingerprints": [
+    {
+      "bytes": 64599,
+      "path": "/private/tmp/arc-release-followup.rLeRu5/ci/final-a64ab47/selected/release/images/summary.json",
+      "sha256": "f00d50f51e7b5e8e76b945b73ad08ba1aa4b5e54768e56c643acb54189729b4e"
+    },
+    {
+      "bytes": 39124,
+      "path": "/private/tmp/arc-release-followup.rLeRu5/ci/final-a64ab47/selected/release/rhel/summary.json",
+      "sha256": "5fa216682c193285d76510fa5eda9565e3c8f2bac5f93f66301a6c023161ba02"
+    },
+    {
+      "bytes": 330741,
+      "path": "/private/tmp/arc-release-followup.rLeRu5/ci/final-a64ab47/selected/release/rhel/rpm-mappings.json",
+      "sha256": "f3631cdc47ec9a716de6164ba6936e0cc59fb895d582eb7c2065d0137e7bd857"
+    },
+    {
+      "bytes": 2412,
+      "path": "docker/langflow.Dockerfile",
+      "sha256": "bb38c30695ea422839935a6209786f8ab8728d054210756d2b1af1e9d6b59cb6"
+    },
+    {
+      "bytes": 24349,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-amd64/selection.json",
+      "sha256": "ceab81925c8159cef83daf480a363ab2dfb1bce0506620f561d6cbb845ff65d8"
+    },
+    {
+      "bytes": 31452,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-amd64/release/manifest.json",
+      "sha256": "46fe5da24b6fe4c62460cf097c3f64279bf528f8bb2b8be82f49f1a46ba52d88"
+    },
+    {
+      "bytes": 310263,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-amd64/release/images/langflow-inventory.json",
+      "sha256": "b775e6231007ad28a55c71f24b6e2bc4168511650b309ae91b03975dd5fbec77"
+    },
+    {
+      "bytes": 30,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-amd64/release/api-pip-check.stdout",
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "bytes": 30,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-amd64/release/langflow-pip-check.stdout",
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "bytes": 2294,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-amd64/release/dependency-compatibility.stdout",
+      "sha256": "1349d4b346fc7fb613c00e3189462b807ec15b77e5d5f9d3f4a4e1685dbfaa2c"
+    },
+    {
+      "bytes": 7093,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-amd64/workflow.json",
+      "sha256": "831801110132e2dfe2072eed2ed51cff9db8550d5392afd3f70853a32f62dbcd"
+    },
+    {
+      "bytes": 9313,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-amd64/release/system/manifest.json",
+      "sha256": "6adf9e14537bfce824a1c693565acd15860f97dbb45846f188be5e7fc02227b5"
+    },
+    {
+      "bytes": 23633,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-amd64/release/system/rpm-before.stdout",
+      "sha256": "6331f46a11e7d1c06353fbba0906738eb83cac3f5765fa90878ab8543ed919a1"
+    },
+    {
+      "bytes": 23754,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-amd64/release/system/rpm-after.stdout",
+      "sha256": "bd866069424571ba5fe2101f75a8508f7c486e2545924aa41a58eae1036ff34d"
+    },
+    {
+      "bytes": 670,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-amd64/release/rhel/summary.json",
+      "sha256": "270fb1f30850076cf9f4f7f16ae82cbe129252d47599248d4b85f91185d214be"
+    },
+    {
+      "bytes": 330365,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-amd64/release/rhel/rpm-mappings.json",
+      "sha256": "1d3e05410604e80cd848ef3a38d10a7a3545de65d04e4e2bfde104253de8c5fd"
+    },
+    {
+      "bytes": 890853,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-amd64/release/images/package-mappings.json",
+      "sha256": "d6c83224e64619e5f69cebd5bf364faf92330babf654b259fff5d1ab63322128"
+    },
+    {
+      "bytes": 1807,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-amd64/release/rhel/product-bindings.json",
+      "sha256": "364716c4dae04655a2188fec5a3d667afbca8aa3aed54c72b42b6d25861a988f"
+    },
+    {
+      "bytes": 7494,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-amd64/release/rhel/manifest.json",
+      "sha256": "4937656ea5a89c8907b68bdc710fd1596e83488a9bd86f71195eebc72bf0683b"
+    },
+    {
+      "bytes": 66025,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-amd64/release/images/summary.json",
+      "sha256": "85380d0b6f33a8332b43fd6bf72f7de73db37da586946d04820d339ac5d560b8"
+    },
+    {
+      "bytes": 1994345,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-amd64/release/images/vulnerabilities.json",
+      "sha256": "06d150b5bc0913978171f8b07cf09e5afdd2a21d8d0f12b6e253fc0a5630517d"
+    },
+    {
+      "bytes": 19685,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-arm64/selection.json",
+      "sha256": "47eedefea770a4f533b21a268b05ecbb676a8545d0a82188f95f2e08b0a2d059"
+    },
+    {
+      "bytes": 30228,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-arm64/release/manifest.json",
+      "sha256": "70fd911d0d519a3c7a941db01d1f0337d0b47bbca689d6b9eb1b1f2bc239ebed"
+    },
+    {
+      "bytes": 308811,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-arm64/release/images/langflow-inventory.json",
+      "sha256": "a13f4fcd811079b2d8d5404a056293b843a8027aa7634c21a9920721eb3de0ea"
+    },
+    {
+      "bytes": 30,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-arm64/release/api-pip-check.stdout",
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "bytes": 30,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-arm64/release/langflow-pip-check.stdout",
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "bytes": 2294,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-arm64/release/dependency-compatibility.stdout",
+      "sha256": "1349d4b346fc7fb613c00e3189462b807ec15b77e5d5f9d3f4a4e1685dbfaa2c"
+    },
+    {
+      "bytes": 7093,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-arm64/workflow.json",
+      "sha256": "2ab75c6a6513a84fb394c899082d68c8bf308354c127dcffd7217258149212a1"
+    },
+    {
+      "bytes": 9313,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-arm64/release/system/manifest.json",
+      "sha256": "16e2fc41e99dd1995ad46ed50d11d199d8d78a891fdf132b0991a91be5c45508"
+    },
+    {
+      "bytes": 23790,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-arm64/release/system/rpm-before.stdout",
+      "sha256": "abc88073fef6df7eb8fa9b1df68eea84f3086382a16422beb8da9ccc85d0d676"
+    },
+    {
+      "bytes": 23912,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-arm64/release/system/rpm-after.stdout",
+      "sha256": "e546e71e11411660bd63b58cf7d69f73a374404d092a9cb131f40143b662a43c"
+    },
+    {
+      "bytes": 670,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-arm64/release/rhel/summary.json",
+      "sha256": "d3ba7374b82642fcca03aeb73c3e5f2a3826c264d39165ff64bd15a8df37f966"
+    },
+    {
+      "bytes": 330523,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-arm64/release/rhel/rpm-mappings.json",
+      "sha256": "8e8fd39d3261e6ccdba26cdb4e2d68718597ce06750e63ba02d383bfd29ca386"
+    },
+    {
+      "bytes": 887807,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-arm64/release/images/package-mappings.json",
+      "sha256": "8d62b8dc80ca667c9f412364df5a540752872c8b2c34021ecad5f0aa4b4ed435"
+    },
+    {
+      "bytes": 1809,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-arm64/release/rhel/product-bindings.json",
+      "sha256": "6c3537eb99e4d1f1fb7b8aa9941224f59519eebcdabe5481f6f2fd8c13591572"
+    },
+    {
+      "bytes": 7494,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-arm64/release/rhel/manifest.json",
+      "sha256": "a7c53e573bc9c6fa8eb82b5a8a5773a1b8e3c50d3049a8539d9fe169cc377533"
+    },
+    {
+      "bytes": 66025,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-arm64/release/images/summary.json",
+      "sha256": "77c5005fedac7ed663a35a5279c21c5e10e24f01511253a62b7d6cf68ba9512c"
+    },
+    {
+      "bytes": 1994345,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-arm64/release/images/vulnerabilities.json",
+      "sha256": "5102eccdb8c2365fae66afb851555cb5a9122313f4dd483d8d719f58e85ff521"
+    },
+    {
+      "bytes": 25896,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/final-2e45bee-unit/arc-unit.xml",
+      "sha256": "e0b4a0590e64673cefc669ca773ceb5926344a7d9acd19e9f4b63016233babac"
+    },
+    {
+      "bytes": 554,
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/verify-count-excerpt.json",
+      "sha256": "afc29a1eca332ab1bd8d5a00573e3e9db530d694aa738f2c3e49f6ed9fbbced9"
+    }
+  ],
+  "method": "No network, build, installation, container startup, scan or duplicate artifact download. Parse selected existing JSON/XML/text; read existing ZIP member in memory only for actual interpreter version and verify against child manifest. RPM before/after comparison is within each current build image.",
+  "prior_query": {
+    "package_scan_at": "2026-11-01T02:06:50.298877+00:00",
+    "rhel_advisory_ids": 23,
+    "rhel_scan_at": "2026-11-01T02:07:02.734293+00:00",
+    "root": "/private/tmp/arc-release-followup.rLeRu5/ci/final-a64ab47/selected/release",
+    "source": "a64ab476c8acfaa36a3d6cc260a4c6c286bad380"
+  },
+  "prior_sealed_packet_manifest_sha256": "0466646bd5eecd32768e9fc61bf138815853292049a41a95dc1d98927e2081ef",
+  "producer": {
+    "actual_command": "python3 -B /private/tmp/arc-runtime-maintenance.wT9huB/python/review_final_runtime.py",
+    "argv": [
+      "/private/tmp/arc-runtime-maintenance.wT9huB/python/review_final_runtime.py"
+    ],
+    "path": "/private/tmp/arc-runtime-maintenance.wT9huB/python/review_final_runtime.py",
+    "sha256": "e960a0ff0a0c92cd82d5146b3b437e2de0d62cf14b6ef6d510d8e0b0e96e3495"
+  },
+  "qualifications": [
+    "The prior sealed packet remains unchanged; this is a new source/image/query-time record.",
+    "60 changed software versions plus1 added package are established by same-image build RPM before/after records, not by subtracting cross-date OSV counts.",
+    "Prior23RHSA IDs and current0IDs are different query times and installed versions; do not call this23independent CVEs fixed or proof of exploitability.",
+    "Default scanner exit2 remains recorded; its227RPM unknowns are exactly covered by the same-image supplemental224software+3metadata keys, with no mapping/query/detail unknown.",
+    "Current API126, PostgreSQL130 and Web4 IDs remain package findings; current Web4 libexpat findings mean the old Web0 statement is historical only.",
+    "No-match is not absolute security; native/static embedded libraries, vendor source correspondence and complete binary redistribution obligations are outside package-query closure.",
+    "AMD64 browser and native evidence does not prove ARM UI/native materials; ARM Linux cloud runs do not constitute a local Mac host validation.",
+    "No release acceptance, residual-risk acceptance, real-data access, deployment, cleanup or base-Langflow upgrade is granted."
+  ],
+  "schema": "arc.final-runtime-independent-review.v1",
+  "source_commit": "2e45bee8c61dfab347edd107aebb6a3488567761",
+  "unit_verification": {
+    "frontend_count_basis": {
+      "job_id": 125753435683,
+      "lines": [
+        "2026-11-03T05:54:55.4355756Z 188 passed, 1 warning in 4.17s",
+        "2026-11-03T05:55:15.0435445Z  Test Files  5 passed (5)",
+        "2026-11-03T05:55:15.0435813Z       Tests  29 passed (29)"
+      ],
+      "method": "GitHub MCP decoded job logs, ANSI formatting removed for count excerpt; full logs not copied",
+      "qualification": "These are verify-job counts, not package-scan acceptance.",
+      "run": 41586599463,
+      "source": "2e45bee8c61dfab347edd107aebb6a3488567761",
+      "unit_raw": "final-2e45bee-unit/arc-unit.xml"
+    },
+    "frontend_tests": 29,
+    "python_junit": {
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "tests": 188
+    },
+    "scope": "Verify job is AMD64; ARM lane ran real workflow and offline probes, not this188-test unit suite."
+  }
+}

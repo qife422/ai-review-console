@@ -1,0 +1,602 @@
+{
+  "source_commit": "2e45bee8c61dfab347edd107aebb6a3488567761",
+  "run_id": 41586599463,
+  "arch": "arm64",
+  "archive": {
+    "name": "arm64-41586599463.zip",
+    "bytes": 1256779,
+    "sha256": "de1e7999941c519e7073ed76409ae3a7c20f7b863c9af3447a7ccb5478067c9d",
+    "formal_evidence": false
+  },
+  "verified_all_zip_files": 112,
+  "verified_all_zip_bytes": 13344969,
+  "verified_manifests": [
+    {
+      "path": "release/images/manifest.json",
+      "verified_declared_files": 44
+    },
+    {
+      "path": "release/licenses/manifest.json",
+      "verified_declared_files": 3
+    },
+    {
+      "path": "release/manifest.json",
+      "verified_declared_files": 107
+    },
+    {
+      "path": "release/rhel/manifest.json",
+      "verified_declared_files": 12
+    },
+    {
+      "path": "release/system/manifest.json",
+      "verified_declared_files": 14
+    }
+  ],
+  "selected": [
+    {
+      "path": "release/api-pip-check.stderr",
+      "bytes": 266,
+      "sha256": "008cb6f70ed4af61f44bf24afe092613fa4ba3c1eb10ad4b6b26f20545063a3a"
+    },
+    {
+      "path": "release/api-pip-check.stdout",
+      "bytes": 30,
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "path": "release/dependency-compatibility.stderr",
+      "bytes": 589,
+      "sha256": "e2888b8cb2e5cf8f27a629124b84ff574eed34f0e669812db94b5fb5f61ea561"
+    },
+    {
+      "path": "release/dependency-compatibility.stdout",
+      "bytes": 2294,
+      "sha256": "1349d4b346fc7fb613c00e3189462b807ec15b77e5d5f9d3f4a4e1685dbfaa2c"
+    },
+    {
+      "path": "release/images/api-inventory.json",
+      "bytes": 60494,
+      "sha256": "74796ffb900b1e2197e5f6c20a8d137240a84d937435f62912ee3f0b8e4d875f"
+    },
+    {
+      "path": "release/images/http-records.json",
+      "bytes": 271356,
+      "sha256": "0c22a6c6643fdb13c071c272b29f3660abd615a7afcce41d62a0fbcd43f7ad76"
+    },
+    {
+      "path": "release/images/langflow-inventory.json",
+      "bytes": 308811,
+      "sha256": "a13f4fcd811079b2d8d5404a056293b843a8027aa7634c21a9920721eb3de0ea"
+    },
+    {
+      "path": "release/images/manifest.json",
+      "bytes": 89163,
+      "sha256": "76215ccd4464c95b55d79a3a87a400dd6dc0438bc327ba862d3c084fe5c92e13"
+    },
+    {
+      "path": "release/images/package-mappings.json",
+      "bytes": 887807,
+      "sha256": "8d62b8dc80ca667c9f412364df5a540752872c8b2c34021ecad5f0aa4b4ed435"
+    },
+    {
+      "path": "release/images/postgres-inventory.json",
+      "bytes": 77821,
+      "sha256": "b707c0ff1da9b8aad12ff666db04ba8f93e593850bbc453159be171acea12ef6"
+    },
+    {
+      "path": "release/images/summary.json",
+      "bytes": 66025,
+      "sha256": "77c5005fedac7ed663a35a5279c21c5e10e24f01511253a62b7d6cf68ba9512c"
+    },
+    {
+      "path": "release/images/vulnerabilities.json",
+      "bytes": 1994345,
+      "sha256": "5102eccdb8c2365fae66afb851555cb5a9122313f4dd483d8d719f58e85ff521"
+    },
+    {
+      "path": "release/images/web-inventory.json",
+      "bytes": 21036,
+      "sha256": "006f67dbe1b813cf9c9a8d830f192faec51485fded4688b587347df1ba5496f2"
+    },
+    {
+      "path": "release/langflow-pip-check.stdout",
+      "bytes": 30,
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "path": "release/manifest.json",
+      "bytes": 30228,
+      "sha256": "70fd911d0d519a3c7a941db01d1f0337d0b47bbca689d6b9eb1b1f2bc239ebed"
+    },
+    {
+      "path": "release/rhel/http-records.json",
+      "bytes": 142105,
+      "sha256": "61dd4f21ca3229ff56be0dfb709640132593ca5be7e5c18495609522764f8255"
+    },
+    {
+      "path": "release/rhel/langflow-redhat-metadata.stdout",
+      "bytes": 23387,
+      "sha256": "67e8630ebc8f63a8cf0f040738cfe9397deddadd25783277ad7dc5708af648fe"
+    },
+    {
+      "path": "release/rhel/manifest.json",
+      "bytes": 7494,
+      "sha256": "a7c53e573bc9c6fa8eb82b5a8a5773a1b8e3c50d3049a8539d9fe169cc377533"
+    },
+    {
+      "path": "release/rhel/product-bindings.json",
+      "bytes": 1809,
+      "sha256": "6c3537eb99e4d1f1fb7b8aa9941224f59519eebcdabe5481f6f2fd8c13591572"
+    },
+    {
+      "path": "release/rhel/rpm-mappings.json",
+      "bytes": 330523,
+      "sha256": "8e8fd39d3261e6ccdba26cdb4e2d68718597ce06750e63ba02d383bfd29ca386"
+    },
+    {
+      "path": "release/rhel/summary.json",
+      "bytes": 670,
+      "sha256": "d3ba7374b82642fcca03aeb73c3e5f2a3826c264d39165ff64bd15a8df37f966"
+    },
+    {
+      "path": "release/rhel/vulnerabilities.json",
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "path": "release/system/image-cache-clean.stderr",
+      "bytes": 170,
+      "sha256": "45a0b323c7cf8fc1d58a95237a1f73c7db0435b889de6c3784261d37623b4b1c"
+    },
+    {
+      "path": "release/system/image-cache-clean.stdout",
+      "bytes": 10,
+      "sha256": "d9158dba466706073b9359557167b7d68c1c5e5fe5dc7139cb95fd7c53ab996b"
+    },
+    {
+      "path": "release/system/manifest.json",
+      "bytes": 9313,
+      "sha256": "16e2fc41e99dd1995ad46ed50d11d199d8d78a891fdf132b0991a91be5c45508"
+    },
+    {
+      "path": "release/system/metadata-refresh.stderr",
+      "bytes": 166,
+      "sha256": "39715ddcbaad9c916c8adfd022b76e5b3f71c3f654ef65b58f27c180a63d2eee"
+    },
+    {
+      "path": "release/system/metadata-refresh.stdout",
+      "bytes": 72,
+      "sha256": "199d049b1dc95ccc87c2835867225f01f603c61f094ccf70516a316328f2045b"
+    },
+    {
+      "path": "release/system/repositories.stderr",
+      "bytes": 164,
+      "sha256": "de04c426ea438971a83fdfe11c08d76d019def1153dfc056f309ca73801ce715"
+    },
+    {
+      "path": "release/system/repositories.stdout",
+      "bytes": 175,
+      "sha256": "0ffe702a45ebd746468ea401862b5cdf99977843c0422bcd1c3e8d89e5a7f3d4"
+    },
+    {
+      "path": "release/system/rpm-after.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/system/rpm-after.stdout",
+      "bytes": 23912,
+      "sha256": "e546e71e11411660bd63b58cf7d69f73a374404d092a9cb131f40143b662a43c"
+    },
+    {
+      "path": "release/system/rpm-before.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/system/rpm-before.stdout",
+      "bytes": 23790,
+      "sha256": "abc88073fef6df7eb8fa9b1df68eea84f3086382a16422beb8da9ccc85d0d676"
+    },
+    {
+      "path": "release/system/trusted-keys.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/system/trusted-keys.stdout",
+      "bytes": 87,
+      "sha256": "c6ece077551b266b6e45ed3ad78c101da32b431b1d28a3eaf67c513f41a4000e"
+    },
+    {
+      "path": "release/system/update.stderr",
+      "bytes": 166,
+      "sha256": "2e0820f423f2f1ac203266dd4ceef9deef1104c1f059541fd57a0843bb6eb163"
+    },
+    {
+      "path": "release/system/update.stdout",
+      "bytes": 19615,
+      "sha256": "1bc4bf276bd07d396951405724446a6bfca3cb83feb4017495bde72f09a93bae"
+    },
+    {
+      "path": "runner-capacity.txt",
+      "bytes": 351,
+      "sha256": "aa2689e68266d16435352c5224bea7e5307f6252112b447a4b8e417d1d5e13e7"
+    },
+    {
+      "path": "services.json",
+      "bytes": 9144,
+      "sha256": "bfd49636b12bb7f9f28bedfa46bf74772c0d58c41c3d74e63e9e56e9acd0ea17"
+    },
+    {
+      "path": "workflow.json",
+      "bytes": 7093,
+      "sha256": "2ab75c6a6513a84fb394c899082d68c8bf308354c127dcffd7217258149212a1"
+    }
+  ],
+  "verified_not_selected": [
+    {
+      "path": "release/api-container.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/api-container.stdout",
+      "bytes": 65,
+      "sha256": "1f1e3946fc7c3ca36f79c3a977b6f29efc3a693d49173bc6fa9269873f523159"
+    },
+    {
+      "path": "release/api-image.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/api-image.stdout",
+      "bytes": 101,
+      "sha256": "93b096124e5a6a7b99aa9c95e316bbc78c945de20781f3eeae35803f573d1a6a"
+    },
+    {
+      "path": "release/image-audit.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/image-audit.stdout",
+      "bytes": 152,
+      "sha256": "d7cd997161cad3211df0c8939572d3493575d0dc086e5fde7b5358ed0066f215"
+    },
+    {
+      "path": "release/image-licenses.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/image-licenses.stdout",
+      "bytes": 606,
+      "sha256": "39d83977f424aa5b67236636ea9aa7f83290f193f81a42696942c0783bd72735"
+    },
+    {
+      "path": "release/images/api-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/images/api-identity.stdout",
+      "bytes": 152,
+      "sha256": "1053c091a9e53f605dbb9e44afdd50a56be447fe1b93725fca5880f8a40e9355"
+    },
+    {
+      "path": "release/images/api-licenses.json",
+      "bytes": 68061,
+      "sha256": "7d7a1a3cf6a0616d15ef188e8a67515c7a7b6aa08b6f6e5d3d7b049c961867bc"
+    },
+    {
+      "path": "release/images/api-os.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/images/api-os.stdout",
+      "bytes": 44689,
+      "sha256": "9c186ee032c3eead8b4a4e5d370932533d3483c7f2ce858a863ebb45d0777d19"
+    },
+    {
+      "path": "release/images/api-python.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/images/api-python.stdout",
+      "bytes": 28437,
+      "sha256": "a8ce2e5dec35838b11c8ef16d0239c543c7d61aeb3e910d102dcffc56a9c652c"
+    },
+    {
+      "path": "release/images/api.cdx.json",
+      "bytes": 96126,
+      "sha256": "9f4f7f246d133b5bfcfb5b692623457dbff06d7e8337fdc1ad6f315b2e526cb2"
+    },
+    {
+      "path": "release/images/api.spdx.json",
+      "bytes": 95416,
+      "sha256": "19c10a5faac435c3ef264b9beb10985c09e398f0cc6588b27e8e34f752f03028"
+    },
+    {
+      "path": "release/images/langflow-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/images/langflow-identity.stdout",
+      "bytes": 153,
+      "sha256": "fe7617cd2ed3d3676ead6e1d097b850ad18e71e95bcf464bd118a6e1f69fcbea"
+    },
+    {
+      "path": "release/images/langflow-licenses.json",
+      "bytes": 341175,
+      "sha256": "e55a286c518ae255028e950d7272918b425dbeb02ce31e9094454ce96836219e"
+    },
+    {
+      "path": "release/images/langflow-os.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/images/langflow-os.stdout",
+      "bytes": 21641,
+      "sha256": "a24b7941a4e39b5004366369a22cddd509a2465faf3df5d80745ed27a2bc3719"
+    },
+    {
+      "path": "release/images/langflow-python.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/images/langflow-python.stdout",
+      "bytes": 774610,
+      "sha256": "bd59885c4c7416474b8538f2b8a779a9eacc7b83b9ed493dfa8cafc1e3ce6fcd"
+    },
+    {
+      "path": "release/images/langflow.cdx.json",
+      "bytes": 511136,
+      "sha256": "4d818ee5e3c65b3a4710071ca5eaf3583b64b56b35321874e1e79c870f360030"
+    },
+    {
+      "path": "release/images/langflow.spdx.json",
+      "bytes": 513053,
+      "sha256": "ade5dd630373bddf01ef8923fabacd42942f7203a346c20795e1e703d7e4e93d"
+    },
+    {
+      "path": "release/images/postgres-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/images/postgres-identity.stdout",
+      "bytes": 234,
+      "sha256": "46bac265cd10e84acbc5ff302646a18745d360f659b16631d8d9a304d2229eb3"
+    },
+    {
+      "path": "release/images/postgres-licenses.json",
+      "bytes": 86457,
+      "sha256": "bd14df60437667174c857969117108d752165ee6c602c8463bb216891935a274"
+    },
+    {
+      "path": "release/images/postgres-os.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/images/postgres-os.stdout",
+      "bytes": 93779,
+      "sha256": "af77dbd98d216327763cc6dabd6ca09ba2f27c2f0d4e00d67bd669bf215b2f58"
+    },
+    {
+      "path": "release/images/postgres-python.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/images/postgres-python.stdout",
+      "bytes": 38,
+      "sha256": "1030eb169431c4058cc0a7e032ca2c5cd75534d69d00e58d607fea877b0bc720"
+    },
+    {
+      "path": "release/images/postgres.cdx.json",
+      "bytes": 112606,
+      "sha256": "e5bf1e5041e668a2bc23649819079a3ce4923d99fc2376eedd5431ce3eb237e9"
+    },
+    {
+      "path": "release/images/postgres.spdx.json",
+      "bytes": 98734,
+      "sha256": "17d3f54f5bb38e52b2d5f023632e9aef1502f485a3f6c03cfb36f523dc48fa88"
+    },
+    {
+      "path": "release/images/web-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/images/web-identity.stdout",
+      "bytes": 151,
+      "sha256": "481b4b6706ee6d201f269d54ee7a2dac896970416b5223ad1bc69d7ca8a84b98"
+    },
+    {
+      "path": "release/images/web-licenses.json",
+      "bytes": 24076,
+      "sha256": "6ed776227a33752b201e3d7526d094ba781060cc9e645fa98f7951d74d0654a4"
+    },
+    {
+      "path": "release/images/web-os.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/images/web-os.stdout",
+      "bytes": 102929,
+      "sha256": "a8b6e6f73bb75dc16e8050dbaca87256262ad1ee7040daf07b7db08469c9381c"
+    },
+    {
+      "path": "release/images/web-python.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/images/web-python.stdout",
+      "bytes": 38,
+      "sha256": "1030eb169431c4058cc0a7e032ca2c5cd75534d69d00e58d607fea877b0bc720"
+    },
+    {
+      "path": "release/images/web.cdx.json",
+      "bytes": 45519,
+      "sha256": "2ae01ea38162793f58f5546fd574858739efa7321796b6ebfc7432a19f33c1f3"
+    },
+    {
+      "path": "release/images/web.spdx.json",
+      "bytes": 49534,
+      "sha256": "23f955fa9bb6aad46fcbc60a54346ff916d72921c6238de18bcf2459574ef964"
+    },
+    {
+      "path": "release/langflow-container.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/langflow-container.stdout",
+      "bytes": 65,
+      "sha256": "86883ade8c4b9c49c970c1b742c702ba5ae8a319c47ac551c3566dc9b79b4189"
+    },
+    {
+      "path": "release/langflow-image.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/langflow-image.stdout",
+      "bytes": 106,
+      "sha256": "1a2a6da70fb779bab84158379141ad35bdeff377a2d4541fd3bf03839e7d8dab"
+    },
+    {
+      "path": "release/langflow-pip-check.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/licenses/api.json",
+      "bytes": 178050,
+      "sha256": "04cad4f9f984ae4d6e3da6b342929e0a08fabf68bc6bc7fa10f14a295783c675"
+    },
+    {
+      "path": "release/licenses/langflow.json",
+      "bytes": 1025668,
+      "sha256": "2205c55119c73adb3ca2a4f1133f76a4b2670b39d442f248abe06c4a63e37bdc"
+    },
+    {
+      "path": "release/licenses/manifest.json",
+      "bytes": 1612,
+      "sha256": "2977e1ef976d819cb901e754ec59dac805a67f93b7105e38f75a3d4cdc8e9ec1"
+    },
+    {
+      "path": "release/licenses/web.json",
+      "bytes": 95767,
+      "sha256": "7a900598c70771d77f9c3ca100c98b8606e3b28bdb172cac5c79dcfb377fc6ab"
+    },
+    {
+      "path": "release/postgres-container.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/postgres-container.stdout",
+      "bytes": 65,
+      "sha256": "1f2c7b0a04fbb43d1df25817891eafaa14b171ea0f26514966062892b4096a04"
+    },
+    {
+      "path": "release/postgres-image.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/postgres-image.stdout",
+      "bytes": 106,
+      "sha256": "c9bc5b9773325a56976ee0c085f8728eb846aa096e7b15f42c785842feaf514a"
+    },
+    {
+      "path": "release/rhel/langflow-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/rhel/langflow-identity.stdout",
+      "bytes": 104,
+      "sha256": "7821ede1aed2bb9bbcc48ef754394970665bc6579968e80ad5e823bc119c2b1c"
+    },
+    {
+      "path": "release/rhel/langflow-os.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/rhel/langflow-os.stdout",
+      "bytes": 21641,
+      "sha256": "a24b7941a4e39b5004366369a22cddd509a2465faf3df5d80745ed27a2bc3719"
+    },
+    {
+      "path": "release/rhel/langflow-redhat-metadata.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/rhel/repository-to-cpe.json",
+      "bytes": 4379662,
+      "sha256": "b0ee1f3f15d2043971f64e04c9c39cbf6f8e608edc26a07faea8bbb9393d2bb7"
+    },
+    {
+      "path": "release/rhel-audit.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/rhel-audit.stdout",
+      "bytes": 167,
+      "sha256": "90f69dbcc2738fd08e7d31d4082d1f99bec012e66f51b68d537c6a9465862aea"
+    },
+    {
+      "path": "release/system-materials.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/system-materials.stdout",
+      "bytes": 105505,
+      "sha256": "c6361f6eeccf627e41ca31ce44c764aa9f56084ec9eff26c00850b2000fc7bad"
+    },
+    {
+      "path": "release/web-container.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/web-container.stdout",
+      "bytes": 65,
+      "sha256": "2df29079da3321607e9e72aff281a2d826605274151071da3b88a8ceae359c59"
+    },
+    {
+      "path": "release/web-image.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "release/web-image.stdout",
+      "bytes": 101,
+      "sha256": "1e87d9d8c6eff0073aa8169b1f7543396dfbe0d9e93810c7e3296b5c22e9839a"
+    },
+    {
+      "path": "runtime.log",
+      "bytes": 16103,
+      "sha256": "250eae9f86c31eeb24e7cf3ca9a48996dab2378e6730d935f8bd1f7df78ca239"
+    }
+  ],
+  "scope": "Only selected original member bytes are evidence candidates. ZIP/unchecked claims are not formal evidence.",
+  "projected_round_nonzip_files": 43,
+  "projected_round_nonzip_bytes_with_256KiB_metadata_reserve": 4693036
+}

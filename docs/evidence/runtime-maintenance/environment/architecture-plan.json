@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-03T05:57:26.790720+00:00",
+  "source_commit": "2e45bee8c61dfab347edd107aebb6a3488567761",
+  "purpose": "Validate the system maintenance layer on both Linux CPU architectures while local Docker remains unavailable",
+  "profiles": {
+    "amd64": "full real workflow, browser, package/RHEL/license scan and targeted native20-file batch",
+    "arm64": "real workflow, package/RHEL/license scan and system transaction; Chrome/UI not run and targeted native not collected"
+  },
+  "runner_capacity": "Each VM records uname/df and stops below12GiB available before installs/build; collector still requires6GiB before material generation",
+  "native_budget": "One shared20-file/64MiB batch only on AMD64; ARM cannot reset it",
+  "artifact_selection": "CI selected<=20MiB/200files across both profiles; keep original licenseJSON when possible, select one SBOM format and omit redundant/zero-byte transport-only files if needed; all selected bytes independently hashed, archive child manifests verified in memory",
+  "scope_limit": "Linux ARM cloud regression does not attest the Mac host environment; official Langflow1.11.6 fixed version remains unchanged",
+  "authorization": "same180minute cumulative WP05 goal; no cleanup or deployment expansion"
+}

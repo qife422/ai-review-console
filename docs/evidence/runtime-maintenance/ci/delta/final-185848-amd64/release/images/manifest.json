@@ -1,0 +1,2843 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "RELEASE-001",
+    "AC-19"
+  ],
+  "producer": "scripts/scan_images_osv.py",
+  "started_at": "2026-11-03T06:22:59.442653+00:00",
+  "service": "https://api.osv.dev/v1",
+  "database_snapshot_date": null,
+  "online_package_metadata_sending": true,
+  "result": "queried_with_findings",
+  "images": {
+    "api": {
+      "image_id": "sha256:dac5965a840be8d2da28d1bb3e2098b42ea4fe9aeefa010357344f0a43166e10",
+      "inventory_packages": 140,
+      "unknown_packages": 0,
+      "matched_binary_or_python_packages": 51,
+      "observed_unique_advisory_ids": 126,
+      "detail_unknown": 0,
+      "upstream_severity_labels": {
+        "unknown": 126
+      },
+      "findings": [
+        {
+          "package": "apt",
+          "version": "2.6.1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "apt"
+            },
+            "version": "2.6.1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2011-3374"
+          ]
+        },
+        {
+          "package": "bsdutils",
+          "version": "1:2.38.1-5+deb12u3",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "util-linux"
+            },
+            "version": "2.38.1-5+deb12u3"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-0563",
+            "DEBIAN-CVE-2025-14104",
+            "DEBIAN-CVE-2026-13595",
+            "DEBIAN-CVE-2026-27456",
+            "DEBIAN-CVE-2026-3184",
+            "DEBIAN-CVE-2026-53613",
+            "DEBIAN-CVE-2026-53615",
+            "DEBIAN-CVE-2026-78410"
+          ]
+        },
+        {
+          "package": "coreutils",
+          "version": "9.1-1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "coreutils"
+            },
+            "version": "9.1-1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2016-2781",
+            "DEBIAN-CVE-2017-18018",
+            "DEBIAN-CVE-2025-5278",
+            "DEBIAN-CVE-2026-56391",
+            "DEBIAN-CVE-2026-56392"
+          ]
+        },
+        {
+          "package": "dash",
+          "version": "0.5.12-2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "dash"
+            },
+            "version": "0.5.12-2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-102473",
+            "DEBIAN-CVE-2026-102474"
+          ]
+        },
+        {
+          "package": "diffutils",
+          "version": "1:3.8-4",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "diffutils"
+            },
+            "version": "1:3.8-4"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-53910"
+          ]
+        },
+        {
+          "package": "gcc-12-base",
+          "version": "12.2.0-14+deb12u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "gcc-12"
+            },
+            "version": "12.2.0-14+deb12u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-27943",
+            "DEBIAN-CVE-2026-102010",
+            "DEBIAN-CVE-2026-114690",
+            "DEBIAN-CVE-2026-114691",
+            "DEBIAN-CVE-2026-115455",
+            "DEBIAN-CVE-2026-95619"
+          ]
+        },
+        {
+          "package": "gpgv",
+          "version": "2.2.40-1.1+deb12u2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "gnupg2"
+            },
+            "version": "2.2.40-1.1+deb12u2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-3219",
+            "DEBIAN-CVE-2025-30258",
+            "DEBIAN-CVE-2025-68972",
+            "DEBIAN-CVE-2026-105712",
+            "DEBIAN-CVE-2026-57062"
+          ]
+        },
+        {
+          "package": "gzip",
+          "version": "1.12-1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "gzip"
+            },
+            "version": "1.12-1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-41991",
+            "DEBIAN-CVE-2026-41992"
+          ]
+        },
+        {
+          "package": "libacl1",
+          "version": "2.3.1-3",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "acl"
+            },
+            "version": "2.3.1-3"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-54369",
+            "DEBIAN-CVE-2026-54370"
+          ]
+        },
+        {
+          "package": "libapt-pkg6.0",
+          "version": "2.6.1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "apt"
+            },
+            "version": "2.6.1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2011-3374"
+          ]
+        },
+        {
+          "package": "libattr1",
+          "version": "1:2.5.1-4",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "attr"
+            },
+            "version": "1:2.5.1-4"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-54371"
+          ]
+        },
+        {
+          "package": "libblkid1",
+          "version": "2.38.1-5+deb12u3",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "util-linux"
+            },
+            "version": "2.38.1-5+deb12u3"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-0563",
+            "DEBIAN-CVE-2025-14104",
+            "DEBIAN-CVE-2026-13595",
+            "DEBIAN-CVE-2026-27456",
+            "DEBIAN-CVE-2026-3184",
+            "DEBIAN-CVE-2026-53613",
+            "DEBIAN-CVE-2026-53615",
+            "DEBIAN-CVE-2026-78410"
+          ]
+        },
+        {
+          "package": "libbz2-1.0",
+          "version": "1.0.8-5+b1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "bzip2"
+            },
+            "version": "1.0.8-5"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-42250"
+          ]
+        },
+        {
+          "package": "libc-bin",
+          "version": "2.36-9+deb12u14",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "glibc"
+            },
+            "version": "2.36-9+deb12u14"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2010-4756",
+            "DEBIAN-CVE-2018-20796",
+            "DEBIAN-CVE-2019-1010022",
+            "DEBIAN-CVE-2019-1010023",
+            "DEBIAN-CVE-2019-1010024",
+            "DEBIAN-CVE-2019-1010025",
+            "DEBIAN-CVE-2019-9192",
+            "DEBIAN-CVE-2026-18374",
+            "DEBIAN-CVE-2026-19499",
+            "DEBIAN-CVE-2026-19542",
+            "DEBIAN-CVE-2026-5435",
+            "DEBIAN-CVE-2026-5450",
+            "DEBIAN-CVE-2026-5928",
+            "DEBIAN-CVE-2026-6238",
+            "DEBIAN-CVE-2026-6368",
+            "DEBIAN-CVE-2026-6791",
+            "DEBIAN-CVE-2026-77117",
+            "DEBIAN-CVE-2026-80489",
+            "DEBIAN-CVE-2026-84243",
+            "DEBIAN-CVE-2026-8674",
+            "DEBIAN-CVE-2026-86805",
+            "DEBIAN-CVE-2026-89092",
+            "DEBIAN-CVE-2026-95818",
+            "DEBIAN-CVE-2026-97399"
+          ]
+        },
+        {
+          "package": "libc6",
+          "version": "2.36-9+deb12u14",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "glibc"
+            },
+            "version": "2.36-9+deb12u14"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2010-4756",
+            "DEBIAN-CVE-2018-20796",
+            "DEBIAN-CVE-2019-1010022",
+            "DEBIAN-CVE-2019-1010023",
+            "DEBIAN-CVE-2019-1010024",
+            "DEBIAN-CVE-2019-1010025",
+            "DEBIAN-CVE-2019-9192",
+            "DEBIAN-CVE-2026-18374",
+            "DEBIAN-CVE-2026-19499",
+            "DEBIAN-CVE-2026-19542",
+            "DEBIAN-CVE-2026-5435",
+            "DEBIAN-CVE-2026-5450",
+            "DEBIAN-CVE-2026-5928",
+            "DEBIAN-CVE-2026-6238",
+            "DEBIAN-CVE-2026-6368",
+            "DEBIAN-CVE-2026-6791",
+            "DEBIAN-CVE-2026-77117",
+            "DEBIAN-CVE-2026-80489",
+            "DEBIAN-CVE-2026-84243",
+            "DEBIAN-CVE-2026-8674",
+            "DEBIAN-CVE-2026-86805",
+            "DEBIAN-CVE-2026-89092",
+            "DEBIAN-CVE-2026-95818",
+            "DEBIAN-CVE-2026-97399"
+          ]
+        },
+        {
+          "package": "libgcc-s1",
+          "version": "12.2.0-14+deb12u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "gcc-12"
+            },
+            "version": "12.2.0-14+deb12u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-27943",
+            "DEBIAN-CVE-2026-102010",
+            "DEBIAN-CVE-2026-114690",
+            "DEBIAN-CVE-2026-114691",
+            "DEBIAN-CVE-2026-115455",
+            "DEBIAN-CVE-2026-95619"
+          ]
+        },
+        {
+          "package": "libgcrypt20",
+          "version": "1.10.1-3+deb12u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "libgcrypt20"
+            },
+            "version": "1.10.1-3+deb12u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2018-6829",
+            "DEBIAN-CVE-2024-2236"
+          ]
+        },
+        {
+          "package": "libgnutls30",
+          "version": "3.7.9-2+deb12u7",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "gnutls28"
+            },
+            "version": "3.7.9-2+deb12u7"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2011-3389",
+            "DEBIAN-CVE-2026-67693",
+            "DEBIAN-CVE-2026-88647",
+            "DEBIAN-CVE-2026-88648",
+            "DEBIAN-CVE-2026-95184",
+            "DEBIAN-CVE-2026-95209",
+            "DEBIAN-CVE-2026-95210"
+          ]
+        },
+        {
+          "package": "libgssapi-krb5-2",
+          "version": "1.20.1-2+deb12u5",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "krb5"
+            },
+            "version": "1.20.1-2+deb12u5"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2018-5709",
+            "DEBIAN-CVE-2024-26458",
+            "DEBIAN-CVE-2024-26461",
+            "DEBIAN-CVE-2026-107708",
+            "DEBIAN-CVE-2026-107778",
+            "DEBIAN-CVE-2026-11850"
+          ]
+        },
+        {
+          "package": "libk5crypto3",
+          "version": "1.20.1-2+deb12u5",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "krb5"
+            },
+            "version": "1.20.1-2+deb12u5"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2018-5709",
+            "DEBIAN-CVE-2024-26458",
+            "DEBIAN-CVE-2024-26461",
+            "DEBIAN-CVE-2026-107708",
+            "DEBIAN-CVE-2026-107778",
+            "DEBIAN-CVE-2026-11850"
+          ]
+        },
+        {
+          "package": "libkrb5-3",
+          "version": "1.20.1-2+deb12u5",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "krb5"
+            },
+            "version": "1.20.1-2+deb12u5"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2018-5709",
+            "DEBIAN-CVE-2024-26458",
+            "DEBIAN-CVE-2024-26461",
+            "DEBIAN-CVE-2026-107708",
+            "DEBIAN-CVE-2026-107778",
+            "DEBIAN-CVE-2026-11850"
+          ]
+        },
+        {
+          "package": "libkrb5support0",
+          "version": "1.20.1-2+deb12u5",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "krb5"
+            },
+            "version": "1.20.1-2+deb12u5"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2018-5709",
+            "DEBIAN-CVE-2024-26458",
+            "DEBIAN-CVE-2024-26461",
+            "DEBIAN-CVE-2026-107708",
+            "DEBIAN-CVE-2026-107778",
+            "DEBIAN-CVE-2026-11850"
+          ]
+        },
+        {
+          "package": "libmount1",
+          "version": "2.38.1-5+deb12u3",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "util-linux"
+            },
+            "version": "2.38.1-5+deb12u3"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-0563",
+            "DEBIAN-CVE-2025-14104",
+            "DEBIAN-CVE-2026-13595",
+            "DEBIAN-CVE-2026-27456",
+            "DEBIAN-CVE-2026-3184",
+            "DEBIAN-CVE-2026-53613",
+            "DEBIAN-CVE-2026-53615",
+            "DEBIAN-CVE-2026-78410"
+          ]
+        },
+        {
+          "package": "libncursesw6",
+          "version": "6.4-4",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "ncurses"
+            },
+            "version": "6.4-4"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2023-50495",
+            "DEBIAN-CVE-2025-6141",
+            "DEBIAN-CVE-2025-69720"
+          ]
+        },
+        {
+          "package": "libp11-kit0",
+          "version": "0.24.1-2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "p11-kit"
+            },
+            "version": "0.24.1-2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-13757",
+            "DEBIAN-CVE-2026-18938"
+          ]
+        },
+        {
+          "package": "libpam-modules",
+          "version": "1.5.2-6+deb12u2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "pam"
+            },
+            "version": "1.5.2-6+deb12u2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2024-10041",
+            "DEBIAN-CVE-2025-8941",
+            "DEBIAN-CVE-2026-54411"
+          ]
+        },
+        {
+          "package": "libpam-modules-bin",
+          "version": "1.5.2-6+deb12u2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "pam"
+            },
+            "version": "1.5.2-6+deb12u2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2024-10041",
+            "DEBIAN-CVE-2025-8941",
+            "DEBIAN-CVE-2026-54411"
+          ]
+        },
+        {
+          "package": "libpam-runtime",
+          "version": "1.5.2-6+deb12u2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "pam"
+            },
+            "version": "1.5.2-6+deb12u2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2024-10041",
+            "DEBIAN-CVE-2025-8941",
+            "DEBIAN-CVE-2026-54411"
+          ]
+        },
+        {
+          "package": "libpam0g",
+          "version": "1.5.2-6+deb12u2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "pam"
+            },
+            "version": "1.5.2-6+deb12u2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2024-10041",
+            "DEBIAN-CVE-2025-8941",
+            "DEBIAN-CVE-2026-54411"
+          ]
+        },
+        {
+          "package": "libsmartcols1",
+          "version": "2.38.1-5+deb12u3",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "util-linux"
+            },
+            "version": "2.38.1-5+deb12u3"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-0563",
+            "DEBIAN-CVE-2025-14104",
+            "DEBIAN-CVE-2026-13595",
+            "DEBIAN-CVE-2026-27456",
+            "DEBIAN-CVE-2026-3184",
+            "DEBIAN-CVE-2026-53613",
+            "DEBIAN-CVE-2026-53615",
+            "DEBIAN-CVE-2026-78410"
+          ]
+        },
+        {
+          "package": "libsqlite3-0",
+          "version": "3.40.1-2+deb12u2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "sqlite3"
+            },
+            "version": "3.40.1-2+deb12u2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2021-45346",
+            "DEBIAN-CVE-2025-29088",
+            "DEBIAN-CVE-2025-70873",
+            "DEBIAN-CVE-2025-7458",
+            "DEBIAN-CVE-2025-7709",
+            "DEBIAN-CVE-2026-11822",
+            "DEBIAN-CVE-2026-11824",
+            "DEBIAN-CVE-2026-119371",
+            "DEBIAN-CVE-2026-119372",
+            "DEBIAN-CVE-2026-119373",
+            "DEBIAN-CVE-2026-119374",
+            "DEBIAN-CVE-2026-119375",
+            "DEBIAN-CVE-2026-119376",
+            "DEBIAN-CVE-2026-119377",
+            "DEBIAN-CVE-2026-119378",
+            "DEBIAN-CVE-2026-119379",
+            "DEBIAN-CVE-2026-119586",
+            "DEBIAN-CVE-2026-119591",
+            "DEBIAN-CVE-2026-50812",
+            "DEBIAN-CVE-2026-50813"
+          ]
+        },
+        {
+          "package": "libssl3",
+          "version": "3.0.22-1~deb12u2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "openssl"
+            },
+            "version": "3.0.22-1~deb12u2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2025-27587"
+          ]
+        },
+        {
+          "package": "libstdc++6",
+          "version": "12.2.0-14+deb12u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "gcc-12"
+            },
+            "version": "12.2.0-14+deb12u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-27943",
+            "DEBIAN-CVE-2026-102010",
+            "DEBIAN-CVE-2026-114690",
+            "DEBIAN-CVE-2026-114691",
+            "DEBIAN-CVE-2026-115455",
+            "DEBIAN-CVE-2026-95619"
+          ]
+        },
+        {
+          "package": "libsystemd0",
+          "version": "252.39-1~deb12u2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "systemd"
+            },
+            "version": "252.39-1~deb12u2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2013-4392",
+            "DEBIAN-CVE-2023-31437",
+            "DEBIAN-CVE-2023-31438",
+            "DEBIAN-CVE-2023-31439",
+            "DEBIAN-CVE-2026-15059",
+            "DEBIAN-CVE-2026-16742",
+            "DEBIAN-CVE-2026-40228"
+          ]
+        },
+        {
+          "package": "libtasn1-6",
+          "version": "4.19.0-2+deb12u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "libtasn1-6"
+            },
+            "version": "4.19.0-2+deb12u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2025-13151"
+          ]
+        },
+        {
+          "package": "libtinfo6",
+          "version": "6.4-4",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "ncurses"
+            },
+            "version": "6.4-4"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2023-50495",
+            "DEBIAN-CVE-2025-6141",
+            "DEBIAN-CVE-2025-69720"
+          ]
+        },
+        {
+          "package": "libtirpc-common",
+          "version": "1.3.3+ds-1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "libtirpc"
+            },
+            "version": "1.3.3+ds-1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-85231",
+            "DEBIAN-CVE-2026-85977"
+          ]
+        },
+        {
+          "package": "libtirpc3",
+          "version": "1.3.3+ds-1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "libtirpc"
+            },
+            "version": "1.3.3+ds-1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-85231",
+            "DEBIAN-CVE-2026-85977"
+          ]
+        },
+        {
+          "package": "libudev1",
+          "version": "252.39-1~deb12u2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "systemd"
+            },
+            "version": "252.39-1~deb12u2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2013-4392",
+            "DEBIAN-CVE-2023-31437",
+            "DEBIAN-CVE-2023-31438",
+            "DEBIAN-CVE-2023-31439",
+            "DEBIAN-CVE-2026-15059",
+            "DEBIAN-CVE-2026-16742",
+            "DEBIAN-CVE-2026-40228"
+          ]
+        },
+        {
+          "package": "libuuid1",
+          "version": "2.38.1-5+deb12u3",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "util-linux"
+            },
+            "version": "2.38.1-5+deb12u3"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-0563",
+            "DEBIAN-CVE-2025-14104",
+            "DEBIAN-CVE-2026-13595",
+            "DEBIAN-CVE-2026-27456",
+            "DEBIAN-CVE-2026-3184",
+            "DEBIAN-CVE-2026-53613",
+            "DEBIAN-CVE-2026-53615",
+            "DEBIAN-CVE-2026-78410"
+          ]
+        },
+        {
+          "package": "login",
+          "version": "1:4.13+dfsg1-1+deb12u2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "shadow"
+            },
+            "version": "1:4.13+dfsg1-1+deb12u2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2007-5686",
+            "DEBIAN-CVE-2024-56433"
+          ]
+        },
+        {
+          "package": "mount",
+          "version": "2.38.1-5+deb12u3",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "util-linux"
+            },
+            "version": "2.38.1-5+deb12u3"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-0563",
+            "DEBIAN-CVE-2025-14104",
+            "DEBIAN-CVE-2026-13595",
+            "DEBIAN-CVE-2026-27456",
+            "DEBIAN-CVE-2026-3184",
+            "DEBIAN-CVE-2026-53613",
+            "DEBIAN-CVE-2026-53615",
+            "DEBIAN-CVE-2026-78410"
+          ]
+        },
+        {
+          "package": "ncurses-base",
+          "version": "6.4-4",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "ncurses"
+            },
+            "version": "6.4-4"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2023-50495",
+            "DEBIAN-CVE-2025-6141",
+            "DEBIAN-CVE-2025-69720"
+          ]
+        },
+        {
+          "package": "ncurses-bin",
+          "version": "6.4-4",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "ncurses"
+            },
+            "version": "6.4-4"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2023-50495",
+            "DEBIAN-CVE-2025-6141",
+            "DEBIAN-CVE-2025-69720"
+          ]
+        },
+        {
+          "package": "openssl",
+          "version": "3.0.22-1~deb12u2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "openssl"
+            },
+            "version": "3.0.22-1~deb12u2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2025-27587"
+          ]
+        },
+        {
+          "package": "passwd",
+          "version": "1:4.13+dfsg1-1+deb12u2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "shadow"
+            },
+            "version": "1:4.13+dfsg1-1+deb12u2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2007-5686",
+            "DEBIAN-CVE-2024-56433"
+          ]
+        },
+        {
+          "package": "perl-base",
+          "version": "5.36.0-7+deb12u4",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "perl"
+            },
+            "version": "5.36.0-7+deb12u4"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2011-4116",
+            "DEBIAN-CVE-2023-31486",
+            "DEBIAN-CVE-2026-15534",
+            "DEBIAN-CVE-2026-82560",
+            "DEBIAN-CVE-2026-9538"
+          ]
+        },
+        {
+          "package": "tar",
+          "version": "1.34+dfsg-1.2+deb12u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "tar"
+            },
+            "version": "1.34+dfsg-1.2+deb12u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2005-2541",
+            "DEBIAN-CVE-2026-18477",
+            "DEBIAN-CVE-2026-18508",
+            "DEBIAN-CVE-2026-5704"
+          ]
+        },
+        {
+          "package": "util-linux",
+          "version": "2.38.1-5+deb12u3",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "util-linux"
+            },
+            "version": "2.38.1-5+deb12u3"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-0563",
+            "DEBIAN-CVE-2025-14104",
+            "DEBIAN-CVE-2026-13595",
+            "DEBIAN-CVE-2026-27456",
+            "DEBIAN-CVE-2026-3184",
+            "DEBIAN-CVE-2026-53613",
+            "DEBIAN-CVE-2026-53615",
+            "DEBIAN-CVE-2026-78410"
+          ]
+        },
+        {
+          "package": "util-linux-extra",
+          "version": "2.38.1-5+deb12u3",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "util-linux"
+            },
+            "version": "2.38.1-5+deb12u3"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-0563",
+            "DEBIAN-CVE-2025-14104",
+            "DEBIAN-CVE-2026-13595",
+            "DEBIAN-CVE-2026-27456",
+            "DEBIAN-CVE-2026-3184",
+            "DEBIAN-CVE-2026-53613",
+            "DEBIAN-CVE-2026-53615",
+            "DEBIAN-CVE-2026-78410"
+          ]
+        },
+        {
+          "package": "zlib1g",
+          "version": "1:1.2.13.dfsg-1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:12",
+              "name": "zlib"
+            },
+            "version": "1:1.2.13.dfsg-1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2023-45853",
+            "DEBIAN-CVE-2026-27171",
+            "DEBIAN-CVE-2026-85091"
+          ]
+        }
+      ]
+    },
+    "langflow": {
+      "image_id": "sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+      "inventory_packages": 777,
+      "unknown_packages": 227,
+      "matched_binary_or_python_packages": 5,
+      "observed_unique_advisory_ids": 81,
+      "detail_unknown": 0,
+      "upstream_severity_labels": {
+        "MODERATE": 22,
+        "CRITICAL": 7,
+        "HIGH": 26,
+        "unknown": 23,
+        "LOW": 3
+      },
+      "findings": [
+        {
+          "package": "couchbase",
+          "version": "4.6.2",
+          "query": {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "couchbase"
+            },
+            "version": "4.6.2"
+          },
+          "vulnerability_ids": [
+            "PYSEC-2023-235"
+          ]
+        },
+        {
+          "package": "pillow",
+          "version": "12.3.0",
+          "query": {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "pillow"
+            },
+            "version": "12.3.0"
+          },
+          "vulnerability_ids": [
+            "GHSA-22hg-r758-rrw9",
+            "GHSA-24rc-8hj2-v98c",
+            "GHSA-254f-3936-288h",
+            "GHSA-27h8-gf7j-v5hc",
+            "GHSA-332p-7hrc-92wf",
+            "GHSA-3j72-p6qg-6xp7",
+            "GHSA-4558-3h8r-v8xp",
+            "GHSA-462x-pgg6-55fp",
+            "GHSA-4rm8-3hmm-39fg",
+            "GHSA-4rr5-89j8-mwwm",
+            "GHSA-58r4-6rv3-gfh8",
+            "GHSA-5x8w-8jj5-q52h",
+            "GHSA-5xm2-6676-qcp9",
+            "GHSA-654x-cwwv-5j9c",
+            "GHSA-65qm-jvmh-6pqg",
+            "GHSA-74r2-7ff9-mjj2",
+            "GHSA-78g4-xqwv-q3g8",
+            "GHSA-7mwm-ghpf-9vrm",
+            "GHSA-8g5g-8vmr-9782",
+            "GHSA-9v9v-9qvf-h2hj",
+            "GHSA-c6hw-5grf-ff96",
+            "GHSA-cp9v-662q-vvx9",
+            "GHSA-f2g6-542v-9j58",
+            "GHSA-fc9g-5qg7-mf45",
+            "GHSA-g4qv-2jxx-769h",
+            "GHSA-g7cr-3p24-7wf7",
+            "GHSA-g842-9rc4-69pw",
+            "GHSA-gg2r-wvfm-q9rx",
+            "GHSA-j4m9-6w36-pw47",
+            "GHSA-jg86-v3jv-hrpm",
+            "GHSA-mrfp-p49p-3hf2",
+            "GHSA-p4wg-p73j-c528",
+            "GHSA-p8hx-v2p6-rp84",
+            "GHSA-pchr-8j38-3x4p",
+            "GHSA-q45j-58j2-45rg",
+            "GHSA-rfgq-q3w2-pmv2",
+            "GHSA-v9pv-5gc8-w2m6",
+            "GHSA-vx6w-vv9f-6gvg",
+            "GHSA-w889-685w-c8fh",
+            "GHSA-xgh8-jp6q-p5x8",
+            "GHSA-xvh5-g6gv-559v",
+            "PYSEC-2026-4326",
+            "PYSEC-2026-4327",
+            "PYSEC-2026-4328",
+            "PYSEC-2026-4329",
+            "PYSEC-2026-4330",
+            "PYSEC-2026-4331",
+            "PYSEC-2026-4332",
+            "PYSEC-2026-4333",
+            "PYSEC-2026-4334",
+            "PYSEC-2026-4335",
+            "PYSEC-2026-4336",
+            "PYSEC-2026-4337",
+            "PYSEC-2026-4338",
+            "PYSEC-2026-4339",
+            "PYSEC-2026-4340",
+            "PYSEC-2026-4341",
+            "PYSEC-2026-4342",
+            "PYSEC-2026-4343"
+          ]
+        },
+        {
+          "package": "setuptools",
+          "version": "83.0.0",
+          "query": {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "setuptools"
+            },
+            "version": "83.0.0"
+          },
+          "vulnerability_ids": [
+            "GHSA-xmj3-9gf7-h52w"
+          ]
+        },
+        {
+          "package": "chromadb",
+          "version": "1.5.9",
+          "query": {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "chromadb"
+            },
+            "version": "1.5.9"
+          },
+          "vulnerability_ids": [
+            "GHSA-2wm9-hf6c-p5cr",
+            "GHSA-36p7-vc44-83pf",
+            "GHSA-f4j7-r4q5-qw2c",
+            "GHSA-xph7-9rjv-w5fr",
+            "PYSEC-2026-311",
+            "PYSEC-2026-3813",
+            "PYSEC-2026-3814",
+            "PYSEC-2026-3815"
+          ]
+        },
+        {
+          "package": "filelock",
+          "version": "3.32.0",
+          "query": {
+            "package": {
+              "ecosystem": "PyPI",
+              "name": "filelock"
+            },
+            "version": "3.32.0"
+          },
+          "vulnerability_ids": [
+            "GHSA-567q-5qvw-pf92",
+            "GHSA-6627-m3xw-93mp",
+            "GHSA-69hj-f68j-2879",
+            "GHSA-8mx5-7m5m-r77g",
+            "GHSA-9c4x-gm8v-wgc4",
+            "GHSA-9vhv-jxww-xfm5",
+            "GHSA-cwqr-hh33-gh44",
+            "GHSA-fq56-3cx3-fjxp",
+            "GHSA-j8f7-rjxc-mr56",
+            "GHSA-m462-7rxw-wvpg",
+            "GHSA-rfpc-qcw5-3pc4",
+            "GHSA-v4x8-3wr5-3wq8"
+          ]
+        }
+      ]
+    },
+    "web": {
+      "image_id": "sha256:7d7a54dd6c684b161a122c17d245d458a3c744cb389833e555dea571baae73f6",
+      "inventory_packages": 71,
+      "unknown_packages": 0,
+      "matched_binary_or_python_packages": 0,
+      "observed_unique_advisory_ids": 0,
+      "detail_unknown": 0,
+      "upstream_severity_labels": {},
+      "findings": []
+    },
+    "postgres": {
+      "image_id": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c",
+      "inventory_packages": 142,
+      "unknown_packages": 0,
+      "matched_binary_or_python_packages": 63,
+      "observed_unique_advisory_ids": 130,
+      "detail_unknown": 0,
+      "upstream_severity_labels": {
+        "unknown": 130
+      },
+      "findings": [
+        {
+          "package": "apt",
+          "version": "3.0.3",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "apt"
+            },
+            "version": "3.0.3"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2011-3374"
+          ]
+        },
+        {
+          "package": "bsdutils",
+          "version": "1:2.41.5-0+deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "util-linux"
+            },
+            "version": "2.41.5-0+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-0563",
+            "DEBIAN-CVE-2026-3184",
+            "DEBIAN-CVE-2026-76642",
+            "DEBIAN-CVE-2026-78408",
+            "DEBIAN-CVE-2026-78409",
+            "DEBIAN-CVE-2026-78410"
+          ]
+        },
+        {
+          "package": "coreutils",
+          "version": "9.7-3",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "coreutils"
+            },
+            "version": "9.7-3"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2017-18018",
+            "DEBIAN-CVE-2025-5278",
+            "DEBIAN-CVE-2026-56391",
+            "DEBIAN-CVE-2026-56392"
+          ]
+        },
+        {
+          "package": "dash",
+          "version": "0.5.12-12",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "dash"
+            },
+            "version": "0.5.12-12"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-102473",
+            "DEBIAN-CVE-2026-102474"
+          ]
+        },
+        {
+          "package": "diffutils",
+          "version": "1:3.10-4",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "diffutils"
+            },
+            "version": "1:3.10-4"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-53910"
+          ]
+        },
+        {
+          "package": "dirmngr",
+          "version": "2.4.7-21+deb13u1+b5",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "gnupg2"
+            },
+            "version": "2.4.7-21+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-3219",
+            "DEBIAN-CVE-2025-68972",
+            "DEBIAN-CVE-2026-105712",
+            "DEBIAN-CVE-2026-24882",
+            "DEBIAN-CVE-2026-57062"
+          ]
+        },
+        {
+          "package": "gcc-14-base",
+          "version": "14.2.0-19",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "gcc-14"
+            },
+            "version": "14.2.0-19"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-102010",
+            "DEBIAN-CVE-2026-114690",
+            "DEBIAN-CVE-2026-114691",
+            "DEBIAN-CVE-2026-115455",
+            "DEBIAN-CVE-2026-95619"
+          ]
+        },
+        {
+          "package": "gnupg",
+          "version": "2.4.7-21+deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "gnupg2"
+            },
+            "version": "2.4.7-21+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-3219",
+            "DEBIAN-CVE-2025-68972",
+            "DEBIAN-CVE-2026-105712",
+            "DEBIAN-CVE-2026-24882",
+            "DEBIAN-CVE-2026-57062"
+          ]
+        },
+        {
+          "package": "gnupg-l10n",
+          "version": "2.4.7-21+deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "gnupg2"
+            },
+            "version": "2.4.7-21+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-3219",
+            "DEBIAN-CVE-2025-68972",
+            "DEBIAN-CVE-2026-105712",
+            "DEBIAN-CVE-2026-24882",
+            "DEBIAN-CVE-2026-57062"
+          ]
+        },
+        {
+          "package": "gpg",
+          "version": "2.4.7-21+deb13u1+b5",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "gnupg2"
+            },
+            "version": "2.4.7-21+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-3219",
+            "DEBIAN-CVE-2025-68972",
+            "DEBIAN-CVE-2026-105712",
+            "DEBIAN-CVE-2026-24882",
+            "DEBIAN-CVE-2026-57062"
+          ]
+        },
+        {
+          "package": "gpg-agent",
+          "version": "2.4.7-21+deb13u1+b5",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "gnupg2"
+            },
+            "version": "2.4.7-21+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-3219",
+            "DEBIAN-CVE-2025-68972",
+            "DEBIAN-CVE-2026-105712",
+            "DEBIAN-CVE-2026-24882",
+            "DEBIAN-CVE-2026-57062"
+          ]
+        },
+        {
+          "package": "gpgconf",
+          "version": "2.4.7-21+deb13u1+b5",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "gnupg2"
+            },
+            "version": "2.4.7-21+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-3219",
+            "DEBIAN-CVE-2025-68972",
+            "DEBIAN-CVE-2026-105712",
+            "DEBIAN-CVE-2026-24882",
+            "DEBIAN-CVE-2026-57062"
+          ]
+        },
+        {
+          "package": "gpgsm",
+          "version": "2.4.7-21+deb13u1+b5",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "gnupg2"
+            },
+            "version": "2.4.7-21+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-3219",
+            "DEBIAN-CVE-2025-68972",
+            "DEBIAN-CVE-2026-105712",
+            "DEBIAN-CVE-2026-24882",
+            "DEBIAN-CVE-2026-57062"
+          ]
+        },
+        {
+          "package": "libacl1",
+          "version": "2.3.2-2+b1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "acl"
+            },
+            "version": "2.3.2-2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-54369",
+            "DEBIAN-CVE-2026-54370"
+          ]
+        },
+        {
+          "package": "libapt-pkg7.0",
+          "version": "3.0.3",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "apt"
+            },
+            "version": "3.0.3"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2011-3374"
+          ]
+        },
+        {
+          "package": "libattr1",
+          "version": "1:2.5.2-3",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "attr"
+            },
+            "version": "1:2.5.2-3"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-54371"
+          ]
+        },
+        {
+          "package": "libblkid1",
+          "version": "2.41.5-0+deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "util-linux"
+            },
+            "version": "2.41.5-0+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-0563",
+            "DEBIAN-CVE-2026-3184",
+            "DEBIAN-CVE-2026-76642",
+            "DEBIAN-CVE-2026-78408",
+            "DEBIAN-CVE-2026-78409",
+            "DEBIAN-CVE-2026-78410"
+          ]
+        },
+        {
+          "package": "libbz2-1.0",
+          "version": "1.0.8-6",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "bzip2"
+            },
+            "version": "1.0.8-6"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-42250"
+          ]
+        },
+        {
+          "package": "libc-bin",
+          "version": "2.41-12+deb13u4",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "glibc"
+            },
+            "version": "2.41-12+deb13u4"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2010-4756",
+            "DEBIAN-CVE-2018-20796",
+            "DEBIAN-CVE-2019-1010022",
+            "DEBIAN-CVE-2019-1010023",
+            "DEBIAN-CVE-2019-1010024",
+            "DEBIAN-CVE-2019-1010025",
+            "DEBIAN-CVE-2019-9192",
+            "DEBIAN-CVE-2026-18374",
+            "DEBIAN-CVE-2026-19499",
+            "DEBIAN-CVE-2026-19542",
+            "DEBIAN-CVE-2026-5435",
+            "DEBIAN-CVE-2026-6238",
+            "DEBIAN-CVE-2026-6368",
+            "DEBIAN-CVE-2026-6791",
+            "DEBIAN-CVE-2026-77117",
+            "DEBIAN-CVE-2026-80489",
+            "DEBIAN-CVE-2026-84243",
+            "DEBIAN-CVE-2026-8674",
+            "DEBIAN-CVE-2026-86805",
+            "DEBIAN-CVE-2026-89092",
+            "DEBIAN-CVE-2026-95818",
+            "DEBIAN-CVE-2026-97399"
+          ]
+        },
+        {
+          "package": "libc-l10n",
+          "version": "2.41-12+deb13u4",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "glibc"
+            },
+            "version": "2.41-12+deb13u4"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2010-4756",
+            "DEBIAN-CVE-2018-20796",
+            "DEBIAN-CVE-2019-1010022",
+            "DEBIAN-CVE-2019-1010023",
+            "DEBIAN-CVE-2019-1010024",
+            "DEBIAN-CVE-2019-1010025",
+            "DEBIAN-CVE-2019-9192",
+            "DEBIAN-CVE-2026-18374",
+            "DEBIAN-CVE-2026-19499",
+            "DEBIAN-CVE-2026-19542",
+            "DEBIAN-CVE-2026-5435",
+            "DEBIAN-CVE-2026-6238",
+            "DEBIAN-CVE-2026-6368",
+            "DEBIAN-CVE-2026-6791",
+            "DEBIAN-CVE-2026-77117",
+            "DEBIAN-CVE-2026-80489",
+            "DEBIAN-CVE-2026-84243",
+            "DEBIAN-CVE-2026-8674",
+            "DEBIAN-CVE-2026-86805",
+            "DEBIAN-CVE-2026-89092",
+            "DEBIAN-CVE-2026-95818",
+            "DEBIAN-CVE-2026-97399"
+          ]
+        },
+        {
+          "package": "libc6",
+          "version": "2.41-12+deb13u4",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "glibc"
+            },
+            "version": "2.41-12+deb13u4"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2010-4756",
+            "DEBIAN-CVE-2018-20796",
+            "DEBIAN-CVE-2019-1010022",
+            "DEBIAN-CVE-2019-1010023",
+            "DEBIAN-CVE-2019-1010024",
+            "DEBIAN-CVE-2019-1010025",
+            "DEBIAN-CVE-2019-9192",
+            "DEBIAN-CVE-2026-18374",
+            "DEBIAN-CVE-2026-19499",
+            "DEBIAN-CVE-2026-19542",
+            "DEBIAN-CVE-2026-5435",
+            "DEBIAN-CVE-2026-6238",
+            "DEBIAN-CVE-2026-6368",
+            "DEBIAN-CVE-2026-6791",
+            "DEBIAN-CVE-2026-77117",
+            "DEBIAN-CVE-2026-80489",
+            "DEBIAN-CVE-2026-84243",
+            "DEBIAN-CVE-2026-8674",
+            "DEBIAN-CVE-2026-86805",
+            "DEBIAN-CVE-2026-89092",
+            "DEBIAN-CVE-2026-95818",
+            "DEBIAN-CVE-2026-97399"
+          ]
+        },
+        {
+          "package": "libgcc-s1",
+          "version": "14.2.0-19",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "gcc-14"
+            },
+            "version": "14.2.0-19"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-102010",
+            "DEBIAN-CVE-2026-114690",
+            "DEBIAN-CVE-2026-114691",
+            "DEBIAN-CVE-2026-115455",
+            "DEBIAN-CVE-2026-95619"
+          ]
+        },
+        {
+          "package": "libgcrypt20",
+          "version": "1.11.0-7+deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "libgcrypt20"
+            },
+            "version": "1.11.0-7+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2018-6829",
+            "DEBIAN-CVE-2024-2236"
+          ]
+        },
+        {
+          "package": "libgnutls30t64",
+          "version": "3.8.9-3+deb13u4",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "gnutls28"
+            },
+            "version": "3.8.9-3+deb13u4"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2011-3389",
+            "DEBIAN-CVE-2026-67693",
+            "DEBIAN-CVE-2026-88647",
+            "DEBIAN-CVE-2026-88648",
+            "DEBIAN-CVE-2026-95184",
+            "DEBIAN-CVE-2026-95209",
+            "DEBIAN-CVE-2026-95210"
+          ]
+        },
+        {
+          "package": "libgssapi-krb5-2",
+          "version": "1.21.3-5+deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "krb5"
+            },
+            "version": "1.21.3-5+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2018-5709",
+            "DEBIAN-CVE-2024-26458",
+            "DEBIAN-CVE-2024-26461",
+            "DEBIAN-CVE-2026-107708",
+            "DEBIAN-CVE-2026-107778",
+            "DEBIAN-CVE-2026-11850"
+          ]
+        },
+        {
+          "package": "libk5crypto3",
+          "version": "1.21.3-5+deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "krb5"
+            },
+            "version": "1.21.3-5+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2018-5709",
+            "DEBIAN-CVE-2024-26458",
+            "DEBIAN-CVE-2024-26461",
+            "DEBIAN-CVE-2026-107708",
+            "DEBIAN-CVE-2026-107778",
+            "DEBIAN-CVE-2026-11850"
+          ]
+        },
+        {
+          "package": "libkrb5-3",
+          "version": "1.21.3-5+deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "krb5"
+            },
+            "version": "1.21.3-5+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2018-5709",
+            "DEBIAN-CVE-2024-26458",
+            "DEBIAN-CVE-2024-26461",
+            "DEBIAN-CVE-2026-107708",
+            "DEBIAN-CVE-2026-107778",
+            "DEBIAN-CVE-2026-11850"
+          ]
+        },
+        {
+          "package": "libkrb5support0",
+          "version": "1.21.3-5+deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "krb5"
+            },
+            "version": "1.21.3-5+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2018-5709",
+            "DEBIAN-CVE-2024-26458",
+            "DEBIAN-CVE-2024-26461",
+            "DEBIAN-CVE-2026-107708",
+            "DEBIAN-CVE-2026-107778",
+            "DEBIAN-CVE-2026-11850"
+          ]
+        },
+        {
+          "package": "liblastlog2-2",
+          "version": "2.41.5-0+deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "util-linux"
+            },
+            "version": "2.41.5-0+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-0563",
+            "DEBIAN-CVE-2026-3184",
+            "DEBIAN-CVE-2026-76642",
+            "DEBIAN-CVE-2026-78408",
+            "DEBIAN-CVE-2026-78409",
+            "DEBIAN-CVE-2026-78410"
+          ]
+        },
+        {
+          "package": "libldap2",
+          "version": "2.6.10+dfsg-1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "openldap"
+            },
+            "version": "2.6.10+dfsg-1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2015-3276",
+            "DEBIAN-CVE-2017-14159",
+            "DEBIAN-CVE-2017-17740",
+            "DEBIAN-CVE-2020-15719",
+            "DEBIAN-CVE-2026-22185"
+          ]
+        },
+        {
+          "package": "libllvm19",
+          "version": "1:19.1.7-3+b1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "llvm-toolchain-19"
+            },
+            "version": "1:19.1.7-3"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2024-7883",
+            "DEBIAN-CVE-2026-13573",
+            "DEBIAN-CVE-2026-13574"
+          ]
+        },
+        {
+          "package": "libmount1",
+          "version": "2.41.5-0+deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "util-linux"
+            },
+            "version": "2.41.5-0+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-0563",
+            "DEBIAN-CVE-2026-3184",
+            "DEBIAN-CVE-2026-76642",
+            "DEBIAN-CVE-2026-78408",
+            "DEBIAN-CVE-2026-78409",
+            "DEBIAN-CVE-2026-78410"
+          ]
+        },
+        {
+          "package": "libncursesw6",
+          "version": "6.5+20250216-2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "ncurses"
+            },
+            "version": "6.5+20250216-2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2025-6141",
+            "DEBIAN-CVE-2025-69720"
+          ]
+        },
+        {
+          "package": "libp11-kit0",
+          "version": "0.25.5-3",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "p11-kit"
+            },
+            "version": "0.25.5-3"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-13757",
+            "DEBIAN-CVE-2026-18938"
+          ]
+        },
+        {
+          "package": "libpam-modules",
+          "version": "1.7.0-5",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "pam"
+            },
+            "version": "1.7.0-5"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2025-8941",
+            "DEBIAN-CVE-2026-54411"
+          ]
+        },
+        {
+          "package": "libpam-modules-bin",
+          "version": "1.7.0-5",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "pam"
+            },
+            "version": "1.7.0-5"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2025-8941",
+            "DEBIAN-CVE-2026-54411"
+          ]
+        },
+        {
+          "package": "libpam-runtime",
+          "version": "1.7.0-5",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "pam"
+            },
+            "version": "1.7.0-5"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2025-8941",
+            "DEBIAN-CVE-2026-54411"
+          ]
+        },
+        {
+          "package": "libpam0g",
+          "version": "1.7.0-5",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "pam"
+            },
+            "version": "1.7.0-5"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2025-8941",
+            "DEBIAN-CVE-2026-54411"
+          ]
+        },
+        {
+          "package": "libperl5.40",
+          "version": "5.40.1-6+deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "perl"
+            },
+            "version": "5.40.1-6+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2011-4116",
+            "DEBIAN-CVE-2026-15534",
+            "DEBIAN-CVE-2026-82560",
+            "DEBIAN-CVE-2026-9538"
+          ]
+        },
+        {
+          "package": "libsasl2-2",
+          "version": "2.1.28+dfsg1-9",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "cyrus-sasl2"
+            },
+            "version": "2.1.28+dfsg1-9"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-107161"
+          ]
+        },
+        {
+          "package": "libsasl2-modules-db",
+          "version": "2.1.28+dfsg1-9",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "cyrus-sasl2"
+            },
+            "version": "2.1.28+dfsg1-9"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-107161"
+          ]
+        },
+        {
+          "package": "libsmartcols1",
+          "version": "2.41.5-0+deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "util-linux"
+            },
+            "version": "2.41.5-0+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-0563",
+            "DEBIAN-CVE-2026-3184",
+            "DEBIAN-CVE-2026-76642",
+            "DEBIAN-CVE-2026-78408",
+            "DEBIAN-CVE-2026-78409",
+            "DEBIAN-CVE-2026-78410"
+          ]
+        },
+        {
+          "package": "libsqlite3-0",
+          "version": "3.46.1-7+deb13u2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "sqlite3"
+            },
+            "version": "3.46.1-7+deb13u2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2021-45346",
+            "DEBIAN-CVE-2025-70873",
+            "DEBIAN-CVE-2026-119371",
+            "DEBIAN-CVE-2026-119372",
+            "DEBIAN-CVE-2026-119373",
+            "DEBIAN-CVE-2026-119374",
+            "DEBIAN-CVE-2026-119375",
+            "DEBIAN-CVE-2026-119376",
+            "DEBIAN-CVE-2026-119377",
+            "DEBIAN-CVE-2026-119378",
+            "DEBIAN-CVE-2026-119379",
+            "DEBIAN-CVE-2026-119586",
+            "DEBIAN-CVE-2026-119591",
+            "DEBIAN-CVE-2026-39113",
+            "DEBIAN-CVE-2026-50812",
+            "DEBIAN-CVE-2026-50813"
+          ]
+        },
+        {
+          "package": "libstdc++6",
+          "version": "14.2.0-19",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "gcc-14"
+            },
+            "version": "14.2.0-19"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-102010",
+            "DEBIAN-CVE-2026-114690",
+            "DEBIAN-CVE-2026-114691",
+            "DEBIAN-CVE-2026-115455",
+            "DEBIAN-CVE-2026-95619"
+          ]
+        },
+        {
+          "package": "libsystemd0",
+          "version": "257.13-1~deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "systemd"
+            },
+            "version": "257.13-1~deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2013-4392",
+            "DEBIAN-CVE-2023-31437",
+            "DEBIAN-CVE-2023-31438",
+            "DEBIAN-CVE-2023-31439",
+            "DEBIAN-CVE-2026-15059",
+            "DEBIAN-CVE-2026-16742",
+            "DEBIAN-CVE-2026-40228"
+          ]
+        },
+        {
+          "package": "libtinfo6",
+          "version": "6.5+20250216-2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "ncurses"
+            },
+            "version": "6.5+20250216-2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2025-6141",
+            "DEBIAN-CVE-2025-69720"
+          ]
+        },
+        {
+          "package": "libudev1",
+          "version": "257.13-1~deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "systemd"
+            },
+            "version": "257.13-1~deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2013-4392",
+            "DEBIAN-CVE-2023-31437",
+            "DEBIAN-CVE-2023-31438",
+            "DEBIAN-CVE-2023-31439",
+            "DEBIAN-CVE-2026-15059",
+            "DEBIAN-CVE-2026-16742",
+            "DEBIAN-CVE-2026-40228"
+          ]
+        },
+        {
+          "package": "libuuid1",
+          "version": "2.41.5-0+deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "util-linux"
+            },
+            "version": "2.41.5-0+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-0563",
+            "DEBIAN-CVE-2026-3184",
+            "DEBIAN-CVE-2026-76642",
+            "DEBIAN-CVE-2026-78408",
+            "DEBIAN-CVE-2026-78409",
+            "DEBIAN-CVE-2026-78410"
+          ]
+        },
+        {
+          "package": "libxml2",
+          "version": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "libxml2"
+            },
+            "version": "2.12.7+dfsg+really2.9.14-2.1+deb13u3"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-11979",
+            "DEBIAN-CVE-2026-6653",
+            "DEBIAN-CVE-2026-74860",
+            "DEBIAN-CVE-2026-76781",
+            "DEBIAN-CVE-2026-86137",
+            "DEBIAN-CVE-2026-86138",
+            "DEBIAN-CVE-2026-86139",
+            "DEBIAN-CVE-2026-86140",
+            "DEBIAN-CVE-2026-86141",
+            "DEBIAN-CVE-2026-86142",
+            "DEBIAN-CVE-2026-86143",
+            "DEBIAN-CVE-2026-86144"
+          ]
+        },
+        {
+          "package": "libxslt1.1",
+          "version": "1.1.35-1.2+deb13u3",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "libxslt"
+            },
+            "version": "1.1.35-1.2+deb13u3"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2015-9019",
+            "DEBIAN-CVE-2025-10911",
+            "DEBIAN-CVE-2025-11731"
+          ]
+        },
+        {
+          "package": "locales",
+          "version": "2.41-12+deb13u4",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "glibc"
+            },
+            "version": "2.41-12+deb13u4"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2010-4756",
+            "DEBIAN-CVE-2018-20796",
+            "DEBIAN-CVE-2019-1010022",
+            "DEBIAN-CVE-2019-1010023",
+            "DEBIAN-CVE-2019-1010024",
+            "DEBIAN-CVE-2019-1010025",
+            "DEBIAN-CVE-2019-9192",
+            "DEBIAN-CVE-2026-18374",
+            "DEBIAN-CVE-2026-19499",
+            "DEBIAN-CVE-2026-19542",
+            "DEBIAN-CVE-2026-5435",
+            "DEBIAN-CVE-2026-6238",
+            "DEBIAN-CVE-2026-6368",
+            "DEBIAN-CVE-2026-6791",
+            "DEBIAN-CVE-2026-77117",
+            "DEBIAN-CVE-2026-80489",
+            "DEBIAN-CVE-2026-84243",
+            "DEBIAN-CVE-2026-8674",
+            "DEBIAN-CVE-2026-86805",
+            "DEBIAN-CVE-2026-89092",
+            "DEBIAN-CVE-2026-95818",
+            "DEBIAN-CVE-2026-97399"
+          ]
+        },
+        {
+          "package": "login",
+          "version": "1:4.16.0-2+really2.41.5-0+deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "util-linux"
+            },
+            "version": "2.41.5-0+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-0563",
+            "DEBIAN-CVE-2026-3184",
+            "DEBIAN-CVE-2026-76642",
+            "DEBIAN-CVE-2026-78408",
+            "DEBIAN-CVE-2026-78409",
+            "DEBIAN-CVE-2026-78410"
+          ]
+        },
+        {
+          "package": "login.defs",
+          "version": "1:4.17.4-2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "shadow"
+            },
+            "version": "1:4.17.4-2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2007-5686",
+            "DEBIAN-CVE-2024-56433"
+          ]
+        },
+        {
+          "package": "mount",
+          "version": "2.41.5-0+deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "util-linux"
+            },
+            "version": "2.41.5-0+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-0563",
+            "DEBIAN-CVE-2026-3184",
+            "DEBIAN-CVE-2026-76642",
+            "DEBIAN-CVE-2026-78408",
+            "DEBIAN-CVE-2026-78409",
+            "DEBIAN-CVE-2026-78410"
+          ]
+        },
+        {
+          "package": "ncurses-base",
+          "version": "6.5+20250216-2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "ncurses"
+            },
+            "version": "6.5+20250216-2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2025-6141",
+            "DEBIAN-CVE-2025-69720"
+          ]
+        },
+        {
+          "package": "ncurses-bin",
+          "version": "6.5+20250216-2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "ncurses"
+            },
+            "version": "6.5+20250216-2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2025-6141",
+            "DEBIAN-CVE-2025-69720"
+          ]
+        },
+        {
+          "package": "passwd",
+          "version": "1:4.17.4-2",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "shadow"
+            },
+            "version": "1:4.17.4-2"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2007-5686",
+            "DEBIAN-CVE-2024-56433"
+          ]
+        },
+        {
+          "package": "perl",
+          "version": "5.40.1-6+deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "perl"
+            },
+            "version": "5.40.1-6+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2011-4116",
+            "DEBIAN-CVE-2026-15534",
+            "DEBIAN-CVE-2026-82560",
+            "DEBIAN-CVE-2026-9538"
+          ]
+        },
+        {
+          "package": "perl-base",
+          "version": "5.40.1-6+deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "perl"
+            },
+            "version": "5.40.1-6+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2011-4116",
+            "DEBIAN-CVE-2026-15534",
+            "DEBIAN-CVE-2026-82560",
+            "DEBIAN-CVE-2026-9538"
+          ]
+        },
+        {
+          "package": "perl-modules-5.40",
+          "version": "5.40.1-6+deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "perl"
+            },
+            "version": "5.40.1-6+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2011-4116",
+            "DEBIAN-CVE-2026-15534",
+            "DEBIAN-CVE-2026-82560",
+            "DEBIAN-CVE-2026-9538"
+          ]
+        },
+        {
+          "package": "tar",
+          "version": "1.35+dfsg-3.1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "tar"
+            },
+            "version": "1.35+dfsg-3.1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2005-2541",
+            "DEBIAN-CVE-2026-18477",
+            "DEBIAN-CVE-2026-18508",
+            "DEBIAN-CVE-2026-5704"
+          ]
+        },
+        {
+          "package": "util-linux",
+          "version": "2.41.5-0+deb13u1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "util-linux"
+            },
+            "version": "2.41.5-0+deb13u1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2022-0563",
+            "DEBIAN-CVE-2026-3184",
+            "DEBIAN-CVE-2026-76642",
+            "DEBIAN-CVE-2026-78408",
+            "DEBIAN-CVE-2026-78409",
+            "DEBIAN-CVE-2026-78410"
+          ]
+        },
+        {
+          "package": "zlib1g",
+          "version": "1:1.3.dfsg+really1.3.1-1+b1",
+          "query": {
+            "package": {
+              "ecosystem": "Debian:13",
+              "name": "zlib"
+            },
+            "version": "1:1.3.dfsg+really1.3.1-1"
+          },
+          "vulnerability_ids": [
+            "DEBIAN-CVE-2026-27171",
+            "DEBIAN-CVE-2026-85091"
+          ]
+        }
+      ]
+    }
+  },
+  "unique_queries": 797,
+  "observed_unique_advisory_ids": 236,
+  "mapping_unknown": 227,
+  "query_unknown": 0,
+  "detail_unknown": 0,
+  "ended_at": "2026-11-03T06:23:12.877773+00:00",
+  "commands": [
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"os\":{{json .Os}},\"architecture\":{{json .Architecture}},\"size\":{{.Size}},\"repo_digests\":{{json .RepoDigests}}}",
+        "sha256:dac5965a840be8d2da28d1bb3e2098b42ea4fe9aeefa010357344f0a43166e10"
+      ],
+      "started_at": "2026-11-03T06:22:59.442673+00:00",
+      "ended_at": "2026-11-03T06:22:59.483767+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "9c0b357bf387696e30f3651d842f3305916253a775d316a44a908dee3e21464c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "512m",
+        "--entrypoint",
+        "sh",
+        "sha256:dac5965a840be8d2da28d1bb3e2098b42ea4fe9aeefa010357344f0a43166e10",
+        "-c",
+        "\nprintf '===os-release===\\n'\nif [ -r /etc/os-release ]; then cat /etc/os-release; fi\nprintf '\\n===apk===\\n'\nif [ -r /lib/apk/db/installed ]; then cat /lib/apk/db/installed; fi\nprintf '\\n===dpkg===\\n'\nif command -v dpkg-query >/dev/null 2>&1; then\n dpkg_fmt='${binary:Package}\\t${Version}\\t${Architecture}'\n dpkg_fmt=\"$dpkg_fmt\"'\\t${source:Package}\\t${source:Version}\\n'\n dpkg-query -W -f=\"$dpkg_fmt\"\nfi\nprintf '\\n===dpkg-licenses===\\n'\nfor copyright_path in /usr/share/doc/*/copyright; do\n [ -r \"$copyright_path\" ] || continue\n package_path=${copyright_path%/copyright}\n printf '%s\\t' \"${package_path##*/}\"\n awk '/^License:/ {gsub(/\\t/, \" \"); printf \"%s;\", $0}' \"$copyright_path\"\n printf '\\n'\ndone\nprintf '\\n===rpm===\\n'\nif command -v rpm >/dev/null 2>&1; then\n rpm -qa --qf '%{NAME}\\t%{VERSION}-%{RELEASE}\\t%{ARCH}\\t%{LICENSE}\\n'\nfi\n"
+      ],
+      "started_at": "2026-11-03T06:22:59.483808+00:00",
+      "ended_at": "2026-11-03T06:22:59.707136+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "91bcba6df860dbfe1b30c8b29427c9e389ccdc080afabbf30020f0f4c895efa5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "512m",
+        "--entrypoint",
+        "sh",
+        "sha256:dac5965a840be8d2da28d1bb3e2098b42ea4fe9aeefa010357344f0a43166e10",
+        "-c",
+        "if command -v python >/dev/null 2>&1; then exec python -c \"$1\"; elif command -v python3 >/dev/null 2>&1; then exec python3 -c \"$1\"; else printf '%s\\n' '{\"packages\": [], \"interpreter\": null}'; fi",
+        "arc-inventory",
+        "\nimport importlib.metadata as m, json, sys\npackages=[]\nfor d in m.distributions():\n    h=d.metadata\n    packages.append({\"name\":h.get(\"Name\",\"\"), \"version\":d.version,\n        \"license_expression\":h.get(\"License-Expression\",\"\"),\n        \"license\":h.get(\"License\",\"\")[:4096],\n        \"classifiers\":h.get_all(\"Classifier\") or [],\n        \"location\":str(d._path)})\nprint(json.dumps({\"interpreter\":sys.executable,\"python_version\":sys.version,\n    \"packages\":packages},sort_keys=True))\n"
+      ],
+      "started_at": "2026-11-03T06:22:59.709127+00:00",
+      "ended_at": "2026-11-03T06:23:00.177867+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "3231e20ce98c03f1a3c4c93a517084c92b677194035fb5f3df965fe8d305bc8c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"os\":{{json .Os}},\"architecture\":{{json .Architecture}},\"size\":{{.Size}},\"repo_digests\":{{json .RepoDigests}}}",
+        "sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f"
+      ],
+      "started_at": "2026-11-03T06:23:00.189159+00:00",
+      "ended_at": "2026-11-03T06:23:00.241914+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "db279286d26893cb9d7b334ec3c7b02659b90a54309bf07d6d414fe6165e41ab",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "512m",
+        "--entrypoint",
+        "sh",
+        "sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+        "-c",
+        "\nprintf '===os-release===\\n'\nif [ -r /etc/os-release ]; then cat /etc/os-release; fi\nprintf '\\n===apk===\\n'\nif [ -r /lib/apk/db/installed ]; then cat /lib/apk/db/installed; fi\nprintf '\\n===dpkg===\\n'\nif command -v dpkg-query >/dev/null 2>&1; then\n dpkg_fmt='${binary:Package}\\t${Version}\\t${Architecture}'\n dpkg_fmt=\"$dpkg_fmt\"'\\t${source:Package}\\t${source:Version}\\n'\n dpkg-query -W -f=\"$dpkg_fmt\"\nfi\nprintf '\\n===dpkg-licenses===\\n'\nfor copyright_path in /usr/share/doc/*/copyright; do\n [ -r \"$copyright_path\" ] || continue\n package_path=${copyright_path%/copyright}\n printf '%s\\t' \"${package_path##*/}\"\n awk '/^License:/ {gsub(/\\t/, \" \"); printf \"%s;\", $0}' \"$copyright_path\"\n printf '\\n'\ndone\nprintf '\\n===rpm===\\n'\nif command -v rpm >/dev/null 2>&1; then\n rpm -qa --qf '%{NAME}\\t%{VERSION}-%{RELEASE}\\t%{ARCH}\\t%{LICENSE}\\n'\nfi\n"
+      ],
+      "started_at": "2026-11-03T06:23:00.241951+00:00",
+      "ended_at": "2026-11-03T06:23:00.574849+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "0e78242e0a61e33e9f18e927f01e1eb6e67495390f21cc272b4ebd732939dc6d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "512m",
+        "--entrypoint",
+        "sh",
+        "sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+        "-c",
+        "if command -v python >/dev/null 2>&1; then exec python -c \"$1\"; elif command -v python3 >/dev/null 2>&1; then exec python3 -c \"$1\"; else printf '%s\\n' '{\"packages\": [], \"interpreter\": null}'; fi",
+        "arc-inventory",
+        "\nimport importlib.metadata as m, json, sys\npackages=[]\nfor d in m.distributions():\n    h=d.metadata\n    packages.append({\"name\":h.get(\"Name\",\"\"), \"version\":d.version,\n        \"license_expression\":h.get(\"License-Expression\",\"\"),\n        \"license\":h.get(\"License\",\"\")[:4096],\n        \"classifiers\":h.get_all(\"Classifier\") or [],\n        \"location\":str(d._path)})\nprint(json.dumps({\"interpreter\":sys.executable,\"python_version\":sys.version,\n    \"packages\":packages},sort_keys=True))\n"
+      ],
+      "started_at": "2026-11-03T06:23:00.575579+00:00",
+      "ended_at": "2026-11-03T06:23:01.346306+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "5c6e53da4efe5bb4dcd5f9cda5054fe05102a717361b82cb65801a8b7f3a6c97",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"os\":{{json .Os}},\"architecture\":{{json .Architecture}},\"size\":{{.Size}},\"repo_digests\":{{json .RepoDigests}}}",
+        "sha256:7d7a54dd6c684b161a122c17d245d458a3c744cb389833e555dea571baae73f6"
+      ],
+      "started_at": "2026-11-03T06:23:02.490770+00:00",
+      "ended_at": "2026-11-03T06:23:02.529985+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "2163620d74a06a5f0ebf6c3e0cf0933c5160d2f842056ac1be1f098ba004008f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "512m",
+        "--entrypoint",
+        "sh",
+        "sha256:7d7a54dd6c684b161a122c17d245d458a3c744cb389833e555dea571baae73f6",
+        "-c",
+        "\nprintf '===os-release===\\n'\nif [ -r /etc/os-release ]; then cat /etc/os-release; fi\nprintf '\\n===apk===\\n'\nif [ -r /lib/apk/db/installed ]; then cat /lib/apk/db/installed; fi\nprintf '\\n===dpkg===\\n'\nif command -v dpkg-query >/dev/null 2>&1; then\n dpkg_fmt='${binary:Package}\\t${Version}\\t${Architecture}'\n dpkg_fmt=\"$dpkg_fmt\"'\\t${source:Package}\\t${source:Version}\\n'\n dpkg-query -W -f=\"$dpkg_fmt\"\nfi\nprintf '\\n===dpkg-licenses===\\n'\nfor copyright_path in /usr/share/doc/*/copyright; do\n [ -r \"$copyright_path\" ] || continue\n package_path=${copyright_path%/copyright}\n printf '%s\\t' \"${package_path##*/}\"\n awk '/^License:/ {gsub(/\\t/, \" \"); printf \"%s;\", $0}' \"$copyright_path\"\n printf '\\n'\ndone\nprintf '\\n===rpm===\\n'\nif command -v rpm >/dev/null 2>&1; then\n rpm -qa --qf '%{NAME}\\t%{VERSION}-%{RELEASE}\\t%{ARCH}\\t%{LICENSE}\\n'\nfi\n"
+      ],
+      "started_at": "2026-11-03T06:23:02.530019+00:00",
+      "ended_at": "2026-11-03T06:23:02.687479+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "02642508a76aa6df267c6ee9c567939d7080134250a5c61f31327c7c77475d30",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "512m",
+        "--entrypoint",
+        "sh",
+        "sha256:7d7a54dd6c684b161a122c17d245d458a3c744cb389833e555dea571baae73f6",
+        "-c",
+        "if command -v python >/dev/null 2>&1; then exec python -c \"$1\"; elif command -v python3 >/dev/null 2>&1; then exec python3 -c \"$1\"; else printf '%s\\n' '{\"packages\": [], \"interpreter\": null}'; fi",
+        "arc-inventory",
+        "\nimport importlib.metadata as m, json, sys\npackages=[]\nfor d in m.distributions():\n    h=d.metadata\n    packages.append({\"name\":h.get(\"Name\",\"\"), \"version\":d.version,\n        \"license_expression\":h.get(\"License-Expression\",\"\"),\n        \"license\":h.get(\"License\",\"\")[:4096],\n        \"classifiers\":h.get_all(\"Classifier\") or [],\n        \"location\":str(d._path)})\nprint(json.dumps({\"interpreter\":sys.executable,\"python_version\":sys.version,\n    \"packages\":packages},sort_keys=True))\n"
+      ],
+      "started_at": "2026-11-03T06:23:02.691434+00:00",
+      "ended_at": "2026-11-03T06:23:02.839111+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "1030eb169431c4058cc0a7e032ca2c5cd75534d69d00e58d607fea877b0bc720",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"os\":{{json .Os}},\"architecture\":{{json .Architecture}},\"size\":{{.Size}},\"repo_digests\":{{json .RepoDigests}}}",
+        "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+      ],
+      "started_at": "2026-11-03T06:23:02.843453+00:00",
+      "ended_at": "2026-11-03T06:23:02.895957+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "63ed038d6fb37749154bf286cf176765984c12cdb5359ce89128eb54c672a3c6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "512m",
+        "--entrypoint",
+        "sh",
+        "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c",
+        "-c",
+        "\nprintf '===os-release===\\n'\nif [ -r /etc/os-release ]; then cat /etc/os-release; fi\nprintf '\\n===apk===\\n'\nif [ -r /lib/apk/db/installed ]; then cat /lib/apk/db/installed; fi\nprintf '\\n===dpkg===\\n'\nif command -v dpkg-query >/dev/null 2>&1; then\n dpkg_fmt='${binary:Package}\\t${Version}\\t${Architecture}'\n dpkg_fmt=\"$dpkg_fmt\"'\\t${source:Package}\\t${source:Version}\\n'\n dpkg-query -W -f=\"$dpkg_fmt\"\nfi\nprintf '\\n===dpkg-licenses===\\n'\nfor copyright_path in /usr/share/doc/*/copyright; do\n [ -r \"$copyright_path\" ] || continue\n package_path=${copyright_path%/copyright}\n printf '%s\\t' \"${package_path##*/}\"\n awk '/^License:/ {gsub(/\\t/, \" \"); printf \"%s;\", $0}' \"$copyright_path\"\n printf '\\n'\ndone\nprintf '\\n===rpm===\\n'\nif command -v rpm >/dev/null 2>&1; then\n rpm -qa --qf '%{NAME}\\t%{VERSION}-%{RELEASE}\\t%{ARCH}\\t%{LICENSE}\\n'\nfi\n"
+      ],
+      "started_at": "2026-11-03T06:23:02.895990+00:00",
+      "ended_at": "2026-11-03T06:23:03.152485+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "5d26897f6da40a586efac34b295920f78109224dd86d12c2c344a1ebf2e76919",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--read-only",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--pids-limit",
+        "64",
+        "--memory",
+        "512m",
+        "--entrypoint",
+        "sh",
+        "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c",
+        "-c",
+        "if command -v python >/dev/null 2>&1; then exec python -c \"$1\"; elif command -v python3 >/dev/null 2>&1; then exec python3 -c \"$1\"; else printf '%s\\n' '{\"packages\": [], \"interpreter\": null}'; fi",
+        "arc-inventory",
+        "\nimport importlib.metadata as m, json, sys\npackages=[]\nfor d in m.distributions():\n    h=d.metadata\n    packages.append({\"name\":h.get(\"Name\",\"\"), \"version\":d.version,\n        \"license_expression\":h.get(\"License-Expression\",\"\"),\n        \"license\":h.get(\"License\",\"\")[:4096],\n        \"classifiers\":h.get_all(\"Classifier\") or [],\n        \"location\":str(d._path)})\nprint(json.dumps({\"interpreter\":sys.executable,\"python_version\":sys.version,\n    \"packages\":packages},sort_keys=True))\n"
+      ],
+      "started_at": "2026-11-03T06:23:03.155659+00:00",
+      "ended_at": "2026-11-03T06:23:03.306169+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "1030eb169431c4058cc0a7e032ca2c5cd75534d69d00e58d607fea877b0bc720",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "source_inputs": [
+    {
+      "path": "scripts/scan_images_osv.py",
+      "sha256": "0358ef68c8d866847f870f08770716d32cb2968b3eb684d2f00cb5088b9001db"
+    },
+    {
+      "path": "scripts/scan_release.py",
+      "sha256": "f3f353ff9a50651aa864aa75dbb480da9481dc78aaacaac2b74a90616558ea0c"
+    }
+  ],
+  "limitations": [
+    "No full filesystem/static binary/native embedded library scan.",
+    "Only Debian/Alpine source packages and Python METADATA are mapped.",
+    "Unsupported mapping/errors/incomplete pages remain unknown, not zero.",
+    "No match is a service query result, not proof of absolute safety.",
+    "OSV service exposes no reproducible database snapshot date.",
+    "License inventory metadata is not distribution approval.",
+    "Severity is upstream metadata; absent severity remains unknown."
+  ],
+  "output_limit_bytes": 41943040,
+  "output_limit_files": 200,
+  "files": [
+    {
+      "path": "api-identity.stdout",
+      "bytes": 247,
+      "sha256": "9c0b357bf387696e30f3651d842f3305916253a775d316a44a908dee3e21464c"
+    },
+    {
+      "path": "api-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "api-os.stdout",
+      "bytes": 44689,
+      "sha256": "91bcba6df860dbfe1b30c8b29427c9e389ccdc080afabbf30020f0f4c895efa5"
+    },
+    {
+      "path": "api-os.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "api-python.stdout",
+      "bytes": 28437,
+      "sha256": "3231e20ce98c03f1a3c4c93a517084c92b677194035fb5f3df965fe8d305bc8c"
+    },
+    {
+      "path": "api-python.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "api-inventory.json",
+      "bytes": 60601,
+      "sha256": "468b18e64ebb6344918d1577bf2183882b78b7e5cf37e5bdb5442cfedb5db700"
+    },
+    {
+      "path": "api.cdx.json",
+      "bytes": 96126,
+      "sha256": "aa356f1a4d37c317ee3557fa32f7a17f1be64912f1056a7b68aa62c4521027aa"
+    },
+    {
+      "path": "api.spdx.json",
+      "bytes": 95513,
+      "sha256": "e42b5ebe0f037afe38d3f6a0cf2e525bcaf37c0ea7bd14044fa16580b9d316d7"
+    },
+    {
+      "path": "api-licenses.json",
+      "bytes": 68061,
+      "sha256": "355a566b14c2643523bce49fbd9e2a0e2929a49b7c6111a47e272f92c4e9ea9d"
+    },
+    {
+      "path": "langflow-identity.stdout",
+      "bytes": 253,
+      "sha256": "db279286d26893cb9d7b334ec3c7b02659b90a54309bf07d6d414fe6165e41ab"
+    },
+    {
+      "path": "langflow-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "langflow-os.stdout",
+      "bytes": 21483,
+      "sha256": "0e78242e0a61e33e9f18e927f01e1eb6e67495390f21cc272b4ebd732939dc6d"
+    },
+    {
+      "path": "langflow-os.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "langflow-python.stdout",
+      "bytes": 778942,
+      "sha256": "5c6e53da4efe5bb4dcd5f9cda5054fe05102a717361b82cb65801a8b7f3a6c97"
+    },
+    {
+      "path": "langflow-python.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "langflow-inventory.json",
+      "bytes": 310263,
+      "sha256": "8f003bd946b0fe9fbedd5190207969c3fcd45b43b6221e2e5a8ffcca4ae863ff"
+    },
+    {
+      "path": "langflow.cdx.json",
+      "bytes": 513178,
+      "sha256": "3e67d75d934b6a68dbccdf02a5135bf1d038dcaedf9dcea7e04e7b282dd3634c"
+    },
+    {
+      "path": "langflow.spdx.json",
+      "bytes": 515605,
+      "sha256": "cc68d417367f1573cca42a5693de475cbab9f69677943d32a30506fabc94ad22"
+    },
+    {
+      "path": "langflow-licenses.json",
+      "bytes": 342655,
+      "sha256": "82bb2b030c083f08fb67d482d9030b2ad70fc4c1a81504632cd44e32267105e4"
+    },
+    {
+      "path": "web-identity.stdout",
+      "bytes": 253,
+      "sha256": "2163620d74a06a5f0ebf6c3e0cf0933c5160d2f842056ac1be1f098ba004008f"
+    },
+    {
+      "path": "web-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "web-os.stdout",
+      "bytes": 102873,
+      "sha256": "02642508a76aa6df267c6ee9c567939d7080134250a5c61f31327c7c77475d30"
+    },
+    {
+      "path": "web-os.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "web-python.stdout",
+      "bytes": 38,
+      "sha256": "1030eb169431c4058cc0a7e032ca2c5cd75534d69d00e58d607fea877b0bc720"
+    },
+    {
+      "path": "web-python.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "web-inventory.json",
+      "bytes": 21080,
+      "sha256": "9bdb5482138958dc90a1d440ebd3f192e385d2de8d57be67a852c85f7b7a5c1e"
+    },
+    {
+      "path": "web.cdx.json",
+      "bytes": 45380,
+      "sha256": "0dd7a5a3c45613e78ee47739d6927a3c2b9bdbe1370818910d8483becdd185c5"
+    },
+    {
+      "path": "web.spdx.json",
+      "bytes": 49569,
+      "sha256": "c7fd05fa2178eb45c504a51191670106451675f0330120c2b67e127a4c5d997c"
+    },
+    {
+      "path": "web-licenses.json",
+      "bytes": 24006,
+      "sha256": "fec3127b0a787919315d2e11027dd39fc22e2a2cda22c52b05449c73cfba84ce"
+    },
+    {
+      "path": "postgres-identity.stdout",
+      "bytes": 234,
+      "sha256": "63ed038d6fb37749154bf286cf176765984c12cdb5359ce89128eb54c672a3c6"
+    },
+    {
+      "path": "postgres-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "postgres-os.stdout",
+      "bytes": 93776,
+      "sha256": "5d26897f6da40a586efac34b295920f78109224dd86d12c2c344a1ebf2e76919"
+    },
+    {
+      "path": "postgres-os.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "postgres-python.stdout",
+      "bytes": 38,
+      "sha256": "1030eb169431c4058cc0a7e032ca2c5cd75534d69d00e58d607fea877b0bc720"
+    },
+    {
+      "path": "postgres-python.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "postgres-inventory.json",
+      "bytes": 77818,
+      "sha256": "803be3fa8bea1e013c94cc408b89677602e8bf11175ff3a20d250ff3f9be38dd"
+    },
+    {
+      "path": "postgres.cdx.json",
+      "bytes": 112593,
+      "sha256": "4db33c5aabd583ef091dba5f8f28b255f7e19d6ff095a6f4207ecc8c5876794e"
+    },
+    {
+      "path": "postgres.spdx.json",
+      "bytes": 98726,
+      "sha256": "75aea5bdfdbfb7bfb1efc45fad2b485f9ed4709b4160f3899c4c27bd5ff3e1de"
+    },
+    {
+      "path": "postgres-licenses.json",
+      "bytes": 86454,
+      "sha256": "60746a0c35d76b906d97c9e673835daa9324cbf6d70dca652e81395f27539de1"
+    },
+    {
+      "path": "package-mappings.json",
+      "bytes": 890714,
+      "sha256": "a515d0aa66208ded10b267a4291a3e7b5a20926136ad7de26518dc8c24eec1a4"
+    },
+    {
+      "path": "vulnerabilities.json",
+      "bytes": 1979275,
+      "sha256": "e65cca89c8c44a34c7db478bf373495cb24d893d4100ce7df6524b33761d8f91"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 65527,
+      "sha256": "8ec9502da4e1b15b36ee74e3a2595facf82d88619cef3bcb158dfbf56a0c16e8"
+    },
+    {
+      "path": "http-records.json",
+      "bytes": 270012,
+      "sha256": "2da2b30d0642ed05776acafec30d0df0bd27ab605682586c57e92cd0cac2f550"
+    }
+  ]
+}

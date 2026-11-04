@@ -1,0 +1,8 @@
+{
+  "at_utc": "2026-11-03T06:11:17.660531+00:00",
+  "command": "python3 -B /private/tmp/arc-runtime-maintenance.wT9huB/python/review_final_runtime.py",
+  "exit_code": 1,
+  "producer_sha256": "66086d0898a44db89aa6845a9d028a1fa4f129d8b30f0053903347276a0f76fb",
+  "failure": "Review parser assumed vulnerability detail status=fetched; actual preserved scan schema uses status=queried with document id validated. No runtime assertion failed and no final review output was written.",
+  "correction": "Use exact observed queried status; keep document id and all alias/security assertions unchanged."
+}

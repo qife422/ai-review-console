@@ -1,0 +1,274 @@
+{
+  "checked_at": "2026-11-03T06:08:20.399310+00:00",
+  "source_commit": "2e45bee8c61dfab347edd107aebb6a3488567761",
+  "run_id": 41586599463,
+  "run_url": "https://github.com/qife422/ai-review-console/actions/runs/41586599463",
+  "run_state": "completed/success; three jobs success",
+  "lanes": {
+    "amd64": {
+      "image_ids": {
+        "api": "sha256:9553a52c06f048ffeaeb6965975be61bf68cfebedf1d1cc494706e9ad1354470",
+        "langflow": "sha256:8db643cf50f215d67257fdd1f85c9e286092c9877d93d54e0117925850dd7c21",
+        "web": "sha256:0616cd643c628a72d23c12ec9d9f456c2c4fd8cb454f11fd2730ade8406e261a",
+        "postgres": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+      },
+      "collection_state": "collected",
+      "audits": {
+        "package_scan_exit_code": 2,
+        "redhat_supplement_exit_code": 0
+      },
+      "workflow": {
+        "result": "passed",
+        "source_formats": [
+          "docx",
+          "md",
+          "pdf",
+          "txt"
+        ],
+        "decisions": [
+          "approved",
+          "rejected",
+          "changes_requested"
+        ],
+        "downloaded_reports": 9,
+        "failure_retry_result": "failed as expected; unscored; same case/version; one manual retry generation",
+        "same_key_deduplication": true
+      },
+      "primary_scan": {
+        "unique_queries": 797,
+        "observed_unique_advisory_ids": 240,
+        "mapping_unknown": 227,
+        "query_unknown": 0,
+        "detail_unknown": 0,
+        "images": {
+          "api": {
+            "image_id": "sha256:9553a52c06f048ffeaeb6965975be61bf68cfebedf1d1cc494706e9ad1354470",
+            "inventory_packages": 140,
+            "unknown_packages": 0,
+            "matched_binary_or_python_packages": 51,
+            "observed_unique_advisory_ids": 126,
+            "detail_unknown": 0
+          },
+          "langflow": {
+            "image_id": "sha256:8db643cf50f215d67257fdd1f85c9e286092c9877d93d54e0117925850dd7c21",
+            "inventory_packages": 777,
+            "unknown_packages": 227,
+            "matched_binary_or_python_packages": 5,
+            "observed_unique_advisory_ids": 81,
+            "detail_unknown": 0
+          },
+          "web": {
+            "image_id": "sha256:0616cd643c628a72d23c12ec9d9f456c2c4fd8cb454f11fd2730ade8406e261a",
+            "inventory_packages": 71,
+            "unknown_packages": 0,
+            "matched_binary_or_python_packages": 1,
+            "observed_unique_advisory_ids": 4,
+            "detail_unknown": 0
+          },
+          "postgres": {
+            "image_id": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c",
+            "inventory_packages": 142,
+            "unknown_packages": 0,
+            "matched_binary_or_python_packages": 63,
+            "observed_unique_advisory_ids": 130,
+            "detail_unknown": 0
+          }
+        }
+      },
+      "combined_provider_id_count": 240,
+      "rhel": {
+        "result": "queried_no_match",
+        "rpm_entries": 227,
+        "metadata_only_public_keys": 3,
+        "mapped_software_packages": 224,
+        "unique_queries": 672,
+        "observed_unique_advisory_ids": 0,
+        "matched_software_packages": 0,
+        "mapping_unknown": 0,
+        "query_unknown": 0,
+        "detail_unknown": 0
+      },
+      "combined_coverage": {
+        "same_exact_langflow_image_id": true,
+        "default_rpm_inventory_set_equals_supplement": true,
+        "system_post_update_rpm_full_evr_set_equals_supplement": true,
+        "all_default_unknowns_are_the_same_227_RPM_entries": true,
+        "combined_package_mapping_query_detail_unknown": 0,
+        "original_default_exit2_preserved": true,
+        "not_filesystem_or_exploitability_scan": true
+      },
+      "selected_file_count": 63,
+      "selected_payload_bytes": 12764094,
+      "verified_zip_file_count": 139,
+      "verified_child_manifests": [
+        {
+          "path": "release/images/manifest.json",
+          "verified_declared_files": 44
+        },
+        {
+          "path": "release/licenses/manifest.json",
+          "verified_declared_files": 3
+        },
+        {
+          "path": "release/manifest.json",
+          "verified_declared_files": 111
+        },
+        {
+          "path": "release/native/manifest.json",
+          "verified_declared_files": 1
+        },
+        {
+          "path": "release/rhel/manifest.json",
+          "verified_declared_files": 12
+        },
+        {
+          "path": "release/system/manifest.json",
+          "verified_declared_files": 14
+        }
+      ]
+    },
+    "arm64": {
+      "image_ids": {
+        "api": "sha256:c3f1ce84c0f211780c3cde07bb29c5ef6c52a64fc267eb61b0edcd559d6e68a5",
+        "langflow": "sha256:5f59c490e6c10de3774d424092f2bb2f2b3a75b49386c7c5a1a7acf949c41e4b",
+        "web": "sha256:2c61b675966880e82872617409186aa1a7b15ae354a97eac3f886ac0ad04103e",
+        "postgres": "sha256:6162f3765f7563b273a879894c5751d41285f922dd75ba0ba508a89e024e43ca"
+      },
+      "collection_state": "collected",
+      "audits": {
+        "package_scan_exit_code": 2,
+        "redhat_supplement_exit_code": 0
+      },
+      "workflow": {
+        "result": "passed",
+        "source_formats": [
+          "docx",
+          "md",
+          "pdf",
+          "txt"
+        ],
+        "decisions": [
+          "approved",
+          "rejected",
+          "changes_requested"
+        ],
+        "downloaded_reports": 9,
+        "failure_retry_result": "failed as expected; unscored; same case/version; one manual retry generation",
+        "same_key_deduplication": true
+      },
+      "primary_scan": {
+        "unique_queries": 793,
+        "observed_unique_advisory_ids": 240,
+        "mapping_unknown": 227,
+        "query_unknown": 0,
+        "detail_unknown": 0,
+        "images": {
+          "api": {
+            "image_id": "sha256:c3f1ce84c0f211780c3cde07bb29c5ef6c52a64fc267eb61b0edcd559d6e68a5",
+            "inventory_packages": 140,
+            "unknown_packages": 0,
+            "matched_binary_or_python_packages": 51,
+            "observed_unique_advisory_ids": 126,
+            "detail_unknown": 0
+          },
+          "langflow": {
+            "image_id": "sha256:5f59c490e6c10de3774d424092f2bb2f2b3a75b49386c7c5a1a7acf949c41e4b",
+            "inventory_packages": 773,
+            "unknown_packages": 227,
+            "matched_binary_or_python_packages": 5,
+            "observed_unique_advisory_ids": 81,
+            "detail_unknown": 0
+          },
+          "web": {
+            "image_id": "sha256:2c61b675966880e82872617409186aa1a7b15ae354a97eac3f886ac0ad04103e",
+            "inventory_packages": 71,
+            "unknown_packages": 0,
+            "matched_binary_or_python_packages": 1,
+            "observed_unique_advisory_ids": 4,
+            "detail_unknown": 0
+          },
+          "postgres": {
+            "image_id": "sha256:6162f3765f7563b273a879894c5751d41285f922dd75ba0ba508a89e024e43ca",
+            "inventory_packages": 142,
+            "unknown_packages": 0,
+            "matched_binary_or_python_packages": 63,
+            "observed_unique_advisory_ids": 130,
+            "detail_unknown": 0
+          }
+        }
+      },
+      "combined_provider_id_count": 240,
+      "rhel": {
+        "result": "queried_no_match",
+        "rpm_entries": 227,
+        "metadata_only_public_keys": 3,
+        "mapped_software_packages": 224,
+        "unique_queries": 672,
+        "observed_unique_advisory_ids": 0,
+        "matched_software_packages": 0,
+        "mapping_unknown": 0,
+        "query_unknown": 0,
+        "detail_unknown": 0
+      },
+      "combined_coverage": {
+        "same_exact_langflow_image_id": true,
+        "default_rpm_inventory_set_equals_supplement": true,
+        "system_post_update_rpm_full_evr_set_equals_supplement": true,
+        "all_default_unknowns_are_the_same_227_RPM_entries": true,
+        "combined_package_mapping_query_detail_unknown": 0,
+        "original_default_exit2_preserved": true,
+        "not_filesystem_or_exploitability_scan": true
+      },
+      "selected_file_count": 40,
+      "selected_payload_bytes": 4410514,
+      "verified_zip_file_count": 112,
+      "verified_child_manifests": [
+        {
+          "path": "release/images/manifest.json",
+          "verified_declared_files": 44
+        },
+        {
+          "path": "release/licenses/manifest.json",
+          "verified_declared_files": 3
+        },
+        {
+          "path": "release/manifest.json",
+          "verified_declared_files": 107
+        },
+        {
+          "path": "release/rhel/manifest.json",
+          "verified_declared_files": 12
+        },
+        {
+          "path": "release/system/manifest.json",
+          "verified_declared_files": 14
+        }
+      ]
+    }
+  },
+  "shared_official_rhel_mapping": {
+    "selected_amd64_path": "final-2e45bee-amd64/release/rhel/repository-to-cpe.json",
+    "arm64_omitted_member": "release/rhel/repository-to-cpe.json",
+    "bytes": 4379662,
+    "sha256": "b0ee1f3f15d2043971f64e04c9c39cbf6f8e608edc26a07faea8bbb9393d2bb7",
+    "raw_byte_equality_verified_in_both_ZIPs": true
+  },
+  "unit": {
+    "tests": 188,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "raw": "final-2e45bee-unit/arc-unit.xml",
+    "frontend_tests": 29,
+    "frontend_method": "GitHub MCP verify job log excerpt in verify-count-excerpt.json"
+  },
+  "browser": {
+    "outcome": "passed",
+    "steps": 28,
+    "cli_commands": 212,
+    "manual_screenshots": 4,
+    "detail": "browser-visual-observation.json",
+    "scope": "AMD64 only; no ARM browser lane"
+  },
+  "scope": "Collection/test success does not grant AC19 acceptance, risk acceptance, production or full image distribution approval. Provider IDs are not independent or exploitable CVE counts. Only exact selected original payload files are evidence candidates; private ZIPs remain unselected."
+}

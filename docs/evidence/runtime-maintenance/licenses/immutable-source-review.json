@@ -1,0 +1,79 @@
+{
+  "created_at": "2026-11-03T05:47:59.748009+00:00",
+  "records": [
+    {
+      "tag": "3.3.5",
+      "url": "https://api.github.com/repos/psycopg/psycopg/git/tags/9fd8233c821dab11ac5650165d6c574a04b49705",
+      "path": "psycopg-3.3.5-tag-object.json",
+      "bytes": 3614,
+      "sha256": "ee733f2afc4bcc124d5cde10bb64c12a7acf09804fa6f5061dc36fad736b31c3",
+      "target": {
+        "sha": "ea542c9534cc9841d50450e0c156b549cc6c805a",
+        "type": "commit",
+        "url": "https://api.github.com/repos/psycopg/psycopg/git/commits/ea542c9534cc9841d50450e0c156b549cc6c805a"
+      },
+      "fetched_at": "2026-11-03T05:47:58.253079+00:00",
+      "source_files": [
+        {
+          "url": "https://raw.githubusercontent.com/psycopg/psycopg/ea542c9534cc9841d50450e0c156b549cc6c805a/.github/workflows/packages-bin.yml",
+          "bytes": 9121,
+          "sha256": "763c6ab0014cee4c1a1263f2c943dd7683bc6c9a56231b3fc77a41ffcbe168f5",
+          "matches_retained_tag_response": true,
+          "retained_path": "psycopg-3.3.5-packages-bin.yml.txt"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/psycopg/psycopg/ea542c9534cc9841d50450e0c156b549cc6c805a/tools/ci/wheel_linux_before_all.sh",
+          "bytes": 1415,
+          "sha256": "239552169c742123b245a6a1143740eef78720e495b2f4b1c765c4cbb2eb1b86",
+          "matches_retained_tag_response": true,
+          "retained_path": "psycopg-3.3.5-wheel_linux_before_all.sh.txt"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/psycopg/psycopg/ea542c9534cc9841d50450e0c156b549cc6c805a/tools/ci/build_libpq.sh",
+          "bytes": 7120,
+          "sha256": "2cb45ac4c8bb5e8fc3c738c597817bcb2d224bc66073d10023f15665bee9cb8b",
+          "matches_retained_tag_response": true,
+          "retained_path": "psycopg-3.3.5-build_libpq.sh.txt"
+        }
+      ]
+    },
+    {
+      "tag": "3.3.4",
+      "url": "https://api.github.com/repos/psycopg/psycopg/git/tags/6697f47c113ea47c671fd2c7a286074b88182a9b",
+      "path": "psycopg-3.3.4-tag-object.json",
+      "bytes": 2542,
+      "sha256": "a0a1f7f394442537217b3726266aa77d7059d7eda9704216b9de88de19dc3bd2",
+      "target": {
+        "sha": "83f110367cdd249cc0a352e2246ecea9e878e5a0",
+        "type": "commit",
+        "url": "https://api.github.com/repos/psycopg/psycopg/git/commits/83f110367cdd249cc0a352e2246ecea9e878e5a0"
+      },
+      "fetched_at": "2026-11-03T05:47:59.168240+00:00",
+      "source_files": [
+        {
+          "url": "https://raw.githubusercontent.com/psycopg/psycopg/83f110367cdd249cc0a352e2246ecea9e878e5a0/.github/workflows/packages-bin.yml",
+          "bytes": 8914,
+          "sha256": "e488ff682ed842d4edbcef68ad8197064dd64e75e80d2111513a610f516707c0",
+          "matches_retained_tag_response": true,
+          "retained_path": "psycopg-3.3.4-packages-bin.yml.txt"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/psycopg/psycopg/83f110367cdd249cc0a352e2246ecea9e878e5a0/tools/ci/wheel_linux_before_all.sh",
+          "bytes": 1415,
+          "sha256": "239552169c742123b245a6a1143740eef78720e495b2f4b1c765c4cbb2eb1b86",
+          "matches_retained_tag_response": true,
+          "retained_path": "psycopg-3.3.4-wheel_linux_before_all.sh.txt"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/psycopg/psycopg/83f110367cdd249cc0a352e2246ecea9e878e5a0/tools/ci/build_libpq.sh",
+          "bytes": 7119,
+          "sha256": "c66cc2fbea0e54d7a6ce9abbd0029662e7f7779b8e96ae3ea88f1b93bdb6ccc7",
+          "matches_retained_tag_response": true,
+          "retained_path": "psycopg-3.3.4-build_libpq.sh.txt"
+        }
+      ]
+    }
+  ],
+  "archive_downloaded": false,
+  "source_binary_correspondence_proven": false
+}

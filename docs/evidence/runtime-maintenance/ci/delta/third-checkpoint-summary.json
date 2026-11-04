@@ -1,0 +1,232 @@
+{
+  "checked_at": "2026-11-04T02:19:41.301489+00:00",
+  "checkpoint_source": "185848006c2ea97ad24bead72f726c3a0d467dd4",
+  "run": 41588865769,
+  "result": "completed/success",
+  "run_metadata": "third-run-metadata.json",
+  "lanes": {
+    "amd64": {
+      "image_ids": {
+        "api": "sha256:dac5965a840be8d2da28d1bb3e2098b42ea4fe9aeefa010357344f0a43166e10",
+        "langflow": "sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+        "web": "sha256:7d7a54dd6c684b161a122c17d245d458a3c744cb389833e555dea571baae73f6",
+        "postgres": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+      },
+      "collection_state": "collected",
+      "audits": {
+        "package_scan_exit_code": 2,
+        "redhat_supplement_exit_code": 0
+      },
+      "images": {
+        "api": {
+          "image_id": "sha256:dac5965a840be8d2da28d1bb3e2098b42ea4fe9aeefa010357344f0a43166e10",
+          "inventory_packages": 140,
+          "unknown_packages": 0,
+          "matched_binary_or_python_packages": 51,
+          "observed_unique_advisory_ids": 126,
+          "detail_unknown": 0
+        },
+        "langflow": {
+          "image_id": "sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+          "inventory_packages": 777,
+          "unknown_packages": 227,
+          "matched_binary_or_python_packages": 5,
+          "observed_unique_advisory_ids": 81,
+          "detail_unknown": 0
+        },
+        "web": {
+          "image_id": "sha256:7d7a54dd6c684b161a122c17d245d458a3c744cb389833e555dea571baae73f6",
+          "inventory_packages": 71,
+          "unknown_packages": 0,
+          "matched_binary_or_python_packages": 0,
+          "observed_unique_advisory_ids": 0,
+          "detail_unknown": 0
+        },
+        "postgres": {
+          "image_id": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c",
+          "inventory_packages": 142,
+          "unknown_packages": 0,
+          "matched_binary_or_python_packages": 63,
+          "observed_unique_advisory_ids": 130,
+          "detail_unknown": 0
+        }
+      },
+      "combined_provider_ids": 236,
+      "primary_unknowns": {
+        "mapping_unknown": 227,
+        "query_unknown": 0,
+        "detail_unknown": 0
+      },
+      "rhel": {
+        "rpm_entries": 227,
+        "mapped_software_packages": 224,
+        "metadata_only_public_keys": 3,
+        "observed_unique_advisory_ids": 0,
+        "mapping_unknown": 0,
+        "query_unknown": 0,
+        "detail_unknown": 0
+      },
+      "combined_sameimage_RPM_fullset_coverage_verified": true,
+      "system_status": "completed",
+      "libexpat": [
+        {
+          "name": "libexpat",
+          "version": "2.10.0-r0",
+          "type": "apk",
+          "arch": "x86_64",
+          "source_name": "expat",
+          "license": {
+            "identifiers": [
+              "MIT"
+            ],
+            "source": "/lib/apk/db/installed L field"
+          }
+        }
+      ],
+      "workflow": {
+        "result": "passed",
+        "formats": [
+          "docx",
+          "md",
+          "pdf",
+          "txt"
+        ],
+        "decisions": [
+          "approved",
+          "rejected",
+          "changes_requested"
+        ],
+        "actual_reports_downloaded": 9,
+        "failure_retry_result": "failed as expected; unscored; same case/version; one manual retry generation"
+      },
+      "browser": {
+        "outcome": "passed",
+        "steps": 28,
+        "commands": 212,
+        "new_PNGs_selected": false,
+        "qualification": "This run completed the existing browser CLI lane; selected manually viewed four PNGs remain the prior2e45 source, not relabelled."
+      }
+    },
+    "arm64": {
+      "image_ids": {
+        "api": "sha256:b93fb066c174a23a39368462ac4e324f2ddc23ded27674cc4a0e0cf19e811f22",
+        "langflow": "sha256:b71111291bb4aded994c5e695d139ab8695b925649917aa954c42ebebc5c3b75",
+        "web": "sha256:1afea987a94187f47113c5b3dfc1b33698401228847e6e0d23977753fc2ed3a0",
+        "postgres": "sha256:6162f3765f7563b273a879894c5751d41285f922dd75ba0ba508a89e024e43ca"
+      },
+      "collection_state": "collected",
+      "audits": {
+        "package_scan_exit_code": 2,
+        "redhat_supplement_exit_code": 0
+      },
+      "images": {
+        "api": {
+          "image_id": "sha256:b93fb066c174a23a39368462ac4e324f2ddc23ded27674cc4a0e0cf19e811f22",
+          "inventory_packages": 140,
+          "unknown_packages": 0,
+          "matched_binary_or_python_packages": 51,
+          "observed_unique_advisory_ids": 126,
+          "detail_unknown": 0
+        },
+        "langflow": {
+          "image_id": "sha256:b71111291bb4aded994c5e695d139ab8695b925649917aa954c42ebebc5c3b75",
+          "inventory_packages": 773,
+          "unknown_packages": 227,
+          "matched_binary_or_python_packages": 5,
+          "observed_unique_advisory_ids": 81,
+          "detail_unknown": 0
+        },
+        "web": {
+          "image_id": "sha256:1afea987a94187f47113c5b3dfc1b33698401228847e6e0d23977753fc2ed3a0",
+          "inventory_packages": 71,
+          "unknown_packages": 0,
+          "matched_binary_or_python_packages": 0,
+          "observed_unique_advisory_ids": 0,
+          "detail_unknown": 0
+        },
+        "postgres": {
+          "image_id": "sha256:6162f3765f7563b273a879894c5751d41285f922dd75ba0ba508a89e024e43ca",
+          "inventory_packages": 142,
+          "unknown_packages": 0,
+          "matched_binary_or_python_packages": 63,
+          "observed_unique_advisory_ids": 130,
+          "detail_unknown": 0
+        }
+      },
+      "combined_provider_ids": 236,
+      "primary_unknowns": {
+        "mapping_unknown": 227,
+        "query_unknown": 0,
+        "detail_unknown": 0
+      },
+      "rhel": {
+        "rpm_entries": 227,
+        "mapped_software_packages": 224,
+        "metadata_only_public_keys": 3,
+        "observed_unique_advisory_ids": 0,
+        "mapping_unknown": 0,
+        "query_unknown": 0,
+        "detail_unknown": 0
+      },
+      "combined_sameimage_RPM_fullset_coverage_verified": true,
+      "system_status": "completed",
+      "libexpat": [
+        {
+          "name": "libexpat",
+          "version": "2.10.0-r0",
+          "type": "apk",
+          "arch": "aarch64",
+          "source_name": "expat",
+          "license": {
+            "identifiers": [
+              "MIT"
+            ],
+            "source": "/lib/apk/db/installed L field"
+          }
+        }
+      ],
+      "workflow": {
+        "result": "passed",
+        "formats": [
+          "docx",
+          "md",
+          "pdf",
+          "txt"
+        ],
+        "decisions": [
+          "approved",
+          "rejected",
+          "changes_requested"
+        ],
+        "actual_reports_downloaded": 9,
+        "failure_retry_result": "failed as expected; unscored; same case/version; one manual retry generation"
+      }
+    }
+  },
+  "unit": {
+    "raw": "unit/arc-unit.xml",
+    "tests": 191,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "frontend_tests": 29,
+    "frontend_count_record": "verify-count-excerpt.json"
+  },
+  "exact_replay": {
+    "command": "python3 -B ci/delta/replay_delta.py --ci-root <fixed-packet-ci-root>",
+    "result": "passed, both lanes; no ZIP, no network, no writes",
+    "AMD": {
+      "originals": 22,
+      "complete_file_prior_refs": 51,
+      "file_byte_edits": 3,
+      "provider_values": 236
+    },
+    "ARM": {
+      "originals": 18,
+      "complete_file_prior_refs": 48,
+      "file_byte_edits": 4,
+      "provider_values": 236
+    }
+  },
+  "scope": "Third source full functional checkpoint. New original subset, prior exact references, and explicit copy/insert byte transforms preserve new selected meanings. No whole-file equality claim for transformed files. HTTP records/new screenshots not selected. Test success is not AC19/release/distribution acceptance. No original SQLite or local Docker action."
+}

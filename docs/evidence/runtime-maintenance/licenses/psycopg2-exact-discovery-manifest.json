@@ -1,0 +1,23 @@
+[
+  {
+    "path": "psycopg2-2.9.12-tag-ref.json",
+    "url": "https://api.github.com/repos/psycopg/psycopg2/git/ref/tags/2.9.12",
+    "bytes": 331,
+    "sha256": "5bfdad062a63cb33e8181cb3af1316293a14eb9dbcda783414092d0edd585e97",
+    "fetched_at": "2026-11-03T05:56:24.924510+00:00"
+  },
+  {
+    "path": "psycopg2-2.9.12-workflow-list.json",
+    "url": "https://api.github.com/repos/psycopg/psycopg2/contents/.github/workflows?ref=2.9.12",
+    "bytes": 3486,
+    "sha256": "3dea2453064e62000e0e1920ed0b10f608419250b6d3aef1c1cb921f3dbaf6b0",
+    "fetched_at": "2026-11-03T05:56:25.226298+00:00"
+  },
+  {
+    "path": "psycopg2-2.9.12-script-list.json",
+    "url": "https://api.github.com/repos/psycopg/psycopg2/contents/scripts?ref=2.9.12",
+    "bytes": 3146,
+    "sha256": "8c670744a0b5a1c2d072915a0404c8d79cdebecb94df39dca34a27e65ebd4eb6",
+    "fetched_at": "2026-11-03T05:56:25.479986+00:00"
+  }
+]

@@ -1,0 +1,204 @@
+{
+  "baseline": {
+    "contract": "ARC-UPGRADE@0.1.0",
+    "decision": "Keep current default; no image/Dockerfile/Spec change",
+    "langflow": "1.11.6",
+    "source": "a64ab476c8acfaa36a3d6cc260a4c6c286bad380"
+  },
+  "candidate_gate": [
+    "Fix exact supported candidate/version/digest/architecture and installed extras before implementation, as required by Spec AD-03 and runtime compatibility requirements.",
+    "Require a coherent full dependency resolution with no metadata edits/no-deps; explain every changed current pin and new transitive package.",
+    "Verify component discovery, both real Flows, strict results/callback/report contracts, authentication, admin UI/API and isolated migration/rollback.",
+    "Rerun offline security/compatibility probes, browser regression, exact-image OS/PyPI/RHEL scans and package/native redistribution-license evidence."
+  ],
+  "collected_at_utc": "2026-11-03T05:44:46.011125+00:00",
+  "constraint_matrix": {
+    "dev": {
+      "packages": {
+        "langflow": {
+          "base_lfx_bundle_zep_ibm_requirements": [
+            "langflow-base==1.14.0.dev14",
+            "lfx-ibm<1.0.0,>=0.3.1",
+            "langflow-base[audio]==1.14.0.dev14; extra == \"audio\"",
+            "lfx-bundles[all-no-torch]<2.0,>=1.3.1; extra == \"bundles\"",
+            "langflow-base[opensearch]==1.14.0.dev14; extra == \"opensearch\"",
+            "langflow-base[pgvector]==1.14.0.dev14; extra == \"pgvector\"",
+            "langflow-base[postgresql]==1.14.0.dev14; extra == \"postgresql\"",
+            "langflow-base[sandbox]==1.14.0.dev14; extra == \"sandbox\""
+          ],
+          "requires_python": "<3.16,>=3.11",
+          "security_constraint_strings": [],
+          "yanked": false
+        },
+        "langflow-base": {
+          "base_lfx_bundle_zep_ibm_requirements": [
+            "lfx[sqlite]==1.14.0.dev14",
+            "lfx==1.14.0.dev14; extra == \"beautifulsoup\"",
+            "lfx[cassandra]==1.14.0.dev14; extra == \"cassandra\"",
+            "lfx[sandbox]==1.14.0.dev14; extra == \"sandbox\"",
+            "lfx[toolguard]==1.14.0.dev14; extra == \"toolguard\"",
+            "zep-python==2.0.2; extra == \"zep\""
+          ],
+          "requires_python": "<3.16,>=3.11",
+          "security_constraint_strings": [
+            "filelock<4.2.0,>=4.1.0; python_version < \"3.11\"",
+            "filelock<5.0.0,>=4.2.1; python_version >= \"3.11\"",
+            "pillow<13.0.0,>=12.3.0",
+            "setuptools<84.0.0,>=83.0.0"
+          ],
+          "yanked": false
+        },
+        "lfx": {
+          "base_lfx_bundle_zep_ibm_requirements": [
+            "lfx-bundles[all]<2.0,>=1.1.32; extra == \"bundles\""
+          ],
+          "requires_python": "<3.16,>=3.11",
+          "security_constraint_strings": [
+            "filelock<4.2.0,>=4.1.0; python_version < \"3.11\"",
+            "filelock<5.0.0,>=4.2.1; python_version >= \"3.11\"",
+            "pillow<13.0.0,>=12.3.0",
+            "setuptools<84.0.0,>=83.0.0"
+          ],
+          "yanked": false
+        }
+      },
+      "version": "1.14.0.dev14"
+    },
+    "rc": {
+      "packages": {
+        "langflow": {
+          "base_lfx_bundle_zep_ibm_requirements": [
+            "langflow-base==1.13.1rc2",
+            "lfx-ibm<1.0.0,>=0.3.2rc2",
+            "langflow-base[audio]==1.13.1rc2; extra == \"audio\"",
+            "lfx-bundles[all-no-torch]<2.0,>=1.2.6rc2; extra == \"bundles\"",
+            "langflow-base[opensearch]==1.13.1rc2; extra == \"opensearch\"",
+            "langflow-base[pgvector]==1.13.1rc2; extra == \"pgvector\"",
+            "langflow-base[postgresql]==1.13.1rc2; extra == \"postgresql\"",
+            "langflow-base[sandbox]==1.13.1rc2; extra == \"sandbox\""
+          ],
+          "requires_python": "<3.15,>=3.10",
+          "security_constraint_strings": [],
+          "yanked": false
+        },
+        "langflow-base": {
+          "base_lfx_bundle_zep_ibm_requirements": [
+            "lfx[sqlite]==1.13.1rc2",
+            "lfx==1.13.1rc2; extra == \"beautifulsoup\"",
+            "lfx[cassandra]==1.13.1rc2; extra == \"cassandra\"",
+            "lfx[sandbox]==1.13.1rc2; extra == \"sandbox\"",
+            "lfx[toolguard]==1.13.1rc2; extra == \"toolguard\"",
+            "zep-python==2.0.2; extra == \"zep\""
+          ],
+          "requires_python": "<3.15,>=3.10",
+          "security_constraint_strings": [
+            "filelock<4.2.0,>=4.1.0; python_version < \"3.11\"",
+            "filelock<5.0.0,>=4.2.1; python_version >= \"3.11\"",
+            "pillow<13.0.0,>=12.3.0",
+            "setuptools<84.0.0,>=83.0.0"
+          ],
+          "yanked": false
+        },
+        "lfx": {
+          "base_lfx_bundle_zep_ibm_requirements": [
+            "lfx-bundles[all]<2.0,>=1.1.32; extra == \"bundles\""
+          ],
+          "requires_python": "<3.15,>=3.10",
+          "security_constraint_strings": [
+            "filelock<4.2.0,>=4.1.0; python_version < \"3.11\"",
+            "filelock<5.0.0,>=4.2.1; python_version >= \"3.11\"",
+            "pillow<13.0.0,>=12.3.0",
+            "setuptools<84.0.0,>=83.0.0"
+          ],
+          "yanked": false
+        }
+      },
+      "version": "1.13.1rc2"
+    },
+    "stable": {
+      "packages": {
+        "langflow": {
+          "base_lfx_bundle_zep_ibm_requirements": [
+            "langflow-base==1.13.0",
+            "lfx-ibm<1.0.0,>=0.3.0",
+            "langflow-base[audio]==1.13.0; extra == \"audio\"",
+            "lfx-bundles[all-no-torch]<2.0,>=1.2.4; extra == \"bundles\"",
+            "langflow-base[opensearch]==1.13.0; extra == \"opensearch\"",
+            "langflow-base[pgvector]==1.13.0; extra == \"pgvector\"",
+            "langflow-base[postgresql]==1.13.0; extra == \"postgresql\"",
+            "langflow-base[sandbox]==1.13.0; extra == \"sandbox\""
+          ],
+          "requires_python": "<3.15,>=3.10",
+          "security_constraint_strings": [],
+          "yanked": false
+        },
+        "langflow-base": {
+          "base_lfx_bundle_zep_ibm_requirements": [
+            "lfx[sqlite]==1.13.0",
+            "lfx==1.13.0; extra == \"beautifulsoup\"",
+            "lfx[cassandra]==1.13.0; extra == \"cassandra\"",
+            "lfx[sandbox]==1.13.0; extra == \"sandbox\"",
+            "lfx[toolguard]==1.13.0; extra == \"toolguard\"",
+            "zep-python==2.0.2; extra == \"zep\""
+          ],
+          "requires_python": "<3.15,>=3.10",
+          "security_constraint_strings": [
+            "filelock<4.0.0,>=3.20.1",
+            "pillow<13.0.0,>=12.3.0",
+            "setuptools<84.0.0,>=83.0.0"
+          ],
+          "yanked": false
+        },
+        "lfx": {
+          "base_lfx_bundle_zep_ibm_requirements": [
+            "lfx-bundles[all]<2.0,>=1.1.32; extra == \"bundles\""
+          ],
+          "requires_python": "<3.15,>=3.10",
+          "security_constraint_strings": [
+            "filelock<4.0.0,>=3.20.1",
+            "pillow<13.0.0,>=12.3.0",
+            "setuptools<84.0.0,>=83.0.0"
+          ],
+          "yanked": false
+        }
+      },
+      "version": "1.13.0"
+    }
+  },
+  "findings": [
+    "Stable 1.13.0 does not lift Pillow<13, filelock<4, or setuptools<84.",
+    "RC 1.13.1rc2 and current development candidate lift filelock to >=4.2.1,<5 for Python>=3.11; Pillow<13 and setuptools<84 remain in langflow-base and lfx.",
+    "Current Python3.14 satisfies candidate Requires-Python, but a complete resolved candidate graph and runtime are not tested by this collection.",
+    "Pinned current PyJWT2.15.0 and transformers5.10.0 require reconciliation against candidate floors; all existing52 pins must be checked against exact selected candidate metadata.",
+    "Metadata extras and regular dependencies are distinct; historical/default installed extras cannot be inferred from pip check or the top package alone."
+  ],
+  "limits": {
+    "file_cap": 20,
+    "installed_packages": false,
+    "local_docker_started": false,
+    "network_payload_total_cap_bytes": 3145728,
+    "output_cap_bytes": 3145728,
+    "response_cap_bytes": 524288,
+    "source_changed": false
+  },
+  "migration_review": {
+    "items": [
+      "Recheck authentication default and required superuser credentials for selected exact version.",
+      "Use a new isolated database; official1.13 timestamp migrations and autostart migrations cannot be tried against original business/history volumes.",
+      "Recheck Chroma/Local DB deprecation and SQLite Knowledge/Memory migration before attaching any protected directories."
+    ],
+    "sources": [
+      "https://www.langflow.org/blog/langflow-1-13/",
+      "https://docs.langflow.org/database-migrations",
+      "https://docs.langflow.org/knowledge-storage-upgrade"
+    ],
+    "status": "Planning cautions from earlier official documentation review; pages linked below were not fetched by this producer."
+  },
+  "prerelease_decision": "Do not automatically adopt RC/dev: they currently offer only partial filelock closure, introduce migration/provider/dependency changes, and lack a project-specific resolved/build/runtime acceptance result. A bounded isolated candidate experiment is a separate concrete step, not a production/default upgrade or risk acceptance.",
+  "schema": "arc.langflow-candidate-assessment.v1",
+  "unknowns": {
+    "candidate_runtime_installability": "Unknown: no build, resolver, installation, Docker or CI was run in this task.",
+    "minimal_langflow_base_preserves_admin_ui_api": "Unknown: metadata summary is not independent proof of startup/static assets/API/Flow import compatibility; do not replace full runtime with bare LFX.",
+    "official_docker_installed_bundles_zep_ibm": "Unknown: no candidate Docker image manifest/content inspected or pulled."
+  }
+}

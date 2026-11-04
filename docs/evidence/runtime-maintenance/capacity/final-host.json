@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-04T02:25:41.328015+00:00",
+  "method": "shutil.disk_usage on exact project workspace; no Docker inventory command or runtime mutation",
+  "host_free_bytes": 26505326592,
+  "docker_inventory": "unavailable at prior recorded observation; not re-inferred from filesystem space",
+  "local_Docker_start_build_pull": false,
+  "cleanup_or_migration": false,
+  "retention": "Existing temporary artifacts retained; private transports excluded from formal packet"
+}

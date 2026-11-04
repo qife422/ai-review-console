@@ -1,0 +1,55 @@
+{
+  "at": "2026-11-03T05:45:18.953500+00:00",
+  "source_changes": [
+    "docker/langflow.Dockerfile",
+    "scripts/apply_system_updates.py",
+    "tests/test_apply_system_updates.py"
+  ],
+  "validation": [
+    {
+      "command": ".venv/bin/python -B -m pytest -p no:cacheprovider tests/test_apply_system_updates.py",
+      "exit_code": 0,
+      "result": "12 passed in 0.44s"
+    },
+    {
+      "command": ".venv/bin/ruff check scripts/apply_system_updates.py tests/test_apply_system_updates.py",
+      "exit_code": 0,
+      "result": "All checks passed"
+    }
+  ],
+  "official_response_files": 4,
+  "official_response_bytes": 599501,
+  "payload_files_before_this_record": [
+    {
+      "path": "appstream-primary.xml.gz",
+      "bytes": 408910,
+      "sha256": "ce8593bd61a290ef806f7e51f158a990cdb3885054a17ee28ac8328df6de700a"
+    },
+    {
+      "path": "appstream-repomd.xml",
+      "bytes": 3862,
+      "sha256": "516bcbb14c32d295f376a53b21d048bbd70241ccbc75a3a3f8364c98d39f6a99"
+    },
+    {
+      "path": "baseos-primary.xml.gz",
+      "bytes": 182872,
+      "sha256": "32db04f4482671db9d633d53d292d2a4b143557c18254bae198026e07a12d235"
+    },
+    {
+      "path": "baseos-repomd.xml",
+      "bytes": 3857,
+      "sha256": "117f405f7f26469e1366cfcfd10dcdd55f28e64a907c59ab718982dec5c8728e"
+    },
+    {
+      "path": "official-available-packages.json",
+      "bytes": 8578,
+      "sha256": "3d156280fd710e1aa0a4ba5857e4f0ad0f312659c62571bc0c422b93f71480ae"
+    },
+    {
+      "path": "official-repository-read.json",
+      "bytes": 854,
+      "sha256": "f9728daf9fa8044d8154bb73fe1971e23e26f7f54a07a1f81ea5adf19ba78389"
+    }
+  ],
+  "scope": "No local Docker start/build/pull; official HTTP metadata and targeted source tests only. Actual image transaction and regression require CI."
+}

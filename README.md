@@ -25,9 +25,9 @@ Langflow-powered document review console with deterministic redaction, explainab
 
 固定实施 Contract 为 [Spec计划书](docs/UPGRADE_SPEC.md) `ARC-UPGRADE@0.1.0`。实际验收、内容指纹和剩余边界见 [当前状态](docs/CURRENT_STATE.md)及[Spec索引](docs/SPEC_INDEX.md)。本地技术验证与负责人最终接受分开；没有生产或收费模型授权。
 
-2026-10-31 保留上轮应用与前端依赖修补，本轮进一步升级 OAuthlib、datamodel-code-generator 及 OpenTelemetry，Langflow 仍为 1.11.6，共 52 个显式 pin。代码 `a64ab47` 的 [完整 CI](https://github.com/qife422/ai-review-console/actions/runs/41263397231) 已通过 **161 Python / 29 前端测试**、离线兼容探针、真实工作流和浏览器验收。镜像包级扫描与实际许可文本已复核；本地容量警戒期间使用隔离 CI，没有新增本地构建或清理历史缓存。
+2026-11-03 已归档在固定 Langflow1.11.6 上完成的公共 UBI 系统维护及定向许可补采，并修补 Web libexpat；原52个显式Python pins保留。[功能代码 CI](https://github.com/qife422/ai-review-console/actions/runs/41760412382) 实际通过 **191 Python / 29 前端测试**、AMD64完整工作流/浏览器、Linux ARM64后端工作流。两架构系统包和镜像审计的具体范围、签名、版本与结果见[系统维护记录](docs/evidence/runtime-maintenance/README.md)。Linux ARM云验证不等于Mac宿主验证。
 
-**发布检查 AC-19 仍未关闭**：本轮 Langflow 受影响 Python 包由 8 个缩至 5 个，部分系统包仍有记录；Zep 精确许可及完整原生/二进制分发材料尚未闭环，未接受剩余风险或批准完整后端镜像分发。已解决项、具体约束和后续关闭条件见 [本轮兼容与许可补验](docs/evidence/release-compatibility/README.md)；[前次发布检查](docs/evidence/v02-release/README.md)、[更早收尾记录](docs/evidence/v02-acceptance/README.md)及固定 Spec 保持原字节。
+**v0.2仍未完成完整发布验收**：Langflow仍有5个Python包的扫描匹配，Debian残余记录、Zep精确许可和完整native/二进制分发材料仍待关闭。稳定/RC/开发Langflow候选没有同时解除三项上限，当前保持固定运行版本。后续按现有计划推进版本历史、修改后再审、队列效率和诊断；模型/OCR/生产化另行选择。已解决、未解决和关闭条件统一见[本轮证据与计划](docs/evidence/runtime-maintenance/README.md)，历史证据保留原字节。
 
 ## 基于 Langflow
 

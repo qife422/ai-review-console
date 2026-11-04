@@ -1,0 +1,48 @@
+{
+  "at": "2026-11-04T02:36:06.925902+00:00",
+  "tested_source_commit": "adb93c4b9f6af508188f696b8d7d1ef1dc5668ac",
+  "actual_ci_run": 41760412382,
+  "files": [
+    {
+      "path": "README.md",
+      "tested_sha256": "399fa30d6e97b4b7c36af04cad7c5f7740b1032e10548bb865c985ff1394704c",
+      "planned_sha256": "7e11c6f0c389437a0af141c62a7437a2a7890f651b9d67f028c71db55cce02a0",
+      "packaging": "README description/API COPY; notices and dependency doc API/Langflow COPY"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "tested_sha256": "2c55965f0012fd6571b7b0046040a0beb2d5488c2457fb2959576b352fc25b9e",
+      "planned_sha256": "0c80b2572cae09b390e0980854efe81c316195045cbcf6d43f8f9f824de119ec",
+      "packaging": "status/history/index only"
+    },
+    {
+      "path": "docs/CURRENT_STATE.md",
+      "tested_sha256": "d7fd34041579caf4299a62413c29afea67cac9f48d9e57ce256cbf37016bfd4b",
+      "planned_sha256": null,
+      "packaging": "status/history/index only"
+    },
+    {
+      "path": "docs/SPEC_INDEX.md",
+      "tested_sha256": "b31e080046a4a252f033137fa203d42446aee54db60a9664453d8708aa998976",
+      "planned_sha256": "6da1b6670fcb897ec343fb9eac7b71456805bebaf7c58fbcfc4e0af5b7810ae2",
+      "packaging": "status/history/index only"
+    },
+    {
+      "path": "docs/DEPENDENCY_LICENSES.md",
+      "tested_sha256": "18938dfe42ab0b24548f452fe8c3b8b469450e85c09c463b54b34b7b1913c838",
+      "planned_sha256": "590d13288344f4b568d5004a3f897bfb1bfa87503d60615fc53227c00938a991",
+      "packaging": "README description/API COPY; notices and dependency doc API/Langflow COPY"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "tested_sha256": "b37b94f1c133721a3cc3bbf7ad599b05c80405ab51f1d45162d9a324d3e40a13",
+      "planned_sha256": "16d6dd51252fd49945f9d999987456f8962b6c1c15672b98312fd615d3b4c356",
+      "packaging": "README description/API COPY; notices and dependency doc API/Langflow COPY"
+    }
+  ],
+  "followup_scope": "Only6documentation files plus sealed evidence; no business/dependency/CI/Flow/source/runtime configuration change",
+  "ci_policy": "[skip ci] skips pure documentation commit, not a passing check; avoids repeated native material inputs; functional code CI actually passed first",
+  "policy_source": "https://docs.github.com/en/actions/how-tos/manage-workflow-runs/skip-workflow-runs",
+  "exact_image_claim": "Only recorded functional-code images were built/scanned; these later metadata/document bytes are not claimed to be those images",
+  "current_state_hash": "Filled with sealed manifest after seal; Git fixes final bytes"
+}

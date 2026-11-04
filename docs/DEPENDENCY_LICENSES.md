@@ -47,7 +47,7 @@ Web 基线镜像没有 `unknown`。Debian/Alpine 镜像中的 GPL/LGPL 系统包
 
 ## 原生库与对应源码材料矩阵
 
-本轮在已存在的 Linux/arm64 API `ec611a3c0364`、Langflow `865e7348409f` 精确镜像中只读核实了声明文件的路径/哈希与可调用的版本接口，未构建、拉取或下载源码树。API 共 51、Langflow 共 50 个 native 文件，总哈希输入 95,522,697 字节。全批原计划 100 路径，实际按每镜像限额实现而合计 101，偏差与原始 producer/输出保留；不能把本次结果说成满足全批 100 路径。新镜像重验要重新绑定这些字节。以下版本是实际接口返回值，SONAME 没有被当作源码版本；运行版本也不证明厂商补丁或完整对应源码。
+前次2026-10-31在已存在的 Linux/arm64 API `ec611a3c0364`、Langflow `865e7348409f` 精确镜像中只读核实了声明文件的路径/哈希与可调用的版本接口，未构建、拉取或下载源码树。API 共 51、Langflow 共 50 个 native 文件，总哈希输入 95,522,697 字节。全批原计划 100 路径，实际按每镜像限额实现而合计 101，偏差与原始 producer/输出保留；不能把本次结果说成满足全批 100 路径。新镜像重验要重新绑定这些字节。以下版本是实际接口返回值，SONAME 没有被当作源码版本；运行版本也不证明厂商补丁或完整对应源码。
 
 | 精确组件/实际版本 | 已有许可材料与官方来源 | 精确源码定位及 SHA-256 | 仍未满足的材料/核实 |
 |---|---|---|---|
@@ -74,7 +74,7 @@ Debian / RPM / Alpine 的包管理器清单继续绑定各包精确版本、sour
 | `wheel_linux_before_all.sh` | `239552169c742123b245a6a1143740eef78720e495b2f4b1c765c4cbb2eb1b86` | `239552169c742123b245a6a1143740eef78720e495b2f4b1c765c4cbb2eb1b86` |
 | `build_libpq.sh` | `2cb45ac4c8bb5e8fc3c738c597817bcb2d224bc66073d10023f15665bee9cb8b` | `c66cc2fbea0e54d7a6ce9abbd0029662e7f7779b8e96ae3ea88f1b93bdb6ccc7` |
 
-来源为 [3.3.5 workflow](https://github.com/psycopg/psycopg/blob/3.3.5/.github/workflows/packages-bin.yml)、[3.3.5 源码构建脚本](https://github.com/psycopg/psycopg/blob/3.3.5/tools/ci/build_libpq.sh)、[3.3.4 workflow](https://github.com/psycopg/psycopg/blob/3.3.4/.github/workflows/packages-bin.yml) 及各 tag 下相同相对路径。3.3.5 配方指定 libpq 18.6 / OpenSSL 3.5.8；**3.3.4 tag 配方默认 18.0 / 3.5.4，与既有 Langflow 实读的 17.9 / 3.5.6 不同**。二者均使用构建缓存及 manylinux 基础环境；不能从 tag、配方或版本吻合推断实际 wheel 的完整厂商来源。OpenSSL 1.1.1k FIPS 的 source RPM/NVR、补丁、构建环境关联仍未取得，原有对应源码缺口不关闭。
+来源为 [3.3.5 workflow](https://github.com/psycopg/psycopg/blob/3.3.5/.github/workflows/packages-bin.yml)、[3.3.5 源码构建脚本](https://github.com/psycopg/psycopg/blob/3.3.5/tools/ci/build_libpq.sh)、[3.3.4 workflow](https://github.com/psycopg/psycopg/blob/3.3.4/.github/workflows/packages-bin.yml) 及各 tag 下相同相对路径。3.3.5 配方指定 libpq18.6/OpenSSL3.5.8。既有LF的17.9/3.5.6实际owner为 **psycopg2-binary2.9.12**；其[精确immutable构建workflow](https://github.com/psycopg/psycopg2/blob/3a6d9d6ddc6b53eaa80b712f5fa6b23abbdc38db/.github/workflows/packages.yml)与版本输入吻合，[构建脚本](https://github.com/psycopg/psycopg2/blob/3a6d9d6ddc6b53eaa80b712f5fa6b23abbdc38db/scripts/build/build_libpq.sh)仅含socketdir修改。Psycopg3.3.4属于不同owner，其默认18.0/3.5.4不能作为同一wheel的构建矛盾。各配方仍涉及cache及manylinux环境，版本吻合不证明完整厂商source/binary对应。OpenSSL 1.1.1k FIPS 的 source RPM/NVR、补丁、构建环境关联仍未取得，原有对应源码缺口不关闭。
 
 新增定向采集入口 `scripts/verify_native_materials.py` 供隔离 CI 对 API/Langflow **精确 image ID** 核实：优先收集 AMD64 `ibm_db` 的 `clidriver` 许可、`redist.txt`、版本文件及 driver/旧 OpenSSL 的 ELF GNU build-id。它不执行原生库，不下载、不挂载、不联网；全批累计最多实际读取 20 个文件（包括所读 METADATA/RECORD）、64 MiB 输入、4 MiB 文本、每个文本 256 KiB，输出 JSON 合计小于 2 MiB。目录与 RECORD 名单不是已读取正文；缺失、越界、过大及限额均需显式记录。过大 driver 如仅取得前缀，记录前缀哈希而非完整文件哈希。此次新增输入与前轮 95,522,697 字节合计仍不得超过 200 MiB；前轮 101/100 路径偏差永久保留。
 
@@ -89,3 +89,11 @@ Langflow 1.13.0 的[默认依赖](https://github.com/langflow-ai/langflow/blob/v
 3. **本记录不授权公开后端镜像或接受残余风险。** 本轮许可核实支持源码与既有静态展示范围；完整后端镜像的分发批准保留未完成，待第 1、2 项关闭后按精确制品复核。
 
 以上待解决项不以删除既有证据、忽略 unknown 或把所有依赖统称 MIT 的方式关闭。当前公开站点仍是仅虚构数据的前端沙盒，不包含这些后端库。
+
+## 本次系统维护后的定向材料结果
+
+在精确AMD镜像中取得ibm_db3.2.9 driver的REDIST、SWID、notices及实际英文协议。最后唯一补读`odbc_LI_en`55,713B（SHA-256 `0e83c4ba0bc0da1a24fd6a828002575acf4933e48f43cb5569ad02436ff5fb6e`），标识v11.5.9/LI L-ASUX-ZXSTFM并附IPLA。前一notices为LI L-XHUG-BAFKQ7/v11.5，和最后英文LI不同用途，不作为现行完整协议ID。SWID产品11.5.0及协议版本不替代实际libdb2二进制fixpack测定。随增值应用的object-code分发范围、该应用支持限制、版权/notices、商标和终端协议等条件仍需逐项履行；未认定完整后端镜像符合所有REDIST文件范围，也未代替用户接受条款。
+
+同轮只在批准的两处psycopg native目录列名未见libcrypto.so.1.*，限该AMD观察，不关闭旧ARM的FIPS/厂商对应源码问题。精确同镜像owner已交叉核对：API psycopg-binary3.3.5，LF psycopg2-binary2.9.12、psycopg3.3.4、ibm_db3.2.9、zep-python2.0.2。Zep精确许可、完整native对应源码与后端二进制分发条件仍open。最终共享批次12文件/40,256,769B，加此前输入累计135,779,466B，未重置额度或读取entitlement .lic。
+
+完整范围及指纹见[系统维护证据](evidence/runtime-maintenance/README.md)。历史ARM矩阵仍限原image IDs，本次AMD材料不以跨架构旧值代替。

@@ -1,0 +1,39 @@
+{
+  "at": "2026-11-04T02:16:54.889174+00:00",
+  "source": "185848006c2ea97ad24bead72f726c3a0d467dd4",
+  "run": 41588865769,
+  "lanes": [
+    {
+      "arch": "amd64",
+      "new_original_files": 22,
+      "original_member_bytes": 1598036,
+      "added_bytes_including_selection": 1759892,
+      "added_files": 21,
+      "vulnerability_entries": 236,
+      "exact_unchanged_values": 193,
+      "edited_original_values": 43,
+      "parsed_data_changed": 2,
+      "new_literal_fragment_files": 0,
+      "file_byte_deltas": 3
+    },
+    {
+      "arch": "arm64",
+      "new_original_files": 18,
+      "original_member_bytes": 649437,
+      "added_bytes_including_selection": 842901,
+      "added_files": 19,
+      "vulnerability_entries": 236,
+      "exact_unchanged_values": 196,
+      "edited_original_values": 40,
+      "parsed_data_changed": 2,
+      "new_literal_fragment_files": 0,
+      "file_byte_deltas": 4
+    }
+  ],
+  "projected_fresh_delta_bytes": 2683296,
+  "projected_whole_ci_bytes": 20184619,
+  "projected_whole_ci_files": 161,
+  "projected_temp_bytes": 32639241,
+  "reserve_for_projection_and_final_summary_bytes": 100000,
+  "scope": "No HTTP-records selected. Original manifests and complete ZIP files remain hash-verified; exact byte edits retain inserted new bytes and reproduce full new SHA, never whole-file equality claims."
+}

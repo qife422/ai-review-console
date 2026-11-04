@@ -1,51 +1,55 @@
 # 当前状态
 
-更新日期：2026-10-31（America/Los_Angeles）。冷启动以本文件、固定 Contract、实际源码和绑定证据为准。
+更新日期：2026-11-03（America/Los_Angeles）；主体系统/依赖验证于11-02执行，定向许可修复与最终功能CI于11-03执行。本文件为冷启动入口，固定 Contract、实际源码和有范围的证据共同定义当前状态。
 
-负责人已确认 `ARC-UPGRADE@0.1.0`，授权 P0/P1、WP-00..05 continuous；本轮明确要求先盘点镜像/缓存容量，再处理 Langflow 剩余兼容升级和许可缺口、回归并同步 GitHub。该授权不包含历史清理、风险接受、真实数据或生产部署。上轮仅针对单个中止 Grype DB 的删除已经完成，不扩展至其他镜像、缓存或卷。
+负责人已批准 `ARC-UPGRADE@0.1.0`，授权 P0/P1、WP-00..05 continuous；本次授权继续评估 Langflow、处理系统补丁和许可证、回归并同步 GitHub。用户在累计180分钟预算确认后回复“可以”，同目标当时已耗约87.6分钟保留，不清零。本次没有历史清理、真实数据、生产部署、完整后端镜像分发或残余风险接受授权。
 
 | 轴 | 当前状态 |
 |---|---|
-| Contract | approved / `ARC-UPGRADE@0.1.0`；固定正文未改 |
-| 交付 | implementing；WP-05 发布问题仍 open；continuous |
-| 本轮结果 | 容量盘点、兼容升级、许可材料补充、回归和问题/计划同步完成；具体通过与未通过分列 |
-| 功能验证 | `a64ab476c8acfaa36a3d6cc260a4c6c286bad380` 的 CI `41263397231`：completed/success；161 Python / 29 前端、真实四格式/三决定/九报告、失败重试、双主题双尺寸浏览器、52 pins/pip check及离线兼容探针通过 |
-| 发布检查 AC-19 | not passed；残余包级发现和完整镜像分发材料仍未关闭；CI 绿色不代表发布通过 |
-| 完整技术验收 | `last_verified=null`；局部通过以精确版本和范围理解 |
-| 最终接受 | pending；未接受剩余风险 |
-| 证据 | `active_evidence=sealed`；本轮增量及原固定证据见下方 |
-| 外部范围 | GitHub 公开源码；既有仅虚构预置数据的静态沙盒保留，本轮未重部署在线站点或真实后端 |
-| 保护 | 原 SQLite、历史库/卷、已记录决定、固定 Spec/baseline、历史证据和无关文件未迁移或清理 |
+| Contract | approved / 0.1.0；固定正文不变 |
+| 交付 | implementing；WP-05发布问题仍open，continuous |
+| 当前运行时 | Langflow1.11.6原base digest和52个显式Python pins保持；新增UBI公共仓库系统补丁层及Web libexpat维护 |
+| 本轮功能代码 | adb93c4b9f6af508188f696b8d7d1ef1dc5668ac / CI 41760412382：191 Python/29前端；AMD完整工作流/浏览器、Linux ARM后端全部success；只定向补采唯一English协议 |
+| 发布AC-19 | not passed；剩余依赖/供应商及分发材料仍未闭项 |
+| 完整技术验收 | last_verified=null；局部通过仅在对应source/image/profile范围 |
+| 最终接受 | pending，未接受残余风险 |
+| 活动证据 | sealed；本轮系统维护增量，旧三个包原字节保留 |
+| 外部范围 | 公开GitHub源码和既有虚构数据静态沙盒；本轮没有重部署沙盒或真实后端 |
+| 保护范围 | 原SQLite、历史数据库/卷、决定、固定Spec/baseline、历史证据与无关文件 |
 
 ## 当前证据
 
-- [本轮兼容与许可补验](evidence/release-compatibility/README.md)：已解决、剩余约束、容量、扫描与后续关闭条件。
-- [本轮 manifest](evidence/release-compatibility/manifest.json)：SHA-256 `0466646bd5eecd32768e9fc61bf138815853292049a41a95dc1d98927e2081ef`；精确 source/image、命令/方法、producer 和 payload 指纹。
-- [实际代码 CI 41263397231](https://github.com/qife422/ai-review-console/actions/runs/41263397231)。随后文档提交的影响另见本轮 `environment/documentation-impact.json`；不把后续文档字节标成该次构建的镜像。
-- [前次发布验收](evidence/v02-release/README.md)及[更早收尾验收](evidence/v02-acceptance/README.md)仍适用于其原输入/环境，固定原字节；故障、隔离恢复及性能没有在新依赖下重跑。
+- [系统维护与候选评估](evidence/runtime-maintenance/README.md)：已解决、实际测试/扫描、限制和后续关闭条件。
+- [正式manifest](evidence/runtime-maintenance/manifest.json)：SHA-256 `5a400e77b5e3b28426f2efe99d723b48aee5e1e95d9c7e4a4c9665364963b724`。
+- [功能代码CI](https://github.com/qife422/ai-review-console/actions/runs/41760412382)：精确source/images和两种profile结果。之后纯文档/证据提交使用 `[skip ci]`，不声称跳过是成功，也不声称新说明字节属于这些精确镜像；影响见[文档提交影响](evidence/runtime-maintenance/environment/documentation-impact.json)。
+- [前次兼容补验](evidence/release-compatibility/README.md)、[前次发布扫描](evidence/v02-release/README.md)、[早期收尾](evidence/v02-acceptance/README.md)按其原输入/环境理解。旧故障恢复、隔离恢复、性能不标成在新系统补丁下完整重跑。
 
-## 已解决与剩余
+## 已验证与剩余
 
-本轮把 OAuthlib 升至 4.0.0、datamodel-code-generator 升至 0.81.0、OTel 成套升至 1.45.1/0.66b1，另固定其两个新增 exporter 依赖。Langflow 仍为 1.11.6，现在共 52 个显式 pin。新增离线探针覆盖相关兼容行为与安全回归，真实 Flow 分开验证；metadata 图不代替安装和运行。
+系统维护在两架构实际更新60个既有软件EVR、新增1软件无移除；227条RPM=224软件+3公钥。RHEL补扫0ID/0unknown，主扫描exit2与227RPM unknown原记录保留，由同exactimage/fullEVR集合补扫覆盖，清单内合并unknown0。Web libexpat2.10.0-r0扫描0；API126、PostgreSQL130个Debian IDs；LF仍5个Python包/81 IDs/59 alias组，provider并集236。这些不是独立CVE/可利用性计数，也不覆盖全部内嵌文件。
 
-新 CI 的 Linux/amd64 包级扫描仍有记录：API 114 个 Debian IDs；Langflow 5 个 Python 包 / 81 IDs / 59 alias 组，另 23 个 RHSA IDs；PostgreSQL 116 个 Debian IDs，Web 为 0。跨镜像 provider IDs 并集 245，不等于独立 CVE 或可利用漏洞数。默认 226 RPM unknown 的原 exit 2 保留，由同一 LF image ID、字节完全相同清单的 RHEL 补扫覆盖 223 软件包及 3 公钥；清单内合并 mapping/query/detail unknown=0，原补扫 exit 1 保留。没有覆盖全部文件系统、静态/内嵌二进制或可利用性。
+最终实际191 Python/29前端、52pins/pip check/兼容探针、5组件/2Flow/4格式/3决定/9下载通过；AMD浏览器passed，ARM仅后端。负向失败重试保持同case/version并一次重试代次，仍failed是预期，不标成成功恢复。详细指标和精确source/image、未选范围见本轮证据。
 
-补入 dnspython/FastMCP 原文，LFX 使用同版本 Langflow MIT，镜像携带副本情况由新 CI 哈希证明。许可采集会排除误选源码/pyc；新增 util-http 0.66b1 缺自身文本，已按精确同 tag/版本及哈希映射到镜像实际携带的 OTel instrumentation Apache 原文，不改写原始 own-text 缺失。Zep 2.0.2 仍缺充分许可依据，current extras 的 exact pin 未被忽略；同名 `v2.0.0` tag 实为 zep-cloud，不能转移许可。原生库的实际版本、路径哈希、官方源码校验及缺项已形成[矩阵](DEPENDENCY_LICENSES.md)，但厂商 FIPS source/patch、部分 native 对应材料、AMD64 IBM driver 和完整二进制分发条件仍未闭环。完整后端镜像没有分发批准。
+11-02官方候选快照评估（不代表未来最新）：稳定1.13.0仍保留Pillow<13/filelock<4/setuptools<84；RC1.13.1rc2、当次可见开发版1.14.0.dev14仅放开当前Python分支的filelock>=4.2.1,<5。没有候选安装/GUI/API/迁移兼容通过证据，因此保持当前固定基线。1.13元数据中的bundles/extras拆分只提供fresh runtime去除Zep的未来核实路径，不证明旧胖镜像内集成已移除。
 
-## 容量、数据与产物
+已补齐Psycopg3.3.5与Psycopg2-binary2.9.12各自精确recipe/patch来源，纠正跨owner配方比较；实际AMD取得IBM REDIST、notices和55,713B英文协议。协议标识v11.5.9/LI L-ASUX-ZXSTFM，不能据此独立断定libdb2二进制fixpack。新增本轮12文件/40,256,769B，加旧输入累计135,779,466B；最后沿共享剩余额度只读唯一English路径，剩8文件/26,852,095B输入/4,026,824B文本。许可文本取得关闭材料缺失，分发条件/全清单符合与厂商源码仍未批准。
 
-精确 Docker 盘点：全局 layers 21,874,078,300B，加非 shared build-cache 2,413,293,031B，记账合计 24,287,371,331B；shared cache 不重复相加。已知 ARC 11 个 image ID，另 6 个历史引用 ID 元数据不可用。当前全局增长代理约 2.900GiB，不抹掉此前 3GiB 警戒，也不能证明项目完整物理总量低于 12GiB。因此继续暂停本地 build/pull/构建缓存扩张，本轮改用隔离 CI。无 prune、历史迁移或其他清理；`cache_state=warning`、`pending_cleanup=true`。
+完整后端分发尚未批准，Zep2.0.2精确许可、厂商FIPS/若干native对应源码、IBM完整文件清单与许可条件仍在后续清单；Python包的项目许可不覆盖所有随包二进制。
 
-原 SQLite 57,344B，SHA-256 `980ad5d23d866a52e4101966594e5a24ee67edef08475afc63ff9c3e1f6fca1f`；原 Spec `a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753`、baseline `5ad13f524e74554b9c8cb30b9809ffbbbbed8e3d7fa4ede5625bb1b7d781bf2e` 均不变。保护核对与旧 payload 完整性见本轮 `environment/protection-check.json`。
+## 数据、容量与产物
 
-本轮 temp `/private/tmp/arc-release-followup.rLeRu5`、候选 `artifacts/evidence-candidates/release-compatibility/`、正式 `docs/evidence/release-compatibility/`。仅 manifest 选入字节为正式证据；原始全局 Docker snapshot 私有保留，ZIP/缓存/构建树/数据库不入包。新临时产物上限 40MiB（全局 temp 门槛 256MiB/10,000），候选/正式各 100MiB/1,000，源码放大门槛 >1GiB 且 >100倍；本轮实际量见 manifest。旧缓存和历史产物保留待处置，没有为恢复旧路径复制完整树。
+原SQLite57,344B，SHA-256 `980ad5d23d866a52e4101966594e5a24ee67edef08475afc63ff9c3e1f6fca1f`。固定Spec `a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753`、baseline `5ad13f524e74554b9c8cb30b9809ffbbbbed8e3d7fa4ede5625bb1b7d781bf2e`，三个旧正式包全部payload逐文件复核不变。本轮仅使用新CI项目/新虚构记录；原库卷未启动、迁移或删除。
 
-原生许可采集原计划全批 100 路径，producer 按镜像执行而实际 101 路径/95,522,697B；偏差保留，后续停止补读，不标成满足全批限额。新镜像的 native byte correspondence 尚未由本轮旧 ARM 样本证明。
+本地Docker socket不可连接，当前layers/历史归属未新验，原 `cache_state=warning` 和 `pending_cleanup=true` 保留。没有为继续验证启动本地Docker、build/pull、prune、迁移或扩大本地缓存。宿主空间及旧盘点适用范围见本轮capacity记录。CI两架构先记录uname/df，低于12GiB停安装/构建，collector仍保留6GiB入口/5GiB运行余量门禁。
 
-## 后续顺序
+本轮temp `/private/tmp/arc-runtime-maintenance.wT9huB`，候选 `artifacts/evidence-candidates/runtime-maintenance/`，正式 `docs/evidence/runtime-maintenance/`。temp40MiB/10,000文件；双架构CI合计选择20MiB/200文件；候选/正式各100MiB/1,000文件；源码放大门槛>1GiB且>100倍。仅manifest选中固定字节为正式证据，私有ZIP/未选文件/缓存/构建树/数据库保留原分类，无清理或整树备份。
 
-1. 继续 WP-05：Pillow/filelock/setuptools 的上游版本上限、chromadb/couchbase 的明确修复/厂商适用性，及 Debian/RHEL 基础包；先固定受支持候选和影响，再跑依赖图、精确镜像、探针、真实 Flow/报告和受影响故障回归。
-2. 关闭 Zep 精确许可及 native/完整源码与通知材料；本地扩张前补足容量归属和峰值估算。清理、迁移或额度改变需另有适用的明确决定。
-3. 发布条件全部关闭后申请完整技术及负责人最终接受，再进入既有 WP-08 的版本历史、再审、队列效率和诊断。模型/OCR/真实数据/生产化仍按固定 Spec 独立选择。
+Native输入首次实际10文件/40,177,611B；随后用固定 `compliance/native-baseline.json` 恢复剩余10文件/26,931,253B做定向补采；第三轮只新增23,445B notices，最后沿剩余9文件/26,907,808B继续唯一英文协议目标，不重读driver40MB、不重新完整遍历。ARM不另开第二份targetednative预算，旧101/100路径偏差保留；实际累计见manifest和补采原件。
 
-同目标预算 90 分钟跨 turn/子代理累计，没有切片清零。普通技术故障三轮有证据且无进展即停止受影响范围；权限、Contract、数据、不可逆或容量边界即时停受影响动作。最小阅读：适用 AGENTS → 本文件 → [Spec 索引](SPEC_INDEX.md) → 本轮增量证据 → 固定 Spec 当前 WP → 代码。
+## 后续计划
+
+1. 先继续WP-05的明确剩余项：Pillow/filelock/setuptools上限、chromadb/couchbase的修复或厂商适用性、Debian残余记录，以及Zep/native/IBM完整分发材料。候选运行时需按AD-03固定版本/影响/重测，涉及行为、认证或数据语义时先形成delta与对应决定。
+2. 发布条件、完整技术验收和负责人最终接受后，按现有WP-08做版本历史、修改后再审、队列筛选与效率、失败诊断及受控恢复；首个可运行功能切片优先“查看历史版本并对要求修改的案件提交新版本”。
+3. LLM语义建议、OCR、真实身份/权限、真实数据和生产部署仍是独立阶段；需模型/预算/数据出口与评测决定，不因本轮CI绿色直接开启。
+
+普通技术问题三轮有证据且无进展即停止受影响范围；权限、Contract、数据、不可逆和容量边界即时停止受影响动作。最小阅读：适用AGENTS → 本文件 → [Spec索引](SPEC_INDEX.md) → 本轮证据 → 固定Spec当前WP → 源码。

@@ -1,0 +1,27 @@
+{
+  "schema": "arc.independent-system-cli-correction-review.v1",
+  "at_utc": "2026-11-03T05:53:45.324364+00:00",
+  "reviewer": "release_python",
+  "inputs": [
+    {
+      "path": "scripts/apply_system_updates.py",
+      "bytes": 8491,
+      "sha256": "50ac38282e4bce3d2619d8dd3af46885c217fe6f9e3bf1e5b0ef58f39c3b8821"
+    },
+    {
+      "path": "tests/test_apply_system_updates.py",
+      "bytes": 3991,
+      "sha256": "55797c743b2aaecb203e309804566f88b859dc5571f3055829aed0a1e8c13f86"
+    }
+  ],
+  "prior_review": "system-source-review.json remains original-byte source review; it did not establish actual microdnf CLI compatibility. First real CI rejected the former global gpgcheck argument.",
+  "official_source": {
+    "url": "https://github.com/rpm-software-management/microdnf/blob/3.10.1/dnf/dnf-main.c",
+    "previously_downloaded_raw_path": "/private/tmp/arc-runtime-maintenance.wT9huB/system/microdnf-3.10.1-dnf-main.original.c",
+    "sha256": "a2447447434888ad078e2c71eda35091585804677958f6a6364bd2d97485849e",
+    "observed_code": "process_global_option --setopt uses the repository-option branch when the option name contains a dot; non-listed global options fall into Unable to handle. The global-options help explicitly documents repo_id.option_name=<value>."
+  },
+  "conclusion": "Current manager_args scopes gpgcheck=1 and sslverify=1 separately to each selected validated repository ID, matching the official microdnf3.10.1 parsing path. Global install_weak_deps/keepcache are explicit supported options. No signature or TLS policy was disabled.",
+  "material_findings": [],
+  "runtime_status": "Pending new CI actual package transaction and RPM/result validation; no local microdnf/Docker execution or source mutation by reviewer."
+}

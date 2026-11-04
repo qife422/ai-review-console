@@ -1,0 +1,53 @@
+{
+  "schema": "arc.independent-system-source-review.v1",
+  "at_utc": "2026-11-03T05:46:46.946802+00:00",
+  "reviewer": "release_python",
+  "inputs": [
+    {
+      "path": "scripts/apply_system_updates.py",
+      "sha256": "4bc2cc536bb4e0ee958f916c57f8e02b22944629d5fb87c600a82528648446b9"
+    },
+    {
+      "path": "tests/test_apply_system_updates.py",
+      "sha256": "dbf59d2c3bde90da684ab4b65a58dc15cf5ed3f0de810783940027bba734a0f6"
+    },
+    {
+      "path": "docker/langflow.Dockerfile",
+      "sha256": "bb38c30695ea422839935a6209786f8ab8728d054210756d2b1af1e9d6b59cb6"
+    }
+  ],
+  "scope": "Source-only independent review and small process guard probe; no Docker/package-manager/network invocation.",
+  "findings": [],
+  "accepted_source_checks": [
+    "Explicitly disable other repositories on every microdnf invocation.",
+    "Only public UBI10 CDN HTTPS path, matching BaseOS/AppStream components, local pinned-image key path and gpgcheck permitted.",
+    "sslverify=1 and gpgcheck=1 explicitly passed to manager.",
+    "Current-base-major check, image-only cache clean and immutable output directory.",
+    "Post-exit output capacity check catches a quick finished child.",
+    "RPM before/after retains epoch, architecture and installed signature for CI review."
+  ],
+  "capacity_probe": {
+    "limit_bytes": 128,
+    "stdout_bytes": 1025,
+    "expected_refusal": "oversize failed: exit=0, stop=output_capacity",
+    "record": {
+      "argv": [
+        "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1/.venv/bin/python",
+        "-B",
+        "-c",
+        "print('x'*1024)"
+      ],
+      "started_at": "2026-11-03T05:46:46.740075+00:00",
+      "ended_at": "2026-11-03T05:46:46.946673+00:00",
+      "exit_code": 0,
+      "stop_reason": "output_capacity",
+      "stdout": "oversize.stdout",
+      "stderr": "oversize.stderr"
+    }
+  },
+  "unverified": [
+    "Actual pinned-image default .repo bytes were not read locally; multi-line keys/URLs are intentionally rejected and actual configuration match must be proved by CI build.",
+    "No actual package transaction, signature result, updated RPM version or remaining RHEL finding has yet been verified by this source review."
+  ],
+  "earlier_local_probe_note": "First attempt used system Python3.9 and could not import datetime.UTC; this is a host interpreter mismatch, not evidence against target Python3.14. The existing .venv interpreter was used for this final probe."
+}

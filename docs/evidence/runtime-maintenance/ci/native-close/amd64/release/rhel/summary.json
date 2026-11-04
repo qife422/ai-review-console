@@ -1,0 +1,23 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "AC-19",
+    "RELEASE-001"
+  ],
+  "producer": "scripts/scan_images_osv.py --redhat-only",
+  "started_at": "2026-11-04T02:30:47.519650+00:00",
+  "image_id": "sha256:fd6d66658d49008b53095d2669de17f88360038cbfc8238aa509ffd2e1aaa02c",
+  "service": "https://api.osv.dev/v1",
+  "result": "queried_no_match",
+  "database_snapshot_date": null,
+  "rpm_entries": 227,
+  "metadata_only_public_keys": 3,
+  "mapped_software_packages": 224,
+  "unique_queries": 672,
+  "observed_unique_advisory_ids": 0,
+  "matched_software_packages": 0,
+  "findings": [],
+  "mapping_unknown": 0,
+  "query_unknown": 0,
+  "detail_unknown": 0
+}

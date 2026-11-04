@@ -1,0 +1,229 @@
+{
+  "created_at": "2026-11-04T02:15:59.120916+00:00",
+  "source_commit": "185848006c2ea97ad24bead72f726c3a0d467dd4",
+  "ci_run": 41588865769,
+  "artifact_id": 13209590935,
+  "artifact_zip_sha256": "a92329a65585e867bd940a31a6def2487edb1756ce28388b7d63512f7b46f068",
+  "review": "Actual third-CI targeted native follow-up; not distribution approval",
+  "raw": {
+    "root": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/delta/final-185848-amd64/release/native",
+    "materials_bytes": 37517,
+    "materials_sha256": "557010a4b7d40eb40176cd926df59946603d95e843047ed51826e64a2e7fc60b",
+    "manifest_sha256": "159e153f9a8d2d768963025b478a9670ad3b9423d806e7e7a8f447f9af4f3873",
+    "producer_sha256": "57cc7fc1e73b0cc08cc1253957f35383f0f58ee3d74f9a2284105055b3b10faf",
+    "manifest_matches_actual_materials": true
+  },
+  "images": [
+    {
+      "name": "langflow",
+      "image_id": "sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+      "architecture": "x86_64"
+    },
+    {
+      "name": "api",
+      "image_id": "sha256:dac5965a840be8d2da28d1bb3e2098b42ea4fe9aeefa010357344f0a43166e10",
+      "architecture": "x86_64"
+    }
+  ],
+  "baseline": {
+    "path": "compliance/native-baseline.json",
+    "sha256": "eadfcf4078cf6143e97fb373335ec257737edc14d006ff0aa2be184c6a291903",
+    "source_commit": "2e45bee8c61dfab347edd107aebb6a3488567761",
+    "original_materials_sha256": "cf205390853df3a4c77d2123bbc897a0f63a6b32f8291907f0b83de445bbed1d",
+    "original_manifest_sha256": "8a3307116c234e05e221dcd72247607aead3eabb1952fc54e995c804873168fa",
+    "preserved_previous_raw_and_review": true
+  },
+  "budget": {
+    "starting": {
+      "files": 10,
+      "input_bytes": 26931253,
+      "text_bytes": 4105982
+    },
+    "actual_this_invocation_files": 1,
+    "actual_this_invocation_input_bytes": 23445,
+    "remaining": {
+      "files": 9,
+      "input_bytes": 26907808,
+      "text_bytes": 4082537
+    },
+    "remaining_passed_between_images_without_reset": true,
+    "total_new_native_reads_since_2e": 11,
+    "total_new_native_input_since_2e": 40201056,
+    "cumulative_goal_input_bytes": 135723753,
+    "cumulative_goal_limit_bytes": 209715200,
+    "prior_101_of_100_deviation_retained": {
+      "paths": 101,
+      "planned_paths": 100,
+      "deviation_retained": true,
+      "input_bytes": 95522697
+    },
+    "within_limits": true,
+    "arm": "Explicit not-collected profile; no second native budget on ARM"
+  },
+  "generic_exact_image_metadata": [
+    {
+      "image_name": "api",
+      "image_id": "sha256:dac5965a840be8d2da28d1bb3e2098b42ea4fe9aeefa010357344f0a43166e10",
+      "zip_member": "release/licenses/api.json",
+      "raw_bytes": 178050,
+      "raw_sha256": "38bb0a2ccca5e78de92f746b2aa89446b0c06b824be9d4a3534ee0e7b87542a2",
+      "child_manifest_verified": true,
+      "packages": [
+        {
+          "name": "psycopg",
+          "version": "3.3.5",
+          "location": "/usr/local/lib/python3.12/site-packages",
+          "license_expression": "LGPL-3.0-only",
+          "license_metadata": null
+        },
+        {
+          "name": "psycopg-binary",
+          "version": "3.3.5",
+          "location": "/usr/local/lib/python3.12/site-packages",
+          "license_expression": "LGPL-3.0-only",
+          "license_metadata": null
+        }
+      ],
+      "method": "Read in memory from verified downloaded ZIP; no duplicate raw JSON extraction"
+    },
+    {
+      "image_name": "langflow",
+      "image_id": "sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+      "zip_member": "release/licenses/langflow.json",
+      "raw_bytes": 1026546,
+      "raw_sha256": "e847895b72b052b0890169815364cf8947cc56d61c052d8c7b98a68c8d512bb8",
+      "child_manifest_verified": true,
+      "packages": [
+        {
+          "name": "ibm_db",
+          "version": "3.2.9",
+          "location": "/app/.venv/lib64/python3.14/site-packages",
+          "license_expression": null,
+          "license_metadata": "Apache License 2.0"
+        },
+        {
+          "name": "psycopg",
+          "version": "3.3.4",
+          "location": "/app/.venv/lib64/python3.14/site-packages",
+          "license_expression": "LGPL-3.0-only",
+          "license_metadata": null
+        },
+        {
+          "name": "psycopg2-binary",
+          "version": "2.9.12",
+          "location": "/app/.venv/lib64/python3.14/site-packages",
+          "license_expression": null,
+          "license_metadata": "LGPL with exceptions"
+        },
+        {
+          "name": "zep-python",
+          "version": "2.0.2",
+          "location": "/app/.venv/lib64/python3.14/site-packages",
+          "license_expression": null,
+          "license_metadata": null
+        }
+      ],
+      "method": "Read in memory from verified downloaded ZIP; no duplicate raw JSON extraction"
+    }
+  ],
+  "ibm": {
+    "notices": {
+      "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/odbc_notices.txt",
+      "bytes": 23445,
+      "sha256": "2b17aff0579ec93c70fb9b5553dcb20778c6a5ca76dd613fd280414a1dc573fe",
+      "state": "actual_text_obtained_from_exact_new_LF_image",
+      "license_information_identifier": "L-XHUG-BAFKQ7",
+      "scope": "Notices identify XML4C5.8/Apache2 and GSKitV8 OpenSSL-original/SSLeay,zlib,ICU notices. File says these notices are informational and may mention components not shipped/used; it is not the driver agreement or runtime-version inventory."
+    },
+    "unix_agreement": {
+      "state": "present_name_but_not_read",
+      "exact_path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_en",
+      "reason": "Actual basename has odbc_ prefix; collector English selector recognizes LI_en/LA_en only and explicitly excluded odbc_LI_en. This is a collector selection defect, not an external absence of the file or legal permission.",
+      "actual_all_english_agreement_text_obtained": false
+    },
+    "previous_2e_materials": "2e raw contains actual REDIST/SWID/product11.5.0/libdb2.so fingerprint for older 2e image ID. Those bytes were not reopened or falsely rebound to the newer185 image.",
+    "version": "Exact new-image generic inventory confirms Python wrapper ibm_db3.2.9. Driver fixpack is not established by wrapper metadata, older product SWID or setup default.",
+    "remaining": [
+      "Read the identified odbc_LI_en and reconcile its terms with REDIST and intended distribution",
+      "Obtain/apply any referenced overarching agreement as applicable",
+      "Compare full intended driver file scope with permitted redistribution range",
+      "Establish actual driver fixpack/build identity"
+    ],
+    "redistribution_approval": false
+  },
+  "legacy_crypto": {
+    "approved_immediate_directory_results": [
+      {
+        "image": "langflow",
+        "path": "/app/.venv/lib/python3.14/site-packages/psycopg_binary.libs",
+        "state": "missing_directory",
+        "crypto_files": [],
+        "legacy_candidate_count": 0
+      },
+      {
+        "image": "langflow",
+        "path": "/app/.venv/lib/python3.14/site-packages/psycopg2_binary.libs",
+        "state": "listed",
+        "crypto_files": [
+          "libcrypto-88208852.so.3"
+        ],
+        "legacy_candidate_count": 0
+      },
+      {
+        "image": "api",
+        "path": "/usr/local/lib/python3.12/site-packages/psycopg_binary.libs",
+        "state": "listed",
+        "crypto_files": [
+          "libcrypto-d2905bf5.so.3"
+        ],
+        "legacy_candidate_count": 0
+      },
+      {
+        "image": "api",
+        "path": "/usr/local/lib/python3.12/site-packages/psycopg2_binary.libs",
+        "state": "missing_directory",
+        "crypto_files": [],
+        "legacy_candidate_count": 0
+      }
+    ],
+    "actual_legacy_candidates": 0,
+    "actual_native_crypto_body_reads": 0,
+    "actual_embedded_version_strings_obtained": [],
+    "actual_elf_build_ids_obtained": [],
+    "qualified_conclusion": "Actual new AMD64 listings in these two approved wheel-library directories contain only libcrypto*.so.3, no matching legacy.so.1.* filenames. This closes candidate-presence checking for exactly these directories and images only. It does not establish all-image/FIPS absence, runtime OpenSSL3 versions, ARM state or vendor-source correspondence.",
+    "prior_arm_fips": "Older ARM64 inventory reported OpenSSL1.1.1kFIPS. It remains separate, not disproved or revalidated by AMD directory lists.",
+    "still_unresolved": [
+      "Exact corresponding vendor source/patch/build provenance for previously observed ARM FIPS binaries",
+      "Bundled native source/notice correspondence beyond listed paths",
+      "Cross-architecture source/binary completeness"
+    ]
+  },
+  "owner_mapping": {
+    "api": "Current exact-image generic metadata confirms psycopg-binary3.3.5; recipe libpq18.6/OpenSSL3.5.8 is for this package. Directory name alone was not used as version proof.",
+    "langflow": "Current exact-image generic metadata confirms psycopg2-binary2.9.12 and separate pure-Python psycopg3.3.4. Correct psycopg2 recipe17.9/3.5.6 matches prior ARM observation; no cross-owner build mismatch is claimed."
+  },
+  "zep": {
+    "actual_current_image_version": "2.0.2",
+    "exact_release_license_expression": null,
+    "permission_resolved": false
+  },
+  "subgaps_closed": [
+    "Actual new-image IBM notices text retained with exact hash and image binding",
+    "Actual AMD64 approved native-directory candidate filenames obtained; no legacycrypto candidate in them",
+    "Baseline carry-forward and cumulative budget independently verified",
+    "Owner/version cross-check performed using generic inventory of the same image IDs"
+  ],
+  "not_closed": [
+    "IBM English LI text was missed by selector, despite visible odbc_LI_en path",
+    "Driver agreement conditions, exact fixpack and intended distribution scope",
+    "Prior ARM FIPS corresponding source and native source/notice completeness",
+    "Zep2.0.2 exact-release permission",
+    "Full backend image redistribution approval"
+  ],
+  "next_precise_action": "No fourth collection this round. Before any later read, advance a fixed baseline to this final remaining9files/26,907,808 input/4,082,537 text and knownGoal135,723,753; do not replay the older10-file baseline. Add regression for actual odbc_LI_en filename, then read only that known path under renewed scoped execution.",
+  "legal_approval": false,
+  "full_backend_redistribution_approved": false,
+  "raw_or_source_modified": false,
+  "local_docker_used": false,
+  "new_network_or_installation": false
+}
