@@ -4,7 +4,7 @@
 
 ## 当前结论与授权
 
-已批准的单独 Linux VM 工作包完成机制实验，实例已停止保留。该例外对应 `cad3703` 及原实验根。用户已确认没有现成的独立 Mac 验收实例，本轮授权限于核算各阶段容量、整理待确认范围、自查与 GitHub 同步。当前业务回归状态为 `not_started`。
+已批准的单独 Linux VM 工作包完成机制实验，实例已停止保留。该例外对应 `cad3703` 及原实验根。用户随后按 `2a9aa0e` 批准当前 Mac 的单实例容量例外、分阶段执行和一次虚构五案九报告。旧 Docker 归属待盘清期间仅对此实例单列准入，沿用累计 600 分钟。批准条件包括先锁定下载清单和停点，再逐阶段核实容量。当前业务回归为 `not_started`，停在创建前。[执行准入结果](#执行准入结果)
 
 结论只覆盖Linux/Moby28.3.2恢复机制：restart=false可在本实验前置条件下抑制符合策略的已停止容器恢复；它不终止live-restore存活任务，也不保证daemon对存储只读。Mac Desktop配置传递、原历史盘保护及本机业务验收仍未通过；不能据此启动旧盘或认定完整AC-19通过。
 
@@ -78,7 +78,19 @@ Docker 官方 Registry 的索引及 ARM64 子 manifest 已逐级核 SHA，两个
 
 在上述例外获准且逐阶段满足入口后，执行范围包括取得并核验固定制品，创建和启动唯一实例，解包引擎，拉取两基底，顺序构建 API 和候选 Langflow，初始化四个空卷，运行一次五案九报告，停止自有实例并保留产物，最后选材、自查与 GitHub 同步。执行前需确认完整下载清单、峰值和停止控制，使用原 600 分钟账本。执行阶段暂估 45–75 分钟，取 75 分钟与账本余量中较小者，并预留收尾。额外镜像、第二实例、扩盘、清理、旧 Desktop/原盘、默认替换和发布需分别决策。
 
-本轮仅完成分阶段核算与确认稿，拟用新根尚不存在，业务仍为 `not_started`。Sol 读取元数据与封存输入，Astra 复核上界逻辑，root 集成并自查。完整 WP-05、AC-19、Mac 业务回归及发布许可仍待完成。
+以上为 `2a9aa0e` 的确认基线。其容量例外和分阶段执行范围已按本文件开头的用户决议获准。
+
+#### 执行准入结果
+
+2026-11-05 14:28（America/Los_Angeles），宿主 `statvfs` 可用 27,073,880,064B（25.21 GiB），通过 24 GiB 宿主入口。原机制根 `lstat` 实际分配 2,038,247,424B，加新根 10 GiB 规划后距两根 12 GiB 合计上限仅余 109,236,224B。新根仍不存在。独立流式核对 Debian 基盘和三份引擎 DEB 的封存摘要。宿主 `limactl` 与签名绑定的发布归档中同名成员 SHA-256 相同，两插件长度及 SHA-256 与既有签名索引一致。
+
+[已固定的部分输入清单](mac-acceptance-inputs.json)记录 URL、字节数与摘要，当前标记 `execution_ready: false`。本轮从公开来源读取元数据，未下载镜像层、wheel、插件或 Debian 包正文。
+
+- **API 与候选。** API 33 个运行 pin、pip 和五个项目构建工具已选定 39 个兼容 wheel，共 37,236,398B。其中 19 档按 SHA 与 LF 选档共用，新增 22,255,953B。LF 既有 334 档含 4 个 sdist，沿原哈希锁。API 的 `pip install --no-deps .` 仍会创建隔离构建环境。可用固定 Hatchling 工具集从同一源码离线构建项目 wheel，再在隔离环境核实际清单和 `pip check`。该路径尚未实跑。
+- **基底与 APT。** 两个官方 ARM64 manifest 重新核 SHA，绑定 18 层和配置。三套 Debian `InRelease` 与按 SHA 取的 ARM64 索引共 9,297,332B 元数据，索引长度和哈希匹配。从中选出 `apt`、`libapt-pkg6.0`、`libpq5`、`libldap-2.5-0` 和两份 SASL 包，共 2,569,568B。签名复核和与精确 Python 基底状态绑定的 APT 安装事务仍待验证。Dockerfile 中 APT/pip 的隐式下载及引擎重试也需纳入同一 1 GiB 接收限额。 [APT 事务选项](https://manpages.debian.org/bookworm/apt/apt-get.8.en.html) · [Docker 拉取重试](https://docs.docker.com/reference/cli/dockerd/)
+- **首次启动停点。** 2,048 MiB 阶段预算扣除静态映射及已估引擎/归档成本后余 489,310,080B（约 466.64 MiB）。两插件尚无实测归档成员展开量，这一余量还要覆盖分区和文件系统、首次开机写入及停止延迟。旧 4 GiB VM 的首次 `start` 前后分配差为 1,519,616B，只反映旧配置的两次读数。旧守卫三轮均未触发，`limactl stop --force` 的 30 秒调用超时无法界定落盘完成时间或停止增量。8 GiB 盘的静态转换上界无法涵盖首次启动时的扩容与初始化写入。 [Lima 2.2.1 VZ 创建路径](https://github.com/lima-vm/lima/blob/v2.2.1/pkg/driver/vz/vz_driver_darwin.go) · [cloud-init 扩容行为](https://docs.cloud-init.io/en/latest/reference/modules.html#growpart)
+
+本轮只读前置核对通过后，因完整取件控制和首启峰值上界仍缺，按已批准停点保留 `not_started`。未创建或启动实例，因此没有本轮实例需要停止，旧机制实例及原 Docker 均未操作。由 Agent 在原额度内先核固定 APT 事务和全路径接收控制，再核可执行的首启写入及停止上界。若只能通过更改盘布局、容量停点或另行启动校准实例取得证据，由用户决定对应变更。五案九报告、完整 WP-05 和 AC-19 仍待完成。
 
 ## Mac 业务回归准入复核
 
@@ -170,7 +182,7 @@ live-restore组两个既有任务跨daemon关闭仍存在，restart=false重连�
 
 ## 尚未解决及具体下一步
 
-- 当前 Mac 独立业务回归为 `not_started`。用户先决定[单目标容量例外和分阶段执行范围](#分阶段容量核算与确认项)。获准后由 Agent 冻结取件清单和停止控制，逐阶段核峰值、磁盘、socket 和四个新卷，再执行一次虚构回归。同版 Desktop 配置传递验证另列。
+- 当前 Mac 独立业务回归为 `not_started`，单目标范围已获准。由 Agent 先补齐[创建前缺项](#执行准入结果)，再逐阶段核峰值、磁盘、socket 和四个新卷。同版 Desktop 配置传递另列。
 - 由Agent依[发布缺口矩阵](evidence/release-gaps/README.md)补系统/原生库source、通知及提供方式，精确Zep2.0.2问题仍依维护者对[#368](https://github.com/getzep/zep-python/issues/368)的可用澄清；本轮没有新增target native采集或新漏洞扫描，不将VM依赖安装当应用发布闭项。
 - 完整WP-05/AC-19、负责人AD-03和最终接受仍待完成，再决定默认升级及WP-08。默认1.11.6、原SQLite、固定Contract/baseline/锁和11旧包按已核范围保持；不把此机制实验当AC-17业务迁移、Mac或完整发布通过。
 

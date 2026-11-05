@@ -1,0 +1,347 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "work_package": "WP-05",
+  "purpose": "Fixed input selections for a single isolated ARM64 business acceptance run. Metadata only. Partial preflight lock, not an executable download plan.",
+  "accepted_scope_commit": "2a9aa0e30d3671f017efaa2f5e61edc39c42d173",
+  "build_source": "31d1eac5b621e06928a22351c45542910caa7602",
+  "checked_date": "2026-11-05",
+  "execution_ready": false,
+  "payload_transferred": false,
+  "limits": {
+    "network_bytes": 1073741824,
+    "guest_disk_bytes": 8589934592,
+    "new_root_logical_bytes": 9663676416,
+    "new_root_planned_allocated_bytes": 10737418240,
+    "two_named_roots_allocated_bytes": 12884901888,
+    "allocation_observation_stop_mib": 5632,
+    "allocation_work_target_mib": 6144,
+    "host_entry_free_mib": 24576,
+    "host_stop_free_mib": 14336,
+    "guest_min_free_mib": 2048,
+    "boot_engine_peak_budget_mib": 2048
+  },
+  "local_reuse": {
+    "sealed_input_record": "evidence/linux-vm/inputs.json",
+    "selection": "Existing Lima 2.2.1 binary and release archive, Debian ARM64 QCOW2, Docker CE/CLI and containerd archives. Alpine and OpenPGP artifacts excluded from the download set.",
+    "limactl_sha256": "6d32fb0f880c0ea750434f2ac855a3f2129126752a301ce4d88adbd2fa599e1e"
+  },
+  "docker_plugins": {
+    "signed_index_sha256": "02d855d08232537d301c7a958a2a3d4b59c6450c0d70c66d463ef97c9db28913",
+    "packages": [
+      {
+        "name": "docker-buildx-plugin",
+        "version": "0.25.0-1~debian.12~bookworm",
+        "bytes": 13606056,
+        "sha256": "a73cd5050cd87d0a12dbe0c4ef6e5b2d08786f459c4d68bb235bfa45182cfa1c",
+        "url": "https://download.docker.com/linux/debian/dists/bookworm/pool/stable/arm64/docker-buildx-plugin_0.25.0-1~debian.12~bookworm_arm64.deb"
+      },
+      {
+        "name": "docker-compose-plugin",
+        "version": "2.38.1-1~debian.12~bookworm",
+        "bytes": 12225696,
+        "sha256": "ac4e7fa0a19921d7a67bac92f13d1f6a8137e4aed50cff4a08ba737539f1a027",
+        "url": "https://download.docker.com/linux/debian/dists/bookworm/pool/stable/arm64/docker-compose-plugin_2.38.1-1~debian.12~bookworm_arm64.deb"
+      }
+    ]
+  },
+  "registry": {
+    "source": "https://registry-1.docker.io/v2/",
+    "method": "GET index and linux/arm64 manifest by digest and verify response length and SHA-256. The two manifests bind each config and layer digest and byte count. Payload bodies not fetched.",
+    "images": [
+      {
+        "repository": "library/python",
+        "index": "sha256:e697c81897302a4c4333bade000d98038fbb21eb064f8ee1fd42d02ebcd9d337",
+        "index_bytes": 6546,
+        "arm64_manifest": "sha256:e0b3f8d16a5ccfbe602d5c94297e5dbcda2ec256edca2b80fcd44e39e1ff6feb",
+        "manifest_bytes": 1754,
+        "layers": 4,
+        "compressed_layer_bytes": 44923606,
+        "config_bytes": 5699
+      },
+      {
+        "repository": "library/postgres",
+        "index": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c",
+        "index_bytes": 10237,
+        "arm64_manifest": "sha256:624b15a3c9e7b8930c8c1d3ff617a3135f92e06bb47df7a4fea49869ccd3a775",
+        "manifest_bytes": 3630,
+        "layers": 14,
+        "compressed_layer_bytes": 158919251,
+        "config_bytes": 10159
+      }
+    ]
+  },
+  "langflow": {
+    "archive_lock": "evidence/langflow-arm/ci/lock/resolution.json",
+    "archive_lock_sha256": "089a5e76001e8225dc40b7f0dd474d86693015b71c7ce3d300069d49db7f0907",
+    "build_lock": "evidence/langflow-arm/ci/lock/build-resolution.json",
+    "build_lock_sha256": "f54d012779faa7fc62f5b1b27a93aac286cd97d0acf10de0a05807671885093f",
+    "unique_archive_count": 334,
+    "source_archive_count": 4,
+    "unique_archive_bytes": 356369322
+  },
+  "api": {
+    "metadata": "https://pypi.org/pypi/{name}/{version}/json",
+    "selection": "Non-yanked compatible wheels in CPython 3.12.16 / Linux ARM64 / glibc 2.36 tag order. Exact frozen selection for an offline build. Original Dockerfile's unconstrained build isolation has not been reproduced.",
+    "build_tools": {
+      "hatchling": "1.27.0",
+      "packaging": "24.2",
+      "pathspec": "0.12.1",
+      "pluggy": "1.7.0",
+      "trove-classifiers": "2025.1.15.22"
+    },
+    "wheel_count": 39,
+    "wheel_bytes": 37236398,
+    "additional_wheel_bytes_after_langflow_dedup": 22255953,
+    "reused_by_name_from_langflow_archive_lock_bytes": {
+      "annotated-doc": 5302,
+      "annotated-types": 13427,
+      "certifi": 135082,
+      "click": 125251,
+      "h11": 37515,
+      "httpcore": 78784,
+      "httpx": 73517,
+      "pillow": 6519309,
+      "psycopg": 213598,
+      "pydantic": 472589,
+      "pydantic-core": 1951772,
+      "pypdf": 410430,
+      "python-docx": 252987,
+      "pyyaml": 775116,
+      "reportlab": 1957812,
+      "typing-extensions": 45571,
+      "pip": 1819850,
+      "packaging": 65451,
+      "pluggy": 27082
+    },
+    "additional_wheels": [
+      {
+        "name": "anyio",
+        "version": "4.14.2",
+        "bytes": 125813,
+        "sha256": "9f505dda5ac9f0c8309b5e8bd445a8c2bf7246f3ce950121e45ea15bc41d1494",
+        "url": "https://files.pythonhosted.org/packages/da/35/f2287558c17e29fafc8ef3daf819bb9834061cfa43bff8014f7df7f63bdc/anyio-4.14.2-py3-none-any.whl"
+      },
+      {
+        "name": "charset-normalizer",
+        "version": "3.5.1",
+        "bytes": 238530,
+        "sha256": "4582c27e8c889d64811987b5967fbd3ae0c823fe1fd933b543d55ac20bb475fa",
+        "url": "https://files.pythonhosted.org/packages/9a/4c/be49ada26b1f0232d57aa89bbebf997a5cc2332a5616b6eca26ff680044d/charset_normalizer-3.5.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl"
+      },
+      {
+        "name": "fastapi",
+        "version": "0.141.1",
+        "bytes": 131954,
+        "sha256": "bfb91aa2d334c61cb35ba9a116fc123b3d3df31640b801cf57a7a78ec3f603b3",
+        "url": "https://files.pythonhosted.org/packages/cb/03/10388a42375ee7e4ac9b94eb2c5c569c8b5795e377e701c9ac3ad63de890/fastapi-0.141.1-py3-none-any.whl"
+      },
+      {
+        "name": "greenlet",
+        "version": "3.5.5",
+        "bytes": 611910,
+        "sha256": "55272212cbc5f43d1d723725ab931f1939969b7e9523882ca58b55061769d053",
+        "url": "https://files.pythonhosted.org/packages/35/73/60e4bbcc89252037b18087f2ec16405d5b2d5be42dde191bbf3667e96102/greenlet-3.5.5-cp312-cp312-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl"
+      },
+      {
+        "name": "hatchling",
+        "version": "1.27.0",
+        "bytes": 75794,
+        "sha256": "d3a2f3567c4f926ea39849cdf924c7e99e6686c9c8e288ae1037c8fa2a5d937b",
+        "url": "https://files.pythonhosted.org/packages/08/e7/ae38d7a6dfba0533684e0b2136817d667588ae3ec984c1a4e5df5eb88482/hatchling-1.27.0-py3-none-any.whl"
+      },
+      {
+        "name": "httptools",
+        "version": "0.8.0",
+        "bytes": 518842,
+        "sha256": "425f83884fd6343828d8c565f046cb72b6d19063f6924093e11bcd8e1548cd09",
+        "url": "https://files.pythonhosted.org/packages/b7/e4/f90a0df0b83beff265b7e3b65f2a4cefd95792d4be0ac3e16049f2acd3c2/httptools-0.8.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl"
+      },
+      {
+        "name": "idna",
+        "version": "3.19",
+        "bytes": 68550,
+        "sha256": "815e7be7a7806d54abb586dc943addc79e8b2ee16915059658cbeff4b1b43bf4",
+        "url": "https://files.pythonhosted.org/packages/57/b0/0e52c878c53f245edd3a11020f20979b3f490f245af532c7cae3027754b5/idna-3.19-py3-none-any.whl"
+      },
+      {
+        "name": "lxml",
+        "version": "6.1.2",
+        "bytes": 5011863,
+        "sha256": "261d98065326676d7253882db0198d0aa06748d7ee0443367acf10b148273f99",
+        "url": "https://files.pythonhosted.org/packages/e6/b6/990a8446c488c70fa25681e150de94b7bf2eaaf387e374d195ab3c8faafb/lxml-6.1.2-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl"
+      },
+      {
+        "name": "pathspec",
+        "version": "0.12.1",
+        "bytes": 31191,
+        "sha256": "a0d503e138a4c123b27490a4f7beda6a01c6f288df0e4a8b79c7eb0dc7b4cc08",
+        "url": "https://files.pythonhosted.org/packages/cc/20/ff623b09d963f88bfde16306a54e12ee5ea43e9b597108672ff3a408aad6/pathspec-0.12.1-py3-none-any.whl"
+      },
+      {
+        "name": "psycopg-binary",
+        "version": "3.3.5",
+        "bytes": 6824658,
+        "sha256": "d2a61e8147902771df7efe14062a3c8736347850d0d8befcf048235752504f2e",
+        "url": "https://files.pythonhosted.org/packages/31/88/a4781365f09807fb91435e2d00096f3f6ae5d06bce15ef3c3c385dc22772/psycopg_binary-3.3.5-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl"
+      },
+      {
+        "name": "python-dotenv",
+        "version": "1.2.3",
+        "bytes": 22780,
+        "sha256": "904552145e8bfed22162c09dab1c2b9b54fefa7b23ba780f4f26ca0316b0f0d9",
+        "url": "https://files.pythonhosted.org/packages/0d/17/c5c6b53ddc18f297992099b3d9ec16c855c0ccc83263a21fe4d1c625ec6c/python_dotenv-1.2.3-py3-none-any.whl"
+      },
+      {
+        "name": "python-multipart",
+        "version": "0.0.32",
+        "bytes": 30042,
+        "sha256": "ff6d3f776f16878c894e52e107296ffc890e913c611b1a4ec6c44e2821fe2e23",
+        "url": "https://files.pythonhosted.org/packages/e1/04/e8135ebd1ad02c56ec633277529b2602ff99ff634be76cdba5744cf554fd/python_multipart-0.0.32-py3-none-any.whl"
+      },
+      {
+        "name": "sqlalchemy",
+        "version": "2.0.52",
+        "bytes": 3383415,
+        "sha256": "1b2d9e507a458832adcfbd8af6e2036ddf069b7710b799448542ebccae2dceee",
+        "url": "https://files.pythonhosted.org/packages/54/bd/f444444adb37b5d53753fb1730ee7a421628e2e3b756c4da461af7e6394a/sqlalchemy-2.0.52-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl"
+      },
+      {
+        "name": "starlette",
+        "version": "1.6.0",
+        "bytes": 75969,
+        "sha256": "a86dd39d14bb45f85a3d18525215a9ef0cfd1f192ac793220e72598c90335f0c",
+        "url": "https://files.pythonhosted.org/packages/c8/cb/6a6a47d5b464bd08695d254f3da6e7986cc70c9fa5d778eda57538edfe56/starlette-1.6.0-py3-none-any.whl"
+      },
+      {
+        "name": "trove-classifiers",
+        "version": "2025.1.15.22",
+        "bytes": 13610,
+        "sha256": "5f19c789d4f17f501d36c94dbbf969fb3e8c2784d008e6f5164dd2c3d6a2b07c",
+        "url": "https://files.pythonhosted.org/packages/2b/c5/6422dbc59954389b20b2aba85b737ab4a552e357e7ea14b52f40312e7c84/trove_classifiers-2025.1.15.22-py3-none-any.whl"
+      },
+      {
+        "name": "typing-inspection",
+        "version": "0.4.4",
+        "bytes": 14750,
+        "sha256": "65b8397ba37ccbce054456aaccddfc91e6e3083c92824df348d96ca832f3f147",
+        "url": "https://files.pythonhosted.org/packages/67/81/4add07e5172b7ac40d8ed5ff580409a7801a4fe26d529bdd915401dabfbe/typing_inspection-0.4.4-py3-none-any.whl"
+      },
+      {
+        "name": "uvicorn",
+        "version": "0.52.4",
+        "bytes": 79871,
+        "sha256": "f86e41a149d7d05a9969337e3946a9c171c06a5d42680896daaba624aeac8da1",
+        "url": "https://files.pythonhosted.org/packages/f1/79/4a20b54ab0491485ccd8c077db2d39187c7f12b3e15485d38a7be37c81b4/uvicorn-0.52.4-py3-none-any.whl"
+      },
+      {
+        "name": "uvloop",
+        "version": "0.22.1",
+        "bytes": 4317413,
+        "sha256": "700e674a166ca5778255e0e1dc4e9d79ab2acc57b9171b79e65feba7184b3370",
+        "url": "https://files.pythonhosted.org/packages/24/68/a6ac446820273e71aa762fa21cdcc09861edd3536ff47c5cd3b7afb10eeb/uvloop-0.22.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl"
+      },
+      {
+        "name": "watchfiles",
+        "version": "1.2.0",
+        "bytes": 453207,
+        "sha256": "8f70d8b291ef6e88d19b1f297a6905ddb978888d9272b0d05e6f53309856bcfc",
+        "url": "https://files.pythonhosted.org/packages/13/01/b32a967c56fb3e3e5be3db52c3d3b87fa4513aa367d8ed1ad96d42952e5f/watchfiles-1.2.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl"
+      },
+      {
+        "name": "websockets",
+        "version": "17.1",
+        "bytes": 225791,
+        "sha256": "d41ef69d5416fbc1d98cf96c37be6192d10fd101c3e0f8b3ddc36e09432b3c08",
+        "url": "https://files.pythonhosted.org/packages/8a/50/5cbf677b865290fe36819ff00615826e7edc1df38786f770123ff39a933d/websockets-17.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl"
+      }
+    ]
+  },
+  "apt": {
+    "method": "Official HTTPS InRelease and ARM64 Packages.xz fetched by SHA-256 URL. Index lengths and hashes match InRelease. Local publisher signature and exact install transaction still pending.",
+    "snapshots": [
+      {
+        "suite": "bookworm",
+        "inrelease_url": "https://deb.debian.org/debian/dists/bookworm/InRelease",
+        "inrelease_sha256": "77737fa4b34f2693e982cc9ee35736816c35a7778fc2d326cc1bbf5b301fe1aa",
+        "inrelease_bytes": 151075,
+        "index_url": "https://deb.debian.org/debian/dists/bookworm/main/binary-arm64/by-hash/SHA256/2ddb1737692e8c45c53e8d57c0ce4cd21c78c5703b830c3226b1423566a06c00",
+        "index_sha256": "2ddb1737692e8c45c53e8d57c0ce4cd21c78c5703b830c3226b1423566a06c00",
+        "index_bytes": 8689464
+      },
+      {
+        "suite": "bookworm-updates",
+        "inrelease_url": "https://deb.debian.org/debian/dists/bookworm-updates/InRelease",
+        "inrelease_sha256": "72a46872526f1b12732c4c6b863e843648f380258c20be540f1fe3a8ac4bc5e7",
+        "inrelease_bytes": 55399,
+        "index_url": "https://deb.debian.org/debian/dists/bookworm-updates/main/binary-arm64/by-hash/SHA256/5dfd52317071685ad6e58c4ef0720128b7db68624079f83be02bdf55f07ac070",
+        "index_sha256": "5dfd52317071685ad6e58c4ef0720128b7db68624079f83be02bdf55f07ac070",
+        "index_bytes": 6936
+      },
+      {
+        "suite": "bookworm-security",
+        "inrelease_url": "https://deb.debian.org/debian-security/dists/bookworm-security/InRelease",
+        "inrelease_sha256": "5d916d253a3ed4b2413b355ac864adc2188295df58d3f569879e5322f50378bf",
+        "inrelease_bytes": 34770,
+        "index_url": "https://deb.debian.org/debian-security/dists/bookworm-security/main/binary-arm64/by-hash/SHA256/bfc587ba1d4bb8824d1d144e0dd72c4dec4eb84225bd4f55bce638f4721ed621",
+        "index_sha256": "bfc587ba1d4bb8824d1d144e0dd72c4dec4eb84225bd4f55bce638f4721ed621",
+        "index_bytes": 359688
+      }
+    ],
+    "candidate_package_bytes": 2569568,
+    "candidate_packages": [
+      {
+        "name": "apt",
+        "version": "2.6.2",
+        "url": "https://deb.debian.org/debian-security/pool/updates/main/a/apt/apt_2.6.2_arm64.deb",
+        "bytes": 1309688,
+        "sha256": "4fa6cc317a264db2d5cb90167720120a91910740cb3f14a838ebfb348abc1075",
+        "suite": "bookworm-security"
+      },
+      {
+        "name": "libapt-pkg6.0",
+        "version": "2.6.2",
+        "url": "https://deb.debian.org/debian-security/pool/updates/main/a/apt/libapt-pkg6.0_2.6.2_arm64.deb",
+        "bytes": 814180,
+        "sha256": "586df8843e204aaf0c809fc804262289ea81d988cd4049a8fa6b2c3d58b64e88",
+        "suite": "bookworm-security"
+      },
+      {
+        "name": "libpq5",
+        "version": "15.19-0+deb12u1",
+        "url": "https://deb.debian.org/debian-security/pool/updates/main/p/postgresql-15/libpq5_15.19-0+deb12u1_arm64.deb",
+        "bytes": 195604,
+        "sha256": "c4be6998a78b1ff380016abe27d4f27a63763946523f9331765c822781922ea2",
+        "suite": "bookworm-security"
+      },
+      {
+        "name": "libsasl2-2",
+        "version": "2.1.28+dfsg-10+deb12u1",
+        "url": "https://deb.debian.org/debian-security/pool/updates/main/c/cyrus-sasl2/libsasl2-2_2.1.28+dfsg-10+deb12u1_arm64.deb",
+        "bytes": 58272,
+        "sha256": "b3686e0815d99e5ca6ce9234e486ca0ecd373d491e34457c3b9cba5c6dbba287",
+        "suite": "bookworm-security"
+      },
+      {
+        "name": "libsasl2-modules-db",
+        "version": "2.1.28+dfsg-10+deb12u1",
+        "url": "https://deb.debian.org/debian-security/pool/updates/main/c/cyrus-sasl2/libsasl2-modules-db_2.1.28+dfsg-10+deb12u1_arm64.deb",
+        "bytes": 20992,
+        "sha256": "37d5834fa07d30275b75dc1ec2ccf43f9ce55d0885bb846db7cf04c98da30ae5",
+        "suite": "bookworm-security"
+      },
+      {
+        "name": "libldap-2.5-0",
+        "version": "2.5.13+dfsg-5",
+        "url": "https://deb.debian.org/debian/pool/main/o/openldap/libldap-2.5-0_2.5.13+dfsg-5_arm64.deb",
+        "bytes": 170832,
+        "sha256": "71e6ae4291a20db999c62cd0a4f30a92a799c46b99205d5e787d4acd7c343b91",
+        "suite": "bookworm"
+      }
+    ]
+  },
+  "unresolved": [
+    "Exact signed APT transaction against the fixed Python base dpkg status.",
+    "Shared hard transfer accounting for registry, metadata, packages and any retry or redirection. Verify local-input offline API/Langflow builds and enforce runtime egress isolation.",
+    "First boot and engine disk peak, plugin archive member sizes, and in-flight writes after the stop threshold. Confirm each later stage's unpacked and retained footprint."
+  ]
+}
