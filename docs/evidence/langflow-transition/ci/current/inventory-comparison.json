@@ -1,0 +1,46 @@
+{
+  "image_id": "sha256:69bf80f930187d91082d50a22f5543482aea10a6c1391d64e920b120a18ed3f0",
+  "expected_path": "compliance/langflow-candidate.in",
+  "expected_sha256": "93558be0714d17c73e253621f2f9d6ecc479af3b9777964040e82cb3cc16835b",
+  "expected_count": 334,
+  "actual_count": 334,
+  "missing": [],
+  "extra": [],
+  "changed": [],
+  "apt_rows": [
+    {
+      "name": "apt",
+      "version": "2.6.2",
+      "type": "deb",
+      "arch": "amd64",
+      "source_name": "apt",
+      "source_version": "2.6.2",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "Expat",
+          "GPL-2",
+          "GPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libapt-pkg6.0",
+      "version": "2.6.2",
+      "type": "deb",
+      "arch": "amd64",
+      "source_name": "apt",
+      "source_version": "2.6.2",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "Expat",
+          "GPL-2",
+          "GPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    }
+  ]
+}

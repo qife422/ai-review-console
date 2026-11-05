@@ -1,0 +1,148 @@
+# CI-only synthetic rehearsal. Use an explicit fresh --project-name; never merge
+# this file with docker-compose.yml or attach historical volumes.
+services:
+  postgres:
+    image: postgres:16.15-trixie@sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c
+    environment:
+      POSTGRES_USER: review
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Synthetic migration password required}
+      POSTGRES_DB: postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./postgres-init.sql:/docker-entrypoint-initdb.d/01-databases.sql:ro
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U review -d postgres]
+      interval: 3s
+      timeout: 5s
+      retries: 40
+    networks: [backend]
+
+  langflow:
+    image: ${ARC_MIGRATION_LANGFLOW_IMAGE:?Explicit phase image required}
+    environment:
+      LANGFLOW_DATABASE_URL: ${ARC_MIGRATION_DATABASE_SCHEME:?Explicit phase DB driver required}://review:${POSTGRES_PASSWORD}@postgres:5432/langflow
+      LANGFLOW_AUTO_LOGIN: "false"
+      LANGFLOW_ENABLE_SIGNUP: "false"
+      LANGFLOW_WEBHOOK_AUTH_ENABLE: "true"
+      LANGFLOW_CORS_ORIGINS: '["http://localhost:7860"]'
+      LANGFLOW_CORS_ALLOW_CREDENTIALS: "true"
+      LANGFLOW_ALLOW_CUSTOM_COMPONENTS: "false"
+      LANGFLOW_CUSTOM_COMPONENT_ADMIN_ONLY: "true"
+      LANGFLOW_SUPERUSER: ${LANGFLOW_SUPERUSER:?Synthetic migration user required}
+      LANGFLOW_SUPERUSER_PASSWORD: ${LANGFLOW_SUPERUSER_PASSWORD:?Synthetic password required}
+      LANGFLOW_SECRET_KEY: ${LANGFLOW_SECRET_KEY:?Same synthetic key for all phases required}
+      REVIEW_SERVICE_TOKEN: ${REVIEW_SERVICE_TOKEN:?Synthetic service token required}
+      DO_NOT_TRACK: "true"
+    volumes:
+      - report-artifacts:/app/artifacts
+      - source-documents:/app/documents:ro
+    ports: ["127.0.0.1:7860:7860"]
+    depends_on:
+      postgres: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:7860/health', timeout=3)"]
+      interval: 5s
+      timeout: 5s
+      start_period: 600s
+      retries: 30
+    networks: [backend]
+
+  api:
+    image: ${ARC_MIGRATION_API_IMAGE:?Explicit migration API image required}
+    environment: &business-environment
+      APP_ENV: demo
+      DEMO_MODE: "true"
+      DATABASE_URL: postgresql+psycopg://review:${POSTGRES_PASSWORD}@postgres:5432/review_console
+      LANGFLOW_URL: http://langflow:7860
+      LANGFLOW_API_KEY: synthetic-demo-api-key
+      LANGFLOW_SUPERUSER: ${LANGFLOW_SUPERUSER}
+      LANGFLOW_SUPERUSER_PASSWORD: ${LANGFLOW_SUPERUSER_PASSWORD}
+      REVIEW_SERVICE_TOKEN: ${REVIEW_SERVICE_TOKEN}
+      REVIEW_API_URL: http://api:8000
+      DOCUMENTS_ROOT: /app/documents
+      REPORTS_ROOT: /app/artifacts
+      LANGFLOW_FLOW_MANIFEST: /app/config/langflow-flows.json
+    volumes:
+      - source-documents:/app/documents
+      - report-artifacts:/app/artifacts:ro
+      - flow-config:/app/config:ro
+    ports: ["127.0.0.1:8000:8000"]
+    depends_on:
+      postgres: {condition: service_healthy}
+      langflow: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health', timeout=3)"]
+      interval: 3s
+      timeout: 5s
+      retries: 40
+    networks: [backend]
+
+  worker:
+    image: ${ARC_MIGRATION_API_IMAGE}
+    command: [python, -m, api.app.worker]
+    environment: *business-environment
+    volumes:
+      - source-documents:/app/documents:ro
+      - report-artifacts:/app/artifacts:ro
+      - flow-config:/app/config:ro
+    depends_on:
+      api: {condition: service_healthy}
+    networks: [backend]
+
+  web:
+    image: ${ARC_MIGRATION_WEB_IMAGE:?Explicit migration Web image required}
+    ports: ["127.0.0.1:8080:8080"]
+    depends_on:
+      api: {condition: service_healthy}
+    networks: [backend]
+
+  storage-init:
+    image: ${ARC_MIGRATION_API_IMAGE}
+    user: "0:0"
+    network_mode: none
+    command:
+      - python
+      - -c
+      - |
+        import os
+        from pathlib import Path
+        for name, uid in (("documents", 10001), ("artifacts", 1000), ("config", 10001)):
+            path = Path("/app") / name
+            path.mkdir(exist_ok=True)
+            os.chown(path, uid, uid)
+            os.chmod(path, 0o755)
+    volumes:
+      - source-documents:/app/documents
+      - report-artifacts:/app/artifacts
+      - flow-config:/app/config
+
+  migrate:
+    image: ${ARC_MIGRATION_API_IMAGE}
+    command: [python, -m, api.app.migrations]
+    environment:
+      DATABASE_URL: postgresql+psycopg://review:${POSTGRES_PASSWORD}@postgres:5432/review_console
+    depends_on:
+      postgres: {condition: service_healthy}
+    networks: [backend]
+
+  flow-init:
+    image: ${ARC_MIGRATION_API_IMAGE}
+    command: [python, scripts/bootstrap_langflow.py, --upload, --expected-langflow-version, "1.11.6", --manifest, /app/config/langflow-flows.json]
+    environment:
+      LANGFLOW_URL: http://langflow:7860
+      LANGFLOW_SUPERUSER: ${LANGFLOW_SUPERUSER}
+      LANGFLOW_SUPERUSER_PASSWORD: ${LANGFLOW_SUPERUSER_PASSWORD}
+    volumes:
+      - flow-config:/app/config
+    depends_on:
+      langflow: {condition: service_healthy}
+    networks: [backend]
+
+networks:
+  backend: {}
+
+volumes:
+  postgres-data: {}
+  source-documents: {}
+  report-artifacts: {}
+  flow-config: {}

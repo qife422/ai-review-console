@@ -1,0 +1,41 @@
+{
+  "reviewer": "independent migration_review agent",
+  "checked_at": "2026-11-05T02:17:55.872423+00:00",
+  "scope": "Environment-driven ordinal-position normalization follow-up; implementation not modified. Prior frozen migration-review.json preserved.",
+  "source_sha256": {
+    "scripts/verify_langflow_migration.py": "277305f39ad1c8ca5c6f7c9eac0660b7a747c683c10b1edcfbbe539672a4a952",
+    "tests/test_langflow_migration.py": "38429ea1426f6ad331a34140794f15be3a0f19b7102b525b468ec6fcb27d5539"
+  },
+  "reported_trigger": {
+    "ci_run": "41953022635",
+    "reported_outcome": "Baseline business/checkpoint completed; restore fingerprint comparison failed before candidate Langflow startup.",
+    "cause_status": "Physical ordinal gaps are a plausible explanation, not independently established from actual source/restored catalogs in this review."
+  },
+  "conclusion": "No new blocking finding in the frozen normalization change. It excludes only physical ordinal-gap representation while retaining compared live-column semantics and all previously enforced business preservation and target binding. Actual rerun evidence remains required.",
+  "reasoning": {
+    "lines_73_92": "Columns sorted by table and existing ordinal; per-table contiguous ranks replace only ordinal_position. Table/name/data_type/nullability and relative column order remain in canonical hash. Raw source hash and per-table gap summary are separately retained.",
+    "lines_96_100": "Comparison removes only top-level per-database physical_schema. schema_sha256, alembic, users and business row fingerprints remain compared.",
+    "lines_606_617": "Restored logical fingerprint must equal checkpoint; file hashes also still required. Success evidence records source/restored raw schema hashes and gap summaries.",
+    "lines_749_806": "Runtime binding, old business-row preservation, old Flow/file equality and new target SQL/file reconciliation remain enforced.",
+    "lines_103_121": "Failure diagnostic emits only bounded database/field names and hashes; no row values, tokens or passwords."
+  },
+  "independent_checks": {
+    "method": "Executed only AST-extracted pure functions in memory using Python standard library; no module imports, application, database, Docker, network or filesystem cache generation.",
+    "passed": [
+      "ordinal gaps normalize while physical diagnostics differ",
+      "removed_column",
+      "added_column",
+      "renamed_column",
+      "reordered_columns",
+      "changed_type",
+      "changed_nullability",
+      "changed_table"
+    ]
+  },
+  "limitations": [
+    "The schema_sha256 is a live-column semantics fingerprint, not proof of complete DDL equivalence. Defaults, length/precision details, constraints and indexes were not covered by the original schema query and remain outside this fingerprint.",
+    "The successful rerun must retain source/restored raw schema and ordinal-gap diagnostics; review or normalized success alone does not retrospectively prove the first failure cause.",
+    "This review does not establish migration, rollback, production readiness, default runtime replacement or backend distribution approval."
+  ],
+  "new_files_only": true
+}

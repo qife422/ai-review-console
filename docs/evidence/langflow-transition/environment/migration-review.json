@@ -1,0 +1,39 @@
+{
+  "reviewer": "independent migration_review agent",
+  "checked_at": "2026-11-05T02:06:15.539925+00:00",
+  "method": "Read-only source review of frozen producer and execution entrypoint; no implementation edits, Docker, network, installations or CI execution by reviewer.",
+  "source_sha256": {
+    "scripts/verify_langflow_migration.py": "7e3b9a2f63cef5f5841e01b44f5bdc91a506f6ccfb82e36d3646efc46bcc1f42",
+    "tests/test_langflow_migration.py": "bef054ba960d50b487da269911034c9a75548cfd1194746baa88995b474cd635",
+    "docker/compose.migration.yml": "def64529bc278a6f0860b699000e0cfade50f8056469892bf7d38d2a43615b6a",
+    ".github/workflows/langflow-migration.yml": "a9a1afa5fb45a2230feefbfa1eaf5e96ac500e0d417bb8565d6b8b34fae51bd6",
+    "tests/test_langflow_migration_entrypoint.py": "35259afa071331a4398b24bf9e1a4357899abea1830aaf8fb7d4c28535fef98f"
+  },
+  "conclusion": "No remaining blocking finding identified within the reviewed synthetic CI rehearsal scope. Ready for authorized actual CI validation; this is not a migration acceptance result.",
+  "prior_finding": {
+    "status": "resolved",
+    "original_producer_sha256": "8ccc35dfc32e720684f3b3c5ecbc23ad339750861c3ff3b22a570db42e827241",
+    "description": "Validator URLs were not bound to target stack and preservation-only postchecks could pass despite zero new target business records.",
+    "resolution": "Frozen producer lines 179-220 bind runtime service network, database/Flow environment and published endpoints; lines 557-681 reconcile validator cases, document versions, jobs/upstream IDs, decisions and reports with target SQL and actual volume hashes; lines 725-728 require 14 new files and exact SQL increments. Old rows/files remain protected."
+  },
+  "reviewed_controls": [
+    "Independent compose file uses four plain project-scoped volumes and only fixed postgres initializer read-only host bind. No original SQLite or historical volume reference.",
+    "Workflow requires each exact run/attempt/phase namespace to be absent before creation. Baseline, upgrade and rollback are distinct; same loopback ports are reused only after stopping the prior stack.",
+    "Baseline migration/bootstrap and five synthetic cases precede quiesced checkpoint. Upgrade and rollback start only PostgreSQL/storage initialization before restoring the same pre-upgrade checkpoint, then start applications and verify. No target bootstrap/application migration or Flow repair step.",
+    "Baseline/rollback use postgresql driver scheme, candidate uses postgresql+psycopg. Same synthetic credentials and secret key across restored phases.",
+    "30 GiB initial free-space check and 5 GiB checks before/after bounded commands plus 5-second sampling during them; threshold failure terminates command and fails without cleanup. This is sampled free-space monitoring, not a hard Docker storage quota.",
+    "Evidence selected by explicit filenames; each at most 256 KiB, final selection including manifest at most 1 MiB/20 files; upload requires manifest success. Dumps and checkpoint file payloads excluded. Capacity log bounded in practice by 90-minute job and 5-second sampling.",
+    "Failure cleanup only stops containers with exact current run project label, rechecked before stop. No delete/prune/down or original-data operations."
+  ],
+  "validation_limits": [
+    "No Docker, image build, running migration or rollback was executed by reviewer.",
+    "Reported unit-test results are implementation evidence, not independently executed by reviewer.",
+    "Actual image behavior, migrations, permissions and readiness still require the CI execution evidence.",
+    "Rollback restores pre-upgrade checkpoint; neither in-place downgrade nor preservation of post-checkpoint writes is claimed.",
+    "This review does not authorize default runtime replacement, backend distribution, production migration or risk acceptance."
+  ],
+  "skills": {
+    "used": [],
+    "reason": "Narrow source-only logic review did not require a domain skill."
+  }
+}

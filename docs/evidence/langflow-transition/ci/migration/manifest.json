@@ -1,0 +1,90 @@
+{
+  "checked_at": "2026-11-05T02:30:47.861783+00:00",
+  "phase_results": {
+    "checkpoint": "passed",
+    "upgrade": "passed",
+    "rollback": "passed"
+  },
+  "source_commit": "480246c00a94ecee420f4d778ebf302acf3d4b79",
+  "run_id": "41954322019",
+  "run_attempt": "1",
+  "files": [
+    {
+      "path": "capacity.jsonl",
+      "bytes": 12882,
+      "sha256": "db0da5a2ad5f20c4e258c4a69a91b0e9b384a42ac82a019c56a6d2c89d3c211a"
+    },
+    {
+      "path": "baseline-validation.json",
+      "bytes": 7199,
+      "sha256": "36aaaa532902c7d5e6ec6fa130175369267fef6320664d3f146895668c6ea192"
+    },
+    {
+      "path": "checkpoint-manifest.json",
+      "bytes": 18005,
+      "sha256": "0af8b5ce830a4c9d0a8b849b9760a2c6b1bc315203a293736cf2df3125686dac"
+    },
+    {
+      "path": "checkpoint-summary.json",
+      "bytes": 29127,
+      "sha256": "7c616f4fcf770f162ac5129c9eaed1b87236b3950c886ddf66a54e17ec409d07"
+    },
+    {
+      "path": "upgrade-restore.json",
+      "bytes": 13709,
+      "sha256": "8e8dfe280f7f16c13bf8d52815d15dcc5dc806d09844e8428bb4260b8947ae3b"
+    },
+    {
+      "path": "upgrade-summary.json",
+      "bytes": 54074,
+      "sha256": "617ca29fa7fd31b6a7a4166bed0c02702443dda445a855435f7cd74bec8abc04"
+    },
+    {
+      "path": "rollback-restore.json",
+      "bytes": 13720,
+      "sha256": "089ec94f04a5a32ee6de8ade7599cda2751b9f8fd6f0048b554fe6ce4a2587dd"
+    },
+    {
+      "path": "rollback-summary.json",
+      "bytes": 54084,
+      "sha256": "d14eb90b4cf7fac5235dc0e226e8dbb6eb826c5562727e0c80a5586dee521a98"
+    }
+  ],
+  "images": {
+    "ARC_MIGRATION_BASELINE_IMAGE": "sha256:a2f703060cc5301adb97cd490921e73bd5f1e493434811985fdd1bc5a86b341a",
+    "ARC_MIGRATION_CANDIDATE_IMAGE": "sha256:b8ad829904ab7caa1700f521188d0c4a97d83416d0a970fe4bcb908d1c7a03ba",
+    "ARC_MIGRATION_API_IMAGE": "sha256:dc46eb45048cdbdf68eff1fad651c786d594ee7f9886664ff8f2628f8487941f",
+    "ARC_MIGRATION_WEB_IMAGE": "sha256:55eece696652f6bae9ce218caab23c1fb2d3d6cb3bf5e76a55fe1242b33ee792"
+  },
+  "sources": {
+    "docker/compose.migration.yml": "def64529bc278a6f0860b699000e0cfade50f8056469892bf7d38d2a43615b6a",
+    ".github/workflows/langflow-migration.yml": "a9a1afa5fb45a2230feefbfa1eaf5e96ac500e0d417bb8565d6b8b34fae51bd6",
+    "scripts/verify_langflow_migration.py": "277305f39ad1c8ca5c6f7c9eac0660b7a747c683c10b1edcfbbe539672a4a952",
+    "scripts/validate_langflow.py": "67da74addb7dfd79207a0f68cfba165caaafe03f2da39e2f3f537df818e9737a",
+    "scripts/bootstrap_langflow.py": "e001f7490c870ec75044a3a958795a50857108f3938cda56ad49e6fe4f7fa40b",
+    "api/app/langflow_client.py": "bcd2852b468d7daf03c36edb9823d339df88e21f70897b4d48eb11e494c10c5b",
+    "docker/langflow.Dockerfile": "bb38c30695ea422839935a6209786f8ab8728d054210756d2b1af1e9d6b59cb6",
+    "docker/langflow-candidate.Dockerfile": "abaf752c770cc30b1f4c39784ec54a5d5100452199ae38a31399fb35692f0f84",
+    "docker/api.Dockerfile": "ed3d6ac4364d1b61658eaa4e1eeff6f8bafbb5263dda0d8b2ace2d6e478616c8",
+    "docker/web.Dockerfile": "e47b6a7329a34c940a7544a0ea9342936f5f8516551a9ba8e02f884e6485ceeb",
+    "docker/postgres-init.sql": "1d264c94146f77495adac974416b946bf2ee3b107c72614c197bc84639535cc3",
+    "requirements.lock": "993529902d7718533e40a25ccd220f713f2a8a4c6b4123a127625362593d891e",
+    "frontend/package-lock.json": "c887f8c63172bc87d022265f925e9fdb5c4b4b79151a5d8d86176f789a7c5a3e"
+  },
+  "method": "synthetic baseline checkpoint; fresh upgrade; third fresh old-version restore",
+  "not_tested": [
+    "original SQLite/historical volumes",
+    "in-place downgrade",
+    "zero loss of post-checkpoint writes",
+    "production migration"
+  ],
+  "unselected": "plain dumps and file copies remain ephemeral on this runner; not uploaded",
+  "limits": {
+    "dump_bytes_each": 8388608,
+    "dump_total_bytes": 33554432,
+    "checkpoint_files": 100,
+    "checkpoint_file_bytes": 33554432,
+    "selected_bytes": 1048576,
+    "selected_files": 20
+  }
+}

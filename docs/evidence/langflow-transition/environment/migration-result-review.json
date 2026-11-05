@@ -1,0 +1,62 @@
+{
+  "reviewer": "independent migration_review agent",
+  "checked_at": "2026-11-05T02:34:15.832011+00:00",
+  "conclusion": "Selected actual CI evidence supports isolated synthetic checkpoint restoration, 1.13.1 migration/business validation and third-stack 1.11.6 checkpoint rollback/business validation. No blocking inconsistency found. This is not formal publication, default upgrade or release approval.",
+  "run_id": 41954322019,
+  "source_commit": "480246c00a94ecee420f4d778ebf302acf3d4b79",
+  "artifact_id": 13383340667,
+  "producer_sha256": "277305f39ad1c8ca5c6f7c9eac0660b7a747c683c10b1edcfbbe539672a4a952",
+  "input_hashes": {
+    "selection.json": "ce32a35c5e9cfb44e18deddfd118253547fd012ad54c0dd60913fe779c8eb48b",
+    "manifest.json": "d1f76818459c41655eeb9bf16892be76e0428ce686161625fe8e0c6a7ffd4d84",
+    "checkpoint-manifest.json": "0af8b5ce830a4c9d0a8b849b9760a2c6b1bc315203a293736cf2df3125686dac",
+    "upgrade-restore.json": "8e8dfe280f7f16c13bf8d52815d15dcc5dc806d09844e8428bb4260b8947ae3b",
+    "upgrade-summary.json": "617ca29fa7fd31b6a7a4166bed0c02702443dda445a855435f7cd74bec8abc04",
+    "rollback-restore.json": "089ec94f04a5a32ee6de8ade7599cda2751b9f8fd6f0048b554fe6ce4a2587dd",
+    "rollback-summary.json": "d14eb90b4cf7fac5235dc0e226e8dbb6eb826c5562727e0c80a5586dee521a98"
+  },
+  "images": {
+    "ARC_MIGRATION_BASELINE_IMAGE": "sha256:a2f703060cc5301adb97cd490921e73bd5f1e493434811985fdd1bc5a86b341a",
+    "ARC_MIGRATION_CANDIDATE_IMAGE": "sha256:b8ad829904ab7caa1700f521188d0c4a97d83416d0a970fe4bcb908d1c7a03ba",
+    "ARC_MIGRATION_API_IMAGE": "sha256:dc46eb45048cdbdf68eff1fad651c786d594ee7f9886664ff8f2628f8487941f",
+    "ARC_MIGRATION_WEB_IMAGE": "sha256:55eece696652f6bae9ce218caab23c1fb2d3d6cb3bf5e76a55fe1242b33ee792"
+  },
+  "independently_checked": [
+    "Eight selected original JSON members match selection/producer manifest lengths and hashes. All thirteen manifest source hashes match current files. Run/source/images agree.",
+    "Both restore and verify summaries reference checkpoint SHA 0af8b5ce830a4c9d0a8b849b9760a2c6b1bc315203a293736cf2df3125686dac. Independently recomputed semantic hash b102b4bbc00bff38ac887ab37262a3abf987ef1e9bd83b232f3d7fa650a9449c matches both restores.",
+    "Target projects are exact run/attempt upgrade and rollback namespaces. Observed versions are 1.13.1 and 1.11.6 respectively.",
+    "Both summaries retain checkpoint Flow IDs/owners/graphs, old user identities and unchanged pre-business review_console row fingerprints. Stored Flow hashes agree before/after new business execution.",
+    "Three phases return fifteen distinct new case IDs. Each upgrade/rollback records increments of five cases, five document versions, three decisions, nine reports and nine workflow jobs; three decision types and nine report downloads validated.",
+    "Reviewed frozen producer gates passed summaries on old-row/file preservation, fourteen new files and target SQL/document/job/report/file-hash reconciliation. Target SQL rows and storage payloads were not selected locally or independently reread by reviewer.",
+    "Checkpoint: fifteen files, 211467 bytes; two dumps 5758781 and 123896 bytes, within limits."
+  ],
+  "ordinal_normalization_observation": {
+    "source_gaps": {
+      "deployment": [
+        11,
+        12
+      ],
+      "deployment_provider_account": [
+        9,
+        10
+      ]
+    },
+    "gap_tuple_meaning": [
+      "live_columns",
+      "max_physical_ordinal"
+    ],
+    "restored_gaps": {},
+    "source_raw_sha256": "328995be856f0611e6c776460e9fc885315ab85ecacb7a1d65af36f6b8a50294",
+    "restored_raw_sha256": "5354e25c0613b1da447b06bd6d98d07a738c10ed203d95e5f6f1438e167d4f56",
+    "interpretation": "Both new restores show ordinal compaction with equal semantic fingerprints, supporting normalization. First failed target raw schema was not retained; its exact cause is not retrospectively established."
+  },
+  "capacity": "Selection derives 226 samples, minimum 81224196096 bytes above 5368709120 floor; raw capacity JSONL not selected locally. Sampling is not a hard quota.",
+  "not_covered": [
+    "Original SQLite, historical volumes, real/production data.",
+    "In-place downgrade or post-checkpoint write preservation: rollback restores the pre-upgrade checkpoint into a third empty stack.",
+    "Complete DDL equivalence: column fingerprint excludes defaults, constraints, indexes and type length/precision.",
+    "Other platforms, management-editor UX, fault recovery, performance, complete licensing/security acceptance or backend distribution."
+  ],
+  "publication_state": "Temporary selection/candidate README reviewed; formal sealed evidence not yet created or accepted. README read during review still marked this run pending and needs factual update before sealing.",
+  "method": "Read-only local JSON/source review and standard-library consistency/hash assertions; no Docker, network, code/document edits or payload collection. Only this new review record written."
+}

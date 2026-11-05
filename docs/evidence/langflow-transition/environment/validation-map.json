@@ -1,0 +1,85 @@
+{
+  "created_at": "2026-11-05T02:20:36.845226+00:00",
+  "contract": "ARC-UPGRADE@0.1.0",
+  "work_package": "WP-05",
+  "scope": "AD-03 isolated slim candidate; default adoption excluded",
+  "release_acceptance": "not_passed",
+  "full_v02_last_verified": null,
+  "human_final_acceptance": "pending",
+  "residual_risk_accepted": false,
+  "backend_distribution_approved": false,
+  "default_version": "1.11.6",
+  "checks": {
+    "hash_lock": {
+      "run": 41952562436,
+      "source": "82a028e5738f04c9ce642e76544ffbae5554ab62",
+      "result": "passed",
+      "packages": 334,
+      "build_tools": 4,
+      "proof": "ci/lock/installation.json"
+    },
+    "default_collector_first_adaptation": {
+      "run": 41951752227,
+      "source": "8ac0c79b8f0099e5dd7baed799b92a76692f3e67",
+      "result": "passed",
+      "python": 251,
+      "frontend": 29,
+      "proof": "ci/baseline/run.json"
+    },
+    "full_runtime_matrix": {
+      "run": 41953014467,
+      "source": "a1190a38e998ce9683495a07028a1b9e589303cf",
+      "result": "passed",
+      "python": 260,
+      "frontend": 29,
+      "lanes": [
+        "defaultAMD64",
+        "defaultARM64backend",
+        "candidateAMD64"
+      ],
+      "candidate_image": "sha256:69bf80f930187d91082d50a22f5543482aea10a6c1391d64e920b120a18ed3f0",
+      "proof": "ci/current/run.json"
+    },
+    "candidate_lock_in_image": {
+      "result": "passed",
+      "proof": "ci/current/inventory-comparison.json",
+      "scope": "Exact334 package name/version set"
+    },
+    "candidate_targeted_apt_patch": {
+      "result": "passed_for_CVE-2026-109518",
+      "versions": [
+        "apt2.6.2",
+        "libapt-pkg6.0 2.6.2"
+      ],
+      "proof": "environment/debian-delta.json",
+      "residual_provider_ids": 132
+    },
+    "candidate_notice_delivery": {
+      "result": "passed_for_three_project_copies",
+      "proof": "ci/current/collector-license-summary.json",
+      "scope": "Langflow root MIT/sqlite-vec MIT+Apache source copies actual current-image readback; not complete redistribution permission"
+    },
+    "migration": {
+      "run": 41954322019,
+      "source": "480246c00a94ecee420f4d778ebf302acf3d4b79",
+      "result": "passed",
+      "prior_failure": 41953022635,
+      "proof": "ci/migration/manifest.json",
+      "scope": "Three fresh synthetic namespaces; checkpoint restore into1.13.1 and separate pre-upgrade checkpoint restore into1.11.6. Each target authenticates old user/runs old Flow, preserves original business rows/oldfiles and proves five new cases/9reports against targetSQL/volume.",
+      "candidate_image": "sha256:b8ad829904ab7caa1700f521188d0c4a97d83416d0a970fe4bcb908d1c7a03ba",
+      "baseline_image": "sha256:a2f703060cc5301adb97cd490921e73bd5f1e493434811985fdd1bc5a86b341a"
+    }
+  },
+  "not_covered": [
+    "candidate ARM-specific lock/build",
+    "Mac host runtime",
+    "Langflow management editor",
+    "candidate fault/recovery/performance",
+    "complete DDL/default/index/constraint equivalence",
+    "post-checkpoint write recovery/RPO0",
+    "original or production data migration",
+    "SQLite/native corresponding source and all notices",
+    "default/API Zep exact-license and vendor/FIPS obligations",
+    "full backend distribution or final release acceptance"
+  ]
+}

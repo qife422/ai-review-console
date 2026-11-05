@@ -1,0 +1,45 @@
+{
+  "scope": "1.13.1 complete hashed LinuxAMD lock; explicit RHEL/Debian CI profiles; three fresh synthetic migration/rollback clones; default1.11.6 and original data unchanged",
+  "same_goal": "cfd2d589-0c13-4ee0-bd93-8316c3f556a4",
+  "budget_minutes_cumulative": 360,
+  "prior_elapsed_seconds": 12866.843893527985,
+  "decision": "2026-11-04 user explicitly chose360 cumulative; no data/default/cleanup authority expansion",
+  "source_head": "8e96a36d44119b577a34ebc7a16d110a856e927a",
+  "prior_named_temporary": [
+    {
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB",
+      "files": 276,
+      "bytes": 38360216
+    },
+    {
+      "path": "/private/tmp/arc-langflow-candidate.qya6psom",
+      "files": 74,
+      "bytes": 1216486
+    }
+  ],
+  "temporary": "/private/tmp/arc-langflow-transition.l7tcavqh",
+  "new_temporary_limit_bytes": 2097152,
+  "combined_named_temp_limit_bytes": 41943040,
+  "ci_selected_limit_bytes": 1048576,
+  "ci_selected_limit_files": 50,
+  "source_limit_bytes": 131072,
+  "source_limit_files": 8,
+  "formal": "docs/evidence/langflow-transition",
+  "candidate": "artifacts/evidence-candidates/langflow-transition",
+  "evidence_each_limit_bytes": 104857600,
+  "evidence_each_limit_files": 1000,
+  "source_to_generated_amplification": "stop above1GiB AND100x prior764861B author baseline; installed dependencies/images separately measured",
+  "runner_artifacts": "pipreport<=64MiB ephemeral; dependency install/build bounded by free20GiB entrance/5GiB ongoing; migration runner30GiB entrance, fresh-dump total<=32MiB and source/artifact/config checkpoint<=100files/32MiB; only compact proof selected, no fullbuild trees",
+  "native_remaining": {
+    "files": 6,
+    "input_bytes": 26795216,
+    "text_bytes": 3969945,
+    "goal_known_input_bytes": 135836345
+  },
+  "native_policy": "no repeated completed target text; routine prior-materials profile; new notice copy readback distinguished from native binary/source inspection",
+  "cleanup_authorized": false,
+  "migration_authority": "Only newly generated CI fixtures restored into distinct fresh empty targets; checkpoint source untouched; no original DB or historicalvolumes mounted",
+  "localDocker": "No daemon start/build/pull/prune; read-only help/config only",
+  "host_free_bytes": 23423356928,
+  "sandbox": "workspace+tmp write; .git read-only requires approved escalation for commit/push; network restricted so use connected tools/CI or reviewed escalation"
+}

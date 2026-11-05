@@ -1,0 +1,334 @@
+{
+  "collector": {
+    "images": {
+      "api": "sha256:bf7477f2216687f998555e679fc6915b62e3e84e1bfb770327b05e364010616f",
+      "langflow": "sha256:9201a85858110cf87643675f6d0678c02d1fdef275853858f2e8d1ae586e9fe7",
+      "web": "sha256:7df5d8de9c27e397ffdc8b84b1da08d59866084dd86499145a25ff0e4ca643bb",
+      "postgres": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+    },
+    "os_identity": {
+      "profile": "rhel",
+      "id": "rhel",
+      "version_id": "10.2",
+      "source": "/etc/os-release",
+      "image": "sha256:9201a85858110cf87643675f6d0678c02d1fdef275853858f2e8d1ae586e9fe7"
+    },
+    "system_materials": {
+      "files": 15,
+      "bytes": 77242,
+      "status": "completed"
+    },
+    "native_materials": {
+      "state": "not_collected_this_image",
+      "prior_evidence": "docs/evidence/runtime-maintenance/ci/native-close/selection.json",
+      "prior_ci_run": 41760412382,
+      "prior_langflow_image": "sha256:fd6d66658d49008b53095d2669de17f88360038cbfc8238aa509ffd2e1aaa02c",
+      "limitation": "Prior sealed native materials concern their original images; no current image native body was read or established by this profile.",
+      "legal_approval": false,
+      "distribution_approval": false
+    },
+    "collection_state": "collected",
+    "audits": {
+      "package_scan_exit_code": 2,
+      "redhat_supplement_exit_code": 0
+    },
+    "release_acceptance": "pending_review_not_granted_by_collection",
+    "source_inputs": [
+      {
+        "path": "scripts/collect_release_ci.py",
+        "sha256": "c05b7a5577c425252084a638aabb7216f712a2f48d19b5888c6086b2207b6b72"
+      },
+      {
+        "path": "scripts/scan_images_osv.py",
+        "sha256": "0358ef68c8d866847f870f08770716d32cb2968b3eb684d2f00cb5088b9001db"
+      },
+      {
+        "path": "scripts/scan_release.py",
+        "sha256": "f3f353ff9a50651aa864aa75dbb480da9481dc78aaacaac2b74a90616558ea0c"
+      },
+      {
+        "path": "scripts/verify_image_licenses.py",
+        "sha256": "b4021bd6e0a432acdb9557ba8bc5fe95d5829171fce0490ff8f8d5e962ba4a32"
+      },
+      {
+        "path": "scripts/verify_dependency_compatibility.py",
+        "sha256": "b3d73646aa87a1019fdff9a19983d28d1b656ed57cff5107211df9dae684659d"
+      },
+      {
+        "path": "scripts/apply_system_updates.py",
+        "sha256": "50ac38282e4bce3d2619d8dd3af46885c217fe6f9e3bf1e5b0ef58f39c3b8821"
+      },
+      {
+        "path": "scripts/verify_native_materials.py",
+        "sha256": "dffe7c32d0fd61f41a6f3e4e0bf0f4affc201ff4ffdeb716c1c7811f9ebd8765"
+      },
+      {
+        "path": "compliance/native-baseline.json",
+        "sha256": "ba73fb69a3d4644b5d0b49d64d32928ef9d1628716ea7d5289524e949ea4ce81"
+      },
+      {
+        "path": "docs/evidence/runtime-maintenance/ci/native-close/selection.json",
+        "sha256": "8797588869c1ead3383e5319a71583b945c11733ada1fefdfbefe980d1e20ff4"
+      },
+      {
+        "path": "docs/UPGRADE_SPEC.md",
+        "sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753"
+      }
+    ]
+  },
+  "image_summary": {
+    "result": "queried_with_findings",
+    "unique_queries": 797,
+    "observed_unique_advisory_ids": 237,
+    "mapping_unknown": 227,
+    "query_unknown": 0,
+    "detail_unknown": 0,
+    "images": {
+      "api": {
+        "image_id": "sha256:bf7477f2216687f998555e679fc6915b62e3e84e1bfb770327b05e364010616f",
+        "inventory_packages": 140,
+        "unknown_packages": 0,
+        "matched_binary_or_python_packages": 51,
+        "observed_unique_advisory_ids": 127,
+        "detail_unknown": 0,
+        "upstream_severity_labels": {
+          "unknown": 127
+        }
+      },
+      "langflow": {
+        "image_id": "sha256:9201a85858110cf87643675f6d0678c02d1fdef275853858f2e8d1ae586e9fe7",
+        "inventory_packages": 777,
+        "unknown_packages": 227,
+        "matched_binary_or_python_packages": 5,
+        "observed_unique_advisory_ids": 81,
+        "detail_unknown": 0,
+        "upstream_severity_labels": {
+          "HIGH": 26,
+          "CRITICAL": 7,
+          "MODERATE": 22,
+          "unknown": 23,
+          "LOW": 3
+        }
+      },
+      "web": {
+        "image_id": "sha256:7df5d8de9c27e397ffdc8b84b1da08d59866084dd86499145a25ff0e4ca643bb",
+        "inventory_packages": 71,
+        "unknown_packages": 0,
+        "matched_binary_or_python_packages": 0,
+        "observed_unique_advisory_ids": 0,
+        "detail_unknown": 0,
+        "upstream_severity_labels": {}
+      },
+      "postgres": {
+        "image_id": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c",
+        "inventory_packages": 142,
+        "unknown_packages": 0,
+        "matched_binary_or_python_packages": 63,
+        "observed_unique_advisory_ids": 131,
+        "detail_unknown": 0,
+        "upstream_severity_labels": {
+          "unknown": 131
+        }
+      }
+    }
+  },
+  "rhel_summary": {
+    "contract": "ARC-UPGRADE@0.1.0",
+    "acceptance": [
+      "AC-19",
+      "RELEASE-001"
+    ],
+    "producer": "scripts/scan_images_osv.py --redhat-only",
+    "started_at": "2026-11-05T02:02:17.995734+00:00",
+    "image_id": "sha256:9201a85858110cf87643675f6d0678c02d1fdef275853858f2e8d1ae586e9fe7",
+    "service": "https://api.osv.dev/v1",
+    "result": "queried_no_match",
+    "database_snapshot_date": null,
+    "rpm_entries": 227,
+    "metadata_only_public_keys": 3,
+    "mapped_software_packages": 224,
+    "unique_queries": 672,
+    "observed_unique_advisory_ids": 0,
+    "matched_software_packages": 0,
+    "findings": [],
+    "mapping_unknown": 0,
+    "query_unknown": 0,
+    "detail_unknown": 0
+  },
+  "license_manifest": {
+    "created_at": "2026-11-05T02:02:30.231793+00:00",
+    "producer": "scripts/verify_image_licenses.py",
+    "producer_sha256": "b4021bd6e0a432acdb9557ba8bc5fe95d5829171fce0490ff8f8d5e962ba4a32",
+    "contract": "ARC-UPGRADE@0.1.0",
+    "acceptance": [
+      "RELEASE-001",
+      "AC-19"
+    ],
+    "images": [
+      {
+        "image_name": "api",
+        "image_id": "sha256:bf7477f2216687f998555e679fc6915b62e3e84e1bfb770327b05e364010616f",
+        "collection_state": "collected_with_explicit_scope"
+      },
+      {
+        "image_name": "langflow",
+        "image_id": "sha256:9201a85858110cf87643675f6d0678c02d1fdef275853858f2e8d1ae586e9fe7",
+        "collection_state": "collected_with_explicit_scope"
+      },
+      {
+        "image_name": "web",
+        "image_id": "sha256:7df5d8de9c27e397ffdc8b84b1da08d59866084dd86499145a25ff0e4ca643bb",
+        "collection_state": "collected_with_explicit_scope"
+      }
+    ],
+    "files": [
+      {
+        "path": "api.json",
+        "bytes": 182130,
+        "sha256": "adb47e8b0c92281ef620b771f80a5813ef782e4828e50dfe2c1a9f8ee4695ee2"
+      },
+      {
+        "path": "langflow.json",
+        "bytes": 1030626,
+        "sha256": "fb9ed6d5312e0c6b3b3dcec5c5c2a38f0eb00c131a53d54d8c1d9a337c7795ba"
+      },
+      {
+        "path": "web.json",
+        "bytes": 95767,
+        "sha256": "2f5125604296f93748ba5401ef346dc37cc5de23f1f11acf6c0a2c16b7d33380"
+      }
+    ],
+    "text_limits": {
+      "per_file_bytes": 262144,
+      "files": 100,
+      "total_bytes": 8388608
+    },
+    "remaining_budget": {
+      "files": 4,
+      "bytes": 7503775
+    },
+    "legal_approval": false,
+    "qualification": "Collection success is not full license/distribution approval."
+  },
+  "license_project_files": {
+    "api": {
+      "image_id": "sha256:bf7477f2216687f998555e679fc6915b62e3e84e1bfb770327b05e364010616f",
+      "collection_state": "collected_with_explicit_scope",
+      "project_files": [
+        {
+          "path": "/app/LICENSE",
+          "state": "recorded",
+          "sha256": "934d07684b0f32ebaa86f8f165a7bd944e9fc5c45615a0c16676bb60b1b29ced",
+          "resolved_path": "/app/LICENSE",
+          "bytes": 9110,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/THIRD_PARTY_NOTICES.md",
+          "state": "recorded",
+          "sha256": "3556ee4340213c3a6edae129087a0b0625f3b642ea476ac39f04a190cced76f9",
+          "resolved_path": "/app/THIRD_PARTY_NOTICES.md",
+          "bytes": 4831,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/docs/DEPENDENCY_LICENSES.md",
+          "state": "recorded",
+          "sha256": "6a12f0441eb5aa08452e36531099cfc69b8f91e3ba913fba6a0ac262ff86a599",
+          "resolved_path": "/app/docs/DEPENDENCY_LICENSES.md",
+          "bytes": 22970,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/review_core/assets/OFL.txt",
+          "state": "recorded",
+          "sha256": "babcfe66c8a098b2fa279bc724a3a342f8124f77ce18941fbcc1bbb39823cded",
+          "resolved_path": "/app/review_core/assets/OFL.txt",
+          "bytes": 4387,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/review_core/assets/NotoSansSC-Regular.ttf",
+          "state": "hashed_only",
+          "sha256": "e3b799e4230233500ff152d1cc81ade6c64acb34958c90cd6b6e02927a2923a9",
+          "resolved_path": "/app/review_core/assets/NotoSansSC-Regular.ttf",
+          "bytes": 10595932
+        }
+      ]
+    },
+    "langflow": {
+      "image_id": "sha256:9201a85858110cf87643675f6d0678c02d1fdef275853858f2e8d1ae586e9fe7",
+      "collection_state": "collected_with_explicit_scope",
+      "project_files": [
+        {
+          "path": "/app/LICENSE",
+          "state": "recorded",
+          "sha256": "934d07684b0f32ebaa86f8f165a7bd944e9fc5c45615a0c16676bb60b1b29ced",
+          "resolved_path": "/app/LICENSE",
+          "bytes": 9110,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/THIRD_PARTY_NOTICES.md",
+          "state": "recorded",
+          "sha256": "3556ee4340213c3a6edae129087a0b0625f3b642ea476ac39f04a190cced76f9",
+          "resolved_path": "/app/THIRD_PARTY_NOTICES.md",
+          "bytes": 4831,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/docs/DEPENDENCY_LICENSES.md",
+          "state": "recorded",
+          "sha256": "6a12f0441eb5aa08452e36531099cfc69b8f91e3ba913fba6a0ac262ff86a599",
+          "resolved_path": "/app/docs/DEPENDENCY_LICENSES.md",
+          "bytes": 22970,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/review_core/assets/OFL.txt",
+          "state": "recorded",
+          "sha256": "babcfe66c8a098b2fa279bc724a3a342f8124f77ce18941fbcc1bbb39823cded",
+          "resolved_path": "/app/review_core/assets/OFL.txt",
+          "bytes": 4387,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/licenses/dnspython-2.9.0-ISC.txt",
+          "state": "recorded",
+          "sha256": "c3ea3ff5654b329c19d3bc5f7481af623c3dded4a6145585499f843ad3d741cd",
+          "resolved_path": "/app/licenses/dnspython-2.9.0-ISC.txt",
+          "bytes": 1526,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/licenses/FastMCP-3.4.10-LICENSE.txt",
+          "state": "recorded",
+          "sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1",
+          "resolved_path": "/app/licenses/FastMCP-3.4.10-LICENSE.txt",
+          "bytes": 11356,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/licenses/Langflow-LICENSE.txt",
+          "state": "recorded",
+          "sha256": "2f6f90f0641ad822aec5d2bccd1f97c569cc0cbaf0ec3754d10290808f3b1f1b",
+          "resolved_path": "/app/licenses/Langflow-LICENSE.txt",
+          "bytes": 1066,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/review_core/assets/NotoSansSC-Regular.ttf",
+          "state": "hashed_only",
+          "sha256": "e3b799e4230233500ff152d1cc81ade6c64acb34958c90cd6b6e02927a2923a9",
+          "resolved_path": "/app/review_core/assets/NotoSansSC-Regular.ttf",
+          "bytes": 10595932
+        }
+      ]
+    },
+    "web": {
+      "image_id": "sha256:7df5d8de9c27e397ffdc8b84b1da08d59866084dd86499145a25ff0e4ca643bb",
+      "collection_state": "collected_with_explicit_scope",
+      "project_files": []
+    }
+  }
+}

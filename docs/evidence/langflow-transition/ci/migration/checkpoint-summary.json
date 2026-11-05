@@ -1,0 +1,798 @@
+{
+  "action": "checkpoint",
+  "checked_at": "2026-11-05T02:27:22.451241+00:00",
+  "checkpoint_manifest_sha256": "0af8b5ce830a4c9d0a8b849b9760a2c6b1bc315203a293736cf2df3125686dac",
+  "commands": [
+    [
+      "docker",
+      "compose",
+      "-p",
+      "arc-migration-41954322019-1-baseline",
+      "-f",
+      "/home/runner/work/ai-review-console/ai-review-console/docker/compose.migration.yml",
+      "config",
+      "--format",
+      "json"
+    ],
+    [
+      "docker",
+      "volume",
+      "inspect",
+      "arc-migration-41954322019-1-baseline_flow-config"
+    ],
+    [
+      "docker",
+      "volume",
+      "inspect",
+      "arc-migration-41954322019-1-baseline_postgres-data"
+    ],
+    [
+      "docker",
+      "volume",
+      "inspect",
+      "arc-migration-41954322019-1-baseline_report-artifacts"
+    ],
+    [
+      "docker",
+      "volume",
+      "inspect",
+      "arc-migration-41954322019-1-baseline_source-documents"
+    ],
+    [
+      "docker",
+      "compose",
+      "-p",
+      "arc-migration-41954322019-1-baseline",
+      "-f",
+      "/home/runner/work/ai-review-console/ai-review-console/docker/compose.migration.yml",
+      "ps",
+      "-a",
+      "-q"
+    ],
+    [
+      "docker",
+      "container",
+      "inspect",
+      "a1dac6adea725b29eeea516af7ce9d206a86a0988414ebb66bdad6d14288002c"
+    ],
+    [
+      "docker",
+      "container",
+      "inspect",
+      "658a171405cb175db6357d63162ba7c9abfed5b4354e7be133b2546158ffb52d"
+    ],
+    [
+      "docker",
+      "container",
+      "inspect",
+      "d3fdc58799d3658cb158a8b9541174ffc9788baa108d4f199d10023a80bdbbd5"
+    ],
+    [
+      "docker",
+      "container",
+      "inspect",
+      "52a8c1ad84b8aa785e89ad383f7bd802494af9c8c47eb2af85d721bd9ad56a74"
+    ],
+    [
+      "docker",
+      "container",
+      "inspect",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b"
+    ],
+    [
+      "docker",
+      "container",
+      "inspect",
+      "003a350eaadfa530ab3de09958ded2b5f46c2a8b7eb354e555c8c5458bcf733a"
+    ],
+    [
+      "docker",
+      "container",
+      "inspect",
+      "757a56d456c5543205b993a4d069e90b268492ba36fb8d8428237195e7bb2b8d"
+    ],
+    [
+      "docker",
+      "container",
+      "inspect",
+      "f24a9687ebeb039bb5384aa2dda0ef3f8264557eb7b16180ef3f0f4a0d0ac129"
+    ],
+    [
+      "docker",
+      "network",
+      "inspect",
+      "arc-migration-41954322019-1-baseline_backend"
+    ],
+    [
+      "docker",
+      "compose",
+      "-p",
+      "arc-migration-41954322019-1-baseline",
+      "-f",
+      "/home/runner/work/ai-review-console/ai-review-console/docker/compose.migration.yml",
+      "stop",
+      "worker",
+      "api",
+      "langflow"
+    ],
+    [
+      "docker",
+      "exec",
+      "-i",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b",
+      "psql",
+      "-X",
+      "-q",
+      "-A",
+      "-t",
+      "-v",
+      "ON_ERROR_STOP=1",
+      "-U",
+      "review",
+      "-d",
+      "review_console"
+    ],
+    [
+      "docker",
+      "exec",
+      "-i",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b",
+      "psql",
+      "-X",
+      "-q",
+      "-A",
+      "-t",
+      "-v",
+      "ON_ERROR_STOP=1",
+      "-U",
+      "review",
+      "-d",
+      "langflow"
+    ],
+    [
+      "docker",
+      "exec",
+      "-i",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b",
+      "psql",
+      "-X",
+      "-q",
+      "-A",
+      "-t",
+      "-v",
+      "ON_ERROR_STOP=1",
+      "-U",
+      "review",
+      "-d",
+      "langflow"
+    ],
+    [
+      "docker",
+      "exec",
+      "-i",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b",
+      "psql",
+      "-X",
+      "-q",
+      "-A",
+      "-t",
+      "-v",
+      "ON_ERROR_STOP=1",
+      "-U",
+      "review",
+      "-d",
+      "langflow"
+    ],
+    [
+      "docker",
+      "exec",
+      "-i",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b",
+      "psql",
+      "-X",
+      "-q",
+      "-A",
+      "-t",
+      "-v",
+      "ON_ERROR_STOP=1",
+      "-U",
+      "review",
+      "-d",
+      "langflow"
+    ],
+    [
+      "docker",
+      "exec",
+      "-i",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b",
+      "psql",
+      "-X",
+      "-q",
+      "-A",
+      "-t",
+      "-v",
+      "ON_ERROR_STOP=1",
+      "-U",
+      "review",
+      "-d",
+      "langflow"
+    ],
+    [
+      "docker",
+      "exec",
+      "-i",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b",
+      "psql",
+      "-X",
+      "-q",
+      "-A",
+      "-t",
+      "-v",
+      "ON_ERROR_STOP=1",
+      "-U",
+      "review",
+      "-d",
+      "review_console"
+    ],
+    [
+      "docker",
+      "exec",
+      "-i",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b",
+      "psql",
+      "-X",
+      "-q",
+      "-A",
+      "-t",
+      "-v",
+      "ON_ERROR_STOP=1",
+      "-U",
+      "review",
+      "-d",
+      "review_console"
+    ],
+    [
+      "docker",
+      "exec",
+      "-i",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b",
+      "psql",
+      "-X",
+      "-q",
+      "-A",
+      "-t",
+      "-v",
+      "ON_ERROR_STOP=1",
+      "-U",
+      "review",
+      "-d",
+      "review_console"
+    ],
+    [
+      "docker",
+      "exec",
+      "-i",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b",
+      "psql",
+      "-X",
+      "-q",
+      "-A",
+      "-t",
+      "-v",
+      "ON_ERROR_STOP=1",
+      "-U",
+      "review",
+      "-d",
+      "review_console"
+    ],
+    [
+      "docker",
+      "exec",
+      "-i",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b",
+      "psql",
+      "-X",
+      "-q",
+      "-A",
+      "-t",
+      "-v",
+      "ON_ERROR_STOP=1",
+      "-U",
+      "review",
+      "-d",
+      "review_console"
+    ],
+    [
+      "docker",
+      "exec",
+      "-i",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b",
+      "psql",
+      "-X",
+      "-q",
+      "-A",
+      "-t",
+      "-v",
+      "ON_ERROR_STOP=1",
+      "-U",
+      "review",
+      "-d",
+      "review_console"
+    ],
+    [
+      "docker",
+      "exec",
+      "-i",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b",
+      "psql",
+      "-X",
+      "-q",
+      "-A",
+      "-t",
+      "-v",
+      "ON_ERROR_STOP=1",
+      "-U",
+      "review",
+      "-d",
+      "review_console"
+    ],
+    [
+      "docker",
+      "exec",
+      "-i",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b",
+      "psql",
+      "-X",
+      "-q",
+      "-A",
+      "-t",
+      "-v",
+      "ON_ERROR_STOP=1",
+      "-U",
+      "review",
+      "-d",
+      "review_console"
+    ],
+    [
+      "docker",
+      "exec",
+      "-i",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b",
+      "psql",
+      "-X",
+      "-q",
+      "-A",
+      "-t",
+      "-v",
+      "ON_ERROR_STOP=1",
+      "-U",
+      "review",
+      "-d",
+      "review_console"
+    ],
+    [
+      "docker",
+      "exec",
+      "-i",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b",
+      "psql",
+      "-X",
+      "-q",
+      "-A",
+      "-t",
+      "-v",
+      "ON_ERROR_STOP=1",
+      "-U",
+      "review",
+      "-d",
+      "review_console"
+    ],
+    [
+      "docker",
+      "exec",
+      "-i",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b",
+      "psql",
+      "-X",
+      "-q",
+      "-A",
+      "-t",
+      "-v",
+      "ON_ERROR_STOP=1",
+      "-U",
+      "review",
+      "-d",
+      "review_console"
+    ],
+    [
+      "docker",
+      "compose",
+      "-p",
+      "arc-migration-41954322019-1-baseline",
+      "-f",
+      "/home/runner/work/ai-review-console/ai-review-console/docker/compose.migration.yml",
+      "run",
+      "-T",
+      "--no-deps",
+      "--user",
+      "0:0",
+      "storage-init",
+      "python",
+      "-c",
+      "import base64,json,sys\nfrom pathlib import Path\nroots={\"documents\":Path(\"/app/documents\"),\"reports\":Path(\"/app/artifacts\"),\"config\":Path(\"/app/config\")}\nrequest=json.load(sys.stdin)\nresult={}\nfor group,root in roots.items():\n if root.is_symlink(): raise ValueError(\"symlink root\")\n paths=list(root.rglob(\"*\"))\n if any(p.is_symlink() for p in paths): raise ValueError(\"symlink\")\n files=[p for p in paths if p.is_file()]\n if request[\"mode\"]==\"restore\" and files: raise ValueError(\"target volume not empty\")\n for p in files:\n  if len(result)>=100: raise ValueError(\"file count bound\")\n  total=sum(len(base64.b64decode(v)) for v in result.values())+p.stat().st_size\n  if total>33554432: raise ValueError(\"file bytes bound\")\n  result[group+\"/\"+str(p.relative_to(root))]=base64.b64encode(p.read_bytes()).decode()\nif request[\"mode\"]==\"restore\":\n for key,value in request[\"files\"].items():\n  group,rel=key.split(\"/\",1)\n  p=roots[group]/rel\n  p.parent.mkdir(parents=True,exist_ok=True)\n  with p.open(\"xb\") as f: f.write(base64.b64decode(value,validate=True))\n  result[key]=value\nprint(json.dumps(result))\n"
+    ],
+    [
+      "docker",
+      "exec",
+      "-i",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b",
+      "psql",
+      "-X",
+      "-q",
+      "-A",
+      "-t",
+      "-v",
+      "ON_ERROR_STOP=1",
+      "-U",
+      "review",
+      "-d",
+      "review_console"
+    ],
+    [
+      "docker",
+      "exec",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b",
+      "pg_dump",
+      "-U",
+      "review",
+      "-d",
+      "langflow",
+      "--format=plain",
+      "--no-owner",
+      "--no-privileges"
+    ],
+    [
+      "docker",
+      "exec",
+      "b0b4e06c009f020d144cb9d6f01e0e1791654ef2d418c4f19a1dcbcf523ee53b",
+      "pg_dump",
+      "-U",
+      "review",
+      "-d",
+      "review_console",
+      "--format=plain",
+      "--no-owner",
+      "--no-privileges"
+    ]
+  ],
+  "details": {
+    "dumps": {
+      "langflow": {
+        "bytes": 5758781,
+        "sha256": "2213e75a6bc583ce91fa51165b9dc0da1ef85449cd65feec0049a1f26a7929dd"
+      },
+      "review_console": {
+        "bytes": 123896,
+        "sha256": "eda80781ea4f8c2b6c5dc3b4e24237be85da6980d59a48ccb223142bd312538c"
+      }
+    },
+    "files": {
+      "config/langflow-flows.json": {
+        "bytes": 2827,
+        "sha256": "95ecc243638a2741defc0a46ea11ec54d1f65b68f58f4aaa1872c48b973e99ba"
+      },
+      "documents/DV-11e76bccd74f4328be8100dd91fe8eb0/source.txt": {
+        "bytes": 144,
+        "sha256": "7803665c334fe025bf54c5e2e455726cf4e663cd17ab4343786dc83e8fa9a829"
+      },
+      "documents/DV-170e503c8f13489888e56e09ca755cb1/source.pdf": {
+        "bytes": 15405,
+        "sha256": "74d077298537f9961fc7da3a4d91849846845f533d22e9a3ee1ed1c3eacca1df"
+      },
+      "documents/DV-5291a056ddd84664883bc3d9b966a2c3/source.md": {
+        "bytes": 141,
+        "sha256": "e587435638f2bf7602cdab28abea5046e9916f0900e18335116198b4a2860f38"
+      },
+      "documents/DV-87750bc8b4c5472994a1ab425ea8963b/source.txt": {
+        "bytes": 100,
+        "sha256": "75b1f171b41e15c33663ce8ee4e13add8cc7fafc94f40b04c9749723a56ce28a"
+      },
+      "documents/DV-beb7e1e2d65146e8a0ee1901a4d3043c/source.docx": {
+        "bytes": 36878,
+        "sha256": "645c02523e4960d5f97971d7116b94c23c82fddf8325c9b6dceab6b2bf2c3607"
+      },
+      "reports/DC-2aabe4caecf743b1b57aa9750e44c266/6f6ee6126881d278c1c6d4c86a40c316183ee0abb65984565c12dd832ad4220d/report.html": {
+        "bytes": 7615,
+        "sha256": "f40d5a253dc446304bfe9e0c6d972049ae2d4ab7df95fddad12634e845b4b277"
+      },
+      "reports/DC-2aabe4caecf743b1b57aa9750e44c266/6f6ee6126881d278c1c6d4c86a40c316183ee0abb65984565c12dd832ad4220d/report.json": {
+        "bytes": 3136,
+        "sha256": "f3aeb99a33b8981d26954496ad983a1427f951cd0fa4b050520a0e976cb19c85"
+      },
+      "reports/DC-2aabe4caecf743b1b57aa9750e44c266/6f6ee6126881d278c1c6d4c86a40c316183ee0abb65984565c12dd832ad4220d/report.pdf": {
+        "bytes": 38338,
+        "sha256": "b9e8ecfb462314936528eb3b94febb49679350a90aa16b852d08d621dbbffb9b"
+      },
+      "reports/DC-49232977c8814f8d8ab540cd660205f1/3b0e1f8abe20f312f3f41c8ff5cfaeb44ce2b04dbecf8330cfa36bcd016c9c99/report.html": {
+        "bytes": 8787,
+        "sha256": "e75d76e7a0bfadedb2370f39d57d30b000663335f7f36302304a00d61c309312"
+      },
+      "reports/DC-49232977c8814f8d8ab540cd660205f1/3b0e1f8abe20f312f3f41c8ff5cfaeb44ce2b04dbecf8330cfa36bcd016c9c99/report.json": {
+        "bytes": 3721,
+        "sha256": "318b56a141166bb2305e80e397b4b63727ce037300a4a9bf2e333c28606fb1f7"
+      },
+      "reports/DC-49232977c8814f8d8ab540cd660205f1/3b0e1f8abe20f312f3f41c8ff5cfaeb44ce2b04dbecf8330cfa36bcd016c9c99/report.pdf": {
+        "bytes": 41467,
+        "sha256": "1860b0dfa07c03dc2f7171bef9b047d28dd66cd824032de3bb151e1d90160eaf"
+      },
+      "reports/DC-877e64a0cf4e491bad33591d0fb4e8e5/f262bbced2db5d8bde61a361561501092f73c63308bc860a3e40a6ee6b77656c/report.html": {
+        "bytes": 8559,
+        "sha256": "21ff47e96a354b06ed9a2016ab5fb5df20aa689ce3a82a2f4503e39e746a180f"
+      },
+      "reports/DC-877e64a0cf4e491bad33591d0fb4e8e5/f262bbced2db5d8bde61a361561501092f73c63308bc860a3e40a6ee6b77656c/report.json": {
+        "bytes": 3606,
+        "sha256": "41c159d2bc1a67acd19f6243b0f64955431c255e5e6b46496eb2b14de599fd2b"
+      },
+      "reports/DC-877e64a0cf4e491bad33591d0fb4e8e5/f262bbced2db5d8bde61a361561501092f73c63308bc860a3e40a6ee6b77656c/report.pdf": {
+        "bytes": 40743,
+        "sha256": "ad5824b27f34ef51ea810973ef1063c250fe28885c6b24257436eb2aeaa27037"
+      }
+    },
+    "fingerprint": {
+      "langflow": {
+        "alembic": [
+          "d19e7b3c5a42"
+        ],
+        "physical_schema": {
+          "ordinal_gaps": {
+            "deployment": {
+              "live_columns": 11,
+              "max_physical_ordinal": 12
+            },
+            "deployment_provider_account": {
+              "live_columns": 9,
+              "max_physical_ordinal": 10
+            }
+          },
+          "raw_schema_sha256": "328995be856f0611e6c776460e9fc885315ab85ecacb7a1d65af36f6b8a50294"
+        },
+        "schema_sha256": "5354e25c0613b1da447b06bd6d98d07a738c10ed203d95e5f6f1438e167d4f56",
+        "tables": {},
+        "users": [
+          {
+            "id": "f976a4d3-f5be-4a08-b8c1-3dfc826c158d",
+            "username": "synthetic-migration-admin"
+          }
+        ]
+      },
+      "review_console": {
+        "physical_schema": {
+          "ordinal_gaps": {},
+          "raw_schema_sha256": "ab6aca18137504cf02a12b6d9f9bab103539d98df5737cd70e67963df9a2fca9"
+        },
+        "schema_sha256": "ab6aca18137504cf02a12b6d9f9bab103539d98df5737cd70e67963df9a2fca9",
+        "tables": {
+          "assessments": {
+            "count": 16,
+            "row_hashes": [
+              "3081eed77e98aa921ac494e093c60e8a190ea651da2d386e02224914ad553f46",
+              "34a33a4f13092462949c7e6d38c9b9df602afdb11fe5282088ad85e17dd77462",
+              "49fa170200072fe4a41c8735c14dae12b59c30a23bf47c52fa3ea891621e02c1",
+              "4ec78d550a278de036ffbff41e525e891ddf6c0dc3882b505423b988f412b0ce",
+              "5226136e4dfacebf08e85bb932e24e90ee6276cf24a9645ee22314c055265152",
+              "55353cb45244122eaec327550f3330275088669746c64a6b72df0ba525cc9b08",
+              "58809eb7f28dda9e20a46399a12462d0c7cc685e5c15774f36708152fb433612",
+              "6a4a91e92ffaeb43d0dcbc18882ede361502a1a8417baafd59e67b0e501a9dde",
+              "92a8993512c1fb810e196599676d9f18c03cdf788be88b9cfe780dd14ac61201",
+              "aefdd6cdabff07d7f0d5be0fb8d310b54add5b3fc1c04e221cd3ab8f29906478",
+              "af7fbb364a68fc4ef0b46bb0c86ffcedb49eecaf9b70185d0c3a930c5c9808d2",
+              "af88ab1bca69b767e939d58028e9c7234409389a1bbcef241fe76256d98b15f2",
+              "bf52a3ee57de53d9b8af0e43d8c4eee7b268652fa7bff8b32f838e48e2a23ba7",
+              "d92a211afec8a7c5790dd5f7967a53b75c1a5390d111875919ea517b4b7779e9",
+              "ed06b529d9766d1fa9f88d9eaef781de08430756029c51f54f3623bf00670bba",
+              "fdbf7b1ffbb919a69f565aade3d2d24ac55a3a6724a7f9397a35a41331a4549f"
+            ],
+            "sha256": "79b82a8a1e872e1fa10ba285a0fe3e36e62d4b3c7cac457c17e456dee9404ccb"
+          },
+          "audit_events": {
+            "count": 43,
+            "row_hashes": [
+              "025c86bf9b539cbdfc8b28fa19da387ce0b276fcc1376b8b3d7bd9a3e8336aa4",
+              "0695b29517e6a5d66e835e23fad20f28fc0ab1e201587fd67f54e2c858128450",
+              "0d59aad364f77333b51f5af18db306c1f69291658f7f511a283c769f18b8f266",
+              "0def869790c77c01f978a88dc862d4ad594fcb10a8af9d7bd3d567d5d0d7f7c4",
+              "1199a3001487b8a9f888de8310ddaf8122cc5e728f7f8ec0f6caebfcf9cdd49e",
+              "130497d38074b57d7f3159584610b559be8149311602d0a82bf4ea9b07dc4e39",
+              "132ddc7cc50695e8fae9ce13dab0b8a1abdf8b64517fcef74ef9addf5630882a",
+              "1b3564f1a64c4c4eabb2198138065594abad81292aa89d953808706a9acc2323",
+              "2f3bd218552854b62c5e96f9ecc889c03a03b577aba6164a6e9fd3ea1558ea93",
+              "429867680b21f2764d57a5b63ccdcd7c2265e7a356f773c330121b7ae40fadac",
+              "503f787972bfc79bf8eb311baa174ef87049546f5236c88e733a245278fb5a50",
+              "5cf185b05a25650a981d8258c5a39437d422dd40c5e7bb706f6660bb8c7d6fb0",
+              "5dbd3b9cd08abe830c0ab2d7217cf40eee2ea44b9d95c535fbf6711feeac0691",
+              "614b32f17ec12fa309905b68257b0696f0430fb0887f2631fa91c764a9bb273e",
+              "636e3d6433de2f5c37f90038a405ecdcc7201bd8eddf5e20c79664ae59c17d79",
+              "6ba2ce4dc73712bc51daec1d1b2b451a9d76148a7a45f9af8888749665bcff3e",
+              "6f2fee177d904540643ad25ae322ad3df26d2f9001297529f38817dfe78de524",
+              "7b0914ebffbbfceb4a6329b91f6c45ec08a364e602a00337a56c35bede25e785",
+              "7c8ca5db64c6a23fd75ac8e821751f5b0a17a62354e46114a207f51ca385199a",
+              "8970f8d584df2f9c67d80a6faba0dc8e1849f56bf90f2206d41c4112fed01890",
+              "8f28e1d87085d9ca025d06925638e111197733c5a54a6a97f5b2fa58bcf62c18",
+              "91d9cc6c084d1104435018feff32ff5afedac21efdcf76b51a3149c8d7d9341a",
+              "922597599258f9d12bde02951b5e49a1b65ad488dd41b283af5e7a8dc276595f",
+              "94e8c39444d99947a1522adb57bbefb926145f531904064d69bc0f57e34d3b50",
+              "9ad3813bc873638e53cb496c6e576592c2f51bcd7eefb0a232166c4b77552d61",
+              "9cc9d7cbea5f4e59a9c223dca428d7d8a2a161b7b86ceee8b1ec6e5e1551797d",
+              "9fc3d189b204ce5e8f912f78bc2095827fab0bcf242afc447e47a9f752ced454",
+              "a18c5dd9ef1350101fe3ed801f7471aed12debaa45defeff96ca65e5e936318b",
+              "a24843faa075caadabe2afdb61e0e41a9d22cd61c7752fbed50fd7a4bc669c85",
+              "ae9145a541b0cf505affe34b3c7b8678053807b1b7ff103a2d77651d829f1c54",
+              "afb422e4d4a146aad85c1c1bc5f480014cebc4047165ea82ebc6ca7854cce666",
+              "b0a75e76b944c320cb439f9a83fa5a85cc0b38a734c7941fdc36a09bad3f793f",
+              "b33ab83c5ab21df338a04b175f67eeb683f9fb6abde0cf18b9940ac3b1d10ebe",
+              "ba4ec5d9ca22c6e96b2f0b22e4a179f65fbb0a85aceec68be3e40790e35d21fa",
+              "bb1c6b2d5b80d2d4c44f4fdbb6b6ef087cc50c1052955ea15c728de81be25e9b",
+              "be0747b4962ea4224f6fb9f23906fadb4ff170e762eca8b3c2bd98c2b4a15201",
+              "c0783e2ff688e4387b1764b6c21e347307132cf4649a2c6762c46487b091d733",
+              "cc6e931991f6e4a3c02f73dd485865c6aa7f9ea01e9760b1331a96a78e98327b",
+              "cd981ca79273d59f2b2d8187d389270abb06d1fbdfe04d60ae9d6c84be7bf131",
+              "e930839b9b62c101d05bf46ed24df0a28bcb1b29fbe64fcf32f38bfe98aa2689",
+              "f0c2f359ae34bfd17b0fde183e5610369273020711f41bdc89588aa46c05b9dc",
+              "f225dd422a1f0767d4de20e74c833c5472d9df6fb672d6686621a47f863ef989",
+              "ff3196b385108b02b547104e3da261e7e73021bbc923fa31de804a4f4b5e56cc"
+            ],
+            "sha256": "d98a15a556dad33a71edd5fc01ce75d0948c96d4707467470e38ea940ee3762f"
+          },
+          "decisions": {
+            "count": 8,
+            "row_hashes": [
+              "456337fe37e557087e4235a2a151c8c3684d6088b64dee89d91f4ed2ec2472da",
+              "483e0fd17f5a7b75baa213723da61ba21bd08694e01ae809f88b8636bdb91043",
+              "5c2bd1fa92648e08048a7cecf463387500052c16c95c2c41184e1089434c29bc",
+              "63f9d1551adec25d10702f8c7eb65d10386f5c3f43716c7abc28768d8cd6b082",
+              "66e9143ae592e437d00520759e92fd61089211fb84a6b6c867305ee48332b620",
+              "90e2019f95ad775be652dff2c65022f179124960ebf6cc3ea166d086cb95ea82",
+              "c98f18bb1cc33ef40ba0f6b00edf4c01133e657ba9c7bc5344023e7c48d8b83f",
+              "caf2aa21dc73c208b4c55fbadabab1c589e3638e8cdb83d605bd80cfdecf09a9"
+            ],
+            "sha256": "cbd986f96c8f7a0c0c40e235cea22bc3f09de7f7acb6384f9172c0f139293c5a"
+          },
+          "document_versions": {
+            "count": 17,
+            "row_hashes": [
+              "1237050a743ce5246e92bf1cdf4f62653848695b3a20aea4f3028ad70ecb2eb9",
+              "1d18cec8e6cd0a5d1effbf923bc52b11a33e565f622355a0c8aa324834f60a53",
+              "4c824204a5fa12c3102e70721b097d70e494579fac2092db64009ed15970b6c1",
+              "5cebd2847e2784488edee34b04f5c487f13d18e9e265b8bde63bb3dd6a211382",
+              "5f67fb786fd14cd66e826eb81191bcd92737babe14cc1287d919da190cc264c4",
+              "6b43dc5daae44cdad791d51bead1a51cd72453bf78fb7f9c20120c5365bf4840",
+              "776dd4b92602ffed71668c388b3c10b28af4ec5fd01596ed448e22b899f8b8c3",
+              "7889cefb80ed59d84849c9050b3cbb31483bc2873dd9a01c9b17a2fec1abf4e8",
+              "88c80445d03bd90e81a77e9431aff6202b87577dedb6b1d273179d56e25be33b",
+              "ae99b43187280c942e2eb10a34d177b4b69e1689c74e11bd80b46213c7365507",
+              "b966af1fbc6fca8ba67f60cf0105c098f28d04e1bf7f3ef7cdfdf624651a6cb7",
+              "c1aaf3bef1a897d600d865891e07c78c27d0ed46c7f7b68cab789a232bba815c",
+              "ce69598f99e822b54755d8178996ffd32817861a06919d68982bb07cf7dc3959",
+              "e092771a5fc4c1b41d7dc1bf67b66babeb954dbbc94190d970ca529d238940f9",
+              "e1717520c8b7deb474a26bc2b884654c3fc4577879f2b4212602b66e10634afd",
+              "e3f27c2cdcf71185fc0e4c28c1b177841ba141faa12bd6ce24ac31c017680151",
+              "fe2065a7581275bda91cf8444f10298ad8651b62f8b118dcd3716cec9d247662"
+            ],
+            "sha256": "abe69bdef13ac63f5fa3322479e7b941c7021b5260abd59a0c738382ad161f67"
+          },
+          "report_artifacts": {
+            "count": 24,
+            "row_hashes": [
+              "0d12de34e3ce04e6c5517e93689e5934f677d4482700381432921f0890589a25",
+              "1a43aa2fcc458382763b877ab62cf6b8f32df416e225c1276686eb4721439d41",
+              "2054d352231e1730e1efd41ff224d8e948f2556d6587ddb9f479817981d449bb",
+              "208e30df6bc882a1f5dc98e1d4b62d4df97212b3d5d964d2e15457b96f7fa46d",
+              "389cad69a5cc41923c1bf7d8a4bbf5c498e0b34ae40b52cd8c1abef25ddf2bf6",
+              "4343749e84df36c47570cb947eb55715451bd2b7a8ca3c7424b69426689174d9",
+              "4d580fcd50d18345386b053d5564b442001d5d841df6dc9e46efac2da9b51f00",
+              "4d644827ff44ea68498043bc460974efb4403278f440fbe658af7458e54b199b",
+              "52e20fcb25901d983959efee651cfcc371c23c46040292362fac0d595b71786d",
+              "5b9b5d640772d5640f44f12bd96d275b8afd4f438c135d87156ea1aaf77ba5d2",
+              "5ddfd666813c302d9f9b4a08afaccb58f9d6da4560ca3629d854658746e26c42",
+              "75fdc31fb71c93ae6660d6ff40ee477fe8d118923a676f5055101baf5cf71aa5",
+              "95e43f52354fdf97d021c6728f87c65d6676514e6c48dfc1435103ad378c922e",
+              "99d76bdef0d420ca7e46d0f24e97b8b78aee1d9dc90960e34b18fd105613e5dc",
+              "a13e9531d2d323b9eaf5326540079d3555a43fd6ba0871eff43eb78fecef4fbf",
+              "a44fed9d7843b32b58089d9ffd068ca0eeb290a3dd097abd7c49e452bba5f573",
+              "bf39a8459c51544991a505b217535f08485545dd267bb946d13f8240e4848f4b",
+              "c2a5591788610d7105a992ee751a5fea4c0b28c3b5b12413a0cb466d48ee5402",
+              "c5bedbfe121cb55b7c44d84ff4ed7987c681ff55561f0d7bcf4f7f596bd0108f",
+              "ce0db327c2fcee04606abe3c3f5d0a6336abfda7ccac6ed228af7005b4d74247",
+              "db4795cedbf4fe36fbb223ec860ea488d5b80e893a661cdf2339a3852538591c",
+              "f0129f370f5c35c609ebbe1cfc99c171106d1362efadb4281c19d9e78c019374",
+              "f45defc6f7709fca2f4e1853e414c21bce7fd6508bf55b7175cd6d5740753930",
+              "ffb908aa0698ab0901997c2c425e156e9b38fc8546764f9d5d3c7a16b23a6474"
+            ],
+            "sha256": "294bc88897017768a1e6ec8cb658d050b2fd3737a62c9a7af4aa13382be99b56"
+          },
+          "review_cases": {
+            "count": 17,
+            "row_hashes": [
+              "1e9b9228494419a3819042e60aa5a9fcb137666fbb68313f1c6147b45a39ce39",
+              "2abe7dad87db2d10e0d93aaed3707f0bc8b8405c82e98b2d1ff679bb4be96f73",
+              "3ef696d00d96a4280183b09a12ee749c74d5501578e997ee574a71110a52d590",
+              "67862ea9a655d0422cf30d5f8ee36c1ac9c8bec3cddf17f51c3bc3d74c1656ff",
+              "757ce981658844ea2e0f26857e8a6a4735150b24e0560935289d4131c260cb9e",
+              "97afe096bea745075f1bf213646892b6b5d44b8cf58687524f88393d80e26859",
+              "9a20895c5874ac6261beec82a23b9ee2aa36feef3099565754b4b6bf191dd621",
+              "a27474518f7ad2b6e1e57b93f0206594a7abe41f92c8012aeddc60d1036afc5d",
+              "b07892893af9691ae512e4b3c76b111b49f8cbca5f7f27e27fd13cb19ad1c894",
+              "b878799bb4575e5deb62feea71cb127b8cb8c8989c36cdf2e8df5eba7104c92a",
+              "c77289f8cee2988ae7a7a4b6510df9ab024884d091ecdfd74f36d4815f5b181b",
+              "c926d99d9f6eb7122ffe70a7f99f8eaae2c4910ca0a1ea7484e1048b6673433d",
+              "d126d5ed74ffc23dbf60a3872f1c857fdb52bc874f43db826cb050ec77c1ee1f",
+              "d75e580984ff47de39586df9d96113207c04a0c94cd0a283a92eba3ed480fbf2",
+              "fb8fbf41efd584f2b9ce38b7059d9adb901c7b89c141a38b8027f283841e6e83",
+              "fe72f7b1f4fe15df0cb4659778ff3ef36655bf9dd53f43b70d237b14601d9698",
+              "fed8d38828a5b23f8d58c38c8f6f52f438d252f0dbfb293dd5671fd130f91a18"
+            ],
+            "sha256": "f4751d3399f5c7fff13acaab13d60ef8c9bbc358fd910b38b3611efbd84ac65b"
+          },
+          "schema_migrations": {
+            "count": 1,
+            "row_hashes": [
+              "cfb8afd7405a6ad38b26f72052543836054727fecf7f7737763feda7dfa2019b"
+            ],
+            "sha256": "bf328c05d48b4af2bed9aefc8a40066ed30e5d6a5999a139fedef533e520bdd0"
+          },
+          "upload_requests": {
+            "count": 5,
+            "row_hashes": [
+              "75c5bb4d1c217567c8bfb44f60bde4b36b0c139d5ac17c9bafc8d55825faf5e7",
+              "aeaa6954f7f80ca1cb35e7cb1f2f9c70f5d0a9cdfc30da5a93f1705df11310e0",
+              "b4d6d458fa788a10bea2671e6fe993b4dd32b73d7918058644443219fd397f1e",
+              "e4161178c92b9e318d8d25ff59d11d49063208294be4ce1ddbfb79ab34f25e80",
+              "e52d4fb2671b7d6cfd877c27821d9ad60abf93714902f4ce9a7dfc48c685c6a9"
+            ],
+            "sha256": "15663e91369acae5c0acd1d26ada7b0766ed09401fcdb7367fcc2a10b4e01d78"
+          },
+          "workflow_jobs": {
+            "count": 9,
+            "row_hashes": [
+              "041ee112973dbeb94309f36ad45fd5b42b9daaffdba5b80f6e4f99b621b615d3",
+              "2469c6bf86e2986096ee740bc9fff8f49be41193e47ced3bf12b9fae37eb8537",
+              "3e76b5c93882dccf55600b17d8cb49743d73010236f7b9c5efb2fe69cb24f370",
+              "5efbd83958c252b0e13b398186a372d49994dedfa36c0354b75cfdc7a7cd781a",
+              "6e3e318c243512098df26b1da90320df375c554ff8a170b4b637368adb8e553c",
+              "b590f207d83612d75055d37cabd662d1ec54ae2d7d53afea216d19b22ae30e42",
+              "ba5277474a7cbd5c1982a3991c4bf977304dcb379e7b137a84cfbc64f811630c",
+              "df5ee4432fd8ba1a36039b8535f73102233adf9b146e8c07ed58235d6afb8f08",
+              "e6e36aa52ce1a9f53fafa9df581cf391e66c49f0ab54efed9196b82416c973c0"
+            ],
+            "sha256": "c40a57a6bc9e6e0ae4beee1a5580170ecb6b85605a9fd529762eee8fb9bfa179"
+          }
+        }
+      }
+    },
+    "flows": {
+      "Document Review Decision": {
+        "graph_sha256": "5c423209971c9d6263538e5ca15a4896f3505e2b5e084fbffbfccd2308e531d7",
+        "id": "7a930621-bbac-4236-8312-01d9ceca793d",
+        "user_id": "f976a4d3-f5be-4a08-b8c1-3dfc826c158d"
+      },
+      "Document Review Intake": {
+        "graph_sha256": "e1b0cdcd3c26657da65069d0c344ec3fab87947b4e5cacb6bd1f15796e9dd7c7",
+        "id": "15ddd3bc-629b-4729-a7a9-dc8ff3ab9421",
+        "user_id": "f976a4d3-f5be-4a08-b8c1-3dfc826c158d"
+      }
+    },
+    "source_project": "arc-migration-41954322019-1-baseline"
+  },
+  "method": "plain dumps; stopped baseline writers; empty isolated restores; UTC SQL",
+  "not_tested": [
+    "original SQLite or historical volumes",
+    "in-place downgrade",
+    "zero loss of writes after pre-upgrade checkpoint",
+    "production data"
+  ],
+  "producer": "scripts/verify_langflow_migration.py",
+  "producer_sha256": "277305f39ad1c8ca5c6f7c9eac0660b7a747c683c10b1edcfbbe539672a4a952",
+  "project": "arc-migration-41954322019-1-baseline",
+  "result": "passed",
+  "retention": "dumps/files ephemeral unless separately selected by evidence manifest"
+}

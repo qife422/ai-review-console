@@ -1,0 +1,51 @@
+{
+  "run": 41952562436,
+  "source": "82a028e5738f04c9ce642e76544ffbae5554ab62",
+  "artifact_id": 13382130734,
+  "transport_bytes": 52831,
+  "transport_sha256": "698819c41be9fed5aa9b7698d6653c716d5521198930dfc2a17271fc5d157acd",
+  "transport_retained": false,
+  "selection": [
+    {
+      "member": "build-installation.json",
+      "bytes": 461,
+      "sha256": "79a1a240ccc83d2f3ddf1188aacf4695510eaf076942fd868ab0a135b6774536"
+    },
+    {
+      "member": "capacity.txt",
+      "bytes": 1490,
+      "sha256": "2a3fcf59b5bbffd078dd46540a0a8433ec232e72c6c8d29df1f7d4a5340ccc66"
+    },
+    {
+      "member": "build-resolution.json",
+      "bytes": 1821,
+      "sha256": "5f560cd550641f76f537ed2a5cab670b6b4005255a553d8e7a7a1d02049c573d"
+    },
+    {
+      "member": "installation.json",
+      "bytes": 459,
+      "sha256": "fa006b14e9f91debab285c481de84c0d4120c503cfd54eb18fd768109e4c329c"
+    },
+    {
+      "member": "langflow-candidate-build-tools.lock",
+      "bytes": 449,
+      "sha256": "9f87377dbd3950d2fd2f54d740a9fa7ce7f71acc87ef0f1e119b45fa970fa9ea"
+    },
+    {
+      "member": "langflow-candidate.lock",
+      "bytes": 34169,
+      "sha256": "22c0c6fd00a436f20fbc649e7ef69273da933b2c75ea0f797be9adfb48a4bd7b"
+    },
+    {
+      "member": "provenance.json",
+      "bytes": 507,
+      "sha256": "045e9140f1b1569052edf3aa92e9399e736e3df6137dea35e7e4428ea56b293e"
+    },
+    {
+      "member": "resolution.json",
+      "bytes": 117594,
+      "sha256": "ed4b31a5ce0575222e5d061d754c9b2020e358a575e4ffd6dac843205c82ba93"
+    }
+  ],
+  "scope": "Full selected compact lock artifact. pip report, archives/build env/installed tree unselected and ephemeral."
+}

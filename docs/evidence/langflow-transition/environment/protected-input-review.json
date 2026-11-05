@@ -1,0 +1,189 @@
+{
+  "all1155_payloads_and_five_manifests_unchanged": true,
+  "all_protected_inputs_unchanged": true,
+  "cleanup_authorized": false,
+  "created_at": "2026-11-05T02:08:18.682187+00:00",
+  "default_inputs": [
+    {
+      "baseline_bytes": 2412,
+      "baseline_revision": "8e96a36d44119b577a34ebc7a16d110a856e927a",
+      "baseline_sha256": "bb38c30695ea422839935a6209786f8ab8728d054210756d2b1af1e9d6b59cb6",
+      "bytes": 2412,
+      "independent_default_52_pin_file": "none: all52 pins are inline in this Dockerfile; candidate constraints is not default input",
+      "inline_exact_pin_count": 52,
+      "inline_pins_unchanged": true,
+      "path": "docker/langflow.Dockerfile",
+      "sha256": "bb38c30695ea422839935a6209786f8ab8728d054210756d2b1af1e9d6b59cb6",
+      "unchanged": true
+    },
+    {
+      "baseline_bytes": 2148,
+      "baseline_revision": "8e96a36d44119b577a34ebc7a16d110a856e927a",
+      "baseline_sha256": "993529902d7718533e40a25ccd220f713f2a8a4c6b4123a127625362593d891e",
+      "bytes": 2148,
+      "path": "requirements.lock",
+      "sha256": "993529902d7718533e40a25ccd220f713f2a8a4c6b4123a127625362593d891e",
+      "unchanged": true
+    }
+  ],
+  "exact_repo_path": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1",
+  "fixed_inputs": [
+    {
+      "bytes": 57344,
+      "expected_bytes": 57344,
+      "expected_sha256": "980ad5d23d866a52e4101966594e5a24ee67edef08475afc63ff9c3e1f6fca1f",
+      "path": "review_console.sqlite3",
+      "sha256": "980ad5d23d866a52e4101966594e5a24ee67edef08475afc63ff9c3e1f6fca1f",
+      "unchanged": true
+    },
+    {
+      "bytes": 50489,
+      "expected_bytes": 50489,
+      "expected_sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753",
+      "path": "docs/UPGRADE_SPEC.md",
+      "sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753",
+      "unchanged": true
+    },
+    {
+      "bytes": 8731,
+      "expected_bytes": 8731,
+      "expected_sha256": "5ad13f524e74554b9c8cb30b9809ffbbbbed8e3d7fa4ede5625bb1b7d781bf2e",
+      "path": "docs/spec-baseline.json",
+      "sha256": "5ad13f524e74554b9c8cb30b9809ffbbbbed8e3d7fa4ede5625bb1b7d781bf2e",
+      "unchanged": true
+    }
+  ],
+  "host_free_bytes": 23302426624,
+  "limits": {
+    "combined_temp_bytes": 41943040,
+    "new_temp_bytes": 2097152,
+    "sources_bytes": 131072,
+    "sources_files": 8
+  },
+  "local_docker": "No local Docker command or daemon start/build/pull/prune performed by this audit; current round no local Docker run is caller-provided scope, not independently inferred from daemon state.",
+  "method": "Read-only bounded fixed input and five manifest-listed payload byte/size/SHA256 comparison; git show only for exact baseline bytes. No DB contents emitted or DB execution, migration, Docker command, copying/archive or cleanup.",
+  "old_evidence_or_database_modified": false,
+  "paths": {
+    "candidate": {
+      "bytes": 0,
+      "exists": false,
+      "files": 0,
+      "path": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1/artifacts/evidence-candidates/langflow-transition"
+    },
+    "formal": {
+      "bytes": 0,
+      "exists": false,
+      "files": 0,
+      "path": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1/docs/evidence/langflow-transition"
+    }
+  },
+  "payload_files_total": 1155,
+  "producer_sha256": "a4bf823a6eb97342a651df28ea5181b9de29a1dfb92d7ebcdccf29318a3fe18d",
+  "report_serialization_note": "Temporary inventory is measured before writing this report; final report bytes are provided by final write result. No ambiguous projected-size total included.",
+  "sealed_packets": [
+    {
+      "expected_manifest_sha256": "6e3fa0159c396b1d422b32d90ccabb772b82db5d5cbeddb6e385e0e54138ba1c",
+      "manifest_bytes": 123887,
+      "manifest_path": "docs/evidence/v02-acceptance/manifest.json",
+      "manifest_sha256": "6e3fa0159c396b1d422b32d90ccabb772b82db5d5cbeddb6e385e0e54138ba1c",
+      "manifest_unchanged": true,
+      "mismatch_count": 0,
+      "mismatched_paths": [],
+      "packet": "v02-acceptance",
+      "payload_bytes": 5181623,
+      "payload_fields": "files[].path / bytes / sha256; paths relative to own manifest parent",
+      "payload_files": 187,
+      "unchanged": true
+    },
+    {
+      "expected_manifest_sha256": "c2a9cba23f3653e7c507654631f74568ee7490f80212ffe382c92323a4547f36",
+      "manifest_bytes": 74437,
+      "manifest_path": "docs/evidence/v02-release/manifest.json",
+      "manifest_sha256": "c2a9cba23f3653e7c507654631f74568ee7490f80212ffe382c92323a4547f36",
+      "manifest_unchanged": true,
+      "mismatch_count": 0,
+      "mismatched_paths": [],
+      "packet": "v02-release",
+      "payload_bytes": 26939835,
+      "payload_fields": "files[].path / bytes / sha256; paths relative to own manifest parent",
+      "payload_files": 404,
+      "unchanged": true
+    },
+    {
+      "expected_manifest_sha256": "0466646bd5eecd32768e9fc61bf138815853292049a41a95dc1d98927e2081ef",
+      "manifest_bytes": 48823,
+      "manifest_path": "docs/evidence/release-compatibility/manifest.json",
+      "manifest_sha256": "0466646bd5eecd32768e9fc61bf138815853292049a41a95dc1d98927e2081ef",
+      "manifest_unchanged": true,
+      "mismatch_count": 0,
+      "mismatched_paths": [],
+      "packet": "release-compatibility",
+      "payload_bytes": 16596288,
+      "payload_fields": "files[].path / bytes / sha256; paths relative to own manifest parent",
+      "payload_files": 222,
+      "unchanged": true
+    },
+    {
+      "expected_manifest_sha256": "5a400e77b5e3b28426f2efe99d723b48aee5e1e95d9c7e4a4c9665364963b724",
+      "manifest_bytes": 71890,
+      "manifest_path": "docs/evidence/runtime-maintenance/manifest.json",
+      "manifest_sha256": "5a400e77b5e3b28426f2efe99d723b48aee5e1e95d9c7e4a4c9665364963b724",
+      "manifest_unchanged": true,
+      "mismatch_count": 0,
+      "mismatched_paths": [],
+      "packet": "runtime-maintenance",
+      "payload_bytes": 23051943,
+      "payload_fields": "files[].path / bytes / sha256; paths relative to own manifest parent",
+      "payload_files": 269,
+      "unchanged": true
+    },
+    {
+      "expected_manifest_sha256": "ca0a0b0b38c2ca735ae17b83c93cc022fd89899a8b8f0e82b978b1eb3b5a38ec",
+      "manifest_bytes": 18806,
+      "manifest_path": "docs/evidence/langflow-candidate/manifest.json",
+      "manifest_sha256": "ca0a0b0b38c2ca735ae17b83c93cc022fd89899a8b8f0e82b978b1eb3b5a38ec",
+      "manifest_unchanged": true,
+      "mismatch_count": 0,
+      "mismatched_paths": [],
+      "packet": "langflow-candidate",
+      "payload_bytes": 737447,
+      "payload_fields": "files[].path / bytes / sha256; paths relative to own manifest parent",
+      "payload_files": 73,
+      "unchanged": true
+    }
+  ],
+  "source_command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python /private/tmp/arc-langflow-transition.l7tcavqh/protected-input-audit.py",
+  "temporary_inventory_before_report_write": {
+    "combined_bytes": 39881998,
+    "new": {
+      "bytes": 305326,
+      "exists": true,
+      "files": 30,
+      "path": "/private/tmp/arc-langflow-transition.l7tcavqh",
+      "symlink_files_excluded": 0
+    },
+    "old_two": [
+      {
+        "bytes": 38360216,
+        "exists": true,
+        "files": 276,
+        "path": "/private/tmp/arc-runtime-maintenance.wT9huB",
+        "symlink_files_excluded": 0
+      },
+      {
+        "bytes": 1216456,
+        "exists": true,
+        "files": 72,
+        "path": "/private/tmp/arc-langflow-candidate.qya6psom",
+        "symlink_files_excluded": 2
+      }
+    ],
+    "sources": {
+      "bytes": 54206,
+      "exists": true,
+      "files": 3,
+      "path": "/private/tmp/arc-langflow-transition.l7tcavqh/sources",
+      "symlink_files_excluded": 0
+    }
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "producer": "scripts/validate_langflow.py",
+  "producer_sha256": "67da74addb7dfd79207a0f68cfba165caaafe03f2da39e2f3f537df818e9737a",
+  "command": [
+    "scripts/validate_langflow.py",
+    "--api-url",
+    "http://localhost:8080",
+    "--evidence",
+    "/home/runner/work/_temp/arc-ci-evidence/workflow.json",
+    "--expected-langflow-version",
+    "1.13.1"
+  ],
+  "checked_at": "2026-11-05T02:11:00.887015+00:00",
+  "langflow_version": "1.13.1",
+  "expected_langflow_version": "1.13.1",
+  "acceptance": [
+    "AC-02",
+    "AC-04",
+    "AC-05",
+    "AC-13",
+    "AC-18"
+  ],
+  "component_count": 5,
+  "build_input": "authenticated Build API data override; no per-case PATCH",
+  "runtime_transport": "arc-runtime-v1: base64 of canonical UTF-8 JSON",
+  "stored_flow_hashes_before": {
+    "Document Review Intake": "492fe18811670806c671c4c0528ced9c4b5fdf033f52127d6ebcd676ade86968",
+    "Document Review Decision": "10f0d99a6f27435f2b1e671e1f2348045777a9a689bf42aac56fa3717671a1c5"
+  },
+  "stored_flow_hashes_after": {
+    "Document Review Intake": "492fe18811670806c671c4c0528ced9c4b5fdf033f52127d6ebcd676ade86968",
+    "Document Review Decision": "10f0d99a6f27435f2b1e671e1f2348045777a9a689bf42aac56fa3717671a1c5"
+  },
+  "cases": [
+    {
+      "case_id": "RC-c3980ed2d69742728b7fcdf8cdae70cb",
+      "document_version_id": "DV-fd94a64df9354e58a4c5b0450bf4739a",
+      "intake_job_id": "JB-24d7ff9d77514bfdb408ab41dbf3d380",
+      "intake_langflow_job_id": "2c2b58f4-291b-4594-97b7-097e98235794",
+      "decision": "approved",
+      "decision_id": "DC-b06495879a114ff68925c4f01f5b90d8",
+      "report_langflow_job_id": "f4c76bcd-0689-4430-b75a-12a03b298e7c",
+      "source_sha256": "7f587688da1581d4b26c0c6912cb773f39e84f01ef776572ef7f7a5b9c08d240",
+      "source_format": "txt",
+      "reports": [
+        {
+          "format": "json",
+          "sha256": "b5b90afb78909fbc071a102117ca19a9202266cf9e552e785af62f55ec8f0fc7",
+          "bytes": 3136
+        },
+        {
+          "format": "html",
+          "sha256": "6e46aecec2b25dee8ebed3e11e0fbacaffda8a3f31c81e4afff9c166f0064439",
+          "bytes": 7615
+        },
+        {
+          "format": "pdf",
+          "sha256": "1477c9dc237397dfb93e7427e7b3656e360e8ee85bd2d5ca3ec3e1a2d6ab7333",
+          "bytes": 38230
+        }
+      ]
+    },
+    {
+      "case_id": "RC-862ee00ee69d474caa8a1f4242f7cbb0",
+      "document_version_id": "DV-377d8c5473b14f299a587a0e8eddb2e1",
+      "intake_job_id": "JB-637d61d021a64be3b78373dda5078b67",
+      "intake_langflow_job_id": "3c656b4d-d90c-46af-be76-5b073c6ed4e7",
+      "decision": "rejected",
+      "decision_id": "DC-4c40c48e4e424b61854cd353b639f01c",
+      "report_langflow_job_id": "2e14a97f-a1da-466c-92c0-b25e5e01af64",
+      "source_sha256": "beb66bc5f7c3988b85a394080866840222d61776fa5d0233378e7a6c20a78517",
+      "source_format": "docx",
+      "reports": [
+        {
+          "format": "json",
+          "sha256": "0fa8601948fb7a3622a8c88e4d97371e6bb9fa80038901637712c914b47b9a01",
+          "bytes": 3606
+        },
+        {
+          "format": "html",
+          "sha256": "f72b1d1ed2be8673b3448f9af4dc3199a04d0c07593ec3b29cdee58814e16513",
+          "bytes": 8559
+        },
+        {
+          "format": "pdf",
+          "sha256": "bd4a453d606f717e70a9b85cf69b2e81e610db507a581779ed5dd18684687835",
+          "bytes": 40638
+        }
+      ]
+    },
+    {
+      "case_id": "RC-6e656d171cd94d48b876e0ae22917980",
+      "document_version_id": "DV-ee959313fe104bbabdf812fe69983253",
+      "intake_job_id": "JB-bba748c92ccf40ceab0127ca6b441248",
+      "intake_langflow_job_id": "76850dfe-5418-4efb-b820-92eafa3e0d5a",
+      "decision": "changes_requested",
+      "decision_id": "DC-327aedc26f8e47f6b15e43ef478fce11",
+      "report_langflow_job_id": "c0c9c8f6-4a95-4210-a098-de366e804fda",
+      "source_sha256": "cb35ff370829864c6cf700d3f1026522c71112b8138d216e1aed3f9b1e5c57f1",
+      "source_format": "pdf",
+      "reports": [
+        {
+          "format": "json",
+          "sha256": "8a9e3492fd91e4fe2839465ebc46f9fb41d082d160750e83fe88e99bb497902c",
+          "bytes": 3721
+        },
+        {
+          "format": "html",
+          "sha256": "3cd6e89a4f1bf16fdb7982a277374921e1f8a1858c4076ee81e98ec2112bcfaf",
+          "bytes": 8787
+        },
+        {
+          "format": "pdf",
+          "sha256": "12eb95df502d2c573ac4ff0a149dccce8ce1896161984d8b4f2d374e484aca2f",
+          "bytes": 41362
+        }
+      ]
+    }
+  ],
+  "markdown_intake": {
+    "case_id": "RC-9a8896eaa79a4857ba5ce267031f72c1",
+    "source_format": "md",
+    "source_sha256": "718f341e89b5e141e49e7a329d1f9c0721f95912a081aa287d7fec992d3cac3b",
+    "intake_job": {
+      "job_id": "JB-b69b3a08904e4d19bdc7345c5059b491",
+      "kind": "intake",
+      "state": "succeeded",
+      "phase": "persisted",
+      "attempt": 1,
+      "retry_generation": 0,
+      "error_code": null,
+      "error_detail": null,
+      "retryable": false,
+      "langflow_job_id": "99aad983-bced-4117-a9b1-0bfd52ffc40b",
+      "flow_id": "f5530091-af40-4967-a756-d8c2e8eec2d1",
+      "flow_hash": "492fe18811670806c671c4c0528ced9c4b5fdf033f52127d6ebcd676ade86968",
+      "next_run_at": "2026-11-05T02:10:54.804637+00:00",
+      "created_at": "2026-11-05T02:10:54.804784+00:00"
+    }
+  },
+  "failure_retry": {
+    "case_id": "RC-ef51bb8d396042f7a31ccb7079837b68",
+    "document_version_id": "DV-651c2c58ca91445c86181de9749b4779",
+    "source_sha256": "a9566161f2dbcff3a7bfb9c0d6269f51615240de7339e9ac6b255d829cfe9e25",
+    "first_job": {
+      "job_id": "JB-dba8be54854d42f8bef77a1ecccfcee0",
+      "kind": "intake",
+      "state": "failed",
+      "phase": "failed",
+      "attempt": 1,
+      "retry_generation": 0,
+      "error_code": "synthetic_marker_missing",
+      "error_detail": "Document processing failed: synthetic_marker_missing",
+      "retryable": false,
+      "langflow_job_id": "d47b92a2-d804-4e19-b1e9-c69cf70b7285",
+      "flow_id": "f5530091-af40-4967-a756-d8c2e8eec2d1",
+      "flow_hash": "492fe18811670806c671c4c0528ced9c4b5fdf033f52127d6ebcd676ade86968",
+      "next_run_at": "2026-11-05T02:10:58.760352+00:00",
+      "created_at": "2026-11-05T02:10:56.828081+00:00"
+    },
+    "retry_job": {
+      "job_id": "JB-b9cc24aa600c45678bd5d6a724c45683",
+      "kind": "intake",
+      "state": "failed",
+      "phase": "failed",
+      "attempt": 1,
+      "retry_generation": 1,
+      "error_code": "synthetic_marker_missing",
+      "error_detail": "Document processing failed: synthetic_marker_missing",
+      "retryable": false,
+      "langflow_job_id": "1cd15ded-2b38-4be0-a633-ed7219917845",
+      "flow_id": "f5530091-af40-4967-a756-d8c2e8eec2d1",
+      "flow_hash": "492fe18811670806c671c4c0528ced9c4b5fdf033f52127d6ebcd676ade86968",
+      "next_run_at": "2026-11-05T02:11:00.838326+00:00",
+      "created_at": "2026-11-05T02:10:58.852194+00:00"
+    },
+    "same_key_upload_and_retry_deduplicated": true,
+    "audit_event_counts": {
+      "intake_failed": 2,
+      "intake_retry_requested": 1,
+      "document_received": 1
+    },
+    "result": "failed as expected; unscored; same case/version; one manual retry generation"
+  },
+  "benchmark": null,
+  "result": "passed"
+}

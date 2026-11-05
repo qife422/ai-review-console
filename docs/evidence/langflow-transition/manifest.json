@@ -1,0 +1,627 @@
+{
+  "evidence_id": "langflow-transition",
+  "classification": "sealed_evidence",
+  "sealed_at": "2026-11-05T02:36:39.520582+00:00",
+  "display_date": "2026-11-04 America/Los_Angeles",
+  "contract": "ARC-UPGRADE@0.1.0",
+  "spec_sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753",
+  "finite_scope": "334-package AMD64 candidate hash lock; explicit normal CI profiles; isolated synthetic checkpoint upgrade/rollback; targeted Debian and notice follow-up",
+  "source_commits": {
+    "lock": "82a028e5738f04c9ce642e76544ffbae5554ab62",
+    "full_core": "a1190a38e998ce9683495a07028a1b9e589303cf",
+    "migration": "480246c00a94ecee420f4d778ebf302acf3d4b79"
+  },
+  "runs": {
+    "lock": 41952562436,
+    "default_adaptation": 41951752227,
+    "full_core": 41953014467,
+    "migration": 41954322019,
+    "failed_lock": 41951805984,
+    "failed_migration": 41953022635
+  },
+  "core_candidate_image": "sha256:69bf80f930187d91082d50a22f5543482aea10a6c1391d64e920b120a18ed3f0",
+  "migration_images": {
+    "ARC_MIGRATION_BASELINE_IMAGE": "sha256:a2f703060cc5301adb97cd490921e73bd5f1e493434811985fdd1bc5a86b341a",
+    "ARC_MIGRATION_CANDIDATE_IMAGE": "sha256:b8ad829904ab7caa1700f521188d0c4a97d83416d0a970fe4bcb908d1c7a03ba",
+    "ARC_MIGRATION_API_IMAGE": "sha256:dc46eb45048cdbdf68eff1fad651c786d594ee7f9886664ff8f2628f8487941f",
+    "ARC_MIGRATION_WEB_IMAGE": "sha256:55eece696652f6bae9ce218caab23c1fb2d3d6cb3bf5e76a55fe1242b33ee792"
+  },
+  "observations": {
+    "python_core": 260,
+    "frontend": 29,
+    "candidate_python_distributions": 334,
+    "hash_locked_build_tools": 4,
+    "current_candidate_provider_ids": 132,
+    "candidate_pypi_matches": 0,
+    "migration_and_precheckpoint_rollback": "passed in3 fresh synthetic namespaces",
+    "target_increments_each": {
+      "cases": 5,
+      "document_versions": 5,
+      "decisions": 3,
+      "reports": 9,
+      "jobs": 9
+    },
+    "candidate_notice_copy_readback": "3 recorded/exact repository SHA",
+    "default": "1.11.6 unchanged"
+  },
+  "acceptance": {
+    "AC-19": "not_passed_for_full_default_release",
+    "full_v02_last_verified": null,
+    "default_adoption": "not_performed",
+    "original_data_migration": "not_performed",
+    "final_acceptance": "pending",
+    "residual_risk_accepted": false,
+    "backend_distribution_approval": false,
+    "online_demo_redeployed": false
+  },
+  "provenance": "Exact CI run/source/image identities; selection distinguishes retained originals from hash-bound derived subsets; producer snapshots and official source URLs/methods. Unselected reports/dumps/transport archives not claimed retained.",
+  "native_continuity": {
+    "known_input_bytes": 135836345,
+    "new_target_files_read": 0,
+    "remaining_files": 6,
+    "remaining_input_bytes": 26795216,
+    "remaining_text_bytes": 3969945
+  },
+  "prior_packets": [
+    {
+      "expected_manifest_sha256": "6e3fa0159c396b1d422b32d90ccabb772b82db5d5cbeddb6e385e0e54138ba1c",
+      "manifest_bytes": 123887,
+      "manifest_path": "docs/evidence/v02-acceptance/manifest.json",
+      "manifest_sha256": "6e3fa0159c396b1d422b32d90ccabb772b82db5d5cbeddb6e385e0e54138ba1c",
+      "manifest_unchanged": true,
+      "mismatch_count": 0,
+      "mismatched_paths": [],
+      "packet": "v02-acceptance",
+      "payload_bytes": 5181623,
+      "payload_fields": "files[].path / bytes / sha256; paths relative to own manifest parent",
+      "payload_files": 187,
+      "unchanged": true
+    },
+    {
+      "expected_manifest_sha256": "c2a9cba23f3653e7c507654631f74568ee7490f80212ffe382c92323a4547f36",
+      "manifest_bytes": 74437,
+      "manifest_path": "docs/evidence/v02-release/manifest.json",
+      "manifest_sha256": "c2a9cba23f3653e7c507654631f74568ee7490f80212ffe382c92323a4547f36",
+      "manifest_unchanged": true,
+      "mismatch_count": 0,
+      "mismatched_paths": [],
+      "packet": "v02-release",
+      "payload_bytes": 26939835,
+      "payload_fields": "files[].path / bytes / sha256; paths relative to own manifest parent",
+      "payload_files": 404,
+      "unchanged": true
+    },
+    {
+      "expected_manifest_sha256": "0466646bd5eecd32768e9fc61bf138815853292049a41a95dc1d98927e2081ef",
+      "manifest_bytes": 48823,
+      "manifest_path": "docs/evidence/release-compatibility/manifest.json",
+      "manifest_sha256": "0466646bd5eecd32768e9fc61bf138815853292049a41a95dc1d98927e2081ef",
+      "manifest_unchanged": true,
+      "mismatch_count": 0,
+      "mismatched_paths": [],
+      "packet": "release-compatibility",
+      "payload_bytes": 16596288,
+      "payload_fields": "files[].path / bytes / sha256; paths relative to own manifest parent",
+      "payload_files": 222,
+      "unchanged": true
+    },
+    {
+      "expected_manifest_sha256": "5a400e77b5e3b28426f2efe99d723b48aee5e1e95d9c7e4a4c9665364963b724",
+      "manifest_bytes": 71890,
+      "manifest_path": "docs/evidence/runtime-maintenance/manifest.json",
+      "manifest_sha256": "5a400e77b5e3b28426f2efe99d723b48aee5e1e95d9c7e4a4c9665364963b724",
+      "manifest_unchanged": true,
+      "mismatch_count": 0,
+      "mismatched_paths": [],
+      "packet": "runtime-maintenance",
+      "payload_bytes": 23051943,
+      "payload_fields": "files[].path / bytes / sha256; paths relative to own manifest parent",
+      "payload_files": 269,
+      "unchanged": true
+    },
+    {
+      "expected_manifest_sha256": "ca0a0b0b38c2ca735ae17b83c93cc022fd89899a8b8f0e82b978b1eb3b5a38ec",
+      "manifest_bytes": 18806,
+      "manifest_path": "docs/evidence/langflow-candidate/manifest.json",
+      "manifest_sha256": "ca0a0b0b38c2ca735ae17b83c93cc022fd89899a8b8f0e82b978b1eb3b5a38ec",
+      "manifest_unchanged": true,
+      "mismatch_count": 0,
+      "mismatched_paths": [],
+      "packet": "langflow-candidate",
+      "payload_bytes": 737447,
+      "payload_fields": "files[].path / bytes / sha256; paths relative to own manifest parent",
+      "payload_files": 73,
+      "unchanged": true
+    }
+  ],
+  "limits": {
+    "scope": "1.13.1 complete hashed LinuxAMD lock; explicit RHEL/Debian CI profiles; three fresh synthetic migration/rollback clones; default1.11.6 and original data unchanged",
+    "same_goal": "cfd2d589-0c13-4ee0-bd93-8316c3f556a4",
+    "budget_minutes_cumulative": 360,
+    "prior_elapsed_seconds": 12866.843893527985,
+    "decision": "2026-11-04 user explicitly chose360 cumulative; no data/default/cleanup authority expansion",
+    "source_head": "8e96a36d44119b577a34ebc7a16d110a856e927a",
+    "prior_named_temporary": [
+      {
+        "path": "/private/tmp/arc-runtime-maintenance.wT9huB",
+        "files": 276,
+        "bytes": 38360216
+      },
+      {
+        "path": "/private/tmp/arc-langflow-candidate.qya6psom",
+        "files": 74,
+        "bytes": 1216486
+      }
+    ],
+    "temporary": "/private/tmp/arc-langflow-transition.l7tcavqh",
+    "new_temporary_limit_bytes": 2097152,
+    "combined_named_temp_limit_bytes": 41943040,
+    "ci_selected_limit_bytes": 1048576,
+    "ci_selected_limit_files": 50,
+    "source_limit_bytes": 131072,
+    "source_limit_files": 8,
+    "formal": "docs/evidence/langflow-transition",
+    "candidate": "artifacts/evidence-candidates/langflow-transition",
+    "evidence_each_limit_bytes": 104857600,
+    "evidence_each_limit_files": 1000,
+    "source_to_generated_amplification": "stop above1GiB AND100x prior764861B author baseline; installed dependencies/images separately measured",
+    "runner_artifacts": "pipreport<=64MiB ephemeral; dependency install/build bounded by free20GiB entrance/5GiB ongoing; migration runner30GiB entrance, fresh-dump total<=32MiB and source/artifact/config checkpoint<=100files/32MiB; only compact proof selected, no fullbuild trees",
+    "native_remaining": {
+      "files": 6,
+      "input_bytes": 26795216,
+      "text_bytes": 3969945,
+      "goal_known_input_bytes": 135836345
+    },
+    "native_policy": "no repeated completed target text; routine prior-materials profile; new notice copy readback distinguished from native binary/source inspection",
+    "cleanup_authorized": false,
+    "migration_authority": "Only newly generated CI fixtures restored into distinct fresh empty targets; checkpoint source untouched; no original DB or historicalvolumes mounted",
+    "localDocker": "No daemon start/build/pull/prune; read-only help/config only",
+    "host_free_bytes": 23423356928,
+    "sandbox": "workspace+tmp write; .git read-only requires approved escalation for commit/push; network restricted so use connected tools/CI or reviewed escalation"
+  },
+  "documentation_followup": "environment/documentation-impact.json",
+  "payload_files": 88,
+  "payload_bytes": 1076304,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 10922,
+      "sha256": "da1baf4b0d2fa5f5dff0aec81c9bf5ff59f49a4007bd32f17984ed1e541e4551"
+    },
+    {
+      "path": "ci/baseline/amd64-probe.json",
+      "bytes": 2346,
+      "sha256": "e25db42c01ea7d6e7038f85c883b2e8d7b16e7c08cfa3c66b611c3b4cd0e46b0"
+    },
+    {
+      "path": "ci/baseline/amd64-summary.json",
+      "bytes": 12510,
+      "sha256": "fae3aa782b456a4b7bda1b581a6dd9358a8309c3704f2e400b13d86803bd6a99"
+    },
+    {
+      "path": "ci/baseline/amd64-workflow.json",
+      "bytes": 7134,
+      "sha256": "dceb07055eb565ba1581c027dacc36f3511495771c0d09dde84d3b61aa8f0c0b"
+    },
+    {
+      "path": "ci/baseline/arm64-probe.json",
+      "bytes": 2346,
+      "sha256": "e25db42c01ea7d6e7038f85c883b2e8d7b16e7c08cfa3c66b611c3b4cd0e46b0"
+    },
+    {
+      "path": "ci/baseline/arm64-summary.json",
+      "bytes": 12188,
+      "sha256": "e23c328a863e46c2a7d406e14c47f681c526cfba3923ce4b8b0ef95cffaadb78"
+    },
+    {
+      "path": "ci/baseline/arm64-workflow.json",
+      "bytes": 7134,
+      "sha256": "02816c62c395ffa5aeb5f4ce2f4128e8e000d13b57f0789d92537043a0a8baf8"
+    },
+    {
+      "path": "ci/baseline/frontend-summary.json",
+      "bytes": 315,
+      "sha256": "1a978eeadb0ab02c362444f066112bef05ad2651a1cab763a76e342a9bf09e13"
+    },
+    {
+      "path": "ci/baseline/run.json",
+      "bytes": 7821,
+      "sha256": "2bb353b25a40df361f95f0de4ab71e104bf9b6af24f74bbda68f75c8f503ef0b"
+    },
+    {
+      "path": "ci/baseline/selection.json",
+      "bytes": 8643,
+      "sha256": "e399c74501de1c72b89b862a80ced9a41bc49b18a8a809d4d6c5d4bec76cfb52"
+    },
+    {
+      "path": "ci/baseline/unit-summary.json",
+      "bytes": 332,
+      "sha256": "8feba244c1da6afbb6b61512594b9bedb5acc83f260962a22d8a060a469dece9"
+    },
+    {
+      "path": "ci/current/collector-license-summary.json",
+      "bytes": 7348,
+      "sha256": "2aa0d252be1865f91ed27af34b4afb70d746107a0991c283b70b733c9cea399d"
+    },
+    {
+      "path": "ci/current/image-summary.json",
+      "bytes": 88205,
+      "sha256": "777c3eebf155ae45125b0b284a5a0cdf005a28f6fa70ad8e6880253b067c2299"
+    },
+    {
+      "path": "ci/current/inventory-comparison.json",
+      "bytes": 1139,
+      "sha256": "911d86a1251a1ccb6d8b9e2e4e54f85167517a339d760fea2313a091917cd9bc"
+    },
+    {
+      "path": "ci/current/langflow-inventory.json",
+      "bytes": 188521,
+      "sha256": "7e6d8cb76433d14285bba344fbc5f2c2d52680c4bad527b427e3a97e7ccdda11"
+    },
+    {
+      "path": "ci/current/probe.json",
+      "bytes": 2162,
+      "sha256": "8625b69279ee3cd339cdeb43fc17f2f206e2106fcd06334e13081f29e2bd159f"
+    },
+    {
+      "path": "ci/current/run.json",
+      "bytes": 10594,
+      "sha256": "480cf22c8ba3588e4a4361c227975a46710099923b47fc9158ea5651722c3b06"
+    },
+    {
+      "path": "ci/current/selection.json",
+      "bytes": 5005,
+      "sha256": "0137510d915318654b4ecc1735c6412bd85bc78c9704ea65f639c9a6000a7fb8"
+    },
+    {
+      "path": "ci/current/tests-summary.json",
+      "bytes": 421,
+      "sha256": "697bdf87a8141e1698949c23c8dd642a627e7da84502929ca5e795407f29ea18"
+    },
+    {
+      "path": "ci/current/workflow.json",
+      "bytes": 7183,
+      "sha256": "60c2ba65893d8a1ce44ba05bca40f0e3df670fb3f19476016ae5702adeb746f3"
+    },
+    {
+      "path": "ci/lock/build-installation.json",
+      "bytes": 461,
+      "sha256": "79a1a240ccc83d2f3ddf1188aacf4695510eaf076942fd868ab0a135b6774536"
+    },
+    {
+      "path": "ci/lock/build-resolution.json",
+      "bytes": 1821,
+      "sha256": "5f560cd550641f76f537ed2a5cab670b6b4005255a553d8e7a7a1d02049c573d"
+    },
+    {
+      "path": "ci/lock/capacity.txt",
+      "bytes": 1490,
+      "sha256": "2a3fcf59b5bbffd078dd46540a0a8433ec232e72c6c8d29df1f7d4a5340ccc66"
+    },
+    {
+      "path": "ci/lock/installation.json",
+      "bytes": 459,
+      "sha256": "fa006b14e9f91debab285c481de84c0d4120c503cfd54eb18fd768109e4c329c"
+    },
+    {
+      "path": "ci/lock/langflow-candidate-build-tools.lock",
+      "bytes": 449,
+      "sha256": "9f87377dbd3950d2fd2f54d740a9fa7ce7f71acc87ef0f1e119b45fa970fa9ea"
+    },
+    {
+      "path": "ci/lock/langflow-candidate.lock",
+      "bytes": 34169,
+      "sha256": "22c0c6fd00a436f20fbc649e7ef69273da933b2c75ea0f797be9adfb48a4bd7b"
+    },
+    {
+      "path": "ci/lock/provenance.json",
+      "bytes": 507,
+      "sha256": "045e9140f1b1569052edf3aa92e9399e736e3df6137dea35e7e4428ea56b293e"
+    },
+    {
+      "path": "ci/lock/resolution.json",
+      "bytes": 117594,
+      "sha256": "ed4b31a5ce0575222e5d061d754c9b2020e358a575e4ffd6dac843205c82ba93"
+    },
+    {
+      "path": "ci/lock/selection.json",
+      "bytes": 1660,
+      "sha256": "51b66bf96b0cf41887c7c33b2d492e4a6105705908280f3d94634c9241884e09"
+    },
+    {
+      "path": "ci/lock-first-failure.json",
+      "bytes": 1586,
+      "sha256": "a6ec4bf79165fd08d85f26995367ab90d9d04aa16330af8b769a8e0da27f9a93"
+    },
+    {
+      "path": "ci/migration/baseline-validation.json",
+      "bytes": 7199,
+      "sha256": "36aaaa532902c7d5e6ec6fa130175369267fef6320664d3f146895668c6ea192"
+    },
+    {
+      "path": "ci/migration/checkpoint-manifest.json",
+      "bytes": 18005,
+      "sha256": "0af8b5ce830a4c9d0a8b849b9760a2c6b1bc315203a293736cf2df3125686dac"
+    },
+    {
+      "path": "ci/migration/checkpoint-summary.json",
+      "bytes": 29127,
+      "sha256": "7c616f4fcf770f162ac5129c9eaed1b87236b3950c886ddf66a54e17ec409d07"
+    },
+    {
+      "path": "ci/migration/failure.json",
+      "bytes": 5032,
+      "sha256": "c6f5a6f70de7d826e38afbfa201ab6367d9168b842953647a5d9e37b487ceeef"
+    },
+    {
+      "path": "ci/migration/manifest.json",
+      "bytes": 3915,
+      "sha256": "d1f76818459c41655eeb9bf16892be76e0428ce686161625fe8e0c6a7ffd4d84"
+    },
+    {
+      "path": "ci/migration/rollback-restore.json",
+      "bytes": 13720,
+      "sha256": "089ec94f04a5a32ee6de8ade7599cda2751b9f8fd6f0048b554fe6ce4a2587dd"
+    },
+    {
+      "path": "ci/migration/rollback-summary.json",
+      "bytes": 54084,
+      "sha256": "d14eb90b4cf7fac5235dc0e226e8dbb6eb826c5562727e0c80a5586dee521a98"
+    },
+    {
+      "path": "ci/migration/selection.json",
+      "bytes": 3493,
+      "sha256": "ce32a35c5e9cfb44e18deddfd118253547fd012ad54c0dd60913fe779c8eb48b"
+    },
+    {
+      "path": "ci/migration/upgrade-restore.json",
+      "bytes": 13709,
+      "sha256": "8e8dfe280f7f16c13bf8d52815d15dcc5dc806d09844e8428bb4260b8947ae3b"
+    },
+    {
+      "path": "ci/migration/upgrade-summary.json",
+      "bytes": 54074,
+      "sha256": "617ca29fa7fd31b6a7a4166bed0c02702443dda445a855435f7cd74bec8abc04"
+    },
+    {
+      "path": "environment/artifact-plan.json",
+      "bytes": 2456,
+      "sha256": "1bee04989767591dde4a7b653716a19ea9aa92c97b76ef4843a8bf0d158063d4"
+    },
+    {
+      "path": "environment/capacity.json",
+      "bytes": 2150,
+      "sha256": "cfd806960188fcc2fc9bcd0d5f85a0f39dec23e3c73d7acbcf2780d984bb3298"
+    },
+    {
+      "path": "environment/debian-delta.json",
+      "bytes": 2491,
+      "sha256": "5e2ff577f5c5784db6da7b6a95162a7681db21b9d156992d035a682284f619a3"
+    },
+    {
+      "path": "environment/documentation-impact.json",
+      "bytes": 1647,
+      "sha256": "2d8bbf48fc219b114ead9f95daee2f262227b3cfc0b144a93398387931fa1daa"
+    },
+    {
+      "path": "environment/environment-review.json",
+      "bytes": 3182,
+      "sha256": "6906d6ff1bd51aebfd754f8072eebb4b77493fc61b9e0e530f2f6e4e997e264c"
+    },
+    {
+      "path": "environment/final-protection.json",
+      "bytes": 853,
+      "sha256": "59d65e2c125c4ec2661748d6c99de01feccad3525deaa4163a19eb6c2799600f"
+    },
+    {
+      "path": "environment/local-validation.json",
+      "bytes": 741,
+      "sha256": "f3f332d2f59820442a560913877fe272bd8e80b57e5d1712a6b212cc1f58f448"
+    },
+    {
+      "path": "environment/migration-followup-validation.json",
+      "bytes": 944,
+      "sha256": "af3809c0a1d6857a5d81b15ba819c2b4aee2317b21058afd7881f1058620c5f2"
+    },
+    {
+      "path": "environment/migration-result-review.json",
+      "bytes": 4977,
+      "sha256": "e3e41c35c4d6687852070f8eca54d7eec38c37109196b9fb9f512ee573e23b99"
+    },
+    {
+      "path": "environment/migration-review.json",
+      "bytes": 4004,
+      "sha256": "d2136e5ccf4924fda5b1882587ca33dd0b4ade1d4f4ba7798e3d956a918a152e"
+    },
+    {
+      "path": "environment/native-budget-continuity.json",
+      "bytes": 943,
+      "sha256": "bf9569793b0d108f1f73d9554e513f43c3a9900647ee139312988b8edbe88c90"
+    },
+    {
+      "path": "environment/protected-input-review.json",
+      "bytes": 7749,
+      "sha256": "3e743837d3f306d6109dfc89baf65ea570f58f0fed4186cec02a9111be59f7cc"
+    },
+    {
+      "path": "environment/validation-map.json",
+      "bytes": 3253,
+      "sha256": "1d1d20fcba35ae0e870a01fd62899cb96acaeb5b90e234251c6e27916f2ffba7"
+    },
+    {
+      "path": "environment/workflow-roles.json",
+      "bytes": 1399,
+      "sha256": "d93e0088ac066eb89a7cd62d8bf00895b93559b2798e57972d2b676f03853fae"
+    },
+    {
+      "path": "producers/.github/workflows/ci.yml",
+      "bytes": 7964,
+      "sha256": "a51c9cdb0aabcbf27314ec1378c1e04ad0842c05e48f7056264b2d89ad1679d2"
+    },
+    {
+      "path": "producers/.github/workflows/langflow-lock.yml",
+      "bytes": 5147,
+      "sha256": "98a262e617abe4cf355a573daccdc70c0cbf0418a27b7cbb09a9f630fd4a2f3a"
+    },
+    {
+      "path": "producers/.github/workflows/langflow-migration.yml",
+      "bytes": 16055,
+      "sha256": "a9a1afa5fb45a2230feefbfa1eaf5e96ac500e0d417bb8565d6b8b34fae51bd6"
+    },
+    {
+      "path": "producers/compliance/langflow-candidate-build-tools.in",
+      "bytes": 135,
+      "sha256": "3ee1f4bbba9c9cc73c11512c26cf6b2bb96326ea2888ed98e2d20b20972a6298"
+    },
+    {
+      "path": "producers/compliance/langflow-candidate-lock.json",
+      "bytes": 1233,
+      "sha256": "da2ca99fb19ae7110e32fce6cb12748c01d629261be69ca85c1929a1bfa727e6"
+    },
+    {
+      "path": "producers/compliance/langflow-candidate.in",
+      "bytes": 7781,
+      "sha256": "93558be0714d17c73e253621f2f9d6ecc479af3b9777964040e82cb3cc16835b"
+    },
+    {
+      "path": "producers/docker/compose.candidate.yml",
+      "bytes": 483,
+      "sha256": "021ca7fe9a2db173bd6850553093b059b644ffea7c6240037690a32027190947"
+    },
+    {
+      "path": "producers/docker/compose.migration.yml",
+      "bytes": 5316,
+      "sha256": "def64529bc278a6f0860b699000e0cfade50f8056469892bf7d38d2a43615b6a"
+    },
+    {
+      "path": "producers/docker/langflow-candidate.Dockerfile",
+      "bytes": 1370,
+      "sha256": "abaf752c770cc30b1f4c39784ec54a5d5100452199ae38a31399fb35692f0f84"
+    },
+    {
+      "path": "producers/docker/langflow.Dockerfile",
+      "bytes": 2412,
+      "sha256": "bb38c30695ea422839935a6209786f8ab8728d054210756d2b1af1e9d6b59cb6"
+    },
+    {
+      "path": "producers/licenses/Langflow-LICENSE.txt",
+      "bytes": 1066,
+      "sha256": "2f6f90f0641ad822aec5d2bccd1f97c569cc0cbaf0ec3754d10290808f3b1f1b"
+    },
+    {
+      "path": "producers/licenses/sqlite-vec-LICENSE-APACHE.txt",
+      "bytes": 10931,
+      "sha256": "a38070a94d4afd9cd710e3ce67bd1de78097cfe1784c1f0109ac95d3c196bfdc"
+    },
+    {
+      "path": "producers/licenses/sqlite-vec-LICENSE-MIT.txt",
+      "bytes": 1068,
+      "sha256": "6ce72bbe12d975bd5286e5ab0a064c069693300c47bccbc57bec18485f1621ea"
+    },
+    {
+      "path": "producers/requirements.lock",
+      "bytes": 2148,
+      "sha256": "993529902d7718533e40a25ccd220f713f2a8a4c6b4123a127625362593d891e"
+    },
+    {
+      "path": "producers/scripts/collect_release_ci.py",
+      "bytes": 22177,
+      "sha256": "c05b7a5577c425252084a638aabb7216f712a2f48d19b5888c6086b2207b6b72"
+    },
+    {
+      "path": "producers/scripts/lock_langflow_candidate.py",
+      "bytes": 9615,
+      "sha256": "6e550dd6a5dee1e78efd69e2e3522e326d41158d535870fac12fcc9b3c884f33"
+    },
+    {
+      "path": "producers/scripts/verify_dependency_compatibility.py",
+      "bytes": 15335,
+      "sha256": "b3d73646aa87a1019fdff9a19983d28d1b656ed57cff5107211df9dae684659d"
+    },
+    {
+      "path": "producers/scripts/verify_image_licenses.py",
+      "bytes": 19877,
+      "sha256": "c5d0a5e970c12e274df1c4f63e6fcf356b4fe85bc1d6a76f4e20562dd69dc2f4"
+    },
+    {
+      "path": "producers/scripts/verify_langflow_migration.py",
+      "bytes": 36993,
+      "sha256": "277305f39ad1c8ca5c6f7c9eac0660b7a747c683c10b1edcfbbe539672a4a952"
+    },
+    {
+      "path": "producers/source-selection/assess-debian.py",
+      "bytes": 5017,
+      "sha256": "ba33fad8ff253bbf8cbce729c41715d925677045a2c62b1426cbe2bd05472abb"
+    },
+    {
+      "path": "producers/source-selection/check-apt-index.py",
+      "bytes": 2853,
+      "sha256": "80408cb89e6f1a0d0d67e9fc1908511ca588be74c46ed83df433ac01e4639086"
+    },
+    {
+      "path": "producers/source-selection/complete-debian.py",
+      "bytes": 4901,
+      "sha256": "2eef68377b16f3281e716dfe9279c35f9921bf11e340abef3c0966f50e69f055"
+    },
+    {
+      "path": "producers/source-selection/protected-input-audit.py",
+      "bytes": 6123,
+      "sha256": "a4bf823a6eb97342a651df28ea5181b9de29a1dfb92d7ebcdccf29318a3fe18d"
+    },
+    {
+      "path": "producers/source-selection/select_baseline.py",
+      "bytes": 4801,
+      "sha256": "d6296aaf30aabbf56c75bfff3e6437939533ea5c522fdbc37f7aab5f99707fb1"
+    },
+    {
+      "path": "producers/source-selection/select_current.py",
+      "bytes": 6139,
+      "sha256": "56d5ca5476dbf0bebf3b5b93bec16ce857557772923ddfd62e2fa6989fdcb0d6"
+    },
+    {
+      "path": "producers/source-selection/select_migration_metadata.py",
+      "bytes": 5870,
+      "sha256": "cd6796450f9cd3810177a4dcb0d0435b649778dcacbb2bb74586e681f75876be"
+    },
+    {
+      "path": "producers/tests/test_collect_release_ci.py",
+      "bytes": 7400,
+      "sha256": "9226f9934f17ac6f37c925831e9a29e1c83bd7032cebfb0a9b8d0a988aca3084"
+    },
+    {
+      "path": "producers/tests/test_langflow_migration.py",
+      "bytes": 16137,
+      "sha256": "38429ea1426f6ad331a34140794f15be3a0f19b7102b525b468ec6fcb27d5539"
+    },
+    {
+      "path": "producers/tests/test_langflow_migration_entrypoint.py",
+      "bytes": 3537,
+      "sha256": "35259afa071331a4398b24bf9e1a4357899abea1830aaf8fb7d4c28535fef98f"
+    },
+    {
+      "path": "producers/tests/test_lock_langflow_candidate.py",
+      "bytes": 8365,
+      "sha256": "c4b4bd50da882fd99e217c8dc71981f4ccb82c689abfa322f678ec26868b82f6"
+    },
+    {
+      "path": "producers/tests/test_verify_dependency_compatibility.py",
+      "bytes": 2237,
+      "sha256": "9f5489137f756460ff98e781e72b0ec4777005deab63579e86abf975b38d8c04"
+    },
+    {
+      "path": "sources/debian-apt-availability.json",
+      "bytes": 3237,
+      "sha256": "91445ea903dd35589bd47fcd72f453a54ba1920c46e397ac12a2df9cf3fa899e"
+    },
+    {
+      "path": "sources/debian-tracker-assessment.json",
+      "bytes": 50177,
+      "sha256": "b4d507210e9b296d6596e77a272a5037d25cc4db0a562ecaf28754ed5221b936"
+    },
+    {
+      "path": "sources/sqlite-vec-notice-source.json",
+      "bytes": 792,
+      "sha256": "b5c119921211ebf2c0fe1cd0a1280203fc5534b0938bf04ffe1d168c41e65d6a"
+    }
+  ]
+}

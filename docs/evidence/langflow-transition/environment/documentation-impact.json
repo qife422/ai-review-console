@@ -1,0 +1,31 @@
+{
+  "scope": "Documentation sealing after exact source480246c; full core/scans remain bound to a1190a3, migration to480246c. No post-documentation image rebuild or deployment claimed.",
+  "affected_image_inputs": [
+    {
+      "path": "docs/DEPENDENCY_LICENSES.md",
+      "tested_source": "a1190a38e998ce9683495a07028a1b9e589303cf",
+      "tested_bytes": 22970,
+      "tested_sha256": "6a12f0441eb5aa08452e36531099cfc69b8f91e3ba913fba6a0ac262ff86a599",
+      "final_bytes": 25567,
+      "final_sha256": "3664b67873d2fb7907d515ebed0f257ff3049b8a129e369bc5639e84ba6ba92f",
+      "changed": true
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "tested_source": "a1190a38e998ce9683495a07028a1b9e589303cf",
+      "tested_bytes": 5341,
+      "tested_sha256": "5be495832353c76193c21c8340455e3223605c46ea7cdb972b668f0ed892de8d",
+      "final_bytes": 5440,
+      "final_sha256": "51646e7877b458ba7c4e9a9a228d5c2c37d2ffbceee79cda84aea1b946658817",
+      "changed": true
+    }
+  ],
+  "unchanged_delivery_files": [
+    "licenses/Langflow-LICENSE.txt",
+    "licenses/sqlite-vec-LICENSE-MIT.txt",
+    "licenses/sqlite-vec-LICENSE-APACHE.txt"
+  ],
+  "runtime_delta_after_core_CI": "Only migration verification producer/tests changed at480246c; actual new migration images/business were tested separately. Core app/worker/components/frontend/lock recipes unchanged.",
+  "skip_ci": "Final documentation/evidence commit may skip repeated runtime jobs; skipped is not passed.",
+  "source_rule": "Activity files and Spec index are rendered only after formal packet exists; their manifest reference is outside the sealed payload to avoid self-reference."
+}

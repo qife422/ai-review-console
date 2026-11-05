@@ -2,6 +2,14 @@
 
 本文件记录主要功能与交接边界；精确代码差异以 Git 提交为准。开发快照不是正式发布，源码备份不是运行数据库备份。
 
+## 2026-11-04 — 候选依赖锁与隔离迁移验收
+
+- 固化1.13.1候选334包完整SHA锁和4个构建工具锁；首次wheel-only失败保留，源码档案以关闭build isolation的严格哈希安装通过，不宣称wheel二进制复现。
+- 主CI保留默认1.11.6 AMD/ARM，增加Debian候选AMD；[CI41953014467](https://github.com/qife422/ai-review-console/actions/runs/41953014467)实际通过260 Python/29前端、业务/报告、AMD浏览器；新collector不把RHEL步骤套给Debian，也不重复旧native英文材料。
+- [CI41954322019](https://github.com/qife422/ai-review-console/actions/runs/41954322019)在三个新命名空间完成1.11.6虚构检查点→1.13.1升级及第三新1.11.6回滚；各目标新增5案/9报告并核对目标SQL/卷。保留首败，修复物理列序孔洞比较，独立审查和真实复验通过；不涵盖原库或升级后写入零丢失。
+- 候选APT/libapt2.6.2实际安装、精确2026补丁项复扫消失；当前仍132个Debian provider记录，原exit1保留。三份MIT/Apache补充通知副本实际镜像回读与repo SHA一致；完整native/source/后端分发材料继续open。
+- [结果、待解决和计划](docs/evidence/langflow-transition/README.md)及正式manifest同步；原库/历史卷、Spec/baseline、默认Dockerfile和五旧包1155payload不变。完整AC-19未通过，last_verified=null，未切换默认或发布后端。
+
 ## 2026-11-04 — 精简 Langflow 候选隔离验证
 
 - 固定base/LFX1.13.1精简候选，避开未使用集成，纯Psycopg3与显式PG驱动；默认1.11.6/52pins不改。

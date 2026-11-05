@@ -1,0 +1,29 @@
+{
+  "instruction_source": "/Users/ffq/Documents/aicoding项目/AGENTS.md model routing read during current turn",
+  "main_skill": "/Users/ffq/Documents/aicoding项目/skills/spec-development/SKILL.md",
+  "auxiliary": "Existing Playwright CLI browser workflow for actual interaction regression; no UI design skill because no UI design changes",
+  "implementers": [
+    {
+      "role": "lock tooling and Debian research",
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "role": "isolated migration execution",
+      "model": "gpt-6.1-sol"
+    },
+    {
+      "role": "bounded CI/profile/evidence adapter",
+      "model": "gpt-6.1-terra"
+    }
+  ],
+  "independent_review": {
+    "model": "gpt-6-astra",
+    "scope": "Migration safety/correctness and column normalization; no implementation edits. Review records retained separately from real CI."
+  },
+  "observed_defects": "Earlier target-binding false-pass risk closed; logical restore representation discrepancy investigated without dropping business/Flow/file invariants. Real-run conclusions remain separately bound.",
+  "cumulative_budget_minutes": 360,
+  "budget_decision": "Explicit current user reply preserving elapsed; no expansion of default/data/history authority",
+  "model_token_usage": null,
+  "model_cost": null,
+  "measurement_limit": "Tooling exposes no per-model token/billing receipt. No invented cost, speed or savings figures."
+}

@@ -1,0 +1,18 @@
+{
+  "root": "testsuites",
+  "attributes": {
+    "name": "pytest tests"
+  },
+  "suites": [
+    {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "251",
+      "time": "5.682",
+      "timestamp": "2026-11-05T01:56:11.625989+00:00",
+      "hostname": "runnervmwuk1x"
+    }
+  ]
+}

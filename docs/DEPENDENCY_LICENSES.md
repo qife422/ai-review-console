@@ -105,3 +105,19 @@ Langflow 1.13.0 的[默认依赖](https://github.com/langflow-ai/langflow/blob/v
 APSW3.53.4.0 own LICENSE1166B实际SHA b85a7dc6463f286c14a638070a14f4888564ac7245dc99a17950ec24cf1a7b9d，与精确source一致，只关闭该原文缺失。base/sqlitevec未采到白名单specimen，LFX通用采集无owntext；已保存精确v1.13.1 MIT及sqlitevec同tag源许可。MIT repo副本仅额外末尾空行，不称全raw同SHA，未保留sameimage project副本独立回读。Psycopg3.3.5实际LGPL原文已保留，纯Python+APT libpq5及runtime150019不自动证明全部ELF/source对应。
 
 SQLite嵌入版本/选项/source、其他native/system与前端静态依赖的完整通知及分发条件仍pending；API旧vendor/FIPS/default1.11.6继续按各自原image处理。仅本轮实读1file1166B，全批余额6files/26,795,216input/3,969,945text，已知135,836,345B。完整原件、source方法、差异与结论见[候选证据](evidence/langflow-candidate/README.md)，没有批准后端二进制分发或替代OSI许可选择。
+
+## 依赖锁与通知交付补验（2026-11-04）
+
+本轮实际candidate image `sha256:69bf80f930187d91082d50a22f5543482aea10a6c1391d64e920b120a18ed3f0`、source `a1190a38e998ce9683495a07028a1b9e589303cf`、[CI41953014467](https://github.com/qife422/ai-review-console/actions/runs/41953014467)，与完整334包SHA锁的名称/版本集合完全一致。4构建工具单独锁定；4个sdist固定源档案并禁用build isolation，不宣称生成wheel的二进制复现或自动满足全部source义务。
+
+| 补充通知 | 新实际image回读 | 范围 |
+|---|---|---|
+| Langflow/LFX根MIT副本 | 1,066B，SHA `2f6f90f0641ad822aec5d2bccd1f97c569cc0cbaf0ec3754d10290808f3b1f1b`，recorded且与repo逐字一致 | 与精确v1.13.1上游只差末尾空行；关闭本image实际携带副本的证据缺口，不改变前轮缺回读的事实 |
+| sqlite-vec0.1.9 MIT | 1,068B，SHA `6ce72bbe12d975bd5286e5ab0a064c069693300c47bccbc57bec18485f1621ea`，recorded且与repo/精确tag一致 | [副本](../licenses/sqlite-vec-LICENSE-MIT.txt)，复用原选存响应；不是wheel owntext证明 |
+| sqlite-vec0.1.9 Apache | 10,931B，SHA `a38070a94d4afd9cd710e3ce67bd1de78097cfe1784c1f0109ac95d3c196bfdc`，recorded且与repo/精确tag一致 | [副本](../licenses/sqlite-vec-LICENSE-APACHE.txt)，本轮从[精确官方tag](https://github.com/asg017/sqlite-vec/blob/v0.1.9/LICENSE-APACHE)有界获取，匹配前轮指纹；两种原文均保留，不选择替代许可 |
+
+三份回读是`project_files`明确子集，包含原generic报告SHA/member来源与派生方法，见[collector-license-summary](evidence/langflow-transition/ci/current/collector-license-summary.json)和selection。未把未选的大报告或旧APSW image正文称为本轮新image完整原件。APSW/source、sqlite-vec内嵌SQLite、Debian libpq及其余native精确源码/构建/通知对应、完整前端依赖材料仍待核对。候选未检出Zep/driver不关闭默认/API的Zep精确许可及vendor/FIPS问题；IBM SDK仍按实际包各自条款判断。
+
+候选只做同Bookworm的APT/libapt2.6.2补丁，实际清单和复扫已核；仍有132 provider记录，系统包copyright字段只是标识库存，不等于全部原文/source交付获批。本轮没有target native新增读取，累计135,836,345B，余6files/26,795,216B输入/3,969,945B文本；generic通知和系统库存不当作旧native实读的替代。
+
+[本轮结果及计划](evidence/langflow-transition/README.md)独立记录依赖锁、CI和迁移证据；保持完整AC-19未通过、legal_approval=false、完整后端分发未批准。

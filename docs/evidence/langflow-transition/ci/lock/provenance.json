@@ -1,0 +1,15 @@
+{
+  "source": "82a028e5738f04c9ce642e76544ffbae5554ab62",
+  "run": "41952562436",
+  "scope": "Only selected lock/receipts; venv, downloaded archives and full pip report are ephemeral, not preserved evidence",
+  "reports": {
+    "build-report.json": {
+      "bytes": 20896,
+      "sha256": "437671fe46bad65741b05dea94d577f2e9ef1a903579a403fb4718915151340e"
+    },
+    "pip-report.json": {
+      "bytes": 3413929,
+      "sha256": "3e5dbcd3fdcdbc47a1720ba3a1da496e14653e9c3074079b10b967447f910e37"
+    }
+  }
+}

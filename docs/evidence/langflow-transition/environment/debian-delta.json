@@ -1,0 +1,87 @@
+{
+  "created_at": "2026-11-05T02:16:32.893826+00:00",
+  "scope": "Candidate Langflow image only; scan snapshots from separate runs/times; not global vulnerability/exploitability reduction",
+  "prior": {
+    "path": "docs/evidence/langflow-candidate/ci/candidate/final/metadata/scan/summary.json",
+    "bytes": 27826,
+    "sha256": "192aaad16cb3dc3fe6bfb98663c09715ac431e882cb73b86d4f04f470b9a8cb2",
+    "image_id": "sha256:bab518885b0099096f7843c3016227644246f3f165e74fbd040f373a4ec8bffb",
+    "provider_ids": 133
+  },
+  "current": {
+    "path": "ci/current/image-summary.json",
+    "sha256": "777c3eebf155ae45125b0b284a5a0cdf005a28f6fa70ad8e6880253b067c2299",
+    "image_id": "sha256:69bf80f930187d91082d50a22f5543482aea10a6c1391d64e920b120a18ed3f0",
+    "provider_ids": 132
+  },
+  "removed_provider_ids": [
+    "DEBIAN-CVE-2026-109518"
+  ],
+  "added_provider_ids": [],
+  "apt_findings_before": [
+    {
+      "package": "apt",
+      "version": "2.6.1",
+      "query": {
+        "package": {
+          "ecosystem": "Debian:12",
+          "name": "apt"
+        },
+        "version": "2.6.1"
+      },
+      "vulnerability_ids": [
+        "DEBIAN-CVE-2011-3374",
+        "DEBIAN-CVE-2026-109518"
+      ]
+    },
+    {
+      "package": "libapt-pkg6.0",
+      "version": "2.6.1",
+      "query": {
+        "package": {
+          "ecosystem": "Debian:12",
+          "name": "apt"
+        },
+        "version": "2.6.1"
+      },
+      "vulnerability_ids": [
+        "DEBIAN-CVE-2011-3374",
+        "DEBIAN-CVE-2026-109518"
+      ]
+    }
+  ],
+  "apt_findings_after": [
+    {
+      "package": "apt",
+      "version": "2.6.2",
+      "query": {
+        "package": {
+          "ecosystem": "Debian:12",
+          "name": "apt"
+        },
+        "version": "2.6.2"
+      },
+      "vulnerability_ids": [
+        "DEBIAN-CVE-2011-3374"
+      ]
+    },
+    {
+      "package": "libapt-pkg6.0",
+      "version": "2.6.2",
+      "query": {
+        "package": {
+          "ecosystem": "Debian:12",
+          "name": "apt"
+        },
+        "version": "2.6.2"
+      },
+      "vulnerability_ids": [
+        "DEBIAN-CVE-2011-3374"
+      ]
+    }
+  ],
+  "pypi_matched_packages": 0,
+  "debian_matched_binary_packages": 52,
+  "debian_matched_sources": 28,
+  "qualification": "Actual inventory confirms apt/libapt2.6.2; exact vendor fixed2.6.2 plus removal of the targeted2026 advisory supports targeted patch closure. apt2011 record persists. No noDSA/postponed/unimportant entry is treated as fixed or risk-accepted."
+}

@@ -1,0 +1,60 @@
+{
+  "measured_at": "2026-11-05T02:36:39.502889+00:00",
+  "ci_selected": {
+    "regular_files": 39,
+    "symlinks": 0,
+    "bytes": 733901,
+    "method": "regular file size plus lstat symlink size; no symlink target followed; directories not counted"
+  },
+  "source_selected": {
+    "regular_files": 3,
+    "symlinks": 0,
+    "bytes": 54206,
+    "method": "regular file size plus lstat symlink size; no symlink target followed; directories not counted"
+  },
+  "new_temp": {
+    "regular_files": 60,
+    "symlinks": 0,
+    "bytes": 860409,
+    "method": "regular file size plus lstat symlink size; no symlink target followed; directories not counted"
+  },
+  "prior_two_temps": [
+    {
+      "regular_files": 276,
+      "symlinks": 0,
+      "bytes": 38360216,
+      "method": "regular file size plus lstat symlink size; no symlink target followed; directories not counted"
+    },
+    {
+      "regular_files": 72,
+      "symlinks": 8,
+      "bytes": 1217200,
+      "method": "regular file size plus lstat symlink size; no symlink target followed; directories not counted"
+    }
+  ],
+  "combined_named_temp_bytes": 40437825,
+  "candidate_before_this_record_and_manifest": {
+    "regular_files": 87,
+    "symlinks": 0,
+    "bytes": 1074082,
+    "method": "regular file size plus lstat symlink size; no symlink target followed; directories not counted"
+  },
+  "limits": {
+    "new_temp": 2097152,
+    "combined_named_temp": 41943040,
+    "ci_bytes": 1048576,
+    "ci_files": 50,
+    "sources_bytes": 131072,
+    "sources_files": 8,
+    "candidate_and_formal_each": 104857600,
+    "candidate_and_formal_files_each": 1000
+  },
+  "runner_capacity": {
+    "sample_count": 226,
+    "minimum_available_bytes": 81224196096,
+    "required_floor_bytes": 5368709120,
+    "all_observed_samples_passed": true
+  },
+  "classification": "Only selected proof sealed. Scratch/cache/venv/archives/raw dumps unselected; retained outside formal packet without cleanup. Snapshot precedes this record/final manifest. Prior test symlinks are inventoried with lstat, not rejected or followed/copied.",
+  "local_Docker": "No daemon start/build/pull/prune; prior warning remains."
+}

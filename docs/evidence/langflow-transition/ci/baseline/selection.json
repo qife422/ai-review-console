@@ -1,0 +1,214 @@
+{
+  "run_id": 41951752227,
+  "source_sha": "8ac0c79b8f0099e5dd7baed799b92a76692f3e67",
+  "method": "gh api HTTPS authenticated; artifact ZIP held in memory; original member bytes or explicitly selected derived fields",
+  "files": [
+    {
+      "path": "run.json",
+      "selected_bytes": 7821,
+      "selected_sha256": "2bb353b25a40df361f95f0de4ab71e104bf9b6af24f74bbda68f75c8f503ef0b",
+      "sources": [
+        {
+          "method": "selected run/job fields from GitHub API",
+          "url": "https://api.github.com/repos/qife422/ai-review-console/actions/runs/41951752227",
+          "jobs_url": "https://api.github.com/repos/qife422/ai-review-console/actions/runs/41951752227/jobs"
+        }
+      ]
+    },
+    {
+      "path": "amd64-workflow.json",
+      "selected_bytes": 7134,
+      "selected_sha256": "dceb07055eb565ba1581c027dacc36f3511495771c0d09dde84d3b61aa8f0c0b",
+      "sources": [
+        {
+          "artifact_id": 13381093938,
+          "member_path": "workflow.json",
+          "original_bytes": 7134,
+          "original_sha256": "dceb07055eb565ba1581c027dacc36f3511495771c0d09dde84d3b61aa8f0c0b",
+          "method": "original member bytes"
+        }
+      ]
+    },
+    {
+      "path": "amd64-probe.json",
+      "selected_bytes": 2346,
+      "selected_sha256": "e25db42c01ea7d6e7038f85c883b2e8d7b16e7c08cfa3c66b611c3b4cd0e46b0",
+      "sources": [
+        {
+          "artifact_id": 13381093938,
+          "member_path": "release/dependency-compatibility.stdout",
+          "original_bytes": 2346,
+          "original_sha256": "e25db42c01ea7d6e7038f85c883b2e8d7b16e7c08cfa3c66b611c3b4cd0e46b0",
+          "method": "original member bytes"
+        }
+      ]
+    },
+    {
+      "path": "amd64-summary.json",
+      "selected_bytes": 12510,
+      "selected_sha256": "fae3aa782b456a4b7bda1b581a6dd9358a8309c3704f2e400b13d86803bd6a99",
+      "sources": [
+        {
+          "artifact_id": 13381093938,
+          "member_path": "release/manifest.json",
+          "original_bytes": 32308,
+          "original_sha256": "f7381678861de2592a33666e0197ae71e229e5eed6638496a6810f75f13b3f0f",
+          "method": "selected fields from JSON; findings and inventories omitted"
+        },
+        {
+          "artifact_id": 13381093938,
+          "member_path": "release/images/summary.json",
+          "original_bytes": 65679,
+          "original_sha256": "fc85bc57506e3e099f769d6ddb1a3408c00df088e9b08e1afdce55e71b9f455b",
+          "method": "selected fields from JSON; findings and inventories omitted"
+        },
+        {
+          "artifact_id": 13381093938,
+          "member_path": "release/rhel/summary.json",
+          "original_bytes": 670,
+          "original_sha256": "a6ee4a717083a4060b94bd52a9b418ffb49324d6f68fbf3bf3b38c022f5d3e84",
+          "method": "selected fields from JSON; findings and inventories omitted"
+        },
+        {
+          "artifact_id": 13381093938,
+          "member_path": "release/licenses/manifest.json",
+          "original_bytes": 1612,
+          "original_sha256": "baac232614768c3aa206a2f80eafb57db60eeb5fab3a14c9f7d35073c0e93bc3",
+          "method": "selected fields from JSON; findings and inventories omitted"
+        },
+        {
+          "artifact_id": 13381093938,
+          "member_path": "release/licenses/api.json",
+          "original_bytes": 182130,
+          "original_sha256": "adb47e8b0c92281ef620b771f80a5813ef782e4828e50dfe2c1a9f8ee4695ee2",
+          "method": "selected fields from JSON; findings and inventories omitted"
+        },
+        {
+          "artifact_id": 13381093938,
+          "member_path": "release/licenses/langflow.json",
+          "original_bytes": 1030626,
+          "original_sha256": "fb9ed6d5312e0c6b3b3dcec5c5c2a38f0eb00c131a53d54d8c1d9a337c7795ba",
+          "method": "selected fields from JSON; findings and inventories omitted"
+        },
+        {
+          "artifact_id": 13381093938,
+          "member_path": "release/licenses/web.json",
+          "original_bytes": 95767,
+          "original_sha256": "2f5125604296f93748ba5401ef346dc37cc5de23f1f11acf6c0a2c16b7d33380",
+          "method": "selected fields from JSON; findings and inventories omitted"
+        }
+      ]
+    },
+    {
+      "path": "arm64-workflow.json",
+      "selected_bytes": 7134,
+      "selected_sha256": "02816c62c395ffa5aeb5f4ce2f4128e8e000d13b57f0789d92537043a0a8baf8",
+      "sources": [
+        {
+          "artifact_id": 13381362265,
+          "member_path": "workflow.json",
+          "original_bytes": 7134,
+          "original_sha256": "02816c62c395ffa5aeb5f4ce2f4128e8e000d13b57f0789d92537043a0a8baf8",
+          "method": "original member bytes"
+        }
+      ]
+    },
+    {
+      "path": "arm64-probe.json",
+      "selected_bytes": 2346,
+      "selected_sha256": "e25db42c01ea7d6e7038f85c883b2e8d7b16e7c08cfa3c66b611c3b4cd0e46b0",
+      "sources": [
+        {
+          "artifact_id": 13381362265,
+          "member_path": "release/dependency-compatibility.stdout",
+          "original_bytes": 2346,
+          "original_sha256": "e25db42c01ea7d6e7038f85c883b2e8d7b16e7c08cfa3c66b611c3b4cd0e46b0",
+          "method": "original member bytes"
+        }
+      ]
+    },
+    {
+      "path": "arm64-summary.json",
+      "selected_bytes": 12188,
+      "selected_sha256": "e23c328a863e46c2a7d406e14c47f681c526cfba3923ce4b8b0ef95cffaadb78",
+      "sources": [
+        {
+          "artifact_id": 13381362265,
+          "member_path": "release/manifest.json",
+          "original_bytes": 31991,
+          "original_sha256": "72a0107fa8b97fd574dd86687048b36140bbf3c4d429303d508dcd89f2b3790f",
+          "method": "selected fields from JSON; findings and inventories omitted"
+        },
+        {
+          "artifact_id": 13381362265,
+          "member_path": "release/images/summary.json",
+          "original_bytes": 65679,
+          "original_sha256": "436c5eb10b21a90ab4b62198833685a650ed25648d8acca4be6121b49c79cdfa",
+          "method": "selected fields from JSON; findings and inventories omitted"
+        },
+        {
+          "artifact_id": 13381362265,
+          "member_path": "release/rhel/summary.json",
+          "original_bytes": 670,
+          "original_sha256": "da5714dcf363ca083f82e7eab8d6408979539bc51f0f3504d8739711ff79b16c",
+          "method": "selected fields from JSON; findings and inventories omitted"
+        },
+        {
+          "artifact_id": 13381362265,
+          "member_path": "release/licenses/manifest.json",
+          "original_bytes": 1612,
+          "original_sha256": "91597b80710dc3e1886abc79f59206a292b0ded6915a26d8d553cdeb42943b47",
+          "method": "selected fields from JSON; findings and inventories omitted"
+        },
+        {
+          "artifact_id": 13381362265,
+          "member_path": "release/licenses/api.json",
+          "original_bytes": 182130,
+          "original_sha256": "1b39c523612a8bd4b3144024d60f257318c11eb1eb2b437fe7825c3d8743ef0a",
+          "method": "selected fields from JSON; findings and inventories omitted"
+        },
+        {
+          "artifact_id": 13381362265,
+          "member_path": "release/licenses/langflow.json",
+          "original_bytes": 1029748,
+          "original_sha256": "2a448a65e5b32dc96af5423a79b41748322d9b4e37d231b36913834b03e846b5",
+          "method": "selected fields from JSON; findings and inventories omitted"
+        },
+        {
+          "artifact_id": 13381362265,
+          "member_path": "release/licenses/web.json",
+          "original_bytes": 95767,
+          "original_sha256": "8f316b8e91ccf8d0a334fd6ada987dc455ed25ed7ed7e80364d4d4aa63ef4bb5",
+          "method": "selected fields from JSON; findings and inventories omitted"
+        }
+      ]
+    },
+    {
+      "path": "unit-summary.json",
+      "selected_bytes": 332,
+      "selected_sha256": "8feba244c1da6afbb6b61512594b9bedb5acc83f260962a22d8a060a469dece9",
+      "sources": [
+        {
+          "artifact_id": 13381500876,
+          "member_path": "arc-unit.xml",
+          "original_bytes": 34439,
+          "original_sha256": "80d3e6f37f00c9055d24d9a3aefb57c37022d3e2cffe88d20456c65dfc74a5a2",
+          "method": "XML suite attributes only; original exceeds 30 KiB"
+        }
+      ]
+    },
+    {
+      "path": "frontend-summary.json",
+      "selected_bytes": 315,
+      "selected_sha256": "1a978eeadb0ab02c362444f066112bef05ad2651a1cab763a76e342a9bf09e13",
+      "sources": [
+        {
+          "api": "jobs/126997067335/logs",
+          "original_bytes": 95677,
+          "original_sha256": "94784e20bc00a5261aa9157387fab09c946d5c7c60b8efa55b79be215d2a875d",
+          "method": "selected Vitest Tests and Test Files lines; log held in memory only"
+        }
+      ]
+    }
+  ]
+}

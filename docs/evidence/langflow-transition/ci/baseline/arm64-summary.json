@@ -1,0 +1,330 @@
+{
+  "collector": {
+    "images": {
+      "api": "sha256:3ed362ccb822187cb0ad55305a17691f86fa5a992ebd374f9aadb957fef69c18",
+      "langflow": "sha256:a9fecff820d3ef35c0e09c7b3d3ea549591e5e7de33d87db3e675085b2db71ed",
+      "web": "sha256:98a77239bc702df94014e5099ded6f09e76688bec88d9472a51d4b41a2be9bb4",
+      "postgres": "sha256:6162f3765f7563b273a879894c5751d41285f922dd75ba0ba508a89e024e43ca"
+    },
+    "os_identity": {
+      "profile": "rhel",
+      "id": "rhel",
+      "version_id": "10.2",
+      "source": "/etc/os-release",
+      "image": "sha256:a9fecff820d3ef35c0e09c7b3d3ea549591e5e7de33d87db3e675085b2db71ed"
+    },
+    "system_materials": {
+      "files": 15,
+      "bytes": 77642,
+      "status": "completed"
+    },
+    "native_materials": {
+      "state": "not_collected_on_arm_backend",
+      "reason": "This round's shared targeted-native input budget is reserved for AMD64.",
+      "distribution_approval": false
+    },
+    "collection_state": "collected",
+    "audits": {
+      "package_scan_exit_code": 2,
+      "redhat_supplement_exit_code": 0
+    },
+    "release_acceptance": "pending_review_not_granted_by_collection",
+    "source_inputs": [
+      {
+        "path": "scripts/collect_release_ci.py",
+        "sha256": "c05b7a5577c425252084a638aabb7216f712a2f48d19b5888c6086b2207b6b72"
+      },
+      {
+        "path": "scripts/scan_images_osv.py",
+        "sha256": "0358ef68c8d866847f870f08770716d32cb2968b3eb684d2f00cb5088b9001db"
+      },
+      {
+        "path": "scripts/scan_release.py",
+        "sha256": "f3f353ff9a50651aa864aa75dbb480da9481dc78aaacaac2b74a90616558ea0c"
+      },
+      {
+        "path": "scripts/verify_image_licenses.py",
+        "sha256": "b4021bd6e0a432acdb9557ba8bc5fe95d5829171fce0490ff8f8d5e962ba4a32"
+      },
+      {
+        "path": "scripts/verify_dependency_compatibility.py",
+        "sha256": "b3d73646aa87a1019fdff9a19983d28d1b656ed57cff5107211df9dae684659d"
+      },
+      {
+        "path": "scripts/apply_system_updates.py",
+        "sha256": "50ac38282e4bce3d2619d8dd3af46885c217fe6f9e3bf1e5b0ef58f39c3b8821"
+      },
+      {
+        "path": "scripts/verify_native_materials.py",
+        "sha256": "dffe7c32d0fd61f41a6f3e4e0bf0f4affc201ff4ffdeb716c1c7811f9ebd8765"
+      },
+      {
+        "path": "compliance/native-baseline.json",
+        "sha256": "ba73fb69a3d4644b5d0b49d64d32928ef9d1628716ea7d5289524e949ea4ce81"
+      },
+      {
+        "path": "docs/evidence/runtime-maintenance/ci/native-close/selection.json",
+        "sha256": "8797588869c1ead3383e5319a71583b945c11733ada1fefdfbefe980d1e20ff4"
+      },
+      {
+        "path": "docs/UPGRADE_SPEC.md",
+        "sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753"
+      }
+    ]
+  },
+  "image_summary": {
+    "result": "queried_with_findings",
+    "unique_queries": 793,
+    "observed_unique_advisory_ids": 237,
+    "mapping_unknown": 227,
+    "query_unknown": 0,
+    "detail_unknown": 0,
+    "images": {
+      "api": {
+        "image_id": "sha256:3ed362ccb822187cb0ad55305a17691f86fa5a992ebd374f9aadb957fef69c18",
+        "inventory_packages": 140,
+        "unknown_packages": 0,
+        "matched_binary_or_python_packages": 51,
+        "observed_unique_advisory_ids": 127,
+        "detail_unknown": 0,
+        "upstream_severity_labels": {
+          "unknown": 127
+        }
+      },
+      "langflow": {
+        "image_id": "sha256:a9fecff820d3ef35c0e09c7b3d3ea549591e5e7de33d87db3e675085b2db71ed",
+        "inventory_packages": 773,
+        "unknown_packages": 227,
+        "matched_binary_or_python_packages": 5,
+        "observed_unique_advisory_ids": 81,
+        "detail_unknown": 0,
+        "upstream_severity_labels": {
+          "unknown": 23,
+          "MODERATE": 22,
+          "HIGH": 26,
+          "LOW": 3,
+          "CRITICAL": 7
+        }
+      },
+      "web": {
+        "image_id": "sha256:98a77239bc702df94014e5099ded6f09e76688bec88d9472a51d4b41a2be9bb4",
+        "inventory_packages": 71,
+        "unknown_packages": 0,
+        "matched_binary_or_python_packages": 0,
+        "observed_unique_advisory_ids": 0,
+        "detail_unknown": 0,
+        "upstream_severity_labels": {}
+      },
+      "postgres": {
+        "image_id": "sha256:6162f3765f7563b273a879894c5751d41285f922dd75ba0ba508a89e024e43ca",
+        "inventory_packages": 142,
+        "unknown_packages": 0,
+        "matched_binary_or_python_packages": 63,
+        "observed_unique_advisory_ids": 131,
+        "detail_unknown": 0,
+        "upstream_severity_labels": {
+          "unknown": 131
+        }
+      }
+    }
+  },
+  "rhel_summary": {
+    "contract": "ARC-UPGRADE@0.1.0",
+    "acceptance": [
+      "AC-19",
+      "RELEASE-001"
+    ],
+    "producer": "scripts/scan_images_osv.py --redhat-only",
+    "started_at": "2026-11-05T02:00:21.760536+00:00",
+    "image_id": "sha256:a9fecff820d3ef35c0e09c7b3d3ea549591e5e7de33d87db3e675085b2db71ed",
+    "service": "https://api.osv.dev/v1",
+    "result": "queried_no_match",
+    "database_snapshot_date": null,
+    "rpm_entries": 227,
+    "metadata_only_public_keys": 3,
+    "mapped_software_packages": 224,
+    "unique_queries": 672,
+    "observed_unique_advisory_ids": 0,
+    "matched_software_packages": 0,
+    "findings": [],
+    "mapping_unknown": 0,
+    "query_unknown": 0,
+    "detail_unknown": 0
+  },
+  "license_manifest": {
+    "created_at": "2026-11-05T02:00:27.631855+00:00",
+    "producer": "scripts/verify_image_licenses.py",
+    "producer_sha256": "b4021bd6e0a432acdb9557ba8bc5fe95d5829171fce0490ff8f8d5e962ba4a32",
+    "contract": "ARC-UPGRADE@0.1.0",
+    "acceptance": [
+      "RELEASE-001",
+      "AC-19"
+    ],
+    "images": [
+      {
+        "image_name": "api",
+        "image_id": "sha256:3ed362ccb822187cb0ad55305a17691f86fa5a992ebd374f9aadb957fef69c18",
+        "collection_state": "collected_with_explicit_scope"
+      },
+      {
+        "image_name": "langflow",
+        "image_id": "sha256:a9fecff820d3ef35c0e09c7b3d3ea549591e5e7de33d87db3e675085b2db71ed",
+        "collection_state": "collected_with_explicit_scope"
+      },
+      {
+        "image_name": "web",
+        "image_id": "sha256:98a77239bc702df94014e5099ded6f09e76688bec88d9472a51d4b41a2be9bb4",
+        "collection_state": "collected_with_explicit_scope"
+      }
+    ],
+    "files": [
+      {
+        "path": "api.json",
+        "bytes": 182130,
+        "sha256": "1b39c523612a8bd4b3144024d60f257318c11eb1eb2b437fe7825c3d8743ef0a"
+      },
+      {
+        "path": "langflow.json",
+        "bytes": 1029748,
+        "sha256": "2a448a65e5b32dc96af5423a79b41748322d9b4e37d231b36913834b03e846b5"
+      },
+      {
+        "path": "web.json",
+        "bytes": 95767,
+        "sha256": "8f316b8e91ccf8d0a334fd6ada987dc455ed25ed7ed7e80364d4d4aa63ef4bb5"
+      }
+    ],
+    "text_limits": {
+      "per_file_bytes": 262144,
+      "files": 100,
+      "total_bytes": 8388608
+    },
+    "remaining_budget": {
+      "files": 4,
+      "bytes": 7503775
+    },
+    "legal_approval": false,
+    "qualification": "Collection success is not full license/distribution approval."
+  },
+  "license_project_files": {
+    "api": {
+      "image_id": "sha256:3ed362ccb822187cb0ad55305a17691f86fa5a992ebd374f9aadb957fef69c18",
+      "collection_state": "collected_with_explicit_scope",
+      "project_files": [
+        {
+          "path": "/app/LICENSE",
+          "state": "recorded",
+          "sha256": "934d07684b0f32ebaa86f8f165a7bd944e9fc5c45615a0c16676bb60b1b29ced",
+          "resolved_path": "/app/LICENSE",
+          "bytes": 9110,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/THIRD_PARTY_NOTICES.md",
+          "state": "recorded",
+          "sha256": "3556ee4340213c3a6edae129087a0b0625f3b642ea476ac39f04a190cced76f9",
+          "resolved_path": "/app/THIRD_PARTY_NOTICES.md",
+          "bytes": 4831,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/docs/DEPENDENCY_LICENSES.md",
+          "state": "recorded",
+          "sha256": "6a12f0441eb5aa08452e36531099cfc69b8f91e3ba913fba6a0ac262ff86a599",
+          "resolved_path": "/app/docs/DEPENDENCY_LICENSES.md",
+          "bytes": 22970,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/review_core/assets/OFL.txt",
+          "state": "recorded",
+          "sha256": "babcfe66c8a098b2fa279bc724a3a342f8124f77ce18941fbcc1bbb39823cded",
+          "resolved_path": "/app/review_core/assets/OFL.txt",
+          "bytes": 4387,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/review_core/assets/NotoSansSC-Regular.ttf",
+          "state": "hashed_only",
+          "sha256": "e3b799e4230233500ff152d1cc81ade6c64acb34958c90cd6b6e02927a2923a9",
+          "resolved_path": "/app/review_core/assets/NotoSansSC-Regular.ttf",
+          "bytes": 10595932
+        }
+      ]
+    },
+    "langflow": {
+      "image_id": "sha256:a9fecff820d3ef35c0e09c7b3d3ea549591e5e7de33d87db3e675085b2db71ed",
+      "collection_state": "collected_with_explicit_scope",
+      "project_files": [
+        {
+          "path": "/app/LICENSE",
+          "state": "recorded",
+          "sha256": "934d07684b0f32ebaa86f8f165a7bd944e9fc5c45615a0c16676bb60b1b29ced",
+          "resolved_path": "/app/LICENSE",
+          "bytes": 9110,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/THIRD_PARTY_NOTICES.md",
+          "state": "recorded",
+          "sha256": "3556ee4340213c3a6edae129087a0b0625f3b642ea476ac39f04a190cced76f9",
+          "resolved_path": "/app/THIRD_PARTY_NOTICES.md",
+          "bytes": 4831,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/docs/DEPENDENCY_LICENSES.md",
+          "state": "recorded",
+          "sha256": "6a12f0441eb5aa08452e36531099cfc69b8f91e3ba913fba6a0ac262ff86a599",
+          "resolved_path": "/app/docs/DEPENDENCY_LICENSES.md",
+          "bytes": 22970,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/review_core/assets/OFL.txt",
+          "state": "recorded",
+          "sha256": "babcfe66c8a098b2fa279bc724a3a342f8124f77ce18941fbcc1bbb39823cded",
+          "resolved_path": "/app/review_core/assets/OFL.txt",
+          "bytes": 4387,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/licenses/dnspython-2.9.0-ISC.txt",
+          "state": "recorded",
+          "sha256": "c3ea3ff5654b329c19d3bc5f7481af623c3dded4a6145585499f843ad3d741cd",
+          "resolved_path": "/app/licenses/dnspython-2.9.0-ISC.txt",
+          "bytes": 1526,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/licenses/FastMCP-3.4.10-LICENSE.txt",
+          "state": "recorded",
+          "sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1",
+          "resolved_path": "/app/licenses/FastMCP-3.4.10-LICENSE.txt",
+          "bytes": 11356,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/licenses/Langflow-LICENSE.txt",
+          "state": "recorded",
+          "sha256": "2f6f90f0641ad822aec5d2bccd1f97c569cc0cbaf0ec3754d10290808f3b1f1b",
+          "resolved_path": "/app/licenses/Langflow-LICENSE.txt",
+          "bytes": 1066,
+          "encoding": "utf-8; invalid bytes replaced, raw byte hash retained"
+        },
+        {
+          "path": "/app/review_core/assets/NotoSansSC-Regular.ttf",
+          "state": "hashed_only",
+          "sha256": "e3b799e4230233500ff152d1cc81ade6c64acb34958c90cd6b6e02927a2923a9",
+          "resolved_path": "/app/review_core/assets/NotoSansSC-Regular.ttf",
+          "bytes": 10595932
+        }
+      ]
+    },
+    "web": {
+      "image_id": "sha256:98a77239bc702df94014e5099ded6f09e76688bec88d9472a51d4b41a2be9bb4",
+      "collection_state": "collected_with_explicit_scope",
+      "project_files": []
+    }
+  }
+}

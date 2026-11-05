@@ -25,9 +25,9 @@ Langflow-powered document review console with deterministic redaction, explainab
 
 固定实施 Contract 为 [Spec计划书](docs/UPGRADE_SPEC.md) `ARC-UPGRADE@0.1.0`。实际验收、内容指纹和剩余边界见 [当前状态](docs/CURRENT_STATE.md)及[Spec索引](docs/SPEC_INDEX.md)。本地技术验证与负责人最终接受分开；没有生产或收费模型授权。
 
-2026-11-04 完成 **精简1.13.1候选隔离验证**：[实际CI](https://github.com/qife422/ai-review-console/actions/runs/41943564415)通过198 Python/29前端、5组件/2Flow、真实四格式/三决定/九报告及Langflow GUI登录。候选PyPI匹配0，Zep/IBM driver/Psycopg binary与两项未使用集成不在安装清单；Debian133条provider记录和完整分发条件仍未关闭。[完整结果与下一步](docs/evidence/langflow-candidate/README.md)。
+2026-11-04 已完成 **候选依赖锁与隔离验收**：1.13.1精简候选334包/4工具的完整SHA锁、新环境及实际镜像清单一致；[完整CI](https://github.com/qife422/ai-review-console/actions/runs/41953014467)通过260 Python/29前端、默认AMD/ARM后端与候选AMD业务/浏览器。[检查点隔离升级与旧版回滚](https://github.com/qife422/ai-review-console/actions/runs/41954322019)也已通过，两目标各验证新增5案/9报告。 候选APT补丁及三份许可副本回读已核实，仍有132个Debian provider记录与native分发材料待闭合。[已解决、待解决和后续计划](docs/evidence/langflow-transition/README.md)。
 
-**默认仍为Langflow1.11.6，v0.2完整发布验收未通过**。本轮是AD-03隔离实验；未据新库回归直接升级原库或替换默认。后续先补依赖锁、系统/许可材料和旧schema迁移/回滚，再作默认版本决定，之后推进版本历史与再审。原[系统维护记录](docs/evidence/runtime-maintenance/README.md)和其他历史证据保留原字节。
+**默认仍为Langflow1.11.6，v0.2完整发布验收未通过**。本轮只对新建虚构数据做隔离验证；原SQLite和历史卷不变。下一步先补候选ARM/Mac、管理编辑器、故障恢复/性能与系统许可，再按AD-03评审默认切换，之后推进版本历史和再审。原[候选记录](docs/evidence/langflow-candidate/README.md)、[系统维护](docs/evidence/runtime-maintenance/README.md)及其他旧证据保留原字节。
 
 ## 基于 Langflow
 

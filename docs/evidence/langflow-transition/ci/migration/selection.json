@@ -1,0 +1,83 @@
+{
+  "producer": "select_migration_metadata.py",
+  "producer_sha256": "cd6796450f9cd3810177a4dcb0d0435b649778dcacbb2bb74586e681f75876be",
+  "checked_at": "2026-11-05T02:32:45.609535+00:00",
+  "run_id": 41954322019,
+  "source_commit": "480246c00a94ecee420f4d778ebf302acf3d4b79",
+  "artifact_id": 13383340667,
+  "archive_bytes": 49534,
+  "archive_sha256": "8c03524cf568f5c1b050173d5287446cbca6429f70cdd03aff4c3a29b75f1e15",
+  "method": "ZIP received in memory; eight exact original JSON members selected unchanged; capacity JSONL reduced to sample count/minimum with original member size and SHA; producer member hashes and checkpoint/restored semantic hash independently checked",
+  "members": [
+    {
+      "path": "manifest.json",
+      "bytes": 3915,
+      "sha256": "d1f76818459c41655eeb9bf16892be76e0428ce686161625fe8e0c6a7ffd4d84",
+      "selected_original": true
+    },
+    {
+      "path": "baseline-validation.json",
+      "bytes": 7199,
+      "sha256": "36aaaa532902c7d5e6ec6fa130175369267fef6320664d3f146895668c6ea192",
+      "selected_original": true
+    },
+    {
+      "path": "capacity.jsonl",
+      "bytes": 12882,
+      "sha256": "db0da5a2ad5f20c4e258c4a69a91b0e9b384a42ac82a019c56a6d2c89d3c211a",
+      "selected_original": false
+    },
+    {
+      "path": "checkpoint-manifest.json",
+      "bytes": 18005,
+      "sha256": "0af8b5ce830a4c9d0a8b849b9760a2c6b1bc315203a293736cf2df3125686dac",
+      "selected_original": true
+    },
+    {
+      "path": "checkpoint-summary.json",
+      "bytes": 29127,
+      "sha256": "7c616f4fcf770f162ac5129c9eaed1b87236b3950c886ddf66a54e17ec409d07",
+      "selected_original": true
+    },
+    {
+      "path": "upgrade-restore.json",
+      "bytes": 13709,
+      "sha256": "8e8dfe280f7f16c13bf8d52815d15dcc5dc806d09844e8428bb4260b8947ae3b",
+      "selected_original": true
+    },
+    {
+      "path": "upgrade-summary.json",
+      "bytes": 54074,
+      "sha256": "617ca29fa7fd31b6a7a4166bed0c02702443dda445a855435f7cd74bec8abc04",
+      "selected_original": true
+    },
+    {
+      "path": "rollback-restore.json",
+      "bytes": 13720,
+      "sha256": "089ec94f04a5a32ee6de8ade7599cda2751b9f8fd6f0048b554fe6ce4a2587dd",
+      "selected_original": true
+    },
+    {
+      "path": "rollback-summary.json",
+      "bytes": 54084,
+      "sha256": "d14eb90b4cf7fac5235dc0e226e8dbb6eb826c5562727e0c80a5586dee521a98",
+      "selected_original": true
+    }
+  ],
+  "capacity_derived": {
+    "sample_count": 226,
+    "minimum_available_bytes": 81224196096,
+    "required_floor_bytes": 5368709120,
+    "all_observed_samples_passed": true
+  },
+  "checkpoint_semantic_sha256": "b102b4bbc00bff38ac887ab37262a3abf987ef1e9bd83b232f3d7fa650a9449c",
+  "images": {
+    "ARC_MIGRATION_BASELINE_IMAGE": "sha256:a2f703060cc5301adb97cd490921e73bd5f1e493434811985fdd1bc5a86b341a",
+    "ARC_MIGRATION_CANDIDATE_IMAGE": "sha256:b8ad829904ab7caa1700f521188d0c4a97d83416d0a970fe4bcb908d1c7a03ba",
+    "ARC_MIGRATION_API_IMAGE": "sha256:dc46eb45048cdbdf68eff1fad651c786d594ee7f9886664ff8f2628f8487941f",
+    "ARC_MIGRATION_WEB_IMAGE": "sha256:55eece696652f6bae9ce218caab23c1fb2d3d6cb3bf5e76a55fe1242b33ee792"
+  },
+  "scope": "new GitHub runner synthetic baseline, separate upgrade and rollback namespaces",
+  "not_selected": "ZIP, capacity JSONL, database dumps, storage payload files and container logs",
+  "root_cause_limit": "New run observes compacted physical ordinals with logical schema and row conservation; the first failed target's physical fields were not retained"
+}

@@ -1,0 +1,135 @@
+{
+  "run_id": 41953014467,
+  "source_sha": "a1190a38e998ce9683495a07028a1b9e589303cf",
+  "method": "gh API HTTPS authenticated; ZIP and unselected material held in memory; no native collection",
+  "files": [
+    {
+      "path": "run.json",
+      "selected_bytes": 10594,
+      "selected_sha256": "480cf22c8ba3588e4a4361c227975a46710099923b47fc9158ea5651722c3b06",
+      "sources": [
+        {
+          "method": "selected GitHub API run and job fields",
+          "run_url": "https://api.github.com/repos/qife422/ai-review-console/actions/runs/41953014467",
+          "jobs_url": "https://api.github.com/repos/qife422/ai-review-console/actions/runs/41953014467/jobs"
+        }
+      ]
+    },
+    {
+      "path": "workflow.json",
+      "selected_bytes": 7183,
+      "selected_sha256": "60c2ba65893d8a1ce44ba05bca40f0e3df670fb3f19476016ae5702adeb746f3",
+      "sources": [
+        {
+          "artifact_id": 13382177124,
+          "member_path": "workflow.json",
+          "original_bytes": 7183,
+          "original_sha256": "60c2ba65893d8a1ce44ba05bca40f0e3df670fb3f19476016ae5702adeb746f3",
+          "method": "original member bytes"
+        }
+      ]
+    },
+    {
+      "path": "probe.json",
+      "selected_bytes": 2162,
+      "selected_sha256": "8625b69279ee3cd339cdeb43fc17f2f206e2106fcd06334e13081f29e2bd159f",
+      "sources": [
+        {
+          "artifact_id": 13382177124,
+          "member_path": "release/dependency-compatibility.stdout",
+          "original_bytes": 2162,
+          "original_sha256": "8625b69279ee3cd339cdeb43fc17f2f206e2106fcd06334e13081f29e2bd159f",
+          "method": "original member bytes"
+        }
+      ]
+    },
+    {
+      "path": "image-summary.json",
+      "selected_bytes": 88205,
+      "selected_sha256": "777c3eebf155ae45125b0b284a5a0cdf005a28f6fa70ad8e6880253b067c2299",
+      "sources": [
+        {
+          "artifact_id": 13382177124,
+          "member_path": "release/images/summary.json",
+          "original_bytes": 88205,
+          "original_sha256": "777c3eebf155ae45125b0b284a5a0cdf005a28f6fa70ad8e6880253b067c2299",
+          "method": "original member bytes"
+        }
+      ]
+    },
+    {
+      "path": "langflow-inventory.json",
+      "selected_bytes": 188521,
+      "selected_sha256": "7e6d8cb76433d14285bba344fbc5f2c2d52680c4bad527b427e3a97e7ccdda11",
+      "sources": [
+        {
+          "artifact_id": 13382177124,
+          "member_path": "release/images/langflow-inventory.json",
+          "original_bytes": 188521,
+          "original_sha256": "7e6d8cb76433d14285bba344fbc5f2c2d52680c4bad527b427e3a97e7ccdda11",
+          "method": "original member bytes"
+        }
+      ]
+    },
+    {
+      "path": "inventory-comparison.json",
+      "selected_bytes": 1139,
+      "selected_sha256": "911d86a1251a1ccb6d8b9e2e4e54f85167517a339d760fea2313a091917cd9bc",
+      "sources": [
+        {
+          "artifact_id": 13382177124,
+          "member_path": "release/images/langflow-inventory.json",
+          "original_bytes": 188521,
+          "original_sha256": "7e6d8cb76433d14285bba344fbc5f2c2d52680c4bad527b427e3a97e7ccdda11",
+          "method": "normalized name and exact version comparison; selected APT rows"
+        },
+        {
+          "path": "compliance/langflow-candidate.in",
+          "original_bytes": 7781,
+          "original_sha256": "93558be0714d17c73e253621f2f9d6ecc479af3b9777964040e82cb3cc16835b"
+        }
+      ]
+    },
+    {
+      "path": "collector-license-summary.json",
+      "selected_bytes": 7348,
+      "selected_sha256": "2aa0d252be1865f91ed27af34b4afb70d746107a0991c283b70b733c9cea399d",
+      "sources": [
+        {
+          "artifact_id": 13382177124,
+          "member_path": "release/manifest.json",
+          "original_bytes": 25776,
+          "original_sha256": "776920d0336e8ee1fbba4f5141781bd85282a677ffdf549d346848d0e76d7426",
+          "method": "selected fields; omitted unrelated inventory and text"
+        },
+        {
+          "artifact_id": 13382177124,
+          "member_path": "release/licenses/langflow.json",
+          "original_bytes": 786800,
+          "original_sha256": "ff5388453f2547064026e5c3c023c4f15b390e77eeb8ec2a3befe3c72bf155e7",
+          "method": "selected fields; omitted unrelated inventory and text"
+        }
+      ]
+    },
+    {
+      "path": "tests-summary.json",
+      "selected_bytes": 421,
+      "selected_sha256": "697bdf87a8141e1698949c23c8dd642a627e7da84502929ca5e795407f29ea18",
+      "sources": [
+        {
+          "artifact_id": 13381667891,
+          "member_path": "arc-unit.xml",
+          "original_bytes": 35646,
+          "original_sha256": "36150273ecc9be870fa30a146a4743bf155ea9d0851c22c4b29266d2061f81f5",
+          "method": "XML suite attributes only"
+        },
+        {
+          "api": "jobs/127001150301/logs",
+          "original_bytes": 95122,
+          "original_sha256": "a0ce54ea6f9ad8fc99857e1b5799a6bc9957da6c6076102af1e736c74fc4382c",
+          "method": "selected Vitest summary lines, ANSI removed"
+        }
+      ]
+    }
+  ]
+}

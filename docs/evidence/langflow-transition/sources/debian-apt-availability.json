@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-11-05T02:04:40.212817+00:00",
+  "exact_apt_2_6_2_listed": true,
+  "exact_libapt_2_6_2_listed": true,
+  "method": "Official Debian HTTPS InRelease and AMD64 Packages.xz read only in memory <=4MiB compressed/16MiB expanded; hashes and selected apt/libapt-pkg6.0 paragraphs only retained. Compressed index digest compared with InRelease SHA256 row; OpenPGP signature not verified by this script. No package binaries fetched, apt resolver or installation executed.",
+  "qualification": "Official index availability supports a candidate-only same-suite update. Dependencies/repository configuration/installability remain for CI apt resolver and actual image verification; index listing is not actual successful install.",
+  "records": [
+    {
+      "bytes": 34770,
+      "fetched_at": "2026-11-05T02:04:39.857293+00:00",
+      "final_url": "https://deb.debian.org/debian-security/dists/bookworm-security/InRelease",
+      "selected_fields": {
+        "Codename": "bookworm-security",
+        "Date": "Wed, 04 Nov 2026 21:43:52 UTC",
+        "Label": "Debian-Security",
+        "Origin": "Debian",
+        "Suite": "oldstable-security",
+        "Valid-Until": "Wed, 11 Nov 2026 21:43:52 UTC"
+      },
+      "sha256": "3928c61d792381356871c4168b1c1be6aed0732ac91b4e2555b80919b4640504",
+      "sha256_index_row": [
+        "534a3b90c58607868048f443240fe1d64341b7697a1e483876089108c579b734   360752 main/binary-amd64/Packages.xz"
+      ],
+      "url": "https://deb.debian.org/debian-security/dists/bookworm-security/InRelease"
+    },
+    {
+      "bytes": 360752,
+      "decompressed_bytes": 2392177,
+      "decompressed_sha256": "499028cee277a5266afbfd6024f8a3f7cd8b749ca01051306532144bfaf4e009",
+      "fetched_at": "2026-11-05T02:04:40.148412+00:00",
+      "final_url": "https://deb.debian.org/debian-security/dists/bookworm-security/main/binary-amd64/Packages.xz",
+      "matches_inrelease_sha256": true,
+      "sha256": "534a3b90c58607868048f443240fe1d64341b7697a1e483876089108c579b734",
+      "url": "https://deb.debian.org/debian-security/dists/bookworm-security/main/binary-amd64/Packages.xz"
+    }
+  ],
+  "selected_binary_packages": [
+    {
+      "Architecture": "amd64",
+      "Depends": "adduser, gpgv | gpgv2 | gpgv1, libapt-pkg6.0 (>= 2.6.2), debian-archive-keyring, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libgnutls30 (>= 3.7.5), libseccomp2 (>= 2.4.2), libstdc++6 (>= 11), libsystemd0",
+      "Filename": "pool/updates/main/a/apt/apt_2.6.2_amd64.deb",
+      "Package": "apt",
+      "SHA256": "796fc7fe18866f5b1fb27a115d7339e549d71b7ddbc15b8d6fc4226c243e96d1",
+      "Size": "1373116",
+      "Version": "2.6.2"
+    },
+    {
+      "Architecture": "amd64",
+      "Depends": "libbz2-1.0, libc6 (>= 2.34), libgcc-s1 (>= 3.0), libgcrypt20 (>= 1.10.0), liblz4-1 (>= 0.0~r127), liblzma5 (>= 5.1.1alpha+20120614), libstdc++6 (>= 11), libsystemd0 (>= 221), libudev1 (>= 183), libxxhash0 (>= 0.7.1), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.2.2.3)",
+      "Filename": "pool/updates/main/a/apt/libapt-pkg6.0_2.6.2_amd64.deb",
+      "Package": "libapt-pkg6.0",
+      "SHA256": "023a7017b75295fc7037c7a4352847f9516a36a82cc5e1650d6832d238860913",
+      "Size": "906972",
+      "Source": "apt",
+      "Version": "2.6.2"
+    }
+  ]
+}

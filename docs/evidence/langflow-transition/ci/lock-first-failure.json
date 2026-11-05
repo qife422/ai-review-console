@@ -1,0 +1,18 @@
+{
+  "run": 41951805984,
+  "source": "8ac0c79b8f0099e5dd7baed799b92a76692f3e67",
+  "conclusion": "failure",
+  "command": "gh run view41951805984 --log-failed",
+  "full_log_bytes": 25293,
+  "full_log_sha256": "823a9ebdaae1e07d3f36c4aba4e7cd7097d69bca6ba3c7fc3b346ed6497ac489",
+  "full_log_retained": false,
+  "matching_lines": [
+    "lock\tResolve complete fixed graph and verify a fresh hash-required install\t2026-11-05T01:56:05.5635883Z ^[[36;1m    python -m pip install --dry-run --ignore-installed --only-binary=:all: \\^[[0m",
+    "lock\tResolve complete fixed graph and verify a fresh hash-required install\t2026-11-05T01:56:05.5638084Z ^[[36;1m    python -m pip --python /out/env install --only-binary=:all: --require-hashes \\^[[0m",
+    "lock\tResolve complete fixed graph and verify a fresh hash-required install\t2026-11-05T01:56:16.4948774Z ERROR: Could not find a version that satisfies the requirement cuid==0.4 (from versions: 0.2)",
+    "lock\tResolve complete fixed graph and verify a fresh hash-required install\t2026-11-05T01:56:16.4949529Z ERROR: No matching distribution found for cuid==0.4",
+    "lock\tResolve complete fixed graph and verify a fresh hash-required install\t2026-11-05T01:56:20.5918150Z ##[error]Process completed with exit code 1."
+  ],
+  "diagnosis": "Wheel-only resolution rejected cuid0.4; no downgrade. Later run41952562436 fixed the four build tools, disabled isolation and successfully required hashes for all334 distributions, with four sdists.",
+  "current_result": "success at41952562436; source82a028e5738f04c9ce642e76544ffbae5554ab62"
+}

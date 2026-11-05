@@ -1,0 +1,1461 @@
+{
+  "advisory_details": [
+    {
+      "fetched_at": "2026-11-05T02:04:07.373143+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/CVE-2026-109518",
+      "id": "CVE-2026-109518",
+      "method": "Official CVE HTML table/description read in memory; no raw body retained",
+      "raw_bytes": 4360,
+      "raw_sha256": "5f8ae68d34e8e1aaf03b426054f496f7807cc6734d4a4e61ce7f24fe7ed71a4f",
+      "selected_fact": "Official source-package table: apt bookworm2.6.1 vulnerable; bookworm security2.6.2 fixed. Fixed-version table bookworm2.6.2/DLA-4880-1. Upgrade identified, not applied.",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-109518"
+    },
+    {
+      "fetched_at": "2026-11-05T02:04:07.673806+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/CVE-2026-95209",
+      "id": "CVE-2026-95209",
+      "method": "Official CVE HTML table/description read in memory; no raw body retained",
+      "raw_bytes": 2817,
+      "raw_sha256": "83755dc4e0ddeed28f57686837cbeb3e0f7cefe38d92b3335b93622bebab7aaa",
+      "selected_fact": "CVE description explicitly disputed by multiple parties; no vulnerable/fixed package table or Debian release mapping present. Preserve unknown applicability, do not convert to false positive or fixed.",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-95209"
+    }
+  ],
+  "announcement_scope": {
+    "fetched_at": "2026-11-05T02:05:06.059946+00:00",
+    "final_url": "https://security-tracker.debian.org/tracker/DLA-4880-1",
+    "limitation": "Linked https://www.debian.org/lts/security/dla-4880-1 redirected to Debian home during web check; the announcement body was not obtained. Suite attribution is from official tracker table plus matching official bookworm-security binary index.",
+    "raw_bytes": 2040,
+    "raw_sha256": "6635f2a451f8bb73ea72a48063ff2a9b3f32558e53743f87346f3869ce0c31d6",
+    "selected_fact": "DLA-4880-1 tracker vulnerable/fixed table and fixed-version row explicitly list bookworm apt2.6.2. Not bullseye.",
+    "url": "https://security-tracker.debian.org/tracker/DLA-4880-1"
+  },
+  "binary_count": 52,
+  "category_counts": {
+    "bookworm_current_fixed_installed_not_retested": 1,
+    "no_dsa": 24,
+    "not_found_on_source_page": 1,
+    "open_or_undetermined": 28,
+    "postponed_no_dsa": 31,
+    "unimportant_unfixed": 48
+  },
+  "category_counts_qualification": "133 source/advisory pairs equal133 provider IDs in this bounded input. These categories are nonoverlapping tracker display groups, not CVSS severity or exploitable-CVE counts. The unlisted gnutls entry remains unknown even though description is disputed.",
+  "created_at": "2026-11-05T02:03:15.782465+00:00",
+  "license_material_assessment": {
+    "existing_material_can_support": [
+      {
+        "closure": "Own-license-text material gap already closed; embedded SQLite correspondence and distribution obligations remain open.",
+        "component": "APSW3.53.4.0",
+        "material": "Actual own-license1166B match to exact upstream LICENSE already recorded in environment/candidate-license-final-review.json"
+      },
+      {
+        "closure": "No new network read needed to identify/reproduce official MIT text. This does not establish dist-info own copies or exact image project-license delivery.",
+        "component": "langflow-base/LFX1.13.1",
+        "material": "sources/langflow-1.13.1-license-source.json retains lossless exact-v1.13.1 root MIT1065B SHA48d4a7496209a9e1f2f549384251b69319360c3a38127cf513473590be383359; repo licenses/Langflow-LICENSE.txt differs only one trailing newline. Existing sources/base-pyproject.toml plus version metadata identify monorepo package context."
+      },
+      {
+        "closure": "MIT body identification needs no new read. Apache body was only hashed; do not claim retained delivery, license election or native source correspondence.",
+        "component": "sqlite-vec0.1.9",
+        "material": "Existing sources/sqlite-vec-0.1.9-LICENSE-MIT.txt1068B SHA6ce72bbe12d975bd5286e5ab0a064c069693300c47bccbc57bec18485f1621ea; sources/sqlite-native-source-review.json identifies Apache10931B SHAa38070a94d4afd9cd710e3ce67bd1de78097cfe1784c1f0109ac95d3c196bfdc (body not retained)."
+      }
+    ],
+    "modified_license_or_docs": false,
+    "necessary_new_read_or_evidence_if_closing_remaining_gaps": [
+      "For exact new candidate image, bounded declared textual LICENSE/NOTICE selection and project-license text readback for base/LFX/sqlite-vec; a missing dist specimen is not license permission. No native binary reads are proposed.",
+      "If Apache notice path is used or both upstream texts are delivered, retrieve exact-v0.1.9 LICENSE-APACHE body from https://raw.githubusercontent.com/asg017/sqlite-vec/v0.1.9/LICENSE-APACHE and check existing recorded hash; license-path choice remains explicit, not inferred here.",
+      "Use exact selected wheel/sdist textual metadata and source build/provenance records to establish SQLite/native source/version/options correspondence; no native inspection or full source archive was performed by this review.",
+      "Whole-backend redistribution still needs complete notices/corresponding-source and LGPL Psycopg/libpq/system obligations, frontend embedded dependencies and default/API vendor/FIPS separate review. No legal signoff or deployment acceptance inferred."
+    ],
+    "new_license_network_requests": 0,
+    "new_native_binary_reads": 0
+  },
+  "limitations": [
+    "No severity inference from no-DSA/postponed/unimportant; these are tracker policy/status, not risk acceptance.",
+    "Fixed on bookworm source page does not prove fixed installed version; candidate source version is retained for comparison and upgrades require new CI scan.",
+    "The large aggregate JSON was attempted in memory, exceeded the 64MiB bounded read and was not parsed, retained, or used. No complete rawhash is asserted for it."
+  ],
+  "method": "Official HTTPS source-package HTML, bounded <=1MiB per response, parsed table headers/rows and matched existing source/CVE pairs; raw response hashes retained, bodies not saved. No native binaries read. Available versions are tracker listings, not a current apt resolver or proof upgrades installed.",
+  "scan_input": "docs/evidence/langflow-candidate/ci/candidate/final/metadata/scan/summary.json",
+  "scan_sha256": "192aaad16cb3dc3fe6bfb98663c09715ac431e882cb73b86d4f04f470b9a8cb2",
+  "scope": "Existing candidate OSV Debian findings only; source-package bookworm tracker status; not zero vulnerabilities or exploitability/acceptance",
+  "source_advisory_pairs": 133,
+  "source_count": 28,
+  "sources": [
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-54369",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-54370",
+          "section": "Open issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "2.3.1-3"
+      },
+      "binaries": [
+        "libacl1"
+      ],
+      "fetched_at": "2026-11-05T02:03:14.385871+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/acl",
+      "installed_source_versions": [
+        "2.3.1-3"
+      ],
+      "raw_bytes": 3152,
+      "raw_sha256": "006fd9e3d99596859e857ccb6e1d2f4bb279cfcb11137f8ef29fb4a0f18e790b",
+      "source": "acl",
+      "url": "https://security-tracker.debian.org/tracker/source-package/acl"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2011-3374",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "fixed",
+          "category": "bookworm_current_fixed_installed_not_retested",
+          "id": "CVE-2026-109518",
+          "section": "Open issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "2.6.1",
+        "bookworm (security)": "2.6.2"
+      },
+      "binaries": [
+        "apt",
+        "libapt-pkg6.0"
+      ],
+      "fetched_at": "2026-11-05T02:03:14.172736+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/apt",
+      "installed_source_versions": [
+        "2.6.1"
+      ],
+      "raw_bytes": 7467,
+      "raw_sha256": "ed5ec7c026cb7212882645707fad24286f178c103fe90f9d89c71e653a201984",
+      "source": "apt",
+      "url": "https://security-tracker.debian.org/tracker/source-package/apt"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-54371",
+          "section": "Open issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "1:2.5.1-4"
+      },
+      "binaries": [
+        "libattr1"
+      ],
+      "fetched_at": "2026-11-05T02:03:14.389479+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/attr",
+      "installed_source_versions": [
+        "1:2.5.1-4"
+      ],
+      "raw_bytes": 2318,
+      "raw_sha256": "db6f8f6a7e4eae07617fca3e9d147f13de207736aa6b36453ecc8329ed9aaccf",
+      "source": "attr",
+      "url": "https://security-tracker.debian.org/tracker/source-package/attr"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable (no DSA)",
+          "category": "no_dsa",
+          "id": "CVE-2026-42250",
+          "section": "Open issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "1.0.8-5"
+      },
+      "binaries": [
+        "libbz2-1.0"
+      ],
+      "fetched_at": "2026-11-05T02:03:14.395146+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/bzip2",
+      "installed_source_versions": [
+        "1.0.8-5"
+      ],
+      "raw_bytes": 4050,
+      "raw_sha256": "e1bdad9a9f56356b68b8d02f1c84455a87d14590997a35eb27015003441dc4a3",
+      "source": "bzip2",
+      "url": "https://security-tracker.debian.org/tracker/source-package/bzip2"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable (no DSA, ignored)",
+          "category": "no_dsa",
+          "id": "CVE-2016-2781",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2017-18018",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2025-5278",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2026-56391",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2026-56392",
+          "section": "Open unimportant issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "9.1-1"
+      },
+      "binaries": [
+        "coreutils"
+      ],
+      "fetched_at": "2026-11-05T02:03:14.459256+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/coreutils",
+      "installed_source_versions": [
+        "9.1-1"
+      ],
+      "raw_bytes": 6050,
+      "raw_sha256": "e2d5109c89c0a92c97ab4da693d86e899988e2f2290dbb3f09511b7b94ea7ddb",
+      "source": "coreutils",
+      "url": "https://security-tracker.debian.org/tracker/source-package/coreutils"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2026-102473",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2026-102474",
+          "section": "Open unimportant issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "0.5.12-2"
+      },
+      "binaries": [
+        "dash"
+      ],
+      "fetched_at": "2026-11-05T02:03:14.533582+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/dash",
+      "installed_source_versions": [
+        "0.5.12-2"
+      ],
+      "raw_bytes": 2592,
+      "raw_sha256": "5b2740fe3f1b32f3c43e22053bb697a6ec0c8df6ac567840164384b8ba334408",
+      "source": "dash",
+      "url": "https://security-tracker.debian.org/tracker/source-package/dash"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2026-53910",
+          "section": "Open unimportant issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "1:3.8-4"
+      },
+      "binaries": [
+        "diffutils"
+      ],
+      "fetched_at": "2026-11-05T02:03:14.558446+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/diffutils",
+      "installed_source_versions": [
+        "1:3.8-4"
+      ],
+      "raw_bytes": 2074,
+      "raw_sha256": "0497f2614a80dfeb404556d1ce8dc874cf770afa9f2dc70535c1dbb691e86c51",
+      "source": "diffutils",
+      "url": "https://security-tracker.debian.org/tracker/source-package/diffutils"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2022-27943",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, ignored)",
+          "category": "no_dsa",
+          "id": "CVE-2026-102010",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-114690",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-114691",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-115455",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-95619",
+          "section": "Open issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "12.2.0-14+deb12u1"
+      },
+      "binaries": [
+        "gcc-12-base",
+        "libgcc-s1",
+        "libstdc++6"
+      ],
+      "fetched_at": "2026-11-05T02:03:14.556499+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/gcc-12",
+      "installed_source_versions": [
+        "12.2.0-14+deb12u1"
+      ],
+      "raw_bytes": 4436,
+      "raw_sha256": "e6923add536afe637474c4f4f6c46a5152d3fe008ffcfa360c28570678f55b10",
+      "source": "gcc-12",
+      "url": "https://security-tracker.debian.org/tracker/source-package/gcc-12"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2010-4756",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2018-20796",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2019-1010022",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2019-1010023",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2019-1010024",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2019-1010025",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2019-9192",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-18374",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-19499",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-19542",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA)",
+          "category": "no_dsa",
+          "id": "CVE-2026-5435",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA)",
+          "category": "no_dsa",
+          "id": "CVE-2026-5450",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA)",
+          "category": "no_dsa",
+          "id": "CVE-2026-5928",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA)",
+          "category": "no_dsa",
+          "id": "CVE-2026-6238",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-6368",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-6791",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-77117",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-80489",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-84243",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-8674",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-86805",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-89092",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-95818",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-97399",
+          "section": "Open issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "2.36-9+deb12u14",
+        "bookworm (security)": "2.36-9+deb12u7"
+      },
+      "binaries": [
+        "libc-bin",
+        "libc6"
+      ],
+      "fetched_at": "2026-11-05T02:03:14.848366+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/glibc",
+      "installed_source_versions": [
+        "2.36-9+deb12u14"
+      ],
+      "raw_bytes": 36993,
+      "raw_sha256": "2462bcc00e0481ea11dbbdbcad7497fec5c3d4cc30a428abdee933691f222729",
+      "source": "glibc",
+      "url": "https://security-tracker.debian.org/tracker/source-package/glibc"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2022-3219",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA)",
+          "category": "no_dsa",
+          "id": "CVE-2025-30258",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA)",
+          "category": "no_dsa",
+          "id": "CVE-2025-68972",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-105712",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-57062",
+          "section": "Open issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "2.2.40-1.1+deb12u2"
+      },
+      "binaries": [
+        "gpgv"
+      ],
+      "fetched_at": "2026-11-05T02:03:14.628098+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/gnupg2",
+      "installed_source_versions": [
+        "2.2.40-1.1+deb12u2"
+      ],
+      "raw_bytes": 9724,
+      "raw_sha256": "c45cf0780037b46aa727b1e594fece20273a97082f5553ee262f553d235a2014",
+      "source": "gnupg2",
+      "url": "https://security-tracker.debian.org/tracker/source-package/gnupg2"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2011-3389",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2026-67693",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2026-88647",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2026-88648",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2026-95184",
+          "section": "Open unimportant issues"
+        },
+        {
+          "category": "not_found_on_source_page",
+          "id": "CVE-2026-95209"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2026-95210",
+          "section": "Open unimportant issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "3.7.9-2+deb12u7"
+      },
+      "binaries": [
+        "libgnutls30"
+      ],
+      "fetched_at": "2026-11-05T02:03:14.779460+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/gnutls28",
+      "installed_source_versions": [
+        "3.7.9-2+deb12u7"
+      ],
+      "raw_bytes": 16531,
+      "raw_sha256": "830d176d02ae31dccabfbae129897480ccc91724d96a5309e6ed3a6c07bbcb35",
+      "source": "gnutls28",
+      "url": "https://security-tracker.debian.org/tracker/source-package/gnutls28"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-41991",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-41992",
+          "section": "Open issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "1.12-1"
+      },
+      "binaries": [
+        "gzip"
+      ],
+      "fetched_at": "2026-11-05T02:03:14.772041+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/gzip",
+      "installed_source_versions": [
+        "1.12-1"
+      ],
+      "raw_bytes": 5667,
+      "raw_sha256": "8d8dcacf695adff62221ed661ec76586d00503c2ebc7cdaa349a47847e46847d",
+      "source": "gzip",
+      "url": "https://security-tracker.debian.org/tracker/source-package/gzip"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2018-5709",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2024-26458",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2024-26461",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-107708",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-107778",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2026-11850",
+          "section": "Open unimportant issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "1.20.1-2+deb12u5"
+      },
+      "binaries": [
+        "libgssapi-krb5-2",
+        "libk5crypto3",
+        "libkrb5-3",
+        "libkrb5support0"
+      ],
+      "fetched_at": "2026-11-05T02:03:14.986641+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/krb5",
+      "installed_source_versions": [
+        "1.20.1-2+deb12u5"
+      ],
+      "raw_bytes": 28003,
+      "raw_sha256": "459036d74724485fdf6fa2d5e310438a6607fa9b425b2aca9664c2460a8e7be2",
+      "source": "krb5",
+      "url": "https://security-tracker.debian.org/tracker/source-package/krb5"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2018-6829",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2024-2236",
+          "section": "Open unimportant issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "1.10.1-3+deb12u1"
+      },
+      "binaries": [
+        "libgcrypt20"
+      ],
+      "fetched_at": "2026-11-05T02:03:14.930187+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/libgcrypt20",
+      "installed_source_versions": [
+        "1.10.1-3+deb12u1"
+      ],
+      "raw_bytes": 6101,
+      "raw_sha256": "d8af1b848443e746aefffb66f9f987502841b151d4d2ad5edc4c32a380f22803",
+      "source": "libgcrypt20",
+      "url": "https://security-tracker.debian.org/tracker/source-package/libgcrypt20"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable (no DSA)",
+          "category": "no_dsa",
+          "id": "CVE-2025-13151",
+          "section": "Open issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "4.19.0-2+deb12u1"
+      },
+      "binaries": [
+        "libtasn1-6"
+      ],
+      "fetched_at": "2026-11-05T02:03:14.919593+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/libtasn1-6",
+      "installed_source_versions": [
+        "4.19.0-2+deb12u1"
+      ],
+      "raw_bytes": 4914,
+      "raw_sha256": "846d15650aed166952fa2631db15ed2c29901336e74504efbde324bd4608f2d7",
+      "source": "libtasn1-6",
+      "url": "https://security-tracker.debian.org/tracker/source-package/libtasn1-6"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-85231",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-85977",
+          "section": "Open issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "1.3.3+ds-1"
+      },
+      "binaries": [
+        "libtirpc-common",
+        "libtirpc3"
+      ],
+      "fetched_at": "2026-11-05T02:03:14.951680+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/libtirpc",
+      "installed_source_versions": [
+        "1.3.3+ds-1"
+      ],
+      "raw_bytes": 4055,
+      "raw_sha256": "ad4bbe57399f91f588f4bb306373919efa1647a92fba181c042bc2f83c5da3a6",
+      "source": "libtirpc",
+      "url": "https://security-tracker.debian.org/tracker/source-package/libtirpc"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable (no DSA)",
+          "category": "no_dsa",
+          "id": "CVE-2023-50495",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA)",
+          "category": "no_dsa",
+          "id": "CVE-2025-6141",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA)",
+          "category": "no_dsa",
+          "id": "CVE-2025-69720",
+          "section": "Open issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "6.4-4"
+      },
+      "binaries": [
+        "libncursesw6",
+        "libtinfo6",
+        "ncurses-base",
+        "ncurses-bin"
+      ],
+      "fetched_at": "2026-11-05T02:03:15.013465+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/ncurses",
+      "installed_source_versions": [
+        "6.4-4"
+      ],
+      "raw_bytes": 7204,
+      "raw_sha256": "e8f2394834497989f679ac614e892dcdd36302751fbf98a36a603f95d944abcf",
+      "source": "ncurses",
+      "url": "https://security-tracker.debian.org/tracker/source-package/ncurses"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2015-3276",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2017-14159",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2017-17740",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2020-15719",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA)",
+          "category": "no_dsa",
+          "id": "CVE-2023-2953",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2026-22185",
+          "section": "Open unimportant issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "2.5.13+dfsg-5"
+      },
+      "binaries": [
+        "libldap-2.5-0"
+      ],
+      "fetched_at": "2026-11-05T02:03:15.127898+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/openldap",
+      "installed_source_versions": [
+        "2.5.13+dfsg-5"
+      ],
+      "raw_bytes": 11864,
+      "raw_sha256": "c8b877203ed551f1676866d13eddab117f36f2ba1ebdaa49c45e3bd3257af2d8",
+      "source": "openldap",
+      "url": "https://security-tracker.debian.org/tracker/source-package/openldap"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2025-27587",
+          "section": "Open unimportant issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "3.0.20-1~deb12u2",
+        "bookworm (security)": "3.0.22-1~deb12u2"
+      },
+      "binaries": [
+        "libssl3",
+        "openssl"
+      ],
+      "fetched_at": "2026-11-05T02:03:15.345941+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/openssl",
+      "installed_source_versions": [
+        "3.0.22-1~deb12u2"
+      ],
+      "raw_bytes": 60910,
+      "raw_sha256": "5f08f354c45ea2b782026832182bdd3eba38d064d01c6cddfceacdeef429a799",
+      "source": "openssl",
+      "url": "https://security-tracker.debian.org/tracker/source-package/openssl"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-13757",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-18938",
+          "section": "Open issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "0.24.1-2"
+      },
+      "binaries": [
+        "libp11-kit0"
+      ],
+      "fetched_at": "2026-11-05T02:03:15.331706+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/p11-kit",
+      "installed_source_versions": [
+        "0.24.1-2"
+      ],
+      "raw_bytes": 3537,
+      "raw_sha256": "8035c6a8dcc7080a2e66e441320346eb205bdfd3d4bb54c911a34d5e9d6adc65",
+      "source": "p11-kit",
+      "url": "https://security-tracker.debian.org/tracker/source-package/p11-kit"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable (no DSA, ignored)",
+          "category": "no_dsa",
+          "id": "CVE-2024-10041",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "undetermined",
+          "category": "open_or_undetermined",
+          "id": "CVE-2025-8941",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-54411",
+          "section": "Open issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "1.5.2-6+deb12u2"
+      },
+      "binaries": [
+        "libpam-modules",
+        "libpam-modules-bin",
+        "libpam-runtime",
+        "libpam0g"
+      ],
+      "fetched_at": "2026-11-05T02:03:15.193236+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/pam",
+      "installed_source_versions": [
+        "1.5.2-6+deb12u2"
+      ],
+      "raw_bytes": 7861,
+      "raw_sha256": "3a322305e67128b2e17516e29255d631040ca3041cf96c5ad69de1a56578285d",
+      "source": "pam",
+      "url": "https://security-tracker.debian.org/tracker/source-package/pam"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2011-4116",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2023-31486",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-15534",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-82560",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-9538",
+          "section": "Open issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "5.36.0-7+deb12u3",
+        "bookworm (security)": "5.36.0-7+deb12u4"
+      },
+      "binaries": [
+        "perl-base"
+      ],
+      "fetched_at": "2026-11-05T02:03:15.421713+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/perl",
+      "installed_source_versions": [
+        "5.36.0-7+deb12u4"
+      ],
+      "raw_bytes": 20056,
+      "raw_sha256": "7fb152ef68ece106ffda1b99d87ddf32752696e7efaa11a73c60ca8da9e3dd3b",
+      "source": "perl",
+      "url": "https://security-tracker.debian.org/tracker/source-package/perl"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2007-5686",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA)",
+          "category": "no_dsa",
+          "id": "CVE-2024-56433",
+          "section": "Open issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "1:4.13+dfsg1-1+deb12u2"
+      },
+      "binaries": [
+        "login",
+        "passwd"
+      ],
+      "fetched_at": "2026-11-05T02:03:15.329660+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/shadow",
+      "installed_source_versions": [
+        "1:4.13+dfsg1-1+deb12u2"
+      ],
+      "raw_bytes": 7273,
+      "raw_sha256": "e4ff094821fe25d8e94f5ae31b646b540e6313247d4906b7b0991aacea392759",
+      "source": "shadow",
+      "url": "https://security-tracker.debian.org/tracker/source-package/shadow"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2021-45346",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2025-29088",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2025-70873",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA)",
+          "category": "no_dsa",
+          "id": "CVE-2025-7458",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA)",
+          "category": "no_dsa",
+          "id": "CVE-2025-7709",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-11822",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-11824",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-119371",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-119372",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-119373",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-119374",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-119375",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-119376",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-119377",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-119378",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-119379",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "undetermined",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-119586",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-119591",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-50812",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-50813",
+          "section": "Open issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "3.40.1-2+deb12u2"
+      },
+      "binaries": [
+        "libsqlite3-0"
+      ],
+      "fetched_at": "2026-11-05T02:03:15.578669+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/sqlite3",
+      "installed_source_versions": [
+        "3.40.1-2+deb12u2"
+      ],
+      "raw_bytes": 19850,
+      "raw_sha256": "658dadc3a0976d09311ae2d1425d6b524d4aa476f33223c76c7cf880595a53d7",
+      "source": "sqlite3",
+      "url": "https://security-tracker.debian.org/tracker/source-package/sqlite3"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2013-4392",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2023-31437",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2023-31438",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2023-31439",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-15059",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-16742",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA)",
+          "category": "no_dsa",
+          "id": "CVE-2026-40228",
+          "section": "Open issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "252.39-1~deb12u2",
+        "bookworm (security)": "252.38-1~deb12u1"
+      },
+      "binaries": [
+        "libsystemd0",
+        "libudev1"
+      ],
+      "fetched_at": "2026-11-05T02:03:15.573252+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/systemd",
+      "installed_source_versions": [
+        "252.39-1~deb12u2"
+      ],
+      "raw_bytes": 15368,
+      "raw_sha256": "dcb061e29ebb8322910e0e0ab50f817a7fbe864214e3a484ac7a7cb78d5081dc",
+      "source": "systemd",
+      "url": "https://security-tracker.debian.org/tracker/source-package/systemd"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2005-2541",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-18477",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, postponed)",
+          "category": "postponed_no_dsa",
+          "id": "CVE-2026-18508",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA)",
+          "category": "no_dsa",
+          "id": "CVE-2026-5704",
+          "section": "Open issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "1.34+dfsg-1.2+deb12u1"
+      },
+      "binaries": [
+        "tar"
+      ],
+      "fetched_at": "2026-11-05T02:03:15.546762+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/tar",
+      "installed_source_versions": [
+        "1.34+dfsg-1.2+deb12u1"
+      ],
+      "raw_bytes": 6602,
+      "raw_sha256": "391a922188274da78dbf008e8484096bff7f8acc7a9e0608ccf8ca94aaac0fb2",
+      "source": "tar",
+      "url": "https://security-tracker.debian.org/tracker/source-package/tar"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2022-0563",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "unimportant_unfixed",
+          "id": "CVE-2025-14104",
+          "section": "Open unimportant issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-13595",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA)",
+          "category": "no_dsa",
+          "id": "CVE-2026-27456",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA, ignored)",
+          "category": "no_dsa",
+          "id": "CVE-2026-3184",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-53613",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-53615",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-78410",
+          "section": "Open issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "2.38.1-5+deb12u3",
+        "bookworm (security)": "2.38.1-5+deb12u1"
+      },
+      "binaries": [
+        "bsdutils",
+        "libblkid1",
+        "libmount1",
+        "libsmartcols1",
+        "libuuid1",
+        "mount",
+        "util-linux",
+        "util-linux-extra"
+      ],
+      "fetched_at": "2026-11-05T02:03:15.589717+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/util-linux",
+      "installed_source_versions": [
+        "2.38.1-5+deb12u3"
+      ],
+      "raw_bytes": 10356,
+      "raw_sha256": "d46f0b28cedf52cfd5796aa6ad59c0910375236811b38955a315f2aab89d7037",
+      "source": "util-linux",
+      "url": "https://security-tracker.debian.org/tracker/source-package/util-linux"
+    },
+    {
+      "advisories": [
+        {
+          "bookworm_status": "vulnerable (no DSA, ignored)",
+          "category": "no_dsa",
+          "id": "CVE-2023-45853",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable (no DSA)",
+          "category": "no_dsa",
+          "id": "CVE-2026-27171",
+          "section": "Open issues"
+        },
+        {
+          "bookworm_status": "vulnerable",
+          "category": "open_or_undetermined",
+          "id": "CVE-2026-85091",
+          "section": "Open issues"
+        }
+      ],
+      "available_bookworm_versions": {
+        "bookworm": "1:1.2.13.dfsg-1"
+      },
+      "binaries": [
+        "zlib1g"
+      ],
+      "fetched_at": "2026-11-05T02:03:15.781814+00:00",
+      "final_url": "https://security-tracker.debian.org/tracker/source-package/zlib",
+      "installed_source_versions": [
+        "1:1.2.13.dfsg-1"
+      ],
+      "raw_bytes": 5396,
+      "raw_sha256": "9e7d797727caa2c7943fabc2dc57687f977c45ba0bed37e91a6e048d436ca11c",
+      "source": "zlib",
+      "url": "https://security-tracker.debian.org/tracker/source-package/zlib"
+    }
+  ],
+  "unique_provider_ids": 133,
+  "upgrade_assessment": {
+    "advisory": "CVE-2026-109518",
+    "affected_installed_binaries": [
+      "apt",
+      "libapt-pkg6.0"
+    ],
+    "availability_assessment": "debian-apt-availability.json",
+    "availability_assessment_sha256": "91445ea903dd35589bd47fcd72f453a54ba1920c46e397ac12a2df9cf3fa899e",
+    "bookworm_security_fixed": "2.6.2",
+    "inrelease_index_sha256_match": true,
+    "installed": "2.6.1",
+    "official_amd64_index_apt2_6_2_listed": true,
+    "official_amd64_index_libapt2_6_2_listed": true,
+    "official_announcement": "DLA-4880-1",
+    "qualification": "Official current bookworm-security binary index lists exact apt2.6.2/libapt-pkg6.0 2.6.2 and pool paths/sha256; compressed index SHA matches InRelease row. No OpenPGP verification, deb download, actual apt resolver/install or rebuilt scan performed here.",
+    "verified_actionable_source": "apt"
+  }
+}

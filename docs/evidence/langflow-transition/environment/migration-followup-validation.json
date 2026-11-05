@@ -1,0 +1,11 @@
+{
+  "source": "480246c00a94ecee420f4d778ebf302acf3d4b79",
+  "local_tests": 36,
+  "ruff": "passed",
+  "scope": "Migration producer/test changes only; main runtime/core/collector inputs unchanged from full CI a1190a38. Targeted36 tests and independent pure-function negative review passed; new actual migration CI41954322019 passed. skip-ci is not a pass.",
+  "observed_via": "author reported actual local run; independent AST checks in environment-review.json; exact producer hash snapshot retained",
+  "semantic_limit": "Column name, data_type, nullability and relative order, not complete DDL/default/index/constraint equivalence",
+  "reason_hypothesis": "The new run directly records source physical ordinal gaps compacted after restore with matching semantic fingerprints. First failed target raw schema was not retained, so its exact field-level difference is not reconstructed.",
+  "actual_run": 41954322019,
+  "actual_result": "passed"
+}

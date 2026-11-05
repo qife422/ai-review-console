@@ -1,0 +1,384 @@
+{
+  "run_id": 41953014467,
+  "source": "a1190a38e998ce9683495a07028a1b9e589303cf",
+  "conclusion": "success",
+  "url": "https://github.com/qife422/ai-review-console/actions/runs/41953014467",
+  "jobs": [
+    {
+      "id": 127001150085,
+      "name": "workflow-browser (ubuntu-24.04-arm, default, 1.11.6, docker-compose.yml, arm64, arm-backend, rhel)",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Record runner architecture and require 12 GiB available",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m venv .venv && .venv/bin/pip install -r requirements.lock",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm ci && npm run build",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build exact application images",
+          "conclusion": "success"
+        },
+        {
+          "name": "Start isolated stores and workflow runtime",
+          "conclusion": "success"
+        },
+        {
+          "name": "Wait for API and Web",
+          "conclusion": "success"
+        },
+        {
+          "name": "Real uploads, Intake, three decisions, nine downloads, failure and retry",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install bounded browser CLI runtime",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Install pinned Chinese browser font",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Verify Chinese browser font availability",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Keyboard upload to decision and downloadable reports",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Collect bounded image and license evidence (not release acceptance)",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve compact runtime diagnostics",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 127001150301,
+      "name": "verify",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Initialize containers",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install --upgrade pip",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run pip install -r requirements.lock",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run pip install -e '.[dev]'",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run ruff check .",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run pytest --junitxml=\"$RUNNER_TEMP/arc-unit.xml\"",
+          "conclusion": "success"
+        },
+        {
+          "name": "Reject common committed secret formats",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm ci",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm test -- --run",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run build",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run docker compose config --quiet",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Stop containers",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 127001150364,
+      "name": "workflow-browser (ubuntu-latest, default, 1.11.6, docker-compose.yml, amd64, prior-materials, rhel)",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Record runner architecture and require 12 GiB available",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m venv .venv && .venv/bin/pip install -r requirements.lock",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm ci && npm run build",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build exact application images",
+          "conclusion": "success"
+        },
+        {
+          "name": "Start isolated stores and workflow runtime",
+          "conclusion": "success"
+        },
+        {
+          "name": "Wait for API and Web",
+          "conclusion": "success"
+        },
+        {
+          "name": "Real uploads, Intake, three decisions, nine downloads, failure and retry",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install bounded browser CLI runtime",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install pinned Chinese browser font",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify Chinese browser font availability",
+          "conclusion": "success"
+        },
+        {
+          "name": "Keyboard upload to decision and downloadable reports",
+          "conclusion": "success"
+        },
+        {
+          "name": "Collect bounded image and license evidence (not release acceptance)",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve compact runtime diagnostics",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 127001150538,
+      "name": "workflow-browser (ubuntu-latest, candidate, 1.13.1, docker-compose.yml:docker/compose.candidate.y...",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Record runner architecture and require 12 GiB available",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m venv .venv && .venv/bin/pip install -r requirements.lock",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm ci && npm run build",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build exact application images",
+          "conclusion": "success"
+        },
+        {
+          "name": "Start isolated stores and workflow runtime",
+          "conclusion": "success"
+        },
+        {
+          "name": "Wait for API and Web",
+          "conclusion": "success"
+        },
+        {
+          "name": "Real uploads, Intake, three decisions, nine downloads, failure and retry",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install bounded browser CLI runtime",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install pinned Chinese browser font",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify Chinese browser font availability",
+          "conclusion": "success"
+        },
+        {
+          "name": "Keyboard upload to decision and downloadable reports",
+          "conclusion": "success"
+        },
+        {
+          "name": "Collect bounded image and license evidence (not release acceptance)",
+          "conclusion": "success"
+        },
+        {
+          "name": "Preserve compact runtime diagnostics",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ]
+}
