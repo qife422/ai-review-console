@@ -2,6 +2,13 @@
 
 本文件记录主要功能与交接边界；精确代码差异以 Git 提交为准。开发快照不是正式发布，源码备份不是运行数据库备份。
 
+## 2026-11-05 — 本机独立环境盘点及准备成本
+
+- 只读检查已有context、精确socket/binary/app/provider目录和常见进程：仅原Desktop两个context指向同一缺失socket，未在有限范围发现合格独立空环境。未连接daemon，不把unknown空状态记成0容器/镜像/卷，也不声称全机绝无VM。
+- Data分区本轮可用24,882,925,568B（约23.2GiB），8GiB/8CPU、hv_support=1；只是快照，无清理或容量准入结论。
+- 在[既有恢复说明](docs/DOCKER_RECOVERY.md)补最小准备方案、隔离验收字段和成本估算：Linux机制实验准备+验证约60–120分钟，实际磁盘约2–4GiB，上界可能超过3GiB；同版Mac验证另需独立机器/可信旧制品。当前不创建环境、不安装/下载/付费、不扩预算，不以新provider绕增长停点。
+- 更新既有状态和索引，自查固定输入/11旧manifest及历史路径差异；无新Spec/复审包或运行验收。默认1.11.6、原数据及历史保护不变，完整AC-19仍open。
+
 ## 2026-11-05 — Docker 安全恢复方案核查
 
 - 按新授权继续只读研究，暂不启动Docker。实际确认Desktop4.43.2/build199162、客户端28.3.2；白名单读取daemon.json124B，仅builder/experimental，restart/live-restore缺省，未公开其他值或改配置。
