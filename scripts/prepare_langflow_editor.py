@@ -6,6 +6,9 @@ import argparse
 import json
 import os
 import sys
+import time
+from datetime import UTC, datetime
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 from urllib.parse import urlparse
 from uuid import uuid4
@@ -19,6 +22,37 @@ from scripts.candidate_runtime_guard import CandidateRuntimeGuard  # noqa: E402
 from scripts.verify_langflow_migration import published_url_matches  # noqa: E402
 
 NAMES = ("Document Review Intake", "Document Review Decision")
+
+
+def login_with_retry(client: httpx.Client, username: str, password: str) -> tuple[dict, int]:
+    deadline = time.monotonic() + 90
+    for attempt in range(3):
+        remaining = deadline - time.monotonic()
+        if remaining <= 0:
+            raise TimeoutError("Login retry deadline reached")
+        client.timeout = httpx.Timeout(min(30, remaining))
+        try:
+            return login(client, username, password), attempt
+        except httpx.HTTPStatusError as exc:
+            if exc.response.status_code != 429 or attempt == 2:
+                raise
+            header = exc.response.headers.get("Retry-After")
+            delay = 30.0
+            if header:
+                if header.isdecimal():
+                    delay = float(header)
+                else:
+                    try:
+                        when = parsedate_to_datetime(header)
+                        if when.tzinfo is None:
+                            raise ValueError("Retry-After date lacks timezone")
+                        delay = max(0.0, (when - datetime.now(UTC)).total_seconds())
+                    except (TypeError, ValueError, OverflowError):
+                        delay = 30.0
+            if delay >= deadline - time.monotonic():
+                raise TimeoutError("Retry-After exceeds login deadline") from exc
+            time.sleep(delay)
+    raise AssertionError("Unreachable login retry state")
 
 
 def items(client: httpx.Client, headers: dict) -> list:
@@ -61,7 +95,7 @@ def main() -> None:
         raise ValueError("Editor URL is not the guarded Langflow container")
     runtime_identity = {"project": project, "langflow_image": guard.running["langflow"]["Image"]}
     with httpx.Client(base_url=base, timeout=30) as client:
-        headers = login(
+        headers, retry_count = login_with_retry(
             client,
             os.environ.get("LANGFLOW_SUPERUSER", "review-admin"),
             os.environ.get("LANGFLOW_SUPERUSER_PASSWORD", "synthetic-demo-change-me"),
@@ -101,6 +135,7 @@ def main() -> None:
                 "synthetic_nodes": len(data["nodes"]),
                 "synthetic_edges": len(data["edges"]),
                 "version": "1.13.1",
+                "login_retry_count": retry_count,
             }
             with args.state.open("x", encoding="utf-8") as out:
                 json.dump(state, out, ensure_ascii=False, indent=2)
@@ -121,6 +156,7 @@ def main() -> None:
             print(
                 json.dumps(
                     {
+                        "login_retry_count": retry_count,
                         "synthetic_id": state["synthetic_id"],
                         "persisted_name": actual["name"],
                         "synthetic_graph_sha256": graph_hash(actual["data"]),

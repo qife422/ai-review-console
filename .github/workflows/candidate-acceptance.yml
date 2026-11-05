@@ -1,6 +1,13 @@
 name: Candidate editor, recovery and performance
 on:
   workflow_dispatch:
+    inputs:
+      focus:
+        description: Run all families or only the editor after a probe-only repair
+        type: choice
+        options: [all, editor]
+        default: all
+        required: true
 permissions:
   contents: read
 jobs:
@@ -28,6 +35,7 @@ jobs:
       REVIEW_SERVICE_TOKEN: synthetic-demo-service-token
       LANGFLOW_URL: http://127.0.0.1:7860
       ARC_LF_BASE_URL: http://127.0.0.1:7860
+      ARC_ACCEPTANCE_FOCUS: ${{ inputs.focus }}
     steps:
       - uses: actions/checkout@v4
       - name: Require capacity and fresh namespace
@@ -111,7 +119,7 @@ jobs:
         run: arc_bounded timeout 600s node frontend/scripts/verify-langflow-ui-cli.mjs
       - name: Five isolated worker and transport fault recoveries
         id: faults
-        if: always() && steps.initialized.outcome == 'success'
+        if: always() && steps.initialized.outcome == 'success' && inputs.focus != 'editor'
         run: |
           mkdir "$ARC_ACCEPTANCE_ROOT/faults"
           arc_bounded timeout 900s .venv/bin/python scripts/verify_faults.py \
@@ -120,7 +128,7 @@ jobs:
             --database-port 5433 --output "$ARC_ACCEPTANCE_ROOT/faults"
       - name: Partial PDF failure and ready artifact preservation
         id: reports
-        if: always() && steps.initialized.outcome == 'success' && steps.faults.outcome == 'success'
+        if: always() && steps.initialized.outcome == 'success' && steps.faults.outcome == 'success' && inputs.focus != 'editor'
         run: |
           mkdir "$ARC_ACCEPTANCE_ROOT/report-retry"
           arc_bounded timeout 900s .venv/bin/python scripts/verify_report_retry.py \
@@ -129,7 +137,7 @@ jobs:
             --output "$ARC_ACCEPTANCE_ROOT/report-retry"
       - name: Strict twenty 1 MiB mixed-query and report benchmark
         id: performance
-        if: always() && steps.faults.outcome == 'success' && steps.reports.outcome == 'success'
+        if: always() && steps.faults.outcome == 'success' && steps.reports.outcome == 'success' && inputs.focus != 'editor'
         run: |
           .venv/bin/python - <<'PY'
           import os
@@ -164,7 +172,7 @@ jobs:
               images[service]=result.stdout.strip() if result.returncode==0 else None
           files=[p for p in out.rglob('*') if p.is_file()]
           assert len(files)<=40 and sum(p.stat().st_size for p in files)<=2*1024**2
-          manifest={'run':os.environ['GITHUB_RUN_ID'],'source':os.environ['GITHUB_SHA'],'images':images,'sources':sources,
+          manifest={'run':os.environ['GITHUB_RUN_ID'],'source':os.environ['GITHUB_SHA'],'focus':os.environ['ARC_ACCEPTANCE_FOCUS'],'images':images,'sources':sources,
               'files':[{'path':str(p.relative_to(out)),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in files],
               'scope':'New synthetic AMD64 candidate only; raw font fault report files/container logs/npm/browser caches unselected; no whole build trees or dumps uploaded.'}
           payload=(json.dumps(manifest,indent=2)+'\n').encode()

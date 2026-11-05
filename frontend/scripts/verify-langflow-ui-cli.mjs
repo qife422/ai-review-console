@@ -72,7 +72,7 @@ try {
     const python = process.env.ARC_LF_PYTHON ?? '.venv/bin/python';
     const helper = (action) => JSON.parse(execFileSync(python, [
       'scripts/prepare_langflow_editor.py', action, '--state', statePath,
-    ], { encoding: 'utf8', timeout: 60000, maxBuffer: 128 * 1024 }));
+    ], { encoding: 'utf8', timeout: 120000, maxBuffer: 128 * 1024 }));
     const state = helper('prepare');
     // The API only creates the isolated copy; all subsequent edits use visible UI controls.
     cli('reload');
