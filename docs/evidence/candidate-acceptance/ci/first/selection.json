@@ -1,0 +1,45 @@
+{
+  "run": 41983022104,
+  "source": "098271e25d6e666448e1700c10b1779c72cb6e65",
+  "artifact_id": 13395640010,
+  "archive_sha256": "72ec39144cf5c714ffa4d120716b5ba3d7a5325f18e76a7ce75eecd4455e259f",
+  "archive_retained": false,
+  "selection": [
+    {
+      "member": "editor/result.json",
+      "path": "result.json",
+      "bytes": 477,
+      "sha256": "b16b4b11f7b441311fed295ea8d5be54d2b1075efbc581786c89765c2ff0a21d"
+    },
+    {
+      "member": "editor/failure-snapshot.txt",
+      "path": "failure-snapshot.txt",
+      "bytes": 9857,
+      "sha256": "2346885223b7fc59f7eaadf3b3d50b4df6018877373e32c85fe4e1568a9b1ed1"
+    },
+    {
+      "member": "editor/editor-state.json",
+      "path": "editor-state.json",
+      "bytes": 802,
+      "sha256": "c9f291f33dd165a20d637a1ce42e55c973d70772355b3f2f9fbee318a357195e"
+    },
+    {
+      "member": "editor/editor-visible.txt",
+      "path": "editor-visible.txt",
+      "bytes": 9857,
+      "sha256": "2346885223b7fc59f7eaadf3b3d50b4df6018877373e32c85fe4e1568a9b1ed1"
+    },
+    {
+      "member": "editor/editor.png",
+      "path": "editor.png",
+      "bytes": 97330,
+      "sha256": "654e089f3eaf3a87283842d2f38c266563613e2c4f2d9878a1a735701745ef06"
+    },
+    {
+      "member": "manifest.json",
+      "path": "manifest.json",
+      "bytes": 2282,
+      "sha256": "57b76d4e0ee4fbcdebe96bd323066b8d460a7d60086fb9f2de9a6a303c36251c"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "gate_session": "01a05b82-044b-7133-983b-5d409013b433",
+  "same_goal": "cfd2d589-0c13-4ee0-bd93-8316c3f556a4",
+  "budget_cumulative_minutes": 360,
+  "incident": "receipt.lock missing prevented official commands. User authorized only0byte0600 lock creation conditioned on ledger fingerprint. Precondition found ledger concurrently changed; repair aborted before writes. Official gate commands then recovered with lock restored by other activity; this agent did not manually create lock, modify runtime/code or reset cumulative time. Accurate official update superseded initial mistaken repair wording.",
+  "coverage": "Gate verified workspace shell/file patches only; MCP/browser/cloud coverage unverified. Registration grants no permission.",
+  "initial_resumed_elapsed_seconds": 19071.82749605179,
+  "cleanup": false,
+  "default_or_original_data_mutation": false
+}

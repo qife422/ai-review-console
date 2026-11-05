@@ -1,0 +1,173 @@
+### Page
+- Page URL: http://127.0.0.1:7860/flow/e9e698ca-76d7-4682-bebd-c42ceb9069a5
+- Page Title: ARC Synthetic Editor 89446cd669 | Langflow
+- Console: 1 errors, 0 warnings
+### Snapshot
+```yaml
+- generic [ref=f1e10]:
+  - generic [ref=f1e181]:
+    - banner [ref=f1e182]:
+      - button "Go to home" [ref=f1e184] [cursor=pointer]
+      - generic [ref=f1e191]:
+        - button "Starter Project" [ref=f1e194] [cursor=pointer]
+        - generic [ref=f1e196]: /
+        - button "Edit flow details and settings for ARC Synthetic Editor 89446cd669" [ref=f1e202] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f1e203]: ARC Synthetic Editor 89446cd669
+      - generic [ref=f1e207]:
+        - generic [ref=f1e209]:
+          - button "Go to GitHub repo" [ref=f1e210] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f1e215]: 156k
+          - button "Go to Discord server" [ref=f1e216] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f1e221]: 25k
+        - button "Notifications and errors" [ref=f1e222] [cursor=pointer]
+        - button [ref=f1e228] [cursor=pointer]:
+          - img "User" [ref=f1e233]
+    - generic [ref=f1e242]:
+      - navigation "Components sidebar" [ref=f1e244]:
+        - generic [ref=f1e248]:
+          - list [ref=f1e250]:
+            - listitem [ref=f1e251]:
+              - button "Components" [ref=f1e252] [cursor=pointer]
+            - listitem [ref=f1e259]:
+              - button "MCP" [ref=f1e260] [cursor=pointer]
+            - listitem [ref=f1e265]:
+              - button "Bundles" [ref=f1e266] [cursor=pointer]
+            - listitem [ref=f1e271]:
+              - button "Versions" [ref=f1e272] [cursor=pointer]
+            - listitem [aria-hidden] [ref=f1e278]
+            - listitem [ref=f1e279]:
+              - button "Agent" [ref=f1e280] [cursor=pointer]
+            - listitem [ref=f1e285]:
+              - button "Memories" [ref=f1e286] [cursor=pointer]
+            - listitem [ref=f1e304]:
+              - button "Traces" [ref=f1e305] [cursor=pointer]
+          - generic [ref=f1e309]:
+            - generic [ref=f1e311]:
+              - generic [ref=f1e312]:
+                - searchbox "Components" [ref=f1e313]
+                - generic [aria-hidden]: Search
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - img "/":
+                        - generic [aria-hidden]:
+                          - generic: /
+            - generic [ref=f1e314]:
+              - generic [ref=f1e315]:
+                - generic [ref=f1e316]:
+                  - generic [ref=f1e317]: Components
+                  - button "Component settings" [ref=f1e319] [cursor=pointer]
+                - list [ref=f1e321]:
+                  - listitem [ref=f1e322]:
+                    - button "Input & Output" [ref=f1e324] [cursor=pointer]
+                  - listitem [ref=f1e332]:
+                    - button "Data Sources" [ref=f1e334] [cursor=pointer]
+                  - listitem [ref=f1e342]:
+                    - button "Models & Agents" [ref=f1e344] [cursor=pointer]
+                  - listitem [ref=f1e351]:
+                    - button "LLM Operations" [ref=f1e353] [cursor=pointer]
+                  - listitem [ref=f1e369]:
+                    - button "Files & Knowledge" [ref=f1e371] [cursor=pointer]
+                  - listitem [ref=f1e379]:
+                    - button "Processing" [ref=f1e381] [cursor=pointer]
+                  - listitem [ref=f1e386]:
+                    - button "Flow Control" [ref=f1e388] [cursor=pointer]
+                  - listitem [ref=f1e395]:
+                    - button "Utilities" [ref=f1e397] [cursor=pointer]
+                  - listitem [ref=f1e404]:
+                    - button "Review Center" [ref=f1e406] [cursor=pointer]
+              - button "Discover more components" [ref=f1e414] [cursor=pointer]
+      - main [ref=f1e417]:
+        - generic [ref=f1e420]:
+          - generic [ref=f1e421]:
+            - generic [ref=f1e422]:
+              - generic [ref=f1e423]: New
+              - button "Langflow Assistant" [ref=f1e427] [cursor=pointer]:
+                - img "Langflow Assistant" [ref=f1e428]
+            - button "Zoom canvas control, 69%" [ref=f1e430] [cursor=pointer]:
+              - generic [ref=f1e431]: 69%
+            - button "Add Sticky Note" [ref=f1e435] [cursor=pointer]
+            - button "Minimize all" [ref=f1e439] [cursor=pointer]
+            - button "Help" [ref=f1e445] [cursor=pointer]
+          - generic [ref=f1e448]:
+            - button "Playground" [disabled] [ref=f1e450]
+            - button "Share" [ref=f1e454] [cursor=pointer]
+          - application "Flow canvas" [ref=f1e455]:
+            - generic [ref=f1e457]:
+              - generic:
+                - generic:
+                  - button "Edge from Synthetic Document Parser to Deterministic PII Redactor" [ref=f1e458] [cursor=pointer]
+                  - button "Edge from Deterministic PII Redactor to Explainable Risk Scorer" [ref=f1e461] [cursor=pointer]
+                  - button "Edge from Explainable Risk Scorer to Approval Task Gateway" [ref=f1e467] [cursor=pointer]
+                - generic:
+                  - application "Synthetic Document Parser node" [ref=f1e473]:
+                    - generic [ref=f1e475]:
+                      - generic [ref=f1e476]:
+                        - generic [ref=f1e477]:
+                          - generic [ref=f1e478]: Synthetic Document Parser
+                          - button "Run component" [ref=f1e490] [cursor=pointer]
+                        - paragraph [ref=f1e498]: Parse a synthetic PDF, DOCX, TXT, or Markdown file into traceable text sections.
+                      - generic [ref=f1e500]:
+                        - generic [ref=f1e502]:
+                          - generic [ref=f1e503]: Parsed Document
+                          - button "Please build the component first" [disabled] [ref=f1e506]
+                        - button "Output handle for Parsed Document on node Synthetic Document Parser" [ref=f1e510]
+                  - application "Deterministic PII Redactor node" [ref=f1e511]:
+                    - generic [ref=f1e513]:
+                      - generic [ref=f1e514]:
+                        - generic [ref=f1e515]:
+                          - generic [ref=f1e516]: Deterministic PII Redactor
+                          - button "Run component" [ref=f1e532] [cursor=pointer]
+                        - paragraph [ref=f1e540]: Redact synthetic identifiers using a versioned deterministic policy.
+                      - generic [ref=f1e541]:
+                        - generic [ref=f1e542]:
+                          - button "Input handle for Parsed Document on node Deterministic PII Redactor" [ref=f1e543]
+                          - generic [ref=f1e548]:
+                            - text: Parsed Document*
+                            - generic [ref=f1e549]: required
+                        - generic [ref=f1e550]:
+                          - generic [ref=f1e552]:
+                            - generic [ref=f1e553]: Redacted Document
+                            - button "Please build the component first" [disabled] [ref=f1e556]
+                          - button "Output handle for Redacted Document on node Deterministic PII Redactor" [ref=f1e560]
+                  - application "Explainable Risk Scorer node" [ref=f1e561]:
+                    - generic [ref=f1e563]:
+                      - generic [ref=f1e564]:
+                        - generic [ref=f1e565]:
+                          - generic [ref=f1e566]: Explainable Risk Scorer
+                          - button "Run component" [ref=f1e577] [cursor=pointer]
+                        - paragraph [ref=f1e585]: Score synthetic documents with transparent, versioned review rules.
+                      - generic [ref=f1e586]:
+                        - generic [ref=f1e587]:
+                          - button "Input handle for Redacted Document on node Explainable Risk Scorer" [ref=f1e588]
+                          - generic [ref=f1e593]:
+                            - text: Redacted Document*
+                            - generic [ref=f1e594]: required
+                        - generic [ref=f1e595]:
+                          - generic [ref=f1e597]:
+                            - generic [ref=f1e598]: Risk Assessment
+                            - button "Please build the component first" [disabled] [ref=f1e601]
+                          - button "Output handle for Risk Assessment on node Explainable Risk Scorer" [ref=f1e605]
+                  - application "Approval Task Gateway node" [ref=f1e606]:
+                    - generic [ref=f1e608]:
+                      - generic [ref=f1e609]:
+                        - generic [ref=f1e610]:
+                          - generic [ref=f1e611]: Approval Task Gateway
+                          - button "Run component" [ref=f1e624] [cursor=pointer]
+                        - paragraph [ref=f1e632]: Persist a bound review result before declaring it ready for human approval.
+                      - generic [ref=f1e633]:
+                        - generic [ref=f1e634]:
+                          - button "Input handle for Risk Assessment on node Approval Task Gateway" [ref=f1e635]
+                          - generic [ref=f1e640]:
+                            - text: Risk Assessment*
+                            - generic [ref=f1e641]: required
+                        - generic [ref=f1e642]:
+                          - generic [ref=f1e644]:
+                            - generic [ref=f1e645]: Approval Task
+                            - button "Please build the component first" [disabled] [ref=f1e648]
+                          - button "Output handle for Approval Task on node Approval Task Gateway" [ref=f1e652]
+  - generic:
+    - region "Notifications":
+      - status
+```

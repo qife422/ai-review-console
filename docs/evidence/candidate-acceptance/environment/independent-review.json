@@ -1,0 +1,72 @@
+{
+  "reviewer": "independent migration_review agent",
+  "checked_at": "2026-11-05T06:52:19.633000+00:00",
+  "reported_source_commit": "098271e25d6e666448e1700c10b1779c72cb6e65",
+  "reported_pending_run": 41983022104,
+  "source_sha256": {
+    "scripts/candidate_runtime_guard.py": "ba357ae355acfc127597ea0b0120b363645bcc859935a8358bcbf7113ed5c5c9",
+    "scripts/verify_faults.py": "2e786f0c3703f5c13ea2cc617e583cef34b4f0d02ca0b968a7aed81439435a88",
+    "scripts/verify_report_retry.py": "38facdad4f2a891c824598cf8ff0d6c7b8936212fda134dbe684841937f6fedb",
+    "scripts/prepare_langflow_editor.py": "ee984b5cce8a0fa09b872f03142debb8f7a44e3538aafdb4ce682077a673721e",
+    "frontend/scripts/verify-langflow-ui-cli.mjs": "647c6ee329b9cec2e9b57b2ed441556319fc879d65fb123fb79bfad2c1d43f95",
+    "scripts/validate_langflow.py": "00a3bfbfa9c70593fe2b90c0c1ec4668b25ee5e2121f0fc81d8e94400067cb2f",
+    "tests/test_candidate_performance.py": "be4617701048a841b3c2c4b27b762c7174d7abf31c154dd674f17f17e95a4594",
+    ".github/workflows/candidate-acceptance.yml": "421529ac92a360cbb87b2c16eccaa0d474fdee6b1eb7106bdc262c1ede255619"
+  },
+  "conclusion": "No remaining blocking finding in the reviewed fixed source for authorized new synthetic GitHub candidate execution. Actual run is pending; this record does not claim runtime acceptance or final approval.",
+  "method": "Independent read-only inspection of frozen implementation, relevant tests, Contract and workflow; no implementation design/edits, Docker, network or Git operations. Only this new review record written.",
+  "acceptance_invariants": {
+    "AC-06": "Actual worker interruption before execution and after callback; recovery without duplicate job/assessment/scored audit, preserving execution identity for same-run recovery.",
+    "AC-07": "Langflow/callback connection failure must remain unscored and expose retry_wait; 401 must fail without automatic retry. Manual generation has distinct job/token and preserves prior failed job. Timeout/429 mapping tests are separate from actual refused-connection scenarios.",
+    "AC-14": "PDF-only failure retains decision/version/snapshot and downloadable JSON/HTML. Automatic retry limit and dedicated failed-format retry must preserve ready report IDs/hash/bytes/created_at. Decision and decision audit remain unique.",
+    "performance": "CPU/RAM/Docker metadata, 20 sequential exact-1MiB documents, rule-only Flow configuration, no lost tasks; upload p95 <=3s, aggregate query p95 <=500ms, each Intake <=120s, each complete three-format report cycle <=120s."
+  },
+  "findings": [
+    {
+      "id": "runtime-legacy-bypass",
+      "status": "closed",
+      "original": "Guard permitted local legacy ai-review-console-upgrade/1.11.6, also the CLI default, despite new-GitHub-only scope.",
+      "fixed": "candidate_runtime_guard.py16-26 now requires current GITHUB_ACTIONS run namespace and expected1.13.1; no legacy exception. Defaults fail closed."
+    },
+    {
+      "id": "fault-finally-lost-evidence",
+      "status": "closed",
+      "original": "Worker start failure in finally skipped manifest and masked primary failure.",
+      "fixed": "verify_faults.py343-383 separately records restoration failure, preserves primary failure and writes manifest; restoration-only failure exits nonzero. Source bound by hash above."
+    },
+    {
+      "id": "oneshot-preexecution-binding",
+      "status": "closed_for_reviewed_resolved_compose",
+      "original": "One-shot ran before checking actual helper identity; effective image/environment could differ from bound running worker.",
+      "fixed": "Guard validate and fault one_shot preflight compare resolved image tag/ID, image-default-plus-config environment, command/user/entrypoint, volume/RW and network bindings; rejects privileged/extra host/network options. Kill additionally checks actual project/service/image/volume/network/database identity."
+    },
+    {
+      "id": "final-manifest-capacity",
+      "status": "closed",
+      "original": "Workflow checked selected size/count before creating manifest, allowing final upload to exceed cap.",
+      "fixed": "candidate-acceptance.yml169-172 encodes manifest first, asserts len(files)+1<=40 and files_bytes+payload_bytes<=2MiB, then writes exclusively. Verified current workflow SHA421529ac92a360cbb87b2c16eccaa0d474fdee6b1eb7106bdc262c1ede255619."
+    }
+  ],
+  "workflow_scope": [
+    "Uses fresh run-specific AMD64 candidate namespace and resolved effective Compose; unit PostgreSQL5432 is distinct from actual candidate PostgreSQL5433. Guard binds actual loopback ports/database/network/project volumes before fault/retry/performance operations.",
+    "Fault, report-retry and performance stages execute serially. Performance requires both fault and report steps successful, guard revalidation and zero active jobs.",
+    "Partial-report recreation checks original image/env/mount/network/Flow identity and restores original configuration before successful completion. Fault restoration passed means start command plus identity checks, not long-term process availability.",
+    "20GiB entry/5GiB sampled free-space floor is not a hard Docker quota. Final selected artifact <=2MiB/40files including manifest; raw temporary reports, container logs, browser caches and effective Compose credentials are not selected."
+  ],
+  "performance_review": {
+    "fixed_failure_semantics": "Strict requires exactly20, reports enabled, observed rule-only graph configuration and environment collection. Any failed sample/threshold produces failed evidence and nonzero exit after saving. Source/hash and downloaded report bytes remain checked.",
+    "query_scope": "Case list, summary and case detail sampled inside submitted-to-observed-terminal windows. p95 gate is aggregate across these routes; per-route data is reported but each route independently meeting500ms is not asserted. Not a concurrency/throughput benchmark or proof every query reached server while a job was still running.",
+    "upload_scope": "Loopback HTTP end-to-end measurement includes request transfer/client overhead; not isolated server-side disk/registration timing.",
+    "report_scope": "All20 samples request three formats; timing includes decision-to-observed-ready and download validation. Failed or timed-out samples remain failures; successful smaller historical runs do not substitute."
+  },
+  "editor_review": {
+    "current_js_sha256": "647c6ee329b9cec2e9b57b2ed441556319fc879d65fb123fb79bfad2c1d43f95",
+    "scope": "Create one new synthetic clone, observe editor canvas nodes/edges, rename via visible settings controls, require saved toast, reload, verify persisted name by API and original business Flow IDs/graphs unchanged.",
+    "not_covered": "Custom component code/parameter editing, arbitrary editor operations, executing the clone, or production administration. Current Save-button/toast revision was reread during final review."
+  },
+  "boundaries": [
+    "Default1.11.6, original databases/historical volumes and sealed evidence remain outside authorized mutations.",
+    "AMD64 evidence cannot be inherited by ARM/Mac or other images.",
+    "No actual run success, final acceptance, backend distribution, residual-risk acceptance or default runtime replacement is asserted here."
+  ]
+}

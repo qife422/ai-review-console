@@ -1,0 +1,42 @@
+{
+  "outcome": "passed",
+  "failure": null,
+  "steps": [
+    "Actual login form submitted",
+    "Two published project Flows visible",
+    "Synthetic copy opened in editor",
+    "Visible UI renamed synthetic Flow",
+    "Reload and API confirmed persisted name",
+    "Original Flow IDs and graph hashes unchanged"
+  ],
+  "calls": 28,
+  "base_url": "http://127.0.0.1:7860/",
+  "editor_evidence": {
+    "login_retry_count": 1,
+    "synthetic_id": "7e100d22-cb9f-49c2-a74f-ad6c90fe60cb",
+    "persisted_name": "ARC Synthetic Editor 4ea4811f57 Edited",
+    "synthetic_graph_sha256": "492fe18811670806c671c4c0528ced9c4b5fdf033f52127d6ebcd676ade86968",
+    "originals_before": {
+      "Document Review Intake": {
+        "id": "ae3e526c-5ccf-465e-95dd-f8266b887657",
+        "graph_sha256": "492fe18811670806c671c4c0528ced9c4b5fdf033f52127d6ebcd676ade86968"
+      },
+      "Document Review Decision": {
+        "id": "99a289c1-91d4-44ae-8fd9-47f6870010af",
+        "graph_sha256": "10f0d99a6f27435f2b1e671e1f2348045777a9a689bf42aac56fa3717671a1c5"
+      }
+    },
+    "originals_after": {
+      "Document Review Intake": {
+        "id": "ae3e526c-5ccf-465e-95dd-f8266b887657",
+        "graph_sha256": "492fe18811670806c671c4c0528ced9c4b5fdf033f52127d6ebcd676ade86968"
+      },
+      "Document Review Decision": {
+        "id": "99a289c1-91d4-44ae-8fd9-47f6870010af",
+        "graph_sha256": "10f0d99a6f27435f2b1e671e1f2348045777a9a689bf42aac56fa3717671a1c5"
+      }
+    }
+  },
+  "scope": "Synthetic copy editor only; custom code editing, business Flow changes and production are not tested",
+  "cli_cache": "Unselected ephemeral runner cache outside the evidence root; no cleanup performed"
+}

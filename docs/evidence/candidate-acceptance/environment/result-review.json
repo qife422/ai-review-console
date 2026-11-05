@@ -1,0 +1,98 @@
+{
+  "reviewer": "independent migration_review agent",
+  "checked_at": "2026-11-05T17:01:23.180042+00:00",
+  "conclusion": "B evidence supports five scoped fault recoveries, partial-report recovery and strict20-sample performance targets. Editor final API verification failed; entire run success and full acceptance are NOT claimed.",
+  "run": 41983887326,
+  "source": "8db7f5f8a5cd6c1634a8c7a0ed40b195ff3ed424",
+  "artifact_id": 13395941530,
+  "transport_sha256": "fd9be6204ff1837f6df1e6372343ccd8a6bdcf323f745cd3b304be0642bfe4d2",
+  "transport_note": "ZIP not fetched/retained by reviewer. Parent reported official GitHub digest verification. Reviewer independently checked local selected members.",
+  "images": {
+    "api": "sha256:de0ace4c6c71bef46334aa8f360ae8fd3bcde0dab042f0d613dd7a9c4a40c411",
+    "worker": "sha256:de0ace4c6c71bef46334aa8f360ae8fd3bcde0dab042f0d613dd7a9c4a40c411",
+    "langflow": "sha256:b836bf131480cd92747e8e50f54324fd3d76531137a59fa214e32549f2b44966",
+    "web": "sha256:7f18874e1c4e46965f554a4dc2b61f90275f398a0c74a5972f2c3f792ec08623",
+    "postgres": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+  },
+  "input_sha256": {
+    "selection.json": "6b20fb42994409823afcb10b0688311b6884e1a08b7734238f735bfe140c9df7",
+    "manifest.json": "4fc62bc435567b5911c260e31c11bd3afb8e5be96c6521e5fa2d876b0b234423",
+    "faults-faults.json": "4f5fe92fe1b4174208139ca8daad9fecdb8a21178c36e424684f5be2841caf9a",
+    "report-retry-report-retry.json": "59c2a00479ec6012b7dae60a84e90d4f30d37b7194ce2b4ac7f3e400ae1fda78",
+    "report-retry-restoration.json": "2f9867f83fde4ba6db55dc303497b9b1fbb3fdadba345d18fffe32f712743797",
+    "performance.json": "dab70fb10ec5fdf55be3bc508a2ff0d30eb3ac3b8a436c6577ca8e0d13b89d80",
+    "result.json": "8bfe3393d86155dfe5391a83caa0fb2ada459360a3158f67a75f15f1b91827b4"
+  },
+  "producer_sha256": {
+    "scripts/verify_faults.py": "2e786f0c3703f5c13ea2cc617e583cef34b4f0d02ca0b968a7aed81439435a88",
+    "scripts/verify_report_retry.py": "38facdad4f2a891c824598cf8ff0d6c7b8936212fda134dbe684841937f6fedb",
+    "scripts/validate_langflow.py": "00a3bfbfa9c70593fe2b90c0c1ec4668b25ee5e2121f0fc81d8e94400067cb2f"
+  },
+  "independent_checks": [
+    "All eight selected originals match selection sizes/SHA and applicable runner-manifest entries. Run/source/report git_head agree; fault/report project and Compose hash agree.",
+    "Five distinct fault cases; all injected workers exit137 with runner worker image. Each recovered succeeded with assessment/scored-audit count1. Before-execution/after-callback preserve token and one job/attempt. Two refused-connection modes recover on attempt2 with rotated token and one job.",
+    "401 original job remains failed attempt1/generation0/token unchanged. New manual generation1 recovers on attempt2; two jobs total. Do not claim immediate first-attempt success.",
+    "Report before/restored image/env hash/mounts/network/health/Flow IDs/config/graph equal. Standalone restoration equals embedded result. Case22->23; decision/audit1; active0. JSON/HTML byte preservation is a runtime-producer assertion; raw reports were not selected for offline rehash.",
+    "20 distinct performance cases: exact1048576B input and three formats each,60 reports.333 queries all200. Aggregate and per-route p95 recomputed exactly. Each Intake/report under120s, all recorded targets true; observed1.13.1 and Flow hashes unchanged."
+  ],
+  "fault_seconds": {
+    "before_execution": 96.85,
+    "after_callback": 7.397,
+    "langflow_unavailable": 16.526,
+    "callback_unavailable": 16.559,
+    "langflow_401": 19.627
+  },
+  "performance": {
+    "samples": 20,
+    "bytes_each": 1048576,
+    "reports": 60,
+    "queries": 333,
+    "upload_p95_seconds": 0.03827589499996975,
+    "aggregate_query_p95_seconds": 0.08338131799996518,
+    "intake_max_seconds": 3.192994079000073,
+    "report_max_seconds": 2.8416892580000876,
+    "routes": {
+      "/api/cases": {
+        "count": 111,
+        "p95_seconds": 0.08494697200001156
+      },
+      "/api/summary": {
+        "count": 111,
+        "p95_seconds": 0.08468293700002505
+      },
+      "/api/cases/{case_id}": {
+        "count": 111,
+        "p95_seconds": 0.037124133000020265
+      }
+    },
+    "environment": {
+      "host_platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.43",
+      "host_machine": "x86_64",
+      "host_cpu_count": 4,
+      "docker_server_version": "29.4.2",
+      "docker_cpu_count": 4,
+      "docker_memory_bytes": 16759439360
+    },
+    "rule_only_graph_configuration": true
+  },
+  "measurement_limits": [
+    "Upload is loopback HTTP end-to-end including transfer/client overhead, not isolated server-side disk time.",
+    "Queries inside submission-to-observed-terminal windows; not proof each hit while job running or a concurrency test. Gate aggregate p95; route values separately retained.",
+    "Report timing includes decision-to-ready observation and downloads. Synthetic deterministic TXT workload only."
+  ],
+  "editor_boundary": "B final helper login429 leaves editor_evidence null. UI saved/reloaded name does not close final original-Flow API check. C UI-only followup must bind its own source/image; B fault/report/performance do not become full-stack C proof.",
+  "omitted_originals": [
+    "unit.xml",
+    "baseline.json",
+    "capacity.jsonl",
+    "editor-visible.txt",
+    "flows-visible.txt",
+    "editor.png",
+    "commands.log",
+    "raw first/final report details/payloads",
+    "ZIP/container logs"
+  ],
+  "evidence_limit": "Runner manifest hashes do not preserve omitted content. Cannot claim full unit XML/logs/screenshots/raw reports stored locally. No further missing item blocks scoped producer-result conclusions; UI remains open.",
+  "governance": "No risk acceptance, backend release, default1.11.6 replacement or production approval. Only B AMD64 tested invariants; no global historical-data conservation, ARM/Mac or other-image inheritance. Formal sealing pending.",
+  "method": "Read-only local evidence plus standard-library hash/state/cardinality/percentile assertions. No Docker/network/Git/source edits; only this new record."
+}

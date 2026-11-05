@@ -1,59 +1,52 @@
 # 当前状态
 
-更新日期：2026-11-04（America/Los_Angeles）。冷启动以本文件、固定Contract、实际源码和限定范围的证据为准。
+更新日期：2026-11-05（America/Los_Angeles）。冷启动以本文件、固定Contract、实际源码及精确范围证据为准。
 
-负责人已批准ARC-UPGRADE@0.1.0及WP-00..05 continuous；前轮已完成候选锁、隔离迁移/回滚和补验；本轮用户在确认自查/上传后允许下一步，先补候选ARM独立锁、双架构回归并同步GitHub。用户明确将同目标累计预算扩至360分钟，既有累计保留；没有扩大默认替换、原始数据、历史清理或后端发布权限。工具门禁只覆盖已验证的工作区shell/文件补丁路径，登记不授予权限。
+负责人已批准ARC-UPGRADE@0.1.0及WP-00..05 continuous。本轮授权补齐1.13.1精简候选的管理编辑器、故障恢复和性能验收，并自查同步GitHub。同目标累计预算360分钟，既有累计保留；没有扩大默认替换、原始数据、历史清理或后端发布权限。门禁只验证工作区shell/文件补丁覆盖，登记不授予权限。
 
 | 轴 | 当前状态 |
 |---|---|
-| Contract | approved/0.1.0，固定正文不变 |
-| 交付 | implementing；WP-05发布问题仍open；本轮有限候选验证已收尾 |
-| 默认运行时 | 1.11.6，原Dockerfile含52inline pins及既有系统补丁，字节不变 |
-| 精简候选 | base/LFX1.13.1；334包独立AMD64/ARM64 SHA锁+4工具锁，各自新环境及实际镜像均exactset一致 |
-| 常规CI | e6f6fe7 / CI41979142562 success：271 Python/29前端、默认与候选各AMD/ARM；AMD浏览器通过，ARM GUI跳过 |
-| 候选ARM | 原生Linux/aarch64，334包/4工具独立新装与真实Flow/报告通过；非Mac宿主或ARM旧schema迁移证明 |
-| 隔离迁移/回滚 | 480246c / CI41954322019 success：旧检查点→新1.13.1及第三新1.11.6；两目标各再处理5案/9报告；限前轮AMD精确image，不继承ARM |
-| 系统与许可 | APT/libapt2.6.2补丁及三份通知副本实际回读通过；本轮两个LF候选各132 provider记录，完整native/source未闭合 |
-| 发布AC-19 | not passed；默认完整发布条件与二进制分发材料未完成 |
-| 完整技术验收 | last_verified=null；局部结果按精确source/run/image/profile理解 |
-| 最终接受 | pending；未接受残余风险或批准完整后端分发 |
-| 保护 | 原SQLite/历史卷、Spec/baseline、六旧封存包不变；没有本地Docker增长、清理或原库迁移 |
+| Contract | approved/0.1.0，固定字节不变 |
+| 交付 | implementing；WP-05完整发布仍open；本轮有限专项已收尾，适用范围如下 |
+| 默认运行时 | 1.11.6，原Dockerfile含52inline pins及既有补丁，字节不变 |
+| 精简候选 | base/LFX1.13.1；独立AMD64/ARM64各334包/4工具SHA锁及已验证实际清单 |
+| 既有常规CI | e6f6fe7 / 41979142562 success：271 Python/29前端，默认与候选各AMD/ARM后端、AMD业务浏览器；ARM GUI跳过 |
+| 管理编辑器 | 通过虚构副本改名、保存、重载及API回读（C专项success，305项Python/29项前端通过）；只覆盖虚构clone画布与UI改名/保存/重载/API回读 |
+| 故障与报告恢复 | B41983887326：5项故障及PDF部分失败/专用重试通过；401旧任务failed，人工generation1新任务attempt2恢复 |
+| 性能 | B：20×1MiB、333查询、60报告；上传p95 38.28ms、查询p95 83.38ms；Intake最长3.193s、三报告含下载最长2.842s |
+| 隔离迁移/回滚 | 480246c / 41954322019：AMD旧检查点→新1.13.1及第三新1.11.6，各5案/9报告；不继承ARM或升级后写入RPO0 |
+| 系统与许可 | 旧精确候选各132 LF provider记录；native/source、默认/API Zep/vendor/FIPS分发缺口仍open；本轮未重扫 |
+| 发布与接受 | AC-19 not passed；完整last_verified=null；最终接受pending，未接受残余风险或批准后端分发 |
+| 保护 | 原SQLite/历史卷、Spec/baseline、默认及依赖锁、七旧封存包不变；没有本地Docker增长或历史清理 |
 
 ## 活动证据
 
-- [本轮ARM结果、待解决及计划](evidence/langflow-arm/README.md)，[正式manifest](evidence/langflow-arm/manifest.json)，SHA-256 `7facd4561ccab08d137c45b748b8aa459ba042f21881fe87677527de29852a7d`。
-- [最新完整CI41979142562](https://github.com/qife422/ai-review-console/actions/runs/41979142562)：source e6f6fe7b908b7fab1b4f85e9f5a4fa22890fc923；候选ARM LF image sha256:a5939d54d52e42c88138c81d2059386fd31b3c1f66b7373358b35374b6b9627d，AMD LF image sha256:26a433f984fcb8da102faf0a77daa668c4ccfdc3a7177ac17ff961925547d27f；完整271/29、四个runtime lane均通过。
-- [ARM锁CI41978766690](https://github.com/qife422/ai-review-console/actions/runs/41978766690)：source38edc84，ARM334包与4工具分别新装/pip check，59个所选archive SHA不同于AMD，包版本未变。
-- [前轮依赖锁/迁移结果](evidence/langflow-transition/README.md)，[正式manifest](evidence/langflow-transition/manifest.json)，SHA-256 `81701508dc131ef4dbdc8743f46fdcb57c98969a4567696fd3c289c7843f1af5`。
-- [前轮完整CI41953014467](https://github.com/qife422/ai-review-console/actions/runs/41953014467)：source a1190a38e998ce9683495a07028a1b9e589303cf，candidate LF image sha256:69bf80f930187d91082d50a22f5543482aea10a6c1391d64e920b120a18ed3f0；实际334清单/安装/Flow/ARC浏览器和扫描通知材料绑定同image。
-- [哈希锁CI41952562436](https://github.com/qife422/ai-review-console/actions/runs/41952562436)：source82a028e，4工具及334包分别严格新装/pip check；4个sdist锁的是源码档案，不宣称wheel二进制复现。
-- [迁移/回滚CI41954322019](https://github.com/qife422/ai-review-console/actions/runs/41954322019)：source480246c00a94ecee420f4d778ebf302acf3d4b79；升级/回滚镜像独立于常规CI，见本轮manifest；不是原地降级或升级后写入零丢失。
-- [上轮候选](evidence/langflow-candidate/README.md)、[系统维护](evidence/runtime-maintenance/README.md)、[兼容补验](evidence/release-compatibility/README.md)、[发布扫描](evidence/v02-release/README.md)、[早期验收](evidence/v02-acceptance/README.md)保持原字节，仅按原适用范围使用；不跨镜像继承native或故障性能通过。
+- [本轮编辑器、恢复与性能结果及计划](evidence/candidate-acceptance/README.md)，[正式manifest](evidence/candidate-acceptance/manifest.json)，SHA-256 `d9736e997bf048f2e46337daa65089131f9d84c3613ea5a61143fed41c532fc1`。
+- [B运行41983887326](https://github.com/qife422/ai-review-console/actions/runs/41983887326)，source8db7f5f8a5cd6c1634a8c7a0ed40b195ff3ed424：故障、PDF恢复、性能及301项单元通过；整轮因编辑器最终登录429而failed。LF image sha256:b836bf131480cd92747e8e50f54324fd3d76531137a59fa214e32549f2b44966，API/worker sha256:de0ace4c6c71bef46334aa8f360ae8fd3bcde0dab042f0d613dd7a9c4a40c411。
+- [C编辑器专项42070564065](https://github.com/qife422/ai-review-console/actions/runs/42070564065)，source54592dff0231ee84b992956e0ea9b99b0eecdc39：通过虚构副本改名、保存、重载及API回读（C专项success，305项Python/29项前端通过）。只修429探针有界等待、helper外层时限、对应测试及手动CI选择；B故障/报告/性能明确跳过，不变成C精确image全项通过。
+- [候选ARM证据](evidence/langflow-arm/README.md)及[完整常规CI41979142562](https://github.com/qife422/ai-review-console/actions/runs/41979142562)：source e6f6fe7b908b7fab1b4f85e9f5a4fa22890fc923；两架构334实际清单及三份许可副本回读通过，只按原source/image适用。
+- [依赖锁/隔离迁移](evidence/langflow-transition/README.md)、[候选评估](evidence/langflow-candidate/README.md)、[系统维护](evidence/runtime-maintenance/README.md)、[兼容补验](evidence/release-compatibility/README.md)、[发布扫描](evidence/v02-release/README.md)、[早期验收](evidence/v02-acceptance/README.md)保留原字节，各自manifest决定范围。
 
-## 已解决与待解决
+## 结果边界
 
-本轮AMD/ARM安装名版本均334且与固定清单完全一致；58个ARM wheel档案及magika通用wheel独立选取，4个sdist仍按固定工具/no-build-isolation严格哈希安装。ARM后端真实四格式/三决定/九报告通过，GUI未验收；本轮两个候选profile四服务扫描provider并集各157，单个LF各132，不能混成全默认系统的计数。三通知副本在两个image回读均一致，current native正文仍未采集。
+本轮支持AC-06、AC-07上述故障子项、AC-14及AC-18部分失败/恢复子项与固定Spec顺序规则基准。实际超时/配额全部故障、Mac宿主、ARM管理/故障/性能及旧schema迁移不由本轮继承。编辑器不覆盖组件参数/代码编辑或clone执行。
 
-候选锁由前轮真实334清单生成，原55条constraints保留作历史边界来源，构建改用完整哈希锁且依赖检查开启。首次wheel-only因cuid0.4无wheel失败；固定4工具并禁用build isolation后通过，未降版本或绕过依赖。候选normal CI明确Debian12，默认RHEL事务/补扫仍保留；不适用步骤标not_applicable，未知和原扫描exit保留。候选datamodel未安装仅按actual1.13.1显式记录，其余兼容探针保留。
+性能环境为Linux AMD64、4 CPU、Docker29.4.2、报告总内存16,759,439,360B，限确定性规则TXT。上传是loopback HTTP端到端保守代理，包含客户端/传输而非单独落盘计时；查询在提交至观察终态窗口采样，非并发吞吐，也不证明每次查询时任务尚在执行；报告包含三格式ready观察及下载校验。实际Flow只含可信规则节点支持AI关闭配置，不是系统出口审计。原件与独立复审在本轮包内；未选全文的XML、日志和报告只保留来源或派生记录，不冒称完整封存。
 
-前轮AMD官方28源/133旧记录已分类：31延期/noDSA、24 noDSA、48低优先级仍未修、28开放/未定、1可补丁、1映射未知。候选实际APT/libapt升级2.6.2并复扫移除精确DEBIAN-CVE-2026-109518；APT2011记录仍在。本轮两个LF候选各443库存=334Python+109Debian，各52个匹配包/132 provider ID；ARM匹配28个source，本轮ARM PyPI匹配0、两候选mapping/query/detail unknown0，primary exit1。跨时间/发行版/服务计数不当作独立CVE或风险变化结论；无DSA、延期、unimportant和disputed不自动成为已修或风险接受。
+旧候选APT/libapt2.6.2补丁及通知实际携带按前轮精确image记录；单LF132与四服务provider并集157范围不同，不作独立CVE数量或新image扫描。本轮新增target native读取0；累计135,836,345B，余6files/26,795,216B输入/3,969,945B文本，旧101/100偏差保留。候选未检出Zep不能关闭默认/API缺口。
 
-本轮AMD/ARM实际candidate image均已携带Langflow MIT和sqlite-vec MIT/Apache三份副本，状态recorded及SHA与repo一致。MIT与精确上游只差末尾空行；完整两种sqlite-vec原文均保留，不选择替代许可。此闭项只涵盖补充通知实际携带，不伪称wheel owntext已修或native source对应已完成。APSW owntext精确匹配仍属前轮image。候选Zep/driver等安装名及已知路径未检出，默认/API的Zep精确许可、vendor/FIPS、SQLite及系统native源码、完整前端第三方材料继续独立open；仍有IBM SDK，不统称全部Apache。
+## 自查、保护与产物
 
-迁移校验限定列语义指纹（列名/type/nullability/相对顺序）、业务全行、用户身份、Flow和文件，以及目标PG/卷的新业务精确关联；不宣称完整DDL/default/index/constraint等价。回滚是恢复升级前检查点到第三个新旧版环境，不涵盖升级后新写入RPO0，也不操作原SQLite/历史卷。
+原SQLite57,344B SHA980ad5d23d866a52e4101966594e5a24ee67edef08475afc63ff9c3e1f6fca1f；固定Spec SHAa77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753；baseline SHA5ad13f524e74554b9c8cb30b9809ffbbbbed8e3d7fa4ede5625bb1b7d781bf2e。默认Dockerfile/52pins、requirements.lock和AMD两锁字节未变；七旧manifest与1,283个payload本轮完整逐size/SHA复核。旧包路径无改动，没有原库执行、迁移或挂载。
 
-## 保护与产物
+新temp `/private/tmp/arc-candidate-acceptance.1gcqlp6y` 限768KiB；旧四temp加新增限40MiB，CI选材512KiB/40files、来源64KiB/4files，候选/正式各100MiB/1000files，沿既有源码放大停点。ZIP只在内存校验官方size/digest；完整日志/构建/缓存及未选报告不入包。CI20GiB入口/5GiB取样余量不是Docker硬配额；512MiB/500files只是计划警戒估算，未实施持续卷限额，API实际配置1GiB/5000。容量实测见本轮environment记录。本地Docker旧warning/pending_cleanup保留，未start/build/pull/prune，未宣称全layers归属已盘清。
 
-原SQLite57,344B SHA980ad5d23d866a52e4101966594e5a24ee67edef08475afc63ff9c3e1f6fca1f；固定Spec SHAa77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753；baseline SHA5ad13f524e74554b9c8cb30b9809ffbbbbed8e3d7fa4ede5625bb1b7d781bf2e。前五包1155payload完整审计保留，上一包88payload本轮逐size/SHA核对；六旧manifest均未变，所有旧包路径相对e1d8a02无变更。默认Dockerfile/52pins、requirements.lock和AMD两锁相对上一检查点原字节一致。
+缺失receipt.lock时，用户授权的最小补建因账本并发变化在写前取消；正规门禁随后恢复。本代理没有手工改账本/门禁代码、补建锁或重置累计计时，具体记录保留。临时和历史产物没有删除、迁移或压缩。
 
-新temp /private/tmp/arc-langflow-arm.tlmz8anp 上限1MiB；旧三temp加新总40MiB；CI选材600KiB/40files，source64KiB/4files，候选/正式各100MiB/1000files，沿既有源码放大停点。ZIP仅内存并核GitHub size/digest；pip报告、档案、安装树、缓存和整个构建目录不封存。临时和历史产物保留待授权处置，没有删除、迁移或压缩。
+## 后续计划
 
-Native累计135,836,345B，余6files/26,795,216B输入/3,969,945B文本，旧101/100偏差保留。本轮target native读取0；常规CI prior-materials不重复English，不将旧正文视作新image证据。实际最终容量与只读保护记录见新manifest；旧本地Docker warning/pending_cleanup保留，未start/build/pull/prune，也不宣称重新盘点了全部本地layers归属。
+1. 补Mac宿主实际运行与ARM旧schema隔离迁移；如需更全面管理验收，独立补组件参数/代码编辑及clone执行。升级后写入恢复、原库迁移另行设计。
+2. 继续按供应商状态处理Debian残余，补SQLite/系统native对应源码、完整通知及提供方式，以及默认/API的Zep、vendor/FIPS许可；保持共享采集和累计预算边界。
+3. 完整发布条件、技术验收和负责人AD-03决定后才切换默认，再沿WP-08推进版本历史、修改后再审、队列及失败诊断；模型/OCR、真实身份/数据、生产部署仍有独立选择。
 
-## 下一步
-
-1. 补Mac宿主实际运行、Langflow管理编辑器、候选故障恢复/性能及ARM旧schema隔离迁移；原库迁移和升级后写入恢复设计独立评估。
-2. 按供应商状态继续处理132条候选Debian记录及默认/API残余，补SQLite/系统native对应源码、通知/提供方式、Zep和vendor/FIPS许可缺口，维持共享目标额度。
-3. 完整发布条件、技术验收及负责人AD-03默认升级决定后才切换默认，再沿WP-08做版本历史、修改后再审、队列和失败诊断；LLM/OCR、真实身份/数据及生产部署独立选择。
-
-普通技术同一阻塞三轮有证据无进展才停受影响范围；权限/Contract/数据/不可逆/容量即时停。最小阅读：适用AGENTS→本文件→Spec索引→活动证据→固定Spec相应WP→源码。
+普通技术同一阻塞三轮有证据无进展才停受影响范围；权限/Contract/数据/不可逆/容量立即停。最小阅读：适用AGENTS→本文件→Spec索引→活动证据→固定Spec相应WP→源码。本轮没有重部署静态虚构演示站。

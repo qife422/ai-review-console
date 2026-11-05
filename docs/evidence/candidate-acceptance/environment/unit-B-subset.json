@@ -1,0 +1,17 @@
+{
+  "run": 41983887326,
+  "source": "8db7f5f8a5cd6c1634a8c7a0ed40b195ff3ed424",
+  "classification": "derived_subset",
+  "method": "Re-fetch ZIP memory only, verify official recorded size/digest and unit.xml SHA, XML attributes sum. XML/raw ZIP not retained.",
+  "original": {
+    "member": "unit.xml",
+    "bytes": 41314,
+    "sha256": "2acc144dda018c6ba52a840eea7320a302ea9cad0e1854bb8870d4b015a5b70d"
+  },
+  "counts": {
+    "tests": 301,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+}

@@ -1,0 +1,3542 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "producer": "scripts/validate_langflow.py",
+  "producer_sha256": "00a3bfbfa9c70593fe2b90c0c1ec4668b25ee5e2121f0fc81d8e94400067cb2f",
+  "command": [
+    "scripts/validate_langflow.py",
+    "--expected-langflow-version",
+    "1.13.1",
+    "--api-url",
+    "http://127.0.0.1:8000",
+    "--benchmark-count",
+    "20",
+    "--benchmark-reports",
+    "--benchmark-strict",
+    "--evidence",
+    "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/selected/performance.json"
+  ],
+  "checked_at": "2026-11-05T07:10:09.806800+00:00",
+  "langflow_version": "1.13.1",
+  "expected_langflow_version": "1.13.1",
+  "acceptance": [
+    "AC-02",
+    "AC-04",
+    "AC-05",
+    "AC-13",
+    "AC-18"
+  ],
+  "component_count": 5,
+  "build_input": "authenticated Build API data override; no per-case PATCH",
+  "runtime_transport": "arc-runtime-v1: base64 of canonical UTF-8 JSON",
+  "stored_flow_hashes_before": {
+    "Document Review Intake": "492fe18811670806c671c4c0528ced9c4b5fdf033f52127d6ebcd676ade86968",
+    "Document Review Decision": "10f0d99a6f27435f2b1e671e1f2348045777a9a689bf42aac56fa3717671a1c5"
+  },
+  "stored_flow_hashes_after": {
+    "Document Review Intake": "492fe18811670806c671c4c0528ced9c4b5fdf033f52127d6ebcd676ade86968",
+    "Document Review Decision": "10f0d99a6f27435f2b1e671e1f2348045777a9a689bf42aac56fa3717671a1c5"
+  },
+  "cases": [
+    {
+      "case_id": "RC-8981687a40a14be8a085e5ae563821f4",
+      "document_version_id": "DV-1b94c6287a3a42d388cb0fb3eb8f3dda",
+      "intake_job_id": "JB-5afc455f143044358fdb3b0cc5720aca",
+      "intake_langflow_job_id": "5a07c784-3d1c-43b0-950f-fc716a39b05e",
+      "decision": "approved",
+      "decision_id": "DC-01db12744ac8483f9c9cc05188224f86",
+      "report_langflow_job_id": "74dd96b7-b22e-434c-ae13-3084c417e388",
+      "source_sha256": "afdc65a7d8b8af4363fadef8544f823e8245aa67f91be135f994931ea6747f6a",
+      "source_format": "txt",
+      "reports": [
+        {
+          "format": "json",
+          "sha256": "3dd338033568ab19fdd9f28994a402f5acc49f4f1600d3e285701ad5cff8305e",
+          "bytes": 3136
+        },
+        {
+          "format": "html",
+          "sha256": "fa64437f51310aed80ad1c4ec142ac7a7da79d9f336a813aa466f5f92d8d6d3f",
+          "bytes": 7615
+        },
+        {
+          "format": "pdf",
+          "sha256": "5208670f0af8a05b2fc7fcd12654fb2a3c85e3936072bb2802e8388a84b40f62",
+          "bytes": 38230
+        }
+      ]
+    },
+    {
+      "case_id": "RC-eae214efcb6e4f51b8c8d625fc2f9913",
+      "document_version_id": "DV-448ac5cdf49342cfa3eb0ff663561fd8",
+      "intake_job_id": "JB-8c344e8f19ba4f5c9923d91ad5b792de",
+      "intake_langflow_job_id": "65324de3-58c2-47db-a771-5325b20b4589",
+      "decision": "rejected",
+      "decision_id": "DC-ab61fefb8c7d4ca2b4a57c7aac7569dd",
+      "report_langflow_job_id": "2555dd97-4940-4b4a-a3ce-c32f23bd0050",
+      "source_sha256": "734602c8cb96d2fca1005e63ac3ade9c9a5a3f023254ce103823c0c47b8edd9a",
+      "source_format": "docx",
+      "reports": [
+        {
+          "format": "json",
+          "sha256": "cec865c990b847b84f2f20eb73c1777000c67ef8dc708709c53f597c125ac836",
+          "bytes": 3606
+        },
+        {
+          "format": "html",
+          "sha256": "0c58f0d76fe877ec05e462384012d7e07d2f059fd50d65888749c03037a353a8",
+          "bytes": 8559
+        },
+        {
+          "format": "pdf",
+          "sha256": "b8a3980a8b73423d6a43165b3880ae0432ca036a83f9ca08f87d3cf3a066eb4a",
+          "bytes": 40633
+        }
+      ]
+    },
+    {
+      "case_id": "RC-b615b4cd45af4bf69ae705a88f3abd95",
+      "document_version_id": "DV-b95738c8183a4d44af9e5d8c9310d47b",
+      "intake_job_id": "JB-74edc1978df24c06b89874480aa1892a",
+      "intake_langflow_job_id": "142a4e05-2ee4-4dd5-9bda-b3ff58b0ae28",
+      "decision": "changes_requested",
+      "decision_id": "DC-c8f9c27913eb473eb6d7d050347c74e3",
+      "report_langflow_job_id": "e961d0c4-555f-4dc7-a87c-d14cb6d9dc36",
+      "source_sha256": "02a528d02b5fd3064290e61b5e67a365b2b1e541932306fab489996ed40211f0",
+      "source_format": "pdf",
+      "reports": [
+        {
+          "format": "json",
+          "sha256": "f1edc31864f37978b814fa97836fa5d9163c4ece9efd4f3a3d4ac4820fdf0497",
+          "bytes": 3721
+        },
+        {
+          "format": "pdf",
+          "sha256": "3fca670d2be47971c1f7291a0a525b21828a84fc544d1d723d1216125ede0a29",
+          "bytes": 41377
+        },
+        {
+          "format": "html",
+          "sha256": "f01c46f4750a4d78e18ba7da921a94a741fea9a72fb513ccb6301a00b174b58d",
+          "bytes": 8787
+        }
+      ]
+    }
+  ],
+  "markdown_intake": {
+    "case_id": "RC-ce242fbd5e1945f7a651fe895ad571f9",
+    "source_format": "md",
+    "source_sha256": "d71821f859152b2e892f23dd22ae2e3422f96874f6364b9de0524832152a443d",
+    "intake_job": {
+      "job_id": "JB-0b4c4aec08fd4d8fac24f07ea08d87f8",
+      "kind": "intake",
+      "state": "succeeded",
+      "phase": "persisted",
+      "attempt": 1,
+      "retry_generation": 0,
+      "error_code": null,
+      "error_detail": null,
+      "retryable": false,
+      "langflow_job_id": "0f155e27-6e11-4b73-94ae-906166717f8b",
+      "flow_id": "43837f6c-2535-49d4-ace9-4a6a310f93ef",
+      "flow_hash": "492fe18811670806c671c4c0528ced9c4b5fdf033f52127d6ebcd676ade86968",
+      "next_run_at": "2026-11-05T07:08:33.426085+00:00",
+      "created_at": "2026-11-05T07:08:33.426268+00:00"
+    }
+  },
+  "failure_retry": {
+    "case_id": "RC-243b7c92e8f2447bb4bed3cefe0c23e4",
+    "document_version_id": "DV-337be3a4e2dc48f1b116e843bc338db3",
+    "source_sha256": "1e780c53ee3812004a3238028f9f4a122110e5571a51219d71cd33b706908f16",
+    "first_job": {
+      "job_id": "JB-a663ff29a5a54f949f12a242b733db6b",
+      "kind": "intake",
+      "state": "failed",
+      "phase": "failed",
+      "attempt": 1,
+      "retry_generation": 0,
+      "error_code": "synthetic_marker_missing",
+      "error_detail": "Document processing failed: synthetic_marker_missing",
+      "retryable": false,
+      "langflow_job_id": "6c1d7f84-f89a-4e26-932c-57e5d08827ea",
+      "flow_id": "43837f6c-2535-49d4-ace9-4a6a310f93ef",
+      "flow_hash": "492fe18811670806c671c4c0528ced9c4b5fdf033f52127d6ebcd676ade86968",
+      "next_run_at": "2026-11-05T07:08:37.328335+00:00",
+      "created_at": "2026-11-05T07:08:35.454671+00:00"
+    },
+    "retry_job": {
+      "job_id": "JB-4ff6a051b8b34b56a86671b9571f7940",
+      "kind": "intake",
+      "state": "failed",
+      "phase": "failed",
+      "attempt": 1,
+      "retry_generation": 1,
+      "error_code": "synthetic_marker_missing",
+      "error_detail": "Document processing failed: synthetic_marker_missing",
+      "retryable": false,
+      "langflow_job_id": "ed7bc128-1d05-449e-9147-8c73a36ee936",
+      "flow_id": "43837f6c-2535-49d4-ace9-4a6a310f93ef",
+      "flow_hash": "492fe18811670806c671c4c0528ced9c4b5fdf033f52127d6ebcd676ade86968",
+      "next_run_at": "2026-11-05T07:08:39.472272+00:00",
+      "created_at": "2026-11-05T07:08:37.480930+00:00"
+    },
+    "same_key_upload_and_retry_deduplicated": true,
+    "audit_event_counts": {
+      "intake_retry_requested": 1,
+      "intake_failed": 2,
+      "document_received": 1
+    },
+    "result": "failed as expected; unscored; same case/version; one manual retry generation"
+  },
+  "benchmark": {
+    "environment": {
+      "host_platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.43",
+      "host_machine": "x86_64",
+      "host_cpu_count": 4,
+      "docker_server_version": "29.4.2",
+      "docker_cpu_count": 4,
+      "docker_memory_bytes": 16759439360
+    },
+    "ai_configuration": {
+      "mode": "deterministic trusted rule flows; no AI/LLM nodes configured",
+      "actual_published_node_types": {
+        "Document Review Intake": [
+          "SyntheticDocumentParser",
+          "DeterministicPIIRedactor",
+          "ExplainableRiskScorer",
+          "ApprovalTaskGateway"
+        ],
+        "Document Review Decision": [
+          "DecisionReportExporter"
+        ]
+      },
+      "rule_only_no_llm_nodes": true,
+      "configuration_basis": "Actual authenticated published Flow graphs before execution",
+      "scorer_source_sha256": "7b964b7a7e23644442e550614b048913ca0c1290a17425a6aa2135e4aeaa6b2b",
+      "limitation": "Graph configuration and scorer source identity; not whole-system network egress attestation"
+    },
+    "strict": true,
+    "reports_requested": true,
+    "method": "Sequential exact1MiB TXT; mixed real queries inside Intake/report submitted-to-observed-terminal windows; at most5 query cycles per stage/sample; no post-load-only timing",
+    "samples": [
+      {
+        "index": 1,
+        "source_bytes": 1048576,
+        "source_sha256": "e544d00f15abf08bcfb05de1aa149b0e36f8e7b59b00e5cc98d3df9c507f042a",
+        "success": true,
+        "case_id": "RC-9ace253334734969b32ad389b4c7a115",
+        "job_id": "JB-13c061406fd241059287025d141e001a",
+        "upload_seconds": 0.018165922999969553,
+        "intake_seconds": 3.192994079000073,
+        "langflow_job_id": "fdd083c1-af5b-4a76-8037-13fd1522dd9a",
+        "report_ready_seconds": 2.3556304979999823,
+        "reports": [
+          {
+            "format": "json",
+            "sha256": "5b0e4509f5b721a81ef41c8e268ce5055fc65aaa6d2882606b69e8c7211fcd7b",
+            "bytes": 2610
+          },
+          {
+            "format": "html",
+            "sha256": "abb2c0cd349f930e5697d48babde1c18174f2f03c51d5a7e1ca4dfb64d6b8976",
+            "bytes": 6629
+          },
+          {
+            "format": "pdf",
+            "sha256": "4625297ec51aa6a4c8ce1d6b6aaaf0dc1e13a9d5c87d1dd819a6fb655b8338d9",
+            "bytes": 33722
+          }
+        ],
+        "report_langflow_job_id": "a91751ae-b690-4b44-bb04-4382fe719fd9",
+        "report_seconds": 2.3909751740000047
+      },
+      {
+        "index": 2,
+        "source_bytes": 1048576,
+        "source_sha256": "7c586120f91be8b6f62325d3d5a1bcdb370a4520fd611d0103102954b5a79e2b",
+        "success": true,
+        "case_id": "RC-33ecd25cd6af444091e270a1ed2cee32",
+        "job_id": "JB-533b705314a641798613e1e9d65c6a94",
+        "upload_seconds": 0.012773956000046383,
+        "intake_seconds": 2.1751590600000554,
+        "langflow_job_id": "6027cf6d-80ba-46aa-8513-23529a93e69e",
+        "report_ready_seconds": 2.3657636000000366,
+        "reports": [
+          {
+            "format": "json",
+            "sha256": "f211edd304e6219cdb2cac06acfd098a1c09e8e20ac60958fa4cf039e4c5ab6a",
+            "bytes": 2610
+          },
+          {
+            "format": "html",
+            "sha256": "964b2956159aaf1fe02124c80cb4983533fb2328f0dd1392280f2e5e6492a43c",
+            "bytes": 6629
+          },
+          {
+            "format": "pdf",
+            "sha256": "e15b343b5274fc9c194bbc8cf44070349e679809ac9e64978098f1559b837f54",
+            "bytes": 33722
+          }
+        ],
+        "report_langflow_job_id": "371c7421-6eed-4e83-b91b-6c95e4a3c1ea",
+        "report_seconds": 2.4010932880000837
+      },
+      {
+        "index": 3,
+        "source_bytes": 1048576,
+        "source_sha256": "c261997ba49be8a7d640523a59cfbf54e7500f9e25c628f7c61c94fa6e47f742",
+        "success": true,
+        "case_id": "RC-3ebb09ece53a4bbc9bd929cdf6a643e9",
+        "job_id": "JB-8564ec0079d041afa5ba8bc2bebff496",
+        "upload_seconds": 0.012779004999970311,
+        "intake_seconds": 2.2015495430000556,
+        "langflow_job_id": "541652d8-8f86-4a41-8ebe-a0c796e354d7",
+        "report_ready_seconds": 2.390212265999935,
+        "reports": [
+          {
+            "format": "json",
+            "sha256": "f87f501da065557f8afdf174e12d4d6dcd50ccef5f0ebc5d69015ba343683694",
+            "bytes": 2614
+          },
+          {
+            "format": "html",
+            "sha256": "8cbc31f8c17c177ef2d9839748f04c94da68bf2cb61046d9d9a2e82b177dfdcd",
+            "bytes": 6634
+          },
+          {
+            "format": "pdf",
+            "sha256": "3cc526d12fb40b3748be52c022d557608837d749f756461d5e7bf8d012d2679e",
+            "bytes": 33728
+          }
+        ],
+        "report_langflow_job_id": "f7b1bdcb-a7ed-46c8-ac6a-16a76b76e78e",
+        "report_seconds": 2.4257774379999546
+      },
+      {
+        "index": 4,
+        "source_bytes": 1048576,
+        "source_sha256": "0e6d050f2bb2ce2314c2fb2eee7333777bd5d79047c99bcacf6c0f81f403acad",
+        "success": true,
+        "case_id": "RC-2c14b7a1ee144e81ae20baefa3465904",
+        "job_id": "JB-d04a4f281c98404ab1d9cf8c9959e345",
+        "upload_seconds": 0.013718758999971215,
+        "intake_seconds": 2.223579778000044,
+        "langflow_job_id": "fb1a9f09-9082-47f6-98a1-c319f919f959",
+        "report_ready_seconds": 2.411153954999918,
+        "reports": [
+          {
+            "format": "json",
+            "sha256": "e0dbf8891beed9103e993b4cd7b05133e5765a079d779ac11d09598922487217",
+            "bytes": 2614
+          },
+          {
+            "format": "html",
+            "sha256": "0ef9feb08883b98b9af33dd8ccf622f5352abdd2c8e1ec1e0217055ba7250ec2",
+            "bytes": 6634
+          },
+          {
+            "format": "pdf",
+            "sha256": "15d2dbb82a09b5592356a772cfeb1eff033c8ebaa51f6b9ee3a284e6e933524d",
+            "bytes": 33724
+          }
+        ],
+        "report_langflow_job_id": "01aa5614-bd1e-4097-a11c-e2fb70e867dc",
+        "report_seconds": 2.446675826999922
+      },
+      {
+        "index": 5,
+        "source_bytes": 1048576,
+        "source_sha256": "567aba898112be3c24caff4c97ca30691d9a9e238a1a780b4dfdc0fc9aa827c6",
+        "success": true,
+        "case_id": "RC-c45ae48ef417472ca033c9ac06743d88",
+        "job_id": "JB-f13bd2027ac44e48b0977d3fef73a7c6",
+        "upload_seconds": 0.07258210800000597,
+        "intake_seconds": 2.3106497780000836,
+        "langflow_job_id": "f02b67f6-835d-4424-badd-192727b92839",
+        "report_ready_seconds": 2.4584691320000047,
+        "reports": [
+          {
+            "format": "json",
+            "sha256": "26feb9fce8640f9939a2b91f7cfece6898985815e1cca3d94ea1e421a8aeef82",
+            "bytes": 2614
+          },
+          {
+            "format": "html",
+            "sha256": "76203bcb86cae70a98173125c7029e35d6852d1ede16b980f45c20569c99c61d",
+            "bytes": 6634
+          },
+          {
+            "format": "pdf",
+            "sha256": "ecefd55577138c47e09f0681ef86cdb2ae9477f083eb469251a7dcde01b0324c",
+            "bytes": 33727
+          }
+        ],
+        "report_langflow_job_id": "3fc56035-115b-4354-b219-b9c08bd98c7b",
+        "report_seconds": 2.4944496880000315
+      },
+      {
+        "index": 6,
+        "source_bytes": 1048576,
+        "source_sha256": "3640bc0d8754e063172f77a03885307c31f3e709d6e8d6d0b32dc9601422c6a6",
+        "success": true,
+        "case_id": "RC-93270b1bd3da4e00b8ce67c561d3b699",
+        "job_id": "JB-7c7c10991cbd4425a958f72001583053",
+        "upload_seconds": 0.0134872160000441,
+        "intake_seconds": 2.29054373200006,
+        "langflow_job_id": "13bd4206-0aca-4e64-8e1f-4ec06bc18c9a",
+        "report_ready_seconds": 2.477423685999952,
+        "reports": [
+          {
+            "format": "json",
+            "sha256": "c83d6dc247f8f5842670f660bbfc92260c9ba59d9d24d7a9d19bdc059af998c2",
+            "bytes": 2614
+          },
+          {
+            "format": "html",
+            "sha256": "a2deb3d2f683621a9d158af7e6604c599e719e4acec59f160625410dceec42a0",
+            "bytes": 6634
+          },
+          {
+            "format": "pdf",
+            "sha256": "fb8d5bad567d550eb506a64d676ca26cf65c68262e9c41ba670ed74b94bc81df",
+            "bytes": 33721
+          }
+        ],
+        "report_langflow_job_id": "04133907-80e3-48ff-8c1e-758a1895145d",
+        "report_seconds": 2.513244714999928
+      },
+      {
+        "index": 7,
+        "source_bytes": 1048576,
+        "source_sha256": "ba46e3d2341105fb44d1e835ca3de772e4410599c3d618211f93bf62ae30c2e1",
+        "success": true,
+        "case_id": "RC-78e3a976aa80428eacaee1ca3073d1c9",
+        "job_id": "JB-b0b66eafbc3f424992172875e66f5fad",
+        "upload_seconds": 0.013373654000019997,
+        "intake_seconds": 2.300434541999948,
+        "langflow_job_id": "d8a2316a-029b-4fa7-90cc-88e84feeee64",
+        "report_ready_seconds": 2.5084994090000237,
+        "reports": [
+          {
+            "format": "json",
+            "sha256": "40c70e31af4a549c9459f1cf8b8d5e1c8dfe542a462e0077c5185f1d0804851c",
+            "bytes": 2614
+          },
+          {
+            "format": "html",
+            "sha256": "e8572a71cee08e720448de1f55bf689c33a71ff5c1518b3daba19dd68e5ee52f",
+            "bytes": 6634
+          },
+          {
+            "format": "pdf",
+            "sha256": "bd9a29e52f86850bf2272c11ea4e85aa05af476ff9fc8ff32f39642b583709e7",
+            "bytes": 33727
+          }
+        ],
+        "report_langflow_job_id": "4aec0954-fb37-441f-808b-422ac00745d2",
+        "report_seconds": 2.5448724440000206
+      },
+      {
+        "index": 8,
+        "source_bytes": 1048576,
+        "source_sha256": "bc787b70e0899ad948a1b33b6d152ea646d246426c0f83ecd70b91f6c3d90b38",
+        "success": true,
+        "case_id": "RC-b2284f7c9c3f44468fd39474aca30827",
+        "job_id": "JB-9d9bfe27bc6542e2a7c2096900259ce1",
+        "upload_seconds": 0.03827589499996975,
+        "intake_seconds": 2.357525997000039,
+        "langflow_job_id": "6d530b2c-e9e1-4f45-9ff5-09087bf569dc",
+        "report_ready_seconds": 2.659221056999968,
+        "reports": [
+          {
+            "format": "json",
+            "sha256": "d1d3fe0f25054a5deb6466caf6681d62abd22655856f45aab752dc1d78f418d8",
+            "bytes": 2614
+          },
+          {
+            "format": "html",
+            "sha256": "f3eb6d76eabb1669033ced4c962093b814bf091a8a739e1cee12e4bafd80a12c",
+            "bytes": 6634
+          },
+          {
+            "format": "pdf",
+            "sha256": "c30d893805a7eb0097050e713aa961af84fad43728df296721a0ce14a6019d81",
+            "bytes": 33729
+          }
+        ],
+        "report_langflow_job_id": "1ecc220a-cfee-4801-8338-8bfa4bc342ab",
+        "report_seconds": 2.6956036369999765
+      },
+      {
+        "index": 9,
+        "source_bytes": 1048576,
+        "source_sha256": "7b4c19c01c5d240abc98408bb054b9616c802075f40c77cb612a367a3467a0e8",
+        "success": true,
+        "case_id": "RC-dbb713269c84404eb1d1f978ef7eb43d",
+        "job_id": "JB-13ff08a8dc174e068a1e14d3c8df0b5a",
+        "upload_seconds": 0.02423472300006324,
+        "intake_seconds": 2.3659134980000545,
+        "langflow_job_id": "7b4c6e31-41a9-41ed-80d5-bc22fe16b52f",
+        "report_ready_seconds": 2.5551419070000065,
+        "reports": [
+          {
+            "format": "json",
+            "sha256": "21772e01af3f668480567ff3051b1defdbfa7504aac6f383641d5232e17b1649",
+            "bytes": 2614
+          },
+          {
+            "format": "html",
+            "sha256": "ed5efd4b74c4f7352714a982088ec75371cb5ecce41764a84686cb3663eaa42d",
+            "bytes": 6634
+          },
+          {
+            "format": "pdf",
+            "sha256": "10aad3c29465d0a428e46307f3bdfe4adcb706b192775951bd440ab7b8f28b3d",
+            "bytes": 33724
+          }
+        ],
+        "report_langflow_job_id": "42496015-5934-4bbd-99b4-d51f7a5ae6d6",
+        "report_seconds": 2.590789717000007
+      },
+      {
+        "index": 10,
+        "source_bytes": 1048576,
+        "source_sha256": "ccf4c108b62b4cdeafde29eda11701b22f8330d0a6c9e7f69de1167e7a2ec7e1",
+        "success": true,
+        "case_id": "RC-1650fa58ca56449f928037ea3f89077c",
+        "job_id": "JB-16efc1261ed54873a403e51d10c272e0",
+        "upload_seconds": 0.01368663200003084,
+        "intake_seconds": 1.3337931020000724,
+        "langflow_job_id": "22d21fc8-a8f8-4e21-bb4c-276a0a395c3d",
+        "report_ready_seconds": 0.271395407,
+        "reports": [
+          {
+            "format": "json",
+            "sha256": "0c14624e289e16374dc45a6680070a23cb7073c1c702c82e60dcce87e9992d0e",
+            "bytes": 2615
+          },
+          {
+            "format": "html",
+            "sha256": "f43f5f8cb26c27936e9f4ea8b1381e4b909203cb05c73600b4865cba9a48d3b0",
+            "bytes": 6636
+          },
+          {
+            "format": "pdf",
+            "sha256": "afcd3e3ccb519377875cfaff466ce2bcc103d3e115a08902bb24cd1769a0c3a6",
+            "bytes": 33722
+          }
+        ],
+        "report_langflow_job_id": "96d116ce-b93c-4165-a6d7-2740632b01ab",
+        "report_seconds": 0.3098418260000244
+      },
+      {
+        "index": 11,
+        "source_bytes": 1048576,
+        "source_sha256": "81eb0eb38602af865fdfc48eee3f200ea2c08a880f4524293d5ec3a1af839769",
+        "success": true,
+        "case_id": "RC-ce4cbfbe54a049b5b08296be61f14618",
+        "job_id": "JB-83b1c2a223f545698d7afbb52f6a277c",
+        "upload_seconds": 0.014918693000026906,
+        "intake_seconds": 2.4792737120000083,
+        "langflow_job_id": "67604cc0-80f5-44e0-881a-e2e2271c6bc0",
+        "report_ready_seconds": 2.600524125999982,
+        "reports": [
+          {
+            "format": "json",
+            "sha256": "d4cbe9a6bbb1468ea90bed8d576bcaa7f97fb8d740b19d41a12669c12143b900",
+            "bytes": 2615
+          },
+          {
+            "format": "html",
+            "sha256": "1e60e25bbd720c73ebb1b6e56eab55dcbe7f355de2b72b313d6e8c5be53e9c0d",
+            "bytes": 6636
+          },
+          {
+            "format": "pdf",
+            "sha256": "b0862c9a639b91806b7a967b29df8bee1269747343e7726bd8abf2c28579be26",
+            "bytes": 33721
+          }
+        ],
+        "report_langflow_job_id": "dd38d552-0276-49ff-8f21-fd6984e6c933",
+        "report_seconds": 2.6401426569999558
+      },
+      {
+        "index": 12,
+        "source_bytes": 1048576,
+        "source_sha256": "94f8746e16853ecf8070075e9f928bf645a6def629d72fac95e3495d13d12c56",
+        "success": true,
+        "case_id": "RC-21e3aea61cfc4d82a457d2e437706f93",
+        "job_id": "JB-00d1764e32e94f4cb5acc8850f1d3bd0",
+        "upload_seconds": 0.014523605000022144,
+        "intake_seconds": 2.423443468000073,
+        "langflow_job_id": "02e3ee0a-39a6-4034-9fab-a0113281326c",
+        "report_ready_seconds": 2.7143876110000065,
+        "reports": [
+          {
+            "format": "json",
+            "sha256": "211f8ff5ae2afead706c44c369e72e0ba7338098b54f8a9309112e20a73299ca",
+            "bytes": 2615
+          },
+          {
+            "format": "html",
+            "sha256": "a7b0964f43f4a24a709838f5e616c7145e5514334ef3d01de0bbbf1d14e0eb4f",
+            "bytes": 6636
+          },
+          {
+            "format": "pdf",
+            "sha256": "d0bd22b74989e8e808cf70d8062ae9b4c3187b70271dc63d873a0454a0d51aa7",
+            "bytes": 33726
+          }
+        ],
+        "report_langflow_job_id": "efe3e15c-9c50-4cbd-a14d-e85251a9bdb4",
+        "report_seconds": 2.7512189860000262
+      },
+      {
+        "index": 13,
+        "source_bytes": 1048576,
+        "source_sha256": "1d8ebc44d1607e4219a6cd4134e93745010361660f8051563823950f3e6f564e",
+        "success": true,
+        "case_id": "RC-a177eb7d23ac4cad8d074aad5e48283e",
+        "job_id": "JB-85eb9fd414f24320bf5b5ec72779e52e",
+        "upload_seconds": 0.014325816999985364,
+        "intake_seconds": 1.363863662999961,
+        "langflow_job_id": "0774c703-1fc1-4ccd-864e-21b425bafb3f",
+        "report_ready_seconds": 2.643287741999984,
+        "reports": [
+          {
+            "format": "json",
+            "sha256": "9710219c8bc83d379ad52049605266e1253e4015b0f2684f5ed484bec7eda3c4",
+            "bytes": 2615
+          },
+          {
+            "format": "html",
+            "sha256": "134282ef49fa868b2724d1a8c8c70a7f8b3da1d099ac318721aae0747c2af716",
+            "bytes": 6636
+          },
+          {
+            "format": "pdf",
+            "sha256": "dbacc237f1a982adc00e3bef89da88636c6af6c2250a9ed7ca6b747731742ed8",
+            "bytes": 33721
+          }
+        ],
+        "report_langflow_job_id": "dadb0185-cb43-42dc-a07a-e43a34f091d0",
+        "report_seconds": 2.678471585000011
+      },
+      {
+        "index": 14,
+        "source_bytes": 1048576,
+        "source_sha256": "463294ca30166324ab414c99f85d4bbbe9c0ce2e3bf88a228eb4d6234c5a94d6",
+        "success": true,
+        "case_id": "RC-854490b299e7438aa652e0724145d754",
+        "job_id": "JB-9b2e6bf1569e40c6ae5a01eaaabbfde6",
+        "upload_seconds": 0.014761666000026707,
+        "intake_seconds": 2.4852786139999807,
+        "langflow_job_id": "916d8900-dcdb-4fb0-91bd-d11114b9ca1e",
+        "report_ready_seconds": 2.6784914209999897,
+        "reports": [
+          {
+            "format": "json",
+            "sha256": "2fc97316f49db50b336c956d69cd5f2b35fa31ba0f8f1a9393a23e6b809f04a1",
+            "bytes": 2615
+          },
+          {
+            "format": "pdf",
+            "sha256": "a07346d3b1491b36b8c15a7b240d40e5bc8fb4418df4a8b44d8fd15311804739",
+            "bytes": 33724
+          },
+          {
+            "format": "html",
+            "sha256": "34ca3de6d5fd77ffe7bbeb17a85d314d3c2499b916465a6940381f13c4114c1c",
+            "bytes": 6636
+          }
+        ],
+        "report_langflow_job_id": "8e55b951-5336-4051-ac71-68b5e203e0e0",
+        "report_seconds": 2.7142149170000494
+      },
+      {
+        "index": 15,
+        "source_bytes": 1048576,
+        "source_sha256": "4c186cb7577ec0865820da7caefca570648605823560ad26e3429aae35a1b718",
+        "success": true,
+        "case_id": "RC-d9eb54ca50aa474ba82df5d5ac765a1b",
+        "job_id": "JB-316e18918c5c40918c77168ea05a5731",
+        "upload_seconds": 0.014378560000068319,
+        "intake_seconds": 2.5788520380000364,
+        "langflow_job_id": "ddda0923-5de3-453e-ad57-a7908bbe2875",
+        "report_ready_seconds": 1.507706503999998,
+        "reports": [
+          {
+            "format": "json",
+            "sha256": "a323967d4d8d1f8dd346d298247c14a7bc97b569fc37418f8c5b482a23ca0b9b",
+            "bytes": 2615
+          },
+          {
+            "format": "html",
+            "sha256": "584045fe3c5682766b31c11ce69c7b8eaccea5e93f35092ab5cc7ded054fc76f",
+            "bytes": 6636
+          },
+          {
+            "format": "pdf",
+            "sha256": "fb00cda76f81f03355375591d6489f0c3fd4bd1115c185eb977ecc227cf3a051",
+            "bytes": 33718
+          }
+        ],
+        "report_langflow_job_id": "b04c5fad-5f50-45af-848b-820a99428ae8",
+        "report_seconds": 1.5443436089999523
+      },
+      {
+        "index": 16,
+        "source_bytes": 1048576,
+        "source_sha256": "0564590c6f48acce76423c9fbe5fc6085a0be3775455424f610de726e82b7edb",
+        "success": true,
+        "case_id": "RC-3fc5b7a615cd4bc0b84e39c7b9e4d1d5",
+        "job_id": "JB-7f4e91d747e04515bb9b8795a1b09423",
+        "upload_seconds": 0.014869455000052767,
+        "intake_seconds": 2.5243270239999447,
+        "langflow_job_id": "e0e10238-71da-48ea-b1b7-76435c551f1f",
+        "report_ready_seconds": 2.71989032700003,
+        "reports": [
+          {
+            "format": "json",
+            "sha256": "b67e397888d3479515ef4d24cae515eec2695d8867a17215e67fcb12ce881683",
+            "bytes": 2615
+          },
+          {
+            "format": "html",
+            "sha256": "c0b113284295f960e228d261823407674b3630b6c6eeae55269f42da2439b552",
+            "bytes": 6636
+          },
+          {
+            "format": "pdf",
+            "sha256": "e1a2826b32ea0c07cb79c55ab8b2696362e91716a0d048a4eebeba5c0779a96b",
+            "bytes": 33727
+          }
+        ],
+        "report_langflow_job_id": "45964148-49ca-4267-91ad-055f372c8f71",
+        "report_seconds": 2.755090884000083
+      },
+      {
+        "index": 17,
+        "source_bytes": 1048576,
+        "source_sha256": "b3ba23b55878dce8c3b15ad3abe5e7b929f1b81c3cf1ceafb8d3bbc52c65b218",
+        "success": true,
+        "case_id": "RC-8313cef6d9ba448da94cfd78d55ae9a3",
+        "job_id": "JB-1740559f3e214d758b833e4422cb113f",
+        "upload_seconds": 0.014803392999965581,
+        "intake_seconds": 1.399352576999945,
+        "langflow_job_id": "3fce9959-2e5c-43c7-860f-ec3f7262d435",
+        "report_ready_seconds": 2.7327706899999384,
+        "reports": [
+          {
+            "format": "json",
+            "sha256": "683dd01a05e8c9382fd01540686a77893d0b3b18c55bb23ed18220cd569aefe9",
+            "bytes": 2615
+          },
+          {
+            "format": "html",
+            "sha256": "9294bbda8b0309a91131e7dc4a84c9d967c96f1922d743936b9bbb0f976e3821",
+            "bytes": 6636
+          },
+          {
+            "format": "pdf",
+            "sha256": "3359aa43178a5b5803103784fdab65a253c198447d1163ec5e3b4f2bf92b1d68",
+            "bytes": 33723
+          }
+        ],
+        "report_langflow_job_id": "8523aa89-50ce-44e8-aea3-4870101fc63d",
+        "report_seconds": 2.7714516429999776
+      },
+      {
+        "index": 18,
+        "source_bytes": 1048576,
+        "source_sha256": "55448267384f622d2c9941b665196f30d966f1e701b8edff213c4579aa80eb82",
+        "success": true,
+        "case_id": "RC-416c8cf431574a30965d3c87eb30d843",
+        "job_id": "JB-25c54c860ff649889abb706ae36a0d4a",
+        "upload_seconds": 0.015848483000013402,
+        "intake_seconds": 2.5650526770000397,
+        "langflow_job_id": "2210ab8c-d9f5-47d1-85be-2407f8966182",
+        "report_ready_seconds": 2.8021230780000224,
+        "reports": [
+          {
+            "format": "json",
+            "sha256": "cf4f5f1d0ff0b8b30e3f414cc2eeba46ed3bd7d858ad88f3210086f551df48a9",
+            "bytes": 2615
+          },
+          {
+            "format": "html",
+            "sha256": "3954217457ae57e8f2519aadc2460c342ee77e8577eda03621b7bcba6322e6a5",
+            "bytes": 6636
+          },
+          {
+            "format": "pdf",
+            "sha256": "aaa49e6d50ca9ed019fab0d4f651c13d2e4ae840ff5d1bb63363c9c9c53a4492",
+            "bytes": 33724
+          }
+        ],
+        "report_langflow_job_id": "f45f6031-6baa-4be6-aeaa-3f15fca5d903",
+        "report_seconds": 2.8416892580000876
+      },
+      {
+        "index": 19,
+        "source_bytes": 1048576,
+        "source_sha256": "70e6dc7baaba44b745fd735062a7abb891ec04bbd6deeb432b529b2d4df54ed8",
+        "success": true,
+        "case_id": "RC-ba2685c279f244beac142929a62dc447",
+        "job_id": "JB-b2b72f7453094b7aa55f5e224a140077",
+        "upload_seconds": 0.015979195999989315,
+        "intake_seconds": 1.4273882999999614,
+        "langflow_job_id": "c8f268f1-5a12-4497-a2aa-36e105d873a0",
+        "report_ready_seconds": 2.7935406660000126,
+        "reports": [
+          {
+            "format": "json",
+            "sha256": "2cb33f7db46633d331f5422207a67a65e35b8939a7c8dc2f914a62a79b87860e",
+            "bytes": 2615
+          },
+          {
+            "format": "html",
+            "sha256": "6ba909c406ceb0849a6178f68e8c8ee88e93aa6c0497dba9a93f8efd896802e5",
+            "bytes": 6636
+          },
+          {
+            "format": "pdf",
+            "sha256": "5a0286352f7b7037461c918a5076efeed61609ae2ad61505937dadec62a6d11f",
+            "bytes": 33724
+          }
+        ],
+        "report_langflow_job_id": "d335aacb-fe75-4425-9dca-2214ffbc31a0",
+        "report_seconds": 2.8313591419999966
+      },
+      {
+        "index": 20,
+        "source_bytes": 1048576,
+        "source_sha256": "523d625ab3705bfcaf16eb605230a6f4dc2a8f97263ef97bfaa857a70b4711f8",
+        "success": true,
+        "case_id": "RC-20b991e4fb0946a796d8f69b73c6e493",
+        "job_id": "JB-275d8d5c39944442b3ffda0093d3eb3d",
+        "upload_seconds": 0.015101263000019571,
+        "intake_seconds": 1.5012053670000114,
+        "langflow_job_id": "fb980028-c989-4da5-a7a0-7dd65cb0625b",
+        "report_ready_seconds": 0.3412346829999251,
+        "reports": [
+          {
+            "format": "json",
+            "sha256": "ed506ae6f70a4fd0089387a470c0fe75bec23d06e0ea129f3de94baa590159c6",
+            "bytes": 2615
+          },
+          {
+            "format": "html",
+            "sha256": "d79be154745c7ceef3a36ba5cad707ccb89369592c21e649df2a3081aa5789a2",
+            "bytes": 6636
+          },
+          {
+            "format": "pdf",
+            "sha256": "7759daf3c0566764780e3bb8266b782c827b96dca705ae5d9489eddad9f478dd",
+            "bytes": 33716
+          }
+        ],
+        "report_langflow_job_id": "94bfeb0e-89c4-4d9a-b83d-941c918b3831",
+        "report_seconds": 0.3768737619999456
+      }
+    ],
+    "query_samples": [
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 1,
+        "seconds": 0.004335746000037943,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 1,
+        "seconds": 0.003698438000014903,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 1,
+        "seconds": 0.004683825000029174,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 1,
+        "seconds": 0.004394732000037038,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 1,
+        "seconds": 0.0027913719999332898,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 1,
+        "seconds": 0.012930092000033255,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 1,
+        "seconds": 0.006337640000083411,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 1,
+        "seconds": 0.003928057999928569,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 1,
+        "seconds": 0.007474410999975589,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 1,
+        "seconds": 0.012177350000001752,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 1,
+        "seconds": 0.01138046400001258,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 1,
+        "seconds": 0.04097575000002962,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 1,
+        "seconds": 0.011605004999978519,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 1,
+        "seconds": 0.011297080999952414,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 1,
+        "seconds": 0.03278422599998976,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 1,
+        "seconds": 0.011728907999895455,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 1,
+        "seconds": 0.010338985999965189,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 1,
+        "seconds": 0.030026604999989104,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 1,
+        "seconds": 0.012776024000004327,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 1,
+        "seconds": 0.010364722999952392,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 1,
+        "seconds": 0.034516614000040136,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 2,
+        "seconds": 0.012123654999982136,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 2,
+        "seconds": 0.01025986499996634,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 2,
+        "seconds": 0.0056061129999989134,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 2,
+        "seconds": 0.0114600539999401,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 2,
+        "seconds": 0.010267081000051803,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 2,
+        "seconds": 0.005281985000010536,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 2,
+        "seconds": 0.015066822999983742,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 2,
+        "seconds": 0.013773536000030617,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 2,
+        "seconds": 0.030173193999985415,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 2,
+        "seconds": 0.018121403000009195,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 2,
+        "seconds": 0.014439509999988331,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 2,
+        "seconds": 0.028546852999966177,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 2,
+        "seconds": 0.014756547999922986,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 2,
+        "seconds": 0.01358661899996605,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 2,
+        "seconds": 0.028429735000031542,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 2,
+        "seconds": 0.015387831999987611,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 2,
+        "seconds": 0.015800217999981214,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 2,
+        "seconds": 0.02892492700004823,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 3,
+        "seconds": 0.014337769999997363,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 3,
+        "seconds": 0.01401015000010375,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 3,
+        "seconds": 0.005365254000025743,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 3,
+        "seconds": 0.014933509999991657,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 3,
+        "seconds": 0.013743184999952973,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 3,
+        "seconds": 0.005259759000068698,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 3,
+        "seconds": 0.02008773200009273,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 3,
+        "seconds": 0.018572226000060255,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 3,
+        "seconds": 0.032468497999957435,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 3,
+        "seconds": 0.019236197999930482,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 3,
+        "seconds": 0.018376176999936433,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 3,
+        "seconds": 0.03478381200000058,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 3,
+        "seconds": 0.01952424900002825,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 3,
+        "seconds": 0.017246451000005436,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 3,
+        "seconds": 0.029118353999933788,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 3,
+        "seconds": 0.019002051000029496,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 3,
+        "seconds": 0.017595001000017874,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 3,
+        "seconds": 0.02974227599997903,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 4,
+        "seconds": 0.01803579299996727,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 4,
+        "seconds": 0.0184237270000267,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 4,
+        "seconds": 0.0057421669999939695,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 4,
+        "seconds": 0.018447086000037416,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 4,
+        "seconds": 0.018155249999949774,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 4,
+        "seconds": 0.005456835000018145,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 4,
+        "seconds": 0.023567954999975882,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 4,
+        "seconds": 0.022140172999911556,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 4,
+        "seconds": 0.030638962000011816,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 4,
+        "seconds": 0.021776335000026847,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 4,
+        "seconds": 0.020929813000066133,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 4,
+        "seconds": 0.02890556900001684,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 4,
+        "seconds": 0.023181401999977425,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 4,
+        "seconds": 0.02174659000002066,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 4,
+        "seconds": 0.03013203099999373,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 4,
+        "seconds": 0.023285025000063797,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 4,
+        "seconds": 0.025094976999980645,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 4,
+        "seconds": 0.030284215999927255,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 5,
+        "seconds": 0.02140529600001173,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 5,
+        "seconds": 0.022227236000048833,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 5,
+        "seconds": 0.006009858000084023,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 5,
+        "seconds": 0.022877693000054933,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 5,
+        "seconds": 0.023071885000035763,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 5,
+        "seconds": 0.005265622999900188,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 5,
+        "seconds": 0.026827747999959684,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 5,
+        "seconds": 0.026442359999919063,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 5,
+        "seconds": 0.03237399700003607,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 5,
+        "seconds": 0.027007980999997017,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 5,
+        "seconds": 0.0245722490000162,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 5,
+        "seconds": 0.02912831699995877,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 5,
+        "seconds": 0.03069774799996594,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 5,
+        "seconds": 0.026319793999959984,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 5,
+        "seconds": 0.031432413999937125,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 5,
+        "seconds": 0.025926440999910483,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 5,
+        "seconds": 0.02646531900006721,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 5,
+        "seconds": 0.029459265999889794,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 6,
+        "seconds": 0.025244963999966785,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 6,
+        "seconds": 0.025394464999976663,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 6,
+        "seconds": 0.005515937000041049,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 6,
+        "seconds": 0.03189966499996899,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 6,
+        "seconds": 0.02941143500004273,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 6,
+        "seconds": 0.006011435000004894,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 6,
+        "seconds": 0.037514548999979525,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 6,
+        "seconds": 0.03223492199992961,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 6,
+        "seconds": 0.032095180000055734,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 6,
+        "seconds": 0.033688030999996954,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 6,
+        "seconds": 0.031209135000040078,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 6,
+        "seconds": 0.03063025899996319,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 6,
+        "seconds": 0.03388249800002541,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 6,
+        "seconds": 0.030005074999962744,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 6,
+        "seconds": 0.030351927999959116,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 6,
+        "seconds": 0.03369711400000597,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 6,
+        "seconds": 0.03323703300009129,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 6,
+        "seconds": 0.03076899399991362,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 7,
+        "seconds": 0.031935559999965335,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 7,
+        "seconds": 0.031906066000033206,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 7,
+        "seconds": 0.005340651999972579,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 7,
+        "seconds": 0.03073468899992804,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 7,
+        "seconds": 0.029718868000031762,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 7,
+        "seconds": 0.005182016000048861,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 7,
+        "seconds": 0.03636238500007494,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 7,
+        "seconds": 0.034265840999978536,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 7,
+        "seconds": 0.03154379000000063,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 7,
+        "seconds": 0.03567807299998549,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 7,
+        "seconds": 0.033799595000004956,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 7,
+        "seconds": 0.029455442000084986,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 7,
+        "seconds": 0.03602202199999738,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 7,
+        "seconds": 0.043458121000071515,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 7,
+        "seconds": 0.0374622570000156,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 7,
+        "seconds": 0.03508453599999939,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 7,
+        "seconds": 0.03409273900001608,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 7,
+        "seconds": 0.03137844600007611,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 8,
+        "seconds": 0.0359534800001029,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 8,
+        "seconds": 0.03480921899995337,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 8,
+        "seconds": 0.005465942000000723,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 8,
+        "seconds": 0.03711687099996652,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 8,
+        "seconds": 0.03399395300004926,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 8,
+        "seconds": 0.005463757999905283,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 8,
+        "seconds": 0.04251787599991985,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 8,
+        "seconds": 0.039685332999965794,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 8,
+        "seconds": 0.03335084200000438,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 8,
+        "seconds": 0.040906698999947366,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 8,
+        "seconds": 0.04263850500001354,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 8,
+        "seconds": 0.030859277999979895,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 8,
+        "seconds": 0.038833868999972765,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 8,
+        "seconds": 0.03763160699998025,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 8,
+        "seconds": 0.032002087000023494,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 8,
+        "seconds": 0.039130602999989605,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 8,
+        "seconds": 0.03777986099998998,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 8,
+        "seconds": 0.03038874199990005,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 9,
+        "seconds": 0.0403376130000197,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 9,
+        "seconds": 0.04009548499993798,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 9,
+        "seconds": 0.0056244359999482185,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 9,
+        "seconds": 0.0404776560000073,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 9,
+        "seconds": 0.038122932000078436,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 9,
+        "seconds": 0.005861592000087512,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 9,
+        "seconds": 0.04501444699997137,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 9,
+        "seconds": 0.04443809600002169,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 9,
+        "seconds": 0.03208840499996768,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 9,
+        "seconds": 0.04522706199998083,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 9,
+        "seconds": 0.04423861999998735,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 9,
+        "seconds": 0.029688017000012223,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 9,
+        "seconds": 0.05497593500001585,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 9,
+        "seconds": 0.04175308900005348,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 9,
+        "seconds": 0.029671191000034014,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 9,
+        "seconds": 0.042463730999998006,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 9,
+        "seconds": 0.042150097000103415,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 9,
+        "seconds": 0.0363952050000762,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 10,
+        "seconds": 0.04631281299998591,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 10,
+        "seconds": 0.04415312899993751,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 10,
+        "seconds": 0.0054489890000013474,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 10,
+        "seconds": 0.08223719800002982,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 10,
+        "seconds": 0.053815493999991304,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 10,
+        "seconds": 0.0360923629999661,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 10,
+        "seconds": 0.05431041099996037,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 10,
+        "seconds": 0.05395421399998668,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 10,
+        "seconds": 0.035346217999972396,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 11,
+        "seconds": 0.11042585199993482,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 11,
+        "seconds": 0.04733888599992042,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 11,
+        "seconds": 0.005495207000080882,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 11,
+        "seconds": 0.04758590599999479,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 11,
+        "seconds": 0.04224912300003325,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 11,
+        "seconds": 0.005258311000034155,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 11,
+        "seconds": 0.05452408700000433,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 11,
+        "seconds": 0.06074934800005849,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 11,
+        "seconds": 0.03565994400003092,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 11,
+        "seconds": 0.05509990899997774,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 11,
+        "seconds": 0.04640168499997799,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 11,
+        "seconds": 0.030575894999969933,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 11,
+        "seconds": 0.05661064299999907,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 11,
+        "seconds": 0.04622918400002618,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 11,
+        "seconds": 0.032794410000065,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 11,
+        "seconds": 0.053052094000008765,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 11,
+        "seconds": 0.047573143000022355,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 11,
+        "seconds": 0.03268523899998854,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 12,
+        "seconds": 0.0574718700000858,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 12,
+        "seconds": 0.04232029600007081,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 12,
+        "seconds": 0.005279927000060525,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 12,
+        "seconds": 0.05146865299991532,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 12,
+        "seconds": 0.048722892000000684,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 12,
+        "seconds": 0.005479777000005015,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 12,
+        "seconds": 0.06078696700001274,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 12,
+        "seconds": 0.049406137999994826,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 12,
+        "seconds": 0.03622985500010145,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 12,
+        "seconds": 0.07252968399996007,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 12,
+        "seconds": 0.060995138999942355,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 12,
+        "seconds": 0.038544648000083725,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 12,
+        "seconds": 0.05882317700002204,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 12,
+        "seconds": 0.04948898099996768,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 12,
+        "seconds": 0.030124286999921424,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 12,
+        "seconds": 0.06101992699996117,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 12,
+        "seconds": 0.05168973000002097,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 12,
+        "seconds": 0.037124133000020265,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 13,
+        "seconds": 0.058192384999983915,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 13,
+        "seconds": 0.05502302799993686,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 13,
+        "seconds": 0.005614241999978731,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 13,
+        "seconds": 0.06781404700006988,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 13,
+        "seconds": 0.07331171999999242,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 13,
+        "seconds": 0.03709294600002977,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 13,
+        "seconds": 0.06246390599994811,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 13,
+        "seconds": 0.06201094599998669,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 13,
+        "seconds": 0.028763471000047502,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 13,
+        "seconds": 0.060504570999910356,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 13,
+        "seconds": 0.05943949599998177,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 13,
+        "seconds": 0.02997762400002557,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 13,
+        "seconds": 0.06023135700002058,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 13,
+        "seconds": 0.059890713999948275,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 13,
+        "seconds": 0.031014927999990505,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 14,
+        "seconds": 0.059898995000025934,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 14,
+        "seconds": 0.06114304000004722,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 14,
+        "seconds": 0.005491174999974646,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 14,
+        "seconds": 0.060440511000024344,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 14,
+        "seconds": 0.06344373699994321,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 14,
+        "seconds": 0.0054516970000122456,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 14,
+        "seconds": 0.06505823499992403,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 14,
+        "seconds": 0.06265632300005564,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 14,
+        "seconds": 0.03265945000009651,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 14,
+        "seconds": 0.06393302999993011,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 14,
+        "seconds": 0.06294677699997919,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 14,
+        "seconds": 0.02950870200004374,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 14,
+        "seconds": 0.07081995900000493,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 14,
+        "seconds": 0.06675191399995128,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 14,
+        "seconds": 0.03214261499999793,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 14,
+        "seconds": 0.06113287499999842,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 14,
+        "seconds": 0.062286601999971936,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 14,
+        "seconds": 0.034685969999941335,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 15,
+        "seconds": 0.06351707499993609,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 15,
+        "seconds": 0.06884831899992605,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 15,
+        "seconds": 0.005513006000001042,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 15,
+        "seconds": 0.07314357599989307,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 15,
+        "seconds": 0.12184420099993076,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 15,
+        "seconds": 0.009510136000017155,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 15,
+        "seconds": 0.06906205100005991,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 15,
+        "seconds": 0.06925610899997992,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 15,
+        "seconds": 0.03311881800004812,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 15,
+        "seconds": 0.08426600500001769,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 15,
+        "seconds": 0.07070800000008148,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 15,
+        "seconds": 0.030613969000000907,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 15,
+        "seconds": 0.06768940799997836,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 15,
+        "seconds": 0.07018189099994743,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 15,
+        "seconds": 0.031577078000054826,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 16,
+        "seconds": 0.06939790799992807,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 16,
+        "seconds": 0.06791609700007939,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 16,
+        "seconds": 0.005455467000047065,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 16,
+        "seconds": 0.0669801929999494,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 16,
+        "seconds": 0.06609504900006868,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 16,
+        "seconds": 0.005640729999981886,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 16,
+        "seconds": 0.07273889699990832,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 16,
+        "seconds": 0.07174006100001407,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 16,
+        "seconds": 0.03276869500007251,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 16,
+        "seconds": 0.07113747899995815,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 16,
+        "seconds": 0.06972270400001435,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 16,
+        "seconds": 0.032127061999972284,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 16,
+        "seconds": 0.0765219459999571,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 16,
+        "seconds": 0.07082514900002934,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 16,
+        "seconds": 0.028907591000006505,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 16,
+        "seconds": 0.07172154399995634,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 16,
+        "seconds": 0.06951866800000062,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 16,
+        "seconds": 0.03517652100003943,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 17,
+        "seconds": 0.07028104100004384,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 17,
+        "seconds": 0.0699390490000269,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 17,
+        "seconds": 0.005301293000002261,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 17,
+        "seconds": 0.08265709900001639,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 17,
+        "seconds": 0.07884954999997262,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 17,
+        "seconds": 0.03160244100001819,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 17,
+        "seconds": 0.07283226800007014,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 17,
+        "seconds": 0.0738276350000433,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 17,
+        "seconds": 0.0287868929999604,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 17,
+        "seconds": 0.07979257900001357,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 17,
+        "seconds": 0.0771269230000371,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 17,
+        "seconds": 0.028495248000012907,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 17,
+        "seconds": 0.07894906199999241,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 17,
+        "seconds": 0.07599825399995552,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 17,
+        "seconds": 0.030024792999938654,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 18,
+        "seconds": 0.07491640400007782,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 18,
+        "seconds": 0.07325807799998074,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 18,
+        "seconds": 0.005741158999967411,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 18,
+        "seconds": 0.07680917799996223,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 18,
+        "seconds": 0.07285280799999327,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 18,
+        "seconds": 0.005743772999949215,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 18,
+        "seconds": 0.0816251490000468,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 18,
+        "seconds": 0.0787104129999534,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 18,
+        "seconds": 0.030982278999999835,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 18,
+        "seconds": 0.07860979999998108,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 18,
+        "seconds": 0.07771749100004399,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 18,
+        "seconds": 0.02999270600003001,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 18,
+        "seconds": 0.08383892899996681,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 18,
+        "seconds": 0.08316767700000582,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 18,
+        "seconds": 0.036281833999964874,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 18,
+        "seconds": 0.08136399500006064,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 18,
+        "seconds": 0.08161857600009625,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 18,
+        "seconds": 0.03795069099999182,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 19,
+        "seconds": 0.08494697200001156,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 19,
+        "seconds": 0.08338131799996518,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 19,
+        "seconds": 0.00549586099998578,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 19,
+        "seconds": 0.08194398199998432,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 19,
+        "seconds": 0.08102763700003379,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 19,
+        "seconds": 0.03135663699993074,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 19,
+        "seconds": 0.08367453599998953,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 19,
+        "seconds": 0.0819913530000349,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 19,
+        "seconds": 0.029074196999999913,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 19,
+        "seconds": 0.08674866199999087,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 19,
+        "seconds": 0.0887903999999935,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 19,
+        "seconds": 0.03616571199995633,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 19,
+        "seconds": 0.08353580099992541,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 19,
+        "seconds": 0.08468293700002505,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 19,
+        "seconds": 0.030980836000026102,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 20,
+        "seconds": 0.08569549900005313,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 20,
+        "seconds": 0.08498824800005877,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 20,
+        "seconds": 0.005434835999949428,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "intake_submitted",
+        "sample": 20,
+        "seconds": 0.1311782170000697,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "intake_submitted",
+        "sample": 20,
+        "seconds": 0.08667218300001878,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "intake_submitted",
+        "sample": 20,
+        "seconds": 0.03963551300000745,
+        "status": 200
+      },
+      {
+        "route": "/api/cases",
+        "stage": "report_submitted",
+        "sample": 20,
+        "seconds": 0.09997177200000351,
+        "status": 200
+      },
+      {
+        "route": "/api/summary",
+        "stage": "report_submitted",
+        "sample": 20,
+        "seconds": 0.08624176199998601,
+        "status": 200
+      },
+      {
+        "route": "/api/cases/{case_id}",
+        "stage": "report_submitted",
+        "sample": 20,
+        "seconds": 0.03404462599996805,
+        "status": 200
+      }
+    ],
+    "query_routes": {
+      "/api/cases": {
+        "count": 111,
+        "p95_seconds": 0.08494697200001156
+      },
+      "/api/summary": {
+        "count": 111,
+        "p95_seconds": 0.08468293700002505
+      },
+      "/api/cases/{case_id}": {
+        "count": 111,
+        "p95_seconds": 0.037124133000020265
+      }
+    },
+    "query_seconds": [
+      0.004335746000037943,
+      0.003698438000014903,
+      0.004683825000029174,
+      0.004394732000037038,
+      0.0027913719999332898,
+      0.012930092000033255,
+      0.006337640000083411,
+      0.003928057999928569,
+      0.007474410999975589,
+      0.012177350000001752,
+      0.01138046400001258,
+      0.04097575000002962,
+      0.011605004999978519,
+      0.011297080999952414,
+      0.03278422599998976,
+      0.011728907999895455,
+      0.010338985999965189,
+      0.030026604999989104,
+      0.012776024000004327,
+      0.010364722999952392,
+      0.034516614000040136,
+      0.012123654999982136,
+      0.01025986499996634,
+      0.0056061129999989134,
+      0.0114600539999401,
+      0.010267081000051803,
+      0.005281985000010536,
+      0.015066822999983742,
+      0.013773536000030617,
+      0.030173193999985415,
+      0.018121403000009195,
+      0.014439509999988331,
+      0.028546852999966177,
+      0.014756547999922986,
+      0.01358661899996605,
+      0.028429735000031542,
+      0.015387831999987611,
+      0.015800217999981214,
+      0.02892492700004823,
+      0.014337769999997363,
+      0.01401015000010375,
+      0.005365254000025743,
+      0.014933509999991657,
+      0.013743184999952973,
+      0.005259759000068698,
+      0.02008773200009273,
+      0.018572226000060255,
+      0.032468497999957435,
+      0.019236197999930482,
+      0.018376176999936433,
+      0.03478381200000058,
+      0.01952424900002825,
+      0.017246451000005436,
+      0.029118353999933788,
+      0.019002051000029496,
+      0.017595001000017874,
+      0.02974227599997903,
+      0.01803579299996727,
+      0.0184237270000267,
+      0.0057421669999939695,
+      0.018447086000037416,
+      0.018155249999949774,
+      0.005456835000018145,
+      0.023567954999975882,
+      0.022140172999911556,
+      0.030638962000011816,
+      0.021776335000026847,
+      0.020929813000066133,
+      0.02890556900001684,
+      0.023181401999977425,
+      0.02174659000002066,
+      0.03013203099999373,
+      0.023285025000063797,
+      0.025094976999980645,
+      0.030284215999927255,
+      0.02140529600001173,
+      0.022227236000048833,
+      0.006009858000084023,
+      0.022877693000054933,
+      0.023071885000035763,
+      0.005265622999900188,
+      0.026827747999959684,
+      0.026442359999919063,
+      0.03237399700003607,
+      0.027007980999997017,
+      0.0245722490000162,
+      0.02912831699995877,
+      0.03069774799996594,
+      0.026319793999959984,
+      0.031432413999937125,
+      0.025926440999910483,
+      0.02646531900006721,
+      0.029459265999889794,
+      0.025244963999966785,
+      0.025394464999976663,
+      0.005515937000041049,
+      0.03189966499996899,
+      0.02941143500004273,
+      0.006011435000004894,
+      0.037514548999979525,
+      0.03223492199992961,
+      0.032095180000055734,
+      0.033688030999996954,
+      0.031209135000040078,
+      0.03063025899996319,
+      0.03388249800002541,
+      0.030005074999962744,
+      0.030351927999959116,
+      0.03369711400000597,
+      0.03323703300009129,
+      0.03076899399991362,
+      0.031935559999965335,
+      0.031906066000033206,
+      0.005340651999972579,
+      0.03073468899992804,
+      0.029718868000031762,
+      0.005182016000048861,
+      0.03636238500007494,
+      0.034265840999978536,
+      0.03154379000000063,
+      0.03567807299998549,
+      0.033799595000004956,
+      0.029455442000084986,
+      0.03602202199999738,
+      0.043458121000071515,
+      0.0374622570000156,
+      0.03508453599999939,
+      0.03409273900001608,
+      0.03137844600007611,
+      0.0359534800001029,
+      0.03480921899995337,
+      0.005465942000000723,
+      0.03711687099996652,
+      0.03399395300004926,
+      0.005463757999905283,
+      0.04251787599991985,
+      0.039685332999965794,
+      0.03335084200000438,
+      0.040906698999947366,
+      0.04263850500001354,
+      0.030859277999979895,
+      0.038833868999972765,
+      0.03763160699998025,
+      0.032002087000023494,
+      0.039130602999989605,
+      0.03777986099998998,
+      0.03038874199990005,
+      0.0403376130000197,
+      0.04009548499993798,
+      0.0056244359999482185,
+      0.0404776560000073,
+      0.038122932000078436,
+      0.005861592000087512,
+      0.04501444699997137,
+      0.04443809600002169,
+      0.03208840499996768,
+      0.04522706199998083,
+      0.04423861999998735,
+      0.029688017000012223,
+      0.05497593500001585,
+      0.04175308900005348,
+      0.029671191000034014,
+      0.042463730999998006,
+      0.042150097000103415,
+      0.0363952050000762,
+      0.04631281299998591,
+      0.04415312899993751,
+      0.0054489890000013474,
+      0.08223719800002982,
+      0.053815493999991304,
+      0.0360923629999661,
+      0.05431041099996037,
+      0.05395421399998668,
+      0.035346217999972396,
+      0.11042585199993482,
+      0.04733888599992042,
+      0.005495207000080882,
+      0.04758590599999479,
+      0.04224912300003325,
+      0.005258311000034155,
+      0.05452408700000433,
+      0.06074934800005849,
+      0.03565994400003092,
+      0.05509990899997774,
+      0.04640168499997799,
+      0.030575894999969933,
+      0.05661064299999907,
+      0.04622918400002618,
+      0.032794410000065,
+      0.053052094000008765,
+      0.047573143000022355,
+      0.03268523899998854,
+      0.0574718700000858,
+      0.04232029600007081,
+      0.005279927000060525,
+      0.05146865299991532,
+      0.048722892000000684,
+      0.005479777000005015,
+      0.06078696700001274,
+      0.049406137999994826,
+      0.03622985500010145,
+      0.07252968399996007,
+      0.060995138999942355,
+      0.038544648000083725,
+      0.05882317700002204,
+      0.04948898099996768,
+      0.030124286999921424,
+      0.06101992699996117,
+      0.05168973000002097,
+      0.037124133000020265,
+      0.058192384999983915,
+      0.05502302799993686,
+      0.005614241999978731,
+      0.06781404700006988,
+      0.07331171999999242,
+      0.03709294600002977,
+      0.06246390599994811,
+      0.06201094599998669,
+      0.028763471000047502,
+      0.060504570999910356,
+      0.05943949599998177,
+      0.02997762400002557,
+      0.06023135700002058,
+      0.059890713999948275,
+      0.031014927999990505,
+      0.059898995000025934,
+      0.06114304000004722,
+      0.005491174999974646,
+      0.060440511000024344,
+      0.06344373699994321,
+      0.0054516970000122456,
+      0.06505823499992403,
+      0.06265632300005564,
+      0.03265945000009651,
+      0.06393302999993011,
+      0.06294677699997919,
+      0.02950870200004374,
+      0.07081995900000493,
+      0.06675191399995128,
+      0.03214261499999793,
+      0.06113287499999842,
+      0.062286601999971936,
+      0.034685969999941335,
+      0.06351707499993609,
+      0.06884831899992605,
+      0.005513006000001042,
+      0.07314357599989307,
+      0.12184420099993076,
+      0.009510136000017155,
+      0.06906205100005991,
+      0.06925610899997992,
+      0.03311881800004812,
+      0.08426600500001769,
+      0.07070800000008148,
+      0.030613969000000907,
+      0.06768940799997836,
+      0.07018189099994743,
+      0.031577078000054826,
+      0.06939790799992807,
+      0.06791609700007939,
+      0.005455467000047065,
+      0.0669801929999494,
+      0.06609504900006868,
+      0.005640729999981886,
+      0.07273889699990832,
+      0.07174006100001407,
+      0.03276869500007251,
+      0.07113747899995815,
+      0.06972270400001435,
+      0.032127061999972284,
+      0.0765219459999571,
+      0.07082514900002934,
+      0.028907591000006505,
+      0.07172154399995634,
+      0.06951866800000062,
+      0.03517652100003943,
+      0.07028104100004384,
+      0.0699390490000269,
+      0.005301293000002261,
+      0.08265709900001639,
+      0.07884954999997262,
+      0.03160244100001819,
+      0.07283226800007014,
+      0.0738276350000433,
+      0.0287868929999604,
+      0.07979257900001357,
+      0.0771269230000371,
+      0.028495248000012907,
+      0.07894906199999241,
+      0.07599825399995552,
+      0.030024792999938654,
+      0.07491640400007782,
+      0.07325807799998074,
+      0.005741158999967411,
+      0.07680917799996223,
+      0.07285280799999327,
+      0.005743772999949215,
+      0.0816251490000468,
+      0.0787104129999534,
+      0.030982278999999835,
+      0.07860979999998108,
+      0.07771749100004399,
+      0.02999270600003001,
+      0.08383892899996681,
+      0.08316767700000582,
+      0.036281833999964874,
+      0.08136399500006064,
+      0.08161857600009625,
+      0.03795069099999182,
+      0.08494697200001156,
+      0.08338131799996518,
+      0.00549586099998578,
+      0.08194398199998432,
+      0.08102763700003379,
+      0.03135663699993074,
+      0.08367453599998953,
+      0.0819913530000349,
+      0.029074196999999913,
+      0.08674866199999087,
+      0.0887903999999935,
+      0.03616571199995633,
+      0.08353580099992541,
+      0.08468293700002505,
+      0.030980836000026102,
+      0.08569549900005313,
+      0.08498824800005877,
+      0.005434835999949428,
+      0.1311782170000697,
+      0.08667218300001878,
+      0.03963551300000745,
+      0.09997177200000351,
+      0.08624176199998601,
+      0.03404462599996805
+    ],
+    "upload_p95_seconds": 0.03827589499996975,
+    "query_p95_seconds": 0.08338131799996518,
+    "intake_max_seconds": 3.192994079000073,
+    "targets_met": {
+      "upload_p95_le_3_seconds": true,
+      "query_p95_le_500_ms": true,
+      "each_intake_le_120_seconds": true,
+      "sequential_tasks_not_lost": true,
+      "mixed_queries_during_submitted_load": true,
+      "each_complete_three_reports_le_120_seconds": true,
+      "exactly_20_samples": true,
+      "reports_required": true,
+      "ai_disabled_configuration_verified": true,
+      "environment_cpu_ram_docker_recorded": true
+    },
+    "result": "passed"
+  },
+  "result": "passed"
+}

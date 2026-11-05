@@ -1,0 +1,39 @@
+{
+  "required": true,
+  "result": "passed",
+  "langflow": {
+    "image_id": "sha256:b836bf131480cd92747e8e50f54324fd3d76531137a59fa214e32549f2b44966",
+    "environment_sha256": "00d6b9b246f4b93e475677cef23e83b029def8cafadce46314bc1a17dbdfe198",
+    "mounts": [
+      {
+        "type": "volume",
+        "name": "arc-ci-41983887326-amd64_report-artifacts",
+        "destination": "/app/artifacts",
+        "rw": true
+      },
+      {
+        "type": "volume",
+        "name": "arc-ci-41983887326-amd64_source-documents",
+        "destination": "/app/documents",
+        "rw": false
+      }
+    ],
+    "networks": [
+      "arc-ci-41983887326-amd64_backend"
+    ],
+    "health": "healthy",
+    "font_override_present": false
+  },
+  "flows": {
+    "intake": {
+      "config_hash": "c8933a86fa3393e850b5f5595d5d9f919f37c8e7b62cdeb024ff46fa101bbb52",
+      "flow_hash": "492fe18811670806c671c4c0528ced9c4b5fdf033f52127d6ebcd676ade86968",
+      "id": "43837f6c-2535-49d4-ace9-4a6a310f93ef"
+    },
+    "report": {
+      "config_hash": "c8933a86fa3393e850b5f5595d5d9f919f37c8e7b62cdeb024ff46fa101bbb52",
+      "flow_hash": "10f0d99a6f27435f2b1e671e1f2348045777a9a689bf42aac56fa3717671a1c5",
+      "id": "292063ea-a61e-4b8f-b539-3b02357a1488"
+    }
+  }
+}

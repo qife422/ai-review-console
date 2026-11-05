@@ -1,0 +1,296 @@
+{
+  "evidence_id": "candidate-acceptance",
+  "classification": "sealed_evidence",
+  "sealed_at": "2026-11-05T17:12:48.232417+00:00",
+  "display_date": "2026-11-05 America/Los_Angeles",
+  "contract": "ARC-UPGRADE@0.1.0",
+  "spec_sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753",
+  "finite_scope": "Synthetic LinuxAMD64 candidate1.13.1 editor clone rename/save/readback plus exactBfive faults, PDF partial failure recovery and strict20sequential performance. Default1.11.6/original data protected.",
+  "runs": {
+    "A": {
+      "run": 41983022104,
+      "source": "098271e25d6e666448e1700c10b1779c72cb6e65",
+      "overall": "failure",
+      "failures_retained": true
+    },
+    "B": {
+      "run": 41983887326,
+      "source": "8db7f5f8a5cd6c1634a8c7a0ed40b195ff3ed424",
+      "overall": "failure",
+      "family_pass": [
+        "five_faults",
+        "PDF_partial_failure_restoration",
+        "strict20performance"
+      ],
+      "editor": "final_login429failed",
+      "images": {
+        "api": "sha256:de0ace4c6c71bef46334aa8f360ae8fd3bcde0dab042f0d613dd7a9c4a40c411",
+        "worker": "sha256:de0ace4c6c71bef46334aa8f360ae8fd3bcde0dab042f0d613dd7a9c4a40c411",
+        "langflow": "sha256:b836bf131480cd92747e8e50f54324fd3d76531137a59fa214e32549f2b44966",
+        "web": "sha256:7f18874e1c4e46965f554a4dc2b61f90275f398a0c74a5972f2c3f792ec08623",
+        "postgres": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+      }
+    },
+    "C": {
+      "run": 42070564065,
+      "source": "54592dff0231ee84b992956e0ea9b99b0eecdc39",
+      "overall": "success",
+      "focus": "editor",
+      "python": 305,
+      "frontend": 29,
+      "actual_final_login_retries": 1,
+      "skipped": [
+        "faults",
+        "report_retry",
+        "performance"
+      ],
+      "images": {
+        "api": "sha256:3b44e02de05e3e4b2b67ecdf17c7b39489ffa83844f0cb8699bd72b3f10fd311",
+        "worker": "sha256:3b44e02de05e3e4b2b67ecdf17c7b39489ffa83844f0cb8699bd72b3f10fd311",
+        "langflow": "sha256:0a8f2e1a564f74fb2376ff89e98c1c274901f3061421325e26564e79159a13b3",
+        "web": "sha256:1018040f66c31d8df3872aefaae44840d5244327e886b9e99186119ab77cb3ac",
+        "postgres": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+      }
+    }
+  },
+  "acceptance": {
+    "AC-06": "scopedBpassed",
+    "AC-07": "listedBfault_subitems_only; timeout/quota contracts separate",
+    "AC-14": "scopedBpassed",
+    "AC-18": "listedBfailure_recovery_subitems/Cbaseline",
+    "performance": "B20x1048576B/60reports/333queries allrecordedtargets_passed; loopback and observation-window qualifiers apply",
+    "editor": "Cclonecanvas/UIrename/save/reload/APIpersistedname/originalFlows unchanged",
+    "AC-19": "not_passed_for_full_default_release",
+    "full_v02_last_verified": null,
+    "final_human_acceptance": "pending",
+    "default_adoption": "not_performed",
+    "original_data_migration": "not_performed",
+    "backend_distribution_approval": false,
+    "residual_risk_accepted": false,
+    "online_demo_redeployed": false
+  },
+  "not_covered": [
+    "Macactualhost",
+    "ARMoldschema migration/editor/fault/performance",
+    "componentparameter/code editing orcloneexecution",
+    "upgraded-write RPO0",
+    "newimage vulnerability/native/license releaseclosure"
+  ],
+  "provenance": "Each selection labels exact original archive members with size/SHA and GitHub memory-only ZIP digest; derived/missing originals labeled. No cross-run/image inheritance.",
+  "protection": "environment/protection.json",
+  "documentation_impact": "environment/documentation-impact.json",
+  "payload_files": 42,
+  "payload_bytes": 505772,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 7866,
+      "sha256": "cf5ee081e582657a93baa4d959abbea53fd50340c3ea8591eec915ed88c9cee9"
+    },
+    {
+      "path": "ci/first/editor-state.json",
+      "bytes": 802,
+      "sha256": "c9f291f33dd165a20d637a1ce42e55c973d70772355b3f2f9fbee318a357195e"
+    },
+    {
+      "path": "ci/first/editor-visible.txt",
+      "bytes": 9857,
+      "sha256": "2346885223b7fc59f7eaadf3b3d50b4df6018877373e32c85fe4e1568a9b1ed1"
+    },
+    {
+      "path": "ci/first/editor.png",
+      "bytes": 97330,
+      "sha256": "654e089f3eaf3a87283842d2f38c266563613e2c4f2d9878a1a735701745ef06"
+    },
+    {
+      "path": "ci/first/failure-snapshot.txt",
+      "bytes": 9857,
+      "sha256": "2346885223b7fc59f7eaadf3b3d50b4df6018877373e32c85fe4e1568a9b1ed1"
+    },
+    {
+      "path": "ci/first/manifest.json",
+      "bytes": 2282,
+      "sha256": "57b76d4e0ee4fbcdebe96bd323066b8d460a7d60086fb9f2de9a6a303c36251c"
+    },
+    {
+      "path": "ci/first/result.json",
+      "bytes": 477,
+      "sha256": "b16b4b11f7b441311fed295ea8d5be54d2b1075efbc581786c89765c2ff0a21d"
+    },
+    {
+      "path": "ci/first/selection.json",
+      "bytes": 1391,
+      "sha256": "175f8de272e0e53a4d787e97e46dde524f76f8a4ca41e5f78b2c9d8774d0098b"
+    },
+    {
+      "path": "ci/second/editor-state.json",
+      "bytes": 802,
+      "sha256": "134777cb498d7326233a8407ab9de7bab3564da93298a60c619219c08ee1ade1"
+    },
+    {
+      "path": "ci/second/failure-snapshot.txt",
+      "bytes": 9852,
+      "sha256": "2e8d225f63d8f02e4ae21af7b8e8de634f1ca22d3516a258918e0759359662af"
+    },
+    {
+      "path": "ci/second/faults-faults.json",
+      "bytes": 10679,
+      "sha256": "4f5fe92fe1b4174208139ca8daad9fecdb8a21178c36e424684f5be2841caf9a"
+    },
+    {
+      "path": "ci/second/manifest.json",
+      "bytes": 3554,
+      "sha256": "4fc62bc435567b5911c260e31c11bd3afb8e5be96c6521e5fa2d876b0b234423"
+    },
+    {
+      "path": "ci/second/performance.json",
+      "bytes": 99861,
+      "sha256": "dab70fb10ec5fdf55be3bc508a2ff0d30eb3ac3b8a436c6577ca8e0d13b89d80"
+    },
+    {
+      "path": "ci/second/report-retry-report-retry.json",
+      "bytes": 43144,
+      "sha256": "59c2a00479ec6012b7dae60a84e90d4f30d37b7194ce2b4ac7f3e400ae1fda78"
+    },
+    {
+      "path": "ci/second/report-retry-restoration.json",
+      "bytes": 1244,
+      "sha256": "2f9867f83fde4ba6db55dc303497b9b1fbb3fdadba345d18fffe32f712743797"
+    },
+    {
+      "path": "ci/second/result.json",
+      "bytes": 1498,
+      "sha256": "8bfe3393d86155dfe5391a83caa0fb2ada459360a3158f67a75f15f1b91827b4"
+    },
+    {
+      "path": "ci/second/selection.json",
+      "bytes": 1820,
+      "sha256": "6b20fb42994409823afcb10b0688311b6884e1a08b7734238f735bfe140c9df7"
+    },
+    {
+      "path": "ci/third/baseline.json",
+      "bytes": 7201,
+      "sha256": "9c1299f260510fc82dc029e5cf6140eb17d38ca33e8bc98e71e99d40b3c3f37f"
+    },
+    {
+      "path": "ci/third/capacity.jsonl",
+      "bytes": 3888,
+      "sha256": "c7e0edf3a56f915cf6121465dbdb8807b11ef9cd9f3dcc286f64edf954414ecd"
+    },
+    {
+      "path": "ci/third/editor-state.json",
+      "bytes": 828,
+      "sha256": "9f552d115bd56f6e0dbfbea6803353f15bba92ca4728cb6ab276c6fde4e0b920"
+    },
+    {
+      "path": "ci/third/editor-visible.txt",
+      "bytes": 9857,
+      "sha256": "0b15d9745e0e284b1692c451c240454edc2aae3b3e4af4f5fd04a8279eda3b8a"
+    },
+    {
+      "path": "ci/third/editor.png",
+      "bytes": 97231,
+      "sha256": "70ea266ff21842dbe10b3b8435e655e17fc1259e82e42162a78eb33c6ab75790"
+    },
+    {
+      "path": "ci/third/manifest.json",
+      "bytes": 2142,
+      "sha256": "402873c17f470f6ff4855faf7271cb95a41d34de1b5f1c6da87b554af20d5c98"
+    },
+    {
+      "path": "ci/third/result.json",
+      "bytes": 1685,
+      "sha256": "8d3819a8fa4d8290459aa7ac95a6d2532553b0ec720628480195934a70de03ce"
+    },
+    {
+      "path": "ci/third/selection.json",
+      "bytes": 1755,
+      "sha256": "4bdbb605de169502118581aa52c1487e0ceb5aea062765cff5c6e1ef5e9de62a"
+    },
+    {
+      "path": "ci/third/unit.xml",
+      "bytes": 41836,
+      "sha256": "0ce3977b34d54f63dc53b8793f53b04c0505e456cf7fa75ba2ef74db4d6d53a3"
+    },
+    {
+      "path": "environment/C-result-review.json",
+      "bytes": 2496,
+      "sha256": "0b91caee6594a1b0de9eafe259df4d98793726d4b5887276f21950ba3ce542a1"
+    },
+    {
+      "path": "environment/capacity.json",
+      "bytes": 2324,
+      "sha256": "76760ec4ba3bf159085378c777436641cfa9aa5dfb117215bcb5fad6409bc9c2"
+    },
+    {
+      "path": "environment/documentation-impact.json",
+      "bytes": 1288,
+      "sha256": "a21f348d021033301f16a11f2efdc54ec3a93e70444ba71d5074f6f890354f94"
+    },
+    {
+      "path": "environment/failure-history.json",
+      "bytes": 1014,
+      "sha256": "957501bf162f4eb354f06aee3a2199cc48291091aebdfb6e014e8899df097a36"
+    },
+    {
+      "path": "environment/focused-repair-review.json",
+      "bytes": 1428,
+      "sha256": "72a86f866765b5f7a315d27aa105725a97784e206ddfbc2ded8c2815dba67f02"
+    },
+    {
+      "path": "environment/gate-incident.json",
+      "bytes": 870,
+      "sha256": "b2962d507533479cde71983087616f6c06fd267323a037387ccbf9fd31a14c1b"
+    },
+    {
+      "path": "environment/independent-review.json",
+      "bytes": 7280,
+      "sha256": "ddff8fedb27c84c7dc5cdad5c996944269848bf6f7e4733fbcbc836de927e3fc"
+    },
+    {
+      "path": "environment/plan.json",
+      "bytes": 2402,
+      "sha256": "72059834a75e6783c394d4eb0e534a62446b56dfd42a16406baf86cef873ed8d"
+    },
+    {
+      "path": "environment/protection.json",
+      "bytes": 2736,
+      "sha256": "4c4efcb3472ecab3251e3c3d15330d1170a7aeffba531d8cee5207044f66f55a"
+    },
+    {
+      "path": "environment/result-review.json",
+      "bytes": 6140,
+      "sha256": "3f2a17a7a352c757a0bdb88a9fbb0efa85fb302f8bd02db9c0b98168f3d5a508"
+    },
+    {
+      "path": "environment/source-fingerprints.json",
+      "bytes": 1774,
+      "sha256": "6e349b3c04354c1a0afe74c93c5195622ce3d009379ee6e04f2a4c97895ed263"
+    },
+    {
+      "path": "environment/unit-B-subset.json",
+      "bytes": 499,
+      "sha256": "9e0877b4d87e6de289c7067d38c38c57347796b83aea52ade29b76f502a5d5b3"
+    },
+    {
+      "path": "sources/Langflow-LICENSE.txt",
+      "bytes": 1066,
+      "sha256": "2f6f90f0641ad822aec5d2bccd1f97c569cc0cbaf0ec3754d10290808f3b1f1b"
+    },
+    {
+      "path": "sources/edit-flow-name.spec.ts",
+      "bytes": 3046,
+      "sha256": "c57fe09948796236aa81f4fbc0fa289cf943d43f55b88791cc88f746417acb46"
+    },
+    {
+      "path": "sources/rename-flow.ts",
+      "bytes": 2019,
+      "sha256": "86bc7c753677e1ad2cf22d036cdeca93f850f57dd47f3d7d06c132a1386d0bd3"
+    },
+    {
+      "path": "sources/source-record.json",
+      "bytes": 651,
+      "sha256": "317baa57ebccd8ec845b57b7b1454d620e405da91070e02a313950aee6114f99"
+    }
+  ]
+}

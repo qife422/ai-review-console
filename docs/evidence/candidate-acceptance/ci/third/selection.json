@@ -1,0 +1,58 @@
+{
+  "run": 42070564065,
+  "source": "54592dff0231ee84b992956e0ea9b99b0eecdc39",
+  "artifact_id": 13435986944,
+  "transport_bytes": 112395,
+  "transport_sha256": "a04df282bf94fd7cddc56602cabe34354fc602c3f5e5b13d6fb17da0a0baeeee",
+  "transport_retained": false,
+  "files": [
+    {
+      "member": "editor/result.json",
+      "path": "result.json",
+      "bytes": 1685,
+      "sha256": "8d3819a8fa4d8290459aa7ac95a6d2532553b0ec720628480195934a70de03ce"
+    },
+    {
+      "member": "editor/editor-state.json",
+      "path": "editor-state.json",
+      "bytes": 828,
+      "sha256": "9f552d115bd56f6e0dbfbea6803353f15bba92ca4728cb6ab276c6fde4e0b920"
+    },
+    {
+      "member": "editor/editor.png",
+      "path": "editor.png",
+      "bytes": 97231,
+      "sha256": "70ea266ff21842dbe10b3b8435e655e17fc1259e82e42162a78eb33c6ab75790"
+    },
+    {
+      "member": "editor/editor-visible.txt",
+      "path": "editor-visible.txt",
+      "bytes": 9857,
+      "sha256": "0b15d9745e0e284b1692c451c240454edc2aae3b3e4af4f5fd04a8279eda3b8a"
+    },
+    {
+      "member": "unit.xml",
+      "path": "unit.xml",
+      "bytes": 41836,
+      "sha256": "0ce3977b34d54f63dc53b8793f53b04c0505e456cf7fa75ba2ef74db4d6d53a3"
+    },
+    {
+      "member": "baseline.json",
+      "path": "baseline.json",
+      "bytes": 7201,
+      "sha256": "9c1299f260510fc82dc029e5cf6140eb17d38ca33e8bc98e71e99d40b3c3f37f"
+    },
+    {
+      "member": "capacity.jsonl",
+      "path": "capacity.jsonl",
+      "bytes": 3888,
+      "sha256": "c7e0edf3a56f915cf6121465dbdb8807b11ef9cd9f3dcc286f64edf954414ecd"
+    },
+    {
+      "member": "manifest.json",
+      "path": "manifest.json",
+      "bytes": 2142,
+      "sha256": "402873c17f470f6ff4855faf7271cb95a41d34de1b5f1c6da87b554af20d5c98"
+    }
+  ]
+}

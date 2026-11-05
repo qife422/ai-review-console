@@ -1,0 +1,61 @@
+{
+  "run": "42070564065",
+  "source": "54592dff0231ee84b992956e0ea9b99b0eecdc39",
+  "focus": "editor",
+  "images": {
+    "api": "sha256:3b44e02de05e3e4b2b67ecdf17c7b39489ffa83844f0cb8699bd72b3f10fd311",
+    "worker": "sha256:3b44e02de05e3e4b2b67ecdf17c7b39489ffa83844f0cb8699bd72b3f10fd311",
+    "langflow": "sha256:0a8f2e1a564f74fb2376ff89e98c1c274901f3061421325e26564e79159a13b3",
+    "web": "sha256:1018040f66c31d8df3872aefaae44840d5244327e886b9e99186119ab77cb3ac",
+    "postgres": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+  },
+  "sources": [],
+  "files": [
+    {
+      "path": "capacity.jsonl",
+      "bytes": 3888,
+      "sha256": "c7e0edf3a56f915cf6121465dbdb8807b11ef9cd9f3dcc286f64edf954414ecd"
+    },
+    {
+      "path": "baseline.json",
+      "bytes": 7201,
+      "sha256": "9c1299f260510fc82dc029e5cf6140eb17d38ca33e8bc98e71e99d40b3c3f37f"
+    },
+    {
+      "path": "unit.xml",
+      "bytes": 41836,
+      "sha256": "0ce3977b34d54f63dc53b8793f53b04c0505e456cf7fa75ba2ef74db4d6d53a3"
+    },
+    {
+      "path": "editor/commands.log",
+      "bytes": 76653,
+      "sha256": "15e2d869a7fed1caba4d51df0f4bf261d35f71c790d8dc4609161ebb89b083a2"
+    },
+    {
+      "path": "editor/editor-visible.txt",
+      "bytes": 9857,
+      "sha256": "0b15d9745e0e284b1692c451c240454edc2aae3b3e4af4f5fd04a8279eda3b8a"
+    },
+    {
+      "path": "editor/editor-state.json",
+      "bytes": 828,
+      "sha256": "9f552d115bd56f6e0dbfbea6803353f15bba92ca4728cb6ab276c6fde4e0b920"
+    },
+    {
+      "path": "editor/editor.png",
+      "bytes": 97231,
+      "sha256": "70ea266ff21842dbe10b3b8435e655e17fc1259e82e42162a78eb33c6ab75790"
+    },
+    {
+      "path": "editor/result.json",
+      "bytes": 1685,
+      "sha256": "8d3819a8fa4d8290459aa7ac95a6d2532553b0ec720628480195934a70de03ce"
+    },
+    {
+      "path": "editor/flows-visible.txt",
+      "bytes": 4074,
+      "sha256": "87fc187bd19cfadeba0465cc1dfcc857cf97c1c022f564525b264ad263ee1a36"
+    }
+  ],
+  "scope": "New synthetic AMD64 candidate only; raw font fault report files/container logs/npm/browser caches unselected; no whole build trees or dumps uploaded."
+}

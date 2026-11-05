@@ -1,0 +1,1209 @@
+{
+  "contract": "ARC-UPGRADE@0.1.0",
+  "acceptance": [
+    "AC-14"
+  ],
+  "producer": "scripts/verify_report_retry.py",
+  "producer_sha256": "38facdad4f2a891c824598cf8ff0d6c7b8936212fda134dbe684841937f6fedb",
+  "spec_sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753",
+  "started_at": "2026-11-05T07:06:39.082539+00:00",
+  "project": "arc-ci-41983887326-amd64",
+  "api": "http://127.0.0.1:8000",
+  "case_limit": 1,
+  "result": "passed",
+  "restoration": {
+    "required": true,
+    "result": "passed",
+    "langflow": {
+      "image_id": "sha256:b836bf131480cd92747e8e50f54324fd3d76531137a59fa214e32549f2b44966",
+      "environment_sha256": "00d6b9b246f4b93e475677cef23e83b029def8cafadce46314bc1a17dbdfe198",
+      "mounts": [
+        {
+          "type": "volume",
+          "name": "arc-ci-41983887326-amd64_report-artifacts",
+          "destination": "/app/artifacts",
+          "rw": true
+        },
+        {
+          "type": "volume",
+          "name": "arc-ci-41983887326-amd64_source-documents",
+          "destination": "/app/documents",
+          "rw": false
+        }
+      ],
+      "networks": [
+        "arc-ci-41983887326-amd64_backend"
+      ],
+      "health": "healthy",
+      "font_override_present": false
+    },
+    "flows": {
+      "intake": {
+        "config_hash": "c8933a86fa3393e850b5f5595d5d9f919f37c8e7b62cdeb024ff46fa101bbb52",
+        "flow_hash": "492fe18811670806c671c4c0528ced9c4b5fdf033f52127d6ebcd676ade86968",
+        "id": "43837f6c-2535-49d4-ace9-4a6a310f93ef"
+      },
+      "report": {
+        "config_hash": "c8933a86fa3393e850b5f5595d5d9f919f37c8e7b62cdeb024ff46fa101bbb52",
+        "flow_hash": "10f0d99a6f27435f2b1e671e1f2348045777a9a689bf42aac56fa3717671a1c5",
+        "id": "292063ea-a61e-4b8f-b539-3b02357a1488"
+      }
+    }
+  },
+  "retention": "Synthetic case, reports and temporary proof retained; no cleanup.",
+  "limitations": "Only missing-font PDF failure and failed-format manual retry are covered.",
+  "expected_langflow_version": "1.13.1",
+  "compose_file_sha256": "d5fa4d844ec2c32ac4b3b7d187ad16b04573cc6ba1fb18baf30d550d75be5340",
+  "git_head": "8db7f5f8a5cd6c1634a8c7a0ed40b195ff3ed424",
+  "before": {
+    "langflow": {
+      "image_id": "sha256:b836bf131480cd92747e8e50f54324fd3d76531137a59fa214e32549f2b44966",
+      "environment_sha256": "00d6b9b246f4b93e475677cef23e83b029def8cafadce46314bc1a17dbdfe198",
+      "mounts": [
+        {
+          "type": "volume",
+          "name": "arc-ci-41983887326-amd64_report-artifacts",
+          "destination": "/app/artifacts",
+          "rw": true
+        },
+        {
+          "type": "volume",
+          "name": "arc-ci-41983887326-amd64_source-documents",
+          "destination": "/app/documents",
+          "rw": false
+        }
+      ],
+      "networks": [
+        "arc-ci-41983887326-amd64_backend"
+      ],
+      "health": "healthy",
+      "font_override_present": false
+    },
+    "flows": {
+      "intake": {
+        "config_hash": "c8933a86fa3393e850b5f5595d5d9f919f37c8e7b62cdeb024ff46fa101bbb52",
+        "flow_hash": "492fe18811670806c671c4c0528ced9c4b5fdf033f52127d6ebcd676ade86968",
+        "id": "43837f6c-2535-49d4-ace9-4a6a310f93ef"
+      },
+      "report": {
+        "config_hash": "c8933a86fa3393e850b5f5595d5d9f919f37c8e7b62cdeb024ff46fa101bbb52",
+        "flow_hash": "10f0d99a6f27435f2b1e671e1f2348045777a9a689bf42aac56fa3717671a1c5",
+        "id": "292063ea-a61e-4b8f-b539-3b02357a1488"
+      }
+    },
+    "counts": {
+      "active_jobs": 0,
+      "case_count": 22
+    }
+  },
+  "case_id": "RC-ae396602d48c426489ace41fd4bd05c5",
+  "source_sha256": "2611fc94cbee96542c52a4e61e9fe3d95223e2eff1007410b6794b4df72dc1ec",
+  "accepted": {
+    "case_id": "RC-ae396602d48c426489ace41fd4bd05c5",
+    "document_version_id": "DV-72a1e84700884859a28eeb0c6d44b594",
+    "job_id": "JB-899c65db8a32421da6ccc581c98834a6",
+    "status": "received",
+    "request_id": "b556f2a5-7cb6-4fce-8e69-cb3e1a2c8580",
+    "duplicate_of": null
+  },
+  "decision_id": "DC-1dacc7a05881419895322cbcd18faa3e",
+  "report_job_id": "JB-8645c791b1044a3aa7078594f57762a8",
+  "retry_job_id": "JB-9c582bda2a5548b3a8e9101339cfdf1f",
+  "downloaded": [
+    {
+      "format": "json",
+      "sha256": "80ad008b5a04910b60b55b19a4dea034b18143f91f548a7670d74e9fc6d1430b",
+      "bytes": 3208
+    },
+    {
+      "format": "html",
+      "sha256": "2c2a7d2cb52eb5ae7608c6e7a24e65614d7ffb9ed56e0caeb5d0048b76398435",
+      "bytes": 7759
+    },
+    {
+      "format": "pdf",
+      "sha256": "653c14a164a7841cc6ccf08e6e6b5e015a6d827f30bbb7055be660d34f4dddd0",
+      "bytes": 39629
+    }
+  ],
+  "ready_json_html_unchanged": true,
+  "after_counts": {
+    "active_jobs": 0,
+    "case_count": 23,
+    "decision_count": 1,
+    "decision_audit_count": 1
+  },
+  "ended_at": "2026-11-05T07:08:14.709677+00:00",
+  "commands": [
+    {
+      "label": "git-head",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "started_at": "2026-11-05T07:06:39.082620+00:00",
+      "ended_at": "2026-11-05T07:06:39.084485+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "d1aaab3f89b4efc3c074bc6c5d1a809c83b36203a33825a7fa12e1190ec7c3a2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:06:39.084505+00:00",
+      "ended_at": "2026-11-05T07:06:39.150628+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "5d9cf56e91dd0d70fac6c90718aebc83826be9bfa9af4714207fa789dc6185aa",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "3dd776527f081f33a7d49f0e194222c60fadbe0f0287b78457b4930e9180c48b"
+      ],
+      "started_at": "2026-11-05T07:06:39.150676+00:00",
+      "ended_at": "2026-11-05T07:06:39.164498+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "9559411e66fd531bb95124ecc19b54f37d6ba4e48d94fe6ac3626274d4a6c080",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "compose-config",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "config",
+        "--format",
+        "json"
+      ],
+      "started_at": "2026-11-05T07:06:39.184713+00:00",
+      "ended_at": "2026-11-05T07:06:39.237515+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "d5fa4d844ec2c32ac4b3b7d187ad16b04573cc6ba1fb18baf30d550d75be5340",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "local-image-id",
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "--format",
+        "{{.Id}}",
+        "ai-review-console-langflow:candidate"
+      ],
+      "started_at": "2026-11-05T07:06:39.237693+00:00",
+      "ended_at": "2026-11-05T07:06:39.274512+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "1c73d814372ae9c297b14ef417e96d98d112cc64ee780d49f17ab1eda38e138b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "api-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "api"
+      ],
+      "started_at": "2026-11-05T07:06:39.274669+00:00",
+      "ended_at": "2026-11-05T07:06:39.337482+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "b732955c4803958a340230b0be0934aed756b65aa4e036b8ccf8ba98828bd23f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "api-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "a2de95956bea5e727ac726b750763269d6d89b916f5cdd72b8d0e6ea6b12186a"
+      ],
+      "started_at": "2026-11-05T07:06:39.337530+00:00",
+      "ended_at": "2026-11-05T07:06:39.351331+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "e21ba350e0039a944062f3c40493d306030edc10b46895c933d5a5f6ab92a13d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "worker-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "worker"
+      ],
+      "started_at": "2026-11-05T07:06:39.371530+00:00",
+      "ended_at": "2026-11-05T07:06:39.432992+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "e2f3fe43c935ed7da128008fde03b89562f87fa864523072fc79583303e47433",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "worker-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "59e3c402c24ae99bf6298f391b3e452a9f995393f856fec26dcd79f98e8f5196"
+      ],
+      "started_at": "2026-11-05T07:06:39.433043+00:00",
+      "ended_at": "2026-11-05T07:06:39.447006+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "f3330d775488817379565ffbdcf6eee66dddf409638256eaaaaf7e8a1ce3d9f2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "database-counts",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "exec",
+        "-T",
+        "api",
+        "python",
+        "-c",
+        "import json; from sqlalchemy import text; from api.app.database import engine; c=engine.connect(); r={'active_jobs':c.execute(text(\"SELECT count(*) FROM workflow_jobs WHERE state IN ('queued','running','retry_wait')\")).scalar_one(),'case_count':c.execute(text('SELECT count(*) FROM review_cases')).scalar_one()}; print(json.dumps(r)); c.close()"
+      ],
+      "started_at": "2026-11-05T07:06:39.466924+00:00",
+      "ended_at": "2026-11-05T07:06:40.243653+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "52680e67e471b2eede777eb1ad0ffa2185aa282958b5e6bc22b2449639fb91a8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "published-flow-hashes",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "exec",
+        "-T",
+        "worker",
+        "python",
+        "-c",
+        "\nimport json\nfrom api.app.langflow_client import LangflowClient, flow_configuration, graph_hash\nclient=LangflowClient()\nresult={}\ntry:\n    for kind in ('intake','report'):\n        config=flow_configuration(kind)\n        graph=client.get_flow(config['id'],config['flow_hash'])\n        result[kind]={'id':config['id'],'flow_hash':graph_hash(graph),\n                      'config_hash':config['config_hash']}\n    print(json.dumps(result,sort_keys=True))\nfinally:\n    client.close()\n"
+      ],
+      "started_at": "2026-11-05T07:06:40.243727+00:00",
+      "ended_at": "2026-11-05T07:06:41.014180+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "c716d01c11432f7588bc1461821b5e5f47add1d932626cfc058bd2b3152a78ea",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "confirm-missing-font",
+      "argv": [
+        "docker",
+        "exec",
+        "3dd776527f081f33a7d49f0e194222c60fadbe0f0287b78457b4930e9180c48b",
+        "python",
+        "-c",
+        "from pathlib import Path; assert not Path('/app/arc-proof-missing-font-68f50e16803e460aa4130d1bf56c9d7f.ttf').exists()"
+      ],
+      "started_at": "2026-11-05T07:06:41.014411+00:00",
+      "ended_at": "2026-11-05T07:06:41.145740+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "local-image-id",
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "--format",
+        "{{.Id}}",
+        "ai-review-console-langflow:candidate"
+      ],
+      "started_at": "2026-11-05T07:06:41.154170+00:00",
+      "ended_at": "2026-11-05T07:06:41.197953+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "1c73d814372ae9c297b14ef417e96d98d112cc64ee780d49f17ab1eda38e138b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "inject-font-failure",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/report-retry/font-fault.compose.json",
+        "up",
+        "-d",
+        "--no-deps",
+        "--no-build",
+        "--pull",
+        "never",
+        "--force-recreate",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:06:41.198023+00:00",
+      "ended_at": "2026-11-05T07:06:44.579707+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e0b0bcb10aaa205db29455d290d1c929bb1c1909fb5b4cde9f8a9b1fa76b6f35",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:06:44.579769+00:00",
+      "ended_at": "2026-11-05T07:06:44.653983+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "892cb42731d2ca86a8e120e8a06df10c9b72d057805e3a6c93d21e03e97f7df0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "97261c1ae415edb77c9e086dd7aa528389f74ff15b9eab79cb17993bac0af4bf"
+      ],
+      "started_at": "2026-11-05T07:06:44.654028+00:00",
+      "ended_at": "2026-11-05T07:06:44.669142+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "d6b1316176bba0a41c6f9bd4cf6d6ace06bebbb4580cb654bbd4d16fbc0e43dd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:06:46.689471+00:00",
+      "ended_at": "2026-11-05T07:06:46.759203+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "892cb42731d2ca86a8e120e8a06df10c9b72d057805e3a6c93d21e03e97f7df0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "97261c1ae415edb77c9e086dd7aa528389f74ff15b9eab79cb17993bac0af4bf"
+      ],
+      "started_at": "2026-11-05T07:06:46.759252+00:00",
+      "ended_at": "2026-11-05T07:06:46.773612+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "d6b1316176bba0a41c6f9bd4cf6d6ace06bebbb4580cb654bbd4d16fbc0e43dd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:06:48.793679+00:00",
+      "ended_at": "2026-11-05T07:06:48.864184+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "892cb42731d2ca86a8e120e8a06df10c9b72d057805e3a6c93d21e03e97f7df0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "97261c1ae415edb77c9e086dd7aa528389f74ff15b9eab79cb17993bac0af4bf"
+      ],
+      "started_at": "2026-11-05T07:06:48.864246+00:00",
+      "ended_at": "2026-11-05T07:06:48.881707+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "40f775f996c473e7b14be6e75af714967881ffc4eecbb489ed01032e9ea3c754",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:06:50.903318+00:00",
+      "ended_at": "2026-11-05T07:06:50.981979+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "892cb42731d2ca86a8e120e8a06df10c9b72d057805e3a6c93d21e03e97f7df0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "97261c1ae415edb77c9e086dd7aa528389f74ff15b9eab79cb17993bac0af4bf"
+      ],
+      "started_at": "2026-11-05T07:06:50.982039+00:00",
+      "ended_at": "2026-11-05T07:06:50.999753+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "388df8931f4af95e9ce755ccb30344140609ae7d0fae9e8c20ecdae86723e4bc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:06:53.020917+00:00",
+      "ended_at": "2026-11-05T07:06:53.091152+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "892cb42731d2ca86a8e120e8a06df10c9b72d057805e3a6c93d21e03e97f7df0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "97261c1ae415edb77c9e086dd7aa528389f74ff15b9eab79cb17993bac0af4bf"
+      ],
+      "started_at": "2026-11-05T07:06:53.091207+00:00",
+      "ended_at": "2026-11-05T07:06:53.106158+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "388df8931f4af95e9ce755ccb30344140609ae7d0fae9e8c20ecdae86723e4bc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:06:55.127824+00:00",
+      "ended_at": "2026-11-05T07:06:55.203553+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "892cb42731d2ca86a8e120e8a06df10c9b72d057805e3a6c93d21e03e97f7df0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "97261c1ae415edb77c9e086dd7aa528389f74ff15b9eab79cb17993bac0af4bf"
+      ],
+      "started_at": "2026-11-05T07:06:55.203607+00:00",
+      "ended_at": "2026-11-05T07:06:55.218325+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "744b3e4ecde6c121c1c71aa4a9231967a265aeed33ed554f75961c6e53eb6b5d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:06:57.238619+00:00",
+      "ended_at": "2026-11-05T07:06:57.304901+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "892cb42731d2ca86a8e120e8a06df10c9b72d057805e3a6c93d21e03e97f7df0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "97261c1ae415edb77c9e086dd7aa528389f74ff15b9eab79cb17993bac0af4bf"
+      ],
+      "started_at": "2026-11-05T07:06:57.304952+00:00",
+      "ended_at": "2026-11-05T07:06:57.319597+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "744b3e4ecde6c121c1c71aa4a9231967a265aeed33ed554f75961c6e53eb6b5d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:06:59.340831+00:00",
+      "ended_at": "2026-11-05T07:06:59.412906+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "892cb42731d2ca86a8e120e8a06df10c9b72d057805e3a6c93d21e03e97f7df0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "97261c1ae415edb77c9e086dd7aa528389f74ff15b9eab79cb17993bac0af4bf"
+      ],
+      "started_at": "2026-11-05T07:06:59.412955+00:00",
+      "ended_at": "2026-11-05T07:06:59.428523+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "b67eb24877cfaea2c440b298e6873d311b18d1999c7496f374a7579fd53259f4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:07:01.448809+00:00",
+      "ended_at": "2026-11-05T07:07:01.511944+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "892cb42731d2ca86a8e120e8a06df10c9b72d057805e3a6c93d21e03e97f7df0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "97261c1ae415edb77c9e086dd7aa528389f74ff15b9eab79cb17993bac0af4bf"
+      ],
+      "started_at": "2026-11-05T07:07:01.511996+00:00",
+      "ended_at": "2026-11-05T07:07:01.525918+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "b67eb24877cfaea2c440b298e6873d311b18d1999c7496f374a7579fd53259f4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:07:03.546276+00:00",
+      "ended_at": "2026-11-05T07:07:03.651679+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "892cb42731d2ca86a8e120e8a06df10c9b72d057805e3a6c93d21e03e97f7df0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "97261c1ae415edb77c9e086dd7aa528389f74ff15b9eab79cb17993bac0af4bf"
+      ],
+      "started_at": "2026-11-05T07:07:03.651738+00:00",
+      "ended_at": "2026-11-05T07:07:03.666496+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "47290c09da1a6417455a6700730ffcf587e28deac480b0a24505a4bc5ea00928",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "local-image-id",
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "--format",
+        "{{.Id}}",
+        "ai-review-console-langflow:candidate"
+      ],
+      "started_at": "2026-11-05T07:07:48.361125+00:00",
+      "ended_at": "2026-11-05T07:07:48.396333+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "1c73d814372ae9c297b14ef417e96d98d112cc64ee780d49f17ab1eda38e138b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "restore-langflow",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "up",
+        "-d",
+        "--no-deps",
+        "--no-build",
+        "--pull",
+        "never",
+        "--force-recreate",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:07:48.396395+00:00",
+      "ended_at": "2026-11-05T07:07:52.002791+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "04a793602e250e9589ea6ad17a6354e23cfcdc4249df87ef32aa481d426182a5",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:07:52.002841+00:00",
+      "ended_at": "2026-11-05T07:07:52.073572+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "2c0f02e46c9d95351aa4f130b3cf2d80ce751050d31731661ff1a684dd37bc8d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "08f50363b38f11088739944096fc280123da75f374036da9f0cd04c40ffa4fd9"
+      ],
+      "started_at": "2026-11-05T07:07:52.073620+00:00",
+      "ended_at": "2026-11-05T07:07:52.089669+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "88da3e130c57314dc1ee4f5350163aa342a065fdf054c8d55dbdc25a7e4d4c68",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:07:54.110593+00:00",
+      "ended_at": "2026-11-05T07:07:54.186476+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "2c0f02e46c9d95351aa4f130b3cf2d80ce751050d31731661ff1a684dd37bc8d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "08f50363b38f11088739944096fc280123da75f374036da9f0cd04c40ffa4fd9"
+      ],
+      "started_at": "2026-11-05T07:07:54.186539+00:00",
+      "ended_at": "2026-11-05T07:07:54.201487+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "88da3e130c57314dc1ee4f5350163aa342a065fdf054c8d55dbdc25a7e4d4c68",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:07:56.222128+00:00",
+      "ended_at": "2026-11-05T07:07:56.296946+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "2c0f02e46c9d95351aa4f130b3cf2d80ce751050d31731661ff1a684dd37bc8d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "08f50363b38f11088739944096fc280123da75f374036da9f0cd04c40ffa4fd9"
+      ],
+      "started_at": "2026-11-05T07:07:56.297013+00:00",
+      "ended_at": "2026-11-05T07:07:56.311751+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "88da3e130c57314dc1ee4f5350163aa342a065fdf054c8d55dbdc25a7e4d4c68",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:07:58.333398+00:00",
+      "ended_at": "2026-11-05T07:07:58.402744+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "2c0f02e46c9d95351aa4f130b3cf2d80ce751050d31731661ff1a684dd37bc8d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "08f50363b38f11088739944096fc280123da75f374036da9f0cd04c40ffa4fd9"
+      ],
+      "started_at": "2026-11-05T07:07:58.402797+00:00",
+      "ended_at": "2026-11-05T07:07:58.419128+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "6e9bdd99fba8038a393ff6537d30e375edd0abf670b71bf5cc90436f42bb7230",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:08:00.439485+00:00",
+      "ended_at": "2026-11-05T07:08:00.511327+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "2c0f02e46c9d95351aa4f130b3cf2d80ce751050d31731661ff1a684dd37bc8d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "08f50363b38f11088739944096fc280123da75f374036da9f0cd04c40ffa4fd9"
+      ],
+      "started_at": "2026-11-05T07:08:00.511391+00:00",
+      "ended_at": "2026-11-05T07:08:00.525863+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "6e9bdd99fba8038a393ff6537d30e375edd0abf670b71bf5cc90436f42bb7230",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:08:02.546672+00:00",
+      "ended_at": "2026-11-05T07:08:02.618059+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "2c0f02e46c9d95351aa4f130b3cf2d80ce751050d31731661ff1a684dd37bc8d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "08f50363b38f11088739944096fc280123da75f374036da9f0cd04c40ffa4fd9"
+      ],
+      "started_at": "2026-11-05T07:08:02.618111+00:00",
+      "ended_at": "2026-11-05T07:08:02.632939+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "d71f362331e5e322fb092dc59f4877b9e845893f4ff7aa5d875c98863826779e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:08:04.653340+00:00",
+      "ended_at": "2026-11-05T07:08:04.721239+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "2c0f02e46c9d95351aa4f130b3cf2d80ce751050d31731661ff1a684dd37bc8d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "08f50363b38f11088739944096fc280123da75f374036da9f0cd04c40ffa4fd9"
+      ],
+      "started_at": "2026-11-05T07:08:04.721290+00:00",
+      "ended_at": "2026-11-05T07:08:04.736786+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "d71f362331e5e322fb092dc59f4877b9e845893f4ff7aa5d875c98863826779e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:08:06.758022+00:00",
+      "ended_at": "2026-11-05T07:08:06.828562+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "2c0f02e46c9d95351aa4f130b3cf2d80ce751050d31731661ff1a684dd37bc8d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "08f50363b38f11088739944096fc280123da75f374036da9f0cd04c40ffa4fd9"
+      ],
+      "started_at": "2026-11-05T07:08:06.828626+00:00",
+      "ended_at": "2026-11-05T07:08:06.842847+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "8707f358c85147ebaaa0349d41aeddc2a09ccd129b676785c2763aa6acf98ccd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:08:08.864488+00:00",
+      "ended_at": "2026-11-05T07:08:08.927840+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "2c0f02e46c9d95351aa4f130b3cf2d80ce751050d31731661ff1a684dd37bc8d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "08f50363b38f11088739944096fc280123da75f374036da9f0cd04c40ffa4fd9"
+      ],
+      "started_at": "2026-11-05T07:08:08.927896+00:00",
+      "ended_at": "2026-11-05T07:08:08.941766+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "8707f358c85147ebaaa0349d41aeddc2a09ccd129b676785c2763aa6acf98ccd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-id",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "ps",
+        "-q",
+        "langflow"
+      ],
+      "started_at": "2026-11-05T07:08:10.962067+00:00",
+      "ended_at": "2026-11-05T07:08:11.025272+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "2c0f02e46c9d95351aa4f130b3cf2d80ce751050d31731661ff1a684dd37bc8d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "langflow-inspect",
+      "argv": [
+        "docker",
+        "inspect",
+        "08f50363b38f11088739944096fc280123da75f374036da9f0cd04c40ffa4fd9"
+      ],
+      "started_at": "2026-11-05T07:08:11.025323+00:00",
+      "ended_at": "2026-11-05T07:08:11.039384+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "900ca0c0cc61308cce558fb0f72da72b7ce3633b523423505432abf5e5b4628b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "published-flow-hashes",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "exec",
+        "-T",
+        "worker",
+        "python",
+        "-c",
+        "\nimport json\nfrom api.app.langflow_client import LangflowClient, flow_configuration, graph_hash\nclient=LangflowClient()\nresult={}\ntry:\n    for kind in ('intake','report'):\n        config=flow_configuration(kind)\n        graph=client.get_flow(config['id'],config['flow_hash'])\n        result[kind]={'id':config['id'],'flow_hash':graph_hash(graph),\n                      'config_hash':config['config_hash']}\n    print(json.dumps(result,sort_keys=True))\nfinally:\n    client.close()\n"
+      ],
+      "started_at": "2026-11-05T07:08:11.059292+00:00",
+      "ended_at": "2026-11-05T07:08:11.894194+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "c716d01c11432f7588bc1461821b5e5f47add1d932626cfc058bd2b3152a78ea",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    },
+    {
+      "label": "database-counts",
+      "argv": [
+        "docker",
+        "compose",
+        "-p",
+        "arc-ci-41983887326-amd64",
+        "-f",
+        "/tmp/arc-candidate-acceptance-41983887326.hpykZ4/effective.compose.json",
+        "exec",
+        "-T",
+        "api",
+        "python",
+        "-c",
+        "import json; from sqlalchemy import text; from api.app.database import engine; c=engine.connect(); r={'active_jobs':c.execute(text(\"SELECT count(*) FROM workflow_jobs WHERE state IN ('queued','running','retry_wait')\")).scalar_one(),'case_count':c.execute(text('SELECT count(*) FROM review_cases')).scalar_one()}; p={'case_id':'RC-ae396602d48c426489ace41fd4bd05c5'}; r['decision_count']=c.execute(text('SELECT count(*) FROM decisions WHERE case_id=:case_id'),p).scalar_one(); r['decision_audit_count']=c.execute(text(\"SELECT count(*) FROM audit_events WHERE case_id=:case_id AND event_type='decision_recorded'\"),p).scalar_one(); print(json.dumps(r)); c.close()"
+      ],
+      "started_at": "2026-11-05T07:08:13.938058+00:00",
+      "ended_at": "2026-11-05T07:08:14.709225+00:00",
+      "exit_code": 0,
+      "stdout_sha256": "a570f62c336e799d28b573b7eb61acdd571af96ded0de95d42d7b0ad46cd3aba",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "raw_output_recorded": false
+    }
+  ],
+  "files": [
+    {
+      "path": "final-report.json",
+      "bytes": 3943,
+      "sha256": "c4e8a26af204976b7e101993cd612bb7a4517d0bcfa752aaad0f883389c5c157"
+    },
+    {
+      "path": "first-partial.json",
+      "bytes": 3204,
+      "sha256": "896f98212856e1b09c3e225d0b4bc3aba3b62ddd8dfe5ea2771ec1895e0aeaf1"
+    },
+    {
+      "path": "first-report.html",
+      "bytes": 7759,
+      "sha256": "2c2a7d2cb52eb5ae7608c6e7a24e65614d7ffb9ed56e0caeb5d0048b76398435"
+    },
+    {
+      "path": "first-report.json",
+      "bytes": 3208,
+      "sha256": "80ad008b5a04910b60b55b19a4dea034b18143f91f548a7670d74e9fc6d1430b"
+    },
+    {
+      "path": "font-fault.compose.json",
+      "bytes": 175,
+      "sha256": "4163ed7424c88ad278d50412d243f1f2190421653b35557b9036d9aa1282539e"
+    },
+    {
+      "path": "recovered-report.pdf",
+      "bytes": 39629,
+      "sha256": "653c14a164a7841cc6ccf08e6e6b5e015a6d827f30bbb7055be660d34f4dddd0"
+    },
+    {
+      "path": "restoration.json",
+      "bytes": 1244,
+      "sha256": "2f9867f83fde4ba6db55dc303497b9b1fbb3fdadba345d18fffe32f712743797"
+    },
+    {
+      "path": "terminal-failed.json",
+      "bytes": 3193,
+      "sha256": "15a06e4f6ab3d85676cde5d2a6014a6bf5bc4d722d33c4fea83a18011c6e31f8"
+    }
+  ]
+}

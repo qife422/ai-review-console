@@ -1,0 +1,65 @@
+{
+  "run": "41983022104",
+  "source": "098271e25d6e666448e1700c10b1779c72cb6e65",
+  "images": {
+    "api": "sha256:ded59c32161562cfe5b59184b81fce7e7b3564969e68f5998606e721e1456463",
+    "worker": "sha256:ded59c32161562cfe5b59184b81fce7e7b3564969e68f5998606e721e1456463",
+    "langflow": "sha256:2447b1b0b8aeac4a474057913f6358f81fdffb08b0af0257b00db1727a1296f7",
+    "web": "sha256:4c9c15fdb6d7c6191ea490fbf88bbe41a7c7372ba4e68416f277c41be87632b2",
+    "postgres": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+  },
+  "sources": [],
+  "files": [
+    {
+      "path": "baseline.json",
+      "bytes": 7191,
+      "sha256": "965014390d3c997019def9ffd938ffdd831382bd866e5be25133dec4dabacfb2"
+    },
+    {
+      "path": "capacity.jsonl",
+      "bytes": 2976,
+      "sha256": "313d6817c4947e88417925a3b2f46b46457beda8876cce2e70291dca583ffb3d"
+    },
+    {
+      "path": "unit.xml",
+      "bytes": 41314,
+      "sha256": "aa0e2b90bae4ceee00a366364930cec51943f712d82773b87ab8a1faaab62442"
+    },
+    {
+      "path": "editor/editor-visible.txt",
+      "bytes": 9857,
+      "sha256": "2346885223b7fc59f7eaadf3b3d50b4df6018877373e32c85fe4e1568a9b1ed1"
+    },
+    {
+      "path": "editor/flows-visible.txt",
+      "bytes": 4074,
+      "sha256": "da7873c75a26e162161b33812e1f9265347f049de8d83d8ba18c666c780fc24a"
+    },
+    {
+      "path": "editor/editor-state.json",
+      "bytes": 802,
+      "sha256": "c9f291f33dd165a20d637a1ce42e55c973d70772355b3f2f9fbee318a357195e"
+    },
+    {
+      "path": "editor/editor.png",
+      "bytes": 97330,
+      "sha256": "654e089f3eaf3a87283842d2f38c266563613e2c4f2d9878a1a735701745ef06"
+    },
+    {
+      "path": "editor/result.json",
+      "bytes": 477,
+      "sha256": "b16b4b11f7b441311fed295ea8d5be54d2b1075efbc581786c89765c2ff0a21d"
+    },
+    {
+      "path": "editor/failure-snapshot.txt",
+      "bytes": 9857,
+      "sha256": "2346885223b7fc59f7eaadf3b3d50b4df6018877373e32c85fe4e1568a9b1ed1"
+    },
+    {
+      "path": "editor/commands.log",
+      "bytes": 52085,
+      "sha256": "7a00afa462a121cdc07fc8519951151a04e6e14a0046301e74bc774d0bca9093"
+    }
+  ],
+  "scope": "New synthetic AMD64 candidate only; raw font fault report files/container logs/npm/browser caches unselected; no whole build trees or dumps uploaded."
+}

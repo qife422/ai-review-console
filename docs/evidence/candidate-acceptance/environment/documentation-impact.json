@@ -1,0 +1,36 @@
+{
+  "scope": "Final documentation/evidence only after tested54592df. No final-docs-image rebuild or deployment claimed; skipped CI is not success.",
+  "README_copied_into_API": {
+    "path": "README.md",
+    "tested_sha256": "b83a7e91071ba522516e1bf820a817ca8bb41603de1474f7c3a5c745841c4fbb",
+    "final_sha256": "f09b48d542bdcaf34ba9e87d6de2b248276ba6422521c9e3163006b514fdb23a",
+    "changed": true
+  },
+  "other_explicit_notice_inputs": [
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "980842118da0e7e56fd432dddad8e8cf3a016be1093023edfc19e05e942acdd0",
+      "changed": false
+    },
+    {
+      "path": "docs/DEPENDENCY_LICENSES.md",
+      "sha256": "7a2bb2ee09cb74e485dc757d3c0d566c4cf9d7ab379dabd0b422f4bac0b6e068",
+      "changed": false
+    },
+    {
+      "path": "licenses/Langflow-LICENSE.txt",
+      "sha256": "2f6f90f0641ad822aec5d2bccd1f97c569cc0cbaf0ec3754d10290808f3b1f1b",
+      "changed": false
+    },
+    {
+      "path": "licenses/sqlite-vec-LICENSE-MIT.txt",
+      "sha256": "6ce72bbe12d975bd5286e5ab0a064c069693300c47bccbc57bec18485f1621ea",
+      "changed": false
+    },
+    {
+      "path": "licenses/sqlite-vec-LICENSE-APACHE.txt",
+      "sha256": "a38070a94d4afd9cd710e3ce67bd1de78097cfe1784c1f0109ac95d3c196bfdc",
+      "changed": false
+    }
+  ]
+}

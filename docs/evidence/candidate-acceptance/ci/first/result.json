@@ -1,0 +1,13 @@
+{
+  "outcome": "failed",
+  "failure": "Expected button absent from fresh snapshot",
+  "steps": [
+    "Actual login form submitted",
+    "Two published project Flows visible"
+  ],
+  "calls": 20,
+  "base_url": "http://127.0.0.1:7860/",
+  "editor_evidence": null,
+  "scope": "Synthetic copy editor only; custom code editing, business Flow changes and production are not tested",
+  "cli_cache": "Unselected ephemeral runner cache outside the evidence root; no cleanup performed"
+}

@@ -1,0 +1,21 @@
+{
+  "classification": "derived_failure_subset",
+  "run": 41983022104,
+  "source": "098271e25d6e666448e1700c10b1779c72cb6e65",
+  "outcome": "failure",
+  "failed_steps": [
+    "Actual synthetic Flow editor and persisted UI rename",
+    "Five isolated worker and transport fault recoveries"
+  ],
+  "log_source": {
+    "method": "gh run view41983022104 --job127097254139 --log; select ValueError lines",
+    "bytes": 409177,
+    "sha256": "0d6a31e722eb29722534ff0830987e150af6c462513348c35d332c369faf4ee7",
+    "full_log_retained": false
+  },
+  "selected_lines": [
+    "acceptance\tFive isolated worker and transport fault recoveries\t2026-11-05T06:54:47.7097498Z ValueError: Use a fresh existing system temporary directory"
+  ],
+  "editor_failure_original": "ci/first/result.json",
+  "followup": "B source8db7f5f used actual current menu label and mktemp under system/tmp. Guard restriction not weakened. B faults/report/performance passed; B editor429 remains failed original. C only repairs bounded429 handling."
+}

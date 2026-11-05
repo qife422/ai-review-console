@@ -2,6 +2,12 @@
 
 本文件记录主要功能与交接边界；精确代码差异以 Git 提交为准。开发快照不是正式发布，源码备份不是运行数据库备份。
 
+## 2026-11-05 — 候选编辑器、恢复与性能专项
+
+- B运行[41983887326](https://github.com/qife422/ai-review-console/actions/runs/41983887326)，source8db7f5f：5项真实故障恢复、PDF部分失败及环境恢复通过；20份1MiB顺序文档、333次混合查询、60份三格式报告全部完成。上传p95 38.28ms、查询p95 83.38ms，Intake最长3.193s、三报告含下载最长2.842s。301项Python单元测试通过。
+- A菜单定位/临时根目录拒绝及B编辑器最终登录429均保留为失败；只修正探针和CI，未降低认证、运行环境或原Flow保全检查。C运行[42070564065](https://github.com/qife422/ai-review-console/actions/runs/42070564065)，source54592df，通过虚构副本改名、保存、重载及API回读（C专项success，305项Python/29项前端通过）；此轮明确只验editor，不宣称B故障/性能在C镜像重测。
+- [结果、待解决问题与后续计划](docs/evidence/candidate-acceptance/README.md)封存；原SQLite、固定Spec、默认1.11.6、依赖锁和七旧包共1,283payload复核不变。Mac宿主、ARM旧schema迁移、系统/native/Zep/vendor许可及完整AC-19仍open；没有默认切换、原库迁移、后端发布或历史清理。
+
 ## 2026-11-04 — 候选 ARM 后端验证
 
 - 确认上一轮自查/远端e1d8a02及88payload后，按授权进入ARM切片；固化334包和4工具的ARM独立SHA锁，原AMD锁不变。

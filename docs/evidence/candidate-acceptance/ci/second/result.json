@@ -1,0 +1,13 @@
+{
+  "outcome": "failed",
+  "failure": "Command failed: .venv/bin/python scripts/prepare_langflow_editor.py verify --state /tmp/arc-candidate-acceptance-41983887326.hpykZ4/selected/editor/editor-state.json\nTraceback (most recent call last):\n  File \"/home/runner/work/ai-review-console/ai-review-console/scripts/prepare_langflow_editor.py\", line 135, in <module>\n    main()\n  File \"/home/runner/work/ai-review-console/ai-review-console/scripts/prepare_langflow_editor.py\", line 64, in main\n    headers = login(\n              ^^^^^^\n  File \"/home/runner/work/ai-review-console/ai-review-console/scripts/bootstrap_langflow.py\", line 55, in login\n    response.raise_for_status()\n  File \"/home/runner/work/ai-review-console/ai-review-console/.venv/lib/python3.12/site-packages/httpx/_models.py\", line 829, in raise_for_status\n    raise HTTPStatusError(message, request=request, response=self)\nhttpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'http://127.0.0.1:7860/api/v1/login'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429\n",
+  "steps": [
+    "Actual login form submitted",
+    "Two published project Flows visible"
+  ],
+  "calls": 29,
+  "base_url": "http://127.0.0.1:7860/",
+  "editor_evidence": null,
+  "scope": "Synthetic copy editor only; custom code editing, business Flow changes and production are not tested",
+  "cli_cache": "Unselected ephemeral runner cache outside the evidence root; no cleanup performed"
+}

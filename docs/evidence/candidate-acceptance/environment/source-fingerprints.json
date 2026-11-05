@@ -1,0 +1,55 @@
+{
+  "source": "54592dff0231ee84b992956e0ea9b99b0eecdc39",
+  "files": [
+    {
+      "path": ".github/workflows/candidate-acceptance.yml",
+      "bytes": 9936,
+      "sha256": "45b7d93a09b2c547ad06fb22f7118c62a39af5d18b8def6f94dd4348925e54b3"
+    },
+    {
+      "path": "frontend/scripts/verify-langflow-ui-cli.mjs",
+      "bytes": 6853,
+      "sha256": "d86baa0012b8dc88a4e6d11a4162af541bb22aab2ca2bfdc94dd282cc86f2571"
+    },
+    {
+      "path": "scripts/candidate_runtime_guard.py",
+      "bytes": 6828,
+      "sha256": "ba357ae355acfc127597ea0b0120b363645bcc859935a8358bcbf7113ed5c5c9"
+    },
+    {
+      "path": "scripts/prepare_langflow_editor.py",
+      "bytes": 7617,
+      "sha256": "f9ac6dda7799bdfae0a8d548a656ac34eecac3734ef798c010a12a413456230a"
+    },
+    {
+      "path": "scripts/validate_langflow.py",
+      "bytes": 30530,
+      "sha256": "00a3bfbfa9c70593fe2b90c0c1ec4668b25ee5e2121f0fc81d8e94400067cb2f"
+    },
+    {
+      "path": "scripts/verify_faults.py",
+      "bytes": 16566,
+      "sha256": "2e786f0c3703f5c13ea2cc617e583cef34b4f0d02ca0b968a7aed81439435a88"
+    },
+    {
+      "path": "scripts/verify_report_retry.py",
+      "bytes": 24458,
+      "sha256": "38facdad4f2a891c824598cf8ff0d6c7b8936212fda134dbe684841937f6fedb"
+    },
+    {
+      "path": "tests/test_candidate_performance.py",
+      "bytes": 9176,
+      "sha256": "be4617701048a841b3c2c4b27b762c7174d7abf31c154dd674f17f17e95a4594"
+    },
+    {
+      "path": "tests/test_candidate_runtime_guard.py",
+      "bytes": 10004,
+      "sha256": "e3cb0496cecd4712803f5d9d99642198f4792cdc75d19384aeee917167bbc642"
+    },
+    {
+      "path": "tests/test_prepare_langflow_editor.py",
+      "bytes": 2327,
+      "sha256": "b4c260cc400bb787407a84806ae5c835a2e00d54f540acbd0daf7101f96e0d29"
+    }
+  ]
+}

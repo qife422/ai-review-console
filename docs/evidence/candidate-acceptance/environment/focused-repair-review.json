@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-11-05T17:03:03.818361+00:00",
+  "from_source": "8db7f5f8a5cd6c1634a8c7a0ed40b195ff3ed424",
+  "to_source": "54592dff0231ee84b992956e0ea9b99b0eecdc39",
+  "changed_paths": [
+    ".github/workflows/candidate-acceptance.yml",
+    "frontend/scripts/verify-langflow-ui-cli.mjs",
+    "scripts/prepare_langflow_editor.py",
+    "tests/test_prepare_langflow_editor.py"
+  ],
+  "scope": "Only editor probe helper429 handling, subprocess limit, matching mock tests and focused manual CI selection. Application business modules, fault/performance producers, components, Dockerfiles, flows and locks unchanged. API image can differ because scripts are COPY inputs; B family results do not become exact-image C evidence.",
+  "independent_review": "Astra migration_review read-only message on2026-11-05: no new blocking finding; auth/version/runtime guard/original-Flow and persisted-name assertions retained; 429 only max3attempts, Retry-After/default30,90s scheduling deadline, outer120s helper. Four mock tests source read, not re-executed by reviewer.",
+  "local_verification": {
+    "mock_tests": 4,
+    "result": "passed",
+    "ruff": "passed",
+    "node_check": "passed",
+    "workflow_yaml_bash_syntax": "passed",
+    "diff_check": "passed"
+  },
+  "tokens_billing": "Actual model tokens and billing unavailable; roles Sol implementation/Terra editorCI/Astra independent review. No claim of measured token cost."
+}

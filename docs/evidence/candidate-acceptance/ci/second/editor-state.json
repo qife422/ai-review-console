@@ -1,0 +1,22 @@
+{
+  "runtime_identity": {
+    "project": "arc-ci-41983887326-amd64",
+    "langflow_image": "sha256:b836bf131480cd92747e8e50f54324fd3d76531137a59fa214e32549f2b44966"
+  },
+  "synthetic_id": "3ff5729c-81c7-434f-938b-b09b6504841c",
+  "original_name": "ARC Synthetic Editor a12213a0ac",
+  "edited_name": "ARC Synthetic Editor a12213a0ac Edited",
+  "originals_before": {
+    "Document Review Intake": {
+      "id": "43837f6c-2535-49d4-ace9-4a6a310f93ef",
+      "graph_sha256": "492fe18811670806c671c4c0528ced9c4b5fdf033f52127d6ebcd676ade86968"
+    },
+    "Document Review Decision": {
+      "id": "292063ea-a61e-4b8f-b539-3b02357a1488",
+      "graph_sha256": "10f0d99a6f27435f2b1e671e1f2348045777a9a689bf42aac56fa3717671a1c5"
+    }
+  },
+  "synthetic_nodes": 4,
+  "synthetic_edges": 3,
+  "version": "1.13.1"
+}

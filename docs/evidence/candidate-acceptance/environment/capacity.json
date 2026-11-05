@@ -1,0 +1,76 @@
+{
+  "checked_at": "2026-11-05T17:12:48.232417+00:00",
+  "measurement": "regular file sizes plus symlink lstat; symlinks not followed. Snapshot before this capacity record and final manifest; final manifest states exact payload.",
+  "new_temp": {
+    "path": "/private/tmp/arc-candidate-acceptance.1gcqlp6y",
+    "regular_files": 33,
+    "symlinks": 0,
+    "bytes": 485527
+  },
+  "prior_four": [
+    {
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB",
+      "regular_files": 276,
+      "symlinks": 0,
+      "bytes": 38360216
+    },
+    {
+      "path": "/private/tmp/arc-langflow-candidate.qya6psom",
+      "regular_files": 72,
+      "symlinks": 8,
+      "bytes": 1217200
+    },
+    {
+      "path": "/private/tmp/arc-langflow-transition.l7tcavqh",
+      "regular_files": 60,
+      "symlinks": 0,
+      "bytes": 860409
+    },
+    {
+      "path": "/private/tmp/arc-langflow-arm.tlmz8anp",
+      "regular_files": 26,
+      "symlinks": 0,
+      "bytes": 514075
+    }
+  ],
+  "combined_temp_bytes": 41437427,
+  "ci_selected": {
+    "path": "artifacts/evidence-candidates/candidate-acceptance/ci",
+    "regular_files": 25,
+    "symlinks": 0,
+    "bytes": 460873
+  },
+  "sources_selected": {
+    "path": "artifacts/evidence-candidates/candidate-acceptance/sources",
+    "regular_files": 4,
+    "symlinks": 0,
+    "bytes": 6782
+  },
+  "candidate_before_capacity_and_manifest": {
+    "path": "artifacts/evidence-candidates/candidate-acceptance",
+    "regular_files": 41,
+    "symlinks": 0,
+    "bytes": 503448
+  },
+  "limits": {
+    "new_temp_bytes": 786432,
+    "combined_temp_bytes": 41943040,
+    "ci_bytes": 524288,
+    "ci_files": 40,
+    "source_bytes": 65536,
+    "source_files": 4,
+    "candidate_and_formal_each_bytes": 104857600,
+    "candidate_and_formal_each_files": 1000,
+    "amplification_stop": "above1GiB AND100x prior764861B author source; no whole-build backup"
+  },
+  "C_runner_selected_samples": {
+    "count": 81,
+    "minimum_free_bytes": 87074045952,
+    "floor_bytes": 5368709120,
+    "not_a_hard_quota": true
+  },
+  "host_free_bytes": 21335982080,
+  "plan_vs_enforcement": "512MiB/500files was workload warning estimate, not continuous volume enforcement. Actual API1GiB/5000.20GiB entry/5GiB sampled host floor and selected caps enforced.",
+  "cleanup": false,
+  "local_Docker_operations": false
+}

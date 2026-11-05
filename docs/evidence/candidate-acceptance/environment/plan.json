@@ -1,0 +1,57 @@
+{
+  "same_goal": "cfd2d589-0c13-4ee0-bd93-8316c3f556a4",
+  "user_authorization": "2026-11-04 当前用户：补1.13.1候选管理编辑器、故障恢复和性能验收，默认1.11.6及原始数据不变，同步结果/待解决/计划GitHub",
+  "source_head": "2622765d261d6a33b8ec3a9cee66624fa7666ff4",
+  "budget_minutes_cumulative": 360,
+  "prior_elapsed_seconds": 17952.477863311768,
+  "temporary": "/private/tmp/arc-candidate-acceptance.1gcqlp6y",
+  "new_temp_limit_bytes": 786432,
+  "prior_temp": [
+    {
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB",
+      "bytes": 38360216
+    },
+    {
+      "path": "/private/tmp/arc-langflow-candidate.qya6psom",
+      "bytes": 1217200
+    },
+    {
+      "path": "/private/tmp/arc-langflow-transition.l7tcavqh",
+      "bytes": 860409
+    },
+    {
+      "path": "/private/tmp/arc-langflow-arm.tlmz8anp",
+      "bytes": 514075
+    }
+  ],
+  "combined_temp_limit_bytes": 41943040,
+  "ci_selected_limit_bytes": 524288,
+  "ci_selected_limit_files": 40,
+  "sources_limit_bytes": 65536,
+  "sources_limit_files": 4,
+  "candidate": "artifacts/evidence-candidates/candidate-acceptance",
+  "formal": "docs/evidence/candidate-acceptance",
+  "evidence_each_limit_bytes": 104857600,
+  "evidence_each_limit_files": 1000,
+  "amplification": "existing stop >1GiB and100x prior764861B author source; no entire build backups",
+  "runtime": "Fresh GitHub nativeAMD64 only, own arc-ci-runid-amd64 project, no original DB/volumes; build once shared editor/fault/report/perf.20GiB entrance/5GiB sampled floor. Plain helper scratch/Font overlays only CI own stack, all restored, no cleanup of history.",
+  "source_uploads": "Planned warning estimate512MiB/500files for bounded20x1MiB plus fixed fixtures. NOT implemented as continuous volume guard; actual API configured1GiB/5000. Only host20GiB entrance/5GiB sampled floor and selected-output caps are enforced.",
+  "native_target_reads": 0,
+  "native_remaining": {
+    "files": 6,
+    "input_bytes": 26795216,
+    "text_bytes": 3969945
+  },
+  "cleanup_authorized": false,
+  "model_tokens_estimate": [
+    30000,
+    45000
+  ],
+  "actual_model_tokens": null,
+  "actual_billing": null,
+  "next_minutes_estimate": [
+    45,
+    60
+  ],
+  "artifact_disposition": "Only compact bound receipts and <=2 PNG selected; ZIP memory only, raw complete dumps/venv/cache/build/whole logs unselected; no local Docker operation."
+}

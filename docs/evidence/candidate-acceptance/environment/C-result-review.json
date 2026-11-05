@@ -1,0 +1,50 @@
+{
+  "checked_at": "2026-11-05T17:11:11.625522+00:00",
+  "classification": "derived_subset_and_manual_observation",
+  "run": 42070564065,
+  "source": "54592dff0231ee84b992956e0ea9b99b0eecdc39",
+  "run_conclusion": "success",
+  "skipped_families": [
+    "Five isolated worker and transport fault recoveries",
+    "Partial PDF failure and ready artifact preservation",
+    "Strict twenty 1 MiB mixed-query and report benchmark"
+  ],
+  "jobs_source": {
+    "method": "gh run view --json status,conclusion,jobs,headSha",
+    "bytes": 3977,
+    "sha256": "fbd92f482eb209cf5ad36316cfa703dec2a65445259da2db8bcac45ef3ffa44e",
+    "full_response_retained": false
+  },
+  "unit_tests": {
+    "tests": 305,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "original": "ci/third/unit.xml"
+  },
+  "frontend_log_source": {
+    "method": "gh run view42070564065 --job127397014298 --log; strip ANSI/caret escapes, regex Test Files/Tests counts",
+    "bytes": 408906,
+    "sha256": "cdc1c3ef2ca6d824405e8e883d658596898b301879b2e74aa1617e244fa60ce8",
+    "selected_lines": [
+      "acceptance\tUnit regression and frontend build\t2026-11-05T17:03:25.1998726Z  Test Files  5 passed (5)",
+      "acceptance\tUnit regression and frontend build\t2026-11-05T17:03:25.1999507Z       Tests  29 passed (29)"
+    ],
+    "full_log_retained": false
+  },
+  "editor": "Real UI copy opened, renamed, saved toast, reloaded, final API persisted-name and originals-before/after checks passed. Actual final helper login_retry_count1. No auth/guard bypass.",
+  "screenshot": {
+    "path": "ci/third/editor.png",
+    "observed_by": "root via view_image tool",
+    "observed": "Normal Langflow editor with4trusted business nodes/3visible connections; before rename. Not component code/parameter editing."
+  },
+  "shape_source": {
+    "member": "editor/commands.log",
+    "bytes": 76653,
+    "sha256": "15e2d869a7fed1caba4d51df0f4bf261d35f71c790d8dc4609161ebb89b083a2",
+    "retained": false,
+    "observed_line": "\"ARC_SHAPE:4:3\""
+  },
+  "family_scope": "B remains whole-run failure, its five faults/PDF/performance pass only exactBimages. C editor-only skipped those three families; no inheritance to exactCimages.",
+  "independent_read_only_review": "Astra migration_review independently verified selected sizes/SHA, source/run/image, result originals/name and305JUnit zero failure/error/skips. C frontend29 remains labeled log-derived. No new blocking finding; requested explicitB/Cactual image difference now recorded."
+}
