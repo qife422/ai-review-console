@@ -70,6 +70,57 @@ def write_new(path: Path, payload: bytes) -> None:
         stream.write(payload)
 
 
+def schema_fingerprints(columns: list[dict[str, Any]]) -> tuple[str, dict[str, Any]]:
+    """Hash live relative column order, independently recording physical attnum gaps.
+
+    pg_dump emits only live columns, so restoring a table with dropped columns
+    compacts its physical ordinal positions without changing its logical schema.
+    """
+    logical, counts, maximum = [], {}, {}
+    for column in sorted(columns, key=lambda item: (item["table_name"], item["ordinal_position"])):
+        table = column["table_name"]
+        counts[table] = counts.get(table, 0) + 1
+        maximum[table] = column["ordinal_position"]
+        logical.append({**column, "ordinal_position": counts[table]})
+    gaps = {
+        table: {"live_columns": count, "max_physical_ordinal": maximum[table]}
+        for table, count in counts.items()
+        if maximum[table] != count
+    }
+    return canonical_hash(logical), {
+        "raw_schema_sha256": canonical_hash(columns),
+        "ordinal_gaps": gaps,
+    }
+
+
+def semantic_fingerprint(fingerprint: dict[str, Any]) -> dict[str, Any]:
+    return {
+        database: {field: value for field, value in fields.items() if field != "physical_schema"}
+        for database, fields in fingerprint.items()
+    }
+
+
+def fingerprint_differences(
+    expected: dict[str, Any], actual: dict[str, Any]
+) -> list[dict[str, Any]]:
+    """Emit only database/field names and hashes/counts, never row values."""
+    differences = []
+    for database in DBS:
+        old = semantic_fingerprint(expected).get(database, {})
+        new = semantic_fingerprint(actual).get(database, {})
+        for field in sorted(set(old) | set(new)):
+            if old.get(field) != new.get(field):
+                differences.append(
+                    {
+                        "database": database,
+                        "field": field,
+                        "expected_sha256": canonical_hash(old.get(field)),
+                        "observed_sha256": canonical_hash(new.get(field)),
+                    }
+                )
+    return differences[:8]
+
+
 class Stack:
     def __init__(self, project: str, compose_file: Path):
         self.project, self.phase = project, require_ci(project)
@@ -260,7 +311,12 @@ class Stack:
                 "ordinal_position FROM information_schema.columns "
                 "WHERE table_schema='public') x;",
             )
-            entry: dict[str, Any] = {"schema_sha256": canonical_hash(columns), "tables": {}}
+            logical_schema, physical_schema = schema_fingerprints(columns)
+            entry: dict[str, Any] = {
+                "schema_sha256": logical_schema,
+                "physical_schema": physical_schema,
+                "tables": {},
+            }
             if "alembic_version" in tables:
                 entry["alembic"] = self.sql(
                     db, "SELECT json_agg(version_num) FROM alembic_version;"
@@ -547,11 +603,19 @@ def restore(stack: Stack, directory: Path) -> dict[str, Any]:
             data=(directory / f"{db}.sql").read_bytes(),
         )
     stack.files(restore=files)
-    if stack.fingerprint() != source["fingerprint"]:
-        raise ValueError("Restored database fingerprint mismatch")
+    restored = stack.fingerprint()
+    if semantic_fingerprint(restored) != semantic_fingerprint(source["fingerprint"]):
+        details = fingerprint_differences(source["fingerprint"], restored)
+        raise ValueError("Restored database fingerprint mismatch: " + json.dumps(details))
     if file_manifest(stack.files()) != source["files"]:
         raise ValueError("Restored file fingerprint mismatch")
-    return {"restored_pre_upgrade_checkpoint": True, "target_project": stack.project}
+    return {
+        "restored_pre_upgrade_checkpoint": True,
+        "target_project": stack.project,
+        "semantic_fingerprint_sha256": canonical_hash(semantic_fingerprint(restored)),
+        "physical_schema_before": {db: source["fingerprint"][db]["physical_schema"] for db in DBS},
+        "physical_schema_restored": {db: restored[db]["physical_schema"] for db in DBS},
+    }
 
 
 def reconcile_validation(
@@ -689,7 +753,10 @@ def verify(stack: Stack, directory: Path, api_url: str) -> dict[str, Any]:
     expected = "1.13.1" if stack.phase == "upgrade" else "1.11.6"
     stack.bind_runtime(api_url)
     before = stack.fingerprint()
-    if before["review_console"] != source["fingerprint"]["review_console"]:
+    if (
+        semantic_fingerprint(before)["review_console"]
+        != semantic_fingerprint(source["fingerprint"])["review_console"]
+    ):
         raise ValueError("Pre-existing business records changed during startup")
     if before["langflow"]["users"] != source["fingerprint"]["langflow"]["users"]:
         raise ValueError("Langflow user identities changed")

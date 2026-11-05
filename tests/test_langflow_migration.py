@@ -97,9 +97,11 @@ def test_verify_rejects_changed_records_before_business_calls(monkeypatch, tmp_p
     monkeypatch.setattr(
         migration,
         "load_checkpoint",
-        lambda _: ({"fingerprint": {"review_console": "original"}}, {}),
+        lambda _: ({"fingerprint": {"review_console": {"schema_sha256": "original"}}}, {}),
     )
-    monkeypatch.setattr(stack, "fingerprint", lambda: {"review_console": "changed"})
+    monkeypatch.setattr(
+        stack, "fingerprint", lambda: {"review_console": {"schema_sha256": "changed"}}
+    )
     monkeypatch.setattr(stack, "bind_runtime", lambda _: None)
     monkeypatch.setattr(stack, "run", lambda *a, **k: pytest.fail("No repair/validation allowed"))
     with pytest.raises(ValueError, match="records changed"):
@@ -375,3 +377,53 @@ def test_validation_results_must_exist_in_target_sql_and_files(monkeypatch, atta
             migration.reconcile_validation(stack, validation, before, after, files)["review_cases"]
             == 5
         )
+
+
+def test_schema_hash_preserves_logical_columns_but_records_dropped_column_gaps():
+    def column(name, ordinal, kind="text", nullable="YES"):
+        return {
+            "table_name": "flow",
+            "column_name": name,
+            "data_type": kind,
+            "is_nullable": nullable,
+            "ordinal_position": ordinal,
+        }
+
+    source = [column("id", 1), column("data", 4)]
+    restored = [column("id", 1), column("data", 2)]
+    old_hash, old_physical = migration.schema_fingerprints(source)
+    restored_hash, restored_physical = migration.schema_fingerprints(restored)
+    assert old_hash == restored_hash
+    assert old_physical["raw_schema_sha256"] != restored_physical["raw_schema_sha256"]
+    assert old_physical["ordinal_gaps"] == {"flow": {"live_columns": 2, "max_physical_ordinal": 4}}
+    assert restored_physical["ordinal_gaps"] == {}
+    for changed in (
+        [column("data", 1), column("id", 2)],
+        [column("id", 1), column("renamed", 2)],
+        [column("id", 1), column("data", 2, "integer")],
+        [column("id", 1), column("data", 2, nullable="NO")],
+    ):
+        assert migration.schema_fingerprints(changed)[0] != old_hash
+
+
+def test_physical_schema_is_excluded_from_semantic_comparison_only():
+    source = {
+        "langflow": {
+            "schema_sha256": "logical",
+            "physical_schema": {"raw_schema_sha256": "old"},
+            "users": ["same"],
+        }
+    }
+    restored = {
+        "langflow": {
+            "schema_sha256": "logical",
+            "physical_schema": {"raw_schema_sha256": "new"},
+            "users": ["same"],
+        }
+    }
+    assert migration.semantic_fingerprint(source) == migration.semantic_fingerprint(restored)
+    restored["langflow"]["users"] = ["changed"]
+    assert migration.semantic_fingerprint(source) != migration.semantic_fingerprint(restored)
+    details = migration.fingerprint_differences(source, restored)
+    assert details[0]["field"] == "users"
+    assert "changed" not in json.dumps(details)
