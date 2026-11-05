@@ -20,6 +20,7 @@ BASELINE_SHA256 = "8afd65b961c8772146dad70e64894911a8b5edb951178d5c5f13d7d5fabf1
 PINS = Path("compliance/langflow-candidate.in")
 BUILD_PINS = Path("compliance/langflow-candidate-build-tools.in")
 BUILD_TOOLS = frozenset({"pip", "setuptools", "wheel", "packaging"})
+ARCH_MACHINES = {"amd64": "x86_64", "arm64": "aarch64"}
 MAX_REPORT = 64 * 1024 * 1024
 MAX_OUTPUT = 512 * 1024
 
@@ -53,14 +54,17 @@ def baseline_pins(path: Path) -> dict[str, str]:
     return pins
 
 
-def target(environment: dict) -> None:
+def target(environment: dict, arch: str = "amd64") -> None:
+    if arch not in ARCH_MACHINES:
+        raise ValueError("unsupported target architecture: " + arch)
+    machine = ARCH_MACHINES[arch]
     if (
         environment.get("python_full_version") != "3.12.16"
         or environment.get("sys_platform") != "linux"
-        or environment.get("platform_machine") != "x86_64"
+        or environment.get("platform_machine") != machine
         or environment.get("implementation_name") != "cpython"
     ):
-        raise ValueError("requires CPython 3.12.16 Linux x86_64")
+        raise ValueError(f"requires CPython 3.12.16 Linux {machine} ({arch})")
 
 
 def scoped_pins(baseline: dict[str, str], scope: str) -> dict[str, str]:
@@ -72,11 +76,11 @@ def scoped_pins(baseline: dict[str, str], scope: str) -> dict[str, str]:
 
 
 def lock_from_report(
-    data: dict, pins: dict[str, str], *, wheel_only: bool = False
+    data: dict, pins: dict[str, str], *, wheel_only: bool = False, arch: str = "amd64"
 ) -> tuple[str, list]:
     if data.get("version") != "1":
         raise ValueError("unsupported pip report format")
-    target(data["environment"])
+    target(data["environment"], arch)
     selected = {}
     for item in data["install"]:
         meta = item["metadata"]
@@ -116,7 +120,9 @@ def lock_from_report(
     if set(selected) != set(pins):
         raise ValueError("resolved package set differs from complete baseline")
     archives = [selected[name] for name in sorted(selected)]
-    lock = "# Candidate CPython 3.12.16 Linux x86_64; install with --require-hashes\n"
+    lock = (
+        f"# Candidate CPython 3.12.16 Linux {ARCH_MACHINES[arch]}; install with --require-hashes\n"
+    )
     lock += "".join(f"{a['name']}=={a['version']} --hash=sha256:{a['sha256']}\n" for a in archives)
     return lock, archives
 
@@ -136,7 +142,7 @@ def write_outputs(outputs: list[tuple[Path, bytes]]) -> None:
             handle.write(content)
 
 
-def verify_python(python: str, pins: dict) -> dict:
+def verify_python(python: str, pins: dict, arch: str = "amd64") -> dict:
     subprocess.run([python, "-m", "pip", "check"], check=True, timeout=120)
     code = """import importlib.metadata as m,json,platform,sys
 print(json.dumps({
@@ -153,7 +159,7 @@ print(json.dumps({
         [python, "-c", code], check=True, capture_output=True, text=True, timeout=120
     )
     data = json.loads(result.stdout)
-    target(data["environment"])
+    target(data["environment"], arch)
     actual = {}
     for package in data["packages"]:
         name = canonical(package["name"])
@@ -163,6 +169,7 @@ print(json.dumps({
     if actual != pins:
         raise ValueError("installed package set/versions differ from complete baseline")
     return {
+        "arch": arch,
         "environment": data["environment"],
         "package_count": len(actual),
         "pip_check": "passed",
@@ -176,6 +183,7 @@ def main() -> None:
     for command in ("generate", "verify"):
         p = sub.add_parser(command)
         p.add_argument("--scope", choices=("runtime", "build-tools"), default="runtime")
+        p.add_argument("--arch", choices=tuple(ARCH_MACHINES), default="amd64")
         p.add_argument("--pins", type=Path)
         p.add_argument("--baseline", type=Path, default=BASELINE)
         p.add_argument("--receipt", type=Path, required=True)
@@ -192,6 +200,7 @@ def main() -> None:
     if pins != scoped_pins(baseline, args.scope):
         raise ValueError("pins differ from fixed baseline")
     receipt = {
+        "arch": args.arch,
         "dependency_scope": args.scope,
         "baseline_sha256": BASELINE_SHA256,
         "pins_sha256": hashlib.sha256(args.pins.read_bytes()).hexdigest(),
@@ -201,7 +210,7 @@ def main() -> None:
             raise ValueError("ephemeral pip report exceeds 64MiB")
         raw = args.report.read_bytes()
         lock, archives = lock_from_report(
-            json.loads(raw), pins, wheel_only=args.scope == "build-tools"
+            json.loads(raw), pins, wheel_only=args.scope == "build-tools", arch=args.arch
         )
         receipt.update(
             {
@@ -225,7 +234,7 @@ def main() -> None:
             }
         write_outputs([(args.lock, lock.encode()), (args.receipt, encode(receipt))])
     else:
-        receipt.update(verify_python(args.python, pins))
+        receipt.update(verify_python(args.python, pins, arch=args.arch))
         write_outputs([(args.receipt, encode(receipt))])
 
 

@@ -1,18 +1,32 @@
 name: Langflow dependency lock
 on:
   workflow_dispatch:
+    inputs:
+      arch:
+        description: Target architecture (native runner)
+        type: choice
+        options: [amd64, arm64]
+        default: amd64
+        required: true
 permissions:
   contents: read
 jobs:
   lock:
-    runs-on: ubuntu-latest
+    runs-on: ${{ inputs.arch == 'arm64' && 'ubuntu-24.04-arm' || 'ubuntu-latest' }}
+    env:
+      ARC_LOCK_ARCH: ${{ inputs.arch }}
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - name: Require bounded fresh runner capacity
         run: |
           mkdir -p "$RUNNER_TEMP/arc-lock/selected" "$RUNNER_TEMP/arc-lock/tmp"
-          df -B1 "$RUNNER_TEMP" > "$RUNNER_TEMP/arc-lock/selected/capacity.txt"
+          case "$ARC_LOCK_ARCH:$(uname -m)" in
+            amd64:x86_64|arm64:aarch64) ;;
+            *) echo 'Runner architecture mismatch' >&2; exit 1 ;;
+          esac
+          printf 'requested_arch=%s runner_machine=%s\n' "$ARC_LOCK_ARCH" "$(uname -m)" > "$RUNNER_TEMP/arc-lock/selected/capacity.txt"
+          df -B1 "$RUNNER_TEMP" >> "$RUNNER_TEMP/arc-lock/selected/capacity.txt"
           arc_available="$(df -B1 --output=avail "$RUNNER_TEMP" | tail -n 1 | tr -d '[:space:]')"
           test "$arc_available" -ge 21474836480
       - name: Resolve complete fixed graph and verify a fresh hash-required install
@@ -29,17 +43,17 @@ jobs:
             sh -euc '
               python -m pip install --dry-run --ignore-installed --only-binary=:all: \
                 --report /out/build-report.json -r compliance/langflow-candidate-build-tools.in
-              python -B scripts/lock_langflow_candidate.py generate --scope build-tools \
+              python -B scripts/lock_langflow_candidate.py generate --arch "${{ inputs.arch }}" --scope build-tools \
                 --report /out/build-report.json --lock /out/selected/langflow-candidate-build-tools.lock \
                 --receipt /out/selected/build-resolution.json
               python -m venv --without-pip /out/build-env
               python -m pip --python /out/build-env install --only-binary=:all: --require-hashes \
                 -r /out/selected/langflow-candidate-build-tools.lock
-              python -B scripts/lock_langflow_candidate.py verify --scope build-tools \
+              python -B scripts/lock_langflow_candidate.py verify --arch "${{ inputs.arch }}" --scope build-tools \
                 --python /out/build-env/bin/python --receipt /out/selected/build-installation.json
               /out/build-env/bin/python -m pip install --dry-run --ignore-installed --no-build-isolation \
                 --report /out/pip-report.json -r compliance/langflow-candidate.in
-              python -B scripts/lock_langflow_candidate.py generate \
+              python -B scripts/lock_langflow_candidate.py generate --arch "${{ inputs.arch }}" \
                 --report /out/pip-report.json --lock /out/selected/langflow-candidate.lock \
                 --receipt /out/selected/resolution.json
               python -m venv --without-pip /out/env
@@ -47,7 +61,7 @@ jobs:
                 -r /out/selected/langflow-candidate-build-tools.lock
               /out/env/bin/python -m pip install --no-build-isolation --require-hashes \
                 -r /out/selected/langflow-candidate.lock
-              python -B scripts/lock_langflow_candidate.py verify --python /out/env/bin/python \
+              python -B scripts/lock_langflow_candidate.py verify --arch "${{ inputs.arch }}" --python /out/env/bin/python \
                 --receipt /out/selected/installation.json
             ' &
           arc_lock_pid=$!
@@ -67,7 +81,7 @@ jobs:
           import hashlib,json,os
           from pathlib import Path
           root=Path(os.environ['RUNNER_TEMP'])/'arc-lock'
-          record={'source':os.environ['GITHUB_SHA'],'run':os.environ['GITHUB_RUN_ID'],
+          record={'source':os.environ['GITHUB_SHA'],'run':os.environ['GITHUB_RUN_ID'],'arch':os.environ['ARC_LOCK_ARCH'],
                   'scope':'Only selected lock/receipts; venv, downloaded archives and full pip report are ephemeral, not preserved evidence'}
           record['reports']={}
           for name in ('build-report.json','pip-report.json'):
@@ -83,6 +97,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: langflow-dependency-lock-amd64
+          name: langflow-dependency-lock-${{ inputs.arch }}
           path: ${{ runner.temp }}/arc-lock/selected
           retention-days: 7

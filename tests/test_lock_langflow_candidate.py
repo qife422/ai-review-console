@@ -154,13 +154,16 @@ def make_report(pins):
     return data
 
 
-def test_build_tools_generate_and_verify_cli(tmp_path, monkeypatch):
+@pytest.mark.parametrize("arch", ["amd64", "arm64"])
+def test_build_tools_generate_and_verify_cli(tmp_path, monkeypatch, arch):
     import json
     import sys
 
     pins = lock.read_pins(lock.BUILD_PINS)
     source = tmp_path / "report.json"
-    source.write_text(json.dumps(make_report(pins)))
+    report_data = make_report(pins)
+    report_data["environment"]["platform_machine"] = lock.ARCH_MACHINES[arch]
+    source.write_text(json.dumps(report_data))
     output, receipt = tmp_path / "build.lock", tmp_path / "receipt.json"
     monkeypatch.setattr(
         sys,
@@ -170,6 +173,8 @@ def test_build_tools_generate_and_verify_cli(tmp_path, monkeypatch):
             "generate",
             "--scope",
             "build-tools",
+            "--arch",
+            arch,
             "--report",
             str(source),
             "--lock",
@@ -181,11 +186,13 @@ def test_build_tools_generate_and_verify_cli(tmp_path, monkeypatch):
     lock.main()
     data = json.loads(receipt.read_text())
     assert data["dependency_scope"] == "build-tools"
+    assert data["arch"] == arch
+    assert lock.ARCH_MACHINES[arch] in output.read_text().splitlines()[0]
     assert data["package_count"] == 4
     assert data["sdist_count"] == 0
     assert len(output.read_text().splitlines()) == 5
     installed = {
-        "environment": ENV,
+        "environment": report_data["environment"],
         "packages": [{"name": name, "version": version} for name, version in pins.items()],
     }
     verification = tmp_path / "verified.json"
@@ -197,6 +204,8 @@ def test_build_tools_generate_and_verify_cli(tmp_path, monkeypatch):
             "verify",
             "--scope",
             "build-tools",
+            "--arch",
+            arch,
             "--python",
             "/venv/bin/python",
             "--receipt",
@@ -213,6 +222,7 @@ def test_build_tools_generate_and_verify_cli(tmp_path, monkeypatch):
     ):
         lock.main()
     result = json.loads(verification.read_text())
+    assert result["arch"] == arch
     assert result["package_count"] == 4
     assert result["installed_set_matches_pins"] is True
 
@@ -250,3 +260,53 @@ def test_runtime_receipt_records_limited_sdist_build_policy(tmp_path, monkeypatc
     assert policy["build_tools"] == lock.read_pins(lock.BUILD_PINS)
     assert policy["binary_reproducibility_verified"] is False
     assert policy["policy_execution_verified_by_this_receipt"] is False
+
+
+@pytest.mark.parametrize("arch,machine", [("amd64", "aarch64"), ("arm64", "x86_64")])
+def test_report_rejects_cross_architecture(arch, machine):
+    data = report()
+    data["environment"]["platform_machine"] = machine
+    with pytest.raises(ValueError, match=f"\\({arch}\\)"):
+        lock.lock_from_report(data, {"example-package": "1.2"}, arch=arch)
+
+
+@pytest.mark.parametrize("arch,machine", [("amd64", "aarch64"), ("arm64", "x86_64")])
+def test_verify_rejects_cross_architecture(arch, machine):
+    import json
+
+    data = {
+        "environment": dict(ENV, platform_machine=machine),
+        "packages": [{"name": "example-package", "version": "1.2"}],
+    }
+    with (
+        patch.object(lock.subprocess, "run", side_effect=[Mock(), Mock(stdout=json.dumps(data))]),
+        pytest.raises(ValueError, match=f"\\({arch}\\)"),
+    ):
+        lock.verify_python("/venv/bin/python", {"example-package": "1.2"}, arch=arch)
+
+
+def test_default_amd64_lock_bytes_remain_compatible():
+    text, _ = lock.lock_from_report(report(), {"example-package": "1.2"})
+    assert text == (
+        "# Candidate CPython 3.12.16 Linux x86_64; install with --require-hashes\n"
+        "example-package==1.2 --hash=sha256:" + "a" * 64 + "\n"
+    )
+    assert text == lock.lock_from_report(report(), {"example-package": "1.2"}, arch="amd64")[0]
+
+
+@pytest.mark.parametrize("change", [{"python_full_version": "3.12.15"}, {"sys_platform": "darwin"}])
+def test_arm64_rejects_wrong_python_or_os(change):
+    data = report()
+    data["environment"].update(platform_machine="aarch64", **change)
+    with pytest.raises(ValueError, match="requires CPython"):
+        lock.lock_from_report(data, {"example-package": "1.2"}, arch="arm64")
+
+
+def test_arm64_still_requires_complete_exact_package_graph():
+    data = report()
+    data["environment"]["platform_machine"] = "aarch64"
+    with pytest.raises(ValueError, match="complete baseline"):
+        lock.lock_from_report(data, {"example-package": "1.2", "missing": "1"}, arch="arm64")
+    data["install"][0]["metadata"]["version"] = "1.1"
+    with pytest.raises(ValueError, match="unexpected resolved package"):
+        lock.lock_from_report(data, {"example-package": "1.2"}, arch="arm64")
