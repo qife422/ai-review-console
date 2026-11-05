@@ -83,9 +83,9 @@ jobs:
         run: |
           arc_candidate_guard
           docker compose up -d --no-build postgres langflow
-          docker compose run --no-build --no-deps storage-init
-          docker compose run --no-build migrate
-          docker compose run --no-build flow-init
+          docker compose run --no-deps storage-init
+          docker compose run migrate
+          docker compose run flow-init
           docker compose up -d --no-build --no-deps api worker web
           timeout 120s sh -c 'until curl -fsS http://localhost:8080/api/health; do sleep 2; done'
           arc_candidate_guard

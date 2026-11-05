@@ -1,6 +1,8 @@
 services:
   langflow:
     image: ai-review-console-langflow:candidate
+    environment:
+      LANGFLOW_DATABASE_URL: postgresql+psycopg://review:${POSTGRES_PASSWORD:-synthetic-demo-only}@postgres:5432/langflow
     build:
       dockerfile: docker/langflow-candidate.Dockerfile
   flow-init:
