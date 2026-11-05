@@ -29,6 +29,8 @@ Langflow-powered document review console with deterministic redaction, explainab
 
 2026-11-05 候选Linux AMD64专项：5项故障恢复、PDF部分失败重试及20份1MiB严格性能通过；上传p95约38ms、混合查询p95约83ms，60份报告下载校验完成。管理编辑器通过虚构副本改名、保存、重载及API回读（C专项success，305项Python/29项前端通过）。各项绑定各自source/run/image，[完整结果、失败记录与计划](docs/evidence/candidate-acceptance/README.md)保留，不把专项局部通过当作整体发布。
 
+同日完成发布缺口对账和Zep2.0.2官方发行包复查，精确许可仍未确认；默认Langflow的Zep与API原生库义务分别记录。[发布阻塞、关闭条件与后续行动](docs/evidence/release-gaps/README.md)。
+
 **默认仍为Langflow1.11.6，v0.2完整发布验收未通过**。原SQLite和历史卷不变；前轮[AMD检查点升级/回滚](docs/evidence/langflow-transition/README.md)只绑定原source/image，不继承为ARM迁移通过。下一步补Mac宿主、ARM隔离迁移及系统/许可缺口，再按AD-03评审默认切换，之后推进版本历史和再审。历史证据保留原字节。
 
 ## 基于 Langflow

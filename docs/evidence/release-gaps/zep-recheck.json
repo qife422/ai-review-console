@@ -1,0 +1,280 @@
+{
+  "classification": "derived_upstream_subset",
+  "observed_at": "2026-11-05T17:38:58.504604+00:00",
+  "package": {
+    "name": "zep-python",
+    "version": "2.0.2",
+    "license": null,
+    "license_expression": null,
+    "license_files": null,
+    "license_classifiers": []
+  },
+  "artifacts": [
+    {
+      "filename": "zep_python-2.0.2-py3-none-any.whl",
+      "bytes": 40011,
+      "sha256": "d7b2cadf1eb15007825362cae5ddff9c9d0ada5b4f75cf91e5b87986459f7817",
+      "raw_archive_retained": false,
+      "member_count": 53,
+      "members": [
+        "zep_python/__init__.py",
+        "zep_python/base_client.py",
+        "zep_python/client.py",
+        "zep_python/core/__init__.py",
+        "zep_python/core/api_error.py",
+        "zep_python/core/client_wrapper.py",
+        "zep_python/core/datetime_utils.py",
+        "zep_python/core/file.py",
+        "zep_python/core/http_client.py",
+        "zep_python/core/jsonable_encoder.py",
+        "zep_python/core/pydantic_utilities.py",
+        "zep_python/core/query_encoder.py",
+        "zep_python/core/remove_none_from_dict.py",
+        "zep_python/core/request_options.py",
+        "zep_python/environment.py",
+        "zep_python/errors/__init__.py",
+        "zep_python/errors/bad_request_error.py",
+        "zep_python/errors/conflict_error.py",
+        "zep_python/errors/internal_server_error.py",
+        "zep_python/errors/not_found_error.py",
+        "zep_python/external_clients/memory.py",
+        "zep_python/external_clients/user.py",
+        "zep_python/memory/__init__.py",
+        "zep_python/memory/client.py",
+        "zep_python/py.typed",
+        "zep_python/types/__init__.py",
+        "zep_python/types/api_error.py",
+        "zep_python/types/fact.py",
+        "zep_python/types/fact_rating_examples.py",
+        "zep_python/types/fact_rating_instruction.py",
+        "zep_python/types/fact_response.py",
+        "zep_python/types/memory.py",
+        "zep_python/types/message.py",
+        "zep_python/types/message_list_response.py",
+        "zep_python/types/role_type.py",
+        "zep_python/types/search_scope.py",
+        "zep_python/types/search_type.py",
+        "zep_python/types/session.py",
+        "zep_python/types/session_fact_rating_examples.py",
+        "zep_python/types/session_fact_rating_instruction.py",
+        "zep_python/types/session_list_response.py",
+        "zep_python/types/session_search_response.py",
+        "zep_python/types/session_search_result.py",
+        "zep_python/types/success_response.py",
+        "zep_python/types/summary.py",
+        "zep_python/types/user.py",
+        "zep_python/types/user_list_response.py",
+        "zep_python/user/__init__.py",
+        "zep_python/user/client.py",
+        "zep_python/version.py",
+        "zep_python-2.0.2.dist-info/METADATA",
+        "zep_python-2.0.2.dist-info/WHEEL",
+        "zep_python-2.0.2.dist-info/RECORD"
+      ],
+      "license_named_members": [],
+      "metadata": {
+        "bytes": 6034,
+        "sha256": "49f4db5f6214a669181d73dcffa3528fa62ed2c2019502aaed40742c3b1e6143",
+        "Name": "zep-python",
+        "Version": "2.0.2",
+        "License": null,
+        "License-Expression": null,
+        "License-File": [],
+        "license_classifiers": []
+      }
+    },
+    {
+      "filename": "zep_python-2.0.2.tar.gz",
+      "bytes": 22273,
+      "sha256": "919fd635ad5801f30d9ef6da0bb99e854ed4c3cd1357dc8ada4a39b8171a41bc",
+      "raw_archive_retained": false,
+      "member_count": 53,
+      "members": [
+        "zep_python-2.0.2/README.md",
+        "zep_python-2.0.2/pyproject.toml",
+        "zep_python-2.0.2/src/zep_python/__init__.py",
+        "zep_python-2.0.2/src/zep_python/base_client.py",
+        "zep_python-2.0.2/src/zep_python/client.py",
+        "zep_python-2.0.2/src/zep_python/core/__init__.py",
+        "zep_python-2.0.2/src/zep_python/core/api_error.py",
+        "zep_python-2.0.2/src/zep_python/core/client_wrapper.py",
+        "zep_python-2.0.2/src/zep_python/core/datetime_utils.py",
+        "zep_python-2.0.2/src/zep_python/core/file.py",
+        "zep_python-2.0.2/src/zep_python/core/http_client.py",
+        "zep_python-2.0.2/src/zep_python/core/jsonable_encoder.py",
+        "zep_python-2.0.2/src/zep_python/core/pydantic_utilities.py",
+        "zep_python-2.0.2/src/zep_python/core/query_encoder.py",
+        "zep_python-2.0.2/src/zep_python/core/remove_none_from_dict.py",
+        "zep_python-2.0.2/src/zep_python/core/request_options.py",
+        "zep_python-2.0.2/src/zep_python/environment.py",
+        "zep_python-2.0.2/src/zep_python/errors/__init__.py",
+        "zep_python-2.0.2/src/zep_python/errors/bad_request_error.py",
+        "zep_python-2.0.2/src/zep_python/errors/conflict_error.py",
+        "zep_python-2.0.2/src/zep_python/errors/internal_server_error.py",
+        "zep_python-2.0.2/src/zep_python/errors/not_found_error.py",
+        "zep_python-2.0.2/src/zep_python/external_clients/memory.py",
+        "zep_python-2.0.2/src/zep_python/external_clients/user.py",
+        "zep_python-2.0.2/src/zep_python/memory/__init__.py",
+        "zep_python-2.0.2/src/zep_python/memory/client.py",
+        "zep_python-2.0.2/src/zep_python/py.typed",
+        "zep_python-2.0.2/src/zep_python/types/__init__.py",
+        "zep_python-2.0.2/src/zep_python/types/api_error.py",
+        "zep_python-2.0.2/src/zep_python/types/fact.py",
+        "zep_python-2.0.2/src/zep_python/types/fact_rating_examples.py",
+        "zep_python-2.0.2/src/zep_python/types/fact_rating_instruction.py",
+        "zep_python-2.0.2/src/zep_python/types/fact_response.py",
+        "zep_python-2.0.2/src/zep_python/types/memory.py",
+        "zep_python-2.0.2/src/zep_python/types/message.py",
+        "zep_python-2.0.2/src/zep_python/types/message_list_response.py",
+        "zep_python-2.0.2/src/zep_python/types/role_type.py",
+        "zep_python-2.0.2/src/zep_python/types/search_scope.py",
+        "zep_python-2.0.2/src/zep_python/types/search_type.py",
+        "zep_python-2.0.2/src/zep_python/types/session.py",
+        "zep_python-2.0.2/src/zep_python/types/session_fact_rating_examples.py",
+        "zep_python-2.0.2/src/zep_python/types/session_fact_rating_instruction.py",
+        "zep_python-2.0.2/src/zep_python/types/session_list_response.py",
+        "zep_python-2.0.2/src/zep_python/types/session_search_response.py",
+        "zep_python-2.0.2/src/zep_python/types/session_search_result.py",
+        "zep_python-2.0.2/src/zep_python/types/success_response.py",
+        "zep_python-2.0.2/src/zep_python/types/summary.py",
+        "zep_python-2.0.2/src/zep_python/types/user.py",
+        "zep_python-2.0.2/src/zep_python/types/user_list_response.py",
+        "zep_python-2.0.2/src/zep_python/user/__init__.py",
+        "zep_python-2.0.2/src/zep_python/user/client.py",
+        "zep_python-2.0.2/src/zep_python/version.py",
+        "zep_python-2.0.2/PKG-INFO"
+      ],
+      "license_named_members": [],
+      "metadata": {
+        "bytes": 6034,
+        "sha256": "49f4db5f6214a669181d73dcffa3528fa62ed2c2019502aaed40742c3b1e6143",
+        "Name": "zep-python",
+        "Version": "2.0.2",
+        "License": null,
+        "License-Expression": null,
+        "License-File": [],
+        "license_classifiers": []
+      }
+    }
+  ],
+  "tag_ref": {
+    "sha": "c5f9144aa065706294c7e43ae1b954fd0a8d9039",
+    "type": "commit",
+    "url": "https://api.github.com/repos/getzep/zep-python/git/commits/c5f9144aa065706294c7e43ae1b954fd0a8d9039"
+  },
+  "tag_tree": {
+    "commit": "c5f9144aa065706294c7e43ae1b954fd0a8d9039",
+    "entries": 80,
+    "truncated": false,
+    "license_named_paths": []
+  },
+  "tag_pyproject": {
+    "sha256": "a8730c8bfb9d628119be06480a5716fb5f58f8b15256b472530f965b174ccbd8",
+    "bytes": 1376,
+    "sdist_byte_equal": true,
+    "declares_license": false
+  },
+  "exact_tag_LICENSE_status": 404,
+  "oss_pyproject": {
+    "bytes": 802,
+    "sha256": "41de1a3ec33807c29952ee4f446f0a46d234b18f3fee7bbddbc52aa003655f7e",
+    "identity_lines": [
+      "name = \"zep-python\"",
+      "version = \"1.5.0\""
+    ]
+  },
+  "current_repo_license_status": 200,
+  "current_repo_license": {
+    "spdx_id": "Apache-2.0",
+    "blob_sha": "f49a4e16e68b128803cc2dcea614603632b04eac",
+    "path": "LICENSE",
+    "html_url": "https://github.com/getzep/zep-python/blob/main/LICENSE",
+    "qualification": "Current default-branch repository license is not evidence of coverage for the distinct historical2.0.2 published package."
+  },
+  "network": {
+    "requests": 9,
+    "bytes": 111442,
+    "limits": {
+      "requests": 12,
+      "bytes": 524288
+    },
+    "records": [
+      {
+        "url": "https://pypi.org/pypi/zep-python/2.0.2/json",
+        "status": 200,
+        "bytes": 8265,
+        "sha256": "cfcee2923368fda5ffad101388041ee5908bb9f44624d3e21235996e83d02324",
+        "retrieved_at": "2026-11-05T17:38:58.504391+00:00",
+        "raw_response_retained": false
+      },
+      {
+        "url": "https://files.pythonhosted.org/packages/1c/d4/09a6bc0c32f91b7b5b93322513d51299ca9b35bdd6b0560b39104c296f39/zep_python-2.0.2-py3-none-any.whl",
+        "status": 200,
+        "bytes": 40011,
+        "sha256": "d7b2cadf1eb15007825362cae5ddff9c9d0ada5b4f75cf91e5b87986459f7817",
+        "retrieved_at": "2026-11-05T17:38:58.681004+00:00",
+        "raw_response_retained": false
+      },
+      {
+        "url": "https://files.pythonhosted.org/packages/b5/64/1b0c4afa6d0e8f35e1072eacdfe8ec216871be5f2dfd569942f69232482f/zep_python-2.0.2.tar.gz",
+        "status": 200,
+        "bytes": 22273,
+        "sha256": "919fd635ad5801f30d9ef6da0bb99e854ed4c3cd1357dc8ada4a39b8171a41bc",
+        "retrieved_at": "2026-11-05T17:38:58.824513+00:00",
+        "raw_response_retained": false
+      },
+      {
+        "url": "https://api.github.com/repos/getzep/zep-python/git/ref/tags/v2.0.2",
+        "status": 200,
+        "bytes": 335,
+        "sha256": "ebec179d6348c23fd88720b56afea73d0a8f664fc64af40938b6b39e3d2ee805",
+        "retrieved_at": "2026-11-05T17:38:59.072387+00:00",
+        "raw_response_retained": false
+      },
+      {
+        "url": "https://api.github.com/repos/getzep/zep-python/git/trees/c5f9144aa065706294c7e43ae1b954fd0a8d9039?recursive=1",
+        "status": 200,
+        "bytes": 19099,
+        "sha256": "95e266165c3a7c774d6b20e825b8892c73f1ddb24c04413ad0d3ad5680fb478e",
+        "retrieved_at": "2026-11-05T17:38:59.375439+00:00",
+        "raw_response_retained": false
+      },
+      {
+        "url": "https://api.github.com/repos/getzep/zep-python/contents/pyproject.toml?ref=c5f9144aa065706294c7e43ae1b954fd0a8d9039",
+        "status": 200,
+        "bytes": 2874,
+        "sha256": "07496ddbd5ec79440a3773bb1abd6330bf03d7b1a18daef331a716415dc52735",
+        "retrieved_at": "2026-11-05T17:38:59.817711+00:00",
+        "raw_response_retained": false
+      },
+      {
+        "url": "https://api.github.com/repos/getzep/zep-python/contents/LICENSE?ref=c5f9144aa065706294c7e43ae1b954fd0a8d9039",
+        "status": 404,
+        "bytes": 127,
+        "sha256": "e45906ce02e79f16fb87a838d86bb4e497e37a9591f97608fa013bbcd8b9cbc2",
+        "retrieved_at": "2026-11-05T17:39:00.043416+00:00",
+        "raw_response_retained": false
+      },
+      {
+        "url": "https://api.github.com/repos/getzep/zep-python/contents/pyproject.toml?ref=oss",
+        "status": 200,
+        "bytes": 1898,
+        "sha256": "eafdf39803d5deda5f1c4ad23f2c5866952bab8b3afa0674a8e685ea6cbb5f88",
+        "retrieved_at": "2026-11-05T17:39:00.272078+00:00",
+        "raw_response_retained": false
+      },
+      {
+        "url": "https://api.github.com/repos/getzep/zep-python/license",
+        "status": 200,
+        "bytes": 16560,
+        "sha256": "b917de4fb8e1d258459ed46080fad4b5b87a1f59d2c6e4d5d0afd51c4be2d52a",
+        "retrieved_at": "2026-11-05T17:39:00.585563+00:00",
+        "raw_response_retained": false
+      }
+    ]
+  },
+  "conclusion": "OPEN: exact2.0.2 wheel/sdist metadata and officialtag do not supply sufficient explicit license grant. Currentrepo/oss/license badge not applied across version/package. Do not fabricate supplemental license or change metadata.",
+  "native_target_reads": 0,
+  "distribution_approval": false,
+  "messages_to_upstream_sent": false
+}

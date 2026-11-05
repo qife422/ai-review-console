@@ -33,7 +33,7 @@ This project is built on Langflow and includes or depends on third-party open-so
 
 Psycopg 3 and its binary extension are LGPL-3.0-only. Langflow also installs LGPL libraries and a GPL-2.0-or-EPL-1.0 dual-licensed package. These components keep their own licenses. Binary wheels may bundle native libraries with additional notices and source requirements; the project's Apache-2.0 license does not replace those terms.
 
-The exact license of Langflow's installed `zep-python 2.0.2` dependency remains unresolved: its installed package, exact PyPI source distribution and official release tag do not contain a license declaration. Do not infer permission for this release from an older branch's license.
+The exact license of the default Langflow image's installed `zep-python 2.0.2` dependency remains unresolved. A fresh 2026-11-05 check of official, SHA-verified wheel/sdist metadata and the immutable release tag did not obtain sufficient explicit version-specific license evidence. Missing license fields/files are not proof that every source file lacks any grant. Do not infer permission for this release from the current main branch, an older branch or another package's license. API native-library obligations are separately scoped; this Zep finding is not an assertion that API contains Zep. See docs/DEPENDENCY_LICENSES.md.
 
 ## Dependency review status
 

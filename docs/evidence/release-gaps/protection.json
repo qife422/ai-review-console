@@ -1,0 +1,110 @@
+{
+  "checked_at": "2026-11-05T17:43:32.473921+00:00",
+  "baseline": "02f9a7463faa649e2758a6f051a9d76df2bbc044",
+  "fixed_inputs": [
+    {
+      "path": "review_console.sqlite3",
+      "bytes": 57344,
+      "sha256": "980ad5d23d866a52e4101966594e5a24ee67edef08475afc63ff9c3e1f6fca1f"
+    },
+    {
+      "path": "docs/UPGRADE_SPEC.md",
+      "bytes": 50489,
+      "sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753"
+    },
+    {
+      "path": "docs/spec-baseline.json",
+      "bytes": 8731,
+      "sha256": "5ad13f524e74554b9c8cb30b9809ffbbbbed8e3d7fa4ede5625bb1b7d781bf2e"
+    },
+    {
+      "path": "docker/langflow.Dockerfile",
+      "bytes": 2412,
+      "sha256": "bb38c30695ea422839935a6209786f8ab8728d054210756d2b1af1e9d6b59cb6"
+    },
+    {
+      "path": "requirements.lock",
+      "bytes": 2148,
+      "sha256": "993529902d7718533e40a25ccd220f713f2a8a4c6b4123a127625362593d891e"
+    },
+    {
+      "path": "compliance/langflow-candidate.lock",
+      "bytes": 34169,
+      "sha256": "22c0c6fd00a436f20fbc649e7ef69273da933b2c75ea0f797be9adfb48a4bd7b"
+    },
+    {
+      "path": "compliance/langflow-candidate-build-tools.lock",
+      "bytes": 449,
+      "sha256": "9f87377dbd3950d2fd2f54d740a9fa7ce7f71acc87ef0f1e119b45fa970fa9ea"
+    },
+    {
+      "path": "docker/langflow-candidate.Dockerfile",
+      "bytes": 2025,
+      "sha256": "44d26559f0eda0fdb5e6c16f5b11732f8290065f4c06d591d481411a0f873919"
+    },
+    {
+      "path": "compliance/langflow-candidate-arm64.lock",
+      "bytes": 34170,
+      "sha256": "1d83205f67800760e0e1e2542bfec26071af9d5c0f37a8ab89a9da1c0e1a0028"
+    },
+    {
+      "path": "compliance/langflow-candidate-build-tools-arm64.lock",
+      "bytes": 450,
+      "sha256": "3ec5a7b0e7dc5791b73277784eb4875b1965d70744200d95307445cf08c42415"
+    }
+  ],
+  "old_packets": [
+    {
+      "path": "docs/evidence/v02-acceptance",
+      "manifest_sha256": "6e3fa0159c396b1d422b32d90ccabb772b82db5d5cbeddb6e385e0e54138ba1c",
+      "rechecked_payloads": 187
+    },
+    {
+      "path": "docs/evidence/v02-release",
+      "manifest_sha256": "c2a9cba23f3653e7c507654631f74568ee7490f80212ffe382c92323a4547f36",
+      "rechecked_payloads": 404
+    },
+    {
+      "path": "docs/evidence/release-compatibility",
+      "manifest_sha256": "0466646bd5eecd32768e9fc61bf138815853292049a41a95dc1d98927e2081ef",
+      "rechecked_payloads": 222
+    },
+    {
+      "path": "docs/evidence/runtime-maintenance",
+      "manifest_sha256": "5a400e77b5e3b28426f2efe99d723b48aee5e1e95d9c7e4a4c9665364963b724",
+      "rechecked_payloads": 269
+    },
+    {
+      "path": "docs/evidence/langflow-candidate",
+      "manifest_sha256": "ca0a0b0b38c2ca735ae17b83c93cc022fd89899a8b8f0e82b978b1eb3b5a38ec",
+      "rechecked_payloads": 73
+    },
+    {
+      "path": "docs/evidence/langflow-transition",
+      "manifest_sha256": "81701508dc131ef4dbdc8743f46fdcb57c98969a4567696fd3c289c7843f1af5",
+      "rechecked_payloads": 88
+    },
+    {
+      "path": "docs/evidence/langflow-arm",
+      "manifest_sha256": "7facd4561ccab08d137c45b748b8aa459ba042f21881fe87677527de29852a7d",
+      "rechecked_payloads": 40
+    },
+    {
+      "path": "docs/evidence/candidate-acceptance",
+      "manifest_sha256": "d9736e997bf048f2e46337daa65089131f9d84c3613ea5a61143fed41c532fc1",
+      "rechecked_payloads": 42
+    }
+  ],
+  "changed_tracked_paths": [
+    "CHANGELOG.md",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md",
+    "docs/CURRENT_STATE.md",
+    "docs/DEPENDENCY_LICENSES.md",
+    "docs/SPEC_INDEX.md"
+  ],
+  "runtime_dependency_flow_changes": false,
+  "local_Docker_mutations": false,
+  "cleanup": false,
+  "total_rechecked_payloads": 1325
+}

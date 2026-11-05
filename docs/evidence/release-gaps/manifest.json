@@ -1,0 +1,83 @@
+{
+  "evidence_id": "release-gaps",
+  "classification": "sealed_evidence",
+  "sealed_at": "2026-11-05T17:45:54.625003+00:00",
+  "display_date": "2026-11-05 America/Los_Angeles",
+  "contract": "ARC-UPGRADE@0.1.0",
+  "source_baseline": "02f9a7463faa649e2758a6f051a9d76df2bbc044",
+  "scope": "Current bounded upstream exactZep2.0.2 license recheck, service/image-specific release gap matrix and read-only capacity. No runtime implementation.",
+  "acceptance": {
+    "AC-19": "NOT_PASSED",
+    "Zep2.0.2": "OPEN; no sufficient exact-release license evidence",
+    "closed_license_or_distribution_gate": false,
+    "full_v02_last_verified": null,
+    "final_acceptance": "pending",
+    "default": "1.11.6 unchanged",
+    "original_data_migration": false,
+    "backend_distribution_approval": false,
+    "residual_risk_accepted": false,
+    "new_runtime_tests_or_scans": false,
+    "native_target_reads": 0,
+    "thirdparty_message_sent": false,
+    "online_demo_redeployed": false
+  },
+  "provenance": "Official SHA-verified wheel/sdist and immutabletag tree, metadata/member-list derived receipts only; no raw upstream responses/archives retained. Existing source/image subsets are historical, not newimage inspection.",
+  "protection": "protection.json",
+  "documentation_impact": "documentation-impact.json",
+  "capacity": "capacity.json",
+  "artifact_disposition": "retain compact selected evidence; temp/unselected cache remains; no cleanup/migration/compression authorized",
+  "payload_files": 10,
+  "payload_bytes": 39603,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 6813,
+      "sha256": "08496b19239fbf64638bc70bc89164965e6ce35eb5d8738a9fbc29fc8f46993b"
+    },
+    {
+      "path": "capacity.json",
+      "bytes": 2497,
+      "sha256": "e0e3e591e6e2ce40fa735c045ffd81b27446b43a8d3bba07aa3fa10ab064e922"
+    },
+    {
+      "path": "documentation-impact.json",
+      "bytes": 1300,
+      "sha256": "a54feba2fe76d9084aa0dc154dd044c313ed26125798f53ddcf0d0c8ada30a33"
+    },
+    {
+      "path": "plan.json",
+      "bytes": 1675,
+      "sha256": "ce0081103d606ad0c67876388bd912fd034ab7492004cd9bb7aa3301333de768"
+    },
+    {
+      "path": "profile-bindings.json",
+      "bytes": 4730,
+      "sha256": "df465d410e57fc64cb3f9b18db36b4fd9bdc2a2c3c88fb155eabdb76fe58cdfd"
+    },
+    {
+      "path": "protection.json",
+      "bytes": 3643,
+      "sha256": "ab8c2846a2dc1a8f840af7e5006ad8cb9a2a7c1ec879eb71b23e06745f66ce22"
+    },
+    {
+      "path": "review.json",
+      "bytes": 1305,
+      "sha256": "a68773e20a96eb9ed27a8e3a4b844e18038e417bd0aafbe5659d3a96977f9d4b"
+    },
+    {
+      "path": "upstream-license-question.md",
+      "bytes": 1955,
+      "sha256": "9065b31fe6425b8089642fb8930a020ad5c986131e21bbdeba3a59dfcefb951d"
+    },
+    {
+      "path": "upstream-search.json",
+      "bytes": 3503,
+      "sha256": "8229bba3e1eb4698c1ba0e6e523d70942ac008612fbeda2c669b3741b43d3735"
+    },
+    {
+      "path": "zep-recheck.json",
+      "bytes": 12182,
+      "sha256": "5d7a8735d4c3d53e153198490ab3692a134a22d5d7edf0a6e71fbf574d66331f"
+    }
+  ]
+}

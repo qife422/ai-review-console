@@ -1,0 +1,15 @@
+{
+  "classification": "derived_review_receipt",
+  "reviewer": "Astra migration_review, read-only independent",
+  "method": "Compared fresh9request receipt with original sealedPyPI/tag records locally; no independent network fetch or implementation edit. Root performed fresh bounded network retrieval.",
+  "conclusion": "Zep2.0.2 remainsOPEN. No license/distribution gate closed. Fresh/oldPyPI responseSHA, wheel/sdist sizeSHA and tag pyproject/tree match. Absence of license-named files/metadata is not proof every source byte lacks any possible grant; sufficient explicit evidence not obtained. MainApache/oss1.5.0 not applied across versions.",
+  "source_sha256": "5d7a8735d4c3d53e153198490ab3692a134a22d5d7edf0a6e71fbf574d66331f",
+  "implementation_roles": {
+    "Sol": "service-specific gap analysis",
+    "root": "bounded upstream probe, matrix and integration",
+    "Astra": "independent evidence/provenance review"
+  },
+  "actual_tokens": null,
+  "actual_billing": null,
+  "matrix_and_documentation_review": "Astra independently read current candidate README/matrix/receipt/profile bindings/question draft and six entry diffs; no service/image conflation, closure overclaim, new mandatory gate or thirdparty messaging claim found. Only existing current package review; no native/network/write."
+}

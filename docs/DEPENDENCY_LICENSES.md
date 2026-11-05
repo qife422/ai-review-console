@@ -1,6 +1,12 @@
 # 依赖许可证核实
 
-核实日期：2026-11-02（America/Los_Angeles）；保留 2026-10-31 的已封存核实及偏差。适用 `ARC-UPGRADE@0.1.0` 的 `RELEASE-001 / AC-19`。本记录区分许可证识别、应履行的分发条件和实际履行状态，不把 SBOM 中的 `recorded` 或自动扫描器的 `review` 标签当作分发批准。
+核实日期：2026-11-05（America/Los_Angeles）；保留此前各轮已封存核实及偏差。适用 `ARC-UPGRADE@0.1.0` 的 `RELEASE-001 / AC-19`。本记录区分许可证识别、应履行的分发条件和实际履行状态，不把 SBOM 中的 `recorded` 或自动扫描器的 `review` 标签当作分发批准。
+
+## 精确 Zep 许可复查（2026-11-05）
+
+本轮重新核对官方PyPI2.0.2 JSON、wheel和sdist（官方大小/SHA均相符），以及v2.0.2对应commit `c5f9144aa065706294c7e43ae1b954fd0a8d9039`。包元数据未声明许可、档案和完整tag树未发现许可命名文件，tag pyproject与sdist字节相同；仍未取得充分明确的精确发行许可依据，**Zep保持OPEN**。当前main的Apache文本、oss分支1.5.0身份和通用badge不直接作为2.0.2许可。缺少这些字段/文件也不等同于证明所有源码绝无授权信息。
+
+已实证Zep owner为默认Langflow；API已实证Psycopg3.3.5，LF另有Psycopg3.3.4/Psycopg2 2.9.12/IBM driver，分别按精确image判断，不再笼统写“默认/API的Zep”。9次请求共111,442B，档案仅在内存检查、不安装执行；本轮native目标新增读取0，没有新镜像扫描/构建或许可文本注入。新旧来源指纹一致，不把重复复查当作许可改善。详见[发布阻塞、关闭条件与澄清草稿](evidence/release-gaps/README.md)；本轮正式记录已封存，旧许可证据不覆写。此次只完成复查，没有关闭许可或后端分发门禁。
 
 ## 交付范围
 

@@ -2,6 +2,13 @@
 
 本文件记录主要功能与交接边界；精确代码差异以 Git 提交为准。开发快照不是正式发布，源码备份不是运行数据库备份。
 
+## 2026-11-05 — 发布缺口与 Zep 精确许可复查
+
+- 重新读取官方PyPI2.0.2元数据、SHA验证wheel/sdist及精确tag；9次请求111,442B，来源指纹与旧记录一致。精确许可仍OPEN，不套当前main/旧oss分支许可、不注入未经证实文本。
+- 按服务和精确image拆分缺口：Zep已实证属于默认LF，API为Psycopg3.3.5等native义务；补齐六项发布阻塞、关闭条件与上游澄清草稿，未发送第三方消息。
+- 本机Docker daemon不可连接，image/cache内部容量盘点仍unavailable；只读核Docker.raw分配及五旧temp，不start/build/pull/prune或清理。本轮没有新增native目标读取、运行时变更、扫描或重复业务测试。
+- [本轮结论与后续行动](docs/evidence/release-gaps/README.md)封存；固定输入/八旧包保留，完整发布、默认切换和后端分发仍未批准。
+
 ## 2026-11-05 — 候选编辑器、恢复与性能专项
 
 - B运行[41983887326](https://github.com/qife422/ai-review-console/actions/runs/41983887326)，source8db7f5f：5项真实故障恢复、PDF部分失败及环境恢复通过；20份1MiB顺序文档、333次混合查询、60份三格式报告全部完成。上传p95 38.28ms、查询p95 83.38ms，Intake最长3.193s、三报告含下载最长2.842s。301项Python单元测试通过。

@@ -1,0 +1,42 @@
+{
+  "created_at": "2026-11-05T17:38:26.488814+00:00",
+  "same_goal": "cfd2d589-0c13-4ee0-bd93-8316c3f556a4",
+  "source_head": "02f9a7463faa649e2758a6f051a9d76df2bbc044",
+  "contract": "ARC-UPGRADE@0.1.0",
+  "scope": "Service-specific release gaps and fresh bounded Zep2.0.2 exact-artifact license recheck. No native target read, runtime change, local Docker start/build/pull/prune or cleanup.",
+  "temp_root": "/private/tmp/arc-release-gaps.gsh2c_pd",
+  "new_temp_limit_bytes": 262144,
+  "new_temp_limit_files": 20,
+  "prior_five_temp_bytes": 41437427,
+  "combined_temp_limit_bytes": 41943040,
+  "network_limit_bytes": 524288,
+  "network_limit_requests": 12,
+  "selected_evidence_limit_bytes": 131072,
+  "selected_evidence_limit_files": 20,
+  "candidate": "artifacts/evidence-candidates/release-gaps",
+  "formal": "docs/evidence/release-gaps",
+  "candidate_formal_project_limit_each_bytes": 104857600,
+  "candidate_formal_project_limit_each_files": 1000,
+  "source_baseline_bytes": 764861,
+  "amplification_stop": "above1GiB AND100x source; no complete build/archive copies",
+  "native_remaining": {
+    "files": 6,
+    "input_bytes": 26795216,
+    "text_bytes": 3969945
+  },
+  "native_planned_target_reads": 0,
+  "cleanup_authorized": false,
+  "budget_cumulative_minutes": 360,
+  "elapsed_at_resume_seconds": 20159.114706277847,
+  "estimated_slice_minutes": [
+    15,
+    22
+  ],
+  "estimated_model_tokens": [
+    8000,
+    15000
+  ],
+  "actual_model_tokens": null,
+  "actual_billing": null,
+  "verification": "Exact upstream URL/hash + wheel and sdist metadata/file listing, immutable tag tree, independent read-only source evaluation; no unchanged app test repetition."
+}

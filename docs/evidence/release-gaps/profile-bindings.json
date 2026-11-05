@@ -1,0 +1,128 @@
+{
+  "classification": "derived_existing_evidence_subset",
+  "checked_at": "2026-11-05T17:42:19.535497+00:00",
+  "owner_source": {
+    "path": "compliance/native-baseline.json",
+    "bytes": 8394,
+    "sha256": "ba73fb69a3d4644b5d0b49d64d32928ef9d1628716ea7d5289524e949ea4ce81",
+    "declared_source_commit": "185848006c2ea97ad24bead72f726c3a0d467dd4",
+    "declared_ci_run": 41588865769
+  },
+  "owner_profiles": [
+    {
+      "service": "api",
+      "exact_image": "sha256:dac5965a840be8d2da28d1bb3e2098b42ea4fe9aeefa010357344f0a43166e10",
+      "observed_packages": [
+        {
+          "name": "psycopg",
+          "version": "3.3.5"
+        },
+        {
+          "name": "psycopg-binary",
+          "version": "3.3.5"
+        }
+      ],
+      "scope": "Historical observed package owners only; selected package list is not full-image inventory."
+    },
+    {
+      "service": "langflow",
+      "exact_image": "sha256:65d8560c5e92bcd812d282869b153a3e8cdf4d6cf6badaf471a27d8828f2e91f",
+      "observed_packages": [
+        {
+          "name": "ibm_db",
+          "version": "3.2.9"
+        },
+        {
+          "name": "psycopg",
+          "version": "3.3.4"
+        },
+        {
+          "name": "psycopg2-binary",
+          "version": "2.9.12"
+        },
+        {
+          "name": "zep-python",
+          "version": "2.0.2"
+        }
+      ],
+      "scope": "Historical observed package owners only; selected package list is not full-image inventory."
+    }
+  ],
+  "scan_profiles": [
+    {
+      "scope": "Historical defaultamd64 scan only; no inheritance to new image",
+      "source_file": "docs/evidence/runtime-maintenance/ci/native-close/amd64/release/images/summary.json",
+      "sha256": "a9b920e34b9d9ac0c59a5ce046b5a8a889d62c51b64f6a9155c80c700fb20b6d",
+      "run": 41760412382,
+      "images": [
+        {
+          "service": "api",
+          "image_id": "sha256:0b8f9853c44b93671f39ebc1391ee4675be367816e09ff39a9e61fe672052051"
+        },
+        {
+          "service": "langflow",
+          "image_id": "sha256:fd6d66658d49008b53095d2669de17f88360038cbfc8238aa509ffd2e1aaa02c"
+        },
+        {
+          "service": "web",
+          "image_id": "sha256:5306b256b8dc6446bdb28b8349ffdbe77402f527f063de9b38eba5c2f33a92e6"
+        },
+        {
+          "service": "postgres",
+          "image_id": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+        }
+      ]
+    },
+    {
+      "scope": "Historical defaultarm64 scan only; no inheritance to new image",
+      "source_file": "docs/evidence/runtime-maintenance/ci/native-close/arm64/release/images/summary.json",
+      "sha256": "0dd60ba8a479fc425a6f6e8af2d0d87eda8b653e37ca2ae68e901226bd918b73",
+      "run": 41760412382,
+      "images": [
+        {
+          "service": "api",
+          "image_id": "sha256:1ea8231e5971e458759a3c86ddf65627921dec2b30d78e6558a205f3fc35792b"
+        },
+        {
+          "service": "langflow",
+          "image_id": "sha256:32d4afd618fe80051cb4d2ee3c34d71a409ae43c471c5212a22eb52807388e2d"
+        },
+        {
+          "service": "web",
+          "image_id": "sha256:33d3468c5718afd5148e72f39484893e846bde5f02c89775f0616d1f78569d39"
+        },
+        {
+          "service": "postgres",
+          "image_id": "sha256:6162f3765f7563b273a879894c5751d41285f922dd75ba0ba508a89e024e43ca"
+        }
+      ]
+    }
+  ],
+  "candidate_operational_runs": [
+    {
+      "source": "8db7f5f8a5cd6c1634a8c7a0ed40b195ff3ed424",
+      "run": "41983887326",
+      "images": {
+        "api": "sha256:de0ace4c6c71bef46334aa8f360ae8fd3bcde0dab042f0d613dd7a9c4a40c411",
+        "worker": "sha256:de0ace4c6c71bef46334aa8f360ae8fd3bcde0dab042f0d613dd7a9c4a40c411",
+        "langflow": "sha256:b836bf131480cd92747e8e50f54324fd3d76531137a59fa214e32549f2b44966",
+        "web": "sha256:7f18874e1c4e46965f554a4dc2b61f90275f398a0c74a5972f2c3f792ec08623",
+        "postgres": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+      },
+      "new_scan": "not_performed_in_that_operational_run"
+    },
+    {
+      "source": "54592dff0231ee84b992956e0ea9b99b0eecdc39",
+      "run": "42070564065",
+      "images": {
+        "api": "sha256:3b44e02de05e3e4b2b67ecdf17c7b39489ffa83844f0cb8699bd72b3f10fd311",
+        "worker": "sha256:3b44e02de05e3e4b2b67ecdf17c7b39489ffa83844f0cb8699bd72b3f10fd311",
+        "langflow": "sha256:0a8f2e1a564f74fb2376ff89e98c1c274901f3061421325e26564e79159a13b3",
+        "web": "sha256:1018040f66c31d8df3872aefaae44840d5244327e886b9e99186119ab77cb3ac",
+        "postgres": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+      },
+      "new_scan": "not_performed_in_that_operational_run"
+    }
+  ],
+  "no_new_image_inspection_or_scan": true
+}

@@ -1,0 +1,86 @@
+{
+  "checked_at": "2026-11-05T17:45:54.625003+00:00",
+  "method": "regular file sizes plus symlink lstat; symlinks not followed. Snapshot before capacity/manifest.",
+  "prior_five": [
+    {
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB",
+      "bytes": 38360216,
+      "regular_files": 276,
+      "symlinks": 0
+    },
+    {
+      "path": "/private/tmp/arc-langflow-candidate.qya6psom",
+      "bytes": 1217200,
+      "regular_files": 72,
+      "symlinks": 8
+    },
+    {
+      "path": "/private/tmp/arc-langflow-transition.l7tcavqh",
+      "bytes": 860409,
+      "regular_files": 60,
+      "symlinks": 0
+    },
+    {
+      "path": "/private/tmp/arc-langflow-arm.tlmz8anp",
+      "bytes": 514075,
+      "regular_files": 26,
+      "symlinks": 0
+    },
+    {
+      "path": "/private/tmp/arc-candidate-acceptance.1gcqlp6y",
+      "bytes": 485527,
+      "regular_files": 33,
+      "symlinks": 0
+    }
+  ],
+  "new_temp": {
+    "path": "/private/tmp/arc-release-gaps.gsh2c_pd",
+    "bytes": 13857,
+    "regular_files": 2,
+    "symlinks": 0
+  },
+  "combined_temp_bytes": 41451284,
+  "candidate_before_capacity_manifest": {
+    "path": "artifacts/evidence-candidates/release-gaps",
+    "bytes": 37106,
+    "regular_files": 9,
+    "symlinks": 0
+  },
+  "host_free_bytes": 20585590784,
+  "docker_daemon": {
+    "status": "unavailable",
+    "method": "docker info --format JSON, exit1; cannot connect to unix:///Users/ffq/.docker/run/docker.sock",
+    "internal_image_layer_cache_inventory": "unavailable",
+    "start_build_pull_prune_performed": false
+  },
+  "docker_raw_stat": {
+    "path": "/Users/ffq/Library/Containers/com.docker.docker/Data/vms/0/data/Docker.raw",
+    "logical_bytes": 245106737152,
+    "allocated_bytes": 29555404800,
+    "qualification": "Container VM backing file only; not classified image/shared-layer/cache usage."
+  },
+  "network": {
+    "requests": 11,
+    "bytes": 151918
+  },
+  "limits": {
+    "new_temp_bytes": 262144,
+    "new_temp_files": 20,
+    "combined_temp_bytes": 41943040,
+    "network_requests": 12,
+    "network_bytes": 524288,
+    "selected_bytes": 131072,
+    "selected_files": 20,
+    "project_candidate_formal_each_bytes": 104857600,
+    "project_candidate_formal_each_files": 1000,
+    "source_baseline_bytes": 764861,
+    "amplification_stop": "above1GiB AND100x source"
+  },
+  "native_target_reads": 0,
+  "native_remaining": {
+    "files": 6,
+    "input_bytes": 26795216,
+    "text_bytes": 3969945
+  },
+  "cleanup_migration_compression": false
+}

@@ -1,0 +1,24 @@
+{
+  "baseline": "02f9a7463faa649e2758a6f051a9d76df2bbc044",
+  "scope": "Documentation/evidence only. Baseline02f9a74 was itself a docs commit; lastCtested source54592df remains exactC runtime proof. These new COPY-input bytes are not rebuilt/scanned and do not inherit any prior image proof.",
+  "image_COPY_inputs": [
+    {
+      "path": "README.md",
+      "baseline_sha256": "f09b48d542bdcaf34ba9e87d6de2b248276ba6422521c9e3163006b514fdb23a",
+      "C_tested_sha256": "b83a7e91071ba522516e1bf820a817ca8bb41603de1474f7c3a5c745841c4fbb",
+      "final_sha256": "ad0bb10ed77ac8eaf5f2fe187563f218c4f0d38996317f66a8cd06cf5039ec9a"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "baseline_sha256": "980842118da0e7e56fd432dddad8e8cf3a016be1093023edfc19e05e942acdd0",
+      "C_tested_sha256": "980842118da0e7e56fd432dddad8e8cf3a016be1093023edfc19e05e942acdd0",
+      "final_sha256": "46973e560732caca4a443369d81145b7a6ba78c6b072764021b21c8cc92a1f2d"
+    },
+    {
+      "path": "docs/DEPENDENCY_LICENSES.md",
+      "baseline_sha256": "7a2bb2ee09cb74e485dc757d3c0d566c4cf9d7ab379dabd0b422f4bac0b6e068",
+      "C_tested_sha256": "7a2bb2ee09cb74e485dc757d3c0d566c4cf9d7ab379dabd0b422f4bac0b6e068",
+      "final_sha256": "e636fe01bdcad79cb4e3129b72440d8ebf1df38f64f782c2134715842ee5b071"
+    }
+  ]
+}
