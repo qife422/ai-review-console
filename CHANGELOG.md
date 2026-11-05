@@ -2,6 +2,12 @@
 
 本文件记录主要功能与交接边界；精确代码差异以 Git 提交为准。开发快照不是正式发布，源码备份不是运行数据库备份。
 
+## 2026-11-05 — 当前 Mac 最小隔离验收方案
+
+- 用户确认暂无现成实例。固定新的 Lima VZ/ARM64 实例、独立稀疏盘和 guest 专用 Docker socket，五案九报告直接走同一栈的 API、worker、Langflow 1.13.1 和 PostgreSQL。
+- 核对 Python/PG 的 ARM64 manifest 和压缩层字节，固定两份 Compose/Buildx 插件来源、包大小和 SHA256。LF/API 由既有源码与锁在独立 guest 构建，实际峰值待核。
+- 拟用 8 GiB 盘、新根逻辑 9 GiB、实际 6 GiB，记录宿主/guest 余量和分阶段停点。现行项目容量限制继续作为准入依据，拟用例外待后续决定。方案定稿、自查与同步完成，环境创建和回归留待后续授权。 [验收方案](docs/DOCKER_RECOVERY.md#当前-mac-最小隔离验收方案)
+
 ## 2026-11-05 — Mac 独立业务目标准入预检
 
 - 按新条件授权核独立Mac目标与资源，沿用ARC-UPGRADE@0.1.0及600分钟累计/既有失败记录。macOS26.5.2 ARM64、8GiB/8CPU、可用约32.53GiB；仅原Desktop两个同socket入口，未连接引擎/读库存。16 app位置、9常见provider根白名单未找到合格独立Mac业务目标，不外推全机/远程均不存在。

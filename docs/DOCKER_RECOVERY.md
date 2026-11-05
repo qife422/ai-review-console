@@ -4,11 +4,63 @@
 
 ## 当前结论与授权
 
-用户已批准单独Linux VM容量例外（逻辑≤6GiB、实际增长≤3GiB）和同目标累计600分钟：先有限下载核验签名/制品/依赖，满足后手动安装、创建、启动，只做虚构恢复实验；保留此前约448分钟起的全部累计和修复次数。上一轮已完成此单VM工作包，最终实验通过且唯一新VM停止保留；本轮新授权的Mac业务准入结论见下节。
+已批准的单独 Linux VM 工作包完成机制实验，实例已停止保留。该例外对应 `cad3703` 及原实验根。用户现已确认没有现成的独立 Mac 验收实例，本轮授权限于确定本机方案、自查与 GitHub 同步。当前业务回归状态为 `not_started`。
 
 结论只覆盖Linux/Moby28.3.2恢复机制：restart=false可在本实验前置条件下抑制符合策略的已停止容器恢复；它不终止live-restore存活任务，也不保证daemon对存储只读。Mac Desktop配置传递、原历史盘保护及本机业务验收仍未通过；不能据此启动旧盘或认定完整AC-19通过。
 
 原Desktop是外部状态：只读检查发现其backend于12:59:12启动，早于Lima create13:11、首次start13:14。用户确认由自己或另一任务启动。原Docker.raw分配量及mtime与此前快照不同，本代理未连接其socket、启停或修改原引擎；不能声称原Desktop一直关闭或全局历史盘字节未变。原SQLite等10固定输入及11旧manifest仍匹配，具体范围见新包protection.json。
+
+## 当前 Mac 最小隔离验收方案
+
+2026-11-05，source `31d1eac5b621e06928a22351c45542910caa7602`。沿用 `ARC-UPGRADE@0.1.0` / WP-05，累计预算 600 分钟，接续约 504 分钟及既有失败计数 2。选定一个新的 Lima 2.2.1 VZ 实例，Debian 12 ARM64、2 vCPU、拟配 3 GiB 内存和 8 GiB 稀疏系统盘。8 GiB 是待验证的配置值。验收目标是在这台 Mac 承载的 Linux 容器内完成候选 1.13.1 的五案九报告，覆盖边界沿用上一轮的业务准入复核。同版 Docker Desktop 配置传递仍是独立验收项。
+
+| 边界 | 拟固定的位置与配置 |
+|---|---|
+| 实例与盘 | 新根 `/private/tmp/arc-mac-acceptance`，目录独占且权限 0700。进程级 `LIMA_HOME=/private/tmp/arc-mac-acceptance/lima`，实例 `acceptance`。VZ 系统盘预期 `/private/tmp/arc-mac-acceptance/lima/acceptance/disk`，创建后须按实际实例元数据回读路径、所有权和唯一磁盘关系。原 `probe` 的盘与日志单独保留。 |
+| 主机接入 | Lima `plain: true`，空 `mounts`、`additionalDisks`、`portForwards` 和 `provision`，禁用内置 containerd、Rosetta、主机 SSH agent 和代理环境转发。仅实例自己的 loopback SSH，生成独立 SSH key。主机暂存和日志限于新根。只读核 `/private/tmp` 实路径及新根不存在后方可进入未来创建阶段。 |
+| 引擎与 socket | 仅 guest 内 `unix:///run/arc-acceptance/docker.sock`，containerd 为 `/run/arc-acceptance/containerd.sock`。Docker `data-root=/var/lib/arc-acceptance/docker`，containerd root/state 分别 `/var/lib/arc-acceptance/containerd`、`/run/arc-acceptance/containerd`，PID 和 exec-root 同归 `/run/arc-acceptance`。引擎手动启停，CLI 每次显式使用该 socket 和独立 `--config /opt/arc-acceptance/cli`。宿主无需 Docker socket 或 context。 |
+| 业务与数据 | 单 Compose 项目 `arc-mac-acceptance`，API、worker、Langflow、PostgreSQL 和三项一次性初始化任务。每个业务卷由本项目新建，依次核 `postgres-data`、`source-documents`、`report-artifacts`、`flow-config` 的 labels、driver、options、Mountpoint 与实际挂载。唯一 bind 是 guest 源码内 `docker/postgres-init.sql` 的只读挂载。运行期使用 guest 内部网络，应用与数据库端口留在容器网络，五案脚本从 API 容器内执行。 |
+
+2026-11-05 14:00（America/Los_Angeles）以 `lstat` 口径确认新根尚不存在，`/private/tmp` 实路径同名且模式 1777。将已有 `probe.yaml` 的隔离设置作为配置输入，创建前核拟用模板，启动前再核实际实例配置。Lima 的 plain 模式仍支持显式静态转发和 provision，所以这两项保留空列表。业务运行前校验 DockerRootDir、两个 socket、ARM64、卷和网络，发现对象归属不明时停止。 [Lima plain 模式](https://lima-vm.io/docs/config/plain/)
+
+#### 制品与镜像
+
+宿主 Lima 程序、Debian 12 genericcloud ARM64 基盘和三份 Docker DEB 取自 `/private/tmp/arc-linux-vm` 中此前已验证的制品。按下文既有来源和摘要重新核对可读性及字节，仅读输入文件。CE/CLI 固定 28.3.2，containerd 固定 1.7.27。新实例仍采用本地基盘位置和固定 SHA512。guest 中解包到 `/opt/arc-acceptance/engine`，明确 CLI 插件搜索目录并回读所选二进制，启停走自有进程。业务需要 bridge、DNS 和 BuildKit，首次引擎核验须验证 guest 的依赖与实际网络行为，机制实验的无网络设置不能直接搬用。 [Docker Debian 制品说明](https://docs.docker.com/engine/install/debian/)
+
+新增两份插件 DEB 已在原签名链绑定的 `docker-Packages.gz` 中定位。2026-11-05 HEAD 均为 200，长度与索引一致。以后取 payload 时按原链验证索引、完整 SHA256、架构和依赖。
+
+| ARM64 插件 | 固定制品字节 | SHA256 |
+|---|---:|---|
+| [Buildx 0.25.0-1~debian.12~bookworm](https://download.docker.com/linux/debian/dists/bookworm/pool/stable/arm64/docker-buildx-plugin_0.25.0-1~debian.12~bookworm_arm64.deb) | 13,606,056 | `a73cd5050cd87d0a12dbe0c4ef6e5b2d08786f459c4d68bb235bfa45182cfa1c` |
+| [Compose 2.38.1-1~debian.12~bookworm](https://download.docker.com/linux/debian/dists/bookworm/pool/stable/arm64/docker-compose-plugin_2.38.1-1~debian.12~bookworm_arm64.deb) | 12,225,696 | `ac4e7fa0a19921d7a67bac92f13d1f6a8137e4aed50cff4a08ba737539f1a027` |
+
+| 业务镜像 | 固定来源及验证 |
+|---|---|
+| Python 公共基底 | `docker.io/library/python:3.12.16-slim-bookworm`，索引 `sha256:e697c81897302a4c4333bade000d98038fbb21eb064f8ee1fd42d02ebcd9d337`，Linux ARM64 manifest `sha256:e0b3f8d16a5ccfbe602d5c94297e5dbcda2ec256edca2b80fcd44e39e1ff6feb`，压缩层 44,923,606B。供 Langflow/API 共用。 |
+| PostgreSQL | `docker.io/library/postgres:16.15-trixie`，索引 `sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c`，Linux ARM64 manifest `sha256:624b15a3c9e7b8930c8c1d3ff617a3135f92e06bb47df7a4fea49869ccd3a775`，压缩层 158,919,251B。 |
+| Langflow 1.13.1 / API | 在新 guest 用 source `31d1eac` 的 `docker/langflow-candidate.Dockerfile` 和 `docker/api.Dockerfile`，指定 `linux/arm64`，使用该引擎的 Docker driver 顺序构建。LF 取既有 ARM64 334 包和 4 工具哈希锁，API 取 `requirements.lock`，由 API image 同时承载 worker 和初始化任务。记录实际 image ID、层、包清单及构建容量。 |
+
+Docker 官方 Registry 的索引及 ARM64 子 manifest 已逐级核 SHA，两个公共基底的压缩层合计 203,842,857B。旧 CI 中的项目 image ID 绑定旧构建，当作来源和行为参考。仓库工作流提供构建入口和结果，成品镜像归档未封存。新构建前须核 Debian APT 解析的包和 API/PyPI 安装物的实际来源及大小。LF 的哈希锁、API 的版本锁及 APT 动态解析各有不同的复现边界。 [官方 Python 镜像](https://hub.docker.com/_/python) · [官方 PostgreSQL 镜像](https://hub.docker.com/_/postgres) · [Buildx Docker driver](https://docs.docker.com/build/builders/drivers/docker/)
+
+未来只复制该 Git 提交的 Dockerfile 所需源码、经核为虚构的公开 fixture、锁、许可证及 `docker/postgres-init.sql`。先验选材清单和 SHA，排除真实数据、历史产物、Git 元数据、现有 `.env` 和缓存。以 `docker-compose.yml` 与 `docker/compose.candidate.yml` 为依据，在 guest 新根审阅单独的有效配置，保留七项所需服务和四个卷，删除端口映射。构建阶段允许经核定的官方依赖出口，运行阶段使用内部网络。构建和 Compose 子进程统一使用 guest 专用 `DOCKER_HOST` 和独立 CLI 配置，核 Buildx 的 Docker driver 与目标 endpoint。启动前校验本地标签对应刚记录的 image ID，采用 `--no-build --pull never`。先起 PostgreSQL 并完成 `storage-init` 与 `migrate`，再起 Langflow 并由 `flow-init` 写入新 Flow manifest，最后起 API 和 worker。
+
+验证脚本显式绑定 API 容器的 `http://127.0.0.1:8000` 和同栈 `LANGFLOW_URL=http://langflow:7860`，指定 `--expected-langflow-version 1.13.1 --benchmark-count 0`。向该次验证进程注入本栈生成的合成 `LANGFLOW_SUPERUSER` 和 `LANGFLOW_SUPERUSER_PASSWORD`，凭据留在新 guest。客户端会跳过 Compose 中的演示 API key，故须检查此认证步骤。结果需核 5 组件、2 Flow、5 案、9 报告及前后图指纹。Web/浏览器、迁移和性能另列验收范围。 [业务验证入口](../scripts/validate_langflow.py)
+
+#### 容量停点与执行决策
+
+2026-11-05 14:00 的 `/private/tmp` 所在 Data 卷 `statvfs` 可用 27,759,181,824B，约 25.85 GiB。已知压缩层大小、插件包大小和前轮底盘观测只能用于估算。尚缺本轮新构建的解包与缓存峰值、PG/文件增长和共享层归属。先按以下同一方案核上界，再提交分阶段执行决定。
+
+| 指标 | 停点及判断 |
+|---|---|
+| 现行限制 | 项目 Docker 归属 ≤12 GiB、单 WP 净增长 ≤3 GiB，缓存增长 ≤2 GiB，沿用当前 1 GiB 或源码 100 倍任一触发即停的派生产物口径。764,861B 对应 76,486,100B。旧容量 warning 待解决。需先核归属和累计，再确定是否及如何批准本方案的独立例外。 |
+| 新根拟用包络 | 8 GiB 稀疏盘，其他宿主文件 ≤1 GiB，合计逻辑 ≤9 GiB。新根实际分配拟限 6 GiB，观察到 5.5 GiB 即停新增生产者。宿主文件/目录项 ≤20,000。此为待审批的单目标方案，审批时须列明旧保留根和同 WP 合计口径。 |
+| 新增下载 | 拟限 512 MiB，含插件、公共镜像层和构建依赖。已定位的两插件及公共基底压缩层共 229,674,609B。剩余预算须核 registry 元数据和 APT/PyPI 解析结果与实际下载方式，入口预估超限或无法核查时先停。 |
+| 宿主与 guest 余量 | 按拟用 6 GiB 新根包络，宿主入口 ≥20 GiB，含 12 GiB 保留量及 2 GiB 缓冲。观察低于 14 GiB 即停。guest 系统盘保留 ≥2 GiB，每阶段启动前须有预计峰值后的剩余量。guest MemAvailable 低于 512 MiB、出现 OOM 或宿主内存压力告警时停止。 |
+| 数据与选材 | 五案 source/report 合计观察限 64 MiB / 100 文件，PG/Flow/source/report 合计拟限 512 MiB，原 API 1 GiB / 5,000 文件及正文限制继续适用。验收选材拟限 1 MiB / 20 文件，选取摘要和必要原件。临时制品、构建缓存和运行日志均按实际归属计量。 |
+
+阶段依次为校验制品、空 VM/引擎、公共基底、API 构建、LF 构建、虚构业务。每阶段前计入镜像压缩与展开、暂存、构建缓存、卷及同时存活的副本，确认下一阶段峰值能容纳再进入。宿主每秒观察新根逻辑字节、`st_blocks × 512` 和可用量，guest 观察磁盘、卷及生产者。采样具有延迟，阶段预算须覆盖其间可能的增长。超阈值或无法证明下一步余量时，停止该阶段和已核归属的自有实例，保留现存产物。独立盘路径、socket 和实际增长需在后续执行中回读。
+
+本轮交付这套方案及只读来源核对。新根、guest 和业务回归均待后续执行。下一步由 Agent 补齐分阶段输入与峰值上界估算，按同一账本复核预算，再由用户决定该目标的容量例外和执行范围。获准后的单实例构建、业务回归和收尾暂估 45–75 分钟，开始前需结合剩余预算和输入复核。完整 WP-05、AC-19、Mac 业务回归及发布许可仍待完成。
 
 ## Mac 业务回归准入复核
 
@@ -30,7 +82,7 @@
 
 执行前须把API、Langflow、worker、PG、manifest、source/report存储绑定到同一独立栈：--api-url只绑定API，LangflowClient另读LANGFLOW_URL及认证环境；不能落回localhost默认值或读取原凭据。需要全新postgres-data/source-documents/report-artifacts/flow-config卷、loopback端口、明确空状态、实际driver/options/labels/mount和容量停点；不直接运行带CI-only守卫的迁移/候选脚本，也不伪造GITHUB变量绕过。
 
-目标可位于当前Mac，需具备独立disk/socket及已核资源余量。下一步由环境操作者给出Mac上独立验收实例的标识、接入方式及独立存储位置（无需发送密钥）；Agent随即按已有授权只读核双端点/卷/镜像与容量，满足才执行上述5案9报告，不反复请求继续。若需新建环境或改变容量，先固定精确方案和所缺决定，不能套用Linux单VM例外。本轮未提供该目标，不远程盲探、不新购/下载/安装/创建环境，不在原Desktop上试跑。
+用户随后确认暂无现成独立目标。当前 Mac 的新实例方案及其容量决定见上节。
 
 本轮只在四份既有文档保存派生观察及方法，不另建Spec、状态表、复审/证据包或临时根；没有新增运行通过证据。先前ps整体输出超过64KiB内存检查而中止，后改为≤256KiB并只输出过滤元数据；未启动测试或重试原engine查询。10固定输入及12旧封存manifest匹配，旧包/默认源码/原SQLite无操作；本轮有效技术修复计数0，沿用此前两实验失败，不把一次工具输出限额等同业务失败。
 
@@ -100,7 +152,7 @@ live-restore组两个既有任务跨daemon关闭仍存在，restart=false重连�
 
 ## 尚未解决及具体下一步
 
-- Mac业务准入只读复核已完成，缺独立目标/存储归属/容量证据，业务not_started。环境操作者提供目标标识与接入方式后，由Agent按已有条件授权核实双端点/卷/image及增长停点再回归；原Desktop外部运行不自动授权旧卷试跑。相同Desktop版本的配置传递验证另列。
+- 当前 Mac 独立业务环境方案已定，业务 `not_started`。Agent 先按上节补齐制品和峰值证据，再由用户决定单目标容量与执行范围。同版 Desktop 配置传递验证另列。
 - 由Agent依[发布缺口矩阵](evidence/release-gaps/README.md)补系统/原生库source、通知及提供方式，精确Zep2.0.2问题仍依维护者对[#368](https://github.com/getzep/zep-python/issues/368)的可用澄清；本轮没有新增target native采集或新漏洞扫描，不将VM依赖安装当应用发布闭项。
 - 完整WP-05/AC-19、负责人AD-03和最终接受仍待完成，再决定默认升级及WP-08。默认1.11.6、原SQLite、固定Contract/baseline/锁和11旧包按已核范围保持；不把此机制实验当AC-17业务迁移、Mac或完整发布通过。
 
