@@ -4,11 +4,35 @@
 
 ## 当前结论与授权
 
-用户已批准单独Linux VM容量例外（逻辑≤6GiB、实际增长≤3GiB）和同目标累计600分钟：先有限下载核验签名/制品/依赖，满足后手动安装、创建、启动，只做虚构恢复实验；保留此前约448分钟起的全部累计和修复次数。本轮已完成此有限工作包，最终实验通过，唯一新VM已停止并保留。
+用户已批准单独Linux VM容量例外（逻辑≤6GiB、实际增长≤3GiB）和同目标累计600分钟：先有限下载核验签名/制品/依赖，满足后手动安装、创建、启动，只做虚构恢复实验；保留此前约448分钟起的全部累计和修复次数。上一轮已完成此单VM工作包，最终实验通过且唯一新VM停止保留；本轮新授权的Mac业务准入结论见下节。
 
 结论只覆盖Linux/Moby28.3.2恢复机制：restart=false可在本实验前置条件下抑制符合策略的已停止容器恢复；它不终止live-restore存活任务，也不保证daemon对存储只读。Mac Desktop配置传递、原历史盘保护及本机业务验收仍未通过；不能据此启动旧盘或认定完整AC-19通过。
 
 原Desktop是外部状态：只读检查发现其backend于12:59:12启动，早于Lima create13:11、首次start13:14。用户确认由自己或另一任务启动。原Docker.raw分配量及mtime与此前快照不同，本代理未连接其socket、启停或修改原引擎；不能声称原Desktop一直关闭或全局历史盘字节未变。原SQLite等10固定输入及11旧manifest仍匹配，具体范围见新包protection.json。
+
+## Mac 业务回归准入复核
+
+2026-11-05 13:42–13:44（America/Los_Angeles），source dffe3003f4bfe048b5ff1644e022bae59121554e。用户本轮已授权先核实独立Mac目标与容量，条件满足后仅虚构业务回归、自查并同步GitHub。沿用ARC-UPGRADE@0.1.0、同goal600分钟、约497分钟起的累计及失败计数2；没有扩展安装/环境创建/扩盘/清理或原盘操作权限。本轮预检先完成，业务执行条件尚未满足，状态为not_started，不是业务测试失败。
+
+只读事实与方法：
+
+- sw_vers/uname/sysctl确认macOS26.5.2/build25F84、arm64、8GiB RAM/8逻辑CPU、hv_support=1；项目所在卷statvfs可用34,931,625,984B（约32.53GiB），memory_pressure -Q显示free35%。这些是快照，不构成全栈最低配置或容量准入批准。
+- docker context ls只读client metadata：仍仅default和desktop-linux；/var/run/docker.sock链接到/Users/ffq/.docker/run/docker.sock，两者是同一原Desktop入口。lstat确认该socket存在；原backend仍为12:59启动的进程。未连接socket、调用daemon查询或据此断言服务健康/空库存，未启停原Desktop。
+- Sol在/Applications和/Users/ffq/Applications下核8种精确app名，共16位置，仅原Docker.app存在。9个常见provider元数据根均不存在：.colima、.lima、.orbstack、.config/containers/podman/machine、.local/share/containers/podman/machine，以及用户Library下Group Containers/HUAQ24HBR6.dev.orbstack、Application Support/OrbStack、Application Support/rancher-desktop、Containers/com.utmapp.UTM/Data/Documents。只查白名单和至多一层metadata，不搜索全机/其他账户/自定义磁盘或读取凭据；不能据此说完全没有其他环境。
+- 保留的/private/tmp/arc-linux-vm/lima/probe仍是VZ/aarch64/plain、2CPU/2GiB/4GiB配置，lima.yaml SHA96558b5ea1d545451c51080f042de95a7c5caf365062376917b39e1dcd19ea97与前轮匹配。root用已有PyYAML只读核配置；它不是Mac业务栈。本轮未启动/调用provider运行态查询，不用PID文件缺失推断停止或零库存。该运行根逻辑4,837,486,272B、分配2,041,131,008B，旧单VM例外仅限机制实验，不用于带入Langflow全栈。
+- 原Docker.raw只stat：逻辑245,106,737,152B、分配27,164,852,224B，mtime_ns=1793913546609114442；未读正文/复制/挂载。整盘分配量不能等同本项目镜像或缓存；原数据由外部任务活动时也不声称全局字节不变。
+
+未满足项是**没有已指认、可接入且能证明独立disk/socket的Mac业务目标**；原engine的新project/新卷名也不足以满足当前历史盘保护要求。该目标的实际镜像、独立PG/source/report/flow-config卷、共享层归属、可用增长及停止保留能力均未核验，不能填成0或按宿主free推定通过。既有项目归属12GiB、单WP增长3GiB及旧warning仍未关闭，现有32.53GiB余量不解除它们。CI的12/20/30GiB是不同流水线入口，不直接设成本机五案最低门槛；8GiB RAM也不是单独失败依据。
+
+本轮目标是Mac宿主上的业务链路；相同Desktop4.43.2/build199162的配置传递/恢复机制验证是另一项证据，不是任意合格Mac业务目标都必须先重做的前置测试。Linuxprobe成功不能代替任一Mac结论。
+
+条件补齐后的最小回归已定位到[现有入口](../scripts/validate_langflow.py)：默认benchmark-count=0，TXT/DOCX/PDF三案与三种决定产出9份报告，另验Markdown和缺标识失败/幂等重试，共5案；同时核5组件、2个真实Flow、精确候选版本、下载hash及Flow前后指纹。只支持AC-02/04/05/13/18所列子项，不独立关闭Mac UI、AC-17或AC-19。候选1.13.1仍须核实际ARM64镜像/334包锁，默认1.11.6不替换。
+
+执行前须把API、Langflow、worker、PG、manifest、source/report存储绑定到同一独立栈：--api-url只绑定API，LangflowClient另读LANGFLOW_URL及认证环境；不能落回localhost默认值或读取原凭据。需要全新postgres-data/source-documents/report-artifacts/flow-config卷、loopback端口、明确空状态、实际driver/options/labels/mount和容量停点；不直接运行带CI-only守卫的迁移/候选脚本，也不伪造GITHUB变量绕过。
+
+目标可位于当前Mac，需具备独立disk/socket及已核资源余量。下一步由环境操作者给出Mac上独立验收实例的标识、接入方式及独立存储位置（无需发送密钥）；Agent随即按已有授权只读核双端点/卷/镜像与容量，满足才执行上述5案9报告，不反复请求继续。若需新建环境或改变容量，先固定精确方案和所缺决定，不能套用Linux单VM例外。本轮未提供该目标，不远程盲探、不新购/下载/安装/创建环境，不在原Desktop上试跑。
+
+本轮只在四份既有文档保存派生观察及方法，不另建Spec、状态表、复审/证据包或临时根；没有新增运行通过证据。先前ps整体输出超过64KiB内存检查而中止，后改为≤256KiB并只输出过滤元数据；未启动测试或重试原engine查询。10固定输入及12旧封存manifest匹配，旧包/默认源码/原SQLite无操作；本轮有效技术修复计数0，沿用此前两实验失败，不把一次工具输出限额等同业务失败。
 
 ## 实际合成实验
 
@@ -76,7 +100,7 @@ live-restore组两个既有任务跨daemon关闭仍存在，restart=false重连�
 
 ## 尚未解决及具体下一步
 
-- 由Agent先按现有证据确定Mac业务验收的独立目标与容量准入；本轮只验证Linux机制，旧Desktop外部运行不自动授予读取库存、恢复旧任务或在旧卷执行验收的权限。相同Desktop4.43.2/build199162的独立Mac配置传递仍需精确环境证据。
+- Mac业务准入只读复核已完成，缺独立目标/存储归属/容量证据，业务not_started。环境操作者提供目标标识与接入方式后，由Agent按已有条件授权核实双端点/卷/image及增长停点再回归；原Desktop外部运行不自动授权旧卷试跑。相同Desktop版本的配置传递验证另列。
 - 由Agent依[发布缺口矩阵](evidence/release-gaps/README.md)补系统/原生库source、通知及提供方式，精确Zep2.0.2问题仍依维护者对[#368](https://github.com/getzep/zep-python/issues/368)的可用澄清；本轮没有新增target native采集或新漏洞扫描，不将VM依赖安装当应用发布闭项。
 - 完整WP-05/AC-19、负责人AD-03和最终接受仍待完成，再决定默认升级及WP-08。默认1.11.6、原SQLite、固定Contract/baseline/锁和11旧包按已核范围保持；不把此机制实验当AC-17业务迁移、Mac或完整发布通过。
 
