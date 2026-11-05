@@ -1,0 +1,198 @@
+{
+  "collector": {
+    "images": {
+      "api": "sha256:185c972ed026fde18672614674961a11e9e9923089a1bc0be546306884c3d23a",
+      "langflow": "sha256:26a433f984fcb8da102faf0a77daa668c4ccfdc3a7177ac17ff961925547d27f",
+      "web": "sha256:74cb5a7ab0194a0f46547596f12be4b5c2acc5243e7eb8436bcb8f7153dadf41",
+      "postgres": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+    },
+    "os_identity": {
+      "profile": "debian",
+      "id": "debian",
+      "version_id": "12",
+      "source": "/etc/os-release",
+      "image": "sha256:26a433f984fcb8da102faf0a77daa668c4ccfdc3a7177ac17ff961925547d27f"
+    },
+    "native_materials": {
+      "state": "not_collected_this_image",
+      "prior_evidence": "docs/evidence/runtime-maintenance/ci/native-close/selection.json",
+      "prior_ci_run": 41760412382,
+      "prior_langflow_image": "sha256:fd6d66658d49008b53095d2669de17f88360038cbfc8238aa509ffd2e1aaa02c",
+      "limitation": "Prior sealed native materials concern their original images; no current image native body was read or established by this profile.",
+      "legal_approval": false,
+      "distribution_approval": false
+    },
+    "system_materials": {
+      "state": "not_applicable",
+      "reason": "RHEL transaction export does not apply to Debian; primary image inventory remains required."
+    },
+    "collection_state": "collected",
+    "audits": {
+      "package_scan_exit_code": 1,
+      "redhat_supplement": {
+        "state": "not_applicable",
+        "reason": "Verified Debian 12 image"
+      }
+    },
+    "release_acceptance": "pending_review_not_granted_by_collection",
+    "source_inputs": [
+      {
+        "path": "scripts/collect_release_ci.py",
+        "sha256": "c05b7a5577c425252084a638aabb7216f712a2f48d19b5888c6086b2207b6b72"
+      },
+      {
+        "path": "scripts/scan_images_osv.py",
+        "sha256": "0358ef68c8d866847f870f08770716d32cb2968b3eb684d2f00cb5088b9001db"
+      },
+      {
+        "path": "scripts/scan_release.py",
+        "sha256": "f3f353ff9a50651aa864aa75dbb480da9481dc78aaacaac2b74a90616558ea0c"
+      },
+      {
+        "path": "scripts/verify_image_licenses.py",
+        "sha256": "c5d0a5e970c12e274df1c4f63e6fcf356b4fe85bc1d6a76f4e20562dd69dc2f4"
+      },
+      {
+        "path": "scripts/verify_dependency_compatibility.py",
+        "sha256": "b3d73646aa87a1019fdff9a19983d28d1b656ed57cff5107211df9dae684659d"
+      },
+      {
+        "path": "scripts/apply_system_updates.py",
+        "sha256": "50ac38282e4bce3d2619d8dd3af46885c217fe6f9e3bf1e5b0ef58f39c3b8821"
+      },
+      {
+        "path": "scripts/verify_native_materials.py",
+        "sha256": "dffe7c32d0fd61f41a6f3e4e0bf0f4affc201ff4ffdeb716c1c7811f9ebd8765"
+      },
+      {
+        "path": "compliance/native-baseline.json",
+        "sha256": "ba73fb69a3d4644b5d0b49d64d32928ef9d1628716ea7d5289524e949ea4ce81"
+      },
+      {
+        "path": "docs/evidence/runtime-maintenance/ci/native-close/selection.json",
+        "sha256": "8797588869c1ead3383e5319a71583b945c11733ada1fefdfbefe980d1e20ff4"
+      },
+      {
+        "path": "docs/UPGRADE_SPEC.md",
+        "sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753"
+      }
+    ]
+  },
+  "scan": {
+    "result": "queried_with_findings",
+    "unique_queries": 583,
+    "observed_unique_advisory_ids": 157,
+    "mapping_unknown": 0,
+    "query_unknown": 0,
+    "detail_unknown": 0,
+    "images": {
+      "api": {
+        "image_id": "sha256:185c972ed026fde18672614674961a11e9e9923089a1bc0be546306884c3d23a",
+        "inventory_packages": 140,
+        "unknown_packages": 0,
+        "matched_binary_or_python_packages": 51,
+        "observed_unique_advisory_ids": 127,
+        "detail_unknown": 0,
+        "upstream_severity_labels": {
+          "unknown": 127
+        }
+      },
+      "langflow": {
+        "image_id": "sha256:26a433f984fcb8da102faf0a77daa668c4ccfdc3a7177ac17ff961925547d27f",
+        "inventory_packages": 443,
+        "unknown_packages": 0,
+        "matched_binary_or_python_packages": 52,
+        "observed_unique_advisory_ids": 132,
+        "detail_unknown": 0,
+        "upstream_severity_labels": {
+          "unknown": 132
+        }
+      },
+      "web": {
+        "image_id": "sha256:74cb5a7ab0194a0f46547596f12be4b5c2acc5243e7eb8436bcb8f7153dadf41",
+        "inventory_packages": 71,
+        "unknown_packages": 0,
+        "matched_binary_or_python_packages": 0,
+        "observed_unique_advisory_ids": 0,
+        "detail_unknown": 0,
+        "upstream_severity_labels": {}
+      },
+      "postgres": {
+        "image_id": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c",
+        "inventory_packages": 142,
+        "unknown_packages": 0,
+        "matched_binary_or_python_packages": 63,
+        "observed_unique_advisory_ids": 131,
+        "detail_unknown": 0,
+        "upstream_severity_labels": {
+          "unknown": 131
+        }
+      }
+    }
+  },
+  "license": {
+    "image_id": "sha256:26a433f984fcb8da102faf0a77daa668c4ccfdc3a7177ac17ff961925547d27f",
+    "legal_approval": false,
+    "project_files": [
+      {
+        "path": "/app/licenses/Langflow-LICENSE.txt",
+        "state": "recorded",
+        "sha256": "2f6f90f0641ad822aec5d2bccd1f97c569cc0cbaf0ec3754d10290808f3b1f1b",
+        "resolved_path": "/app/licenses/Langflow-LICENSE.txt",
+        "bytes": 1066,
+        "encoding": "utf-8; invalid bytes replaced, raw byte hash retained",
+        "repository_path": "licenses/Langflow-LICENSE.txt",
+        "repository_sha256": "2f6f90f0641ad822aec5d2bccd1f97c569cc0cbaf0ec3754d10290808f3b1f1b",
+        "exact_hash_match": true,
+        "text_bytes_hash_match": true
+      },
+      {
+        "path": "/app/licenses/sqlite-vec-LICENSE-MIT.txt",
+        "state": "recorded",
+        "sha256": "6ce72bbe12d975bd5286e5ab0a064c069693300c47bccbc57bec18485f1621ea",
+        "resolved_path": "/app/licenses/sqlite-vec-LICENSE-MIT.txt",
+        "bytes": 1068,
+        "encoding": "utf-8; invalid bytes replaced, raw byte hash retained",
+        "repository_path": "licenses/sqlite-vec-LICENSE-MIT.txt",
+        "repository_sha256": "6ce72bbe12d975bd5286e5ab0a064c069693300c47bccbc57bec18485f1621ea",
+        "exact_hash_match": true,
+        "text_bytes_hash_match": true
+      },
+      {
+        "path": "/app/licenses/sqlite-vec-LICENSE-APACHE.txt",
+        "state": "recorded",
+        "sha256": "a38070a94d4afd9cd710e3ce67bd1de78097cfe1784c1f0109ac95d3c196bfdc",
+        "resolved_path": "/app/licenses/sqlite-vec-LICENSE-APACHE.txt",
+        "bytes": 10931,
+        "encoding": "utf-8; invalid bytes replaced, raw byte hash retained",
+        "repository_path": "licenses/sqlite-vec-LICENSE-APACHE.txt",
+        "repository_sha256": "a38070a94d4afd9cd710e3ce67bd1de78097cfe1784c1f0109ac95d3c196bfdc",
+        "exact_hash_match": true,
+        "text_bytes_hash_match": true
+      }
+    ],
+    "selected_not_installed": [
+      "agent-lifecycle-toolkit",
+      "black",
+      "brotli",
+      "crc32c",
+      "datamodel-code-generator",
+      "fastmcp",
+      "fastmcp-slim",
+      "frozendict",
+      "gitpython",
+      "google-crc32c",
+      "langchain-nvidia-ai-endpoints",
+      "langflow",
+      "llm-sandbox",
+      "mem0ai",
+      "nltk",
+      "peewee",
+      "psycopg-binary",
+      "psycopg2-binary",
+      "smolagents",
+      "twelvelabs",
+      "zep-python"
+    ]
+  }
+}

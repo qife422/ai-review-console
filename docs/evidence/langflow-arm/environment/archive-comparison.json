@@ -1,0 +1,490 @@
+{
+  "scope": "Resolver-selected metadata only, not installed native binary/source read or wheel reproducibility proof",
+  "amd64_receipt": {
+    "path": "docs/evidence/langflow-transition/ci/lock/resolution.json",
+    "sha256": "ed4b31a5ce0575222e5d061d754c9b2020e358a575e4ffd6dac843205c82ba93"
+  },
+  "arm64_receipt": {
+    "path": "ci/lock/resolution.json",
+    "sha256": "089a5e76001e8225dc40b7f0dd474d86693015b71c7ce3d300069d49db7f0907"
+  },
+  "same_package_names_and_versions": 334,
+  "changed_archive_hashes": 59,
+  "same_archive_hashes": 275,
+  "classification": "58 changed filenames explicitly aarch64; magika1.0.3 selects py3-none-any instead of AMD-specific wheel. Hash difference is not uniformly an arch-specific filename or code-version change.",
+  "changes": [
+    {
+      "name": "aiohttp",
+      "version": "3.14.4",
+      "amd64_sha256": "c5e93ab6e6330dce40f5b43996f1fc5f2543296d263a5e4b59ff09e73870b7d8",
+      "arm64_sha256": "322e3d741b3133bcbb981a41d4f9b8ac3545c18de49c662c2b1f4e1c770b98ad",
+      "arm64_filename": "aiohttp-3.14.4-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "apsw",
+      "version": "3.53.4.0",
+      "amd64_sha256": "6c47c64ca9c2fac2b476317210b6e8c04681fb718594c0806bd33e5d2b459dff",
+      "arm64_sha256": "4760a026284318d5de6937a14add0d03b194ea60bf67fb51bdd28b541a249229",
+      "arm64_filename": "apsw-3.53.4.0-cp312-cp312-manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "bcrypt",
+      "version": "5.0.0",
+      "amd64_sha256": "611f0a17aa4a25a69362dcc299fda5c8a3d4f160e2abb3831041feb77393a14a",
+      "arm64_sha256": "edfcdcedd0d0f05850c52ba3127b1fce70b9f89e0fe5ff16517df7e81fa3cbb8",
+      "arm64_filename": "bcrypt-5.0.0-cp39-abi3-manylinux_2_34_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "caio",
+      "version": "0.12.10",
+      "amd64_sha256": "70d5032f3e0b2dbeceb12d418951415e936cff7f33132ac9f7759937ff1916f3",
+      "arm64_sha256": "93bb3a3f0bd684ac6b559c33a84817395c4d2c75d98dae2b7c40c57acce83737",
+      "arm64_filename": "caio-0.12.10-cp312-cp312-manylinux_2_34_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "cffi",
+      "version": "2.1.1",
+      "amd64_sha256": "c1453022f490d2459a11819d83ad1d586e9ff65a12ac3e705ffebd46d3685dcf",
+      "arm64_sha256": "68e62fe11f30d5ca8289242866f0a5291402d8529ca2178ab8afc5c9694ae890",
+      "arm64_filename": "cffi-2.1.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "chardet",
+      "version": "7.7.0",
+      "amd64_sha256": "feb66c96264e3e6a9ff0c7318ce0028800b6c18ad07c8000d2404a108d1ef767",
+      "arm64_sha256": "68db376d4bb403dc282a6d2ed5b4c4b45a7a21dc7537e79699f8be669a9e88ef",
+      "arm64_filename": "chardet-7.7.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.2",
+      "amd64_sha256": "3d31298449090ab8d47b7b1b2a555ff73cac7ed438a08b7ac160980c7ebed649",
+      "arm64_sha256": "b91363207bd9dc966a691e959bb47f64b30f7ac4b072be9968b366982f7db77c",
+      "arm64_filename": "charset_normalizer-3.5.2-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "clickhouse-connect",
+      "version": "0.7.19",
+      "amd64_sha256": "0d38c30bd847af0ce7ff738152478f913854db356af4d5824096394d0eab873d",
+      "arm64_sha256": "9ba80e3598acf916c4d1b2515671f65d9efee612a783c17c56a5a646f4db59b9",
+      "arm64_filename": "clickhouse_connect-0.7.19-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "cryptography",
+      "version": "50.0.2",
+      "amd64_sha256": "9dab55f57c74c3cad24c323bacbbd04be4705ba6eb0d92e920b1fc4837ed5079",
+      "arm64_sha256": "87e9ce85beb6b328ba370cc6e6aea483c92617b4c95b1d33a49297eb662bfb04",
+      "arm64_filename": "cryptography-50.0.2-cp311-abi3-manylinux_2_34_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "duckdb",
+      "version": "1.5.6",
+      "amd64_sha256": "bc9619ed7d4ffa117b5155d84b44794366bb6635178d78ed5e13a6024845c757",
+      "arm64_sha256": "ce89a1025a5317ebe9c520876c48032b5247ac574865486648b1a004f6009875",
+      "arm64_filename": "duckdb-1.5.6-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "fastuuid",
+      "version": "0.14.0",
+      "amd64_sha256": "808527f2407f58a76c916d6aa15d58692a4a019fdf8d4c32ac7ff303b7d7af09",
+      "arm64_sha256": "0c9ec605ace243b6dbe3bd27ebdd5d33b00d8d1d3f580b39fdd15cd96fd71796",
+      "arm64_filename": "fastuuid-0.14.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "frozenlist",
+      "version": "1.8.0",
+      "amd64_sha256": "494a5952b1c597ba44e0e78113a7266e656b9794eec897b19ead706bd7074383",
+      "arm64_sha256": "96f423a119f4777a4a056b66ce11527366a8bb92f54e541ade21f2374433f6d4",
+      "arm64_filename": "frozenlist-1.8.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "greenlet",
+      "version": "3.5.6",
+      "amd64_sha256": "975736b002ed080d124cf81a79cb7e05cb26d6b3f5c7a7b651c0fcce70353aa1",
+      "arm64_sha256": "e85880b538e59a59f55117b81f208a6660ad5ac328aad9305f812d9b8bc67a0f",
+      "arm64_filename": "greenlet-3.5.6-cp312-cp312-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "grpcio",
+      "version": "1.78.0",
+      "amd64_sha256": "12a771591ae40bc65ba67048fa52ef4f0e6db8279e595fd349f9dfddeef571f9",
+      "arm64_sha256": "859b13906ce098c0b493af92142ad051bf64c7870fa58a123911c88606714996",
+      "arm64_filename": "grpcio-1.78.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.8.0",
+      "amd64_sha256": "29dab7c904cd1914a0439c6e1306c12c7497c8bd32290fbe563ebf51ca4b6d6d",
+      "arm64_sha256": "8800e3444770f2c630b361bc6d5c6ebb770b7830646cf632fbb79d0e5bbc9e7f",
+      "arm64_filename": "hf_xet-1.8.0-cp38-abi3-manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "httptools",
+      "version": "0.9.0",
+      "amd64_sha256": "3e3201fe4d46e0d15d7ff9fafc94a605da9eb82d2c5b9837f0368acb325481f1",
+      "arm64_sha256": "58a1b0ec4cbb930e69669f9771715b2c7898d3cdf064d9811f7a66afef96b544",
+      "arm64_filename": "httptools-0.9.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "ijson",
+      "version": "3.6.0",
+      "amd64_sha256": "c14d568d31a322e8ed7e9735f6e355608a23cc6ff4b5da843515089dae4cbf5f",
+      "arm64_sha256": "1e592cd601f91424428e7cbce11f7ab0d5430253a81e60f8a69981fb1136c77c",
+      "arm64_filename": "ijson-3.6.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "jiter",
+      "version": "0.18.0",
+      "amd64_sha256": "b3c741e6b778c951a6861964ee475118812a33208426c54fb92bf4e318bda834",
+      "arm64_sha256": "d7424194e68ef44e94290961f59319850d7ce11a329a3957f91709c15ded6618",
+      "arm64_filename": "jiter-0.18.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "jq",
+      "version": "1.13.0",
+      "amd64_sha256": "2974d3eed7401073b8f6508da0c5d2d2087a4928e5fbc00749338d81329b1f92",
+      "arm64_sha256": "adf639f295f82b284121cbf4f5fd00c05b1480cc05c64a5b704fc137650aac54",
+      "arm64_filename": "jq-1.13.0-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "litellm",
+      "version": "1.103.1",
+      "amd64_sha256": "3b3edc76f222153b46ebf50586009c6c23c9c5205efc2de19630a0561a144d95",
+      "arm64_sha256": "3bd0cd42b6a86afde709d3e39716b546d4e2dbcbdddd88cc40d0894ef8513bb6",
+      "arm64_filename": "litellm-1.103.1-cp310-abi3-manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "lxml",
+      "version": "6.1.3",
+      "amd64_sha256": "909f4e927bb051f7740d6367285fc60cdcfdaf0258c2dba4ff5ba7eadadc250c",
+      "arm64_sha256": "b37772102d44bb6628186accca3a121b1fa3a6b3d97518a8c29a5229ca4c0d0a",
+      "arm64_filename": "lxml-6.1.3-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "lz4",
+      "version": "4.4.5",
+      "amd64_sha256": "24092635f47538b392c4eaeff14c7270d2c8e806bf4be2a6446a378591c5e69e",
+      "arm64_sha256": "2c3ea562c3af274264444819ae9b14dbbf1ab070aff214a05e97db6896c7597e",
+      "arm64_filename": "lz4-4.4.5-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "magika",
+      "version": "1.0.3",
+      "amd64_sha256": "3e9b49134e8116ee40b431664dcbed9e199413efddcce1a173c734b4e0521529",
+      "arm64_sha256": "938d8e033953f2ddeb8c35dc423aa289ca116bfa7a71a778f6e77460f9025803",
+      "arm64_filename": "magika-1.0.3-py3-none-any.whl",
+      "metadata_classification": "universal-wheel-filename"
+    },
+    {
+      "name": "markupsafe",
+      "version": "3.0.4",
+      "amd64_sha256": "8e124f974786f831d6043728e38296969d3579db8896fe004682f5758e613581",
+      "arm64_sha256": "6a45c3d514f2436064db00d7fc8778d888f0236ebfed649b53d13a59e69ad51b",
+      "arm64_filename": "markupsafe-3.0.4-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "multidict",
+      "version": "6.9.1",
+      "amd64_sha256": "976fd7689d69ec78d67d31d38d396d8adb562f7e8368279f76aed4aa451fa06d",
+      "arm64_sha256": "35fc236507fb1b3138f0af5ecd5f94ed752d4d6d826248eae425f86204013eea",
+      "arm64_filename": "multidict-6.9.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.4",
+      "amd64_sha256": "fbde6962867ee75b48b0ee29b2b9372ec5d617799dbaf38e82dc0596f2f7738a",
+      "arm64_sha256": "fe4d21ab149f15e4e6043dfb0de87e6e5f34ac176cde83060e9802981fca2ac2",
+      "arm64_filename": "numpy-2.5.4-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "onnxruntime",
+      "version": "1.23.2",
+      "amd64_sha256": "0f9b4ae77f8e3c9bee50c27bc1beede83f786fe1d52e99ac85aa8d65a01e9b77",
+      "arm64_sha256": "76ff670550dc23e58ea9bc53b5149b99a44e63b34b524f7b8547469aaa0dcb8c",
+      "arm64_filename": "onnxruntime-1.23.2-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "orjson",
+      "version": "3.13.0",
+      "amd64_sha256": "bceadfd314bd238f584fc229a4bbaf0e573597e7a026dec5429fbf29fd66c641",
+      "arm64_sha256": "ae1d895cf7bbfd50ef34bb63bb727b14514f259f3e3f8dd010783bd38e864c6e",
+      "arm64_filename": "orjson-3.13.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "ormsgpack",
+      "version": "1.13.0",
+      "amd64_sha256": "8187048ec7b9ec628f985954e2409248acfeb8732e2751305649eaaba7304db7",
+      "arm64_sha256": "a22d85e6010676b8a6e9024c4f7fdeb56953684ea6679cc084d0ecb7d768b572",
+      "arm64_filename": "ormsgpack-1.13.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "pandas",
+      "version": "2.3.3",
+      "amd64_sha256": "b3d11d2fda7eb164ef27ffc14b4fcab16a80e1ce67e9f57e19ec0afaf715ba89",
+      "arm64_sha256": "ecaf1e12bdc03c86ad4a7ea848d66c685cb6851d807a26aa245ca3d2017a1908",
+      "arm64_filename": "pandas-2.3.3-cp312-cp312-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "pillow",
+      "version": "13.0.0",
+      "amd64_sha256": "42d63be3af4f9b951b199b0a9d23365d37ab14687e6d77b74940432c8515c4ca",
+      "arm64_sha256": "8bf295fe459343bc6093c8e5e0df60bfa189e0fcb775a22e2c2488fdeccc6c0d",
+      "arm64_filename": "pillow-13.0.0-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "propcache",
+      "version": "0.5.4",
+      "amd64_sha256": "2814ecd8e818f487bee4b0f921bc4d1c176cc5fc71ac0f072d0fa67eda4ac14b",
+      "arm64_sha256": "60a64cbccaa11b7760ce705a14ada17ba459e7ca9f23ba587eb013821032d7ef",
+      "arm64_filename": "propcache-0.5.4-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "protobuf",
+      "version": "6.33.6",
+      "amd64_sha256": "e9db7e292e0ab79dd108d7f1a94fe31601ce1ee3f7b79e0692043423020b0593",
+      "arm64_sha256": "e2afbae9b8e1825e3529f88d514754e094278bb95eadc0e199751cdd9a2e82a2",
+      "arm64_filename": "protobuf-6.33.6-cp39-abi3-manylinux2014_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "psutil",
+      "version": "7.2.2",
+      "amd64_sha256": "076a2d2f923fd4821644f5ba89f059523da90dc9014e85f8e45a5774ca5bc6f9",
+      "arm64_sha256": "b0726cecd84f9474419d67252add4ac0cd9811b04d61123054b9fb6f57df6e9e",
+      "arm64_filename": "psutil-7.2.2-cp36-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "pyarrow",
+      "version": "26.0.1",
+      "amd64_sha256": "c718bf97a92a6dea97fd1062c3b9f9e2e83cb9cc926e752289fa4ffff41738f9",
+      "arm64_sha256": "6c18167774fb599d42444b7ac558a893d49e750fb14232b538955e6f0d1d51ea",
+      "arm64_filename": "pyarrow-26.0.1-cp312-cp312-manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "pydantic-core",
+      "version": "2.46.5",
+      "amd64_sha256": "0fc5be0abd4a407e200d844b404e33639a554e7bd0d448e7b9ae181be4789ac2",
+      "arm64_sha256": "4fdc8b93a41521988916eeaa271173fcca7fa0803d62f87675aac8dcec1c8e29",
+      "arm64_filename": "pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "pymongo",
+      "version": "4.18.3",
+      "amd64_sha256": "aa6f363ff648bf061335d2190dd580cbf465b1308a7e6acb992d128d6a16a3bd",
+      "arm64_sha256": "e461bfca4861057929efa4215730b28b93b2adb4d07828d0b65475755bbf63f5",
+      "arm64_filename": "pymongo-4.18.3-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "pyyaml",
+      "version": "6.0.3",
+      "amd64_sha256": "ba1cc08a7ccde2d2ec775841541641e4548226580ab850948cbfda66a1befcdc",
+      "arm64_sha256": "9149cad251584d5fb4981be1ecde53a1ca46c891a79788c0df828d2f166bda28",
+      "arm64_filename": "pyyaml-6.0.3-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "rapidfuzz",
+      "version": "3.14.6",
+      "amd64_sha256": "0debb5f43662ea84d2f0228a0c7407ff647f9c3d13f3b692efff0cde46eebce0",
+      "arm64_sha256": "96a548979cd939b2c69358a0f5088a408524fbf7454f04bf90939fa971e64310",
+      "arm64_filename": "rapidfuzz-3.14.6-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "regex",
+      "version": "2026.9.29",
+      "amd64_sha256": "39ab5894d971f9ac68baa6eca5c50387db579cfcacf36ae8df3feceb1815e6d0",
+      "arm64_sha256": "f93bc1c3486ef3747e07c9d7c1d0a147b8fbaab975f80e348aed6f71309dfaca",
+      "arm64_filename": "regex-2026.9.29-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "rpds-py",
+      "version": "2026.9.1",
+      "amd64_sha256": "addeda51556dac7c1a2f14cda62db8b621cd12afba3091d03a96c72932387eab",
+      "arm64_sha256": "2693b2728bbcc48d09a981a356954b0c47c53ff25b545856f28a889ea619f69a",
+      "arm64_filename": "rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "safetensors",
+      "version": "0.8.0",
+      "amd64_sha256": "fd6f3f93c9a0a7cc2788ee63fb763353d4bd2e89b0751bc78fcf7dda00bea774",
+      "arm64_sha256": "7a46e5ff292c356d6991e60942ba7f79817682d3a2cef0702136448cb9c4d235",
+      "arm64_filename": "safetensors-0.8.0-cp310-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "scipy",
+      "version": "1.18.1",
+      "amd64_sha256": "f55fa87b6c612ecd6b058f167c53231b1d14e412efe361d3d6e38b3631c73218",
+      "arm64_sha256": "3c085faa2cfa879c5141df483f836f4d691045a078224a670fa570fa01612d89",
+      "arm64_filename": "scipy-1.18.1-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "sqlalchemy",
+      "version": "2.0.57",
+      "amd64_sha256": "4ff9f7dda4d136bfd7fab44384ef7e3135c9826da815d6248f713d0035a6274b",
+      "arm64_sha256": "75135c4c54be953730e41203f38ced685b60dfb16d61a7d4d9a7ab8d87ced6f1",
+      "arm64_filename": "sqlalchemy-2.0.57-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "sqlite-vec",
+      "version": "0.1.9",
+      "amd64_sha256": "1515727990b49e79bcaf75fdee2ffc7d461f8b66905013231251f1c8938e7786",
+      "arm64_sha256": "4e921e592f24a5f9a18f590b6ddd530eb637e2d474e3b1972f9bbeb773aa3cb9",
+      "arm64_filename": "sqlite_vec-0.1.9-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "tiktoken",
+      "version": "0.14.0",
+      "amd64_sha256": "7896eea257fe497a2b7134474d909156c6744ce8da35bce88011a960e008aa0d",
+      "arm64_sha256": "7db45b98e94adf4173a5cd7422b150999a7ee11ff847783a14f6e1b80cc38cb6",
+      "arm64_filename": "tiktoken-0.14.0-cp312-cp312-manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.22.2",
+      "amd64_sha256": "369cc9fc8cc10cb24143873a0d95438bb8ee257bb80c71989e3ee290e8d72c67",
+      "arm64_sha256": "2249487018adec45d6e3554c71d46eb39fa8ea67156c640f7513eb26f318cec7",
+      "arm64_filename": "tokenizers-0.22.2-cp39-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "tomli",
+      "version": "2.5.0",
+      "amd64_sha256": "6cf74416bdc94ae458b14e37286c1073081850ac8459a00d0c5efef5d44294c6",
+      "arm64_sha256": "bf0b5e8e0f68ebb494356e577c06c139161efd8d3b9050f93b39b7c26cc54ff0",
+      "arm64_filename": "tomli-2.5.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "tree-sitter",
+      "version": "0.26.0",
+      "amd64_sha256": "5a6b333b0282d8bb0af741f9b018bd2523d4eecb2686bf6717066a625fecfaa4",
+      "arm64_sha256": "30a88be89ff1f2755297f81e8080d88b795dd98720c3f9fa2acf93873182cc95",
+      "arm64_filename": "tree_sitter-0.26.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "tree-sitter-javascript",
+      "version": "0.25.0",
+      "amd64_sha256": "9dc04ba91fc8583344e57c1f1ed5b2c97ecaaf47480011b92fbeab8dda96db75",
+      "arm64_sha256": "199d09985190852e0912da2b8d26c932159be314bc04952cf917ed0e4c633e6b",
+      "arm64_filename": "tree_sitter_javascript-0.25.0-cp310-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "tree-sitter-typescript",
+      "version": "0.23.2",
+      "amd64_sha256": "e96d36b85bcacdeb8ff5c2618d75593ef12ebaf1b4eace3477e2bdb2abb1752c",
+      "arm64_sha256": "4b1eed5b0b3a8134e86126b00b743d667ec27c63fc9de1b7bb23168803879e31",
+      "arm64_filename": "tree_sitter_typescript-0.23.2-cp39-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "uuid-utils",
+      "version": "0.19.0",
+      "amd64_sha256": "b8060530a8fa27f11947489c79bc36e6ebb465b2d714945364dc397283309417",
+      "arm64_sha256": "82573c0e5090732c0ae2e18626e06cb35fe7cfcf6fe9534d4c1638af41d25d36",
+      "arm64_filename": "uuid_utils-0.19.0-cp310-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "uvloop",
+      "version": "0.23.0",
+      "amd64_sha256": "090865d8ce7a03986755a3ce711b7dd0d4b44eb14ab74368b717f3fad1180208",
+      "arm64_sha256": "f7548ede3ee908cfabc0d068106e303a9a2d811af959cdf6ab85676344cedcda",
+      "arm64_filename": "uvloop-0.23.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "watchfiles",
+      "version": "1.3.0",
+      "amd64_sha256": "b5768b49e426fd5b550b012c866db347cdf15c398ef98dc557b6e6b72fa74cd1",
+      "arm64_sha256": "4af9c464d410e8c44b58ddf1cbec7c3a02c1cb2c6c80df9c74659ba2fbda0ab5",
+      "arm64_filename": "watchfiles-1.3.0-cp310-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "websockets",
+      "version": "15.0.1",
+      "amd64_sha256": "64dee438fed052b52e4f98f76c5790513235efaa1ef7f3f2192c392cd7c91b65",
+      "arm64_sha256": "e8b56bdcdb4505c8078cb6c7157d9811a85790f2f2b3632c7d1462ab5783d215",
+      "arm64_filename": "websockets-15.0.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "wrapt",
+      "version": "1.17.3",
+      "amd64_sha256": "042ec3bb8f319c147b1301f2393bc19dba6e176b7da446853406d041c36c7828",
+      "arm64_sha256": "3af60380ba0b7b5aeb329bc4e402acd25bd877e98b3727b0135cb5c2efdaefe9",
+      "arm64_filename": "wrapt-1.17.3-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "xxhash",
+      "version": "4.0.2",
+      "amd64_sha256": "7c7c95dba490be3b4e5a2fa5595b4d4f088fe7b8726e5998b8c1d83b1f9eb3e4",
+      "arm64_sha256": "1fce8df7958f0828bd78d2ecfd9b11510abff9edc0e28fa7f7ca0ddcee2f0a8b",
+      "arm64_filename": "xxhash-4.0.2-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "yarl",
+      "version": "1.25.1",
+      "amd64_sha256": "c6f117789d22dce188e5754e8bc65b7e6ebf8cb73963b9fa761f672a5883769d",
+      "arm64_sha256": "4d781294bb815ecb5ea57ff6bbf8038e0a31a95fdf3e1788f66e0dc100d64b58",
+      "arm64_filename": "yarl-1.25.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    },
+    {
+      "name": "zstandard",
+      "version": "0.25.0",
+      "amd64_sha256": "5a56ba0db2d244117ed744dfa8f6f5b366e14148e00de44723413b2f3938a902",
+      "arm64_sha256": "6dffecc361d079bb48d7caef5d673c88c8988d3d33fb74ab95b7ee6da42652ea",
+      "arm64_filename": "zstandard-0.25.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "metadata_classification": "aarch64-wheel-filename"
+    }
+  ],
+  "native_target_files_read": 0
+}

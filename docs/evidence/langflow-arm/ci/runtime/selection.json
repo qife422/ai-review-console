@@ -1,0 +1,256 @@
+{
+  "run": 41979142562,
+  "source": "e6f6fe7b908b7fab1b4f85e9f5a4fa22890fc923",
+  "method": "GitHub API; ZIP checked against API digest and held only in memory; derived fields labeled",
+  "artifacts": [
+    {
+      "id": 13393480918,
+      "name": "unit-verification",
+      "size_in_bytes": 5663,
+      "digest": "sha256:a573c98dadb7b46ce52eb5f77afb636f5593a7efd720938491e890f63d5f4ef1"
+    },
+    {
+      "id": 13393323109,
+      "name": "workflow-browser-verification-candidate-amd64",
+      "size_in_bytes": 3212675,
+      "digest": "sha256:aa6feeec27ba33d6f03ee1aa61aba8b3fabbc75a2822edb7ebc6deb944230d0a"
+    },
+    {
+      "id": 13392708869,
+      "name": "workflow-browser-verification-candidate-arm64",
+      "size_in_bytes": 584924,
+      "digest": "sha256:3236b6aee1b608bf9aa491a93d85b05d2cf2756261828a7f3f2c3c62691b4920"
+    }
+  ],
+  "files": [
+    {
+      "path": "run.json",
+      "selected_bytes": 13555,
+      "selected_sha256": "376b2e2ea0e7e0c7f3fd90366db160e054d797619f48383e0922a5e7f5e9e780",
+      "sources": [
+        {
+          "api": "runs and jobs",
+          "run_bytes": 12837,
+          "run_sha256": "e6cfa6131b2e8c99ca768ccebd7c28b6db8a881218bcb433200f5d268730f1e5",
+          "jobs_bytes": 24061,
+          "jobs_sha256": "651e09118369b36515c42fdfc1433b7143224ce480796ae9ffe36b400cd7a216",
+          "method": "selected run, jobs and step fields"
+        }
+      ]
+    },
+    {
+      "path": "arm64-workflow.json",
+      "selected_bytes": 7183,
+      "selected_sha256": "8311c0fc07744aae138e42932de9edd141203e176208c8f6a2c8596d89cf9f6c",
+      "sources": [
+        {
+          "artifact_id": 13392708869,
+          "member_path": "workflow.json",
+          "original_bytes": 7183,
+          "original_sha256": "8311c0fc07744aae138e42932de9edd141203e176208c8f6a2c8596d89cf9f6c",
+          "method": "original member bytes"
+        }
+      ]
+    },
+    {
+      "path": "arm64-probe.json",
+      "selected_bytes": 2162,
+      "selected_sha256": "8625b69279ee3cd339cdeb43fc17f2f206e2106fcd06334e13081f29e2bd159f",
+      "sources": [
+        {
+          "artifact_id": 13392708869,
+          "member_path": "release/dependency-compatibility.stdout",
+          "original_bytes": 2162,
+          "original_sha256": "8625b69279ee3cd339cdeb43fc17f2f206e2106fcd06334e13081f29e2bd159f",
+          "method": "original member bytes"
+        }
+      ]
+    },
+    {
+      "path": "arm64-inventory.json",
+      "selected_bytes": 188410,
+      "selected_sha256": "52b0457043bf656bbbae7f748ffb81e6cc27eb812d59809321926b04282db089",
+      "sources": [
+        {
+          "artifact_id": 13392708869,
+          "member_path": "release/images/langflow-inventory.json",
+          "original_bytes": 188410,
+          "original_sha256": "52b0457043bf656bbbae7f748ffb81e6cc27eb812d59809321926b04282db089",
+          "method": "original member bytes"
+        }
+      ]
+    },
+    {
+      "path": "arm64-comparison.json",
+      "selected_bytes": 634,
+      "selected_sha256": "bb2c686e15a9116ce5dfc9cf6bd561400093d94d006970d3060385996687cd37",
+      "sources": [
+        {
+          "artifact_id": 13392708869,
+          "member_path": "release/images/langflow-inventory.json",
+          "original_bytes": 188410,
+          "original_sha256": "52b0457043bf656bbbae7f748ffb81e6cc27eb812d59809321926b04282db089",
+          "method": "original member bytes"
+        },
+        {
+          "path": "compliance/langflow-candidate.in",
+          "sha256": "93558be0714d17c73e253621f2f9d6ecc479af3b9777964040e82cb3cc16835b"
+        },
+        {
+          "path": "compliance/langflow-candidate-arm64.lock",
+          "sha256": "1d83205f67800760e0e1e2542bfec26071af9d5c0f37a8ab89a9da1c0e1a0028"
+        }
+      ]
+    },
+    {
+      "path": "arm64-image-summary.json",
+      "selected_bytes": 88205,
+      "selected_sha256": "ecb9cf26fb91e4f09d6224a898043b52bd125c5cb8f4875dff3a0d729304ca89",
+      "sources": [
+        {
+          "artifact_id": 13392708869,
+          "member_path": "release/images/summary.json",
+          "original_bytes": 88205,
+          "original_sha256": "ecb9cf26fb91e4f09d6224a898043b52bd125c5cb8f4875dff3a0d729304ca89",
+          "method": "original member bytes"
+        }
+      ]
+    },
+    {
+      "path": "arm64-summary.json",
+      "selected_bytes": 7354,
+      "selected_sha256": "ce89bd2068a3e55121360fe180bae700397ab0172c3426484904b5e1b684d4bd",
+      "sources": [
+        {
+          "artifact_id": 13392708869,
+          "member_path": "release/manifest.json",
+          "original_bytes": 25777,
+          "original_sha256": "5ebff36b912fa62b6f34a9128fd403430c3e9ba659d043609b58184deba9a9a9",
+          "method": "original member bytes"
+        },
+        {
+          "artifact_id": 13392708869,
+          "member_path": "release/images/summary.json",
+          "original_bytes": 88205,
+          "original_sha256": "ecb9cf26fb91e4f09d6224a898043b52bd125c5cb8f4875dff3a0d729304ca89",
+          "method": "original member bytes"
+        },
+        {
+          "artifact_id": 13392708869,
+          "member_path": "release/licenses/langflow.json",
+          "original_bytes": 789512,
+          "original_sha256": "049070d136a434c08a6e1a50a82fcf624b386249267ef28460ea481fc1065e86",
+          "method": "original member bytes"
+        },
+        {
+          "path": "licenses/Langflow-LICENSE.txt",
+          "sha256": "2f6f90f0641ad822aec5d2bccd1f97c569cc0cbaf0ec3754d10290808f3b1f1b"
+        },
+        {
+          "path": "licenses/sqlite-vec-LICENSE-MIT.txt",
+          "sha256": "6ce72bbe12d975bd5286e5ab0a064c069693300c47bccbc57bec18485f1621ea"
+        },
+        {
+          "path": "licenses/sqlite-vec-LICENSE-APACHE.txt",
+          "sha256": "a38070a94d4afd9cd710e3ce67bd1de78097cfe1784c1f0109ac95d3c196bfdc"
+        }
+      ]
+    },
+    {
+      "path": "amd64-workflow.json",
+      "selected_bytes": 7183,
+      "selected_sha256": "baeb965c2d3de5551ee269506380effe6a10dd05832afa444a6cee04083b2e13",
+      "sources": [
+        {
+          "artifact_id": 13393323109,
+          "member_path": "workflow.json",
+          "original_bytes": 7183,
+          "original_sha256": "baeb965c2d3de5551ee269506380effe6a10dd05832afa444a6cee04083b2e13",
+          "method": "original member bytes"
+        }
+      ]
+    },
+    {
+      "path": "amd64-comparison.json",
+      "selected_bytes": 628,
+      "selected_sha256": "5fc7c901b2b9a2ee46641d61683ddc808e124bf4a7b30aa4561a2876c93cfc84",
+      "sources": [
+        {
+          "artifact_id": 13393323109,
+          "member_path": "release/images/langflow-inventory.json",
+          "original_bytes": 188521,
+          "original_sha256": "d56b9d2092ae85b5a05f870a125c93d4762a2c14169f133b81a9d2911098a0f8",
+          "method": "original member bytes"
+        },
+        {
+          "path": "compliance/langflow-candidate.in",
+          "sha256": "93558be0714d17c73e253621f2f9d6ecc479af3b9777964040e82cb3cc16835b"
+        },
+        {
+          "path": "compliance/langflow-candidate.lock",
+          "sha256": "22c0c6fd00a436f20fbc649e7ef69273da933b2c75ea0f797be9adfb48a4bd7b"
+        }
+      ]
+    },
+    {
+      "path": "amd64-summary.json",
+      "selected_bytes": 7354,
+      "selected_sha256": "027b430fe799b8885c344f5deaecece62cdc7e10c0137a11d7502b0360fd587b",
+      "sources": [
+        {
+          "artifact_id": 13393323109,
+          "member_path": "release/manifest.json",
+          "original_bytes": 25776,
+          "original_sha256": "1c4cd6b0d652a19a29d341d5bd6a538e763182d068a52f9b1a8babe85505d79b",
+          "method": "original member bytes"
+        },
+        {
+          "artifact_id": 13393323109,
+          "member_path": "release/images/summary.json",
+          "original_bytes": 88205,
+          "original_sha256": "4b6caafa684e11772468fa5790ee1d35fda71712422db252375fdcd144d45efd",
+          "method": "original member bytes"
+        },
+        {
+          "artifact_id": 13393323109,
+          "member_path": "release/licenses/langflow.json",
+          "original_bytes": 789512,
+          "original_sha256": "d92998f82090c4b0be7c935d6ef94220ffd94cafee728762b9b94f104cb84207",
+          "method": "original member bytes"
+        },
+        {
+          "path": "licenses/Langflow-LICENSE.txt",
+          "sha256": "2f6f90f0641ad822aec5d2bccd1f97c569cc0cbaf0ec3754d10290808f3b1f1b"
+        },
+        {
+          "path": "licenses/sqlite-vec-LICENSE-MIT.txt",
+          "sha256": "6ce72bbe12d975bd5286e5ab0a064c069693300c47bccbc57bec18485f1621ea"
+        },
+        {
+          "path": "licenses/sqlite-vec-LICENSE-APACHE.txt",
+          "sha256": "a38070a94d4afd9cd710e3ce67bd1de78097cfe1784c1f0109ac95d3c196bfdc"
+        }
+      ]
+    },
+    {
+      "path": "tests.json",
+      "selected_bytes": 414,
+      "selected_sha256": "fc4a52dd029c3d8e5dcf02fd2812bca6fda9532483dc507b49421044b6f37b5b",
+      "sources": [
+        {
+          "artifact_id": 13393480918,
+          "member_path": "arc-unit.xml",
+          "original_bytes": 37109,
+          "original_sha256": "f104d343fa415c7a8bf0046cfe650df1360a49bb4f32e0fd1555de2c9381de4f",
+          "method": "original member bytes"
+        },
+        {
+          "api": "jobs/127084921220/logs",
+          "original_bytes": 95768,
+          "original_sha256": "f704e5aea7be7f8559badb97a88cc7f5e130d6e5f848fd3aa183a0959dae2350",
+          "method": "selected Vitest summary lines, ANSI removed"
+        }
+      ]
+    }
+  ]
+}

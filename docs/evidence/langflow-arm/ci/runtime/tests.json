@@ -1,0 +1,18 @@
+{
+  "suites": [
+    {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "271",
+      "time": "5.859",
+      "timestamp": "2026-11-05T06:15:35.846236+00:00",
+      "hostname": "runnervmwuk1x"
+    }
+  ],
+  "frontend_log_lines": [
+    "2026-11-05T06:16:11.4609445Z  Test Files  5 passed (5)",
+    "2026-11-05T06:16:11.4610438Z       Tests  29 passed (29)"
+  ]
+}

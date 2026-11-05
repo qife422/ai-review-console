@@ -1,0 +1,94 @@
+{
+  "checked_at": "2026-11-05T06:30:25.479112+00:00",
+  "new_temp": {
+    "regular_files": 26,
+    "symlinks": 0,
+    "bytes": 514075
+  },
+  "prior_three": [
+    {
+      "regular_files": 276,
+      "symlinks": 0,
+      "bytes": 38360216
+    },
+    {
+      "regular_files": 72,
+      "symlinks": 8,
+      "bytes": 1217200
+    },
+    {
+      "regular_files": 60,
+      "symlinks": 0,
+      "bytes": 860409
+    }
+  ],
+  "combined_temp_bytes": 40951900,
+  "ci_selected": {
+    "regular_files": 21,
+    "symlinks": 0,
+    "bytes": 491033
+  },
+  "sources_selected": {
+    "regular_files": 0,
+    "symlinks": 0,
+    "bytes": 0
+  },
+  "candidate_before_capacity_and_manifest": {
+    "regular_files": 39,
+    "symlinks": 0,
+    "bytes": 592387
+  },
+  "measurement": "regular file size plus symlink lstat size; old test symlinks not followed/copied/deleted; snapshot before this record and final manifest",
+  "limits": {
+    "created_at": "2026-11-05T06:11:21.387017+00:00",
+    "same_goal": "cfd2d589-0c13-4ee0-bd93-8316c3f556a4",
+    "user_authorization": "2026-11-04 当前用户：可以 是否完成自查和代码上传 完成后允许进入下一步；上一轮自查/remote e1d8a02已核实后先推进候选ARM独立锁及验证",
+    "budget_minutes_cumulative": 360,
+    "prior_elapsed_seconds": 16623.715341329575,
+    "source_head": "e1d8a0238a8ca5bd69aaa39ff722204f08d36bbe",
+    "scope": "Independent LinuxARM64 candidate hash lock/native runner synthetic core regression; default1.11.6 and all original/historicaldata unchanged. No backend publishing/history cleanup/local Docker start/build/pull/prune.",
+    "temporary": "/private/tmp/arc-langflow-arm.tlmz8anp",
+    "new_temp_limit_bytes": 1048576,
+    "prior_three_temp_bytes_at_start": 40437825,
+    "combined_named_temp_limit_bytes": 41943040,
+    "selected_ci_limit_bytes": 614400,
+    "selected_ci_limit_files": 40,
+    "sources_limit_bytes": 65536,
+    "sources_limit_files": 4,
+    "candidate": "artifacts/evidence-candidates/langflow-arm",
+    "formal": "docs/evidence/langflow-arm",
+    "candidate_and_formal_limit_each_bytes": 104857600,
+    "candidate_and_formal_limit_each_files": 1000,
+    "amplification_stop": "above1GiB AND100x prior764861B author source baseline; images measured separately; no whole-build backups",
+    "runner": "20GiB lock entrance, existing12GiB runtime entrance/5GiB floor and per-report limits; native actualARM runners, not emulated claim. No original volume mount.",
+    "native_known_input_bytes": 135836345,
+    "native_remaining": {
+      "files": 6,
+      "input_bytes": 26795216,
+      "text_bytes": 3969945
+    },
+    "native_target_reads_planned": 0,
+    "artifact_disposition": "Selected compact originals/derived receipts only; keep scratch/cache/unselected ephemeral outputs separate; no cleanup authority.",
+    "cost_estimates": {
+      "next_slice_minutes": [
+        45,
+        65
+      ],
+      "same_goal_minutes_remaining_at_start": 82,
+      "model_tokens_estimate": [
+        20000,
+        30000
+      ],
+      "model_actual_tokens": null,
+      "model_actual_billing": null,
+      "estimate_is_not_usage": true,
+      "machine": "Fresh native GitHub runners; no local image growth; <=1MiB new selected/scratch temp"
+    },
+    "roles": {
+      "Sol": "Explicit arch lock helper and bounded adapter cross-review",
+      "Terra": "Bounded CI matrix and actual selected CI proof",
+      "root": "Integration, independent helper diff review, evidence/status/public GitHub sync"
+    }
+  },
+  "cleanup": false
+}

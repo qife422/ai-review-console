@@ -1,0 +1,16 @@
+{
+  "source": "38edc84d99ed583882e91c1ba57c1fcd7c8fc4dd",
+  "run": "41978766690",
+  "arch": "arm64",
+  "scope": "Only selected lock/receipts; venv, downloaded archives and full pip report are ephemeral, not preserved evidence",
+  "reports": {
+    "build-report.json": {
+      "bytes": 20905,
+      "sha256": "8038f2d4093f5cb12030e5f1d0bd62f1bef56f9a592de3be269288a364fd84c8"
+    },
+    "pip-report.json": {
+      "bytes": 3413816,
+      "sha256": "361dd4d921ecd6d7ce1a6e8f201657441642536bb9fb3e7becff19bf10138b05"
+    }
+  }
+}

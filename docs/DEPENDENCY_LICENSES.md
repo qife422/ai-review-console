@@ -121,3 +121,11 @@ SQLite嵌入版本/选项/source、其他native/system与前端静态依赖的�
 候选只做同Bookworm的APT/libapt2.6.2补丁，实际清单和复扫已核；仍有132 provider记录，系统包copyright字段只是标识库存，不等于全部原文/source交付获批。本轮没有target native新增读取，累计135,836,345B，余6files/26,795,216B输入/3,969,945B文本；generic通知和系统库存不当作旧native实读的替代。
 
 [本轮结果及计划](evidence/langflow-transition/README.md)独立记录依赖锁、CI和迁移证据；保持完整AC-19未通过、legal_approval=false、完整后端分发未批准。
+
+## Linux ARM 候选通知回读（2026-11-04）
+
+[CI41979142562](https://github.com/qife422/ai-review-console/actions/runs/41979142562)、source e6f6fe7b908b7fab1b4f85e9f5a4fa22890fc923，ARM LF image sha256:a5939d54d52e42c88138c81d2059386fd31b3c1f66b7373358b35374b6b9627d；AMD LF image sha256:26a433f984fcb8da102faf0a77daa668c4ccfdc3a7177ac17ff961925547d27f。两个image的Langflow MIT及sqlite-vec MIT/Apache三份project副本均recorded，raw SHA、文本SHA和大小与仓库一致。安装清单各334包与平台锁名称/版本一致；不是安装wheel字节复现、wheel own-text修复或全部分发材料批准。
+
+ARM独立解析改用58个aarch64 wheel及magika通用wheel，不能从AMD原生库材料推定其内部库/source相同。当前native_materials=not_collected_this_image；没有新增target native实读，既有共享额度及旧偏差保留。ARM只验证新库后端业务，不继承前轮AMD迁移/故障/性能。两个LF各132条系统provider记录/exit1，四服务provider并集各157，完整后端分发仍未批准。
+
+实际原件/派生项与来源指纹见[本轮证据](evidence/langflow-arm/README.md)及selection；默认/API的Zep、vendor/FIPS和完整native/source义务继续独立open。

@@ -1,0 +1,44 @@
+{
+  "blocking_findings": [],
+  "created_at": "2026-11-05T06:12:57.363268+00:00",
+  "files_sha256": {
+    ".github/workflows/ci.yml": "e24b718329623379ecf3e180ce6e60f8f441c45e39fddd3112ca9f77b15c9ed1",
+    ".github/workflows/langflow-migration.yml": "a9a1afa5fb45a2230feefbfa1eaf5e96ac500e0d417bb8565d6b8b34fae51bd6",
+    "compliance/langflow-candidate-build-tools.lock": "9f87377dbd3950d2fd2f54d740a9fa7ce7f71acc87ef0f1e119b45fa970fa9ea",
+    "compliance/langflow-candidate.lock": "22c0c6fd00a436f20fbc649e7ef69273da933b2c75ea0f797be9adfb48a4bd7b",
+    "docker/langflow-candidate.Dockerfile": "44d26559f0eda0fdb5e6c16f5b11732f8290065f4c06d591d481411a0f873919",
+    "docker/langflow.Dockerfile": "bb38c30695ea422839935a6209786f8ab8728d054210756d2b1af1e9d6b59cb6",
+    "scripts/collect_release_ci.py": "c05b7a5577c425252084a638aabb7216f712a2f48d19b5888c6086b2207b6b72"
+  },
+  "limitations": [
+    "Actual ARM lock CI41978766690 remains running and has not been counted passed.",
+    "No network/Git/Docker command executed by reviewer; no registry manifest resolution, actual build or collector run performed.",
+    "Source checks do not prove ARM target runtime regression, GUI or current native source correspondence."
+  ],
+  "observations": [
+    "Docker TARGETARCH switch selects distinct AMD/ARM tool/runtime locks; platform.machine assertion precedes pip installs; unsupported/blank arch fails closed. Both layers retain require-hashes and complete deps; runtime retains no-build-isolation and pip check.",
+    "ARG TARGETARCH redeclares BuildKit automatic platform argument in stage. Existing migration docker build has no override and relies on standard BuildKit default; legacy builder cannot build this Dockerfile because blank TARGETARCH is rejected rather than guessed. No successful migration rerun claimed.",
+    "Candidate ARM matrix selects Debian plus prior-materials profiles; ARM browser/font/keyboard steps are explicitly skipped by arch==amd64. This is backend/API workflow coverage, not ARM browser/UI validation.",
+    "Collector gates are not changed by ci.yml. prior-materials intentionally does not collect current native bodies and marks old material original-image scope; no current ARM native-material pass inferred.",
+    "Project names omit runtime and repeat between default/candidate of same arch. Current hosted matrix jobs run on distinct ephemeral machines/daemons, so this is not a present collision blocker; include runtime for future shared-runner robustness."
+  ],
+  "protected_byte_comparisons": [
+    {
+      "byte_identical": true,
+      "current": "docker/langflow.Dockerfile",
+      "prior_sealed": "docs/evidence/langflow-transition/producers/docker/langflow.Dockerfile"
+    },
+    {
+      "byte_identical": true,
+      "current": "compliance/langflow-candidate.lock",
+      "prior_sealed": "docs/evidence/langflow-transition/ci/lock/langflow-candidate.lock"
+    },
+    {
+      "byte_identical": true,
+      "current": "compliance/langflow-candidate-build-tools.lock",
+      "prior_sealed": "docs/evidence/langflow-transition/ci/lock/langflow-candidate-build-tools.lock"
+    }
+  ],
+  "repo": "/Users/ffq/Documents/aicoding\u9879\u76ee/AI Review Console \u5f00\u53d1",
+  "scope": "Read-only cross-review of Docker/CI adapters; not independent review of own helper; no actual ARM CI success inferred."
+}

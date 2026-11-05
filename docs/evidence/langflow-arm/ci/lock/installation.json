@@ -1,0 +1,15 @@
+{
+  "arch": "arm64",
+  "baseline_sha256": "8afd65b961c8772146dad70e64894911a8b5edb951178d5c5f13d7d5fabf1e41",
+  "dependency_scope": "runtime",
+  "environment": {
+    "implementation_name": "cpython",
+    "platform_machine": "aarch64",
+    "python_full_version": "3.12.16",
+    "sys_platform": "linux"
+  },
+  "installed_set_matches_pins": true,
+  "package_count": 334,
+  "pins_sha256": "93558be0714d17c73e253621f2f9d6ecc479af3b9777964040e82cb3cc16835b",
+  "pip_check": "passed"
+}

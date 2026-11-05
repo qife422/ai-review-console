@@ -1,0 +1,14 @@
+{
+  "image_id": "sha256:26a433f984fcb8da102faf0a77daa668c4ccfdc3a7177ac17ff961925547d27f",
+  "architecture": "amd64",
+  "pins_path": "compliance/langflow-candidate.in",
+  "pins_sha256": "93558be0714d17c73e253621f2f9d6ecc479af3b9777964040e82cb3cc16835b",
+  "lock_path": "compliance/langflow-candidate.lock",
+  "lock_sha256": "22c0c6fd00a436f20fbc649e7ef69273da933b2c75ea0f797be9adfb48a4bd7b",
+  "qualification": "Actual installed name/version set compared with pins; lock hash identifies source input, not installed wheel bytes.",
+  "expected_count": 334,
+  "actual_count": 334,
+  "missing": [],
+  "extra": [],
+  "changed": []
+}

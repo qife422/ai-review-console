@@ -1,0 +1,9 @@
+{
+  "scope": "Evidence selector self-check, not a runtime CI failure",
+  "first_result": "Failed closed before creating runtime output: GitHub default matrix job name truncated before arch suffix",
+  "source_fact": "GitHub jobs API retains exact labels ubuntu-24.04-arm and ubuntu-latest; candidate runtime prefix retained in name",
+  "repair": "Use candidate marker and exact runner labels with uniqueness; run summary preserves labels; actual image architecture checked separately. Offline truncation/duplicate checks passed.",
+  "successful_selector_sha256": "01c4edcdb836b175f1f225f13eab9c1c8a1a534dd1d6da8e061ee9dd815c2a34",
+  "runtime_CI_failures_this_slice": 0,
+  "no_CI_rerun_or_source_change_for_selector": true
+}

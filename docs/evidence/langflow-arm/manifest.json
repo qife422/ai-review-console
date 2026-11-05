@@ -1,0 +1,264 @@
+{
+  "evidence_id": "langflow-arm",
+  "classification": "sealed_evidence",
+  "sealed_at": "2026-11-05T06:30:25.488077+00:00",
+  "display_date": "2026-11-04 America/Los_Angeles",
+  "contract": "ARC-UPGRADE@0.1.0",
+  "spec_sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753",
+  "finite_scope": "Native ARM64 lock and new-database backend regression; AMD lock compatibility/fullCI preservation",
+  "sources": {
+    "lock": "38edc84d99ed583882e91c1ba57c1fcd7c8fc4dd",
+    "runtime": "e6f6fe7b908b7fab1b4f85e9f5a4fa22890fc923"
+  },
+  "runs": {
+    "lock": 41978766690,
+    "fullCI": 41979142562
+  },
+  "observations": {
+    "python": 271,
+    "frontend": 29,
+    "runtime_lanes": [
+      "defaultAMD64",
+      "defaultARM64backend",
+      "candidateAMD64",
+      "candidateARM64backend"
+    ],
+    "candidate_packages_each": 334,
+    "build_tools": 4,
+    "ARM_changed_archive_hashes": 59,
+    "ARM_image": "sha256:a5939d54d52e42c88138c81d2059386fd31b3c1f66b7373358b35374b6b9627d",
+    "AMD_image": "sha256:26a433f984fcb8da102faf0a77daa668c4ccfdc3a7177ac17ff961925547d27f",
+    "LF_provider_ids_each": 132,
+    "candidate_profile_four_service_provider_union_each": 157,
+    "ARM_pypi_matched_packages": 0,
+    "scan_exit_each": 1,
+    "license_notice_copies_each": "3 recorded/exact byte hashes",
+    "native_target_files_read": 0,
+    "default": "1.11.6 unchanged"
+  },
+  "acceptance": {
+    "AC-19": "not_passed_for_full_default_release",
+    "full_v02_last_verified": null,
+    "final_human_acceptance": "pending",
+    "default_adoption": "not_performed",
+    "original_data_migration": "not_performed",
+    "backend_distribution_approval": false,
+    "residual_risk_accepted": false,
+    "online_demo_redeployed": false
+  },
+  "not_covered": [
+    "Mac host actual runtime",
+    "ARM GUI",
+    "Langflow management editor",
+    "ARM old-schema migration",
+    "candidate fault/recovery/performance",
+    "native source correspondence and complete redistribution materials"
+  ],
+  "provenance": "Exact run/source/image IDs; GitHub digest verified for memory-only ZIPs; selected originals vs SHA-bound derived subsets labeled in selection. Unselected underlying reports/XML/logs are not claimed retained originals.",
+  "protection": "environment/protection.json",
+  "documentation_impact": "environment/documentation-impact.json",
+  "payload_files": 40,
+  "payload_bytes": 595916,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 6087,
+      "sha256": "2cc82d3c227b44a15ff8045637a3241349a72a8dc03c8c6aa17073ecc506225d"
+    },
+    {
+      "path": "ci/lock/build-installation.json",
+      "bytes": 481,
+      "sha256": "d234427596d49025496871c50c2279bd84cf6786654d9de89f30cb5a11e372cb"
+    },
+    {
+      "path": "ci/lock/build-resolution.json",
+      "bytes": 1840,
+      "sha256": "f54d012779faa7fc62f5b1b27a93aac286cd97d0acf10de0a05807671885093f"
+    },
+    {
+      "path": "ci/lock/capacity.txt",
+      "bytes": 1373,
+      "sha256": "355de1cc9608e93cd2a2e81b64b3367b0bda33bd02cb9022393ff57f07f99971"
+    },
+    {
+      "path": "ci/lock/installation.json",
+      "bytes": 479,
+      "sha256": "efb1d5039b702a1e0a8dd7c18bb9961b63d6e1255ca2d7fbbae74be92afbb47c"
+    },
+    {
+      "path": "ci/lock/langflow-candidate-build-tools.lock",
+      "bytes": 450,
+      "sha256": "3ec5a7b0e7dc5791b73277784eb4875b1965d70744200d95307445cf08c42415"
+    },
+    {
+      "path": "ci/lock/langflow-candidate.lock",
+      "bytes": 34170,
+      "sha256": "1d83205f67800760e0e1e2542bfec26071af9d5c0f37a8ab89a9da1c0e1a0028"
+    },
+    {
+      "path": "ci/lock/provenance.json",
+      "bytes": 526,
+      "sha256": "48266ba6da874ebc7bafd369ff41259e81646e5abf72f7f0ccc55b7427df34d6"
+    },
+    {
+      "path": "ci/lock/resolution.json",
+      "bytes": 117623,
+      "sha256": "089a5e76001e8225dc40b7f0dd474d86693015b71c7ce3d300069d49db7f0907"
+    },
+    {
+      "path": "ci/lock/selection.json",
+      "bytes": 1638,
+      "sha256": "920c70770317df0d916c4f9053f22d80f2ccbc813ab8d331f634f808a74398cc"
+    },
+    {
+      "path": "ci/runtime/amd64-comparison.json",
+      "bytes": 628,
+      "sha256": "5fc7c901b2b9a2ee46641d61683ddc808e124bf4a7b30aa4561a2876c93cfc84"
+    },
+    {
+      "path": "ci/runtime/amd64-summary.json",
+      "bytes": 7354,
+      "sha256": "027b430fe799b8885c344f5deaecece62cdc7e10c0137a11d7502b0360fd587b"
+    },
+    {
+      "path": "ci/runtime/amd64-workflow.json",
+      "bytes": 7183,
+      "sha256": "baeb965c2d3de5551ee269506380effe6a10dd05832afa444a6cee04083b2e13"
+    },
+    {
+      "path": "ci/runtime/arm64-comparison.json",
+      "bytes": 634,
+      "sha256": "bb2c686e15a9116ce5dfc9cf6bd561400093d94d006970d3060385996687cd37"
+    },
+    {
+      "path": "ci/runtime/arm64-image-summary.json",
+      "bytes": 88205,
+      "sha256": "ecb9cf26fb91e4f09d6224a898043b52bd125c5cb8f4875dff3a0d729304ca89"
+    },
+    {
+      "path": "ci/runtime/arm64-inventory.json",
+      "bytes": 188410,
+      "sha256": "52b0457043bf656bbbae7f748ffb81e6cc27eb812d59809321926b04282db089"
+    },
+    {
+      "path": "ci/runtime/arm64-probe.json",
+      "bytes": 2162,
+      "sha256": "8625b69279ee3cd339cdeb43fc17f2f206e2106fcd06334e13081f29e2bd159f"
+    },
+    {
+      "path": "ci/runtime/arm64-summary.json",
+      "bytes": 7354,
+      "sha256": "ce89bd2068a3e55121360fe180bae700397ab0172c3426484904b5e1b684d4bd"
+    },
+    {
+      "path": "ci/runtime/arm64-workflow.json",
+      "bytes": 7183,
+      "sha256": "8311c0fc07744aae138e42932de9edd141203e176208c8f6a2c8596d89cf9f6c"
+    },
+    {
+      "path": "ci/runtime/run.json",
+      "bytes": 13555,
+      "sha256": "376b2e2ea0e7e0c7f3fd90366db160e054d797619f48383e0922a5e7f5e9e780"
+    },
+    {
+      "path": "ci/runtime/selection.json",
+      "bytes": 9371,
+      "sha256": "5e3ca741d5490471b9f2edc687a3bcf11fadfc83eed1ae7253eeb4508bd79040"
+    },
+    {
+      "path": "ci/runtime/tests.json",
+      "bytes": 414,
+      "sha256": "fc4a52dd029c3d8e5dcf02fd2812bca6fda9532483dc507b49421044b6f37b5b"
+    },
+    {
+      "path": "environment/adapter-review.json",
+      "bytes": 3346,
+      "sha256": "15b20d9dc2aaf48331dba0bcf135038768f8da997f6a2515429fb06a15fb95e5"
+    },
+    {
+      "path": "environment/archive-comparison.json",
+      "bytes": 25120,
+      "sha256": "dcc1b8e1cef91bff1543cbfc4004531a8be9a05eb000d4d2233fb14715e7f33b"
+    },
+    {
+      "path": "environment/arm-package-review.json",
+      "bytes": 2061,
+      "sha256": "3fa4ee6c0e16bfe1a7ddc5a42da782da2464b7bc441974dd2f8ef9bcc3f1b2cd"
+    },
+    {
+      "path": "environment/artifact-plan.json",
+      "bytes": 2498,
+      "sha256": "ab9b577b457f1b536eda0ed701909d7e2b9136602f849ac4fda422ca7f73a8b4"
+    },
+    {
+      "path": "environment/capacity.json",
+      "bytes": 3529,
+      "sha256": "23b4418292fd668a6e626f99791407552c58bc7dcc08812ea2f9fac1f5ae01b2"
+    },
+    {
+      "path": "environment/documentation-impact.json",
+      "bytes": 976,
+      "sha256": "e8a6afdac8f75106a2dd043ceb4b93048ccee87d6f8166992f3a47a79ffca4a1"
+    },
+    {
+      "path": "environment/protection.json",
+      "bytes": 2234,
+      "sha256": "158080528d94c4648805a3acf0e7931ead2837dbf3a5f1f121b44731e888f760"
+    },
+    {
+      "path": "environment/runtime-cross-review.json",
+      "bytes": 4294,
+      "sha256": "e9d8a89ff87a39a06e17049cbb0e1104bab80cdf1ad4f043dab503c598346461"
+    },
+    {
+      "path": "environment/selection-self-check.json",
+      "bytes": 723,
+      "sha256": "b26634e377e321cb2a720924132fa08bbd389ffcf2726d44894395bb9d634918"
+    },
+    {
+      "path": "environment/source-context.json",
+      "bytes": 2521,
+      "sha256": "21e54b2406a08fd126bfb83dc5878a52c18a60fea5572bc50745f1f5bd44253a"
+    },
+    {
+      "path": "producers/.github/workflows/ci.yml",
+      "bytes": 8236,
+      "sha256": "e24b718329623379ecf3e180ce6e60f8f441c45e39fddd3112ca9f77b15c9ed1"
+    },
+    {
+      "path": "producers/.github/workflows/langflow-lock.yml",
+      "bytes": 5901,
+      "sha256": "3f5a4f73361e8337f2ded89168c1056efaf0f3a4af7ec0d839341418de86f808"
+    },
+    {
+      "path": "producers/compliance/langflow-candidate-arm64-lock.json",
+      "bytes": 1350,
+      "sha256": "7dd88baf739df0f897244212fca7852218fbc5d91b579c821c9914bdf0768daf"
+    },
+    {
+      "path": "producers/docker/langflow-candidate.Dockerfile",
+      "bytes": 2025,
+      "sha256": "44d26559f0eda0fdb5e6c16f5b11732f8290065f4c06d591d481411a0f873919"
+    },
+    {
+      "path": "producers/scripts/lock_langflow_candidate.py",
+      "bytes": 10088,
+      "sha256": "3006e5cd5834317b5575fd726a5b53beac6eb96328075cdf74bba0b121c5843e"
+    },
+    {
+      "path": "producers/select_arm_lock.py",
+      "bytes": 2941,
+      "sha256": "711b4d3aecd2d037b4e782c9afaa2d10afbb1db5b838414b846c810c03b33302"
+    },
+    {
+      "path": "producers/select_runtime.py",
+      "bytes": 9963,
+      "sha256": "01c4edcdb836b175f1f225f13eab9c1c8a1a534dd1d6da8e061ee9dd815c2a34"
+    },
+    {
+      "path": "producers/tests/test_lock_langflow_candidate.py",
+      "bytes": 10990,
+      "sha256": "d8a6167fc5c5bdefd74343bf6d66da62ffe1ed4519df49a585cc11f84f8eec33"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "run": 41978766690,
+  "source": "38edc84d99ed583882e91c1ba57c1fcd7c8fc4dd",
+  "artifact_id": 13392792625,
+  "transport_bytes": 52863,
+  "transport_sha256": "a507dad0866ff0b81e218df684bf82e53973963d05a3246b488f4c6dc854a607",
+  "transport_retained": false,
+  "selection": [
+    {
+      "member": "build-installation.json",
+      "bytes": 481,
+      "sha256": "d234427596d49025496871c50c2279bd84cf6786654d9de89f30cb5a11e372cb"
+    },
+    {
+      "member": "build-resolution.json",
+      "bytes": 1840,
+      "sha256": "f54d012779faa7fc62f5b1b27a93aac286cd97d0acf10de0a05807671885093f"
+    },
+    {
+      "member": "capacity.txt",
+      "bytes": 1373,
+      "sha256": "355de1cc9608e93cd2a2e81b64b3367b0bda33bd02cb9022393ff57f07f99971"
+    },
+    {
+      "member": "installation.json",
+      "bytes": 479,
+      "sha256": "efb1d5039b702a1e0a8dd7c18bb9961b63d6e1255ca2d7fbbae74be92afbb47c"
+    },
+    {
+      "member": "langflow-candidate-build-tools.lock",
+      "bytes": 450,
+      "sha256": "3ec5a7b0e7dc5791b73277784eb4875b1965d70744200d95307445cf08c42415"
+    },
+    {
+      "member": "langflow-candidate.lock",
+      "bytes": 34170,
+      "sha256": "1d83205f67800760e0e1e2542bfec26071af9d5c0f37a8ab89a9da1c0e1a0028"
+    },
+    {
+      "member": "provenance.json",
+      "bytes": 526,
+      "sha256": "48266ba6da874ebc7bafd369ff41259e81646e5abf72f7f0ccc55b7427df34d6"
+    },
+    {
+      "member": "resolution.json",
+      "bytes": 117623,
+      "sha256": "089a5e76001e8225dc40b7f0dd474d86693015b71c7ce3d300069d49db7f0907"
+    }
+  ],
+  "scope": "Exact selected members; ZIP, resolver reports, archives and environments not retained."
+}

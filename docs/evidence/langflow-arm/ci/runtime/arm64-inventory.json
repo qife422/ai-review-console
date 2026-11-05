@@ -1,0 +1,6223 @@
+{
+  "identity": {
+    "id": "sha256:a5939d54d52e42c88138c81d2059386fd31b3c1f66b7373358b35374b6b9627d",
+    "os": "linux",
+    "architecture": "arm64",
+    "size": 1735693913,
+    "repo_digests": []
+  },
+  "distro": {
+    "PRETTY_NAME": "Debian GNU/Linux 12 (bookworm)",
+    "NAME": "Debian GNU/Linux",
+    "VERSION_ID": "12",
+    "VERSION": "12 (bookworm)",
+    "VERSION_CODENAME": "bookworm",
+    "ID": "debian",
+    "HOME_URL": "https://www.debian.org/",
+    "SUPPORT_URL": "https://www.debian.org/support",
+    "BUG_REPORT_URL": "https://bugs.debian.org/"
+  },
+  "packages": [
+    {
+      "name": "adduser",
+      "version": "3.134",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "adduser",
+      "source_version": "3.134",
+      "license": {
+        "identifiers": [
+          "GPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "apt",
+      "version": "2.6.2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "apt",
+      "source_version": "2.6.2",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "Expat",
+          "GPL-2",
+          "GPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "base-files",
+      "version": "12.4+deb12u15",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "base-files",
+      "source_version": "12.4+deb12u15",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "base-passwd",
+      "version": "3.6.1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "base-passwd",
+      "source_version": "3.6.1",
+      "license": {
+        "identifiers": [
+          "GPL-2",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "bash",
+      "version": "5.2.15-2+b13",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "bash",
+      "source_version": "5.2.15-2",
+      "license": {
+        "identifiers": [
+          "BSD-4-clause-UC",
+          "BSD-4-clause-UC and MIT-like",
+          "GFDL-NIV-1.3",
+          "GPL-2+",
+          "GPL-3+",
+          "GPL-3+ with Bison exception",
+          "Latex2e",
+          "MIT-like",
+          "permissive"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "bsdutils",
+      "version": "1:2.38.1-5+deb12u3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "util-linux",
+      "source_version": "2.38.1-5+deb12u3",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-4-clause",
+          "BSLA",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3+",
+          "LGPL",
+          "LGPL-2+",
+          "LGPL-2.1+",
+          "LGPL-3+",
+          "MIT",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "ca-certificates",
+      "version": "20250419~deb12u2",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "ca-certificates",
+      "source_version": "20250419~deb12u2",
+      "license": {
+        "identifiers": [
+          "GPL-2+",
+          "MPL-2.0"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "coreutils",
+      "version": "9.1-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "coreutils",
+      "source_version": "9.1-1",
+      "license": {
+        "identifiers": [
+          "BSD-4-clause-UC",
+          "FSFULLR",
+          "GFDL-NIV-1.3",
+          "GPL-3+",
+          "GPL-3+ and BSD-4-clause-UC",
+          "GPL-3+ and ISC",
+          "ISC"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "dash",
+      "version": "0.5.12-2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "dash",
+      "source_version": "0.5.12-2",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause",
+          "BSD-3-clause",
+          "GPL-2+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "debconf",
+      "version": "1.5.82",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "debconf",
+      "source_version": "1.5.82",
+      "license": {
+        "identifiers": [
+          "BSD-2-clause"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "debian-archive-keyring",
+      "version": "2023.3+deb12u2",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "debian-archive-keyring",
+      "source_version": "2023.3+deb12u2",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "debianutils",
+      "version": "5.7-0.5~deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "debianutils",
+      "source_version": "5.7-0.5~deb12u1",
+      "license": {
+        "identifiers": [
+          "GPL-2+",
+          "SMAIL-GPL",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "diffutils",
+      "version": "1:3.8-4",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "diffutils",
+      "source_version": "1:3.8-4",
+      "license": {
+        "identifiers": [
+          "FSFAP",
+          "FSFULLR",
+          "GFDL-NIV-1.3",
+          "GPL-2+",
+          "GPL-3+",
+          "GPL-3+ and FSFULLR",
+          "GPL-3+ with autoconf exception",
+          "GPL-3+ with texinfo exception",
+          "LGPL-2.0+",
+          "LGPL-2.1+",
+          "LGPL-3.0+",
+          "LGPL-3.0+ or GPL-2+",
+          "X11",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "dpkg",
+      "version": "1.21.23",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "dpkg",
+      "source_version": "1.21.23",
+      "license": {
+        "identifiers": [
+          "BSD-2-clause",
+          "GPL-2",
+          "GPL-2+",
+          "public-domain-s-s-d"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "e2fsprogs",
+      "version": "1.47.0-2+b2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "e2fsprogs",
+      "source_version": "1.47.0-2",
+      "license": {
+        "identifiers": [
+          "Apache-2",
+          "BSD-3-Clause",
+          "GPL or MIT-US-export",
+          "GPL-2",
+          "GPL-2+ with Texinfo exception",
+          "ISC",
+          "Kazlib",
+          "LGPL-2",
+          "Latex2e"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "findutils",
+      "version": "4.9.0-4",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "findutils",
+      "source_version": "4.9.0-4",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-3-clause and/or GPL-3+",
+          "FSFAP",
+          "FSFULLR",
+          "GFDL-NIV-1.3+",
+          "GPL with automake exception",
+          "GPL-2+",
+          "GPL-2+ with Autoconf-data exception",
+          "GPL-3+",
+          "GPL-3+ with Autoconf-data exception",
+          "GPL-3+ with Bison-2.2 exception",
+          "ISC",
+          "ISC and/or LGPL-2.1+",
+          "LGPL-2+",
+          "LGPL-2.1+",
+          "LGPL-3",
+          "LGPL-3+",
+          "X11",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "gcc-12-base",
+      "version": "12.2.0-14+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "gcc-12",
+      "source_version": "12.2.0-14+deb12u1",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "gpgv",
+      "version": "2.2.40-1.1+deb12u2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "gnupg2",
+      "source_version": "2.2.40-1.1+deb12u2",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "CC0-1.0",
+          "Expat",
+          "GPL-3+",
+          "GPL-3+ or BSD-3-clause",
+          "LGPL-2.1+",
+          "LGPL-3+",
+          "RFC-Reference",
+          "TinySCHEME",
+          "permissive"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "grep",
+      "version": "3.8-5",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "grep",
+      "source_version": "3.8-5",
+      "license": {
+        "identifiers": [
+          "GPL-3+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "gzip",
+      "version": "1.12-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "gzip",
+      "source_version": "1.12-1",
+      "license": {
+        "identifiers": [
+          "FSF-manpages",
+          "GFDL-1.3+-no-invariant",
+          "GPL-3+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "hostname",
+      "version": "3.23+nmu1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "hostname",
+      "source_version": "3.23+nmu1",
+      "license": {
+        "identifiers": [
+          "GPL-2"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "init-system-helpers",
+      "version": "1.65.2+deb12u1",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "init-system-helpers",
+      "source_version": "1.65.2+deb12u1",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "GPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libacl1",
+      "version": "2.3.1-3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "acl",
+      "source_version": "2.3.1-3",
+      "license": {
+        "identifiers": [
+          "GPL-2+",
+          "LGPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libapt-pkg6.0",
+      "version": "2.6.2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "apt",
+      "source_version": "2.6.2",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "Expat",
+          "GPL-2",
+          "GPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libattr1",
+      "version": "1:2.5.1-4",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "attr",
+      "source_version": "1:2.5.1-4",
+      "license": {
+        "identifiers": [
+          "GPL-2+",
+          "LGPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libaudit-common",
+      "version": "1:3.0.9-1",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "audit",
+      "source_version": "1:3.0.9-1",
+      "license": {
+        "identifiers": [
+          "GPL-2",
+          "LGPL-2.1"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libaudit1",
+      "version": "1:3.0.9-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "audit",
+      "source_version": "1:3.0.9-1",
+      "license": {
+        "identifiers": [
+          "GPL-2",
+          "LGPL-2.1"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libblkid1",
+      "version": "2.38.1-5+deb12u3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "util-linux",
+      "source_version": "2.38.1-5+deb12u3",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-4-clause",
+          "BSLA",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3+",
+          "LGPL",
+          "LGPL-2+",
+          "LGPL-2.1+",
+          "LGPL-3+",
+          "MIT",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libbz2-1.0",
+      "version": "1.0.8-5+b1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "bzip2",
+      "source_version": "1.0.8-5",
+      "license": {
+        "identifiers": [
+          "BSD-variant",
+          "GPL-2"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libc-bin",
+      "version": "2.36-9+deb12u14",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "glibc",
+      "source_version": "2.36-9+deb12u14",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libc6",
+      "version": "2.36-9+deb12u14",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "glibc",
+      "source_version": "2.36-9+deb12u14",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libcap-ng0",
+      "version": "0.8.3-1+b3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libcap-ng",
+      "source_version": "0.8.3-1",
+      "license": {
+        "identifiers": [
+          "GPL-2+",
+          "GPL-3",
+          "LGPL-2.1+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libcap2",
+      "version": "1:2.66-4+deb12u3+b1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libcap2",
+      "source_version": "1:2.66-4+deb12u3",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-3-clause or GPL-2",
+          "BSD-3-clause or GPL-2+",
+          "GPL-2",
+          "GPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libcom-err2",
+      "version": "1.47.0-2+b2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "e2fsprogs",
+      "source_version": "1.47.0-2",
+      "license": {
+        "identifiers": [
+          "Apache-2",
+          "BSD-3-Clause",
+          "GPL or MIT-US-export",
+          "GPL-2",
+          "GPL-2+ with Texinfo exception",
+          "ISC",
+          "Kazlib",
+          "LGPL-2",
+          "Latex2e"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libcrypt1",
+      "version": "1:4.4.33-2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libxcrypt",
+      "source_version": "1:4.4.33-2",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libdb5.3",
+      "version": "5.3.28+dfsg2-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "db5.3",
+      "source_version": "5.3.28+dfsg2-1",
+      "license": {
+        "identifiers": [
+          "Artistic or BSD-3-clause",
+          "BSD-3-clause",
+          "BSD-3-clause-fjord",
+          "GPL",
+          "GPL or Artistic",
+          "GPL-3",
+          "MIT-old",
+          "Ms-PL",
+          "Sleepycat",
+          "Sleepycat and BSD-3-clause",
+          "TCL-like",
+          "X11",
+          "zlib"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libdebconfclient0",
+      "version": "0.270",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "cdebconf",
+      "source_version": "0.270",
+      "license": {
+        "identifiers": [
+          "BSD-2-Clause",
+          "BSD-2-clause",
+          "GPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libext2fs2",
+      "version": "1.47.0-2+b2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "e2fsprogs",
+      "source_version": "1.47.0-2",
+      "license": {
+        "identifiers": [
+          "Apache-2",
+          "BSD-3-Clause",
+          "GPL or MIT-US-export",
+          "GPL-2",
+          "GPL-2+ with Texinfo exception",
+          "ISC",
+          "Kazlib",
+          "LGPL-2",
+          "Latex2e"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libffi8",
+      "version": "3.4.4-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libffi",
+      "source_version": "3.4.4-1",
+      "license": {
+        "identifiers": [
+          "Expat",
+          "GPL",
+          "GPL-2+",
+          "GPL-3+",
+          "MPL-1.1 or GPL-2+ or LGPL-2.1+",
+          "X11",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libgcc-s1",
+      "version": "12.2.0-14+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "gcc-12",
+      "source_version": "12.2.0-14+deb12u1",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libgcrypt20",
+      "version": "1.10.1-3+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libgcrypt20",
+      "source_version": "1.10.1-3+deb12u1",
+      "license": {
+        "identifiers": [
+          ""
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libgdbm6",
+      "version": "1.23-3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "gdbm",
+      "source_version": "1.23-3",
+      "license": {
+        "identifiers": [
+          "GFDL-NIV-1.3+",
+          "GPL-2+",
+          "GPL-3+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libgmp10",
+      "version": "2:6.2.1+dfsg1-1.1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "gmp",
+      "source_version": "2:6.2.1+dfsg1-1.1",
+      "license": {
+        "identifiers": [
+          "GPL-2+",
+          "GPL-2+ or LGPL-3+",
+          "GPL-3+",
+          "GPL-3+ with Bison exception",
+          "LGPL-3+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libgnutls30",
+      "version": "3.7.9-2+deb12u7",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "gnutls28",
+      "source_version": "3.7.9-2+deb12u7",
+      "license": {
+        "identifiers": [
+          "",
+          "Apache-2.0",
+          "BSD-3-Clause",
+          "CC0 license",
+          "Expat",
+          "GPLv3+",
+          "LGPLv2.1+",
+          "LGPLv3+_or_GPLv2+",
+          "The main library is licensed under GNU Lesser"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libgpg-error0",
+      "version": "1.46-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libgpg-error",
+      "source_version": "1.46-1",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "GPL-3+",
+          "LGPL-2.1+",
+          "LGPL-2.1+ or BSD-3-clause",
+          "g10-permissive"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libgssapi-krb5-2",
+      "version": "1.20.1-2+deb12u5",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "krb5",
+      "source_version": "1.20.1-2+deb12u5",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libhogweed6",
+      "version": "3.8.1-2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "nettle",
+      "source_version": "3.8.1-2",
+      "license": {
+        "identifiers": [
+          "Expat",
+          "GAP",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3+",
+          "GPL-3+ with Autoconf exception",
+          "LGPL-2+",
+          "LGPL-3+",
+          "LGPL-3+ or GPL-2+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libidn2-0",
+      "version": "2.3.3-1+b1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libidn2",
+      "source_version": "2.3.3-1",
+      "license": {
+        "identifiers": [
+          "GPL-2+",
+          "GPL-3+",
+          "LGPL-3+",
+          "LGPL-3+ or GPL-2+",
+          "Unicode"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libk5crypto3",
+      "version": "1.20.1-2+deb12u5",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "krb5",
+      "source_version": "1.20.1-2+deb12u5",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libkeyutils1",
+      "version": "1.6.3-2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "keyutils",
+      "source_version": "1.6.3-2",
+      "license": {
+        "identifiers": [
+          "GPL-2+",
+          "LGPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libkrb5-3",
+      "version": "1.20.1-2+deb12u5",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "krb5",
+      "source_version": "1.20.1-2+deb12u5",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libkrb5support0",
+      "version": "1.20.1-2+deb12u5",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "krb5",
+      "source_version": "1.20.1-2+deb12u5",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libldap-2.5-0",
+      "version": "2.5.13+dfsg-5",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "openldap",
+      "source_version": "2.5.13+dfsg-5",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-3-clause-California",
+          "BSD-3-clause-variant",
+          "BSD-4-clause-California",
+          "Beerware",
+          "Expat",
+          "Expat-ISC",
+          "Expat-UNM",
+          "F5",
+          "FSF-unlimited",
+          "FSF-unlimited and GPL-2+ with Autoconf exception",
+          "FSF-unlimited and GPL-2+ with Libtool exception",
+          "FSF-unlimited and OpenLDAP-2.8",
+          "GPL-2+",
+          "GPL-2+ with Autoconf exception",
+          "GPL-2+ with Libtool exception",
+          "GPL-2+ with Libtool exception and GPL-3+ with Libtool exception and GPL-3+",
+          "GPL-3+",
+          "GPL-3+ with Autoconf exception",
+          "GPL-3+ with Libtool exception",
+          "JCG",
+          "MIT-XC",
+          "NeoSoft-permissive",
+          "OpenLDAP-2.8",
+          "OpenLDAP-2.8 and BSD-3-clause",
+          "OpenLDAP-2.8 and BSD-3-clause-variant",
+          "OpenLDAP-2.8 and BSD-4-clause-California",
+          "OpenLDAP-2.8 and Beerware",
+          "OpenLDAP-2.8 and Expat",
+          "OpenLDAP-2.8 and Expat-ISC",
+          "OpenLDAP-2.8 and Expat-UNM",
+          "OpenLDAP-2.8 and FSF-unlimited and GPL-2+ with Libtool exception",
+          "OpenLDAP-2.8 and JCG and UMich",
+          "OpenLDAP-2.8 and UMich",
+          "OpenLDAP-2.8 and UMich and F5",
+          "UMich",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "liblz4-1",
+      "version": "1.9.4-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "lz4",
+      "source_version": "1.9.4-1",
+      "license": {
+        "identifiers": [
+          "BSD-2-clause",
+          "GPL-2+",
+          "GPL-2+ or BSD-2-clause"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "liblzma5",
+      "version": "5.4.1-1+deb12u2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "xz-utils",
+      "source_version": "5.4.1-1+deb12u2",
+      "license": {
+        "identifiers": [
+          "",
+          "Autoconf",
+          "GPL-2",
+          "GPL-2+",
+          "LGPL-2.1+",
+          "PD",
+          "PD-debian",
+          "config-h",
+          "noderivs",
+          "none",
+          "permissive-fsf",
+          "permissive-nowarranty",
+          "probably-PD"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libmd0",
+      "version": "1.0.4-2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libmd",
+      "source_version": "1.0.4-2",
+      "license": {
+        "identifiers": [
+          "BSD-2-clause",
+          "BSD-2-clause-NetBSD",
+          "BSD-3-clause",
+          "BSD-3-clause-Aaron-D-Gifford",
+          "Beerware",
+          "ISC",
+          "public-domain-md4",
+          "public-domain-md5",
+          "public-domain-sha1"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libmount1",
+      "version": "2.38.1-5+deb12u3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "util-linux",
+      "source_version": "2.38.1-5+deb12u3",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-4-clause",
+          "BSLA",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3+",
+          "LGPL",
+          "LGPL-2+",
+          "LGPL-2.1+",
+          "LGPL-3+",
+          "MIT",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libncursesw6",
+      "version": "6.4-4",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "ncurses",
+      "source_version": "6.4-4",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "MIT/X11",
+          "X11"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libnettle8",
+      "version": "3.8.1-2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "nettle",
+      "source_version": "3.8.1-2",
+      "license": {
+        "identifiers": [
+          "Expat",
+          "GAP",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3+",
+          "GPL-3+ with Autoconf exception",
+          "LGPL-2+",
+          "LGPL-3+",
+          "LGPL-3+ or GPL-2+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libnsl2",
+      "version": "1.3.0-2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libnsl",
+      "source_version": "1.3.0-2",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "GPL-2+-autoconf-exception",
+          "GPL-2+-libtool-exception",
+          "GPL-3+-autoconf-exception",
+          "LGPL-2.1",
+          "LGPL-2.1+",
+          "MIT",
+          "permissive-autoconf-m4",
+          "permissive-autoconf-m4-no-warranty",
+          "permissive-configure",
+          "permissive-fsf",
+          "permissive-makefile-in"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libp11-kit0",
+      "version": "0.24.1-2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "p11-kit",
+      "source_version": "0.24.1-2",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "BSD-3-Clause",
+          "ISC",
+          "ISC+IBM",
+          "LGPL-2.1+",
+          "permissive-like-automake-output",
+          "same-as-rest-of-p11kit"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libpam-modules",
+      "version": "1.5.2-6+deb12u2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "pam",
+      "source_version": "1.5.2-6+deb12u2",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause or GPL",
+          "BSD-tcp_wrappers",
+          "Beerware",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3",
+          "GPL-3+ with Bison exception",
+          "LGPL-2+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libpam-modules-bin",
+      "version": "1.5.2-6+deb12u2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "pam",
+      "source_version": "1.5.2-6+deb12u2",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause or GPL",
+          "BSD-tcp_wrappers",
+          "Beerware",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3",
+          "GPL-3+ with Bison exception",
+          "LGPL-2+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libpam-runtime",
+      "version": "1.5.2-6+deb12u2",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "pam",
+      "source_version": "1.5.2-6+deb12u2",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause or GPL",
+          "BSD-tcp_wrappers",
+          "Beerware",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3",
+          "GPL-3+ with Bison exception",
+          "LGPL-2+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libpam0g",
+      "version": "1.5.2-6+deb12u2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "pam",
+      "source_version": "1.5.2-6+deb12u2",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause or GPL",
+          "BSD-tcp_wrappers",
+          "Beerware",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3",
+          "GPL-3+ with Bison exception",
+          "LGPL-2+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libpcre2-8-0",
+      "version": "10.42-1+deb12u2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "pcre2",
+      "source_version": "10.42-1+deb12u2",
+      "license": {
+        "identifiers": [
+          "BSD-2-clause",
+          "BSD-3-clause",
+          "BSD-3-clause-Cambridge with BINARY LIBRARY-LIKE PACKAGES exception",
+          "X11",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libpq5",
+      "version": "15.19-0+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "postgresql-15",
+      "source_version": "15.19-0+deb12u1",
+      "license": {
+        "identifiers": [
+          "BSD-2-clause",
+          "BSD-3-Clause",
+          "BSD-3-clause",
+          "Custom-Unicode",
+          "Custom-pg_dump",
+          "Custom-regex",
+          "PostgreSQL",
+          "PostgreSQL and Custom-regex and Tcl",
+          "Tcl",
+          "double-metaphone",
+          "nagaysau-ishii"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libreadline8",
+      "version": "8.2-1.3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "readline",
+      "source_version": "8.2-1.3",
+      "license": {
+        "identifiers": [
+          "GFDL-NIV-1.3+",
+          "GPL-2+",
+          "GPL-3",
+          "GPL-3+",
+          "ISC-no-attribution"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libsasl2-2",
+      "version": "2.1.28+dfsg-10+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "cyrus-sasl2",
+      "source_version": "2.1.28+dfsg-10+deb12u1",
+      "license": {
+        "identifiers": [
+          "BSD-2-clause",
+          "BSD-2-clause and MIT-CMU",
+          "BSD-2.2-clause",
+          "BSD-3-clause",
+          "BSD-3-clause-JANET",
+          "BSD-3-clause-JANET and BSD-4-clause",
+          "BSD-3-clause-PADL",
+          "BSD-3-clause-PADL and MIT-OpenVision",
+          "BSD-4-clause",
+          "BSD-4-clause and BSD-4-clause-KTH",
+          "BSD-4-clause and IBM-as-is",
+          "BSD-4-clause and MIT-Export",
+          "BSD-4-clause-KTH",
+          "BSD-4-clause-UC",
+          "FSFULLR",
+          "FSFULLR and MIT-CMU",
+          "GPL-3",
+          "GPL-3+",
+          "IBM-as-is",
+          "MIT-CMU",
+          "MIT-Export",
+          "MIT-OpenVision",
+          "OpenLDAP",
+          "OpenSSL",
+          "OpenSSL and SSLeay",
+          "RSA-MD",
+          "SSLeay"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libsasl2-modules-db",
+      "version": "2.1.28+dfsg-10+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "cyrus-sasl2",
+      "source_version": "2.1.28+dfsg-10+deb12u1",
+      "license": {
+        "identifiers": [
+          "BSD-2-clause",
+          "BSD-2-clause and MIT-CMU",
+          "BSD-2.2-clause",
+          "BSD-3-clause",
+          "BSD-3-clause-JANET",
+          "BSD-3-clause-JANET and BSD-4-clause",
+          "BSD-3-clause-PADL",
+          "BSD-3-clause-PADL and MIT-OpenVision",
+          "BSD-4-clause",
+          "BSD-4-clause and BSD-4-clause-KTH",
+          "BSD-4-clause and IBM-as-is",
+          "BSD-4-clause and MIT-Export",
+          "BSD-4-clause-KTH",
+          "BSD-4-clause-UC",
+          "FSFULLR",
+          "FSFULLR and MIT-CMU",
+          "GPL-3",
+          "GPL-3+",
+          "IBM-as-is",
+          "MIT-CMU",
+          "MIT-Export",
+          "MIT-OpenVision",
+          "OpenLDAP",
+          "OpenSSL",
+          "OpenSSL and SSLeay",
+          "RSA-MD",
+          "SSLeay"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libseccomp2",
+      "version": "2.5.4-1+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libseccomp",
+      "source_version": "2.5.4-1+deb12u1",
+      "license": {
+        "identifiers": [
+          "LGPL-2.1"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libselinux1",
+      "version": "3.4-1+b6",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libselinux",
+      "source_version": "3.4-1",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libsemanage-common",
+      "version": "3.4-1",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "libsemanage",
+      "source_version": "3.4-1",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libsemanage2",
+      "version": "3.4-1+b5",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libsemanage",
+      "source_version": "3.4-1",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libsepol2",
+      "version": "3.4-2.1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libsepol",
+      "source_version": "3.4-2.1",
+      "license": {
+        "identifiers": [
+          "GPL-2",
+          "GPL-2+",
+          "LGPL-2.1+",
+          "Zlib"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libsmartcols1",
+      "version": "2.38.1-5+deb12u3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "util-linux",
+      "source_version": "2.38.1-5+deb12u3",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-4-clause",
+          "BSLA",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3+",
+          "LGPL",
+          "LGPL-2+",
+          "LGPL-2.1+",
+          "LGPL-3+",
+          "MIT",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libsqlite3-0",
+      "version": "3.40.1-2+deb12u2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "sqlite3",
+      "source_version": "3.40.1-2+deb12u2",
+      "license": {
+        "identifiers": [
+          "GPL-2+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libss2",
+      "version": "1.47.0-2+b2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "e2fsprogs",
+      "source_version": "1.47.0-2",
+      "license": {
+        "identifiers": [
+          "Apache-2",
+          "BSD-3-Clause",
+          "GPL or MIT-US-export",
+          "GPL-2",
+          "GPL-2+ with Texinfo exception",
+          "ISC",
+          "Kazlib",
+          "LGPL-2",
+          "Latex2e"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libssl3",
+      "version": "3.0.22-1~deb12u2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "openssl",
+      "source_version": "3.0.22-1~deb12u2",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "Artistic",
+          "Artistic or GPL-1+",
+          "GPL-1+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libstdc++6",
+      "version": "12.2.0-14+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "gcc-12",
+      "source_version": "12.2.0-14+deb12u1",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libsystemd0",
+      "version": "252.39-1~deb12u2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "systemd",
+      "source_version": "252.39-1~deb12u2",
+      "license": {
+        "identifiers": [
+          "CC0-1.0",
+          "Expat",
+          "GPL-2 with Linux-syscall-note exception",
+          "GPL-2+",
+          "LGPL-2.1+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libtasn1-6",
+      "version": "4.19.0-2+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libtasn1-6",
+      "source_version": "4.19.0-2+deb12u1",
+      "license": {
+        "identifiers": [],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libtinfo6",
+      "version": "6.4-4",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "ncurses",
+      "source_version": "6.4-4",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "MIT/X11",
+          "X11"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libtirpc-common",
+      "version": "1.3.3+ds-1",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "libtirpc",
+      "source_version": "1.3.3+ds-1",
+      "license": {
+        "identifiers": [
+          "BSD-2-Clause",
+          "BSD-3-Clause",
+          "BSD-4-Clause",
+          "GPL-2",
+          "LGPL-2.1+",
+          "PERMISSIVE",
+          "__AUTO_PERMISSIVE__"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libtirpc3",
+      "version": "1.3.3+ds-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libtirpc",
+      "source_version": "1.3.3+ds-1",
+      "license": {
+        "identifiers": [
+          "BSD-2-Clause",
+          "BSD-3-Clause",
+          "BSD-4-Clause",
+          "GPL-2",
+          "LGPL-2.1+",
+          "PERMISSIVE",
+          "__AUTO_PERMISSIVE__"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libudev1",
+      "version": "252.39-1~deb12u2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "systemd",
+      "source_version": "252.39-1~deb12u2",
+      "license": {
+        "identifiers": [
+          "CC0-1.0",
+          "Expat",
+          "GPL-2 with Linux-syscall-note exception",
+          "GPL-2+",
+          "LGPL-2.1+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libunistring2",
+      "version": "1.0-2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libunistring",
+      "source_version": "1.0-2",
+      "license": {
+        "identifiers": [
+          "FreeSoftware",
+          "GFDL-1.2+",
+          "GPL-2+",
+          "GPL-2+ with distribution exception",
+          "GPL-3+",
+          "GPL-3+ or GFDL-1.2+",
+          "LGPL-3+",
+          "LGPL-3+ or GPL-2+",
+          "MIT"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libuuid1",
+      "version": "2.38.1-5+deb12u3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "util-linux",
+      "source_version": "2.38.1-5+deb12u3",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-4-clause",
+          "BSLA",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3+",
+          "LGPL",
+          "LGPL-2+",
+          "LGPL-2.1+",
+          "LGPL-3+",
+          "MIT",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libxxhash0",
+      "version": "0.8.1-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "xxhash",
+      "source_version": "0.8.1-1",
+      "license": {
+        "identifiers": [
+          "BSD-2-clause",
+          "GPL-2"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libzstd1",
+      "version": "1.5.4+dfsg2-5",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "libzstd",
+      "source_version": "1.5.4+dfsg2-5",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-3-clause or GPL-2",
+          "Expat",
+          "GPL-2",
+          "zlib"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "login",
+      "version": "1:4.13+dfsg1-1+deb12u2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "shadow",
+      "source_version": "1:4.13+dfsg1-1+deb12u2",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "GPL-1",
+          "GPL-2+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "logsave",
+      "version": "1.47.0-2+b2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "e2fsprogs",
+      "source_version": "1.47.0-2",
+      "license": {
+        "identifiers": [
+          "Apache-2",
+          "BSD-3-Clause",
+          "GPL or MIT-US-export",
+          "GPL-2",
+          "GPL-2+ with Texinfo exception",
+          "ISC",
+          "Kazlib",
+          "LGPL-2",
+          "Latex2e"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "mawk",
+      "version": "1.3.4.20200120-3.1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "mawk",
+      "source_version": "1.3.4.20200120-3.1",
+      "license": {
+        "identifiers": [
+          "CC-BY-3.0",
+          "GPL-2",
+          "X11"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "mount",
+      "version": "2.38.1-5+deb12u3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "util-linux",
+      "source_version": "2.38.1-5+deb12u3",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-4-clause",
+          "BSLA",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3+",
+          "LGPL",
+          "LGPL-2+",
+          "LGPL-2.1+",
+          "LGPL-3+",
+          "MIT",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "ncurses-base",
+      "version": "6.4-4",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "ncurses",
+      "source_version": "6.4-4",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "MIT/X11",
+          "X11"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "ncurses-bin",
+      "version": "6.4-4",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "ncurses",
+      "source_version": "6.4-4",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "MIT/X11",
+          "X11"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "netbase",
+      "version": "6.4",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "netbase",
+      "source_version": "6.4",
+      "license": {
+        "identifiers": [
+          "GPL-2"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "openssl",
+      "version": "3.0.22-1~deb12u2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "openssl",
+      "source_version": "3.0.22-1~deb12u2",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "Artistic",
+          "Artistic or GPL-1+",
+          "GPL-1+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "passwd",
+      "version": "1:4.13+dfsg1-1+deb12u2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "shadow",
+      "source_version": "1:4.13+dfsg1-1+deb12u2",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "GPL-1",
+          "GPL-2+",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "perl-base",
+      "version": "5.36.0-7+deb12u4",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "perl",
+      "source_version": "5.36.0-7+deb12u4",
+      "license": {
+        "identifiers": [
+          "Artistic",
+          "Artistic or GPL-1+ or Artistic-dist",
+          "Artistic-2",
+          "Artistic-dist",
+          "BSD-3-clause",
+          "BSD-3-clause-GENERIC",
+          "BSD-3-clause-with-weird-numbering",
+          "BSD-4-clause-POWERDOG",
+          "BZIP",
+          "CC0-1.0",
+          "DONT-CHANGE-THE-GPL",
+          "Expat",
+          "Expat or GPL-1+ or Artistic",
+          "GPL-1+",
+          "GPL-1+ or Artistic",
+          "GPL-1+ or Artistic or Artistic-dist",
+          "GPL-1+ or Artistic, and BSD-3-clause-GENERIC",
+          "GPL-1+ or Artistic, and BSD-4-clause-POWERDOG",
+          "GPL-1+ or Artistic, and Expat",
+          "GPL-1+ or Artistic, and Unicode",
+          "GPL-2+",
+          "GPL-2+ or Artistic",
+          "GPL-3+-WITH-BISON-EXCEPTION",
+          "HSIEH-BSD",
+          "HSIEH-DERIVATIVE",
+          "LGPL-2.1",
+          "REGCOMP",
+          "REGCOMP, and GPL-1+ or Artistic",
+          "RRA-KEEP-THIS-NOTICE",
+          "SDBM-PUBLIC-DOMAIN",
+          "TEXT-TABS",
+          "Unicode",
+          "ZLIB"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "readline-common",
+      "version": "8.2-1.3",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "readline",
+      "source_version": "8.2-1.3",
+      "license": {
+        "identifiers": [
+          "GFDL-NIV-1.3+",
+          "GPL-2+",
+          "GPL-3",
+          "GPL-3+",
+          "ISC-no-attribution"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "sed",
+      "version": "4.9-1+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "sed",
+      "source_version": "4.9-1+deb12u1",
+      "license": {
+        "identifiers": [
+          "BSD-4-clause-UC",
+          "BSL-1",
+          "GFDL-NIV-1.3+",
+          "GPL-3+",
+          "GPL-3+ and ISC",
+          "ISC",
+          "X11",
+          "pcre"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "sysvinit-utils",
+      "version": "3.06-4",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "sysvinit",
+      "source_version": "3.06-4",
+      "license": {
+        "identifiers": [
+          "GPL-2.0",
+          "GPL-2.0+",
+          "GPL-3.0"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "tar",
+      "version": "1.34+dfsg-1.2+deb12u1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "tar",
+      "source_version": "1.34+dfsg-1.2+deb12u1",
+      "license": {
+        "identifiers": [
+          "GPL-2+",
+          "GPL-3+",
+          "GPL-3+ with Bison exception",
+          "LGPL-3+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "tzdata",
+      "version": "2026e-0+deb12u1",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "tzdata",
+      "source_version": "2026e-0+deb12u1",
+      "license": {
+        "identifiers": [
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "usr-is-merged",
+      "version": "37~deb12u1",
+      "type": "deb",
+      "arch": "all",
+      "source_name": "usrmerge",
+      "source_version": "37~deb12u1",
+      "license": {
+        "identifiers": [
+          "GPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "util-linux",
+      "version": "2.38.1-5+deb12u3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "util-linux",
+      "source_version": "2.38.1-5+deb12u3",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-4-clause",
+          "BSLA",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3+",
+          "LGPL",
+          "LGPL-2+",
+          "LGPL-2.1+",
+          "LGPL-3+",
+          "MIT",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "util-linux-extra",
+      "version": "2.38.1-5+deb12u3",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "util-linux",
+      "source_version": "2.38.1-5+deb12u3",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "BSD-4-clause",
+          "BSLA",
+          "GPL-2",
+          "GPL-2+",
+          "GPL-3+",
+          "LGPL",
+          "LGPL-2+",
+          "LGPL-2.1+",
+          "LGPL-3+",
+          "MIT",
+          "public-domain"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "zlib1g",
+      "version": "1:1.2.13.dfsg-1",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "zlib",
+      "source_version": "1:1.2.13.dfsg-1",
+      "license": {
+        "identifiers": [
+          "Zlib"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "ijson",
+      "version": "3.6.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause AND ISC"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/ijson-3.6.0.dist-info"
+      }
+    },
+    {
+      "name": "loguru",
+      "version": "0.7.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/loguru-0.7.3.dist-info"
+      }
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/h11-0.16.0.dist-info"
+      }
+    },
+    {
+      "name": "tabulate",
+      "version": "0.10.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/tabulate-0.10.0.dist-info"
+      }
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/httpcore-1.0.9.dist-info"
+      }
+    },
+    {
+      "name": "sentry-sdk",
+      "version": "2.73.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/sentry_sdk-2.73.0.dist-info"
+      }
+    },
+    {
+      "name": "langgraph-sdk",
+      "version": "0.4.6",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langgraph_sdk-0.4.6.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-litellm",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_litellm-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "langsmith",
+      "version": "0.14.17",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langsmith-0.14.17.dist-info"
+      }
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/requests-2.34.2.dist-info"
+      }
+    },
+    {
+      "name": "httpx-sse",
+      "version": "0.4.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/httpx_sse-0.4.3.dist-info"
+      }
+    },
+    {
+      "name": "aiosqlite",
+      "version": "0.22.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/aiosqlite-0.22.1.dist-info"
+      }
+    },
+    {
+      "name": "a2wsgi",
+      "version": "1.10.10",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/a2wsgi-1.10.10.dist-info"
+      }
+    },
+    {
+      "name": "prometheus_client",
+      "version": "0.26.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0 AND BSD-2-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/prometheus_client-0.26.0.dist-info"
+      }
+    },
+    {
+      "name": "retry",
+      "version": "0.9.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache License 2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/retry-0.9.2.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-milvus",
+      "version": "0.60.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_milvus-0.60.0.dist-info"
+      }
+    },
+    {
+      "name": "json-rpc",
+      "version": "1.15.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/json_rpc-1.15.0.dist-info"
+      }
+    },
+    {
+      "name": "zstandard",
+      "version": "0.25.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/zstandard-0.25.0.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-crewai",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_crewai-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "psutil",
+      "version": "7.2.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/psutil-7.2.2.dist-info"
+      }
+    },
+    {
+      "name": "ibm-cos-sdk-s3transfer",
+      "version": "2.14.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache License 2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/ibm_cos_sdk_s3transfer-2.14.3.dist-info"
+      }
+    },
+    {
+      "name": "jsonschema",
+      "version": "4.26.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/jsonschema-4.26.0.dist-info"
+      }
+    },
+    {
+      "name": "langchain-core",
+      "version": "1.7.6",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langchain_core-1.7.6.dist-info"
+      }
+    },
+    {
+      "name": "Pygments",
+      "version": "2.21.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-2-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pygments-2.21.0.dist-info"
+      }
+    },
+    {
+      "name": "jsonquerylang",
+      "version": "1.1.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "ISC",
+          "License :: OSI Approved :: ISC License (ISCL)"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/jsonquerylang-1.1.1.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation",
+      "version": "0.66b1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation-0.66b1.dist-info"
+      }
+    },
+    {
+      "name": "aiofiles",
+      "version": "24.1.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/aiofiles-24.1.0.dist-info"
+      }
+    },
+    {
+      "name": "fastapi",
+      "version": "0.162.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/fastapi-0.162.0.dist-info"
+      }
+    },
+    {
+      "name": "cffi",
+      "version": "2.1.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT-0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/cffi-2.1.1.dist-info"
+      }
+    },
+    {
+      "name": "apsw",
+      "version": "3.53.4.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "any-OSI"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/apsw-3.53.4.0.dist-info"
+      }
+    },
+    {
+      "name": "openpyxl",
+      "version": "3.1.5",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/openpyxl-3.1.5.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-bedrock",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_bedrock-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "Deprecated",
+      "version": "1.3.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/deprecated-1.3.1.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-exporter-otlp-common",
+      "version": "0.66b1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_exporter_otlp_common-0.66b1.dist-info"
+      }
+    },
+    {
+      "name": "transformers",
+      "version": "5.10.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache 2.0 License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/transformers-5.10.1.dist-info"
+      }
+    },
+    {
+      "name": "anyio",
+      "version": "4.16.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/anyio-4.16.0.dist-info"
+      }
+    },
+    {
+      "name": "mypy-boto3-bedrock-runtime",
+      "version": "1.43.62",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/mypy_boto3_bedrock_runtime-1.43.62.dist-info"
+      }
+    },
+    {
+      "name": "asgiref",
+      "version": "3.13.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/asgiref-3.13.0.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-llamaindex",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_llamaindex-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "proto-plus",
+      "version": "1.29.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache 2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/proto_plus-1.29.0.dist-info"
+      }
+    },
+    {
+      "name": "tiktoken",
+      "version": "0.14.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT License\n\nCopyright (c) 2022 OpenAI, Shantanu Jain\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/tiktoken-0.14.0.dist-info"
+      }
+    },
+    {
+      "name": "assemblyai",
+      "version": "0.65.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT License",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/assemblyai-0.65.0.dist-info"
+      }
+    },
+    {
+      "name": "croniter",
+      "version": "6.2.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/croniter-6.2.4.dist-info"
+      }
+    },
+    {
+      "name": "sqlmodel",
+      "version": "0.0.48",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/sqlmodel-0.0.48.dist-info"
+      }
+    },
+    {
+      "name": "websockets",
+      "version": "15.0.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/websockets-15.0.1.dist-info"
+      }
+    },
+    {
+      "name": "httpcore2",
+      "version": "2.16.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/httpcore2-2.16.0.dist-info"
+      }
+    },
+    {
+      "name": "tree-sitter-javascript",
+      "version": "0.25.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/tree_sitter_javascript-0.25.0.dist-info"
+      }
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/annotated_types-0.8.0.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-exporter-prometheus",
+      "version": "0.66b1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_exporter_prometheus-0.66b1.dist-info"
+      }
+    },
+    {
+      "name": "pyperclip",
+      "version": "1.11.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pyperclip-1.11.0.dist-info"
+      }
+    },
+    {
+      "name": "typer",
+      "version": "0.27.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/typer-0.27.3.dist-info"
+      }
+    },
+    {
+      "name": "openlayer",
+      "version": "0.36.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/openlayer-0.36.0.dist-info"
+      }
+    },
+    {
+      "name": "uuid6",
+      "version": "2025.0.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/uuid6-2025.0.1.dist-info"
+      }
+    },
+    {
+      "name": "wheel",
+      "version": "0.48.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/wheel-0.48.0.dist-info"
+      }
+    },
+    {
+      "name": "protobuf",
+      "version": "6.33.6",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "3-Clause BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/protobuf-6.33.6.dist-info"
+      }
+    },
+    {
+      "name": "traceloop-sdk",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/traceloop_sdk-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "multidict",
+      "version": "6.9.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache License 2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/multidict-6.9.1.dist-info"
+      }
+    },
+    {
+      "name": "trustcall",
+      "version": "0.0.39",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/trustcall-0.0.39.dist-info"
+      }
+    },
+    {
+      "name": "platformdirs",
+      "version": "4.14.5",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/platformdirs-4.14.5.dist-info"
+      }
+    },
+    {
+      "name": "packaging",
+      "version": "24.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "License :: OSI Approved :: Apache Software License",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/packaging-24.2.dist-info"
+      }
+    },
+    {
+      "name": "referencing",
+      "version": "0.37.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/referencing-0.37.0.dist-info"
+      }
+    },
+    {
+      "name": "pycparser",
+      "version": "3.12",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pycparser-3.12.dist-info"
+      }
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Dual License",
+          "License :: OSI Approved :: BSD License",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/python_dateutil-2.9.0.post0.dist-info"
+      }
+    },
+    {
+      "name": "openinference-instrumentation-haystack",
+      "version": "0.1.49",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/openinference_instrumentation_haystack-0.1.49.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-anthropic",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_anthropic-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "langfuse",
+      "version": "3.15.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langfuse-3.15.0.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-mistralai",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_mistralai-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/annotated_doc-0.0.5.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-exporter-otlp-proto-common",
+      "version": "1.45.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_exporter_otlp_proto_common-1.45.1.dist-info"
+      }
+    },
+    {
+      "name": "langgraph",
+      "version": "1.2.14",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langgraph-1.2.14.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-sdk",
+      "version": "1.45.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_sdk-1.45.1.dist-info"
+      }
+    },
+    {
+      "name": "limits",
+      "version": "5.8.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/limits-5.8.0.dist-info"
+      }
+    },
+    {
+      "name": "litellm",
+      "version": "1.103.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/litellm-1.103.1.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-asgi",
+      "version": "0.66b1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_asgi-0.66b1.dist-info"
+      }
+    },
+    {
+      "name": "tree-sitter",
+      "version": "0.26.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/tree_sitter-0.26.0.dist-info"
+      }
+    },
+    {
+      "name": "pyasn1_modules",
+      "version": "0.4.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pyasn1_modules-0.4.2.dist-info"
+      }
+    },
+    {
+      "name": "openinference-instrumentation",
+      "version": "0.1.75",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/openinference_instrumentation-0.1.75.dist-info"
+      }
+    },
+    {
+      "name": "ibm_watsonx_ai",
+      "version": "1.9.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/ibm_watsonx_ai-1.9.0.dist-info"
+      }
+    },
+    {
+      "name": "types-requests",
+      "version": "2.33.0.20261030",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/types_requests-2.33.0.20261030.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-redis",
+      "version": "0.66b1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_redis-0.66b1.dist-info"
+      }
+    },
+    {
+      "name": "aiofile",
+      "version": "3.12.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/aiofile-3.12.3.dist-info"
+      }
+    },
+    {
+      "name": "langwatch",
+      "version": "0.10.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langwatch-0.10.2.dist-info"
+      }
+    },
+    {
+      "name": "reportlab",
+      "version": "4.5.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD license (see license.txt for details), Copyright (c) 2000-2025, ReportLab Inc.",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/reportlab-4.5.1.dist-info"
+      }
+    },
+    {
+      "name": "types-s3transfer",
+      "version": "0.19.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/types_s3transfer-0.19.3.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-exporter-otlp-proto-http",
+      "version": "1.45.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_exporter_otlp_proto_http-1.45.1.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-marqo",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_marqo-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/click-8.5.0.dist-info"
+      }
+    },
+    {
+      "name": "duckdb",
+      "version": "1.5.6",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/duckdb-1.5.6.dist-info"
+      }
+    },
+    {
+      "name": "mdurl",
+      "version": "0.1.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/mdurl-0.1.2.dist-info"
+      }
+    },
+    {
+      "name": "jsonpatch",
+      "version": "1.42",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/jsonpatch-1.42.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-transformers",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_transformers-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "sympy",
+      "version": "1.14.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/sympy-1.14.0.dist-info"
+      }
+    },
+    {
+      "name": "dill",
+      "version": "0.4.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/dill-0.4.1.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-util-http",
+      "version": "0.66b1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_util_http-0.66b1.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-together",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_together-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "langchain-qdrant",
+      "version": "1.1.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langchain_qdrant-1.1.0.dist-info"
+      }
+    },
+    {
+      "name": "uuid_utils",
+      "version": "0.19.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/uuid_utils-0.19.0.dist-info"
+      }
+    },
+    {
+      "name": "google-api-core",
+      "version": "2.43.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache 2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/google_api_core-2.43.2.dist-info"
+      }
+    },
+    {
+      "name": "distro",
+      "version": "1.9.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache License, Version 2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/distro-1.9.0.dist-info"
+      }
+    },
+    {
+      "name": "asyncer",
+      "version": "0.0.18",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/asyncer-0.0.18.dist-info"
+      }
+    },
+    {
+      "name": "filelock",
+      "version": "4.2.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/filelock-4.2.1.dist-info"
+      }
+    },
+    {
+      "name": "backoff",
+      "version": "2.2.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/backoff-2.2.1.dist-info"
+      }
+    },
+    {
+      "name": "beautifulsoup4",
+      "version": "4.15.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT License",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/beautifulsoup4-4.15.0.dist-info"
+      }
+    },
+    {
+      "name": "langchain-weaviate",
+      "version": "0.0.8",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langchain_weaviate-0.0.8.dist-info"
+      }
+    },
+    {
+      "name": "pybase62",
+      "version": "0.4.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "UNKNOWN"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pybase62-0.4.3.dist-info"
+      }
+    },
+    {
+      "name": "langchain-mongodb",
+      "version": "0.12.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langchain_mongodb-0.12.1.dist-info"
+      }
+    },
+    {
+      "name": "aiohttp",
+      "version": "3.14.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0 AND MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/aiohttp-3.14.4.dist-info"
+      }
+    },
+    {
+      "name": "validators",
+      "version": "0.36.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/validators-0.36.0.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-vertexai",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_vertexai-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/colorama-0.4.6.dist-info"
+      }
+    },
+    {
+      "name": "rpds-py",
+      "version": "2026.9.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/rpds_py-2026.9.1.dist-info"
+      }
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.3.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pyparsing-3.3.3.dist-info"
+      }
+    },
+    {
+      "name": "soupsieve",
+      "version": "4.0.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/soupsieve-4.0.1.dist-info"
+      }
+    },
+    {
+      "name": "pymongo",
+      "version": "4.18.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pymongo-4.18.3.dist-info"
+      }
+    },
+    {
+      "name": "RapidFuzz",
+      "version": "3.14.6",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/rapidfuzz-3.14.6.dist-info"
+      }
+    },
+    {
+      "name": "structlog",
+      "version": "25.5.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT OR Apache-2.0",
+          "License :: OSI Approved :: Apache Software License",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/structlog-25.5.0.dist-info"
+      }
+    },
+    {
+      "name": "h2",
+      "version": "4.4.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/h2-4.4.1.dist-info"
+      }
+    },
+    {
+      "name": "pip",
+      "version": "26.2.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pip-26.2.2.dist-info"
+      }
+    },
+    {
+      "name": "coolname",
+      "version": "5.0.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-2-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/coolname-5.0.0.dist-info"
+      }
+    },
+    {
+      "name": "importlib_resources",
+      "version": "7.1.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/importlib_resources-7.1.0.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-urllib3",
+      "version": "0.66b1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_urllib3-0.66b1.dist-info"
+      }
+    },
+    {
+      "name": "cryptography",
+      "version": "50.0.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0 OR BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/cryptography-50.0.2.dist-info"
+      }
+    },
+    {
+      "name": "jaraco.context",
+      "version": "6.1.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/jaraco_context-6.1.2.dist-info"
+      }
+    },
+    {
+      "name": "Jinja2",
+      "version": "3.1.6",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/jinja2-3.1.6.dist-info"
+      }
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.22.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/tokenizers-0.22.2.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-semantic-conventions",
+      "version": "0.66b1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_semantic_conventions-0.66b1.dist-info"
+      }
+    },
+    {
+      "name": "SQLAlchemy",
+      "version": "2.0.57",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/sqlalchemy-2.0.57.dist-info"
+      }
+    },
+    {
+      "name": "portalocker",
+      "version": "4.4.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/portalocker-4.4.2.dist-info"
+      }
+    },
+    {
+      "name": "langchain-ibm",
+      "version": "1.1.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langchain_ibm-1.1.2.dist-info"
+      }
+    },
+    {
+      "name": "durationpy",
+      "version": "0.11",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/durationpy-0.11.dist-info"
+      }
+    },
+    {
+      "name": "alembic",
+      "version": "1.18.5",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/alembic-1.18.5.dist-info"
+      }
+    },
+    {
+      "name": "pyarrow",
+      "version": "26.0.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pyarrow-26.0.1.dist-info"
+      }
+    },
+    {
+      "name": "xxhash",
+      "version": "4.0.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-2-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/xxhash-4.0.2.dist-info"
+      }
+    },
+    {
+      "name": "pydantic-settings",
+      "version": "2.16.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pydantic_settings-2.16.2.dist-info"
+      }
+    },
+    {
+      "name": "certifi",
+      "version": "2026.10.23",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MPL-2.0",
+          "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/certifi-2026.10.23.dist-info"
+      }
+    },
+    {
+      "name": "langgraph-checkpoint",
+      "version": "4.3.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langgraph_checkpoint-4.3.1.dist-info"
+      }
+    },
+    {
+      "name": "frozenlist",
+      "version": "1.8.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/frozenlist-1.8.0.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-chromadb",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_chromadb-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "zipp",
+      "version": "4.1.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/zipp-4.1.2.dist-info"
+      }
+    },
+    {
+      "name": "inflection",
+      "version": "0.5.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/inflection-0.5.1.dist-info"
+      }
+    },
+    {
+      "name": "setuptools",
+      "version": "84.1.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/setuptools-84.1.0.dist-info"
+      }
+    },
+    {
+      "name": "boto3-stubs",
+      "version": "1.43.123",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/boto3_stubs-1.43.123.dist-info"
+      }
+    },
+    {
+      "name": "openinference-semantic-conventions",
+      "version": "0.1.43",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/openinference_semantic_conventions-0.1.43.dist-info"
+      }
+    },
+    {
+      "name": "httpx2",
+      "version": "2.16.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/httpx2-2.16.0.dist-info"
+      }
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.8.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/hf_xet-1.8.0.dist-info"
+      }
+    },
+    {
+      "name": "hyperframe",
+      "version": "6.1.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "The MIT License (MIT)\n\nCopyright (c) 2014 Cory Benfield\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/hyperframe-6.1.0.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-qdrant",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_qdrant-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "elevenlabs",
+      "version": "1.58.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/elevenlabs-1.58.1.dist-info"
+      }
+    },
+    {
+      "name": "openai",
+      "version": "2.54.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/openai-2.54.0.dist-info"
+      }
+    },
+    {
+      "name": "py",
+      "version": "1.11.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT license",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/py-1.11.0.dist-info"
+      }
+    },
+    {
+      "name": "shellingham",
+      "version": "1.5.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "ISC License",
+          "License :: OSI Approved :: ISC License (ISCL)"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/shellingham-1.5.4.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-alephalpha",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_alephalpha-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "gunicorn",
+      "version": "26.2.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/gunicorn-26.2.0.dist-info"
+      }
+    },
+    {
+      "name": "Authlib",
+      "version": "1.9.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/authlib-1.9.1.dist-info"
+      }
+    },
+    {
+      "name": "requests-oauthlib",
+      "version": "2.0.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "ISC",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/requests_oauthlib-2.0.0.dist-info"
+      }
+    },
+    {
+      "name": "jq",
+      "version": "1.13.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-2-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/jq-1.13.0.dist-info"
+      }
+    },
+    {
+      "name": "sse-starlette",
+      "version": "3.6.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/sse_starlette-3.6.0.dist-info"
+      }
+    },
+    {
+      "name": "fastuuid",
+      "version": "0.14.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/fastuuid-0.14.0.dist-info"
+      }
+    },
+    {
+      "name": "joserfc",
+      "version": "1.7.6",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/joserfc-1.7.6.dist-info"
+      }
+    },
+    {
+      "name": "jmespath",
+      "version": "1.0.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/jmespath-1.0.1.dist-info"
+      }
+    },
+    {
+      "name": "botocore-stubs",
+      "version": "1.43.124",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/botocore_stubs-1.43.124.dist-info"
+      }
+    },
+    {
+      "name": "watchfiles",
+      "version": "1.3.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/watchfiles-1.3.0.dist-info"
+      }
+    },
+    {
+      "name": "urllib3",
+      "version": "2.8.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/urllib3-2.8.0.dist-info"
+      }
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/charset_normalizer-3.5.2.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-agno",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_agno-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-openai-agents",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_openai_agents-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "importlib_metadata",
+      "version": "8.9.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/importlib_metadata-8.9.0.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-fastapi",
+      "version": "0.66b1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_fastapi-0.66b1.dist-info"
+      }
+    },
+    {
+      "name": "perplexityai",
+      "version": "0.46.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/perplexityai-0.46.1.dist-info"
+      }
+    },
+    {
+      "name": "qdrant-client",
+      "version": "1.20.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/qdrant_client-1.20.0.dist-info"
+      }
+    },
+    {
+      "name": "emoji",
+      "version": "2.16.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/emoji-2.16.0.dist-info"
+      }
+    },
+    {
+      "name": "regex",
+      "version": "2026.9.29",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0 AND CNRI-Python"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/regex-2026.9.29.dist-info"
+      }
+    },
+    {
+      "name": "scipy",
+      "version": "1.18.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Copyright (c) 2001-2002 Enthought, Inc. 2003, SciPy Developers.\n All rights reserved.\n\n Redistribution and use in source and binary forms, with or without\n modification, are permitted provided that the following conditions\n are met:\n\n 1. Redistributions of source code must retain the above copyright\n    notice, this list of conditions and the following disclaimer.\n\n 2. Redistributions in binary form must reproduce the above\n    copyright notice, this list of conditions and the following\n    disclaimer in the documentation and/or other materials provided\n    with the distribution.\n\n 3. Neither the name of the copyright holder nor the names of its\n    contributors may be used to endorse or promote products derived\n    from this software without specific prior written permission.\n\n THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n ----\n\n\n ----\n\n This binary distribution of SciPy can also bundle the following software\n (depending on the build):\n\n\n Name: OpenBLAS\n Files: scipy.libs/libscipy_openblas*.so\n Description: bundled as a dynamically linked library\n Availability: https://github.com/OpenMathLib/OpenBLAS/\n License: BSD-3-Clause\n   Copyright (c) 2011-2014, The OpenBLAS Project\n   All rights reserved.\n\n   Redistribution and use in source and binary forms, with or without\n   modification, are permitted provided that the following conditions are\n   met:\n\n      1. Redistributions of source code must retain the above copyright\n         notice, this list of conditions and the following disclaimer.\n\n      2. Redistributions in binary form must reproduce the above copyright\n         notice, this list of conditions and the following disclaimer in\n         the documentation and/or other materials provided with the\n         distribution.\n      3. Neither the name of the OpenBLAS project nor the names of \n         its contributors may be used to endorse or promote products \n         derived from this software without specific prior written \n         permission.\n\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\n   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n   ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE\n   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n   DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\n   SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\n   CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\n   OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE\n   USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n\n Name: LAPACK\n Files: scipy.libs/libscipy_openblas*.so\n Description: bundled in OpenBLAS\n Availability: https://github.com/OpenMathLib/OpenBLAS/\n License: BSD-3-Clause-Open-MPI\n   Copyright (c) 1992-2013 The University of Tennessee and The University\n                           of Tennessee Research Foundation.  All rights\n                           reserved.\n   Copyright (c) 2000-2013 The University of California Berkeley. All\n                           rights reserved.\n   Copyright (c) 2006-2013 The University of Colorado Denver.  All rights\n                           reserved.\n\n   $COPYRIGHT$\n\n   A",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/scipy-1.18.1.dist-info"
+      }
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/six-1.17.0.dist-info"
+      }
+    },
+    {
+      "name": "oauthlib",
+      "version": "4.0.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/oauthlib-4.0.0.dist-info"
+      }
+    },
+    {
+      "name": "aiosignal",
+      "version": "1.4.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache 2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/aiosignal-1.4.0.dist-info"
+      }
+    },
+    {
+      "name": "cachetools",
+      "version": "7.2.8",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/cachetools-7.2.8.dist-info"
+      }
+    },
+    {
+      "name": "a2a-sdk",
+      "version": "1.3.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/a2a_sdk-1.3.0.dist-info"
+      }
+    },
+    {
+      "name": "bcrypt",
+      "version": "5.0.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/bcrypt-5.0.0.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-haystack",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_haystack-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "dnspython",
+      "version": "2.9.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "ISC"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/dnspython-2.9.0.dist-info"
+      }
+    },
+    {
+      "name": "aioitertools",
+      "version": "0.13.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/aioitertools-0.13.0.dist-info"
+      }
+    },
+    {
+      "name": "markitdown",
+      "version": "0.1.9",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/markitdown-0.1.9.dist-info"
+      }
+    },
+    {
+      "name": "docstring_parser",
+      "version": "0.18.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/docstring_parser-0.18.0.dist-info"
+      }
+    },
+    {
+      "name": "langchain-perplexity",
+      "version": "1.4.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langchain_perplexity-1.4.2.dist-info"
+      }
+    },
+    {
+      "name": "langchain-classic",
+      "version": "1.0.8",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langchain_classic-1.0.8.dist-info"
+      }
+    },
+    {
+      "name": "et_xmlfile",
+      "version": "2.0.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/et_xmlfile-2.0.0.dist-info"
+      }
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.46.5",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pydantic_core-2.46.5.dist-info"
+      }
+    },
+    {
+      "name": "magika",
+      "version": "1.0.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/magika-1.0.3.dist-info"
+      }
+    },
+    {
+      "name": "pydantic",
+      "version": "2.13.5",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pydantic-2.13.5.dist-info"
+      }
+    },
+    {
+      "name": "dynaconf",
+      "version": "3.3.5",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/dynaconf-3.3.5.dist-info"
+      }
+    },
+    {
+      "name": "huggingface_hub",
+      "version": "1.33.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/huggingface_hub-1.33.0.dist-info"
+      }
+    },
+    {
+      "name": "jsonschema-specifications",
+      "version": "2025.9.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/jsonschema_specifications-2025.9.1.dist-info"
+      }
+    },
+    {
+      "name": "python-docx",
+      "version": "1.2.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/python_docx-1.2.0.dist-info"
+      }
+    },
+    {
+      "name": "httptools",
+      "version": "0.9.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/httptools-0.9.0.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-threading",
+      "version": "0.66b1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_threading-0.66b1.dist-info"
+      }
+    },
+    {
+      "name": "PyJWT",
+      "version": "2.15.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pyjwt-2.15.1.dist-info"
+      }
+    },
+    {
+      "name": "starlette",
+      "version": "1.10.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/starlette-1.10.0.dist-info"
+      }
+    },
+    {
+      "name": "orjson",
+      "version": "3.13.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MPL-2.0 AND (Apache-2.0 OR MIT)",
+          "License :: OSI Approved :: Apache Software License",
+          "License :: OSI Approved :: MIT License",
+          "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/orjson-3.13.0.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-lancedb",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_lancedb-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "tomli",
+      "version": "2.5.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/tomli-2.5.0.dist-info"
+      }
+    },
+    {
+      "name": "lark",
+      "version": "1.3.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/lark-1.3.1.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-system-metrics",
+      "version": "0.66b1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_system_metrics-0.66b1.dist-info"
+      }
+    },
+    {
+      "name": "lfx",
+      "version": "1.13.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/lfx-1.13.1.dist-info"
+      }
+    },
+    {
+      "name": "pillow",
+      "version": "13.0.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT-CMU"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pillow-13.0.0.dist-info"
+      }
+    },
+    {
+      "name": "tree-sitter-typescript",
+      "version": "0.23.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/tree_sitter_typescript-0.23.2.dist-info"
+      }
+    },
+    {
+      "name": "langchain-community",
+      "version": "0.4.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langchain_community-0.4.2.dist-info"
+      }
+    },
+    {
+      "name": "hpack",
+      "version": "4.2.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/hpack-4.2.0.dist-info"
+      }
+    },
+    {
+      "name": "openinference-instrumentation-openai",
+      "version": "0.1.69",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/openinference_instrumentation_openai-0.1.69.dist-info"
+      }
+    },
+    {
+      "name": "nest-asyncio",
+      "version": "1.6.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/nest_asyncio-1.6.0.dist-info"
+      }
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.5",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/typing_inspection-0.4.5.dist-info"
+      }
+    },
+    {
+      "name": "attrs",
+      "version": "26.1.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/attrs-26.1.0.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-sqlalchemy",
+      "version": "0.66b1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_sqlalchemy-0.66b1.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-openai",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_openai-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-api",
+      "version": "1.45.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_api-1.45.1.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-watsonx",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_watsonx-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "weaviate-client",
+      "version": "4.24.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD 3-clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/weaviate_client-4.24.1.dist-info"
+      }
+    },
+    {
+      "name": "grandalf",
+      "version": "0.8",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "GPLv2 | EPLv1",
+          "License :: OSI Approved :: GNU General Public License v2 (GPLv2)"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/grandalf-0.8.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-voyageai",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_voyageai-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "langchain",
+      "version": "1.3.18",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langchain-1.3.18.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-requests",
+      "version": "0.66b1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_requests-0.66b1.dist-info"
+      }
+    },
+    {
+      "name": "kubernetes",
+      "version": "32.0.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache License Version 2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/kubernetes-32.0.1.dist-info"
+      }
+    },
+    {
+      "name": "toml",
+      "version": "0.10.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/toml-0.10.2.dist-info"
+      }
+    },
+    {
+      "name": "multiprocess",
+      "version": "0.70.19",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/multiprocess-0.70.19.dist-info"
+      }
+    },
+    {
+      "name": "arize-phoenix-otel",
+      "version": "0.17.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/arize_phoenix_otel-0.17.2.dist-info"
+      }
+    },
+    {
+      "name": "lomond",
+      "version": "0.3.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "UNKNOWN",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/lomond-0.3.3.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-replicate",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_replicate-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "PSF-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/typing_extensions-4.16.0.dist-info"
+      }
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.54.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/uvicorn-0.54.0.dist-info"
+      }
+    },
+    {
+      "name": "psycopg",
+      "version": "3.3.5",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "LGPL-3.0-only"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/psycopg-3.3.5.dist-info"
+      }
+    },
+    {
+      "name": "decorator",
+      "version": "5.3.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-2-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/decorator-5.3.1.dist-info"
+      }
+    },
+    {
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache 2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/flatbuffers-25.12.19.dist-info"
+      }
+    },
+    {
+      "name": "culsans",
+      "version": "0.11.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "License :: OSI Approved :: ISC License (ISCL)"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/culsans-0.11.0.dist-info"
+      }
+    },
+    {
+      "name": "openinference-instrumentation-langchain",
+      "version": "0.1.82",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/openinference_instrumentation_langchain-0.1.82.dist-info"
+      }
+    },
+    {
+      "name": "caio",
+      "version": "0.12.10",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/caio-0.12.10.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-exporter-http-transport",
+      "version": "0.66b1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_exporter_http_transport-0.66b1.dist-info"
+      }
+    },
+    {
+      "name": "python-liquid",
+      "version": "2.3.6",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/python_liquid-2.3.6.dist-info"
+      }
+    },
+    {
+      "name": "langchain-experimental",
+      "version": "0.4.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langchain_experimental-0.4.2.dist-info"
+      }
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.3.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/iniconfig-2.3.1.dist-info"
+      }
+    },
+    {
+      "name": "boto3",
+      "version": "1.43.117",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/boto3-1.43.117.dist-info"
+      }
+    },
+    {
+      "name": "defusedxml",
+      "version": "0.7.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "PSFL",
+          "License :: OSI Approved :: Python Software Foundation License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/defusedxml-0.7.1.dist-info"
+      }
+    },
+    {
+      "name": "lz4",
+      "version": "4.4.5",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/lz4-4.4.5.dist-info"
+      }
+    },
+    {
+      "name": "redis",
+      "version": "7.4.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/redis-7.4.1.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-mcp",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_mcp-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.6",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/tzdata-2026.6.dist-info"
+      }
+    },
+    {
+      "name": "mcp",
+      "version": "1.30.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/mcp-1.30.0.dist-info"
+      }
+    },
+    {
+      "name": "langflow-sdk",
+      "version": "0.4.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langflow_sdk-0.4.0.dist-info"
+      }
+    },
+    {
+      "name": "safetensors",
+      "version": "0.8.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/safetensors-0.8.0.dist-info"
+      }
+    },
+    {
+      "name": "babel",
+      "version": "2.18.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/babel-2.18.0.dist-info"
+      }
+    },
+    {
+      "name": "pytest",
+      "version": "9.2.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pytest-9.2.0.dist-info"
+      }
+    },
+    {
+      "name": "pypdf",
+      "version": "6.21.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pypdf-6.21.4.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-cohere",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_cohere-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "onnxruntime",
+      "version": "1.23.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT License",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/onnxruntime-1.23.2.dist-info"
+      }
+    },
+    {
+      "name": "json_repair",
+      "version": "0.64.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/json_repair-0.64.4.dist-info"
+      }
+    },
+    {
+      "name": "fastapi-pagination",
+      "version": "0.16.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/fastapi_pagination-0.16.2.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-writer",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_writer-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "dydantic",
+      "version": "0.0.8",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/dydantic-0.0.8.dist-info"
+      }
+    },
+    {
+      "name": "spider_client",
+      "version": "0.1.93",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/spider_client-0.1.93.dist-info"
+      }
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/httpx-0.28.1.dist-info"
+      }
+    },
+    {
+      "name": "uncurl",
+      "version": "0.0.11",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "UNKNOWN"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/uncurl-0.0.11.dist-info"
+      }
+    },
+    {
+      "name": "langflow-base",
+      "version": "1.13.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langflow_base-1.13.1.dist-info"
+      }
+    },
+    {
+      "name": "uvloop",
+      "version": "0.23.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT License",
+          "License :: OSI Approved :: Apache Software License",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/uvloop-0.23.0.dist-info"
+      }
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "3.0.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/markupsafe-3.0.4.dist-info"
+      }
+    },
+    {
+      "name": "greenlet",
+      "version": "3.5.6",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT AND PSF-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/greenlet-3.5.6.dist-info"
+      }
+    },
+    {
+      "name": "ag-ui-protocol",
+      "version": "0.1.18",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/ag_ui_protocol-0.1.18.dist-info"
+      }
+    },
+    {
+      "name": "pytz",
+      "version": "2026.6",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pytz-2026.6.dist-info"
+      }
+    },
+    {
+      "name": "langchain-text-splitters",
+      "version": "1.1.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langchain_text_splitters-1.1.3.dist-info"
+      }
+    },
+    {
+      "name": "cuid",
+      "version": "0.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/cuid-0.4.dist-info"
+      }
+    },
+    {
+      "name": "spider-browser",
+      "version": "0.4.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/spider_browser-0.4.0.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-pinecone",
+      "version": "0.60.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_pinecone-0.60.0.dist-info"
+      }
+    },
+    {
+      "name": "propcache",
+      "version": "0.5.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/propcache-0.5.4.dist-info"
+      }
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/numpy-2.5.4.dist-info"
+      }
+    },
+    {
+      "name": "ibm-cos-sdk",
+      "version": "2.14.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache License 2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/ibm_cos_sdk-2.14.3.dist-info"
+      }
+    },
+    {
+      "name": "slowapi",
+      "version": "0.1.10",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/slowapi-0.1.10.dist-info"
+      }
+    },
+    {
+      "name": "ibm-cos-sdk-core",
+      "version": "2.14.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache License 2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/ibm_cos_sdk_core-2.14.3.dist-info"
+      }
+    },
+    {
+      "name": "tqdm",
+      "version": "4.70.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MPL-2.0 AND MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/tqdm-4.70.1.dist-info"
+      }
+    },
+    {
+      "name": "python-multipart",
+      "version": "0.0.33",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/python_multipart-0.0.33.dist-info"
+      }
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.2.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/python_dotenv-1.2.4.dist-info"
+      }
+    },
+    {
+      "name": "tenacity",
+      "version": "9.2.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/tenacity-9.2.1.dist-info"
+      }
+    },
+    {
+      "name": "opik",
+      "version": "2.2.140",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache 2.0 License",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opik-2.2.140.dist-info"
+      }
+    },
+    {
+      "name": "jiter",
+      "version": "0.18.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/jiter-0.18.0.dist-info"
+      }
+    },
+    {
+      "name": "pyasn1",
+      "version": "0.6.5",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-2-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pyasn1-0.6.5.dist-info"
+      }
+    },
+    {
+      "name": "aiohappyeyeballs",
+      "version": "2.7.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "PSF-2.0",
+          "License :: OSI Approved :: Python Software Foundation License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/aiohappyeyeballs-2.7.1.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-sagemaker",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_sagemaker-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "pluggy",
+      "version": "1.7.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pluggy-1.7.0.dist-info"
+      }
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/idna-3.20.dist-info"
+      }
+    },
+    {
+      "name": "humanfriendly",
+      "version": "10.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/humanfriendly-10.0.dist-info"
+      }
+    },
+    {
+      "name": "coloredlogs",
+      "version": "15.0.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/coloredlogs-15.0.1.dist-info"
+      }
+    },
+    {
+      "name": "websocket-client",
+      "version": "1.9.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/websocket_client-1.9.2.dist-info"
+      }
+    },
+    {
+      "name": "sniffio",
+      "version": "1.3.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT OR Apache-2.0",
+          "License :: OSI Approved :: MIT License",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/sniffio-1.3.1.dist-info"
+      }
+    },
+    {
+      "name": "sqlite-vec",
+      "version": "0.1.9",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT License, Apache License, Version 2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/sqlite_vec-0.1.9.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-exporter-otlp",
+      "version": "1.45.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_exporter_otlp-1.45.1.dist-info"
+      }
+    },
+    {
+      "name": "markdownify",
+      "version": "1.2.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/markdownify-1.2.3.dist-info"
+      }
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.6.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/fsspec-2026.6.0.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-proto",
+      "version": "1.45.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_proto-1.45.1.dist-info"
+      }
+    },
+    {
+      "name": "aiobotocore",
+      "version": "3.10.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/aiobotocore-3.10.0.dist-info"
+      }
+    },
+    {
+      "name": "googleapis-common-protos",
+      "version": "1.76.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/googleapis_common_protos-1.76.0.dist-info"
+      }
+    },
+    {
+      "name": "email-validator",
+      "version": "2.3.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Unlicense",
+          "License :: OSI Approved :: The Unlicense (Unlicense)"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/email_validator-2.3.0.dist-info"
+      }
+    },
+    {
+      "name": "pymongo-search-utils",
+      "version": "0.3.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code control systems,\n      and issue tracking systems that are managed by, or on behalf of, the\n      Licensor for the purpose of discussing and improving the Work, but\n      excluding communication that is conspicuously marked or otherwise\n      designated in writing by the copyright owner as \"Not a Contribution.\"\n\n      \"Contributor\" shall mean Licensor and any individual or Legal Entity\n      on behalf of whom a Contribution has been received by Licensor and\n      subsequently incorporated within the Work.\n\n   2. Grant of Copyright License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      copyright license to reproduce, prepare Derivative Works of,\n      publicly display, publicly perform, sublicense, and distribute the\n      Work and such Derivative Works in Source or Object form.\n\n   3. Grant of Patent License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pymongo_search_utils-0.3.1.dist-info"
+      }
+    },
+    {
+      "name": "wrapt",
+      "version": "1.17.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/wrapt-1.17.3.dist-info"
+      }
+    },
+    {
+      "name": "lxml",
+      "version": "6.1.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/lxml-6.1.3.dist-info"
+      }
+    },
+    {
+      "name": "rich",
+      "version": "13.9.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/rich-13.9.4.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-google-generativeai",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_google_generativeai-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "clickhouse-connect",
+      "version": "0.7.19",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache License 2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/clickhouse_connect-0.7.19.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-semantic-conventions-ai",
+      "version": "0.5.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_semantic_conventions_ai-0.5.1.dist-info"
+      }
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pyyaml-6.0.3.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-logging",
+      "version": "0.66b1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_logging-0.66b1.dist-info"
+      }
+    },
+    {
+      "name": "aiologic",
+      "version": "0.17.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "License :: OSI Approved :: ISC License (ISCL)"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/aiologic-0.17.1.dist-info"
+      }
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/mpmath-1.3.0.dist-info"
+      }
+    },
+    {
+      "name": "jsonpointer",
+      "version": "3.8",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Modified BSD License",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/jsonpointer-3.8.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-exporter-otlp-proto-grpc",
+      "version": "1.45.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_exporter_otlp_proto_grpc-1.45.1.dist-info"
+      }
+    },
+    {
+      "name": "ormsgpack",
+      "version": "1.13.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0 OR MIT",
+          "License :: OSI Approved :: Apache Software License",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/ormsgpack-1.13.0.dist-info"
+      }
+    },
+    {
+      "name": "yarl",
+      "version": "1.25.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/yarl-1.25.1.dist-info"
+      }
+    },
+    {
+      "name": "Mako",
+      "version": "1.4.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/mako-1.4.2.dist-info"
+      }
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "4.2.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/markdown_it_py-4.2.0.dist-info"
+      }
+    },
+    {
+      "name": "pksuid",
+      "version": "1.1.2",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pksuid-1.1.2.dist-info"
+      }
+    },
+    {
+      "name": "s3transfer",
+      "version": "0.19.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache License 2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/s3transfer-0.19.3.dist-info"
+      }
+    },
+    {
+      "name": "pandas",
+      "version": "2.3.3",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD 3-Clause License\n\n Copyright (c) 2008-2011, AQR Capital Management, LLC, Lambda Foundry, Inc. and PyData Development Team\n All rights reserved.\n\n Copyright (c) 2011-2023, Open source contributors.\n\n Redistribution and use in source and binary forms, with or without\n modification, are permitted provided that the following conditions are met:\n\n * Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n * Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n * Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\n THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\n AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\n DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\n FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\n SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\n CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\n OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n Copyright (c) 2010-2019 Keith Goodman\n Copyright (c) 2019 Bottleneck Developers\n All rights reserved.\n\n Redistribution and use in source and binary forms, with or without\n modification, are permitted provided that the following conditions are met:\n\n     * Redistributions of source code must retain the above copyright notice,\n       this list of conditions and the following disclaimer.\n\n     * Redistributions in binary form must reproduce the above copyright\n       notice, this list of conditions and the following disclaimer in the\n       documentation and/or other materials provided with the distribution.\n\n THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\n AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE\n LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR\n CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF\n SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS\n INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN\n CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)\n ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE\n POSSIBILITY OF SUCH DAMAGE.Copyright 2017- Paul Ganssle <paul@ganssle.io>\n Copyright 2017- dateutil contributors (see AUTHORS file)\n\n    Licensed under the Apache License, Version 2.0 (the \"License\");\n    you may not use this file except in compliance with the License.\n    You may obtain a copy of the License at\n\n        http://www.apache.org/licenses/LICENSE-2.0\n\n    Unless required by applicable law or agreed to in writing, software\n    distributed under the License is distributed on an \"AS IS\" BASIS,\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n    See the License for the specific language governing permissions and\n    limitations under the License.\n\n The above license applies to all contributions after 2017-12-01, as well as\n all contributions that have been re-licensed (see AUTHORS file for the list of\n contributors who have re-licensed their code).\n --------------------------------------------------------------------------------\n dateutil - Extensions to the standard Python datetime module.\n\n Copyright (c) 2003-2011 - Gustavo Nieme",
+          "License :: OSI Approved :: BSD License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/pandas-2.3.3.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-weaviate",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_weaviate-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-groq",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_groq-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "google-auth",
+      "version": "2.62.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache 2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/google_auth-2.62.1.dist-info"
+      }
+    },
+    {
+      "name": "nanoid",
+      "version": "2.0.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/nanoid-2.0.0.dist-info"
+      }
+    },
+    {
+      "name": "langchain-protocol",
+      "version": "0.0.20",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langchain_protocol-0.0.20.dist-info"
+      }
+    },
+    {
+      "name": "grpcio",
+      "version": "1.78.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/grpcio-1.78.0.dist-info"
+      }
+    },
+    {
+      "name": "termcolor",
+      "version": "3.3.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/termcolor-3.3.0.dist-info"
+      }
+    },
+    {
+      "name": "networkx",
+      "version": "3.7",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "BSD-3-Clause"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/networkx-3.7.dist-info"
+      }
+    },
+    {
+      "name": "langchainhub",
+      "version": "0.1.21",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langchainhub-0.1.21.dist-info"
+      }
+    },
+    {
+      "name": "langgraph-prebuilt",
+      "version": "1.1.1",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/langgraph_prebuilt-1.1.1.dist-info"
+      }
+    },
+    {
+      "name": "chardet",
+      "version": "7.7.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "0BSD"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/chardet-7.7.0.dist-info"
+      }
+    },
+    {
+      "name": "truststore",
+      "version": "0.10.5",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "MIT"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/truststore-0.10.5.dist-info"
+      }
+    },
+    {
+      "name": "requests-toolbelt",
+      "version": "1.0.0",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache 2.0",
+          "License :: OSI Approved :: Apache Software License"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/requests_toolbelt-1.0.0.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-ollama",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_ollama-0.62.4.dist-info"
+      }
+    },
+    {
+      "name": "botocore",
+      "version": "1.43.117",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/botocore-1.43.117.dist-info"
+      }
+    },
+    {
+      "name": "opentelemetry-instrumentation-langchain",
+      "version": "0.62.4",
+      "type": "pypi",
+      "license": {
+        "identifiers": [
+          "Apache-2.0"
+        ],
+        "source": "installed METADATA of exact name/version",
+        "location": "/usr/local/lib/python3.12/site-packages/opentelemetry_instrumentation_langchain-0.62.4.dist-info"
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "scope": "Pure documentation/evidence after e6f6fe7 tested images. Exact CI source/images remain bound; no post-documentation rebuild or deployment claim.",
+  "affected_image_inputs": [
+    {
+      "path": "docs/DEPENDENCY_LICENSES.md",
+      "tested_sha256": "3664b67873d2fb7907d515ebed0f257ff3049b8a129e369bc5639e84ba6ba92f",
+      "final_sha256": "7a2bb2ee09cb74e485dc757d3c0d566c4cf9d7ab379dabd0b422f4bac0b6e068",
+      "changed": true
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "tested_sha256": "51646e7877b458ba7c4e9a9a228d5c2c37d2ffbceee79cda84aea1b946658817",
+      "final_sha256": "980842118da0e7e56fd432dddad8e8cf3a016be1093023edfc19e05e942acdd0",
+      "changed": true
+    }
+  ],
+  "unchanged_license_files": [
+    "licenses/Langflow-LICENSE.txt",
+    "licenses/sqlite-vec-LICENSE-MIT.txt",
+    "licenses/sqlite-vec-LICENSE-APACHE.txt"
+  ],
+  "skip_ci": "Final docs/evidence commit may skip repeated unchanged runtime jobs; skip is not pass."
+}

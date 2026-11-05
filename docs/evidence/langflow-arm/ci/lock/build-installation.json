@@ -1,0 +1,15 @@
+{
+  "arch": "arm64",
+  "baseline_sha256": "8afd65b961c8772146dad70e64894911a8b5edb951178d5c5f13d7d5fabf1e41",
+  "dependency_scope": "build-tools",
+  "environment": {
+    "implementation_name": "cpython",
+    "platform_machine": "aarch64",
+    "python_full_version": "3.12.16",
+    "sys_platform": "linux"
+  },
+  "installed_set_matches_pins": true,
+  "package_count": 4,
+  "pins_sha256": "3ee1f4bbba9c9cc73c11512c26cf6b2bb96326ea2888ed98e2d20b20972a6298",
+  "pip_check": "passed"
+}

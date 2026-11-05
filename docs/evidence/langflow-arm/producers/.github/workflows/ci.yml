@@ -1,0 +1,195 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16.15-trixie@sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c
+        env:
+          POSTGRES_USER: review
+          POSTGRES_PASSWORD: synthetic-demo-only
+          POSTGRES_DB: review_console
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U review -d review_console"
+          --health-interval 5s --health-timeout 5s --health-retries 20
+    env:
+      ARC_TEST_POSTGRES_URL: postgresql+psycopg://review:synthetic-demo-only@127.0.0.1:5432/review_console
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install --upgrade pip
+      - run: pip install -r requirements.lock
+      - run: pip install -e '.[dev]'
+      - run: ruff check .
+      - run: pytest --junitxml="$RUNNER_TEMP/arc-unit.xml"
+      - name: Reject common committed secret formats
+        run: |
+          if git grep -nIE -- \
+            '-----BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY|sk-[A-Za-z0-9]{20,}' .; then
+            exit 1
+          fi
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci
+        working-directory: frontend
+      - run: npm test -- --run
+        working-directory: frontend
+      - run: npm run build
+        working-directory: frontend
+      - run: docker compose config --quiet
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: unit-verification
+          path: ${{ runner.temp }}/arc-unit.xml
+          retention-days: 7
+
+  workflow-browser:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: ubuntu-latest
+            runtime: default
+            version: "1.11.6"
+            compose_files: docker-compose.yml
+            arch: amd64
+            native_profile: prior-materials
+            os_profile: rhel
+          - runner: ubuntu-24.04-arm
+            runtime: default
+            version: "1.11.6"
+            compose_files: docker-compose.yml
+            arch: arm64
+            native_profile: arm-backend
+            os_profile: rhel
+          - runner: ubuntu-latest
+            runtime: candidate
+            version: "1.13.1"
+            compose_files: docker-compose.yml:docker/compose.candidate.yml
+            arch: amd64
+            native_profile: prior-materials
+            os_profile: debian
+          - runner: ubuntu-24.04-arm
+            runtime: candidate
+            version: "1.13.1"
+            compose_files: docker-compose.yml:docker/compose.candidate.yml
+            arch: arm64
+            native_profile: prior-materials
+            os_profile: debian
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 35
+    env:
+      COMPOSE_PROJECT_NAME: arc-ci-${{ github.run_id }}-${{ matrix.arch }}
+      COMPOSE_BAKE: "false"
+      COMPOSE_FILE: ${{ matrix.compose_files }}
+      LANGFLOW_SUPERUSER_PASSWORD: synthetic-demo-change-me
+      REVIEW_SERVICE_TOKEN: synthetic-demo-service-token
+    steps:
+      - name: Record runner architecture and require 12 GiB available
+        run: |
+          mkdir -p "$RUNNER_TEMP/arc-ci-evidence"
+          {
+            echo 'matrix_runtime=${{ matrix.runtime }}'
+            echo 'expected_langflow_version=${{ matrix.version }}'
+            echo 'matrix_arch=${{ matrix.arch }}'
+            echo 'runner_arch=${{ runner.arch }}'
+            uname -a
+            df -B1 "$RUNNER_TEMP"
+          } | tee "$RUNNER_TEMP/arc-ci-evidence/runner-capacity.txt"
+          arc_available_bytes="$(df -B1 --output=avail "$RUNNER_TEMP" | tail -n 1 | tr -d '[:space:]')"
+          echo "available_bytes=$arc_available_bytes minimum_bytes=12884901888" | tee -a "$RUNNER_TEMP/arc-ci-evidence/runner-capacity.txt"
+          test "$arc_available_bytes" -ge 12884901888 || {
+            echo 'Less than 12 GiB free; stopping before installs or image builds.' >&2
+            exit 1
+          }
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m venv .venv && .venv/bin/pip install -r requirements.lock
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci && npm run build
+        working-directory: frontend
+      - name: Build exact application images
+        run: docker compose build api langflow web
+      - name: Start isolated stores and workflow runtime
+        run: |
+          docker compose up -d postgres langflow
+          docker compose run --no-deps storage-init
+          docker compose run migrate
+          docker compose run flow-init python scripts/bootstrap_langflow.py --upload \
+            --manifest /app/config/langflow-flows.json --expected-langflow-version '${{ matrix.version }}'
+          docker compose up -d --no-deps api worker web
+      - name: Wait for API and Web
+        run: |
+          timeout 120s sh -c 'until curl -fsS http://localhost:8080/api/health; do sleep 2; done'
+      - name: Real uploads, Intake, three decisions, nine downloads, failure and retry
+        run: |
+          mkdir -p "$RUNNER_TEMP/arc-ci-evidence"
+          .venv/bin/python scripts/validate_langflow.py --api-url http://localhost:8080 \
+            --evidence "$RUNNER_TEMP/arc-ci-evidence/workflow.json" \
+            --expected-langflow-version '${{ matrix.version }}'
+      - name: Install bounded browser CLI runtime
+        if: matrix.arch == 'amd64'
+        run: |
+          npm install --global @playwright/cli@0.1.22
+          command -v google-chrome || playwright-cli install-browser chrome
+      - name: Install pinned Chinese browser font
+        if: matrix.arch == 'amd64'
+        run: |
+          mkdir -p "$HOME/.local/share/fonts/arc"
+          install -m 644 review_core/assets/NotoSansSC-Regular.ttf "$HOME/.local/share/fonts/arc/NotoSansSC-Regular.ttf"
+          fc-cache -f "$HOME/.local/share/fonts/arc"
+      - name: Verify Chinese browser font availability
+        if: matrix.arch == 'amd64'
+        run: |
+          mkdir -p "$RUNNER_TEMP/arc-ci-evidence"
+          fc-match --format='%{family}\n' 'sans-serif:lang=zh-cn' | tee "$RUNNER_TEMP/arc-ci-evidence/chinese-browser-font.txt"
+          grep -E 'Noto Sans (CJK )?SC' "$RUNNER_TEMP/arc-ci-evidence/chinese-browser-font.txt"
+          echo 'e3b799e4230233500ff152d1cc81ade6c64acb34958c90cd6b6e02927a2923a9  review_core/assets/NotoSansSC-Regular.ttf' | sha256sum --check
+          sha256sum review_core/assets/NotoSansSC-Regular.ttf "$HOME/.local/share/fonts/arc/NotoSansSC-Regular.ttf" > "$RUNNER_TEMP/arc-ci-evidence/chinese-browser-font-version.txt"
+      - name: Keyboard upload to decision and downloadable reports
+        if: matrix.arch == 'amd64'
+        env:
+          ARC_UI_APPROVE: "1"
+          ARC_UI_BASE_URL: http://localhost:8080
+          ARC_UI_EVIDENCE_DIR: ${{ runner.temp }}/arc-ci-evidence/browser
+          ARC_PLAYWRIGHT_CLI: playwright-cli
+        run: node frontend/scripts/verify-ui-cli.mjs
+      - name: Collect bounded image and license evidence (not release acceptance)
+        run: |
+          .venv/bin/python scripts/collect_release_ci.py --output-dir "$RUNNER_TEMP/arc-ci-evidence/release" \
+            --native-profile '${{ matrix.native_profile }}' --os-profile '${{ matrix.os_profile }}'
+      - name: Preserve compact runtime diagnostics
+        if: always()
+        run: |
+          mkdir -p "$RUNNER_TEMP/arc-ci-evidence"
+          docker compose ps --format json > "$RUNNER_TEMP/arc-ci-evidence/services.json"
+          docker compose logs --no-color --tail 80 api worker > "$RUNNER_TEMP/arc-ci-evidence/runtime.log"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workflow-browser-verification-${{ matrix.runtime }}-${{ matrix.arch }}
+          path: ${{ runner.temp }}/arc-ci-evidence
+          retention-days: 7

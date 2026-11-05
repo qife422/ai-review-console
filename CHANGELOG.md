@@ -2,6 +2,14 @@
 
 本文件记录主要功能与交接边界；精确代码差异以 Git 提交为准。开发快照不是正式发布，源码备份不是运行数据库备份。
 
+## 2026-11-04 — 候选 ARM 后端验证
+
+- 确认上一轮自查/远端e1d8a02及88payload后，按授权进入ARM切片；固化334包和4工具的ARM独立SHA锁，原AMD锁不变。
+- [锁CI41978766690](https://github.com/qife422/ai-review-console/actions/runs/41978766690)在原生ARM完成严格哈希新装/pip check；59个所选档案SHA不同，版本图不变。
+- [完整CI41979142562](https://github.com/qife422/ai-review-console/actions/runs/41979142562)五任务success：271 Python/29前端、默认/候选双架构后端、AMD浏览器；ARM GUI明确跳过。
+- ARM334包实清单一致、真实四格式/三决定/九报告通过；两LF候选各132 provider记录/scan exit1，三通知实际SHA一致，完整native/source及分发许可仍open。
+- [本轮结果、待解决与计划](docs/evidence/langflow-arm/README.md)封存同步；默认1.11.6、原库和六旧证据包不变。Mac宿主、ARM旧schema迁移、编辑器、故障/性能待补，完整AC-19未通过。
+
 ## 2026-11-04 — 候选依赖锁与隔离迁移验收
 
 - 固化1.13.1候选334包完整SHA锁和4个构建工具锁；首次wheel-only失败保留，源码档案以关闭build isolation的严格哈希安装通过，不宣称wheel二进制复现。

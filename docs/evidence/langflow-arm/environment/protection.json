@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-11-05T06:25:46.981177+00:00",
+  "source": "e6f6fe7b908b7fab1b4f85e9f5a4fa22890fc923",
+  "fixed_hashes": {
+    "review_console.sqlite3": "980ad5d23d866a52e4101966594e5a24ee67edef08475afc63ff9c3e1f6fca1f",
+    "docs/UPGRADE_SPEC.md": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753",
+    "docs/spec-baseline.json": "5ad13f524e74554b9c8cb30b9809ffbbbbed8e3d7fa4ede5625bb1b7d781bf2e"
+  },
+  "unchanged_vs_e1d8a02": [
+    {
+      "path": "docker/langflow.Dockerfile",
+      "bytes": 2412,
+      "sha256": "bb38c30695ea422839935a6209786f8ab8728d054210756d2b1af1e9d6b59cb6"
+    },
+    {
+      "path": "requirements.lock",
+      "bytes": 2148,
+      "sha256": "993529902d7718533e40a25ccd220f713f2a8a4c6b4123a127625362593d891e"
+    },
+    {
+      "path": "compliance/langflow-candidate.lock",
+      "bytes": 34169,
+      "sha256": "22c0c6fd00a436f20fbc649e7ef69273da933b2c75ea0f797be9adfb48a4bd7b"
+    },
+    {
+      "path": "compliance/langflow-candidate-build-tools.lock",
+      "bytes": 449,
+      "sha256": "9f87377dbd3950d2fd2f54d740a9fa7ce7f71acc87ef0f1e119b45fa970fa9ea"
+    }
+  ],
+  "six_old_manifest_hashes": {
+    "v02-acceptance": "6e3fa0159c396b1d422b32d90ccabb772b82db5d5cbeddb6e385e0e54138ba1c",
+    "v02-release": "c2a9cba23f3653e7c507654631f74568ee7490f80212ffe382c92323a4547f36",
+    "release-compatibility": "0466646bd5eecd32768e9fc61bf138815853292049a41a95dc1d98927e2081ef",
+    "runtime-maintenance": "5a400e77b5e3b28426f2efe99d723b48aee5e1e95d9c7e4a4c9665364963b724",
+    "langflow-candidate": "ca0a0b0b38c2ca735ae17b83c93cc022fd89899a8b8f0e82b978b1eb3b5a38ec",
+    "langflow-transition": "81701508dc131ef4dbdc8743f46fdcb57c98969a4567696fd3c289c7843f1af5"
+  },
+  "latest_old_packet_88_payloads": "Full size/SHA checked at turn start, all passed. No old packet source paths changed.",
+  "prior_five_1155_payloads": "Prior full size/SHA audit retained in docs/evidence/langflow-transition/environment/protected-input-review.json; not claimed rehashed this turn.",
+  "method": "Fresh fixed and manifest hashes; git show baseline byte compare; git diff exact changed paths. No DB execution/content emission or local Docker operation.",
+  "cleanup_or_original_data_migration": false
+}

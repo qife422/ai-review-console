@@ -1,0 +1,71 @@
+{
+  "checked_at": "2026-11-05T06:27:18.034022+00:00",
+  "image_id": "sha256:a5939d54d52e42c88138c81d2059386fd31b3c1f66b7373358b35374b6b9627d",
+  "scope": "New ARM image inventory and package-level scan; not whole filesystem absence/native or exploitability audit",
+  "inputs": {
+    "arm64-inventory.json": {
+      "bytes": 188410,
+      "sha256": "52b0457043bf656bbbae7f748ffb81e6cc27eb812d59809321926b04282db089"
+    },
+    "arm64-image-summary.json": {
+      "bytes": 88205,
+      "sha256": "ecb9cf26fb91e4f09d6224a898043b52bd125c5cb8f4875dff3a0d729304ca89"
+    }
+  },
+  "python_distributions": 334,
+  "debian_inventory_packages": 109,
+  "pypi_matched_packages": 0,
+  "candidate_debian_provider_ids": 132,
+  "matched_debian_binary_packages": 52,
+  "matched_debian_source_names": 28,
+  "unknowns": {
+    "mapping_unknown": 0,
+    "query_unknown": 0,
+    "detail_unknown": 0
+  },
+  "actual_apt_rows": [
+    {
+      "name": "apt",
+      "version": "2.6.2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "apt",
+      "source_version": "2.6.2",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "Expat",
+          "GPL-2",
+          "GPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    },
+    {
+      "name": "libapt-pkg6.0",
+      "version": "2.6.2",
+      "type": "deb",
+      "arch": "arm64",
+      "source_name": "apt",
+      "source_version": "2.6.2",
+      "license": {
+        "identifiers": [
+          "BSD-3-clause",
+          "Expat",
+          "GPL-2",
+          "GPL-2+"
+        ],
+        "source": "/usr/share/doc/<binary-package>/copyright License fields"
+      }
+    }
+  ],
+  "not_installed_names": [
+    "zep-python",
+    "zep-cloud",
+    "ibm-db",
+    "lfx-ibm",
+    "psycopg-binary",
+    "psycopg2-binary"
+  ],
+  "qualification": "No own-license/source/native absence or all IBM removal inferred; current known-path clidriver filesystem checks not performed by this inventory comparison. Old image observations retain their own scope."
+}
