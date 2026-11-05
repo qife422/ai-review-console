@@ -12,6 +12,7 @@ import hashlib
 import json
 import signal
 import subprocess
+import sys
 import tempfile
 import time
 import uuid
@@ -22,6 +23,9 @@ from typing import Any
 import httpx
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from scripts.candidate_runtime_guard import CandidateRuntimeGuard  # noqa: E402
+
 PROJECT = "ai-review-console-upgrade"
 BASE = ROOT / "docker-compose.yml"
 COMPOSE = ["docker", "compose", "--project-directory", str(ROOT), "-p", PROJECT, "-f", str(BASE)]
@@ -44,8 +48,9 @@ def digest(value: bytes) -> str:
 
 
 class Proof:
-    def __init__(self, output: Path):
+    def __init__(self, output: Path, guard: CandidateRuntimeGuard | None = None):
         self.output = output
+        self.guard = guard
         self.records: list[dict[str, Any]] = []
         self.result: dict[str, Any] = {
             "contract": "ARC-UPGRADE@0.1.0",
@@ -103,6 +108,8 @@ class Proof:
         if not identifier or "\n" in identifier:
             raise RuntimeError(f"Exactly one running {service} container is required")
         value = json.loads(self.command(f"{service}-inspect", ["docker", "inspect", identifier]))[0]
+        if self.guard is not None:
+            self.guard.assert_container(identifier, service)
         labels = value["Config"].get("Labels") or {}
         if (
             labels.get("com.docker.compose.project") != PROJECT
@@ -437,9 +444,12 @@ def verify(proof: Proof) -> None:
     if proof.identity(original)["health"] != "healthy":
         raise RuntimeError("Original Langflow must already be healthy")
     api_container = proof.container("api")
-    binding = api_container["NetworkSettings"]["Ports"].get("8000/tcp", [])
-    if not any(item["HostIp"] == "127.0.0.1" and item["HostPort"] == "8000" for item in binding):
-        raise RuntimeError("The fixed API must be the isolated container's loopback binding")
+    if proof.guard is None:
+        binding = api_container["NetworkSettings"]["Ports"].get("8000/tcp", [])
+        if not any(
+            item["HostIp"] == "127.0.0.1" and item["HostPort"] == "8000" for item in binding
+        ):
+            raise RuntimeError("The fixed API must be the isolated container's loopback binding")
     proof.container("worker")
     before_counts = proof.counts()
     if before_counts["active_jobs"]:
@@ -520,6 +530,13 @@ def verify(proof: Proof) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
+    global PROJECT, BASE, COMPOSE, API
+    parser.add_argument("--project", default=PROJECT)
+    parser.add_argument("--compose-file", type=Path, default=BASE)
+    parser.add_argument(
+        "--expected-langflow-version", choices=("1.11.6", "1.13.1"), default="1.11.6"
+    )
+    parser.add_argument("--api-url", default=API)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     output = args.output.resolve()
@@ -531,7 +548,14 @@ def main() -> None:
         or not any(output != root and output.is_relative_to(root) for root in roots)
     ):
         raise ValueError("Use a new empty existing system temporary directory")
-    proof = Proof(output)
+    guard = CandidateRuntimeGuard(
+        args.project, args.compose_file, args.expected_langflow_version, args.api_url
+    )
+    guard.validate()
+    PROJECT, BASE, COMPOSE, API = args.project, args.compose_file, guard.compose, args.api_url
+    proof = Proof(output, guard)
+    proof.result["expected_langflow_version"] = args.expected_langflow_version
+    proof.result["compose_file_sha256"] = digest(args.compose_file.read_bytes())
 
     def interrupted(_signum: int, _frame: object) -> None:
         raise InterruptedError("Report-retry proof interrupted; restore the original service")

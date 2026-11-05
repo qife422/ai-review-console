@@ -12,6 +12,7 @@ import hashlib
 import json
 import os
 import subprocess
+import sys
 import tempfile
 import time
 import uuid
@@ -23,6 +24,12 @@ import httpx
 import psycopg
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from scripts.candidate_runtime_guard import CandidateRuntimeGuard  # noqa: E402
+
+DATABASE_PORT = 5433
+API = "http://127.0.0.1:8000"
+GUARD: CandidateRuntimeGuard | None = None
 PROJECT = "ai-review-console-upgrade"
 COMPOSE = ["docker", "compose", "-p", PROJECT]
 MODES = (
@@ -45,14 +52,14 @@ def digest(value: bytes) -> str:
 def command(args: list[str], timeout: int = 45) -> str:
     result = subprocess.run(args, cwd=ROOT, timeout=timeout, capture_output=True, text=True)
     if result.returncode:
-        raise RuntimeError(f"{args[:3]} failed: {result.stderr[:1500]}")
+        raise RuntimeError(f"Runtime proof command failed with exit code {result.returncode}")
     return result.stdout.strip()
 
 
 def database() -> psycopg.Connection:
     return psycopg.connect(
         host="127.0.0.1",
-        port=5433,
+        port=DATABASE_PORT,
         user="review",
         password=os.getenv("POSTGRES_PASSWORD", "synthetic-demo-only"),
         dbname="review_console",
@@ -135,6 +142,9 @@ def one_shot(expected_id: str, mode: str, overrides: list[str]) -> dict[str, Any
     # PID 1 in a Linux namespace can ignore a self-generated fatal signal.
     # Kill it from the host only after the process confirms the precise stage.
     program += "\nprint('ARC_FAULT_READY',flush=True); time.sleep(45)\n"
+    if GUARD is None:
+        raise RuntimeError("Fault target has not passed the runtime ownership guard")
+    GUARD.verify_effective_worker()
     args = [*COMPOSE, "run", "--no-deps", "-d", "--name", name]
     for item in overrides:
         args.extend(["-e", item])
@@ -147,6 +157,9 @@ def one_shot(expected_id: str, mode: str, overrides: list[str]) -> dict[str, Any
         time.sleep(1)
     else:
         raise TimeoutError("Fault worker did not confirm the interruption stage")
+    if GUARD is None:
+        raise RuntimeError("Fault target has not passed the runtime ownership guard")
+    GUARD.assert_container(container_id, "worker")
     command(["docker", "kill", "--signal", "KILL", container_id])
     exit_code = command(["docker", "wait", container_id], timeout=15)
     assert exit_code == "137", "Fault container must end by actual SIGKILL"
@@ -260,6 +273,14 @@ def verify(client: httpx.Client, mode: str) -> dict[str, Any]:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
+    global PROJECT, COMPOSE, DATABASE_PORT, API, GUARD
+    parser.add_argument("--project", default=PROJECT)
+    parser.add_argument("--compose-file", type=Path, default=ROOT / "docker-compose.yml")
+    parser.add_argument(
+        "--expected-langflow-version", choices=("1.11.6", "1.13.1"), default="1.11.6"
+    )
+    parser.add_argument("--api-url", default=API)
+    parser.add_argument("--database-port", type=int, default=DATABASE_PORT)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--mode", choices=MODES, action="append")
     args = parser.parse_args()
@@ -273,6 +294,16 @@ def main() -> None:
     destination = output / "faults.json"
     if destination.exists():
         raise FileExistsError("Never overwrite a fault manifest")
+    GUARD = CandidateRuntimeGuard(
+        args.project,
+        args.compose_file,
+        args.expected_langflow_version,
+        args.api_url,
+        args.database_port,
+    )
+    GUARD.validate()
+    PROJECT, COMPOSE = args.project, GUARD.compose
+    DATABASE_PORT, API = args.database_port, args.api_url
     with database() as connection:
         pending = connection.execute(
             "SELECT count(*) FROM workflow_jobs WHERE state IN ('queued','running','retry_wait')"
@@ -285,6 +316,8 @@ def main() -> None:
         "producer_sha256": digest(Path(__file__).read_bytes()),
         "checked_at": datetime.now(UTC).isoformat(),
         "project": PROJECT,
+        "expected_langflow_version": args.expected_langflow_version,
+        "compose_file_sha256": digest(args.compose_file.read_bytes()),
         "selected_modes": list(modes),
         "cases": [],
         "limitations": (
@@ -297,7 +330,7 @@ def main() -> None:
         "retention": "Fault containers and synthetic cases retained; no cleanup authorization",
     }
     try:
-        with httpx.Client(base_url="http://127.0.0.1:8000", timeout=15) as client:
+        with httpx.Client(base_url=API, timeout=15, trust_env=False) as client:
             for mode in modes:
                 evidence["cases"].append(verify(client, mode))
             health = client.get("/api/health").raise_for_status().json()
@@ -308,12 +341,46 @@ def main() -> None:
         evidence["failure"] = f"{type(exc).__name__}: {exc}"
         raise
     finally:
-        command([*COMPOSE, "start", "worker"])
-        destination.write_bytes(json.dumps(evidence, ensure_ascii=False, indent=2).encode())
-        print(
-            json.dumps({"manifest": str(destination), "sha256": digest(destination.read_bytes())}),
-            flush=True,
-        )
+        restoration_error = None
+        before_guard = after_guard = False
+        try:
+            worker_id = GUARD.running["worker"]["Id"]
+            GUARD.assert_container(worker_id, "worker")
+            GUARD.verify_effective_worker()
+            before_guard = True
+            command([*COMPOSE, "start", "worker"])
+            GUARD.assert_container(worker_id, "worker")
+            after_guard = True
+            evidence["restoration"] = {
+                "result": "passed",
+                "guard_rechecked": True,
+                "before_guard_rechecked": before_guard,
+                "after_guard_rechecked": after_guard,
+            }
+        except Exception as exc:
+            restoration_error = exc
+            evidence["restoration"] = {
+                "result": "failed",
+                "guard_rechecked": False,
+                "before_guard_rechecked": before_guard,
+                "after_guard_rechecked": after_guard,
+                "error_type": type(exc).__name__,
+                "error_sha256": digest(str(exc).encode()),
+            }
+            evidence["result"] = "failed"
+        finally:
+            with destination.open("xb") as stream:
+                stream.write(json.dumps(evidence, ensure_ascii=False, indent=2).encode())
+            print(
+                json.dumps(
+                    {"manifest": str(destination), "sha256": digest(destination.read_bytes())}
+                ),
+                flush=True,
+            )
+        if restoration_error is not None and "failure" not in evidence:
+            raise RuntimeError(
+                "Worker restoration failed; see retained fault manifest"
+            ) from restoration_error
 
 
 if __name__ == "__main__":

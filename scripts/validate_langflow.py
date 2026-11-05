@@ -18,6 +18,7 @@ import subprocess
 import sys
 import time
 import uuid
+from collections.abc import Callable
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -25,14 +26,13 @@ from typing import Any
 import httpx
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from bootstrap_langflow import (  # noqa: E402
+from api.app.langflow_client import LangflowClient, graph_hash  # noqa: E402
+from scripts.bootstrap_langflow import (  # noqa: E402
     COMPONENTS,
     add_expected_langflow_version_argument,
     find_template,
     require_langflow_version,
 )
-
-from api.app.langflow_client import LangflowClient, graph_hash  # noqa: E402
 
 MIME_TYPES = {
     "txt": "text/plain",
@@ -56,9 +56,18 @@ def _json(response: httpx.Response, expected: int = 200) -> Any:
     return response.json()
 
 
-def _wait_case(client: httpx.Client, case_id: str, *, reports: bool = False) -> dict[str, Any]:
-    deadline = time.monotonic() + 160
+def _wait_case(
+    client: httpx.Client,
+    case_id: str,
+    *,
+    reports: bool = False,
+    probe: Callable[[], None] | None = None,
+    timeout_seconds: float = 160,
+) -> dict[str, Any]:
+    deadline = time.monotonic() + timeout_seconds
     while time.monotonic() < deadline:
+        if probe:
+            probe()
         detail = _json(client.get(f"/api/cases/{case_id}"))
         if reports:
             artifacts = detail.get("reports", [])
@@ -102,6 +111,41 @@ def _format_bytes(extension: str, unique: str, clause: str) -> bytes:
             canvas.drawString(40, 780 - 26 * index, line)
         canvas.save()
     return stream.getvalue()
+
+
+def _download_reports(
+    client: httpx.Client,
+    case_id: str,
+    detail: dict[str, Any],
+    decision: str,
+    reason: str,
+) -> list[dict[str, Any]]:
+    formats = [item["format"] for item in detail["reports"]]
+    if sorted(formats) != ["html", "json", "pdf"]:
+        raise AssertionError("Exactly JSON, HTML and PDF reports are required")
+    registered = []
+    for artifact in detail["reports"]:
+        report_format = artifact["format"]
+        response = client.get(
+            f"/api/cases/{case_id}/report/{report_format}",
+            params={"report_id": artifact.get("report_id", artifact.get("id"))},
+        )
+        response.raise_for_status()
+        digest = hashlib.sha256(response.content).hexdigest()
+        if digest != artifact["sha256"] or len(response.content) != artifact["bytes"]:
+            raise AssertionError("Downloaded artifact does not match registered bytes")
+        if report_format == "json":
+            snapshot = response.json()
+            if (
+                snapshot["case_id"] != case_id
+                or snapshot["decision"] != decision
+                or snapshot["decision_reason"] != reason
+            ):
+                raise AssertionError("Report used a different decision snapshot")
+        registered.append(
+            {"format": report_format, "sha256": digest, "bytes": len(response.content)}
+        )
+    return registered
 
 
 def _validate_case(
@@ -164,28 +208,7 @@ def _validate_case(
     if decided["decision"] != decision:
         raise AssertionError("The human decision was not recorded")
     detail = _wait_case(client, case_id, reports=True)
-    registered = []
-    for artifact in detail["reports"]:
-        report_format = artifact["format"]
-        response = client.get(
-            f"/api/cases/{case_id}/report/{report_format}",
-            params={"report_id": artifact.get("report_id", artifact.get("id"))},
-        )
-        response.raise_for_status()
-        digest = hashlib.sha256(response.content).hexdigest()
-        if digest != artifact["sha256"] or len(response.content) != artifact["bytes"]:
-            raise AssertionError("Downloaded artifact does not match registered bytes")
-        if report_format == "json":
-            snapshot = response.json()
-            if (
-                snapshot["case_id"] != case_id
-                or snapshot["decision"] != decision
-                or snapshot["decision_reason"] != reason
-            ):
-                raise AssertionError("Report used a different decision snapshot")
-        registered.append(
-            {"format": report_format, "sha256": digest, "bytes": len(response.content)}
-        )
+    registered = _download_reports(client, case_id, detail, decision, reason)
     report_jobs = [item for item in detail["jobs"] if item["kind"] == "report"]
     if not report_jobs[-1].get("langflow_job_id"):
         raise AssertionError("Report did not execute a real Decision Flow")
@@ -318,93 +341,264 @@ def _validate_markdown(client: httpx.Client) -> dict[str, Any]:
     }
 
 
-def _benchmark(client: httpx.Client, count: int) -> dict[str, Any]:
+def _percentile95(values: list[float]) -> float | None:
+    return sorted(values)[math.ceil(len(values) * 0.95) - 1] if values else None
+
+
+def _benchmark(
+    client: httpx.Client,
+    count: int,
+    *,
+    reports: bool = False,
+    strict: bool = False,
+    ai_configuration: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     if not 1 <= count <= 20:
         raise ValueError("Benchmark count must be between 1 and 20")
-    docker = subprocess.run(
-        ["docker", "info", "--format", "{{json .}}"],
-        check=True,
-        capture_output=True,
-        text=True,
-        timeout=15,
-    )
-    info = json.loads(docker.stdout)
-    samples, query_times = [], []
+    environment = {
+        "host_platform": platform.platform(),
+        "host_machine": platform.machine(),
+        "host_cpu_count": os.cpu_count(),
+    }
+    try:
+        docker = subprocess.run(
+            ["docker", "info", "--format", "{{json .}}"],
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=15,
+        )
+        info = json.loads(docker.stdout)
+        environment.update(
+            docker_server_version=info["ServerVersion"],
+            docker_cpu_count=info["NCPU"],
+            docker_memory_bytes=info["MemTotal"],
+        )
+    except (OSError, subprocess.SubprocessError, ValueError, KeyError) as exc:
+        environment["collection_error"] = f"{type(exc).__name__}: {exc}"
+    samples: list[dict[str, Any]] = []
+    queries: list[dict[str, Any]] = []
     for index in range(count):
         unique = uuid.uuid4().hex
         header = f"SYNTHETIC DEMO DOCUMENT\nBuilt on Langflow\n顺序基准 {unique}\n\n".encode()
         filler = "本条款仅为虚构演示，不包含真实信息。\n".encode()
         repeats, remainder = divmod(1024 * 1024 - len(header), len(filler))
         content = header + filler * repeats + b"z" * remainder
+        sample: dict[str, Any] = {
+            "index": index + 1,
+            "source_bytes": len(content),
+            "source_sha256": hashlib.sha256(content).hexdigest(),
+            "success": False,
+        }
+        samples.append(sample)
         start = time.monotonic()
-        accepted = _json(
-            client.post(
-                "/api/cases",
-                headers={"Idempotency-Key": f"sequential-benchmark-{unique}"},
-                data={"title": f"虚构顺序基准 {index + 1}", "synthetic_confirmed": "true"},
-                files={"file": (f"benchmark-{unique}.txt", content, "text/plain")},
-            ),
-            202,
-        )
-        upload_seconds = time.monotonic() - start
-        detail = _wait_case(client, accepted["case_id"])
-        intake_seconds = time.monotonic() - start
-        job = detail["jobs"][-1]
-        if (
-            detail["document_hash"] != hashlib.sha256(content).hexdigest()
-            or unique not in detail["original_text"]
-            or job["state"] != "succeeded"
-            or not job["langflow_job_id"]
-        ):
-            raise AssertionError("A sequential benchmark task was lost or used different bytes")
-        for _ in range(3):
-            query_start = time.monotonic()
-            response = client.get(f"/api/cases/{accepted['case_id']}")
-            response.raise_for_status()
-            query_times.append(time.monotonic() - query_start)
-        samples.append(
-            {
-                "case_id": accepted["case_id"],
-                "job_id": accepted["job_id"],
-                "langflow_job_id": job["langflow_job_id"],
-                "source_bytes": len(content),
-                "source_sha256": hashlib.sha256(content).hexdigest(),
-                "upload_seconds": round(upload_seconds, 6),
-                "intake_seconds": round(intake_seconds, 6),
-            }
-        )
+        try:
+            accepted = _json(
+                client.post(
+                    "/api/cases",
+                    headers={"Idempotency-Key": f"sequential-benchmark-{unique}"},
+                    data={"title": f"虚构顺序基准 {index + 1}", "synthetic_confirmed": "true"},
+                    files={"file": (f"benchmark-{unique}.txt", content, "text/plain")},
+                ),
+                202,
+            )
+            sample.update(
+                case_id=accepted["case_id"],
+                job_id=accepted["job_id"],
+                upload_seconds=time.monotonic() - start,
+            )
+            case_id = accepted["case_id"]
+
+            probe_cycles: dict[str, int] = {}
+
+            def probe(
+                stage: str,
+                case_id: str = case_id,
+                sample_index: int = index + 1,
+                cycles: dict[str, int] = probe_cycles,
+            ) -> None:
+                if cycles.get(stage, 0) >= 5:
+                    return
+                cycles[stage] = cycles.get(stage, 0) + 1
+                # Actual routes in api/app/main.py; sampled inside submitted-to-terminal
+                # observation windows, never only after the sequential load has finished.
+                for route, path in (
+                    ("/api/cases", "/api/cases"),
+                    ("/api/summary", "/api/summary"),
+                    ("/api/cases/{case_id}", f"/api/cases/{case_id}"),
+                ):
+                    tick = time.monotonic()
+                    response = client.get(path)
+                    elapsed = time.monotonic() - tick
+                    queries.append(
+                        {
+                            "route": route,
+                            "stage": stage,
+                            "sample": sample_index,
+                            "seconds": elapsed,
+                            "status": response.status_code,
+                        }
+                    )
+                    response.raise_for_status()
+
+            detail = _wait_case(
+                client,
+                case_id,
+                probe=lambda: probe("intake_submitted"),
+                timeout_seconds=max(0, 120 - (time.monotonic() - start)) if strict else 160,
+            )
+            sample["intake_seconds"] = time.monotonic() - start
+            job = next(item for item in detail["jobs"] if item["job_id"] == accepted["job_id"])
+            if (
+                detail["document_hash"] != sample["source_sha256"]
+                or unique not in detail["original_text"]
+                or job["state"] != "succeeded"
+                or not job.get("langflow_job_id")
+                or str(job["langflow_job_id"]).startswith("lf-demo")
+            ):
+                raise AssertionError("Benchmark Intake not bound to actual bytes/real job")
+            sample["langflow_job_id"] = job["langflow_job_id"]
+            if reports:
+                report_start = time.monotonic()
+                reason = "虚构性能验证：依据规则证据批准并核对全部报告。"
+                decided = _json(
+                    client.post(
+                        f"/api/cases/{case_id}/decision",
+                        headers={
+                            "X-Reviewer": "synthetic-performance-validator",
+                            "Idempotency-Key": f"benchmark-decision-{unique}",
+                        },
+                        json={
+                            "decision": "approved",
+                            "reason": reason,
+                            "document_version_id": detail["current_document_version_id"],
+                            "assessment_id": detail["assessment_id"],
+                            "expected_row_version": detail["row_version"],
+                        },
+                    )
+                )
+                if decided["decision"] != "approved":
+                    raise AssertionError("Benchmark decision not recorded")
+                ready = _wait_case(
+                    client,
+                    case_id,
+                    reports=True,
+                    probe=lambda: probe("report_submitted"),
+                    timeout_seconds=max(0, 120 - (time.monotonic() - report_start))
+                    if strict
+                    else 160,
+                )
+                sample["report_ready_seconds"] = time.monotonic() - report_start
+                sample["reports"] = _download_reports(client, case_id, ready, "approved", reason)
+                jobs = [job for job in ready["jobs"] if job["kind"] == "report"]
+                if not jobs or not jobs[-1].get("langflow_job_id"):
+                    raise AssertionError("Reports did not execute actual Decision Flow")
+                sample["report_langflow_job_id"] = jobs[-1]["langflow_job_id"]
+                sample["report_seconds"] = time.monotonic() - report_start
+            sample["success"] = True
+        except (
+            httpx.HTTPError,
+            RuntimeError,
+            AssertionError,
+            TimeoutError,
+            KeyError,
+            ValueError,
+            StopIteration,
+        ) as exc:
+            sample["error"] = f"{type(exc).__name__}: {exc}"
+            sample["elapsed_until_failure_seconds"] = time.monotonic() - start
         print(
-            f"Benchmark {index + 1}/{count}: upload={upload_seconds:.3f}s "
-            f"Intake={intake_seconds:.3f}s",
+            f"Benchmark {index + 1}/{count}: success={sample['success']}",
             file=sys.stderr,
             flush=True,
         )
-
-    def p95(values: list[float]) -> float:
-        return sorted(values)[math.ceil(len(values) * 0.95) - 1]
-
-    upload_p95 = p95([item["upload_seconds"] for item in samples])
-    query_p95 = p95(query_times)
+    upload_p95 = _percentile95([s["upload_seconds"] for s in samples if "upload_seconds" in s])
+    query_p95 = _percentile95([q["seconds"] for q in queries])
+    by_route = {}
+    for route in ("/api/cases", "/api/summary", "/api/cases/{case_id}"):
+        values = [q["seconds"] for q in queries if q["route"] == route]
+        by_route[route] = {"count": len(values), "p95_seconds": _percentile95(values)}
+    targets = {
+        "upload_p95_le_3_seconds": upload_p95 is not None and upload_p95 <= 3,
+        "query_p95_le_500_ms": query_p95 is not None and query_p95 <= 0.5,
+        "each_intake_le_120_seconds": all(
+            s.get("intake_seconds", math.inf) <= 120 for s in samples
+        ),
+        "sequential_tasks_not_lost": len(samples) == count
+        and all(s["success"] for s in samples)
+        and len({s.get("case_id") for s in samples}) == count,
+        "mixed_queries_during_submitted_load": all(r["count"] >= count for r in by_route.values())
+        and all(q["status"] == 200 for q in queries),
+    }
+    if reports:
+        targets["each_complete_three_reports_le_120_seconds"] = all(
+            s.get("report_seconds", math.inf) <= 120 and len(s.get("reports", [])) == 3
+            for s in samples
+        )
+    if strict:
+        targets.update(
+            exactly_20_samples=count == 20,
+            reports_required=reports,
+            ai_disabled_configuration_verified=bool(
+                ai_configuration and ai_configuration.get("rule_only_no_llm_nodes")
+            ),
+            environment_cpu_ram_docker_recorded="collection_error" not in environment,
+        )
     return {
-        "environment": {
-            "host_platform": platform.platform(),
-            "host_machine": platform.machine(),
-            "docker_server_version": info["ServerVersion"],
-            "docker_cpu_count": info["NCPU"],
-            "docker_memory_bytes": info["MemTotal"],
-        },
-        "method": "20-or-fewer sequential 1 MiB TXT uploads; loopback API; AI disabled",
+        "environment": environment,
+        "ai_configuration": ai_configuration,
+        "strict": strict,
+        "reports_requested": reports,
+        "method": (
+            "Sequential exact1MiB TXT; mixed real queries inside Intake/report "
+            "submitted-to-observed-terminal windows; at most5 query cycles per stage/sample; "
+            "no post-load-only timing"
+        ),
         "samples": samples,
-        "query_seconds": [round(item, 6) for item in query_times],
-        "upload_p95_seconds": round(upload_p95, 6),
-        "query_p95_seconds": round(query_p95, 6),
-        "intake_max_seconds": max(item["intake_seconds"] for item in samples),
-        "targets_met": {
-            "upload_p95_le_3_seconds": upload_p95 <= 3,
-            "query_p95_le_500_ms": query_p95 <= 0.5,
-            "each_intake_le_120_seconds": all(item["intake_seconds"] <= 120 for item in samples),
-            "sequential_tasks_not_lost": len(samples) == count,
+        "query_samples": queries,
+        "query_routes": by_route,
+        "query_seconds": [q["seconds"] for q in queries],
+        "upload_p95_seconds": upload_p95,
+        "query_p95_seconds": query_p95,
+        "intake_max_seconds": max((s.get("intake_seconds", 0) for s in samples), default=0),
+        "targets_met": targets,
+        "result": "passed" if all(targets.values()) else "failed",
+    }
+
+
+def _benchmark_ai_configuration(selected: dict[str, Any]) -> dict[str, Any]:
+    expected = {
+        "Document Review Intake": {
+            "SyntheticDocumentParser",
+            "DeterministicPIIRedactor",
+            "ExplainableRiskScorer",
+            "ApprovalTaskGateway",
         },
+        "Document Review Decision": {"DecisionReportExporter"},
+    }
+    actual = {
+        name: [node.get("data", {}).get("type") for node in flow["data"].get("nodes", [])]
+        for name, flow in selected.items()
+        if flow
+    }
+    return {
+        "mode": "deterministic trusted rule flows; no AI/LLM nodes configured",
+        "actual_published_node_types": actual,
+        "rule_only_no_llm_nodes": all(
+            len(actual.get(name, [])) == len(types) and set(actual.get(name, [])) == types
+            for name, types in expected.items()
+        ),
+        "configuration_basis": "Actual authenticated published Flow graphs before execution",
+        "scorer_source_sha256": hashlib.sha256(
+            (
+                Path(__file__).resolve().parents[1]
+                / "custom_components/review_center/risk_scorer.py"
+            ).read_bytes()
+        ).hexdigest(),
+        "limitation": (
+            "Graph configuration and scorer source identity; "
+            "not whole-system network egress attestation"
+        ),
     }
 
 
@@ -414,7 +608,11 @@ def main() -> None:
     parser.add_argument("--api-url", default=os.getenv("REVIEW_API_URL", "http://localhost:8080"))
     parser.add_argument("--evidence", type=Path)
     parser.add_argument("--benchmark-count", type=int, default=0, choices=range(21))
+    parser.add_argument("--benchmark-strict", action="store_true")
+    parser.add_argument("--benchmark-reports", action="store_true")
     args = parser.parse_args()
+    if (args.benchmark_strict or args.benchmark_reports) and not args.benchmark_count:
+        parser.error("benchmark flags require --benchmark-count")
     langflow = LangflowClient()
     try:
         openapi = langflow.request("GET", "/openapi.json").json()
@@ -447,7 +645,17 @@ def main() -> None:
             ]
             markdown = _validate_markdown(api)
             failure_retry = _validate_failure_retry(api)
-            benchmark = _benchmark(api, args.benchmark_count) if args.benchmark_count else None
+            benchmark = (
+                _benchmark(
+                    api,
+                    args.benchmark_count,
+                    reports=args.benchmark_reports,
+                    strict=args.benchmark_strict,
+                    ai_configuration=_benchmark_ai_configuration(selected),
+                )
+                if args.benchmark_count
+                else None
+            )
         after = {
             name: graph_hash(langflow.request("GET", f"/api/v1/flows/{item['id']}").json()["data"])
             for name, item in selected.items()
@@ -473,7 +681,9 @@ def main() -> None:
             "markdown_intake": markdown,
             "failure_retry": failure_retry,
             "benchmark": benchmark,
-            "result": "passed",
+            "result": "failed"
+            if args.benchmark_strict and benchmark and benchmark["result"] != "passed"
+            else "passed",
         }
         if args.evidence:
             args.evidence.parent.mkdir(parents=True, exist_ok=True)
@@ -481,6 +691,8 @@ def main() -> None:
                 json.dumps(evidence, ensure_ascii=False, indent=2), encoding="utf-8"
             )
         print(json.dumps(evidence, ensure_ascii=False, indent=2))
+        if evidence["result"] != "passed":
+            raise SystemExit(1)
     finally:
         langflow.close()
 

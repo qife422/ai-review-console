@@ -1,0 +1,179 @@
+name: Candidate editor, recovery and performance
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  acceptance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    services:
+      postgres:
+        image: postgres:16.15-trixie@sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c
+        env:
+          POSTGRES_USER: review
+          POSTGRES_PASSWORD: synthetic-demo-only
+          POSTGRES_DB: review_console
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U review -d review_console"
+          --health-interval 5s --health-timeout 5s --health-retries 20
+    env:
+      ARC_TEST_POSTGRES_URL: postgresql+psycopg://review:synthetic-demo-only@127.0.0.1:5432/review_console
+      COMPOSE_PROJECT_NAME: arc-ci-${{ github.run_id }}-amd64
+      COMPOSE_FILE: docker-compose.yml:docker/compose.candidate.yml
+      COMPOSE_BAKE: "false"
+      LANGFLOW_SUPERUSER: review-admin
+      LANGFLOW_SUPERUSER_PASSWORD: synthetic-demo-change-me
+      REVIEW_SERVICE_TOKEN: synthetic-demo-service-token
+      LANGFLOW_URL: http://127.0.0.1:7860
+      ARC_LF_BASE_URL: http://127.0.0.1:7860
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require capacity and fresh namespace
+        run: |
+          set -euo pipefail
+          test "$(df -B1 --output=avail "$RUNNER_TEMP" | tail -n1 | tr -d '[:space:]')" -ge 21474836480
+          mkdir "$RUNNER_TEMP/arc-acceptance" "$RUNNER_TEMP/arc-acceptance/selected"
+          echo "ARC_ACCEPTANCE_ROOT=$RUNNER_TEMP/arc-acceptance" >> "$GITHUB_ENV"
+          echo "ARC_CANDIDATE_COMPOSE_FILE=$RUNNER_TEMP/arc-acceptance/effective.compose.json" >> "$GITHUB_ENV"
+          python3 - <<'PY'
+          import os,subprocess
+          p=os.environ['COMPOSE_PROJECT_NAME']
+          for kind in ('container','volume','network'):
+              args=['docker',kind,'ls','-q','--filter','label=com.docker.compose.project='+p]
+              assert not subprocess.check_output(args).strip(),'Refusing existing target '+kind
+          PY
+          cat > "$RUNNER_TEMP/arc-acceptance/shell" <<'SH'
+          set -euo pipefail
+          arc_guard() {
+            local free
+            free="$(df -B1 --output=avail "$RUNNER_TEMP" | tail -n1 | tr -d '[:space:]')"
+            printf '{"free_bytes":%s,"minimum":5368709120}\n' "$free" >> "$ARC_ACCEPTANCE_ROOT/selected/capacity.jsonl"
+            test "$free" -ge 5368709120
+          }
+          arc_bounded() {
+            arc_guard
+            "$@" &
+            local pid=$!
+            while kill -0 "$pid" 2>/dev/null; do
+              if ! arc_guard; then kill "$pid"; wait "$pid" || true; return 1; fi
+              sleep 5
+            done
+            wait "$pid"
+            arc_guard
+          }
+          SH
+          echo "BASH_ENV=$RUNNER_TEMP/arc-acceptance/shell" >> "$GITHUB_ENV"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Unit regression and frontend build
+        run: |
+          arc_bounded timeout 300s python -m venv .venv
+          arc_bounded timeout 600s .venv/bin/pip install --no-cache-dir -r requirements.lock
+          arc_bounded timeout 120s .venv/bin/pip install -e '.[dev]'
+          .venv/bin/ruff check .
+          .venv/bin/pytest --junitxml="$ARC_ACCEPTANCE_ROOT/selected/unit.xml"
+          arc_bounded timeout 300s npm --prefix frontend ci --cache "$ARC_ACCEPTANCE_ROOT/npm-cache"
+          npm --prefix frontend test -- --run
+          npm --prefix frontend run build
+      - name: Build candidate shared stack once
+        run: arc_bounded timeout 900s docker compose build api langflow web
+      - name: Initialize only synthetic stores and business Flows
+        id: initialized
+        run: |
+          arc_bounded timeout 900s docker compose up -d --no-build postgres langflow
+          docker compose run --no-deps storage-init
+          docker compose run migrate
+          docker compose run flow-init
+          docker compose up -d --no-build --no-deps api worker web
+          timeout 120s sh -c 'until curl -fsS http://127.0.0.1:8000/api/health >/dev/null; do sleep 2; done'
+          docker compose config --format json > "$ARC_CANDIDATE_COMPOSE_FILE"
+          .venv/bin/python scripts/validate_langflow.py --expected-langflow-version 1.13.1 \
+            --api-url http://127.0.0.1:8000 --evidence "$ARC_ACCEPTANCE_ROOT/selected/baseline.json"
+      - name: Install browser CLI
+        if: always() && steps.initialized.outcome == 'success'
+        run: |
+          arc_bounded timeout 300s npm install --global --cache "$ARC_ACCEPTANCE_ROOT/npm-cache" @playwright/cli@0.1.22
+          command -v google-chrome || playwright-cli install-browser chrome
+      - name: Actual synthetic Flow editor and persisted UI rename
+        id: editor
+        if: always() && steps.initialized.outcome == 'success'
+        env:
+          ARC_LF_VERIFY_EDITOR: "1"
+          ARC_LF_EVIDENCE_DIR: ${{ runner.temp }}/arc-acceptance/selected/editor
+          ARC_PLAYWRIGHT_CLI: playwright-cli
+        run: arc_bounded timeout 600s node frontend/scripts/verify-langflow-ui-cli.mjs
+      - name: Five isolated worker and transport fault recoveries
+        id: faults
+        if: always() && steps.initialized.outcome == 'success'
+        run: |
+          mkdir "$ARC_ACCEPTANCE_ROOT/faults"
+          arc_bounded timeout 900s .venv/bin/python scripts/verify_faults.py \
+            --project "$COMPOSE_PROJECT_NAME" --compose-file "$ARC_CANDIDATE_COMPOSE_FILE" \
+            --expected-langflow-version 1.13.1 --api-url http://127.0.0.1:8000 \
+            --database-port 5433 --output "$ARC_ACCEPTANCE_ROOT/faults"
+      - name: Partial PDF failure and ready artifact preservation
+        id: reports
+        if: always() && steps.initialized.outcome == 'success' && steps.faults.outcome == 'success'
+        run: |
+          mkdir "$ARC_ACCEPTANCE_ROOT/report-retry"
+          arc_bounded timeout 900s .venv/bin/python scripts/verify_report_retry.py \
+            --project "$COMPOSE_PROJECT_NAME" --compose-file "$ARC_CANDIDATE_COMPOSE_FILE" \
+            --expected-langflow-version 1.13.1 --api-url http://127.0.0.1:8000 \
+            --output "$ARC_ACCEPTANCE_ROOT/report-retry"
+      - name: Strict twenty 1 MiB mixed-query and report benchmark
+        id: performance
+        if: always() && steps.faults.outcome == 'success' && steps.reports.outcome == 'success'
+        run: |
+          .venv/bin/python - <<'PY'
+          import os
+          from pathlib import Path
+          from scripts.candidate_runtime_guard import CandidateRuntimeGuard
+          guard=CandidateRuntimeGuard(os.environ['COMPOSE_PROJECT_NAME'],Path(os.environ['ARC_CANDIDATE_COMPOSE_FILE']),'1.13.1','http://127.0.0.1:8000',5433)
+          guard.validate()
+          assert guard.sql('review_console',"SELECT count(*) FROM workflow_jobs WHERE state IN ('queued','running','retry_wait')")==0
+          PY
+          arc_bounded timeout 900s .venv/bin/python scripts/validate_langflow.py \
+            --expected-langflow-version 1.13.1 --api-url http://127.0.0.1:8000 \
+            --benchmark-count 20 --benchmark-reports --benchmark-strict \
+            --evidence "$ARC_ACCEPTANCE_ROOT/selected/performance.json"
+      - name: Select compact results and identities
+        id: selected
+        if: always() && env.ARC_ACCEPTANCE_ROOT != ''
+        run: |
+          .venv/bin/python - <<'PY'
+          import hashlib,json,os,subprocess
+          from pathlib import Path
+          root=Path(os.environ['ARC_ACCEPTANCE_ROOT']);out=root/'selected';sources=[]
+          for name in ('faults/faults.json','report-retry/report-retry.json','report-retry/restoration.json'):
+              p=root/name
+              if p.is_file():
+                  b=p.read_bytes();assert len(b)<=262144
+                  target=out/name.replace('/','-');target.write_bytes(b)
+                  sources.append({'source':name,'selected':target.name,'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest()})
+          images={}
+          for service in ('api','worker','langflow','web','postgres'):
+              cid=subprocess.run(['docker','compose','ps','-q',service],capture_output=True,text=True).stdout.strip()
+              result=subprocess.run(['docker','inspect','--format','{{.Image}}',cid],capture_output=True,text=True)
+              images[service]=result.stdout.strip() if result.returncode==0 else None
+          files=[p for p in out.rglob('*') if p.is_file()]
+          assert len(files)<=40 and sum(p.stat().st_size for p in files)<=2*1024**2
+          manifest={'run':os.environ['GITHUB_RUN_ID'],'source':os.environ['GITHUB_SHA'],'images':images,'sources':sources,
+              'files':[{'path':str(p.relative_to(out)),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in files],
+              'scope':'New synthetic AMD64 candidate only; raw font fault report files/container logs/npm/browser caches unselected; no whole build trees or dumps uploaded.'}
+          payload=(json.dumps(manifest,indent=2)+'\n').encode()
+          assert len(files)+1<=40 and sum(p.stat().st_size for p in files)+len(payload)<=2*1024**2
+          with (out/'manifest.json').open('xb') as stream:
+              stream.write(payload)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.selected.outcome == 'success'
+        with:
+          name: candidate-acceptance-amd64
+          path: ${{ runner.temp }}/arc-acceptance/selected
+          retention-days: 7
