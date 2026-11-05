@@ -67,10 +67,12 @@ jobs:
         include:
           - runner: ubuntu-latest
             arch: amd64
-            native_profile: complete
+            native_profile: prior-materials
+            os_profile: rhel
           - runner: ubuntu-24.04-arm
             arch: arm64
             native_profile: arm-backend
+            os_profile: rhel
     runs-on: ${{ matrix.runner }}
     timeout-minutes: 35
     env:
@@ -153,7 +155,7 @@ jobs:
       - name: Collect bounded image and license evidence (not release acceptance)
         run: |
           .venv/bin/python scripts/collect_release_ci.py --output-dir "$RUNNER_TEMP/arc-ci-evidence/release" \
-            --native-profile '${{ matrix.native_profile }}'
+            --native-profile '${{ matrix.native_profile }}' --os-profile '${{ matrix.os_profile }}'
       - name: Preserve compact runtime diagnostics
         if: always()
         run: |

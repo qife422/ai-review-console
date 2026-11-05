@@ -331,10 +331,41 @@ def prohibit_network(*args, **kwargs):
     raise RuntimeError("Dependency compatibility probe forbids network connections")
 
 
+def dependency_versions(candidate: bool) -> dict:
+    if candidate:
+        for name in ("langflow-base", "lfx"):
+            if importlib.metadata.version(name) != "1.13.1":
+                raise ValueError("Candidate probe requires langflow-base and lfx 1.13.1")
+    versions = {
+        name: importlib.metadata.version(name)
+        for name in (
+            "oauthlib",
+            "opentelemetry-api",
+            "opentelemetry-sdk",
+            "opentelemetry-instrumentation",
+        )
+    }
+    try:
+        versions["datamodel-code-generator"] = importlib.metadata.version(
+            "datamodel-code-generator"
+        )
+    except importlib.metadata.PackageNotFoundError:
+        if not candidate:
+            raise
+        versions["datamodel-code-generator"] = None
+    if candidate:
+        versions.update({"langflow-base": "1.13.1", "lfx": "1.13.1"})
+    return versions
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--baseline", action="store_true")
+    parser.add_argument("--candidate-1-13-1", action="store_true")
     args = parser.parse_args()
+    if args.baseline and args.candidate_1_13_1:
+        parser.error("candidate and baseline modes are mutually exclusive")
+    versions = dependency_versions(args.candidate_1_13_1)
     sys.dont_write_bytecode = True
     socket.socket.connect = prohibit_network
     socket.socket.connect_ex = prohibit_network
@@ -347,18 +378,14 @@ def main() -> None:
             "network": "forbidden",
             "scratch_limit_bytes": LIMIT_BYTES,
             "scratch_limit_files": LIMIT_FILES,
-            "versions": {
-                n: importlib.metadata.version(n)
-                for n in [
-                    "oauthlib",
-                    "datamodel-code-generator",
-                    "opentelemetry-api",
-                    "opentelemetry-sdk",
-                    "opentelemetry-instrumentation",
-                ]
-            },
+            "candidate_1_13_1_mode": args.candidate_1_13_1,
+            "versions": versions,
             "oauthlib": oauth_probe(args.baseline),
-            "datamodel": datamodel_probe(root),
+            "datamodel": (
+                {"status": "not_installed"}
+                if versions["datamodel-code-generator"] is None
+                else {"status": "passed", **datamodel_probe(root)}
+            ),
             "otel": otel_probe(args.baseline),
             "scratch": scratch_inventory(root),
             "scope": "Fixed offline dependency behavior; real Langflow Flow remains separate.",

@@ -110,3 +110,84 @@ def test_native_skip_cannot_silently_apply_to_other_platforms(system: str, machi
 def test_native_profile_limits_the_arm_job_without_resetting_another_batch() -> None:
     assert collect_native_for_profile("complete", "Linux", "x86_64")
     assert not collect_native_for_profile("arm-backend", "Linux", "aarch64")
+
+
+def test_os_identity_requires_exact_profile_and_debian_version() -> None:
+    from scripts.collect_release_ci import verify_os_release
+
+    assert verify_os_release('ID=debian\nVERSION_ID="12"\n', "debian")["version_id"] == "12"
+    assert verify_os_release('ID="rhel"\nVERSION_ID="10.2"\n', "rhel")["id"] == "rhel"
+    for raw, profile in [
+        ("ID=debian\nVERSION_ID=11\n", "debian"),
+        ("ID=rhel\nVERSION_ID=10\n", "debian"),
+        ("ID=debian\nVERSION_ID=12\n", "rhel"),
+        ("ID=debian\nID=rhel\nVERSION_ID=12\n", "debian"),
+    ]:
+        with pytest.raises(ValueError):
+            verify_os_release(raw, profile)
+
+
+def test_cli_profiles_require_identity_and_keep_primary_scans(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    import sys
+
+    from scripts import collect_release_ci as module
+
+    class FakeCollector:
+        def __init__(self, root, project):
+            self.root = root
+            self.root.mkdir()
+            self.project = project
+            self.commands = []
+
+        def images(self):
+            return {name: "sha256:" + "a" * 64 for name in ("api", "langflow", "web", "postgres")}
+
+        def run(self, label, argv, **kwargs):
+            self.commands.append({"label": label, "argv": argv})
+            if label == "langflow-os-release":
+                return 0, 'ID=debian\nVERSION_ID="12"\n'
+            if label == "image-audit":
+                (self.root / "images").mkdir()
+                (self.root / "images/manifest.json").write_text("{}")
+            return 0, ""
+
+    monkeypatch.setattr(module, "Collector", FakeCollector)
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "collector",
+            "--output-dir",
+            str(tmp_path / "ok"),
+            "--os-profile",
+            "debian",
+            "--native-profile",
+            "prior-materials",
+        ],
+    )
+    with pytest.raises(SystemExit) as status:
+        module.main()
+    assert status.value.code == 0
+    manifest = json.loads((tmp_path / "ok/manifest.json").read_text())
+    labels = [command["label"] for command in manifest["commands"]]
+    probe = next(c for c in manifest["commands"] if c["label"] == "dependency-compatibility")
+    assert "--candidate-1-13-1" in probe["argv"]
+    assert "image-audit" in labels and "image-licenses" in labels
+    assert "rhel-audit" not in labels and "system-materials" not in labels
+    assert manifest["audits"]["redhat_supplement"]["state"] == "not_applicable"
+    assert manifest["native_materials"]["state"] == "not_collected_this_image"
+    assert manifest["native_materials"]["legal_approval"] is False
+    assert "native-materials" not in labels
+    assert any(
+        item["path"].endswith("native-close/selection.json") for item in manifest["source_inputs"]
+    )
+
+    monkeypatch.setattr(sys, "argv", ["collector", "--output-dir", str(tmp_path / "mismatch")])
+    with pytest.raises(SystemExit) as status:
+        module.main()
+    assert status.value.code == 1
+    failed = json.loads((tmp_path / "mismatch/manifest.json").read_text())
+    assert "OS profile mismatch" in failed["error"]
+    assert [command["label"] for command in failed["commands"]] == ["langflow-os-release"]

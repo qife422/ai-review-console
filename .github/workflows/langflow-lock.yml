@@ -1,0 +1,75 @@
+name: Langflow dependency lock
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  lock:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require bounded fresh runner capacity
+        run: |
+          mkdir -p "$RUNNER_TEMP/arc-lock/selected" "$RUNNER_TEMP/arc-lock/tmp"
+          df -B1 "$RUNNER_TEMP" > "$RUNNER_TEMP/arc-lock/selected/capacity.txt"
+          arc_available="$(df -B1 --output=avail "$RUNNER_TEMP" | tail -n 1 | tr -d '[:space:]')"
+          test "$arc_available" -ge 21474836480
+      - name: Resolve complete fixed graph and verify a fresh hash-required install
+        run: |
+          timeout 1100s docker run --rm --read-only --memory 4g --pids-limit 256 \
+            --user "$(id -u):$(id -g)" --cap-drop ALL --security-opt no-new-privileges \
+            --tmpfs /tmp:rw,nosuid,nodev,size=2g \
+            --mount "type=bind,src=$PWD,dst=/src,readonly" \
+            --mount "type=bind,src=$RUNNER_TEMP/arc-lock,dst=/out" -w /src \
+            -e PYTHONDONTWRITEBYTECODE=1 -e PIP_NO_CACHE_DIR=1 \
+            -e PIP_DISABLE_PIP_VERSION_CHECK=1 -e PIP_CONFIG_FILE=/dev/null \
+            -e PIP_INDEX_URL=https://pypi.org/simple -e TMPDIR=/out/tmp \
+            python:3.12.16-slim-bookworm@sha256:e697c81897302a4c4333bade000d98038fbb21eb064f8ee1fd42d02ebcd9d337 \
+            sh -euc '
+              python -m pip install --dry-run --ignore-installed --only-binary=:all: \
+                --report /out/pip-report.json -r compliance/langflow-candidate.in
+              python -B scripts/lock_langflow_candidate.py generate \
+                --report /out/pip-report.json --lock /out/selected/langflow-candidate.lock \
+                --receipt /out/selected/resolution.json
+              python -m venv --without-pip /out/env
+              python -m pip --python /out/env install --only-binary=:all: --require-hashes \
+                -r /out/selected/langflow-candidate.lock
+              python -B scripts/lock_langflow_candidate.py verify --python /out/env/bin/python \
+                --receipt /out/selected/installation.json
+            ' &
+          arc_lock_pid=$!
+          while kill -0 "$arc_lock_pid" 2>/dev/null; do
+            arc_free="$(df -B1 --output=avail "$RUNNER_TEMP" | tail -n 1 | tr -d '[:space:]')"
+            printf 'available_bytes=%s minimum=5368709120\n' "$arc_free" >> "$RUNNER_TEMP/arc-lock/selected/capacity.txt"
+            if [ "$arc_free" -lt 5368709120 ]; then kill -TERM "$arc_lock_pid"; break; fi
+            sleep 5
+          done
+          wait "$arc_lock_pid"
+          arc_available="$(df -B1 --output=avail "$RUNNER_TEMP" | tail -n 1 | tr -d '[:space:]')"
+          test "$arc_available" -ge 5368709120
+      - name: Preserve only compact proof and fingerprints
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,os
+          from pathlib import Path
+          root=Path(os.environ['RUNNER_TEMP'])/'arc-lock'
+          report=root/'pip-report.json'
+          record={'source':os.environ['GITHUB_SHA'],'run':os.environ['GITHUB_RUN_ID'],
+                  'scope':'Only selected lock/receipts; venv, downloaded archives and full pip report are ephemeral, not preserved evidence'}
+          if report.exists():
+              size=report.stat().st_size
+              assert size<=64*1024**2,'Resolver report limit; retain runner output without expanding artifact'
+              record['report_bytes']=size
+              record['report_sha256']=hashlib.sha256(report.read_bytes()).hexdigest()
+          (root/'selected/provenance.json').write_text(json.dumps(record,indent=2)+'\n')
+          files=[p for p in (root/'selected').iterdir() if p.is_file()]
+          assert len(files)<=8 and sum(p.stat().st_size for p in files)<=600*1024
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: langflow-dependency-lock-amd64
+          path: ${{ runner.temp }}/arc-lock/selected
+          retention-days: 7

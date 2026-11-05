@@ -15,6 +15,7 @@ import json
 import os
 import platform
 import re
+import shlex
 import shutil
 import signal
 import subprocess
@@ -84,9 +85,36 @@ def extract_system_records(raw: str, destination: Path) -> dict:
     return {"files": len(selected), "bytes": total, "status": manifest["status"]}
 
 
+def verify_os_release(raw: str, profile: str) -> dict:
+    fields = {}
+    for line in raw.splitlines():
+        if not line or line.startswith("#"):
+            continue
+        key, sep, value = line.partition("=")
+        if not sep or not re.fullmatch(r"[A-Z][A-Z0-9_]*", key) or key in fields:
+            raise ValueError("Invalid os-release record")
+        parts = shlex.split(value, comments=False, posix=True)
+        if len(parts) != 1:
+            raise ValueError("Invalid os-release value")
+        fields[key] = parts[0]
+    expected = {"rhel": "rhel", "debian": "debian"}[profile]
+    if fields.get("ID") != expected or (profile == "debian" and fields.get("VERSION_ID") != "12"):
+        raise ValueError("Expected OS profile mismatch: " + profile)
+    if not fields.get("VERSION_ID"):
+        raise ValueError("OS version missing")
+    return {
+        "profile": profile,
+        "id": fields["ID"],
+        "version_id": fields["VERSION_ID"],
+        "source": "/etc/os-release",
+    }
+
+
 def collect_native_for_profile(profile: str, system: str, machine: str) -> bool:
     if profile == "complete":
         return True
+    if profile == "prior-materials":
+        return False
     if profile == "arm-backend" and system == "Linux" and machine in {"aarch64", "arm64"}:
         return False
     raise ValueError("The native-budget skip profile is only for the Linux ARM backend job")
@@ -220,7 +248,12 @@ class Collector:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path, required=True)
-    parser.add_argument("--native-profile", choices=["complete", "arm-backend"], default="complete")
+    parser.add_argument(
+        "--native-profile",
+        choices=["complete", "arm-backend", "prior-materials"],
+        default="complete",
+    )
+    parser.add_argument("--os-profile", choices=["rhel", "debian"], default="rhel")
     args = parser.parse_args()
     collect_native = collect_native_for_profile(
         args.native_profile, platform.system(), platform.machine()
@@ -237,10 +270,42 @@ def main() -> None:
         "runner_system": platform.system(),
         "runner_machine": platform.machine(),
         "native_materials_profile": args.native_profile,
+        "os_profile": args.os_profile,
     }
     try:
         targets = collector.images()
         result["images"] = targets
+        code, raw = collector.run(
+            "langflow-os-release",
+            [
+                "docker",
+                "run",
+                "--rm",
+                "--network",
+                "none",
+                "--read-only",
+                "--cap-drop",
+                "ALL",
+                "--security-opt",
+                "no-new-privileges",
+                "--memory",
+                "128m",
+                "--pids-limit",
+                "32",
+                "--entrypoint",
+                "python",
+                targets["langflow"],
+                "-c",
+                "from pathlib import Path; print(Path('/etc/os-release').read_text())",
+            ],
+            timeout=60,
+            max_stdout_bytes=65536,
+        )
+        if code:
+            raise RuntimeError("OS identity read failed")
+        result["os_identity"] = verify_os_release(raw, args.os_profile) | {
+            "image": targets["langflow"]
+        }
         for name in ["api", "langflow"]:
             code, _ = collector.run(
                 name + "-pip-check",
@@ -299,45 +364,55 @@ def main() -> None:
                 targets["langflow"],
                 "-B",
                 "-",
+                *(["--candidate-1-13-1"] if args.os_profile == "debian" else []),
             ],
             timeout=90,
             payload=probe,
         )
         if code:
             raise RuntimeError("Offline dependency compatibility contract failed")
-        code, raw = collector.run(
-            "system-materials",
-            [
-                "docker",
-                "run",
-                "--rm",
-                "--network",
-                "none",
-                "--read-only",
-                "--cap-drop",
-                "ALL",
-                "--security-opt",
-                "no-new-privileges",
-                "--memory",
-                "128m",
-                "--pids-limit",
-                "32",
-                "--env",
-                "PYTHONDONTWRITEBYTECODE=1",
-                "-i",
-                "--entrypoint",
-                "python",
-                targets["langflow"],
-                "-B",
-                "-",
-            ],
-            timeout=60,
-            payload=SYSTEM_PRODUCER,
-            max_stdout_bytes=6 * 1024 * 1024,
-        )
-        if code:
-            raise RuntimeError("System maintenance evidence export failed")
-        result["system_materials"] = extract_system_records(raw, collector.root / "system")
+        if args.os_profile == "rhel":
+            code, raw = collector.run(
+                "system-materials",
+                [
+                    "docker",
+                    "run",
+                    "--rm",
+                    "--network",
+                    "none",
+                    "--read-only",
+                    "--cap-drop",
+                    "ALL",
+                    "--security-opt",
+                    "no-new-privileges",
+                    "--memory",
+                    "128m",
+                    "--pids-limit",
+                    "32",
+                    "--env",
+                    "PYTHONDONTWRITEBYTECODE=1",
+                    "-i",
+                    "--entrypoint",
+                    "python",
+                    targets["langflow"],
+                    "-B",
+                    "-",
+                ],
+                timeout=60,
+                payload=SYSTEM_PRODUCER,
+                max_stdout_bytes=6 * 1024 * 1024,
+            )
+            if code:
+                raise RuntimeError("System maintenance evidence export failed")
+            result["system_materials"] = extract_system_records(raw, collector.root / "system")
+        else:
+            result["system_materials"] = {
+                "state": "not_applicable",
+                "reason": (
+                    "RHEL transaction export does not apply to Debian; "
+                    "primary image inventory remains required."
+                ),
+            }
         audits = {}
         command = [
             sys.executable,
@@ -351,22 +426,28 @@ def main() -> None:
         audits["package_scan_exit_code"] = code
         if code not in {0, 1, 2} or not (collector.root / "images/manifest.json").is_file():
             raise RuntimeError("Image scanner failed to produce a valid record")
-        code, _ = collector.run(
-            "rhel-audit",
-            [
-                sys.executable,
-                "scripts/scan_images_osv.py",
-                "--redhat-only",
-                "--image",
-                "langflow=" + targets["langflow"],
-                "--output-dir",
-                str(collector.root / "rhel"),
-            ],
-            timeout=360,
-        )
-        audits["redhat_supplement_exit_code"] = code
-        if code not in {0, 1, 2} or not (collector.root / "rhel/manifest.json").is_file():
-            raise RuntimeError("Red Hat supplement did not produce a valid record")
+        if args.os_profile == "rhel":
+            code, _ = collector.run(
+                "rhel-audit",
+                [
+                    sys.executable,
+                    "scripts/scan_images_osv.py",
+                    "--redhat-only",
+                    "--image",
+                    "langflow=" + targets["langflow"],
+                    "--output-dir",
+                    str(collector.root / "rhel"),
+                ],
+                timeout=360,
+            )
+            audits["redhat_supplement_exit_code"] = code
+            if code not in {0, 1, 2} or not (collector.root / "rhel/manifest.json").is_file():
+                raise RuntimeError("Red Hat supplement did not produce a valid record")
+        else:
+            audits["redhat_supplement"] = {
+                "state": "not_applicable",
+                "reason": "Verified Debian 12 image",
+            }
         code, _ = collector.run(
             "image-licenses",
             [
@@ -408,6 +489,23 @@ def main() -> None:
             )
             if code:
                 raise RuntimeError("Native material collector failed")
+        elif args.native_profile == "prior-materials":
+            result["native_materials"] = {
+                "state": "not_collected_this_image",
+                "prior_evidence": (
+                    "docs/evidence/runtime-maintenance/ci/native-close/selection.json"
+                ),
+                "prior_ci_run": 41760412382,
+                "prior_langflow_image": (
+                    "sha256:fd6d66658d49008b53095d2669de17f88360038cbfc8238aa509ffd2e1aaa02c"
+                ),
+                "limitation": (
+                    "Prior sealed native materials concern their original images; "
+                    "no current image native body was read or established by this profile."
+                ),
+                "legal_approval": False,
+                "distribution_approval": False,
+            }
         else:
             result["native_materials"] = {
                 "state": "not_collected_on_arm_backend",
@@ -419,7 +517,7 @@ def main() -> None:
             audits=audits,
             note=(
                 "Exit 1 means findings; 2 means unknown/incomplete. "
-                "RPM coverage is supplemented separately. No result accepts "
+                "RHEL RPM coverage is supplemented separately when applicable. No result accepts "
                 "residual risk or grants binary redistribution."
             ),
         )
@@ -441,6 +539,7 @@ def main() -> None:
                     "scripts/apply_system_updates.py",
                     "scripts/verify_native_materials.py",
                     "compliance/native-baseline.json",
+                    "docs/evidence/runtime-maintenance/ci/native-close/selection.json",
                     "docs/UPGRADE_SPEC.md",
                 ]
                 if Path(path).is_file()
