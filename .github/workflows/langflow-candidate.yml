@@ -2,6 +2,12 @@ name: Langflow candidate (isolated)
 
 on:
   workflow_dispatch:
+    inputs:
+      collect_native_licenses:
+        description: Collect the bounded candidate native license specimens once
+        type: boolean
+        required: false
+        default: false
 
 permissions:
   contents: read
@@ -96,9 +102,16 @@ jobs:
             --expected-langflow-version 1.13.1 \
             --evidence "$RUNNER_TEMP/arc-candidate-meta/workflow.json"
       - name: Verify candidate identity, dependencies, components and UI assets
+        id: candidate_identity
+        env:
+          ARC_COLLECT_NATIVE_LICENSES: ${{ inputs.collect_native_licenses }}
         run: |
           arc_candidate_guard
-          .venv/bin/python scripts/verify_langflow_candidate.py --output-dir "$RUNNER_TEMP/arc-candidate"
+          arc_candidate_args=(--output-dir "$RUNNER_TEMP/arc-candidate")
+          if [ "$ARC_COLLECT_NATIVE_LICENSES" = 'true' ]; then
+            arc_candidate_args+=(--native-license-texts)
+          fi
+          .venv/bin/python scripts/verify_langflow_candidate.py "${arc_candidate_args[@]}"
           arc_candidate_guard
       - name: Install bounded browser CLI runtime
         run: |
@@ -115,6 +128,7 @@ jobs:
           node frontend/scripts/verify-langflow-ui-cli.mjs
           arc_candidate_guard
       - name: Record candidate package scan and license evidence
+        if: always() && steps.candidate_identity.outcome == 'success'
         run: |
           arc_candidate_guard
           arc_candidate_image="$(.venv/bin/python -c 'import json,os; from pathlib import Path; print(json.loads((Path(os.environ["RUNNER_TEMP"])/"arc-candidate/identity.json").read_text())["image_id"])')"
@@ -137,7 +151,7 @@ jobs:
           docker compose ps --format json > "$RUNNER_TEMP/arc-candidate-meta/services.json"
           docker compose logs --no-color --tail 40 api worker langflow > "$RUNNER_TEMP/arc-candidate-meta/runtime.log"
           python - <<'PY'
-          import hashlib, json, os
+          import hashlib, json, os, re
           from pathlib import Path
           root = Path(os.environ['RUNNER_TEMP'])
           candidate = root / 'arc-candidate'
@@ -165,6 +179,35 @@ jobs:
                   if keep:
                       with (target / relative).open('xb') as stream:
                           stream.write(data)
+          license_source = root / 'arc-candidate-licenses/langflow.json'
+          if license_source.is_file():
+              license_raw = license_source.read_bytes()
+              license_report = json.loads(license_raw)
+              result = license_report.get('result', {})
+              normalize = lambda name: re.sub(r'[-_.]+', '-', name).lower()
+              selected_names = {'lfx', 'psycopg'}
+              metadata_names = {'langflow-base', 'apsw', 'sqlite-vec', 'ibm-watsonx-ai', 'langchain-ibm'}
+              selected_rows = [row for row in result.get('selected_packages', []) if normalize(row['name']) in selected_names]
+              metadata_rows = [row for row in result.get('packages', []) if normalize(row['name']) in metadata_names]
+              critical = {
+                  'kind': 'Derived field selection from the exact raw license report; not the whole raw report',
+                  'raw_report': {'path': 'langflow.json', 'bytes': len(license_raw), 'sha256': hashlib.sha256(license_raw).hexdigest()},
+                  'image_id': license_report.get('image_id'),
+                  'producer': 'scripts/verify_image_licenses.py',
+                  'producer_sha256': license_report.get('producer_sha256'),
+                  'source': os.environ.get('GITHUB_SHA'),
+                  'collection_state': license_report.get('collection_state'),
+                  'selected_packages': selected_rows,
+                  'metadata_packages': metadata_rows,
+                  'selected_rows_missing': sorted(selected_names - {normalize(row['name']) for row in selected_rows}),
+                  'metadata_rows_missing': sorted(metadata_names - {normalize(row['name']) for row in metadata_rows}),
+                  'legal_approval': False,
+                  'qualification': 'Existing selected license texts retain their reported text, SHA and byte fields; metadata rows do not prove complete native notices or corresponding-source compliance.',
+              }
+              critical_raw = (json.dumps(critical, ensure_ascii=False, indent=2) + '\n').encode()
+              assert len(critical_raw) <= 256 * 1024, 'Critical license field selection exceeds 256 KiB; stop without claiming preserved text'
+              with (meta / 'licenses/critical-package-licenses.json').open('xb') as stream:
+                  stream.write(critical_raw)
           (meta / 'scan-license-selection.json').write_text(json.dumps({'scope': 'Explicit compact subset; omitted originals are not preserved in the artifact', 'files': selection}, indent=2) + '\n')
           files = [p for p in candidate.rglob('*') if p.is_file()]
           size = sum(p.stat().st_size for p in files)

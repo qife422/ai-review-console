@@ -31,18 +31,71 @@ FORBIDDEN = {
     "couchbase",
 }
 PRODUCER = r"""
-import importlib.metadata as m, json, platform, sysconfig
+import importlib.metadata as m, json, platform, sysconfig, hashlib, stat, sys
 from pathlib import Path
 import psycopg
 from psycopg import pq
+def collect_native_notices(distributions, enabled):
+    result={"state":"not_requested", "read_files":0, "input_bytes":0, "files":[],
+        "limit_files":6, "limit_bytes":262144, "legal_approval":False,
+        "scope":"Exact declared license specimens only; no binary material hashing, "
+            "license-option selection, embedded-source correspondence "
+            "or full distribution approval.",
+        "budget_note":"Request only after checking the shared goal ledger; default disabled."}
+    if not enabled:
+        return result
+    result["state"]="collected_with_explicit_scope"
+    allowed={"license", "licence", "copying", "license.txt", "licence.txt", "copying.txt",
+        "license.md", "license-mit", "license-apache", "license-mit.txt", "license-apache.txt"}
+    for owner in ("langflow-base", "apsw", "sqlite-vec"):
+        distribution=distributions.get(owner)
+        if distribution is None:
+            result["files"].append({"owner":owner,"state":"not_installed"})
+            continue
+        root=Path(distribution.locate_file("")).resolve()
+        chosen=sorted({str(f) for f in (distribution.files or ())
+            if Path(str(f)).name.lower() in allowed})[:2]
+        if not chosen:
+            result["files"].append({"owner":owner,"state":"no_declared_license_specimen"})
+        for declared in chosen:
+            record={"owner":owner,"version":distribution.version,"declared_file":declared}
+            path=Path(distribution.locate_file(declared))
+            resolved=path.resolve()
+            if not resolved.is_relative_to(root):
+                result["files"].append(record|{"state":"excluded_outside_distribution_root"})
+                continue
+            info=resolved.stat()
+            if not stat.S_ISREG(info.st_mode):
+                result["files"].append(record|{"state":"excluded_non_regular"})
+                continue
+            if result["read_files"]>=6 or info.st_size>262144-result["input_bytes"]:
+                result["files"].append(record|{"state":"not_read_budget_limit"})
+                continue
+            result["read_files"]+=1
+            with resolved.open("rb") as stream:
+                raw=stream.read(info.st_size+1)
+            result["input_bytes"]+=len(raw)
+            if len(raw)!=info.st_size or result["input_bytes"]>262144:
+                raise ValueError("Immutable installed license changed or exceeded read cap")
+            record.update(state="recorded",bytes=len(raw),sha256=hashlib.sha256(raw).hexdigest())
+            try:
+                record["text"]=raw.decode("utf-8")
+            except UnicodeDecodeError:
+                record["text_output_state"]="omitted_non_UTF8"
+            result["files"].append(record)
+    return result
+
 rows=[]
+distributions={}
 for d in m.distributions():
+    distributions[d.metadata["Name"].lower().replace("_","-")]=d
     rows.append({"name":d.metadata["Name"],"version":d.version,
         "license_expression":d.metadata.get("License-Expression"),
         "license_metadata":(d.metadata.get("License") or "")[:160]})
 roots=sorted({str(Path(sysconfig.get_path(k)).resolve()) for k in ("purelib","platlib")})
 print(json.dumps({"python":platform.python_version(),
     "packages":sorted(rows,key=lambda x:x["name"].lower()),
+    "native_license_texts":collect_native_notices(distributions, sys.argv[1]=="1"),
     "psycopg_implementation":pq.__impl__,"libpq_runtime_version":pq.version(),
     "clidriver_known_paths":[
         {"path":str(Path(r)/"clidriver"),"exists":(Path(r)/"clidriver").exists()}
@@ -76,6 +129,7 @@ def canonical(name: str) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", required=True, type=Path)
+    parser.add_argument("--native-license-texts", action="store_true")
     args = parser.parse_args()
     output = args.output_dir
     if output.exists():
@@ -116,7 +170,14 @@ def main() -> None:
         image_id,
     ]
     pip_check = run([*base, "-m", "pip", "check"])
-    inventory = json.loads(run([*base, "-c", PRODUCER]))
+    inventory = json.loads(run([*base, "-c", PRODUCER, "1" if args.native_license_texts else "0"]))
+    native_texts = inventory.pop("native_license_texts")
+    if len(json.dumps(native_texts, ensure_ascii=False).encode()) > 250 * 1024:
+        for item in native_texts["files"]:
+            if "text" in item:
+                item.pop("text")
+                item["text_output_state"] = "omitted_due_to_JSON_output_cap"
+    write(output, "native-license-texts.json", native_texts)
     packages = {canonical(p["name"]): p["version"] for p in inventory["packages"]}
     write(
         output,
@@ -206,8 +267,9 @@ def main() -> None:
             "denied_present": denied,
             "pip_check": pip_check.strip(),
             "default_runtime_changed": False,
-            "acceptance": ("Isolated candidate observations; "
-                           "not default upgrade or release acceptance"),
+            "acceptance": (
+                "Isolated candidate observations; not default upgrade or release acceptance"
+            ),
             "native_qualification": inventory["scope"],
         },
     )

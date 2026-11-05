@@ -50,8 +50,8 @@ try {
     if (/textbox.*(?:Username|User name)/i.test(snapshot())) break;
     await pause(1000);
   }
-  cli('fill', ref('textbox', /^(?:Username|User name)$/i), 'review-admin');
-  cli('fill', ref('textbox', /^Password$/i), 'synthetic-demo-change-me');
+  cli('fill', ref('textbox', /^(?:Username|User name)(?:\s*\*)?$/i), 'review-admin');
+  cli('fill', ref('textbox', /^Password(?:\s*\*)?$/i), 'synthetic-demo-change-me');
   cli('click', ref('button', /^(?:Log in|Login|Sign in)$/i));
   let visible = false;
   for (let index = 0; index < 10; index++) {
