@@ -1,0 +1,116 @@
+{
+  "evidence_id": "linux-vm",
+  "classification": "sealed_evidence",
+  "sealed_at": "2026-11-05T21:34:09.068393+00:00",
+  "display_date": "2026-11-05 America/Los_Angeles",
+  "contract": "ARC-UPGRADE@0.1.0",
+  "contract_sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753",
+  "source_baseline": "cad3703f44e9ebb9f16a4207c75efb6a6207e222",
+  "producer": "root guarded execution; Sol implementation; Astra independent read-only review",
+  "environment": "environment.json",
+  "source_inputs": "inputs.json",
+  "acceptance": {
+    "verified_coverage": "WP-05 Linux environment mechanism only; synthetic 2x5 policies/live-restore/AutoRemove",
+    "new_AC17_business_evidence": false,
+    "Mac_Desktop_validation": "not_run",
+    "AC19": "not_passed",
+    "full_last_verified": null,
+    "final_human_acceptance": "pending",
+    "default_changed": false,
+    "original_database_operation": false,
+    "original_engine_operation_by_this_agent": false,
+    "original_disk_global_invariance": "not_claimed; user/other task externally started Desktop",
+    "backend_distribution_approval": false
+  },
+  "result": "bounded_linux_synthetic_mechanism_passed; two failed runs retained",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 3697,
+      "sha256": "a0d8bb5ca7297c0075b02ac6f5674abbbde76b4b62692757fe7a6c57373450b8"
+    },
+    {
+      "path": "capacity-watch.py",
+      "bytes": 2179,
+      "sha256": "643620d861b52ca377c0a12ad3851aab36d70e85a6c3f954a6a6607a21523b6e"
+    },
+    {
+      "path": "capacity.json",
+      "bytes": 2571,
+      "sha256": "2aa2b71c3078a7ec94c8ffc094c68a452b7c29d846ef42dee4d52720bc46f65d"
+    },
+    {
+      "path": "environment.json",
+      "bytes": 11358,
+      "sha256": "a2a69c0bd7d619357ffae358cdd8b23e89b383c3893e84eae97eb0ef800061ce"
+    },
+    {
+      "path": "failures.json",
+      "bytes": 5248,
+      "sha256": "10d167c1dabbb8cb420adb28220b1bd790a21dd1a5679fcabd7783976d62d417"
+    },
+    {
+      "path": "guardlib.py",
+      "bytes": 4440,
+      "sha256": "d5e70d58533650d4a769fffeefbe3cee51b8ac85c2422590c434f45b7f5773d4"
+    },
+    {
+      "path": "guest-prerequisites.py",
+      "bytes": 5436,
+      "sha256": "a45fa63664207c6f3fecf4a9f59227bba87fe01f8220f49d296337dc468959eb"
+    },
+    {
+      "path": "guest-recovery.py",
+      "bytes": 42899,
+      "sha256": "5896cd4d1488527e00a4e96a0fcc1b945c973aceff1938ab25e99081a9a843fe"
+    },
+    {
+      "path": "inputs.json",
+      "bytes": 6284,
+      "sha256": "b06e796a8ae736392643b9f886923e8c2da443e7930cd2f5ce343dca5ce093d8"
+    },
+    {
+      "path": "observations.json",
+      "bytes": 17531,
+      "sha256": "ec2e89942c732e86d22d3d12ba8caa1aba43e6e15990a82c6bdf32ad1e207510"
+    },
+    {
+      "path": "probe.yaml",
+      "bytes": 968,
+      "sha256": "bee42b20a97516d3c3645f87b1dc91b47a9e91d6bf945256fdcbedaf9bf3d27b"
+    },
+    {
+      "path": "protection.json",
+      "bytes": 5412,
+      "sha256": "1f1ebc6875c983a8b600a6ea3b1a3df6ba337ffa8316cec82f4dc9c1ca96fc7d"
+    },
+    {
+      "path": "result.json",
+      "bytes": 9855,
+      "sha256": "5e664abc6fb26e71e009c27c1f1c0703ce871143dd48002e2ee935c8bd0d185a"
+    },
+    {
+      "path": "review.md",
+      "bytes": 948,
+      "sha256": "acb2420b049e55ee5c8e28ab43b1d099f7910b3f42fdcedd43879a29bbc9a742"
+    },
+    {
+      "path": "run-lima.py",
+      "bytes": 3606,
+      "sha256": "ce64a16bcd99732789c9652c5c50cdeb14d8ce52d4c02f0952f935c70280be3e"
+    },
+    {
+      "path": "signatures.json",
+      "bytes": 3057,
+      "sha256": "cc8a4850971135f497884407686cef113bd8e11395ce9192c7f4a9ed0d7f050a"
+    }
+  ],
+  "payload_files": 16,
+  "payload_bytes": 125489,
+  "limitations": "README; omitted source hashes bind originals but cannot recreate bytes; not environment backup",
+  "selection_limits": {
+    "all_files_max": 20,
+    "all_bytes_max": 131072
+  },
+  "independent_final_review": "candidate selected values/integrity reviewed by Astra; approved to seal"
+}

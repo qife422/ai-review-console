@@ -1,0 +1,9 @@
+# 独立结果复核
+
+2026-11-05，Astra只读复核，root核输出集成。最终脚本SHA5896cd4d1488527e00a4e96a0fcc1b945c973aceff1938ab25e99081a9a843fe；两guest脚本48,335B<48KiB。
+
+核实际两组前置Exit137/非running/Pid0/RestartCount0及manual一致；true四项启动且时间推进，false五项均停且时间/计数保持。live PID3505/3584跨daemon及重连一致；AutoRemove对象No such object，另一任务仍运行。result SHA dac6f17fd72088a676bb68d2d00eb1699561c115b685859be4399c3ff0433d32 已核。Stopped/无owned engine进程，epoch3未触限。
+
+marker不是业务持久化证明；结论不外推Mac/AC17/AC19/原盘。签名、选材和外部启动局限见README。候选包终审在正式封存前另核。
+
+候选包终审通过：Astra逐项核16payload大小/SHA、result原值、11源observations字段映射及两次失败记录，无阻断项；root仅更新本条与manifest后按固定清单封存。
