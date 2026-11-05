@@ -2,16 +2,25 @@ name: Langflow migration and checkpoint rollback (isolated)
 
 on:
   workflow_dispatch:
+    inputs:
+      architecture:
+        description: Native Linux architecture
+        type: choice
+        options: [amd64, arm64]
+        default: amd64
+        required: true
 
 permissions:
   contents: read
 
 jobs:
   migration:
-    runs-on: ubuntu-latest
+    runs-on: ${{ inputs.architecture == 'arm64' && 'ubuntu-24.04-arm' || 'ubuntu-latest' }}
     timeout-minutes: 90
     env:
       COMPOSE_BAKE: "false"
+      ARC_MIGRATION_ARCH: ${{ inputs.architecture }}
+      ARC_MIGRATION_RUNNER_ARCH: ${{ runner.arch }}
       POSTGRES_PASSWORD: synthetic-migration-postgres-only
       LANGFLOW_SUPERUSER: synthetic-migration-admin
       LANGFLOW_SUPERUSER_PASSWORD: synthetic-migration-password-only
@@ -24,6 +33,10 @@ jobs:
         run: |
           set -euo pipefail
           [[ "$GITHUB_ACTIONS" == true && "$GITHUB_RUN_ID" =~ ^[1-9][0-9]{0,19}$ && "$GITHUB_RUN_ATTEMPT" =~ ^[1-9][0-9]{0,5}$ ]]
+          case "$ARC_MIGRATION_ARCH:$ARC_MIGRATION_RUNNER_ARCH:$(uname -s):$(uname -m)" in
+            amd64:X64:Linux:x86_64|arm64:ARM64:Linux:aarch64) ;;
+            *) echo 'Host or runner architecture mismatch' >&2; exit 1 ;;
+          esac
           test "$(df -B1 --output=avail /tmp | tail -n 1 | tr -d '[:space:]')" -ge 32212254720
           arc_root="$(mktemp -d "/tmp/arc-migration-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}.XXXXXX")"
           mkdir "$arc_root/meta"
@@ -98,6 +111,11 @@ jobs:
           echo "BASH_ENV=$arc_root/shell" >> "$GITHUB_ENV"
           export ARC_MIGRATION_ROOT="$arc_root" ARC_MIGRATION_META="$arc_root/meta"
           source "$arc_root/shell"
+          arc_daemon_arch="$(arc_migration_bounded_run timeout 30s docker info --format '{{.OSType}} {{.Architecture}}')"
+          case "$ARC_MIGRATION_ARCH:$arc_daemon_arch" in
+            amd64:'linux x86_64'|amd64:'linux amd64'|arm64:'linux aarch64'|arm64:'linux arm64') ;;
+            *) echo 'Docker daemon platform mismatch' >&2; exit 1 ;;
+          esac
           for phase in baseline upgrade rollback; do
             export ARC_MIGRATION_PROJECT="arc-migration-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}-$phase"
             arc_migration_require_absent
@@ -130,6 +148,47 @@ jobs:
           arc_migration_bounded_run timeout 1800s docker build -f docker/langflow.Dockerfile -t "$ARC_MIGRATION_BASELINE_IMAGE" .
           arc_migration_guard
           arc_migration_bounded_run timeout 1200s docker build -f docker/langflow-candidate.Dockerfile -t "$ARC_MIGRATION_CANDIDATE_IMAGE" .
+          arc_migration_guard
+      - name: Verify native Docker and all migration image architectures
+        run: |
+          set -euo pipefail
+          arc_migration_guard
+          arc_daemon_arch="$(arc_migration_bounded_run timeout 30s docker info --format '{{.OSType}} {{.Architecture}}')"
+          case "$ARC_MIGRATION_ARCH:$arc_daemon_arch" in
+            amd64:'linux x86_64'|amd64:'linux amd64'|arm64:'linux aarch64'|arm64:'linux arm64') ;;
+            *) echo 'Docker daemon platform mismatch' >&2; exit 1 ;;
+          esac
+          arc_migration_phase baseline
+          arc_pg="$(arc_migration_bounded_run timeout 60s docker compose -p "$ARC_MIGRATION_PROJECT" -f "$GITHUB_WORKSPACE/docker/compose.migration.yml" config --format json | python -c 'import json,sys; print(json.load(sys.stdin)["services"]["postgres"]["image"])')"
+          [[ "$arc_pg" =~ ^postgres:16\.15-trixie@sha256:[0-9a-f]{64}$ ]] || { echo 'Unexpected Postgres pin' >&2; exit 1; }
+          arc_migration_bounded_run timeout 600s docker pull "$arc_pg" >/dev/null
+          arc_records="$ARC_MIGRATION_ROOT/image-platforms.txt"
+          : > "$arc_records"
+          for arc_image in "$ARC_MIGRATION_BASELINE_IMAGE" "$ARC_MIGRATION_CANDIDATE_IMAGE" "$ARC_MIGRATION_API_IMAGE" "$ARC_MIGRATION_WEB_IMAGE" "$arc_pg"; do
+            arc_migration_bounded_run timeout 30s docker image inspect --format '{{.Id}} {{.Os}} {{.Architecture}}' "$arc_image" >> "$arc_records"
+          done
+          export ARC_MIGRATION_DOCKER_PLATFORM="$arc_daemon_arch" ARC_MIGRATION_POSTGRES_IMAGE="$arc_pg"
+          python - <<'PY'
+          import json, os, pathlib, platform, re
+          root = pathlib.Path(os.environ['ARC_MIGRATION_ROOT'])
+          arch = os.environ['ARC_MIGRATION_ARCH']
+          names = ('baseline','candidate','api','web','postgres')
+          rows = (root/'image-platforms.txt').read_text().splitlines()
+          if len(rows) != len(names):
+              raise SystemExit('Expected exactly five platform records')
+          images = {}
+          for name, row in zip(names, rows, strict=True):
+              fields = row.split()
+              if len(fields) != 3 or not re.fullmatch(r'sha256:[0-9a-f]{64}', fields[0]) or fields[1:] != ['linux', arch]:
+                  raise SystemExit('Image platform or immutable ID mismatch: ' + name)
+              images[name] = {'image_id':fields[0], 'os':fields[1], 'architecture':fields[2]}
+          evidence = {'requested':arch, 'host_system':platform.system(), 'host_machine':platform.machine(),
+                      'runner_arch':os.environ['ARC_MIGRATION_RUNNER_ARCH'],
+                      'docker_platform':os.environ['ARC_MIGRATION_DOCKER_PLATFORM'],
+                      'postgres_reference':os.environ['ARC_MIGRATION_POSTGRES_IMAGE'], 'images':images}
+          with (pathlib.Path(os.environ['ARC_MIGRATION_META'])/'architecture.json').open('x') as stream:
+              json.dump(evidence, stream, indent=2); stream.write('\n')
+          PY
           arc_migration_guard
       - name: Create only the fresh baseline and exercise five synthetic cases
         run: |
@@ -193,7 +252,7 @@ jobs:
           import hashlib, json, os, pathlib, subprocess
           from datetime import UTC, datetime
           meta = pathlib.Path(os.environ['ARC_MIGRATION_META'])
-          selected = ('capacity.jsonl','baseline-validation.json','checkpoint-manifest.json',
+          selected = ('capacity.jsonl','architecture.json','baseline-validation.json','checkpoint-manifest.json',
                       'checkpoint-summary.json','upgrade-restore.json','upgrade-summary.json',
                       'rollback-restore.json','rollback-summary.json')
           files = []
@@ -211,7 +270,10 @@ jobs:
                      'scripts/bootstrap_langflow.py','api/app/langflow_client.py',
                      'docker/langflow.Dockerfile','docker/langflow-candidate.Dockerfile',
                      'docker/api.Dockerfile','docker/web.Dockerfile','docker/postgres-init.sql',
-                     'requirements.lock','frontend/package-lock.json']
+                     'requirements.lock','frontend/package-lock.json',
+                     'compliance/langflow-candidate.lock','compliance/langflow-candidate-arm64.lock',
+                     'compliance/langflow-candidate-build-tools.lock',
+                     'compliance/langflow-candidate-build-tools-arm64.lock']
           images = {}
           for variable in ('ARC_MIGRATION_BASELINE_IMAGE','ARC_MIGRATION_CANDIDATE_IMAGE',
                            'ARC_MIGRATION_API_IMAGE','ARC_MIGRATION_WEB_IMAGE'):
@@ -225,11 +287,19 @@ jobs:
           manifest = {'checked_at':datetime.now(UTC).isoformat(),'phase_results':phase_results,
                       'source_commit':os.environ['GITHUB_SHA'],'run_id':os.environ['GITHUB_RUN_ID'],
                       'run_attempt':os.environ['GITHUB_RUN_ATTEMPT'],'files':files,'images':images,
+                      'architecture':json.loads((meta/'architecture.json').read_bytes())
+                                     if (meta/'architecture.json').is_file() else None,
+                      'selected_platform_locks':(
+                          ['compliance/langflow-candidate-arm64.lock',
+                           'compliance/langflow-candidate-build-tools-arm64.lock']
+                          if os.environ['ARC_MIGRATION_ARCH'] == 'arm64' else
+                          ['compliance/langflow-candidate.lock',
+                           'compliance/langflow-candidate-build-tools.lock']),
                       'sources':{name:hashlib.sha256(pathlib.Path(name).read_bytes()).hexdigest()
                                  for name in sources},
                       'method':'synthetic baseline checkpoint; fresh upgrade; third fresh old-version restore',
                       'not_tested':['original SQLite/historical volumes','in-place downgrade',
-                                    'zero loss of post-checkpoint writes','production migration'],
+                                    'zero loss of post-checkpoint writes','production migration','Mac host'],
                       'unselected':'plain dumps and file copies remain ephemeral on this runner; not uploaded',
                       'limits':{'dump_bytes_each':8388608,'dump_total_bytes':33554432,
                                 'checkpoint_files':100,'checkpoint_file_bytes':33554432,
@@ -265,6 +335,7 @@ jobs:
           path: |
             ${{ env.ARC_MIGRATION_META }}/manifest.json
             ${{ env.ARC_MIGRATION_META }}/capacity.jsonl
+            ${{ env.ARC_MIGRATION_META }}/architecture.json
             ${{ env.ARC_MIGRATION_META }}/baseline-validation.json
             ${{ env.ARC_MIGRATION_META }}/checkpoint-manifest.json
             ${{ env.ARC_MIGRATION_META }}/checkpoint-summary.json

@@ -1,9 +1,11 @@
 """Read-only validation of the isolated migration execution entrypoint."""
 
+import json
 import re
 import subprocess
 from pathlib import Path
 
+import pytest
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -67,7 +69,8 @@ def test_artifact_upload_is_an_exact_bounded_selection():
         step for step in steps if step.get("uses", "").startswith("actions/upload-artifact")
     )
     paths = upload["with"]["path"].splitlines()
-    assert len(paths) == 9
+    assert len(paths) == 10
+    assert any(path.endswith("/architecture.json") for path in paths)
     assert all(
         "*" not in path and "checkpoint/" not in path and not path.endswith(".sql")
         for path in paths
@@ -84,3 +87,66 @@ def test_workflow_has_no_destructive_docker_commands():
     assert "32212254720" in entry
     assert "5368709120" in entry
     assert "for phase in baseline upgrade rollback" in entry
+
+
+def test_platform_gate_precedes_baseline_and_records_platform_locks():
+    steps = workflow()["steps"]
+    gate = next(
+        i for i, step in enumerate(steps) if step.get("name", "").startswith("Verify native Docker")
+    )
+    baseline = next(
+        i
+        for i, step in enumerate(steps)
+        if step.get("name", "").startswith("Create only the fresh baseline")
+    )
+    assert gate < baseline
+    manifest = next(step["run"] for step in steps if step.get("id") == "evidence_manifest")
+    assert "selected_platform_locks" in manifest and "candidate-build-tools-arm64.lock" in manifest
+    assert "Mac host" in manifest and "zero loss of post-checkpoint writes" in manifest
+
+
+@pytest.mark.parametrize("failure", [None, "architecture", "os", "id", "count"])
+def test_platform_evidence_accepts_only_matching_immutable_images(tmp_path, monkeypatch, failure):
+    gate = next(
+        step
+        for step in workflow()["steps"]
+        if step.get("name", "").startswith("Verify native Docker")
+    )
+    code = re.search(r"<<'PY'\n(.*?)\nPY(?:\n|$)", gate["run"], re.S).group(1)
+    meta = tmp_path / "meta"
+    meta.mkdir()
+    rows = [f"sha256:{i:064x} linux arm64" for i in range(1, 6)]
+    if failure == "architecture":
+        rows[2] = rows[2].replace("arm64", "amd64")
+    elif failure == "os":
+        rows[2] = rows[2].replace("linux", "windows")
+    elif failure == "id":
+        rows[2] = "sha256:bad linux arm64"
+    elif failure == "count":
+        rows.pop()
+    (tmp_path / "image-platforms.txt").write_text("\n".join(rows) + "\n")
+    for key, value in {
+        "ARC_MIGRATION_ROOT": str(tmp_path),
+        "ARC_MIGRATION_META": str(meta),
+        "ARC_MIGRATION_ARCH": "arm64",
+        "ARC_MIGRATION_RUNNER_ARCH": "ARM64",
+        "ARC_MIGRATION_DOCKER_PLATFORM": "linux aarch64",
+        "ARC_MIGRATION_POSTGRES_IMAGE": "postgres:pin",
+    }.items():
+        monkeypatch.setenv(key, value)
+    if failure:
+        with pytest.raises(SystemExit):
+            exec(compile(code, "platform-evidence", "exec"), {})
+        assert not (meta / "architecture.json").exists()
+    else:
+        exec(compile(code, "platform-evidence", "exec"), {})
+        evidence = json.loads((meta / "architecture.json").read_text())
+        assert evidence["requested"] == "arm64" and evidence["runner_arch"] == "ARM64"
+        assert set(evidence["images"]) == {"baseline", "candidate", "api", "web", "postgres"}
+        assert all(
+            item["os"] == "linux" and item["architecture"] == "arm64"
+            for item in evidence["images"].values()
+        )
+        assert [item["image_id"] for item in evidence["images"].values()] == [
+            row.split()[0] for row in rows
+        ]
