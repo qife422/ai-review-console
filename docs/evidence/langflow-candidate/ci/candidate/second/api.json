@@ -1,0 +1,22 @@
+{
+  "runtime_version": "1.13.1",
+  "anonymous_flows_http": 403,
+  "authenticated_login": true,
+  "token_recorded": false,
+  "components": [
+    "SyntheticDocumentParser",
+    "DeterministicPIIRedactor",
+    "ExplainableRiskScorer",
+    "ApprovalTaskGateway",
+    "DecisionReportExporter"
+  ],
+  "flows": [
+    "Document Review Decision",
+    "Document Review Intake"
+  ],
+  "openapi_sha256": "58dd38174285686e3d4eff62c1dd63386aa37fb5ecfdf6f780225098b3b4c097",
+  "component_index_sha256": "abc3a52ce0ffd281ec3c747bc65b9b0f1151a9e6cd52f9ac7d7406e8c469e864",
+  "frontend_html_sha256": "b1e4b7ac27425b56f9f4996e1e40097aaa79621bed98cdab3e5487d15f121b98",
+  "frontend_content_type": "text/html; charset=utf-8",
+  "gui_browser_result": "separate GUI CLI probe; HTTP HTML alone is insufficient"
+}

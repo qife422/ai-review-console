@@ -1,0 +1,47 @@
+{
+  "source": "32eb636efa77e33ad8088c474ac54f427ab503cf",
+  "run": 41940799240,
+  "kind": "derived cumulative continuation; raw manifest is not rewritten",
+  "raw_native_original": {
+    "path": "release/native/materials.json",
+    "bytes": 62850,
+    "sha256": "82ae9b285bc121c98a61de7ddafe67653b00a5ff236ceb73662f8998e1927048"
+  },
+  "raw_reported_starting_budget": {
+    "files": 9,
+    "input_bytes": 26907808,
+    "text_bytes": 4082537
+  },
+  "raw_reported_remaining_budget": {
+    "files": 8,
+    "input_bytes": 26852095,
+    "text_bytes": 4026824
+  },
+  "raw_reported_goal_known_input_bytes": 135779466,
+  "finding": "The checked-in baseline still described the earlier pre-English state; this CI invocation reread the English text but its raw totals do not include the separately recorded earlier fourth-round invocation.",
+  "prior_fixed_original": {
+    "temporary_path": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/native-close/amd64/release/native/materials.json",
+    "formal_repository_path": "docs/evidence/runtime-maintenance/ci/native-close/amd64/release/native/materials.json",
+    "sha256": "c2a686dbe72b2f622f08f39e192c75c134969e7292ff9b85a7e8a503ca3d06ce",
+    "remaining_budget": {
+      "files": 8,
+      "input_bytes": 26852095,
+      "text_bytes": 4026824
+    },
+    "known_goal_input_bytes": 135779466
+  },
+  "actual_this_invocation": {
+    "files": 1,
+    "input_bytes": 55713,
+    "text_bytes": 55713,
+    "body_sha256": "0e83c4ba0bc0da1a24fd6a828002575acf4933e48f43cb5569ad02436ff5fb6e",
+    "exact_text_bytes_equal_to_prior": true
+  },
+  "derived_cumulative_remaining_budget": {
+    "files": 7,
+    "input_bytes": 26796382,
+    "text_bytes": 3971111
+  },
+  "derived_cumulative_goal_known_input_bytes": 135835179,
+  "claim_scope": "Actual repeated input is counted, not reset. Body equality is a comparison, not avoidance of the CI read. No approval or distribution finding is cleared."
+}

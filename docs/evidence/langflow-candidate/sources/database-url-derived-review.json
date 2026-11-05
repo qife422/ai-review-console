@@ -1,0 +1,38 @@
+{
+  "schema": "arc.candidate-database-url-derived-review.v1",
+  "recorded_at_utc": "2026-11-05T00:32:08.793083+00:00",
+  "classification": "Derived source observations only; original response bodies not retained.",
+  "method": "Prior bounded stdlib HTTP GET of exact officialv1.13.1 files; AST-selected method excerpts and response SHA were observed in tool output. Process-local raw bodies were discarded. No re-fetch for this record and no reconstructed body represented as raw.",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/langflow-ai/langflow/v1.13.1/src/backend/base/langflow/services/database/service.py",
+      "raw_response_bytes": 39057,
+      "raw_response_sha256": "8888135e850c7f5ca71692d52103862560b6aa2d2221ceb2013e30eb47d5e15d",
+      "functions": {
+        "_sanitize_database_url": "Line350 converts plain postgresql/postgres into postgresql+psycopg for the DatabaseService async engine.",
+        "_normalize_sync_postgres_url": "Line117 converts postgres into postgresql and strips asyncpg/aiosqlite suffix; does not add a psycopg driver.",
+        "check_postgresql_version_sync": "Line177 calls synchronous create_engine with _normalize_sync_postgres_url(database_url)."
+      }
+    },
+    {
+      "url": "https://raw.githubusercontent.com/langflow-ai/langflow/v1.13.1/src/lfx/src/lfx/services/settings/groups/database.py",
+      "raw_response_bytes": 6884,
+      "raw_response_sha256": "a64309616cde6635933e42112ef073e427f49bdb018529d1975d5d7e3c8afe0d",
+      "functions": {
+        "set_database_url": "Line90 takes LANGFLOW_DATABASE_URL then returns value without selecting Psycopg3."
+      }
+    },
+    {
+      "url": "https://raw.githubusercontent.com/langflow-ai/langflow/v1.13.1/src/backend/base/langflow/__main__.py",
+      "raw_response_bytes": 85269,
+      "raw_response_sha256": "742f770fbb32afac29d4051665430c122bf01960cf34577558189930d585d681",
+      "functions": {
+        "run": "Aroundline641 calls check_postgresql_version_sync(settings.database_url) before spawning the server."
+      }
+    }
+  ],
+  "conclusion": "The async sanitizer does not establish that every sync preflight path selects Psycopg3. Explicit postgresql+psycopg is a supported scoped candidate setting; actual connectivity is a separate CI observation.",
+  "first_candidate_runtime_limit": "Source32eb636 candidate built successfully but initialization stopped on an unsupported command flag. That run did not prove a PostgreSQL-driver failure.",
+  "source_changed_by_reviewer": false,
+  "runtime_or_ci_triggered_by_reviewer": false
+}

@@ -2,6 +2,14 @@
 
 本文件记录主要功能与交接边界；精确代码差异以 Git 提交为准。开发快照不是正式发布，源码备份不是运行数据库备份。
 
+## 2026-11-04 — 精简 Langflow 候选隔离验证
+
+- 固定base/LFX1.13.1精简候选，避开未使用集成，纯Psycopg3与显式PG驱动；默认1.11.6/52pins不改。
+- 候选[CI41943564415](https://github.com/qife422/ai-review-console/actions/runs/41943564415)通过198 Python/29前端、5组件/2Flow/4格式/3决定/9报告及真实GUI登录；修复实验run参数与必填标签探针，负向retry不冒称成功恢复。
+- 原五包在候选中3升级2移除，PyPI匹配0；保留Debian133 provider记录/scan exit1、许可与源码未完成范围。
+- 实际取得APSW精确原文及Psycopg LGPL原文，补MIT/sqlitevec source材料；新target实读1/1166B并对账，不跨默认/API镜像关闭vendor问题。
+- [已解决、待解决和后续计划](docs/evidence/langflow-candidate/README.md)统一归档；尚未替换默认、迁移原库或批准后端分发。
+
 ## 2026-11-03 — v0.2 系统维护与候选评估
 
 - 固定Langflow1.11.6/base digest与52显式Python pins，新增公共UBI10补丁层和可审计RPM/信任记录；两架构60既有软件更新、1新增、无移除。

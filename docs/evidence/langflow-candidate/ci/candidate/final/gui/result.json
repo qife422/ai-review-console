@@ -1,0 +1,12 @@
+{
+  "outcome": "passed",
+  "failure": null,
+  "steps": [
+    "Actual login form submitted",
+    "Two published project Flows visible"
+  ],
+  "calls": 10,
+  "base_url": "http://localhost:7860/",
+  "scope": "Real candidate GUI login and visible Flow list only; editor modification is not tested",
+  "cli_cache": "Unselected ephemeral runner cache outside the evidence root; no cleanup performed"
+}

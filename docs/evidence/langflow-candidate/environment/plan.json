@@ -1,0 +1,31 @@
+{
+  "scope": "Isolated langflow-base1.13.1 + exactlfx1.13.1 experiment only; default1.11.6 and existing52pins unchanged",
+  "same_goal_id": "cfd2d589-0c13-4ee0-bd93-8316c3f556a4",
+  "budget": "180 cumulative; elapsed9436s at prior close;250pendinguser",
+  "source_head": "afe6fc27188107fe07ccf3899bc92d4c0a0a013c",
+  "temporary": "/private/tmp/arc-langflow-candidate.qya6psom",
+  "prior_temporary": "/private/tmp/arc-runtime-maintenance.wT9huB",
+  "prior_temporary_bytes_at_start": 38360216,
+  "combined_temporary_limit_bytes": 41943040,
+  "new_temporary_limit_bytes": 3145728,
+  "new_selected_ci_limit_bytes": 1048576,
+  "new_selected_ci_limit_files": 50,
+  "sources_limit_bytes": 262144,
+  "sources_limit_files": 12,
+  "candidate_evidence": "artifacts/evidence-candidates/langflow-candidate",
+  "sealed_evidence": "docs/evidence/langflow-candidate",
+  "evidence_limit_bytes_each": 104857600,
+  "evidence_limit_files_each": 1000,
+  "local_Docker": "No start/build/pull; prior warning retained",
+  "CI": "fresh LinuxAMD runner/own compose project/newvirtualDB;12GiB beforebuild/6GiBscan/5GiBongoing; no existingvolumes",
+  "native_budget": "existing sharedremaining8files/26852095input/4026824text and known135779466B; no native target reads planned unless needed",
+  "cleanup_authorized": false,
+  "protected": [
+    "originalSQLite",
+    "acceptedSpec/baseline",
+    "all4sealedpackets",
+    "defaultDockerfile/52pins",
+    "allhistoricaldata/volumes/temp"
+  ],
+  "host_free_bytes": 27288907776
+}

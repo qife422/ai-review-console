@@ -1,0 +1,224 @@
+name: Langflow candidate (isolated)
+
+on:
+  workflow_dispatch:
+    inputs:
+      collect_native_licenses:
+        description: Collect the bounded candidate native license specimens once
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  candidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    services:
+      postgres:
+        image: postgres:16.15-trixie@sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c
+        env:
+          POSTGRES_USER: review
+          POSTGRES_PASSWORD: synthetic-demo-only
+          POSTGRES_DB: review_console
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U review -d review_console"
+          --health-interval 5s --health-timeout 5s --health-retries 20
+    env:
+      ARC_TEST_POSTGRES_URL: postgresql+psycopg://review:synthetic-demo-only@127.0.0.1:5432/review_console
+      COMPOSE_PROJECT_NAME: arc-ci-${{ github.run_id }}-amd64
+      COMPOSE_FILE: docker-compose.yml:docker/compose.candidate.yml
+      COMPOSE_BAKE: "false"
+      LANGFLOW_SUPERUSER_PASSWORD: synthetic-demo-change-me
+      REVIEW_SERVICE_TOKEN: synthetic-demo-service-token
+    steps:
+      - name: Require 20 GiB before installation and preserve a 5 GiB stage floor
+        run: |
+          mkdir -p "$RUNNER_TEMP/arc-candidate-meta"
+          df -B1 "$RUNNER_TEMP" | tee "$RUNNER_TEMP/arc-candidate-meta/runner-capacity.txt"
+          arc_available_bytes="$(df -B1 --output=avail "$RUNNER_TEMP" | tail -n 1 | tr -d '[:space:]')"
+          test "$arc_available_bytes" -ge 21474836480
+          cat > "$RUNNER_TEMP/arc-candidate-shell" <<'SH'
+          arc_candidate_guard() {
+            local arc_available_bytes
+            arc_available_bytes="$(df -B1 --output=avail "$RUNNER_TEMP" | tail -n 1 | tr -d '[:space:]')"
+            printf '%s available_bytes=%s minimum_bytes=5368709120\n' "$(date -u +%FT%TZ)" "$arc_available_bytes" >> "$RUNNER_TEMP/arc-candidate-meta/runner-capacity.txt"
+            test "$arc_available_bytes" -ge 5368709120
+          }
+          SH
+          echo "BASH_ENV=$RUNNER_TEMP/arc-candidate-shell" >> "$GITHUB_ENV"
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install verification dependencies
+        run: |
+          arc_candidate_guard
+          python -m venv .venv
+          .venv/bin/pip install --no-cache-dir -r requirements.lock
+          .venv/bin/pip install --no-cache-dir -e '.[dev]'
+          arc_candidate_guard
+      - name: Backend lint and PostgreSQL regression
+        run: |
+          arc_candidate_guard
+          .venv/bin/ruff check .
+          .venv/bin/pytest --junitxml="$RUNNER_TEMP/arc-candidate-meta/arc-unit.xml"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Frontend lint, tests and build
+        working-directory: frontend
+        run: |
+          arc_candidate_guard
+          npm ci --cache "$RUNNER_TEMP/arc-candidate-npm-cache"
+          npm run lint
+          npm test -- --run
+          npm run build
+          arc_candidate_guard
+      - name: Build the isolated candidate and existing API and Web (600 seconds)
+        run: |
+          arc_candidate_guard
+          docker compose config --quiet
+          timeout 600s docker compose build api langflow web
+          arc_candidate_guard
+      - name: Initialize isolated synthetic stores and Flows
+        run: |
+          arc_candidate_guard
+          docker compose up -d --no-build postgres langflow
+          docker compose run --no-deps storage-init
+          docker compose run migrate
+          docker compose run flow-init
+          docker compose up -d --no-build --no-deps api worker web
+          timeout 120s sh -c 'until curl -fsS http://localhost:8080/api/health; do sleep 2; done'
+          arc_candidate_guard
+      - name: Four upload formats, three decisions, nine downloads and negative retry
+        run: |
+          arc_candidate_guard
+          .venv/bin/python scripts/validate_langflow.py --api-url http://localhost:8080 \
+            --expected-langflow-version 1.13.1 \
+            --evidence "$RUNNER_TEMP/arc-candidate-meta/workflow.json"
+      - name: Verify candidate identity, dependencies, components and UI assets
+        id: candidate_identity
+        env:
+          ARC_COLLECT_NATIVE_LICENSES: ${{ inputs.collect_native_licenses }}
+        run: |
+          arc_candidate_guard
+          arc_candidate_args=(--output-dir "$RUNNER_TEMP/arc-candidate")
+          if [ "$ARC_COLLECT_NATIVE_LICENSES" = 'true' ]; then
+            arc_candidate_args+=(--native-license-texts)
+          fi
+          .venv/bin/python scripts/verify_langflow_candidate.py "${arc_candidate_args[@]}"
+          arc_candidate_guard
+      - name: Install bounded browser CLI runtime
+        run: |
+          arc_candidate_guard
+          npm install --global --cache "$RUNNER_TEMP/arc-candidate-npm-cache" @playwright/cli@0.1.22
+          command -v google-chrome || playwright-cli install-browser chrome
+          arc_candidate_guard
+      - name: Real Langflow GUI login and two published Flows
+        env:
+          ARC_LF_EVIDENCE_DIR: ${{ runner.temp }}/arc-candidate/gui
+          ARC_PLAYWRIGHT_CLI: playwright-cli
+        run: |
+          arc_candidate_guard
+          node frontend/scripts/verify-langflow-ui-cli.mjs
+          arc_candidate_guard
+      - name: Record candidate package scan and license evidence
+        if: always() && steps.candidate_identity.outcome == 'success'
+        run: |
+          arc_candidate_guard
+          arc_candidate_image="$(.venv/bin/python -c 'import json,os; from pathlib import Path; print(json.loads((Path(os.environ["RUNNER_TEMP"])/"arc-candidate/identity.json").read_text())["image_id"])')"
+          printf '%s\n' "$arc_candidate_image" > "$RUNNER_TEMP/arc-candidate-meta/scanned-image-id.txt"
+          set +e
+          .venv/bin/python scripts/scan_images_osv.py --image "langflow=$arc_candidate_image" \
+            --output-dir "$RUNNER_TEMP/arc-candidate-scan"
+          arc_candidate_scan_code=$?
+          set -e
+          printf '%s\n' "$arc_candidate_scan_code" > "$RUNNER_TEMP/arc-candidate-meta/scan-exit-code.txt"
+          test "$arc_candidate_scan_code" -le 2
+          arc_candidate_guard
+          .venv/bin/python scripts/verify_image_licenses.py --image "langflow=$arc_candidate_image" \
+            --output-dir "$RUNNER_TEMP/arc-candidate-licenses"
+          arc_candidate_guard
+      - name: Preserve compact diagnostics and explicit selected scope
+        id: selected
+        if: always()
+        run: |
+          docker compose ps --format json > "$RUNNER_TEMP/arc-candidate-meta/services.json"
+          docker compose logs --no-color --tail 40 api worker langflow > "$RUNNER_TEMP/arc-candidate-meta/runtime.log"
+          python - <<'PY'
+          import hashlib, json, os, re
+          from pathlib import Path
+          root = Path(os.environ['RUNNER_TEMP'])
+          candidate = root / 'arc-candidate'
+          candidate.mkdir(exist_ok=True)
+          meta = candidate / 'metadata'
+          meta.mkdir()
+          for path in sorted((root / 'arc-candidate-meta').iterdir()):
+              if path.is_file():
+                  with (meta / path.name).open('xb') as stream:
+                      stream.write(path.read_bytes())
+          selection = []
+          for scope, selected in [('scan', {'summary.json'}), ('licenses', set())]:
+              source = root / ('arc-candidate-' + scope)
+              if not source.exists():
+                  continue
+              target = meta / scope
+              target.mkdir()
+              for path in sorted(source.rglob('*')):
+                  if not path.is_file():
+                      continue
+                  data = path.read_bytes()
+                  relative = str(path.relative_to(source))
+                  keep = relative in selected
+                  selection.append({'scope': scope, 'path': relative, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest(), 'selected': keep})
+                  if keep:
+                      with (target / relative).open('xb') as stream:
+                          stream.write(data)
+          license_source = root / 'arc-candidate-licenses/langflow.json'
+          if license_source.is_file():
+              license_raw = license_source.read_bytes()
+              license_report = json.loads(license_raw)
+              result = license_report.get('result', {})
+              normalize = lambda name: re.sub(r'[-_.]+', '-', name).lower()
+              selected_names = {'lfx', 'psycopg'}
+              metadata_names = {'langflow-base', 'apsw', 'sqlite-vec', 'ibm-watsonx-ai', 'langchain-ibm'}
+              selected_rows = [row for row in result.get('selected_packages', []) if normalize(row['name']) in selected_names]
+              metadata_rows = [row for row in result.get('packages', []) if normalize(row['name']) in metadata_names]
+              critical = {
+                  'kind': 'Derived field selection from the exact raw license report; not the whole raw report',
+                  'raw_report': {'path': 'langflow.json', 'bytes': len(license_raw), 'sha256': hashlib.sha256(license_raw).hexdigest()},
+                  'image_id': license_report.get('image_id'),
+                  'producer': 'scripts/verify_image_licenses.py',
+                  'producer_sha256': license_report.get('producer_sha256'),
+                  'source': os.environ.get('GITHUB_SHA'),
+                  'collection_state': license_report.get('collection_state'),
+                  'selected_packages': selected_rows,
+                  'metadata_packages': metadata_rows,
+                  'selected_rows_missing': sorted(selected_names - {normalize(row['name']) for row in selected_rows}),
+                  'metadata_rows_missing': sorted(metadata_names - {normalize(row['name']) for row in metadata_rows}),
+                  'legal_approval': False,
+                  'qualification': 'Existing selected license texts retain their reported text, SHA and byte fields; metadata rows do not prove complete native notices or corresponding-source compliance.',
+              }
+              critical_raw = (json.dumps(critical, ensure_ascii=False, indent=2) + '\n').encode()
+              assert len(critical_raw) <= 256 * 1024, 'Critical license field selection exceeds 256 KiB; stop without claiming preserved text'
+              with (meta / 'licenses/critical-package-licenses.json').open('xb') as stream:
+                  stream.write(critical_raw)
+          (meta / 'scan-license-selection.json').write_text(json.dumps({'scope': 'Explicit compact subset; omitted originals are not preserved in the artifact', 'files': selection}, indent=2) + '\n')
+          files = [p for p in candidate.rglob('*') if p.is_file()]
+          size = sum(p.stat().st_size for p in files)
+          print(json.dumps({'selected_bytes': size, 'selected_files': len(files), 'limit_bytes': 1048576, 'limit_files': 50}))
+          assert size <= 1048576 and len(files) <= 50, 'Candidate artifact guard: preserve local evidence; do not upload an oversized packet'
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('within_limit=true\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.selected.outputs.within_limit == 'true'
+        with:
+          name: langflow-candidate-amd64
+          path: ${{ runner.temp }}/arc-candidate
+          retention-days: 7

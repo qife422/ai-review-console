@@ -1,0 +1,89 @@
+{
+  "schema": "arc.langflow-slim-candidate-sources.v1",
+  "retrieval_method": "stdlib urllib GET official versioned PyPI JSON and exact v1.13.1 tagged pyproject, response cap128KiB JSON/32KiB TOML. Bodies retained in function-session memory, then written byte-for-byte with original byte length and SHA checks; no second fetch for persistence, no wheels/install/build.",
+  "raw_response_total_bytes": 80007,
+  "records": [
+    {
+      "name": "langflow",
+      "url": "https://pypi.org/pypi/langflow/1.13.1/json",
+      "at_utc": "2026-11-05T00:15:29.078337+00:00",
+      "bytes": 10144,
+      "sha256": "10715be762a5ca087f615d0a4f638159bcedd708ef377087142659840a5683a5",
+      "saved_file": "langflow-1.13.1.json"
+    },
+    {
+      "name": "langflow-base",
+      "url": "https://pypi.org/pypi/langflow-base/1.13.1/json",
+      "at_utc": "2026-11-05T00:15:29.152437+00:00",
+      "bytes": 15325,
+      "sha256": "8dd81c62dad71923372cd98af2d6da8a6201b7f0270b83fab6c26aef38894f16",
+      "saved_file": "langflow-base-1.13.1.json"
+    },
+    {
+      "name": "lfx",
+      "url": "https://pypi.org/pypi/lfx/1.13.1/json",
+      "at_utc": "2026-11-05T00:15:29.224664+00:00",
+      "bytes": 36917,
+      "sha256": "8e2a89e9995af49a43693f080d33db21a13589e92c216131239b1f01728b6c9f",
+      "saved_file": "lfx-1.13.1.json"
+    },
+    {
+      "name": "base-pyproject",
+      "url": "https://raw.githubusercontent.com/langflow-ai/langflow/v1.13.1/src/backend/base/pyproject.toml",
+      "at_utc": "2026-11-05T00:15:29.312398+00:00",
+      "bytes": 17621,
+      "sha256": "35e6ba73ae8863a68ef7f28315e4a08630afa6be23dfa92cddd6c488e890f17f",
+      "saved_file": "base-pyproject.toml"
+    }
+  ],
+  "direct_constraints_analysis": {
+    "installed_pin_count": 52,
+    "method": "Existing packaging.Requirement marker/specifier evaluation; active base no extras and lfx sqlite on Linux ARM, Python3.12/3.14; does not resolve the full transitive graph.",
+    "conflicts": {
+      "3.12": [
+        {
+          "parent": "langflow-base",
+          "pin": "pyjwt==2.15.0",
+          "requires": "pyjwt<3.0.0,>=2.15.1"
+        },
+        {
+          "parent": "langflow-base",
+          "pin": "transformers==5.10.0",
+          "requires": "transformers<6.0.0,>=5.10.1"
+        },
+        {
+          "parent": "lfx",
+          "pin": "pyjwt==2.15.0",
+          "requires": "pyjwt<3.0.0,>=2.15.1"
+        }
+      ],
+      "3.14": [
+        {
+          "parent": "langflow-base",
+          "pin": "pyjwt==2.15.0",
+          "requires": "pyjwt<3.0.0,>=2.15.1"
+        },
+        {
+          "parent": "langflow-base",
+          "pin": "transformers==5.10.0",
+          "requires": "transformers<6.0.0,>=5.10.1"
+        },
+        {
+          "parent": "lfx",
+          "pin": "pyjwt==2.15.0",
+          "requires": "pyjwt<3.0.0,>=2.15.1"
+        }
+      ]
+    }
+  },
+  "scope": {
+    "candidate": "fresh langflow-base==1.13.1 with hard lfx[sqlite]==1.13.1; no top langflow and no PostgreSQL/bundles/Zep extras",
+    "default_runtime_changed": false,
+    "installed": false,
+    "ci_started": false
+  },
+  "limits": {
+    "file_count": 8,
+    "output_bytes": 102400
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "tested_candidate_source": "e73ab92321483403fafd03e721182c5426ae6359",
+  "actual_candidate_CI": 41943564415,
+  "files": [
+    {
+      "path": "README.md",
+      "tested_sha256": "7e11c6f0c389437a0af141c62a7437a2a7890f651b9d67f028c71db55cce02a0",
+      "planned_sha256": "40626729bb9d1342a5702503e8f46334821f53b1ebd819f5a27da6adcb34daed"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "tested_sha256": "0c80b2572cae09b390e0980854efe81c316195045cbcf6d43f8f9f824de119ec",
+      "planned_sha256": "e45ff31d688fd214567796f3548d772004e60a630b6a87fb53424ad18c9401a8"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "tested_sha256": "16d6dd51252fd49945f9d999987456f8962b6c1c15672b98312fd615d3b4c356",
+      "planned_sha256": "3556ee4340213c3a6edae129087a0b0625f3b642ea476ac39f04a190cced76f9"
+    },
+    {
+      "path": "docs/CURRENT_STATE.md",
+      "tested_sha256": "6436d4066ff198d80cabcc9ff220ff2c73c019db1871a2f236990f37d27315a1",
+      "planned_sha256": null
+    },
+    {
+      "path": "docs/SPEC_INDEX.md",
+      "tested_sha256": "6da1b6670fcb897ec343fb9eac7b71456805bebaf7c58fbcfc4e0af5b7810ae2",
+      "planned_sha256": "555e9e09ca220c44ec88e3ce2ef35ba931dd19f7f92b440a1472689581f6e1c3"
+    },
+    {
+      "path": "docs/DEPENDENCY_LICENSES.md",
+      "tested_sha256": "590d13288344f4b568d5004a3f897bfb1bfa87503d60615fc53227c00938a991",
+      "planned_sha256": "6a12f0441eb5aa08452e36531099cfc69b8f91e3ba913fba6a0ac262ff86a599"
+    }
+  ],
+  "scope": "Only six status/history/notice docs plus sealed evidence after actual experiment; no default adoption",
+  "packaging_effect": "README package metadata/API COPY; dependency doc/notices API/LF COPY. These later bytes are not the exact tested images.",
+  "workflow_policy": "Functional experiment fixes used explicit manual candidate workflow, which runs full unit/frontend and candidate checks. [skip ci] avoided unchanged default targeted-native repetition; baseline32eb actual CI remains separately scoped. Final docs commit skips repeated code CI; skipped is not passing.",
+  "current_state_hash": "Manifest pointer filled after seal; Git binds final CURRENT_STATE bytes",
+  "authorization": "User authorized isolated experiment, regression and GitHub sync; no default runtime replacement, backend publication, license-option selection or residual-risk acceptance"
+}

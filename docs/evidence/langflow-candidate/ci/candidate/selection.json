@@ -1,0 +1,234 @@
+{
+  "source": "32eb636efa77e33ad8088c474ac54f427ab503cf",
+  "run": 41940818042,
+  "jobs": [
+    {
+      "id": 126960855016,
+      "name": "candidate",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_id": 41940818042,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Initialize containers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Require 20 GiB before installation and preserve a 5 GiB stage floor",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Install verification dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Backend lint and PostgreSQL regression",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Frontend lint, tests and build",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Build the isolated candidate and existing API and Web (600 seconds)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Initialize isolated synthetic stores and Flows",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 11
+        },
+        {
+          "name": "Four upload formats, three decisions, nine downloads and negative retry",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12
+        },
+        {
+          "name": "Verify candidate identity, dependencies, components and UI assets",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13
+        },
+        {
+          "name": "Install bounded browser CLI runtime",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14
+        },
+        {
+          "name": "Real Langflow GUI login and two published Flows",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15
+        },
+        {
+          "name": "Record candidate package scan and license evidence",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16
+        },
+        {
+          "name": "Preserve compact diagnostics and explicit selected scope",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 33
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 34
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 35
+        },
+        {
+          "name": "Stop containers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 36
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 37
+        }
+      ]
+    }
+  ],
+  "scope": "Explicit selected originals and qualified derived fields; ZIPs remain memory-only.",
+  "archives": [
+    {
+      "artifact": {
+        "id": 13376258381,
+        "name": "langflow-candidate-amd64",
+        "size_in_bytes": 6182,
+        "url": "https://api.github.com/repos/qife422/ai-review-console/actions/artifacts/13376258381",
+        "expired": false,
+        "created_at": "2026-11-05T00:27:12Z",
+        "expires_at": "2026-11-12T00:27:11Z",
+        "updated_at": "2026-11-05T00:27:12Z",
+        "digest": "sha256:9332d8a4be7f925da83034b1014fd37a37e08eb043aaf7d6e49c88774aebd8ba",
+        "workflow_run": {
+          "id": 41940818042,
+          "repository_id": 1417816141,
+          "head_repository_id": 1417816141,
+          "head_branch": "main",
+          "head_sha": "32eb636efa77e33ad8088c474ac54f427ab503cf"
+        }
+      },
+      "member_count": 5,
+      "expanded_bytes": 30475,
+      "manifest_checks": [],
+      "members": [
+        {
+          "path": "metadata/arc-unit.xml",
+          "bytes": 26772,
+          "sha256": "2a851682e28208a8035999b764ef0142f7b0f24db2e5d2340a92afce6ad76d45"
+        },
+        {
+          "path": "metadata/runner-capacity.txt",
+          "bytes": 719,
+          "sha256": "ee59b1d1963f98ead847309e461f9bad9efa6f6db9ddff185a49c7b0187624cd"
+        },
+        {
+          "path": "metadata/runtime.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "metadata/scan-license-selection.json",
+          "bytes": 109,
+          "sha256": "0b5cd10a8b59bd7dba76a655a721f171ab4dbd819c24ec52068c596c2748cb10"
+        },
+        {
+          "path": "metadata/services.json",
+          "bytes": 2875,
+          "sha256": "526d0e49ce0017dd6b02ec4594cd515072983173ec2e1542620040e988d880ba"
+        }
+      ]
+    }
+  ],
+  "derived": {},
+  "job_log_selection": {
+    "representation": "UTF-8 encoding of MCP decoded job log, not original compressed transport",
+    "bytes": 305499,
+    "sha256": "13b151fa0e42f22bb2b91e2d7f75ecbf3483672fc604ff8ace39a21a3d094ba8",
+    "selected_span": [
+      289115,
+      305499
+    ],
+    "selected_tail_sha256": "e9a2cd60970d4a4223eee6cd36989b7b10e697ca62d5f1071eae5f3c6ea76030"
+  },
+  "failure": {
+    "step": "Initialize isolated synthetic stores and Flows",
+    "signal": "unknown flag: --no-build",
+    "exit_code": 1,
+    "classification": "Workflow Compose run CLI error; not Langflow runtime compatibility evidence",
+    "not_executed": [
+      "storage-init",
+      "migrate",
+      "flow-init",
+      "business validation",
+      "candidate verifier",
+      "GUI",
+      "scan",
+      "licenses"
+    ]
+  }
+}

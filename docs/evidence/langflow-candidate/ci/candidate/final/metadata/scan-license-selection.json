@@ -1,0 +1,124 @@
+{
+  "scope": "Explicit compact subset; omitted originals are not preserved in the artifact",
+  "files": [
+    {
+      "scope": "scan",
+      "path": "http-records.json",
+      "bytes": 138542,
+      "sha256": "93b1f9e5812007138d9b9dac9c855c8122d25fb0a3723bd94aed72bdb02a706b",
+      "selected": false
+    },
+    {
+      "scope": "scan",
+      "path": "langflow-identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "selected": false
+    },
+    {
+      "scope": "scan",
+      "path": "langflow-identity.stdout",
+      "bytes": 252,
+      "sha256": "8dfd75c0d355939e8363382e2ef801723ec0486965ff975fd0874207c9067b84",
+      "selected": false
+    },
+    {
+      "scope": "scan",
+      "path": "langflow-inventory.json",
+      "bytes": 188521,
+      "sha256": "1f572d9e9fc5a26fae186d2fdf387e474286a563303fd367c9cce7074aade717",
+      "selected": false
+    },
+    {
+      "scope": "scan",
+      "path": "langflow-licenses.json",
+      "bytes": 206686,
+      "sha256": "ec42d85eb6d09a90799e17dc58b89db01832b4d7b81ef8c0dbb7e0e5a7b95340",
+      "selected": false
+    },
+    {
+      "scope": "scan",
+      "path": "langflow-os.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "selected": false
+    },
+    {
+      "scope": "scan",
+      "path": "langflow-os.stdout",
+      "bytes": 51756,
+      "sha256": "1e8aa2f3b165d088484a2061b3cd2944ca6a0b7ea1dd5f7fa687ba46d3000427",
+      "selected": false
+    },
+    {
+      "scope": "scan",
+      "path": "langflow-python.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "selected": false
+    },
+    {
+      "scope": "scan",
+      "path": "langflow-python.stdout",
+      "bytes": 238334,
+      "sha256": "4426ee925fa628c537c5794f37e5b7f898c51d11ae3b040ad6feb3a9c5d869ea",
+      "selected": false
+    },
+    {
+      "scope": "scan",
+      "path": "langflow.cdx.json",
+      "bytes": 289830,
+      "sha256": "287829d9986c7234779171199c437532383d158d1a068a74d1811815b942eec9",
+      "selected": false
+    },
+    {
+      "scope": "scan",
+      "path": "langflow.spdx.json",
+      "bytes": 293123,
+      "sha256": "82097c79719be79be36e40fbef3e788201d8dbd5742705e1d2addadfa9952864",
+      "selected": false
+    },
+    {
+      "scope": "scan",
+      "path": "manifest.json",
+      "bytes": 34831,
+      "sha256": "93726313c8b854c169f96a624ec972dd0b44ef4e3814b05bf10ba72e6de1b63e",
+      "selected": false
+    },
+    {
+      "scope": "scan",
+      "path": "package-mappings.json",
+      "bytes": 383391,
+      "sha256": "d4b1fa130ddb7b9736cdc57a2ef967534ca9ab17a6871e5031e3c66521996446",
+      "selected": false
+    },
+    {
+      "scope": "scan",
+      "path": "summary.json",
+      "bytes": 27826,
+      "sha256": "192aaad16cb3dc3fe6bfb98663c09715ac431e882cb73b86d4f04f470b9a8cb2",
+      "selected": true
+    },
+    {
+      "scope": "scan",
+      "path": "vulnerabilities.json",
+      "bytes": 810460,
+      "sha256": "57889f8ed81a75ee68dd48c0c1fd8d0c23dbde31488ea27680d18853bb58a9af",
+      "selected": false
+    },
+    {
+      "scope": "licenses",
+      "path": "langflow.json",
+      "bytes": 771011,
+      "sha256": "2508c42300eacb82bb8e452c216f1849972a121aaa2798a0a0d1264cb8f883b9",
+      "selected": false
+    },
+    {
+      "scope": "licenses",
+      "path": "manifest.json",
+      "bytes": 941,
+      "sha256": "6f72455e20b3e776663e45cf11de5e58c449c1b8fffcbd7d18c6bcd902c4f325",
+      "selected": false
+    }
+  ]
+}

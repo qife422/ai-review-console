@@ -1,0 +1,107 @@
+open
+### Browser `arc-lf-b7899a44` opened with pid 8979.
+### Ran Playwright code
+```js
+await page.goto('http://localhost:7860/login');
+```
+### Page
+- Page URL: http://localhost:7860/login
+- Page Title: Langflow
+- Console: 1 errors, 0 warnings
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-11-05T00-36-30-126Z.yml)
+
+snapshot
+### Page
+- Page URL: http://localhost:7860/login
+- Page Title: Sign in | Langflow
+- Console: 1 errors, 0 warnings
+### Snapshot
+```yaml
+- generic [ref=e10]:
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - img "Langflow Logo" [ref=e15]
+        - heading "Langflow" [level=1] [ref=e19]
+      - region [ref=e20]:
+        - heading "Sign in to Langflow" [level=2] [ref=e21]
+        - generic [ref=e22]:
+          - generic [ref=e23]:
+            - generic [ref=e24]:
+              - generic [ref=e25]: Username
+              - generic [ref=e26]: "*"
+            - generic [ref=e27]:
+              - textbox "Username *" [ref=e28]:
+                - /placeholder: Username
+              - generic [aria-hidden]: Username
+          - generic [ref=e29]:
+            - generic [ref=e30]:
+              - generic [ref=e31]: Password
+              - generic [ref=e32]: "*"
+            - generic [ref=e33]:
+              - generic [ref=e34]:
+                - textbox "Password *" [ref=e35]:
+                  - /placeholder: Password
+                - generic [aria-hidden]: Password
+              - button "Show password" [ref=e36] [cursor=pointer]
+          - button "Sign In" [ref=e38] [cursor=pointer]
+          - paragraph [ref=e39]:
+            - text: Don't have an account?
+            - link "Sign Up" [ref=e40] [cursor=pointer]:
+              - /url: /signup
+  - generic:
+    - region "Notifications":
+      - status
+```
+### Events
+- New console entries: .playwright-cli/console-2026-11-05T00-36-28-549Z.log#L1
+
+snapshot
+### Page
+- Page URL: http://localhost:7860/login
+- Page Title: Sign in | Langflow
+- Console: 1 errors, 0 warnings
+### Snapshot
+```yaml
+- generic [ref=e10]:
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - img "Langflow Logo" [ref=e15]
+        - heading "Langflow" [level=1] [ref=e19]
+      - region [ref=e20]:
+        - heading "Sign in to Langflow" [level=2] [ref=e21]
+        - generic [ref=e22]:
+          - generic [ref=e23]:
+            - generic [ref=e24]:
+              - generic [ref=e25]: Username
+              - generic [ref=e26]: "*"
+            - generic [ref=e27]:
+              - textbox "Username *" [ref=e28]:
+                - /placeholder: Username
+              - generic [aria-hidden]: Username
+          - generic [ref=e29]:
+            - generic [ref=e30]:
+              - generic [ref=e31]: Password
+              - generic [ref=e32]: "*"
+            - generic [ref=e33]:
+              - generic [ref=e34]:
+                - textbox "Password *" [ref=e35]:
+                  - /placeholder: Password
+                - generic [aria-hidden]: Password
+              - button "Show password" [ref=e36] [cursor=pointer]
+          - button "Sign In" [ref=e38] [cursor=pointer]
+          - paragraph [ref=e39]:
+            - text: Don't have an account?
+            - link "Sign Up" [ref=e40] [cursor=pointer]:
+              - /url: /signup
+  - generic:
+    - region "Notifications":
+      - status
+```
+
+close
+Browser 'arc-lf-b7899a44' closed
+
+

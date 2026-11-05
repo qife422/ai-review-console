@@ -1,0 +1,22 @@
+{
+  "url": "https://raw.githubusercontent.com/langflow-ai/langflow/v1.13.1/LICENSE",
+  "final_url": "https://raw.githubusercontent.com/langflow-ai/langflow/v1.13.1/LICENSE",
+  "version": "v1.13.1",
+  "source": "official upstream root LICENSE at exact version tag",
+  "fetched_at": "2026-11-05T00:57:57.720865+00:00",
+  "method": "One bounded stdlib urllib HTTP GET. raw_utf8 is a lossless UTF-8 representation of the HTTP response body; encoding it reconstructs exact retained bytes. Container JSON is not the original license file.",
+  "bytes": 1065,
+  "sha256": "48d4a7496209a9e1f2f549384251b69319360c3a38127cf513473590be383359",
+  "raw_utf8": "MIT License\n\nCopyright (c) 2024 Langflow\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+  "raw_utf8_reconstructs_original": true,
+  "repo_fixed_source": {
+    "path": "licenses/Langflow-LICENSE.txt",
+    "bytes": 1066,
+    "sha256": "2f6f90f0641ad822aec5d2bccd1f97c569cc0cbaf0ec3754d10290808f3b1f1b",
+    "matches_exact_version_response": false
+  },
+  "copy_evidence": "Repository fixed source bytes plus Docker COPY and successful build input declaration only; actual same-image /app/licenses/Langflow-LICENSE.txt independent readback field was not retained.",
+  "same_image_project_copy_readback_available": false,
+  "scope": "Exact root MIT text identification and source-input comparison; neither installed dist-info own-text presence nor complete distribution permission.",
+  "legal_approval": false
+}

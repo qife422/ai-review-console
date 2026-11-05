@@ -1,0 +1,2932 @@
+{
+  "source": "32eb636efa77e33ad8088c474ac54f427ab503cf",
+  "run": 41940799240,
+  "jobs": [
+    {
+      "id": 126960787316,
+      "name": "workflow-browser (ubuntu-latest, amd64, complete)",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 41940799240,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Record runner architecture and require 12 GiB available",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run python -m venv .venv && .venv/bin/pip install -r requirements.lock",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Run npm ci && npm run build",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Build exact application images",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Start isolated stores and workflow runtime",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Wait for API and Web",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Real uploads, Intake, three decisions, nine downloads, failure and retry",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Install bounded browser CLI runtime",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "Install pinned Chinese browser font",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        },
+        {
+          "name": "Verify Chinese browser font availability",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14
+        },
+        {
+          "name": "Keyboard upload to decision and downloadable reports",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        },
+        {
+          "name": "Collect bounded image and license evidence (not release acceptance)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Preserve compact runtime diagnostics",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 34
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 35
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 36
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 37
+        }
+      ]
+    },
+    {
+      "id": 126960787584,
+      "name": "verify",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 41940799240,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Initialize containers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run python -m pip install --upgrade pip",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run pip install -r requirements.lock",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Run pip install -e '.[dev]'",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Run ruff check .",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Run pytest --junitxml=\"$RUNNER_TEMP/arc-unit.xml\"",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Reject common committed secret formats",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Run npm ci",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "Run npm test -- --run",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        },
+        {
+          "name": "Run npm run build",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14
+        },
+        {
+          "name": "Run docker compose config --quiet",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 30
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 31
+        },
+        {
+          "name": "Stop containers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 32
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 33
+        }
+      ]
+    },
+    {
+      "id": 126960787643,
+      "name": "workflow-browser (ubuntu-24.04-arm, arm64, arm-backend)",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 41940799240,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Record runner architecture and require 12 GiB available",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run python -m venv .venv && .venv/bin/pip install -r requirements.lock",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Run npm ci && npm run build",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Build exact application images",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Start isolated stores and workflow runtime",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Wait for API and Web",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Real uploads, Intake, three decisions, nine downloads, failure and retry",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Install bounded browser CLI runtime",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12
+        },
+        {
+          "name": "Install pinned Chinese browser font",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13
+        },
+        {
+          "name": "Verify Chinese browser font availability",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14
+        },
+        {
+          "name": "Keyboard upload to decision and downloadable reports",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15
+        },
+        {
+          "name": "Collect bounded image and license evidence (not release acceptance)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Preserve compact runtime diagnostics",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 34
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 35
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 36
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 37
+        }
+      ]
+    }
+  ],
+  "scope": "Explicit selected originals and qualified derived fields; ZIPs remain memory-only.",
+  "archives": [
+    {
+      "artifact": {
+        "id": 13376742975,
+        "name": "workflow-browser-verification-amd64",
+        "size_in_bytes": 3896749,
+        "url": "https://api.github.com/repos/qife422/ai-review-console/actions/artifacts/13376742975",
+        "expired": false,
+        "created_at": "2026-11-05T00:29:39Z",
+        "expires_at": "2026-11-12T00:29:38Z",
+        "updated_at": "2026-11-05T00:29:39Z",
+        "digest": "sha256:a54f4371cf76d0be701ff076e9eb4de05e066403d740fd1e5f6b936da5da27c2",
+        "workflow_run": {
+          "id": 41940799240,
+          "repository_id": 1417816141,
+          "head_repository_id": 1417816141,
+          "head_branch": "main",
+          "head_sha": "32eb636efa77e33ad8088c474ac54f427ab503cf"
+        }
+      },
+      "member_count": 139,
+      "expanded_bytes": 16681552,
+      "manifest_checks": [
+        {
+          "manifest": {
+            "path": "release/images/manifest.json",
+            "bytes": 88817,
+            "sha256": "e32221b11a0a6de28095e144cb88522dc2da2baeba71bcd86713e8d5da81f9ba"
+          },
+          "verified_files": 44
+        },
+        {
+          "manifest": {
+            "path": "release/licenses/manifest.json",
+            "bytes": 1612,
+            "sha256": "b35de2e98608e72aa204bc5053d7d5e5809a70e6f2b94cfc83db098da5e1bbb2"
+          },
+          "verified_files": 3
+        },
+        {
+          "manifest": {
+            "path": "release/manifest.json",
+            "bytes": 31754,
+            "sha256": "799a56175ef0dea89db4c088326a383d37462c48f0d7bb30d6db3ab2f2d196d9"
+          },
+          "verified_files": 111
+        },
+        {
+          "manifest": {
+            "path": "release/native/manifest.json",
+            "bytes": 434,
+            "sha256": "d1187126e67d18aaa8cd51aa276a5072a34c06d43c9383261a08f918261f70ec"
+          },
+          "verified_files": 1
+        },
+        {
+          "manifest": {
+            "path": "release/rhel/manifest.json",
+            "bytes": 7494,
+            "sha256": "83717a021bf129d82e557d59100ba66f196d3a9184b868f5ce37bc6c56340088"
+          },
+          "verified_files": 12
+        },
+        {
+          "manifest": {
+            "path": "release/system/manifest.json",
+            "bytes": 9313,
+            "sha256": "034da4e7c9ec258a7ac47e77522a783e611760921204c491ab64036ecc778887"
+          },
+          "verified_files": 14
+        }
+      ],
+      "members": [
+        {
+          "path": "browser/dashboard-1440-dark.png",
+          "bytes": 214848,
+          "sha256": "2dc91141db1d768f68ffe7246ea8e4f20c785dcc1ed59c8afc72ef92632f3170"
+        },
+        {
+          "path": "browser/dashboard-1440-light.png",
+          "bytes": 214621,
+          "sha256": "ff41be8c2473681921cc39c204a722afd252c4eaed28994e1292ed7066b84f76"
+        },
+        {
+          "path": "browser/commands.log",
+          "bytes": 509133,
+          "sha256": "6b16b7dc6ae8a165f03050a117193d7697b5ac58ec34e872ffa3adcf5a8a1838"
+        },
+        {
+          "path": "browser/dashboard-390-dark.png",
+          "bytes": 204635,
+          "sha256": "e8583df8134eebf418a9e7e2cac3433790714d69e94805e37b56dadd8ccf5bea"
+        },
+        {
+          "path": "browser/dashboard-390-light.png",
+          "bytes": 200911,
+          "sha256": "9f4a5dc11dde5271c177bfbfde8dda49c592153571fe499854049d25942f1081"
+        },
+        {
+          "path": "browser/dashboard-loading-390-light.png",
+          "bytes": 15033,
+          "sha256": "e3cc66802cca4d0c2abd14f380bfcb7622f1c69c11e4105db86f5af23655e286"
+        },
+        {
+          "path": "browser/dashboard-offline-390-light.png",
+          "bytes": 20512,
+          "sha256": "15a6873c3fdef10a1b4e68aca0ef03f04b8ea0d1a72e10e25b046813a98706c0"
+        },
+        {
+          "path": "browser/intake-completed-1440-dark.png",
+          "bytes": 210189,
+          "sha256": "522c8a646d4c1094b92c3b02dacceba9f886b7dff0d0eb5dd28047ac6add6a71"
+        },
+        {
+          "path": "browser/intake-completed-1440-light.png",
+          "bytes": 209655,
+          "sha256": "c6216bb917642a441cc3780643f02fd9885c5de78f5f857abad306386c9b60b3"
+        },
+        {
+          "path": "browser/intake-completed-390-dark.png",
+          "bytes": 197888,
+          "sha256": "7609a22bc115d9ff8bba265871d06da59c225ed820024310687aa7579ffda607"
+        },
+        {
+          "path": "browser/intake-completed-390-light.png",
+          "bytes": 195541,
+          "sha256": "fbc6d937937a88d7000451b994354209c4c0489000085168a493762940b7e617"
+        },
+        {
+          "path": "browser/queue-empty-390-light.png",
+          "bytes": 47386,
+          "sha256": "3838a2a2e397be3227a3d938a7e3e855d48bc95efddf58425a1ba009cd1540ef"
+        },
+        {
+          "path": "browser/report-integrity-error-390-light.png",
+          "bytes": 52807,
+          "sha256": "df685a3a6b550dbbc2bbdf7a85f9f88ac0e317203b2d7e98ffd5e6a8a00f3683"
+        },
+        {
+          "path": "browser/report-partial-retry-390-light.png",
+          "bytes": 50236,
+          "sha256": "cfb632d9d9569762ae0b7ad2591e9e9ab33a8d4fec585ca542b17da0b7692c10"
+        },
+        {
+          "path": "browser/reports-ready-1440-dark.png",
+          "bytes": 218547,
+          "sha256": "cd3fabf0ee3826efce847920252c534944801a1e44f94315ab48f68fa85ffc52"
+        },
+        {
+          "path": "browser/reports-ready-1440-light.png",
+          "bytes": 217864,
+          "sha256": "86318050f87b9a6d5c022cb7aabeb12b8c954d5db669c85220bd3f6813bdb646"
+        },
+        {
+          "path": "browser/reports-ready-390-dark.png",
+          "bytes": 206983,
+          "sha256": "f8df8d519ead1f84b16d4762148ac736bfe67155af8b569b6cd07b4da95b759c"
+        },
+        {
+          "path": "browser/reports-ready-390-light.png",
+          "bytes": 203831,
+          "sha256": "a5b10cc7d0335ef366f7e90979f0aee277b062d6f71f48fa2ef85c4ac659563e"
+        },
+        {
+          "path": "browser/result.json",
+          "bytes": 17125,
+          "sha256": "42df1e22dca7f4c55ac02e83fe8651ccb7d75daea97c93678c0ded07b074c14d"
+        },
+        {
+          "path": "browser/synthetic-intake.txt",
+          "bytes": 192,
+          "sha256": "54e53f75f117982b0d325ed652066c540cc84743adf1f158b082a27cb269e14b"
+        },
+        {
+          "path": "browser/upload-modal-keyboard-390-light.png",
+          "bytes": 57132,
+          "sha256": "135131230ca9bca5b41258fe566d450c0a65e6b2694ee4064a5f931a64658311"
+        },
+        {
+          "path": "chinese-browser-font-version.txt",
+          "bytes": 233,
+          "sha256": "41b7696f0400d03d0b8109ca443f6f6399e121f8dc828053bf9e1a6455ad35ca"
+        },
+        {
+          "path": "chinese-browser-font.txt",
+          "bytes": 13,
+          "sha256": "05aaf5addc8c7d4485cc67d276cd65d4025350540aef89d31134f37d725e60ad"
+        },
+        {
+          "path": "release/api-container.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/api-image.stdout",
+          "bytes": 101,
+          "sha256": "4d6a81c4cadf2890bea4af6f854b5b42723984e5edbf47239ddc64b0e431640d"
+        },
+        {
+          "path": "release/api-pip-check.stderr",
+          "bytes": 266,
+          "sha256": "008cb6f70ed4af61f44bf24afe092613fa4ba3c1eb10ad4b6b26f20545063a3a"
+        },
+        {
+          "path": "release/api-container.stdout",
+          "bytes": 65,
+          "sha256": "18f4e6e1911c295431b14e35f5a9c638ea142d40f594f5c065566b9c94ce7aee"
+        },
+        {
+          "path": "release/api-image.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/api-pip-check.stdout",
+          "bytes": 30,
+          "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+        },
+        {
+          "path": "release/image-audit.stdout",
+          "bytes": 152,
+          "sha256": "2a034646d65517498db81de636aef7d5c24bb3897eb0454ac952429dcef0ccb7"
+        },
+        {
+          "path": "release/dependency-compatibility.stderr",
+          "bytes": 589,
+          "sha256": "e2888b8cb2e5cf8f27a629124b84ff574eed34f0e669812db94b5fb5f61ea561"
+        },
+        {
+          "path": "release/dependency-compatibility.stdout",
+          "bytes": 2294,
+          "sha256": "1349d4b346fc7fb613c00e3189462b807ec15b77e5d5f9d3f4a4e1685dbfaa2c"
+        },
+        {
+          "path": "release/image-audit.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/image-licenses.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/image-licenses.stdout",
+          "bytes": 606,
+          "sha256": "4988cf2d75a67893158b88a2fd8d37f1803deb54a64252fb0c6b6f2d7d147e37"
+        },
+        {
+          "path": "release/images/api-identity.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/api-identity.stdout",
+          "bytes": 247,
+          "sha256": "7c3aec5fd39a3a06326ed2a02d65c5742b572247c3cd00c690e5a8d142eb86f9"
+        },
+        {
+          "path": "release/images/api-inventory.json",
+          "bytes": 60601,
+          "sha256": "5b840f6a472cf9d38ed31ad03cf694dc9aa10e0969b94c92748ba5461062bf67"
+        },
+        {
+          "path": "release/images/api-licenses.json",
+          "bytes": 68061,
+          "sha256": "5e856255dad6a578beb293f7a8fb2b465fe98e09553688757df8ff58a2701c68"
+        },
+        {
+          "path": "release/images/api-os.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/api-os.stdout",
+          "bytes": 44689,
+          "sha256": "91bcba6df860dbfe1b30c8b29427c9e389ccdc080afabbf30020f0f4c895efa5"
+        },
+        {
+          "path": "release/images/api-python.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/api-python.stdout",
+          "bytes": 28437,
+          "sha256": "40c8ace9204fb60e58c080c56bc130245542449f8bf938a4fbdeafec41060036"
+        },
+        {
+          "path": "release/images/api.cdx.json",
+          "bytes": 96126,
+          "sha256": "9d7de7eeb0c0a8d3c1ff7879100c61b2b70289f6543e5fde226400880e797059"
+        },
+        {
+          "path": "release/images/api.spdx.json",
+          "bytes": 95513,
+          "sha256": "cdfe1db605f4d64936249cd7b0d4d2358e5506411fe63345d044803e8f494377"
+        },
+        {
+          "path": "release/images/http-records.json",
+          "bytes": 270639,
+          "sha256": "ca4b3e6bcfc000191d157ce1ebbd0aab2c1c146d60a7acbf79a6604933389b2f"
+        },
+        {
+          "path": "release/images/langflow-identity.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/langflow-identity.stdout",
+          "bytes": 253,
+          "sha256": "f2f56a5c4921bea7fed05deae8e5a1a9b67b84943ee04cb99178f263522a8854"
+        },
+        {
+          "path": "release/images/langflow-inventory.json",
+          "bytes": 310263,
+          "sha256": "1dc907326b0bf464d67cbe9cc6a1648cbd2b0adafa4354350fed8fb639b6f591"
+        },
+        {
+          "path": "release/images/langflow-licenses.json",
+          "bytes": 342655,
+          "sha256": "bd02d00f7176c85ab82e8ae1ea7058fb73d80d26404fd68b513f14b1de4298d1"
+        },
+        {
+          "path": "release/images/langflow-os.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/langflow-os.stdout",
+          "bytes": 21483,
+          "sha256": "f7da297188ee2f31d101d463d718cc001a008273012dd0acd634bfed71ff2e8f"
+        },
+        {
+          "path": "release/images/langflow-python.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/langflow-python.stdout",
+          "bytes": 778942,
+          "sha256": "be15eac212a7f92ba3a64bfc8eb81827fd62ccc6d8ded190533b0894f7d97c0b"
+        },
+        {
+          "path": "release/images/langflow.cdx.json",
+          "bytes": 513178,
+          "sha256": "a06a9dc1045db6833cd487720a8a9c6a8f7db89758bc756c834b861113d383e6"
+        },
+        {
+          "path": "release/images/langflow.spdx.json",
+          "bytes": 515605,
+          "sha256": "6a32ffff85edb92f9969c8ac34f6953a06a13291e86dea1efa03e790c8fae6b1"
+        },
+        {
+          "path": "release/images/manifest.json",
+          "bytes": 88817,
+          "sha256": "e32221b11a0a6de28095e144cb88522dc2da2baeba71bcd86713e8d5da81f9ba"
+        },
+        {
+          "path": "release/images/package-mappings.json",
+          "bytes": 890782,
+          "sha256": "74e291fc3f4d572a6e60d78872a5b4ff35ccd2695d985f8b94a2308585363561"
+        },
+        {
+          "path": "release/images/postgres-identity.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/postgres-identity.stdout",
+          "bytes": 234,
+          "sha256": "63ed038d6fb37749154bf286cf176765984c12cdb5359ce89128eb54c672a3c6"
+        },
+        {
+          "path": "release/images/postgres-inventory.json",
+          "bytes": 77818,
+          "sha256": "803be3fa8bea1e013c94cc408b89677602e8bf11175ff3a20d250ff3f9be38dd"
+        },
+        {
+          "path": "release/images/postgres-licenses.json",
+          "bytes": 86454,
+          "sha256": "f11b2f5373782f052715d640a74791e7b2dc2a8c957e0b455a28c3ebfd663931"
+        },
+        {
+          "path": "release/images/postgres-os.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/postgres-os.stdout",
+          "bytes": 93776,
+          "sha256": "5d26897f6da40a586efac34b295920f78109224dd86d12c2c344a1ebf2e76919"
+        },
+        {
+          "path": "release/images/postgres-python.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/postgres-python.stdout",
+          "bytes": 38,
+          "sha256": "1030eb169431c4058cc0a7e032ca2c5cd75534d69d00e58d607fea877b0bc720"
+        },
+        {
+          "path": "release/images/postgres.cdx.json",
+          "bytes": 112593,
+          "sha256": "71d8b3216001ac510b4aa547db11604dc128c164b8296cc3f3e378ffad2198f9"
+        },
+        {
+          "path": "release/images/postgres.spdx.json",
+          "bytes": 98726,
+          "sha256": "18c935ef5f452b3c339e41690e62ec1c875aa2275eefab102589130991912851"
+        },
+        {
+          "path": "release/images/summary.json",
+          "bytes": 65679,
+          "sha256": "598a0157c38231ccb7c0add48a51cd019356990ec80b5a1c8057950b29191800"
+        },
+        {
+          "path": "release/images/vulnerabilities.json",
+          "bytes": 1984282,
+          "sha256": "649f64b28da1a10fc94ab637c0462f38b6358f6cfa5bee241be4f4e12f3b0e28"
+        },
+        {
+          "path": "release/images/web-identity.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/web-identity.stdout",
+          "bytes": 253,
+          "sha256": "918d731ab58e88b5205c9fb54ade6f24e4a8532512b1462588d2a91921a9a526"
+        },
+        {
+          "path": "release/images/web-inventory.json",
+          "bytes": 21080,
+          "sha256": "e797809fa77f120ba4cf9c8ee2a034d4ffbb93331b45f039b08b7f33113a9ccf"
+        },
+        {
+          "path": "release/images/web-licenses.json",
+          "bytes": 24006,
+          "sha256": "9124b29df7fefd6b10f0f97aabca8b3080b50cc3271e108409155746b3ff654e"
+        },
+        {
+          "path": "release/images/web-os.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/web-os.stdout",
+          "bytes": 102873,
+          "sha256": "02642508a76aa6df267c6ee9c567939d7080134250a5c61f31327c7c77475d30"
+        },
+        {
+          "path": "release/images/web-python.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/web-python.stdout",
+          "bytes": 38,
+          "sha256": "1030eb169431c4058cc0a7e032ca2c5cd75534d69d00e58d607fea877b0bc720"
+        },
+        {
+          "path": "release/images/web.cdx.json",
+          "bytes": 45380,
+          "sha256": "7696ca2a79478c7328a643af1147bb1f98fd6a6734112dbf64d29ba6b1262a29"
+        },
+        {
+          "path": "release/images/web.spdx.json",
+          "bytes": 49569,
+          "sha256": "1246c8148739497cd427b9b5c1d12cb4165b6e76cb90ff0646640548b4f679e7"
+        },
+        {
+          "path": "release/langflow-container.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/langflow-container.stdout",
+          "bytes": 65,
+          "sha256": "6161d5818e77c9dfe606b48528a2655130606aab0fb61d2a250961806f329ead"
+        },
+        {
+          "path": "release/langflow-image.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/langflow-image.stdout",
+          "bytes": 106,
+          "sha256": "83f05622e74b2b4fd0a356ba60e71f984489027b604e518daea15a0d4be828d8"
+        },
+        {
+          "path": "release/langflow-pip-check.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/langflow-pip-check.stdout",
+          "bytes": 30,
+          "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+        },
+        {
+          "path": "release/licenses/api.json",
+          "bytes": 179884,
+          "sha256": "54b22e6f30e167b005cc4adefc89e4b9211b6e8101f946eb260ec6a3bc2111be"
+        },
+        {
+          "path": "release/licenses/langflow.json",
+          "bytes": 1028380,
+          "sha256": "184cb1c6eb4a8ad8e15a1881ec34b43f7145d976021ae4b406fa9ae2937d747c"
+        },
+        {
+          "path": "release/licenses/manifest.json",
+          "bytes": 1612,
+          "sha256": "b35de2e98608e72aa204bc5053d7d5e5809a70e6f2b94cfc83db098da5e1bbb2"
+        },
+        {
+          "path": "release/licenses/web.json",
+          "bytes": 95767,
+          "sha256": "b4ba8354d74ce1de1f5ee9500839df666d34dc0294e521ae71fe3be870267777"
+        },
+        {
+          "path": "release/manifest.json",
+          "bytes": 31754,
+          "sha256": "799a56175ef0dea89db4c088326a383d37462c48f0d7bb30d6db3ab2f2d196d9"
+        },
+        {
+          "path": "release/native/manifest.json",
+          "bytes": 434,
+          "sha256": "d1187126e67d18aaa8cd51aa276a5072a34c06d43c9383261a08f918261f70ec"
+        },
+        {
+          "path": "release/native/materials.json",
+          "bytes": 62850,
+          "sha256": "82ae9b285bc121c98a61de7ddafe67653b00a5ff236ceb73662f8998e1927048"
+        },
+        {
+          "path": "release/native-materials.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/native-materials.stdout",
+          "bytes": 115,
+          "sha256": "02739c88b857fc86c76aeae25894c88ddd9ce3957f5e4fda0f52460dac203a9a"
+        },
+        {
+          "path": "release/postgres-container.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/postgres-container.stdout",
+          "bytes": 65,
+          "sha256": "3faf6c648c148c9e9dca683468c3f96142644844b3a248eb3a5bd6a0c9aaad64"
+        },
+        {
+          "path": "release/postgres-image.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/postgres-image.stdout",
+          "bytes": 106,
+          "sha256": "972223c00c75af6af750c19f79730026354dff1b819decb070c5485ab8ceae61"
+        },
+        {
+          "path": "release/rhel/http-records.json",
+          "bytes": 142105,
+          "sha256": "4a401853d7203cbaea79b78a05a2620ca1494ccec61f58b24e3924999a03de8d"
+        },
+        {
+          "path": "release/rhel/langflow-identity.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/rhel/langflow-identity.stdout",
+          "bytes": 104,
+          "sha256": "ea652574944a795e2c1c7f329d1b7b43029290cb7873d035201b3129d1934cd4"
+        },
+        {
+          "path": "release/rhel/langflow-os.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/rhel/langflow-os.stdout",
+          "bytes": 21483,
+          "sha256": "f7da297188ee2f31d101d463d718cc001a008273012dd0acd634bfed71ff2e8f"
+        },
+        {
+          "path": "release/rhel/langflow-redhat-metadata.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/rhel/langflow-redhat-metadata.stdout",
+          "bytes": 23228,
+          "sha256": "cb89a61b35803196957af2314888942b2779be1f1911e97ec35feb38cbeaea0b"
+        },
+        {
+          "path": "release/rhel/manifest.json",
+          "bytes": 7494,
+          "sha256": "83717a021bf129d82e557d59100ba66f196d3a9184b868f5ce37bc6c56340088"
+        },
+        {
+          "path": "release/rhel/product-bindings.json",
+          "bytes": 1807,
+          "sha256": "c7f533ca56b2172f51d3f15e6cc06e88dba4da92f68f2f5c3e554044a0128015"
+        },
+        {
+          "path": "release/rhel/repository-to-cpe.json",
+          "bytes": 4379662,
+          "sha256": "3b2d74fa78eef8ce1c4182ba298c7041067a85c45b2c8e55c518cf1a4a584347"
+        },
+        {
+          "path": "release/rhel/rpm-mappings.json",
+          "bytes": 330365,
+          "sha256": "d1a33b69f352c995722d3d9c79d7dfdfc9724871faec561b46ea0c31e828ec8e"
+        },
+        {
+          "path": "release/rhel/summary.json",
+          "bytes": 670,
+          "sha256": "5d6d236614313a1eae6db07dec2da18107755c280dfb45660a24f3a7346870d8"
+        },
+        {
+          "path": "release/rhel/vulnerabilities.json",
+          "bytes": 3,
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        },
+        {
+          "path": "release/rhel-audit.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/rhel-audit.stdout",
+          "bytes": 167,
+          "sha256": "90f69dbcc2738fd08e7d31d4082d1f99bec012e66f51b68d537c6a9465862aea"
+        },
+        {
+          "path": "release/system/image-cache-clean.stderr",
+          "bytes": 170,
+          "sha256": "9350861ac1c52b3a0fd0a501281395d100ff49455c34abc6078d458f69537106"
+        },
+        {
+          "path": "release/system/image-cache-clean.stdout",
+          "bytes": 10,
+          "sha256": "d9158dba466706073b9359557167b7d68c1c5e5fe5dc7139cb95fd7c53ab996b"
+        },
+        {
+          "path": "release/system/manifest.json",
+          "bytes": 9313,
+          "sha256": "034da4e7c9ec258a7ac47e77522a783e611760921204c491ab64036ecc778887"
+        },
+        {
+          "path": "release/system/metadata-refresh.stderr",
+          "bytes": 166,
+          "sha256": "e369aa9193610f6af54de0c7a4f9b0cf05156a4aa2134af7b2c14164ca89d4aa"
+        },
+        {
+          "path": "release/system/metadata-refresh.stdout",
+          "bytes": 72,
+          "sha256": "199d049b1dc95ccc87c2835867225f01f603c61f094ccf70516a316328f2045b"
+        },
+        {
+          "path": "release/system/repositories.stderr",
+          "bytes": 166,
+          "sha256": "fc6d46345ace25b366765c9b7bc6d474902be39bda8e8905b692e753edfb56e9"
+        },
+        {
+          "path": "release/system/repositories.stdout",
+          "bytes": 175,
+          "sha256": "0ffe702a45ebd746468ea401862b5cdf99977843c0422bcd1c3e8d89e5a7f3d4"
+        },
+        {
+          "path": "release/system/rpm-after.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/system/rpm-after.stdout",
+          "bytes": 23754,
+          "sha256": "e925bb1060f95aabd0e3d5fbc149c8a634662aa7c8d10e3cbfe921bcff18d6b8"
+        },
+        {
+          "path": "release/system/rpm-before.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/system/rpm-before.stdout",
+          "bytes": 23633,
+          "sha256": "6331f46a11e7d1c06353fbba0906738eb83cac3f5765fa90878ab8543ed919a1"
+        },
+        {
+          "path": "release/system/trusted-keys.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/system/trusted-keys.stdout",
+          "bytes": 87,
+          "sha256": "c6ece077551b266b6e45ed3ad78c101da32b431b1d28a3eaf67c513f41a4000e"
+        },
+        {
+          "path": "release/system/update.stderr",
+          "bytes": 166,
+          "sha256": "a8d3768c218e48a2975033c87af9425b87ebb36247d6ce605d43ec46f28d1f42"
+        },
+        {
+          "path": "release/system/update.stdout",
+          "bytes": 19532,
+          "sha256": "0007e285847c8c8440bce64f3988411ce00e06e5c03028816768bfbbf1909fba"
+        },
+        {
+          "path": "release/system-materials.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/system-materials.stdout",
+          "bytes": 104977,
+          "sha256": "d34cf3f318c47846f276b74b329b69500d326f0ad0c661efde2caf8154633243"
+        },
+        {
+          "path": "release/web-container.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/web-container.stdout",
+          "bytes": 65,
+          "sha256": "71caedd2d8f0745af3a4b7df31875efc33af6245eea60fc8340b069a5fb03b63"
+        },
+        {
+          "path": "release/web-image.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/web-image.stdout",
+          "bytes": 101,
+          "sha256": "4ee6bd2ef86a38d3f93866257b6094b8b15aafcbac5597c43c655f5208d32fbf"
+        },
+        {
+          "path": "runner-capacity.txt",
+          "bytes": 321,
+          "sha256": "5d99cd8054cf35ea50dc6f57451fd31b079054f320645c783ba208a5cb222c50"
+        },
+        {
+          "path": "runtime.log",
+          "bytes": 15850,
+          "sha256": "a5dbd242a0e2f5a42176fc9a1f92352135fc0744bda97e65cf0effffdb943aa3"
+        },
+        {
+          "path": "services.json",
+          "bytes": 9096,
+          "sha256": "736831ae906af6280575e3225efb44a829788049f1d349d5b60455abc5fd9a25"
+        },
+        {
+          "path": "workflow.json",
+          "bytes": 7134,
+          "sha256": "a8b6b9528218cef611ef8e35371bba67a26a9efa6f2f31144e65ae8878c6dfc5"
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "id": 13376203547,
+        "name": "workflow-browser-verification-arm64",
+        "size_in_bytes": 1257774,
+        "url": "https://api.github.com/repos/qife422/ai-review-console/actions/artifacts/13376203547",
+        "expired": false,
+        "created_at": "2026-11-05T00:26:38Z",
+        "expires_at": "2026-11-12T00:26:37Z",
+        "updated_at": "2026-11-05T00:26:38Z",
+        "digest": "sha256:f3ecfd9bf76968ca34444baf54527ebb911799ad7c61f0f038f2fe353e942b3b",
+        "workflow_run": {
+          "id": 41940799240,
+          "repository_id": 1417816141,
+          "head_repository_id": 1417816141,
+          "head_branch": "main",
+          "head_sha": "32eb636efa77e33ad8088c474ac54f427ab503cf"
+        }
+      },
+      "member_count": 112,
+      "expanded_bytes": 13336608,
+      "manifest_checks": [
+        {
+          "manifest": {
+            "path": "release/images/manifest.json",
+            "bytes": 88817,
+            "sha256": "ea5f9cc1eb7191f231bd811941cab6e0c45167337522f872d02ddf8cd2776b20"
+          },
+          "verified_files": 44
+        },
+        {
+          "manifest": {
+            "path": "release/licenses/manifest.json",
+            "bytes": 1612,
+            "sha256": "3a0487ecbd441c9f7dbea69b8799998c63d0fbc700543334740422a398816d7a"
+          },
+          "verified_files": 3
+        },
+        {
+          "manifest": {
+            "path": "release/manifest.json",
+            "bytes": 30373,
+            "sha256": "9e52c9341da0eb16ee836916e7b309b40159ae3718a249dbb7510dfa2e28f191"
+          },
+          "verified_files": 107
+        },
+        {
+          "manifest": {
+            "path": "release/rhel/manifest.json",
+            "bytes": 7494,
+            "sha256": "18d8c340f1385ab9bc6b5546da1e6792c7dbd3c8e71c3caa076f1deac69fa0d6"
+          },
+          "verified_files": 12
+        },
+        {
+          "manifest": {
+            "path": "release/system/manifest.json",
+            "bytes": 9313,
+            "sha256": "ce821b5ffbc0ee83b7c157ec291f4b953e9e6636ca646994fd47f8807cff6687"
+          },
+          "verified_files": 14
+        }
+      ],
+      "members": [
+        {
+          "path": "release/api-container.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/api-container.stdout",
+          "bytes": 65,
+          "sha256": "3ae2d81fa7fdd1923609e642549d4aafd1bd655e02353a4bf0ea4c9fd0256d7d"
+        },
+        {
+          "path": "release/api-image.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/api-image.stdout",
+          "bytes": 101,
+          "sha256": "306abca79741723c897160e4701579b7b98ce53e57cdcaa86a3c090835c3ff1f"
+        },
+        {
+          "path": "release/api-pip-check.stderr",
+          "bytes": 266,
+          "sha256": "008cb6f70ed4af61f44bf24afe092613fa4ba3c1eb10ad4b6b26f20545063a3a"
+        },
+        {
+          "path": "release/api-pip-check.stdout",
+          "bytes": 30,
+          "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+        },
+        {
+          "path": "release/dependency-compatibility.stderr",
+          "bytes": 589,
+          "sha256": "e2888b8cb2e5cf8f27a629124b84ff574eed34f0e669812db94b5fb5f61ea561"
+        },
+        {
+          "path": "release/dependency-compatibility.stdout",
+          "bytes": 2294,
+          "sha256": "1349d4b346fc7fb613c00e3189462b807ec15b77e5d5f9d3f4a4e1685dbfaa2c"
+        },
+        {
+          "path": "release/image-audit.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/image-audit.stdout",
+          "bytes": 152,
+          "sha256": "1f3d30246970390de9e5e920974e4c8be02744dbb4a64d4aa386b8c201262050"
+        },
+        {
+          "path": "release/image-licenses.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/image-licenses.stdout",
+          "bytes": 606,
+          "sha256": "c0983e9341534abbe07998b6527d88189cbaa3690eb13ba53475381e3ea875dd"
+        },
+        {
+          "path": "release/images/api-identity.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/api-identity.stdout",
+          "bytes": 152,
+          "sha256": "b87c4676769f28c228cb0a7898d620b6aa1fbd989ad08124b4ea7cf513beb363"
+        },
+        {
+          "path": "release/images/api-inventory.json",
+          "bytes": 60494,
+          "sha256": "36d17ce916b808b2dc668fda7ccbb2ae6caabdfb2063347749f9c4ec108890b5"
+        },
+        {
+          "path": "release/images/api-licenses.json",
+          "bytes": 68061,
+          "sha256": "ab76a0472c048e390eb4a75e72881c25e9fef817788a23bcac7b39f1e27fdb90"
+        },
+        {
+          "path": "release/images/api-os.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/api-os.stdout",
+          "bytes": 44689,
+          "sha256": "9c186ee032c3eead8b4a4e5d370932533d3483c7f2ce858a863ebb45d0777d19"
+        },
+        {
+          "path": "release/images/api-python.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/api-python.stdout",
+          "bytes": 28437,
+          "sha256": "a8ce2e5dec35838b11c8ef16d0239c543c7d61aeb3e910d102dcffc56a9c652c"
+        },
+        {
+          "path": "release/images/api.cdx.json",
+          "bytes": 96126,
+          "sha256": "8ee7d9eb432c7842042538b23c1d980d0e11ba393c20b176e9a0b897ae7ee78b"
+        },
+        {
+          "path": "release/images/api.spdx.json",
+          "bytes": 95416,
+          "sha256": "aedb6c9476ddd4875c7bd9886e0710bb2c427a96af14491e302a92b5ab50061a"
+        },
+        {
+          "path": "release/images/http-records.json",
+          "bytes": 269959,
+          "sha256": "55dafcbc69553dabcd5d4d0d51910f158e77d04b72aa9a2d738b4d0687acac59"
+        },
+        {
+          "path": "release/images/langflow-identity.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/langflow-identity.stdout",
+          "bytes": 153,
+          "sha256": "166b658692002e1c0b0d54e75dcb66e3f15586d179921847e3c401e1a5876089"
+        },
+        {
+          "path": "release/images/langflow-licenses.json",
+          "bytes": 341175,
+          "sha256": "5ce75a8fd6875bd6ea28d0d0ab878f6e5106f54b253522bc6420173d6bf5a87e"
+        },
+        {
+          "path": "release/images/langflow-inventory.json",
+          "bytes": 308811,
+          "sha256": "ec74002404c6e45e17a4e66d3f74ceb5519f59624be22aa7c52a6dd3c13ddef1"
+        },
+        {
+          "path": "release/images/langflow-os.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/langflow-os.stdout",
+          "bytes": 21641,
+          "sha256": "96f2a541e04c04d96c0eb3f47930f489ae0c9de3bcd3b7e7db4e34cb6a3c86f8"
+        },
+        {
+          "path": "release/images/langflow-python.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/langflow-python.stdout",
+          "bytes": 774610,
+          "sha256": "bd59885c4c7416474b8538f2b8a779a9eacc7b83b9ed493dfa8cafc1e3ce6fcd"
+        },
+        {
+          "path": "release/images/langflow.cdx.json",
+          "bytes": 511136,
+          "sha256": "1e8e282ae2cffacd02be7629848bde614f8ce0c97239f5e853e1db8272fa7288"
+        },
+        {
+          "path": "release/images/langflow.spdx.json",
+          "bytes": 513053,
+          "sha256": "d649485b99f8cd214fcc5851c1eb75341aa6d492b5660f1a33181c2d40e50100"
+        },
+        {
+          "path": "release/images/manifest.json",
+          "bytes": 88817,
+          "sha256": "ea5f9cc1eb7191f231bd811941cab6e0c45167337522f872d02ddf8cd2776b20"
+        },
+        {
+          "path": "release/images/package-mappings.json",
+          "bytes": 887736,
+          "sha256": "2714edbbf5f9cb01656f6bf6f8c22c0cae22c8dac8d9c03d5a15e8d19cdc35c7"
+        },
+        {
+          "path": "release/images/postgres-identity.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/postgres-identity.stdout",
+          "bytes": 234,
+          "sha256": "46bac265cd10e84acbc5ff302646a18745d360f659b16631d8d9a304d2229eb3"
+        },
+        {
+          "path": "release/images/postgres-inventory.json",
+          "bytes": 77821,
+          "sha256": "b707c0ff1da9b8aad12ff666db04ba8f93e593850bbc453159be171acea12ef6"
+        },
+        {
+          "path": "release/images/postgres-licenses.json",
+          "bytes": 86457,
+          "sha256": "703f830e950f50b12a22530efd66b05bbd066d2fac18163a2a0980f42de0c45d"
+        },
+        {
+          "path": "release/images/postgres-os.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/postgres-os.stdout",
+          "bytes": 93779,
+          "sha256": "af77dbd98d216327763cc6dabd6ca09ba2f27c2f0d4e00d67bd669bf215b2f58"
+        },
+        {
+          "path": "release/images/postgres-python.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/postgres-python.stdout",
+          "bytes": 38,
+          "sha256": "1030eb169431c4058cc0a7e032ca2c5cd75534d69d00e58d607fea877b0bc720"
+        },
+        {
+          "path": "release/images/postgres.cdx.json",
+          "bytes": 112606,
+          "sha256": "50b57b48516c82cd9fabd4e1743628e0f9b4321d9f1c1a116f3d3ddc25383985"
+        },
+        {
+          "path": "release/images/postgres.spdx.json",
+          "bytes": 98734,
+          "sha256": "462a8b0674313bc8980eb34d4c76215ba986b7e0d24ca7379618f93d3c6a1b29"
+        },
+        {
+          "path": "release/images/summary.json",
+          "bytes": 65679,
+          "sha256": "a1dbd208a4408a1b764b2cea0db819ddeaaf03f8b0b5732364af6cc47c772eb8"
+        },
+        {
+          "path": "release/images/vulnerabilities.json",
+          "bytes": 1984282,
+          "sha256": "d796bd4c6156efa431ac92de1ba6efd8978714f4d4c15b9f46997d9dda28229f"
+        },
+        {
+          "path": "release/images/web-identity.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/web-identity.stdout",
+          "bytes": 151,
+          "sha256": "4c6e9783c42d28f7996938b3db8cde79fa9f1bc0166be22045fb50c7237318a9"
+        },
+        {
+          "path": "release/images/web-inventory.json",
+          "bytes": 21037,
+          "sha256": "04316450d692112f2bd62e2fe7318bc3e3895b434152ae694bccd780fd6e462e"
+        },
+        {
+          "path": "release/images/web-licenses.json",
+          "bytes": 24077,
+          "sha256": "ad119409d8cfb665c0b7af137932904e5ea03e0f070b480f9a1e9be9ba8c5f2a"
+        },
+        {
+          "path": "release/images/web-os.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/web-os.stdout",
+          "bytes": 102930,
+          "sha256": "b3d7cf5016282eef37f1e17ad6d9b1aa110e309d9eb241fde87d61b6894e76dc"
+        },
+        {
+          "path": "release/images/web-python.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/images/web-python.stdout",
+          "bytes": 38,
+          "sha256": "1030eb169431c4058cc0a7e032ca2c5cd75534d69d00e58d607fea877b0bc720"
+        },
+        {
+          "path": "release/images/web.cdx.json",
+          "bytes": 45522,
+          "sha256": "9dbec84102dc55c0a98acbef5f050c357ef2425cb8203d52a8849cdc5dd83e64"
+        },
+        {
+          "path": "release/images/web.spdx.json",
+          "bytes": 49536,
+          "sha256": "09017eab998b32d21adb5b534799f5e10d9b8ceb04495dfad391bff5ad93a118"
+        },
+        {
+          "path": "release/langflow-container.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/langflow-container.stdout",
+          "bytes": 65,
+          "sha256": "5781cf97827a826e327db759c8baa5f4114f031b84592bfaa9a1f0b789b37f95"
+        },
+        {
+          "path": "release/langflow-image.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/langflow-image.stdout",
+          "bytes": 106,
+          "sha256": "b2f034ae5e3d7d7cefdc8228fcd75229494703011040c0ff7f771305f2a6c69a"
+        },
+        {
+          "path": "release/langflow-pip-check.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/langflow-pip-check.stdout",
+          "bytes": 30,
+          "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+        },
+        {
+          "path": "release/licenses/api.json",
+          "bytes": 179884,
+          "sha256": "fd37bcd23261b91e1c95636981578275374df64614d2ef8233fb3e43c45c65d1"
+        },
+        {
+          "path": "release/licenses/langflow.json",
+          "bytes": 1027502,
+          "sha256": "5445afa77a0317c6fdbda9133e26f47fc62f383636c75ec7a950d53868495281"
+        },
+        {
+          "path": "release/licenses/manifest.json",
+          "bytes": 1612,
+          "sha256": "3a0487ecbd441c9f7dbea69b8799998c63d0fbc700543334740422a398816d7a"
+        },
+        {
+          "path": "release/licenses/web.json",
+          "bytes": 95767,
+          "sha256": "8d596d227568df9044ca1401ce5c5879b7ba3ad76ff08330b5c2bc041689f175"
+        },
+        {
+          "path": "release/manifest.json",
+          "bytes": 30373,
+          "sha256": "9e52c9341da0eb16ee836916e7b309b40159ae3718a249dbb7510dfa2e28f191"
+        },
+        {
+          "path": "release/postgres-container.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/postgres-container.stdout",
+          "bytes": 65,
+          "sha256": "b5dfa699601d4ae02851c2c837f21b72c88b6a47b68f207f189140170724b959"
+        },
+        {
+          "path": "release/postgres-image.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/postgres-image.stdout",
+          "bytes": 106,
+          "sha256": "ad50d05b44f700cf09b8a4149628f9443df16857179405ba6cda8cb3a1a61905"
+        },
+        {
+          "path": "release/rhel/http-records.json",
+          "bytes": 142105,
+          "sha256": "9380af693caa8819577452bf01e9c767628a248b72e954a919a099b811591c58"
+        },
+        {
+          "path": "release/rhel/langflow-identity.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/rhel/langflow-identity.stdout",
+          "bytes": 104,
+          "sha256": "d69943ffb2a7b372e58226b193c9344a9f3c0a083cec73e86b941a6afb544170"
+        },
+        {
+          "path": "release/rhel/langflow-os.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/rhel/langflow-os.stdout",
+          "bytes": 21641,
+          "sha256": "96f2a541e04c04d96c0eb3f47930f489ae0c9de3bcd3b7e7db4e34cb6a3c86f8"
+        },
+        {
+          "path": "release/rhel/langflow-redhat-metadata.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/rhel/langflow-redhat-metadata.stdout",
+          "bytes": 23387,
+          "sha256": "e5ed5980c97927043000d8c81723b1f96dd080158c186b2a29c8c28a95be79b3"
+        },
+        {
+          "path": "release/rhel/manifest.json",
+          "bytes": 7494,
+          "sha256": "18d8c340f1385ab9bc6b5546da1e6792c7dbd3c8e71c3caa076f1deac69fa0d6"
+        },
+        {
+          "path": "release/rhel/product-bindings.json",
+          "bytes": 1809,
+          "sha256": "10c0d9049df1dfbe2b1486ceae3326584f8cfe59a6fd66c1bf04dc7dcc07e735"
+        },
+        {
+          "path": "release/rhel/repository-to-cpe.json",
+          "bytes": 4379662,
+          "sha256": "3b2d74fa78eef8ce1c4182ba298c7041067a85c45b2c8e55c518cf1a4a584347"
+        },
+        {
+          "path": "release/rhel/rpm-mappings.json",
+          "bytes": 330523,
+          "sha256": "61546198d330e3fdca7dbd531e12ac2c53fb82cf972b3105c5ddca372860c437"
+        },
+        {
+          "path": "release/rhel/summary.json",
+          "bytes": 670,
+          "sha256": "711686506d75ef9cf9504a48e87406077ebe90c1d1ccff461093ba315817d131"
+        },
+        {
+          "path": "release/rhel/vulnerabilities.json",
+          "bytes": 3,
+          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+        },
+        {
+          "path": "release/rhel-audit.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/rhel-audit.stdout",
+          "bytes": 167,
+          "sha256": "90f69dbcc2738fd08e7d31d4082d1f99bec012e66f51b68d537c6a9465862aea"
+        },
+        {
+          "path": "release/system/image-cache-clean.stderr",
+          "bytes": 170,
+          "sha256": "d50ee416c01ed581194344ee2b2d7ef92598fce923f2a8d779afc796ee64d347"
+        },
+        {
+          "path": "release/system/image-cache-clean.stdout",
+          "bytes": 10,
+          "sha256": "d9158dba466706073b9359557167b7d68c1c5e5fe5dc7139cb95fd7c53ab996b"
+        },
+        {
+          "path": "release/system/manifest.json",
+          "bytes": 9313,
+          "sha256": "ce821b5ffbc0ee83b7c157ec291f4b953e9e6636ca646994fd47f8807cff6687"
+        },
+        {
+          "path": "release/system/metadata-refresh.stderr",
+          "bytes": 166,
+          "sha256": "cb35a8517d20d9f0982a560d92f2b856a6b9860b983e3341ae5711fd9b93ddc9"
+        },
+        {
+          "path": "release/system/metadata-refresh.stdout",
+          "bytes": 72,
+          "sha256": "199d049b1dc95ccc87c2835867225f01f603c61f094ccf70516a316328f2045b"
+        },
+        {
+          "path": "release/system/repositories.stderr",
+          "bytes": 164,
+          "sha256": "76cd397af544d9deb9b756d3d36579f2a08da75c98db0bfc135444446c167ed7"
+        },
+        {
+          "path": "release/system/repositories.stdout",
+          "bytes": 175,
+          "sha256": "0ffe702a45ebd746468ea401862b5cdf99977843c0422bcd1c3e8d89e5a7f3d4"
+        },
+        {
+          "path": "release/system/rpm-after.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/system/rpm-after.stdout",
+          "bytes": 23912,
+          "sha256": "4bae08a54729a500c672f9d725708ce3d44e01c380f0e8019863bf6bc8313104"
+        },
+        {
+          "path": "release/system/rpm-before.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/system/rpm-before.stdout",
+          "bytes": 23790,
+          "sha256": "abc88073fef6df7eb8fa9b1df68eea84f3086382a16422beb8da9ccc85d0d676"
+        },
+        {
+          "path": "release/system/trusted-keys.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/system/trusted-keys.stdout",
+          "bytes": 87,
+          "sha256": "c6ece077551b266b6e45ed3ad78c101da32b431b1d28a3eaf67c513f41a4000e"
+        },
+        {
+          "path": "release/system/update.stderr",
+          "bytes": 166,
+          "sha256": "75983d32c8e0257bf5a8d9a0d08c51bf6795655ef2fcdc94e2ae9a5af58ba835"
+        },
+        {
+          "path": "release/system/update.stdout",
+          "bytes": 19615,
+          "sha256": "c0a988edaeb5df8bc94e6e60b0d41c8c538eebf558bcf8ab749fba43260f7923"
+        },
+        {
+          "path": "release/system-materials.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/system-materials.stdout",
+          "bytes": 105505,
+          "sha256": "5b65e668d76d1f6fd736b2883aea1f8067337c46e7cde11ef55969188d0d60b5"
+        },
+        {
+          "path": "release/web-container.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/web-container.stdout",
+          "bytes": 65,
+          "sha256": "60dc38f253eee7990f1710556cccc00e80e8b9532280efdb1cbab95172c88ae7"
+        },
+        {
+          "path": "release/web-image.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "release/web-image.stdout",
+          "bytes": 101,
+          "sha256": "3c2795731c3f40f00499661fb293691be50697f4acad717b0eeed5609b87614e"
+        },
+        {
+          "path": "runner-capacity.txt",
+          "bytes": 351,
+          "sha256": "43965f015f8960ecf4c5b3606ab3742cae92716e9986b71e2be8fa151369d910"
+        },
+        {
+          "path": "runtime.log",
+          "bytes": 16103,
+          "sha256": "f5362615eafd3567050a39e815d9175f34c1f5e50084d8f9202547874b551521"
+        },
+        {
+          "path": "services.json",
+          "bytes": 9144,
+          "sha256": "35a1d76a4117a504898a64245085800e965d3a09b0f90d0f79125f0ad956c133"
+        },
+        {
+          "path": "workflow.json",
+          "bytes": 7134,
+          "sha256": "b9897fbec8e31ff203f751043262a075058874ba117626e5e9b9f0aed04d9c47"
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "id": 13375239568,
+        "name": "unit-verification",
+        "size_in_bytes": 4327,
+        "url": "https://api.github.com/repos/qife422/ai-review-console/actions/artifacts/13375239568",
+        "expired": false,
+        "created_at": "2026-11-05T00:23:48Z",
+        "expires_at": "2026-11-12T00:23:47Z",
+        "updated_at": "2026-11-05T00:23:48Z",
+        "digest": "sha256:07cd163a71b5a2186a15c29d04c9167ffc394ce4d22ae12098966c3a8cb7e77d",
+        "workflow_run": {
+          "id": 41940799240,
+          "repository_id": 1417816141,
+          "head_repository_id": 1417816141,
+          "head_branch": "main",
+          "head_sha": "32eb636efa77e33ad8088c474ac54f427ab503cf"
+        }
+      },
+      "member_count": 1,
+      "expanded_bytes": 26774,
+      "manifest_checks": [],
+      "members": [
+        {
+          "path": "arc-unit.xml",
+          "bytes": 26774,
+          "sha256": "d7b6ee0e0c784bd93f04d85f7d7c1610e1a94d05b9e14dcf19f6daaef91b98e7"
+        }
+      ]
+    }
+  ],
+  "derived": {
+    "amd64": {
+      "original_manifest": {
+        "path": "release/manifest.json",
+        "bytes": 31754,
+        "sha256": "799a56175ef0dea89db4c088326a383d37462c48f0d7bb30d6db3ab2f2d196d9"
+      },
+      "source_inputs": [
+        {
+          "path": "scripts/collect_release_ci.py",
+          "sha256": "4d7feedf23997471fd0b1202750c8d1df3f3bbcc72666562ad96dbfc84d8fd97"
+        },
+        {
+          "path": "scripts/scan_images_osv.py",
+          "sha256": "0358ef68c8d866847f870f08770716d32cb2968b3eb684d2f00cb5088b9001db"
+        },
+        {
+          "path": "scripts/scan_release.py",
+          "sha256": "f3f353ff9a50651aa864aa75dbb480da9481dc78aaacaac2b74a90616558ea0c"
+        },
+        {
+          "path": "scripts/verify_image_licenses.py",
+          "sha256": "b4021bd6e0a432acdb9557ba8bc5fe95d5829171fce0490ff8f8d5e962ba4a32"
+        },
+        {
+          "path": "scripts/verify_dependency_compatibility.py",
+          "sha256": "6cd649ba0a3838f3de3ee8dadf920cd25130231c0d04fd36a2f2e1d0ce050cfc"
+        },
+        {
+          "path": "scripts/apply_system_updates.py",
+          "sha256": "50ac38282e4bce3d2619d8dd3af46885c217fe6f9e3bf1e5b0ef58f39c3b8821"
+        },
+        {
+          "path": "scripts/verify_native_materials.py",
+          "sha256": "dffe7c32d0fd61f41a6f3e4e0bf0f4affc201ff4ffdeb716c1c7811f9ebd8765"
+        },
+        {
+          "path": "compliance/native-baseline.json",
+          "sha256": "ba73fb69a3d4644b5d0b49d64d32928ef9d1628716ea7d5289524e949ea4ce81"
+        },
+        {
+          "path": "docs/UPGRADE_SPEC.md",
+          "sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753"
+        }
+      ],
+      "images": {
+        "api": "sha256:3602795a8ad15c53690c8aaea0bc2fb2633b3019d2660ae39150243e657e8c8e",
+        "langflow": "sha256:3f175043b6e56d40df12126d2bed1f9dd6c03069b01d76c6126c257653e51c24",
+        "web": "sha256:87e746d9fc3b8ace2a58fe8d4a457c25fbb3718c507b44aa1fb54f81d45c8f38",
+        "postgres": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+      },
+      "commands": [
+        {
+          "argv": [
+            "docker",
+            "compose",
+            "ps",
+            "-q",
+            "api"
+          ],
+          "started_at": "2026-11-05T00:29:04.161925+00:00",
+          "ended_at": "2026-11-05T00:29:04.563089+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "api-container.stdout",
+          "stderr": "api-container.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "inspect",
+            "--format",
+            "{{.Image}} {{index .Config.Labels \"com.docker.compose.project\"}} {{index .Config.Labels \"com.docker.compose.service\"}}",
+            "f2e25de34bfd6ec895f41bf97180a8835c7dda96dadcab242455c4861131cf94"
+          ],
+          "started_at": "2026-11-05T00:29:04.563436+00:00",
+          "ended_at": "2026-11-05T00:29:04.964746+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "api-image.stdout",
+          "stderr": "api-image.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "compose",
+            "ps",
+            "-q",
+            "langflow"
+          ],
+          "started_at": "2026-11-05T00:29:04.965020+00:00",
+          "ended_at": "2026-11-05T00:29:05.366307+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "langflow-container.stdout",
+          "stderr": "langflow-container.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "inspect",
+            "--format",
+            "{{.Image}} {{index .Config.Labels \"com.docker.compose.project\"}} {{index .Config.Labels \"com.docker.compose.service\"}}",
+            "e0a84717075f544f890d4a7ff2cb1173aa7c9ae44c11ce3abb07f3d1bfde1c5c"
+          ],
+          "started_at": "2026-11-05T00:29:05.366489+00:00",
+          "ended_at": "2026-11-05T00:29:05.767961+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "langflow-image.stdout",
+          "stderr": "langflow-image.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "compose",
+            "ps",
+            "-q",
+            "web"
+          ],
+          "started_at": "2026-11-05T00:29:05.768149+00:00",
+          "ended_at": "2026-11-05T00:29:06.169757+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "web-container.stdout",
+          "stderr": "web-container.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "inspect",
+            "--format",
+            "{{.Image}} {{index .Config.Labels \"com.docker.compose.project\"}} {{index .Config.Labels \"com.docker.compose.service\"}}",
+            "1c614f40df62cb87b56f8499519b50263efad45cdd5ebee0470c5377e9b36b85"
+          ],
+          "started_at": "2026-11-05T00:29:06.169945+00:00",
+          "ended_at": "2026-11-05T00:29:06.571504+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "web-image.stdout",
+          "stderr": "web-image.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "compose",
+            "ps",
+            "-q",
+            "postgres"
+          ],
+          "started_at": "2026-11-05T00:29:06.571699+00:00",
+          "ended_at": "2026-11-05T00:29:06.973368+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "postgres-container.stdout",
+          "stderr": "postgres-container.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "inspect",
+            "--format",
+            "{{.Image}} {{index .Config.Labels \"com.docker.compose.project\"}} {{index .Config.Labels \"com.docker.compose.service\"}}",
+            "47424b36e3d9712b036d5e10fb6fa1cdbdad15f967954dc6b899e74b06a42b52"
+          ],
+          "started_at": "2026-11-05T00:29:06.973541+00:00",
+          "ended_at": "2026-11-05T00:29:07.375649+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "postgres-image.stdout",
+          "stderr": "postgres-image.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "run",
+            "--rm",
+            "--network",
+            "none",
+            "--read-only",
+            "--cap-drop",
+            "ALL",
+            "--security-opt",
+            "no-new-privileges",
+            "--memory",
+            "512m",
+            "--pids-limit",
+            "64",
+            "--env",
+            "PYTHONDONTWRITEBYTECODE=1",
+            "--entrypoint",
+            "python",
+            "sha256:3602795a8ad15c53690c8aaea0bc2fb2633b3019d2660ae39150243e657e8c8e",
+            "-m",
+            "pip",
+            "check"
+          ],
+          "started_at": "2026-11-05T00:29:07.375853+00:00",
+          "ended_at": "2026-11-05T00:29:08.579525+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "api-pip-check.stdout",
+          "stderr": "api-pip-check.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "run",
+            "--rm",
+            "--network",
+            "none",
+            "--read-only",
+            "--cap-drop",
+            "ALL",
+            "--security-opt",
+            "no-new-privileges",
+            "--memory",
+            "512m",
+            "--pids-limit",
+            "64",
+            "--env",
+            "PYTHONDONTWRITEBYTECODE=1",
+            "--entrypoint",
+            "python",
+            "sha256:3f175043b6e56d40df12126d2bed1f9dd6c03069b01d76c6126c257653e51c24",
+            "-m",
+            "pip",
+            "check"
+          ],
+          "started_at": "2026-11-05T00:29:08.579710+00:00",
+          "ended_at": "2026-11-05T00:29:09.783698+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "langflow-pip-check.stdout",
+          "stderr": "langflow-pip-check.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "run",
+            "--rm",
+            "--network",
+            "none",
+            "--read-only",
+            "--tmpfs",
+            "/tmp:rw,noexec,nosuid,size=32m",
+            "--cap-drop",
+            "ALL",
+            "--security-opt",
+            "no-new-privileges",
+            "--memory",
+            "512m",
+            "--pids-limit",
+            "64",
+            "--env",
+            "PYTHONDONTWRITEBYTECODE=1",
+            "-i",
+            "--entrypoint",
+            "python",
+            "sha256:3f175043b6e56d40df12126d2bed1f9dd6c03069b01d76c6126c257653e51c24",
+            "-B",
+            "-"
+          ],
+          "started_at": "2026-11-05T00:29:09.783926+00:00",
+          "ended_at": "2026-11-05T00:29:11.389042+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 14280,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": "6cd649ba0a3838f3de3ee8dadf920cd25130231c0d04fd36a2f2e1d0ce050cfc",
+          "stdout": "dependency-compatibility.stdout",
+          "stderr": "dependency-compatibility.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "run",
+            "--rm",
+            "--network",
+            "none",
+            "--read-only",
+            "--cap-drop",
+            "ALL",
+            "--security-opt",
+            "no-new-privileges",
+            "--memory",
+            "128m",
+            "--pids-limit",
+            "32",
+            "--env",
+            "PYTHONDONTWRITEBYTECODE=1",
+            "-i",
+            "--entrypoint",
+            "python",
+            "sha256:3f175043b6e56d40df12126d2bed1f9dd6c03069b01d76c6126c257653e51c24",
+            "-B",
+            "-"
+          ],
+          "started_at": "2026-11-05T00:29:11.389294+00:00",
+          "ended_at": "2026-11-05T00:29:11.791052+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 579,
+          "max_stdout_bytes": 6291456,
+          "stdin_sha256": "928acb42e1aed5f878017cb31e8ebb329745061032a7541b23e4cf488bde45f8",
+          "stdout": "system-materials.stdout",
+          "stderr": "system-materials.stderr"
+        },
+        {
+          "argv": [
+            "/home/runner/work/ai-review-console/ai-review-console/.venv/bin/python",
+            "scripts/scan_images_osv.py",
+            "--output-dir",
+            "/home/runner/work/_temp/arc-ci-evidence/release/images",
+            "--image",
+            "api=sha256:3602795a8ad15c53690c8aaea0bc2fb2633b3019d2660ae39150243e657e8c8e",
+            "--image",
+            "langflow=sha256:3f175043b6e56d40df12126d2bed1f9dd6c03069b01d76c6126c257653e51c24",
+            "--image",
+            "web=sha256:87e746d9fc3b8ace2a58fe8d4a457c25fbb3718c507b44aa1fb54f81d45c8f38",
+            "--image",
+            "postgres=sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c"
+          ],
+          "started_at": "2026-11-05T00:29:11.793362+00:00",
+          "ended_at": "2026-11-05T00:29:29.889029+00:00",
+          "exit_code": 2,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "image-audit.stdout",
+          "stderr": "image-audit.stderr"
+        },
+        {
+          "argv": [
+            "/home/runner/work/ai-review-console/ai-review-console/.venv/bin/python",
+            "scripts/scan_images_osv.py",
+            "--redhat-only",
+            "--image",
+            "langflow=sha256:3f175043b6e56d40df12126d2bed1f9dd6c03069b01d76c6126c257653e51c24",
+            "--output-dir",
+            "/home/runner/work/_temp/arc-ci-evidence/release/rhel"
+          ],
+          "started_at": "2026-11-05T00:29:29.889314+00:00",
+          "ended_at": "2026-11-05T00:29:33.513311+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "rhel-audit.stdout",
+          "stderr": "rhel-audit.stderr"
+        },
+        {
+          "argv": [
+            "/home/runner/work/ai-review-console/ai-review-console/.venv/bin/python",
+            "scripts/verify_image_licenses.py",
+            "--output-dir",
+            "/home/runner/work/_temp/arc-ci-evidence/release/licenses",
+            "--image",
+            "api=sha256:3602795a8ad15c53690c8aaea0bc2fb2633b3019d2660ae39150243e657e8c8e",
+            "--image",
+            "langflow=sha256:3f175043b6e56d40df12126d2bed1f9dd6c03069b01d76c6126c257653e51c24",
+            "--image",
+            "web=sha256:87e746d9fc3b8ace2a58fe8d4a457c25fbb3718c507b44aa1fb54f81d45c8f38"
+          ],
+          "started_at": "2026-11-05T00:29:33.513556+00:00",
+          "ended_at": "2026-11-05T00:29:36.339555+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "image-licenses.stdout",
+          "stderr": "image-licenses.stderr"
+        },
+        {
+          "argv": [
+            "/home/runner/work/ai-review-console/ai-review-console/.venv/bin/python",
+            "scripts/verify_native_materials.py",
+            "--image",
+            "api=sha256:3602795a8ad15c53690c8aaea0bc2fb2633b3019d2660ae39150243e657e8c8e",
+            "--image",
+            "langflow=sha256:3f175043b6e56d40df12126d2bed1f9dd6c03069b01d76c6126c257653e51c24",
+            "--output-dir",
+            "/home/runner/work/_temp/arc-ci-evidence/release/native",
+            "--followup",
+            "--baseline-manifest",
+            "compliance/native-baseline.json"
+          ],
+          "started_at": "2026-11-05T00:29:36.339745+00:00",
+          "ended_at": "2026-11-05T00:29:37.554540+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "native-materials.stdout",
+          "stderr": "native-materials.stderr"
+        }
+      ],
+      "collection_state": "collected",
+      "audits": {
+        "package_scan_exit_code": 2,
+        "redhat_supplement_exit_code": 0
+      },
+      "workflow_original": {
+        "path": "workflow.json",
+        "bytes": 7134,
+        "sha256": "a8b6b9528218cef611ef8e35371bba67a26a9efa6f2f31144e65ae8878c6dfc5"
+      },
+      "workflow": {
+        "langflow_version": "1.11.6",
+        "component_count": 5,
+        "result": "passed",
+        "stored_flow_hashes_before": {
+          "Document Review Intake": "e1b0cdcd3c26657da65069d0c344ec3fab87947b4e5cacb6bd1f15796e9dd7c7",
+          "Document Review Decision": "5c423209971c9d6263538e5ca15a4896f3505e2b5e084fbffbfccd2308e531d7"
+        },
+        "stored_flow_hashes_after": {
+          "Document Review Intake": "e1b0cdcd3c26657da65069d0c344ec3fab87947b4e5cacb6bd1f15796e9dd7c7",
+          "Document Review Decision": "5c423209971c9d6263538e5ca15a4896f3505e2b5e084fbffbfccd2308e531d7"
+        }
+      },
+      "scan": {
+        "original": {
+          "path": "release/images/summary.json",
+          "bytes": 65679,
+          "sha256": "598a0157c38231ccb7c0add48a51cd019356990ec80b5a1c8057950b29191800"
+        },
+        "union": 237,
+        "unknown": {
+          "mapping_unknown": 227,
+          "query_unknown": 0,
+          "detail_unknown": 0
+        },
+        "images": {
+          "api": {
+            "image_id": "sha256:3602795a8ad15c53690c8aaea0bc2fb2633b3019d2660ae39150243e657e8c8e",
+            "inventory_packages": 140,
+            "unknown_packages": 0,
+            "matched_binary_or_python_packages": 51,
+            "observed_unique_advisory_ids": 127,
+            "detail_unknown": 0
+          },
+          "langflow": {
+            "image_id": "sha256:3f175043b6e56d40df12126d2bed1f9dd6c03069b01d76c6126c257653e51c24",
+            "inventory_packages": 777,
+            "unknown_packages": 227,
+            "matched_binary_or_python_packages": 5,
+            "observed_unique_advisory_ids": 81,
+            "detail_unknown": 0
+          },
+          "web": {
+            "image_id": "sha256:87e746d9fc3b8ace2a58fe8d4a457c25fbb3718c507b44aa1fb54f81d45c8f38",
+            "inventory_packages": 71,
+            "unknown_packages": 0,
+            "matched_binary_or_python_packages": 0,
+            "observed_unique_advisory_ids": 0,
+            "detail_unknown": 0
+          },
+          "postgres": {
+            "image_id": "sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c",
+            "inventory_packages": 142,
+            "unknown_packages": 0,
+            "matched_binary_or_python_packages": 63,
+            "observed_unique_advisory_ids": 131,
+            "detail_unknown": 0
+          }
+        }
+      },
+      "rhel": {
+        "original": {
+          "path": "release/rhel/summary.json",
+          "bytes": 670,
+          "sha256": "5d6d236614313a1eae6db07dec2da18107755c280dfb45660a24f3a7346870d8"
+        },
+        "image_id": "sha256:3f175043b6e56d40df12126d2bed1f9dd6c03069b01d76c6126c257653e51c24",
+        "rpm_entries": 227,
+        "mapped_software_packages": 224,
+        "metadata_only_public_keys": 3,
+        "observed_unique_advisory_ids": 0,
+        "mapping_unknown": 0,
+        "query_unknown": 0,
+        "detail_unknown": 0
+      },
+      "native": {
+        "starting_budget": {
+          "files": 9,
+          "input_bytes": 26907808,
+          "text_bytes": 4082537
+        },
+        "remaining_budget": {
+          "files": 8,
+          "input_bytes": 26852095,
+          "text_bytes": 4026824
+        },
+        "current_invocation_read_files": 1,
+        "current_invocation_input_bytes": 55713,
+        "goal_known_input_bytes": 135779466,
+        "baseline": {
+          "path": "compliance/native-baseline.json",
+          "sha256": "ba73fb69a3d4644b5d0b49d64d32928ef9d1628716ea7d5289524e949ea4ce81",
+          "source_commit": "185848006c2ea97ad24bead72f726c3a0d467dd4",
+          "original_materials_sha256": "557010a4b7d40eb40176cd926df59946603d95e843047ed51826e64a2e7fc60b",
+          "known_goal_input_bytes": 135723753
+        },
+        "mode": "targeted_followup",
+        "original": {
+          "path": "release/native/materials.json",
+          "bytes": 62850,
+          "sha256": "82ae9b285bc121c98a61de7ddafe67653b00a5ff236ceb73662f8998e1927048"
+        },
+        "exact_body_references": [
+          {
+            "path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_en",
+            "state": "recorded",
+            "sha256": "0e83c4ba0bc0da1a24fd6a828002575acf4933e48f43cb5569ad02436ff5fb6e",
+            "resolved_path": "/app/.venv/lib/python3.14/site-packages/clidriver/license/UNIX/odbc_LI_en",
+            "file_bytes": 55713,
+            "bytes_read": 55713,
+            "purpose": "driver_exact_english_agreement",
+            "owner_basis": "known185layout; cross-check same-image generic inventory",
+            "metadata_or_record_reread": false,
+            "prior_original": "/private/tmp/arc-runtime-maintenance.wT9huB/ci/native-close/amd64/release/native/materials.json",
+            "prior_original_sha256": "c2a686dbe72b2f622f08f39e192c75c134969e7292ff9b85a7e8a503ca3d06ce",
+            "exact_text_bytes_equal": true
+          }
+        ]
+      }
+    },
+    "arm64": {
+      "original_manifest": {
+        "path": "release/manifest.json",
+        "bytes": 30373,
+        "sha256": "9e52c9341da0eb16ee836916e7b309b40159ae3718a249dbb7510dfa2e28f191"
+      },
+      "source_inputs": [
+        {
+          "path": "scripts/collect_release_ci.py",
+          "sha256": "4d7feedf23997471fd0b1202750c8d1df3f3bbcc72666562ad96dbfc84d8fd97"
+        },
+        {
+          "path": "scripts/scan_images_osv.py",
+          "sha256": "0358ef68c8d866847f870f08770716d32cb2968b3eb684d2f00cb5088b9001db"
+        },
+        {
+          "path": "scripts/scan_release.py",
+          "sha256": "f3f353ff9a50651aa864aa75dbb480da9481dc78aaacaac2b74a90616558ea0c"
+        },
+        {
+          "path": "scripts/verify_image_licenses.py",
+          "sha256": "b4021bd6e0a432acdb9557ba8bc5fe95d5829171fce0490ff8f8d5e962ba4a32"
+        },
+        {
+          "path": "scripts/verify_dependency_compatibility.py",
+          "sha256": "6cd649ba0a3838f3de3ee8dadf920cd25130231c0d04fd36a2f2e1d0ce050cfc"
+        },
+        {
+          "path": "scripts/apply_system_updates.py",
+          "sha256": "50ac38282e4bce3d2619d8dd3af46885c217fe6f9e3bf1e5b0ef58f39c3b8821"
+        },
+        {
+          "path": "scripts/verify_native_materials.py",
+          "sha256": "dffe7c32d0fd61f41a6f3e4e0bf0f4affc201ff4ffdeb716c1c7811f9ebd8765"
+        },
+        {
+          "path": "compliance/native-baseline.json",
+          "sha256": "ba73fb69a3d4644b5d0b49d64d32928ef9d1628716ea7d5289524e949ea4ce81"
+        },
+        {
+          "path": "docs/UPGRADE_SPEC.md",
+          "sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753"
+        }
+      ],
+      "images": {
+        "api": "sha256:871a530492a70868c1a40b7ea73faf7de8569c4619c2a109b8f6b810f10f3816",
+        "langflow": "sha256:27392f99c627bc1f73b6abc8e3b93f21fd828224f55643cf3b7ed835e77afa58",
+        "web": "sha256:9eff15e8ba74a32daef6a559a7fa866b5704199eb55bacae52d427e18657af8e",
+        "postgres": "sha256:6162f3765f7563b273a879894c5751d41285f922dd75ba0ba508a89e024e43ca"
+      },
+      "commands": [
+        {
+          "argv": [
+            "docker",
+            "compose",
+            "ps",
+            "-q",
+            "api"
+          ],
+          "started_at": "2026-11-05T00:26:08.545985+00:00",
+          "ended_at": "2026-11-05T00:26:08.947010+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "api-container.stdout",
+          "stderr": "api-container.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "inspect",
+            "--format",
+            "{{.Image}} {{index .Config.Labels \"com.docker.compose.project\"}} {{index .Config.Labels \"com.docker.compose.service\"}}",
+            "f94e698d8745ada4977d94d22401ca71530500dd5ea72378f71eb9e8820cbee6"
+          ],
+          "started_at": "2026-11-05T00:26:08.947234+00:00",
+          "ended_at": "2026-11-05T00:26:09.348269+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "api-image.stdout",
+          "stderr": "api-image.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "compose",
+            "ps",
+            "-q",
+            "langflow"
+          ],
+          "started_at": "2026-11-05T00:26:09.348507+00:00",
+          "ended_at": "2026-11-05T00:26:09.749715+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "langflow-container.stdout",
+          "stderr": "langflow-container.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "inspect",
+            "--format",
+            "{{.Image}} {{index .Config.Labels \"com.docker.compose.project\"}} {{index .Config.Labels \"com.docker.compose.service\"}}",
+            "118ead0e175758afe28dac09971b8a6ca2cd6599c7455b49b12d0587caeaff11"
+          ],
+          "started_at": "2026-11-05T00:26:09.749887+00:00",
+          "ended_at": "2026-11-05T00:26:10.151017+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "langflow-image.stdout",
+          "stderr": "langflow-image.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "compose",
+            "ps",
+            "-q",
+            "web"
+          ],
+          "started_at": "2026-11-05T00:26:10.151179+00:00",
+          "ended_at": "2026-11-05T00:26:10.552521+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "web-container.stdout",
+          "stderr": "web-container.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "inspect",
+            "--format",
+            "{{.Image}} {{index .Config.Labels \"com.docker.compose.project\"}} {{index .Config.Labels \"com.docker.compose.service\"}}",
+            "e536975e1d97f687c1813c1edf189783dc288eaa64626f283e56c379da215366"
+          ],
+          "started_at": "2026-11-05T00:26:10.552712+00:00",
+          "ended_at": "2026-11-05T00:26:10.953995+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "web-image.stdout",
+          "stderr": "web-image.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "compose",
+            "ps",
+            "-q",
+            "postgres"
+          ],
+          "started_at": "2026-11-05T00:26:10.954132+00:00",
+          "ended_at": "2026-11-05T00:26:11.355355+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "postgres-container.stdout",
+          "stderr": "postgres-container.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "inspect",
+            "--format",
+            "{{.Image}} {{index .Config.Labels \"com.docker.compose.project\"}} {{index .Config.Labels \"com.docker.compose.service\"}}",
+            "99ba387ce4267235b267b4ae94ee1e7e51cec4127e2bfe8e96176136a86a89ea"
+          ],
+          "started_at": "2026-11-05T00:26:11.355511+00:00",
+          "ended_at": "2026-11-05T00:26:11.756729+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "postgres-image.stdout",
+          "stderr": "postgres-image.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "run",
+            "--rm",
+            "--network",
+            "none",
+            "--read-only",
+            "--cap-drop",
+            "ALL",
+            "--security-opt",
+            "no-new-privileges",
+            "--memory",
+            "512m",
+            "--pids-limit",
+            "64",
+            "--env",
+            "PYTHONDONTWRITEBYTECODE=1",
+            "--entrypoint",
+            "python",
+            "sha256:871a530492a70868c1a40b7ea73faf7de8569c4619c2a109b8f6b810f10f3816",
+            "-m",
+            "pip",
+            "check"
+          ],
+          "started_at": "2026-11-05T00:26:11.756865+00:00",
+          "ended_at": "2026-11-05T00:26:12.558667+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "api-pip-check.stdout",
+          "stderr": "api-pip-check.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "run",
+            "--rm",
+            "--network",
+            "none",
+            "--read-only",
+            "--cap-drop",
+            "ALL",
+            "--security-opt",
+            "no-new-privileges",
+            "--memory",
+            "512m",
+            "--pids-limit",
+            "64",
+            "--env",
+            "PYTHONDONTWRITEBYTECODE=1",
+            "--entrypoint",
+            "python",
+            "sha256:27392f99c627bc1f73b6abc8e3b93f21fd828224f55643cf3b7ed835e77afa58",
+            "-m",
+            "pip",
+            "check"
+          ],
+          "started_at": "2026-11-05T00:26:12.558824+00:00",
+          "ended_at": "2026-11-05T00:26:13.761046+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "langflow-pip-check.stdout",
+          "stderr": "langflow-pip-check.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "run",
+            "--rm",
+            "--network",
+            "none",
+            "--read-only",
+            "--tmpfs",
+            "/tmp:rw,noexec,nosuid,size=32m",
+            "--cap-drop",
+            "ALL",
+            "--security-opt",
+            "no-new-privileges",
+            "--memory",
+            "512m",
+            "--pids-limit",
+            "64",
+            "--env",
+            "PYTHONDONTWRITEBYTECODE=1",
+            "-i",
+            "--entrypoint",
+            "python",
+            "sha256:27392f99c627bc1f73b6abc8e3b93f21fd828224f55643cf3b7ed835e77afa58",
+            "-B",
+            "-"
+          ],
+          "started_at": "2026-11-05T00:26:13.761251+00:00",
+          "ended_at": "2026-11-05T00:26:15.364211+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 14280,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": "6cd649ba0a3838f3de3ee8dadf920cd25130231c0d04fd36a2f2e1d0ce050cfc",
+          "stdout": "dependency-compatibility.stdout",
+          "stderr": "dependency-compatibility.stderr"
+        },
+        {
+          "argv": [
+            "docker",
+            "run",
+            "--rm",
+            "--network",
+            "none",
+            "--read-only",
+            "--cap-drop",
+            "ALL",
+            "--security-opt",
+            "no-new-privileges",
+            "--memory",
+            "128m",
+            "--pids-limit",
+            "32",
+            "--env",
+            "PYTHONDONTWRITEBYTECODE=1",
+            "-i",
+            "--entrypoint",
+            "python",
+            "sha256:27392f99c627bc1f73b6abc8e3b93f21fd828224f55643cf3b7ed835e77afa58",
+            "-B",
+            "-"
+          ],
+          "started_at": "2026-11-05T00:26:15.364430+00:00",
+          "ended_at": "2026-11-05T00:26:15.765762+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 579,
+          "max_stdout_bytes": 6291456,
+          "stdin_sha256": "928acb42e1aed5f878017cb31e8ebb329745061032a7541b23e4cf488bde45f8",
+          "stdout": "system-materials.stdout",
+          "stderr": "system-materials.stderr"
+        },
+        {
+          "argv": [
+            "/home/runner/work/ai-review-console/ai-review-console/.venv/bin/python",
+            "scripts/scan_images_osv.py",
+            "--output-dir",
+            "/home/runner/work/_temp/arc-ci-evidence/release/images",
+            "--image",
+            "api=sha256:871a530492a70868c1a40b7ea73faf7de8569c4619c2a109b8f6b810f10f3816",
+            "--image",
+            "langflow=sha256:27392f99c627bc1f73b6abc8e3b93f21fd828224f55643cf3b7ed835e77afa58",
+            "--image",
+            "web=sha256:9eff15e8ba74a32daef6a559a7fa866b5704199eb55bacae52d427e18657af8e",
+            "--image",
+            "postgres=sha256:6162f3765f7563b273a879894c5751d41285f922dd75ba0ba508a89e024e43ca"
+          ],
+          "started_at": "2026-11-05T00:26:15.767319+00:00",
+          "ended_at": "2026-11-05T00:26:31.817060+00:00",
+          "exit_code": 2,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "image-audit.stdout",
+          "stderr": "image-audit.stderr"
+        },
+        {
+          "argv": [
+            "/home/runner/work/ai-review-console/ai-review-console/.venv/bin/python",
+            "scripts/scan_images_osv.py",
+            "--redhat-only",
+            "--image",
+            "langflow=sha256:27392f99c627bc1f73b6abc8e3b93f21fd828224f55643cf3b7ed835e77afa58",
+            "--output-dir",
+            "/home/runner/work/_temp/arc-ci-evidence/release/rhel"
+          ],
+          "started_at": "2026-11-05T00:26:31.817240+00:00",
+          "ended_at": "2026-11-05T00:26:35.030156+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "rhel-audit.stdout",
+          "stderr": "rhel-audit.stderr"
+        },
+        {
+          "argv": [
+            "/home/runner/work/ai-review-console/ai-review-console/.venv/bin/python",
+            "scripts/verify_image_licenses.py",
+            "--output-dir",
+            "/home/runner/work/_temp/arc-ci-evidence/release/licenses",
+            "--image",
+            "api=sha256:871a530492a70868c1a40b7ea73faf7de8569c4619c2a109b8f6b810f10f3816",
+            "--image",
+            "langflow=sha256:27392f99c627bc1f73b6abc8e3b93f21fd828224f55643cf3b7ed835e77afa58",
+            "--image",
+            "web=sha256:9eff15e8ba74a32daef6a559a7fa866b5704199eb55bacae52d427e18657af8e"
+          ],
+          "started_at": "2026-11-05T00:26:35.030322+00:00",
+          "ended_at": "2026-11-05T00:26:37.440914+00:00",
+          "exit_code": 0,
+          "stop_reason": null,
+          "stdin_bytes": 0,
+          "max_stdout_bytes": 2097152,
+          "stdin_sha256": null,
+          "stdout": "image-licenses.stdout",
+          "stderr": "image-licenses.stderr"
+        }
+      ],
+      "collection_state": "collected",
+      "audits": {
+        "package_scan_exit_code": 2,
+        "redhat_supplement_exit_code": 0
+      },
+      "workflow_original": {
+        "path": "workflow.json",
+        "bytes": 7134,
+        "sha256": "b9897fbec8e31ff203f751043262a075058874ba117626e5e9b9f0aed04d9c47"
+      },
+      "workflow": {
+        "langflow_version": "1.11.6",
+        "component_count": 5,
+        "result": "passed",
+        "stored_flow_hashes_before": {
+          "Document Review Intake": "e1b0cdcd3c26657da65069d0c344ec3fab87947b4e5cacb6bd1f15796e9dd7c7",
+          "Document Review Decision": "5c423209971c9d6263538e5ca15a4896f3505e2b5e084fbffbfccd2308e531d7"
+        },
+        "stored_flow_hashes_after": {
+          "Document Review Intake": "e1b0cdcd3c26657da65069d0c344ec3fab87947b4e5cacb6bd1f15796e9dd7c7",
+          "Document Review Decision": "5c423209971c9d6263538e5ca15a4896f3505e2b5e084fbffbfccd2308e531d7"
+        }
+      },
+      "scan": {
+        "original": {
+          "path": "release/images/summary.json",
+          "bytes": 65679,
+          "sha256": "a1dbd208a4408a1b764b2cea0db819ddeaaf03f8b0b5732364af6cc47c772eb8"
+        },
+        "union": 237,
+        "unknown": {
+          "mapping_unknown": 227,
+          "query_unknown": 0,
+          "detail_unknown": 0
+        },
+        "images": {
+          "api": {
+            "image_id": "sha256:871a530492a70868c1a40b7ea73faf7de8569c4619c2a109b8f6b810f10f3816",
+            "inventory_packages": 140,
+            "unknown_packages": 0,
+            "matched_binary_or_python_packages": 51,
+            "observed_unique_advisory_ids": 127,
+            "detail_unknown": 0
+          },
+          "langflow": {
+            "image_id": "sha256:27392f99c627bc1f73b6abc8e3b93f21fd828224f55643cf3b7ed835e77afa58",
+            "inventory_packages": 773,
+            "unknown_packages": 227,
+            "matched_binary_or_python_packages": 5,
+            "observed_unique_advisory_ids": 81,
+            "detail_unknown": 0
+          },
+          "web": {
+            "image_id": "sha256:9eff15e8ba74a32daef6a559a7fa866b5704199eb55bacae52d427e18657af8e",
+            "inventory_packages": 71,
+            "unknown_packages": 0,
+            "matched_binary_or_python_packages": 0,
+            "observed_unique_advisory_ids": 0,
+            "detail_unknown": 0
+          },
+          "postgres": {
+            "image_id": "sha256:6162f3765f7563b273a879894c5751d41285f922dd75ba0ba508a89e024e43ca",
+            "inventory_packages": 142,
+            "unknown_packages": 0,
+            "matched_binary_or_python_packages": 63,
+            "observed_unique_advisory_ids": 131,
+            "detail_unknown": 0
+          }
+        }
+      },
+      "rhel": {
+        "original": {
+          "path": "release/rhel/summary.json",
+          "bytes": 670,
+          "sha256": "711686506d75ef9cf9504a48e87406077ebe90c1d1ccff461093ba315817d131"
+        },
+        "image_id": "sha256:27392f99c627bc1f73b6abc8e3b93f21fd828224f55643cf3b7ed835e77afa58",
+        "rpm_entries": 227,
+        "mapped_software_packages": 224,
+        "metadata_only_public_keys": 3,
+        "observed_unique_advisory_ids": 0,
+        "mapping_unknown": 0,
+        "query_unknown": 0,
+        "detail_unknown": 0
+      }
+    },
+    "unit": {
+      "original": {
+        "path": "arc-unit.xml",
+        "bytes": 26774,
+        "sha256": "d7b6ee0e0c784bd93f04d85f7d7c1610e1a94d05b9e14dcf19f6daaef91b98e7"
+      },
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "194",
+          "time": "4.353",
+          "timestamp": "2026-11-05T00:23:04.410831+00:00",
+          "hostname": "ip-10-0-135-192"
+        }
+      ]
+    }
+  },
+  "verify_excerpt": [
+    "2026-11-05T00:23:08.9867282Z 194 passed, 1 warning in 4.35s",
+    "2026-11-05T00:23:37.1355692Z  Test Files  5 passed (5)",
+    "2026-11-05T00:23:37.1356966Z       Tests  29 passed (29)"
+  ]
+}

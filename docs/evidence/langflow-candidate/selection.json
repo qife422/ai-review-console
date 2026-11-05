@@ -1,0 +1,414 @@
+{
+  "classification": "candidate_until_manifest",
+  "method": "Explicit source originals and qualified derived CI observations. Private transports, pytest scratch and unselected full reports are excluded. No whole build tree backup.",
+  "files": [
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/plan.json",
+      "path": "environment/plan.json",
+      "bytes": 1499,
+      "sha256": "c4050051a4c5a5102ba78f3d07f6b337c3024c42591439dc2f0eeddfddab0462"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/budget-decision.json",
+      "path": "environment/budget-decision.json",
+      "bytes": 438,
+      "sha256": "a5bc60990c647dcc74dad7a22959fb5a868795c9ff87ec97420e228e16fca690"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/final-observation.json",
+      "path": "environment/final-observation.json",
+      "bytes": 74141,
+      "sha256": "6723754c0d9d1aad94744f2e78152fb4a50b86cf41092edc4f0ab1c71825b947"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/failure-joblog-tail.stdout",
+      "path": "ci/candidate/failure-joblog-tail.stdout",
+      "bytes": 16384,
+      "sha256": "e9a2cd60970d4a4223eee6cd36989b7b10e697ca62d5f1071eae5f3c6ea76030"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/final/api.json",
+      "path": "ci/candidate/final/api.json",
+      "bytes": 789,
+      "sha256": "a7cc11ec6340611087e90b057585e0c23e36cf19a2e4ac70d39e7c81a212b2fd"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/final/gui/commands.log",
+      "path": "ci/candidate/final/gui/commands.log",
+      "bytes": 10867,
+      "sha256": "6666e366078bdcdde3319606213e68255edb5a869f33151c7e3eab106de33f95"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/final/gui/flows-visible.txt",
+      "path": "ci/candidate/final/gui/flows-visible.txt",
+      "bytes": 4074,
+      "sha256": "9ae8eeb4178e43ba329ee4dd73c1fb4ab0310db64b5f3093e32b6ebe82a034d2"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/final/gui/result.json",
+      "path": "ci/candidate/final/gui/result.json",
+      "bytes": 396,
+      "sha256": "9b10204ba5b0128849b4ccaf2e9155c07ac1ff4bf9e48c86069a634dac6292e5"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/final/identity.json",
+      "path": "ci/candidate/final/identity.json",
+      "bytes": 246,
+      "sha256": "ec7e1eda23bc6bdcb129941b6cd2df29d05c48be84354cbf1d55c60ba0edf382"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/final/metadata/licenses/critical-package-licenses.json",
+      "path": "ci/candidate/final/metadata/licenses/critical-package-licenses.json",
+      "bytes": 11078,
+      "sha256": "db43af7615729ff5768fedb4de99c0994c70969d390dff1f0532ef51d4dccb3a"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/final/metadata/runner-capacity.txt",
+      "path": "ci/candidate/final/metadata/runner-capacity.txt",
+      "bytes": 1533,
+      "sha256": "f2ba3767214af48640d2036e9af14e2c0b1b154cd0d8261c35d4d000d460165a"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/final/metadata/scan/summary.json",
+      "path": "ci/candidate/final/metadata/scan/summary.json",
+      "bytes": 27826,
+      "sha256": "192aaad16cb3dc3fe6bfb98663c09715ac431e882cb73b86d4f04f470b9a8cb2"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/final/metadata/scan-exit-code.txt",
+      "path": "ci/candidate/final/metadata/scan-exit-code.txt",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/final/metadata/scan-license-selection.json",
+      "path": "ci/candidate/final/metadata/scan-license-selection.json",
+      "bytes": 3556,
+      "sha256": "5d457076ded9fec02c5ae253667b8c7078edc528bebcc24f1796049136b45b90"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/final/metadata/scanned-image-id.txt",
+      "path": "ci/candidate/final/metadata/scanned-image-id.txt",
+      "bytes": 72,
+      "sha256": "4199d3b9b326a4b8ca37254b3fde42cf6db9e65f3c1dc9313c9f6a3cc4fae78d"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/final/metadata/workflow.json",
+      "path": "ci/candidate/final/metadata/workflow.json",
+      "bytes": 7186,
+      "sha256": "89d821cd0e7667fbc1734a09fede34d900d9cce93fd1487f651169afbd9ce7b5"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/final/native-license-texts.json",
+      "path": "ci/candidate/final/native-license-texts.json",
+      "bytes": 2091,
+      "sha256": "0f5ea746decc9923c81fc5ed8f58b4365e1655cb1b3a0ea86320953a36916e13"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/final/selection.json",
+      "path": "ci/candidate/final/selection.json",
+      "bytes": 44512,
+      "sha256": "c649845f815c4d947b355967b61d9a653c7c0c580694394bcbfdb03fd77b99c6"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/final/summary.json",
+      "path": "ci/candidate/final/summary.json",
+      "bytes": 629,
+      "sha256": "41982c9298c81f607bb70c7b0b6c1ac8785562672d4f2891dbbc6a3450cdaf79"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/metadata/arc-unit.xml",
+      "path": "ci/candidate/metadata/arc-unit.xml",
+      "bytes": 26772,
+      "sha256": "2a851682e28208a8035999b764ef0142f7b0f24db2e5d2340a92afce6ad76d45"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/metadata/runner-capacity.txt",
+      "path": "ci/candidate/metadata/runner-capacity.txt",
+      "bytes": 719,
+      "sha256": "ee59b1d1963f98ead847309e461f9bad9efa6f6db9ddff185a49c7b0187624cd"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/metadata/runtime.log",
+      "path": "ci/candidate/metadata/runtime.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/metadata/scan-license-selection.json",
+      "path": "ci/candidate/metadata/scan-license-selection.json",
+      "bytes": 109,
+      "sha256": "0b5cd10a8b59bd7dba76a655a721f171ab4dbd819c24ec52068c596c2748cb10"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/metadata/services.json",
+      "path": "ci/candidate/metadata/services.json",
+      "bytes": 2875,
+      "sha256": "526d0e49ce0017dd6b02ec4594cd515072983173ec2e1542620040e988d880ba"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/second/api.json",
+      "path": "ci/candidate/second/api.json",
+      "bytes": 789,
+      "sha256": "1871c7d9dd34e18e80f3b215776b1e311ad16b5660982a00c173fe1b21f16e6e"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/second/gui/commands.log",
+      "path": "ci/candidate/second/gui/commands.log",
+      "bytes": 3380,
+      "sha256": "ad64d60965009310a2ddb36037085793336e1d90e9fed1670f605edb73c18766"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/second/gui/result.json",
+      "path": "ci/candidate/second/gui/result.json",
+      "bytes": 356,
+      "sha256": "db73fcaff9bc8dc2c64f837381722ea226d601de13d2079138d03642c9677c8a"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/second/identity.json",
+      "path": "ci/candidate/second/identity.json",
+      "bytes": 246,
+      "sha256": "bdfbad7369530abb8d5ab08859aad97f87558ceb9ced8986e7a478ca07c02f94"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/second/inventory.json",
+      "path": "ci/candidate/second/inventory.json",
+      "bytes": 48631,
+      "sha256": "8afd65b961c8772146dad70e64894911a8b5edb951178d5c5f13d7d5fabf1e41"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/second/metadata/arc-unit.xml",
+      "path": "ci/candidate/second/metadata/arc-unit.xml",
+      "bytes": 26772,
+      "sha256": "dd7586745e4e7a1b5d91cb41685b79d1e8626a6a35b333c2ecef939a8461874c"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/second/metadata/runner-capacity.txt",
+      "path": "ci/candidate/second/metadata/runner-capacity.txt",
+      "bytes": 1237,
+      "sha256": "53c2c0ad5e298628246f8870b84ac8f0b52ec436fb8428122d7fa8fb645a47f2"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/second/metadata/runtime.log",
+      "path": "ci/candidate/second/metadata/runtime.log",
+      "bytes": 14396,
+      "sha256": "b0b40adbd0e6b64077b5d3ba0053ab7d74bfbe73cca917ec6418a40a1fe6b526"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/second/metadata/scan-license-selection.json",
+      "path": "ci/candidate/second/metadata/scan-license-selection.json",
+      "bytes": 109,
+      "sha256": "0b5cd10a8b59bd7dba76a655a721f171ab4dbd819c24ec52068c596c2748cb10"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/second/metadata/services.json",
+      "path": "ci/candidate/second/metadata/services.json",
+      "bytes": 7084,
+      "sha256": "c7623a28c4f9ccf05a5939d18f9f7b006e4798ea31dd36da71602644296c315a"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/second/metadata/workflow.json",
+      "path": "ci/candidate/second/metadata/workflow.json",
+      "bytes": 7186,
+      "sha256": "dbf3e1ab47d0088d5b65e35237d3774e138bb935eabe85ec4c95b99033d29a4d"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/second/selection.json",
+      "path": "ci/candidate/second/selection.json",
+      "bytes": 12284,
+      "sha256": "f289f30db14af5fe98b41e7acac761d8107abbaaabb83dfa3d0764c6c8142512"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/second/summary.json",
+      "path": "ci/candidate/second/summary.json",
+      "bytes": 629,
+      "sha256": "badff7bff7c34dfe739628c6a298f1094b51b005e88948d73f5ff80025d888ba"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/candidate/selection.json",
+      "path": "ci/candidate/selection.json",
+      "bytes": 6939,
+      "sha256": "aa8b1db61081dc09581f24590c195ba2d579a5e6a288b9daf3a9d91e691c1e21"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/default-baseline/native-budget-reconciliation.json",
+      "path": "ci/default-baseline/native-budget-reconciliation.json",
+      "bytes": 1922,
+      "sha256": "7fe16a15f46bf69deb55289b462b84bd3f2f1bfadb2d4badce87a15f4f0cdd24"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/default-baseline/selection.json",
+      "path": "ci/default-baseline/selection.json",
+      "bytes": 102439,
+      "sha256": "e7b13e1ab918c5b80c379811714614f8dcb1736fdccfe0925fdcca7adb617c6c"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/select_candidate.py",
+      "path": "ci/select_candidate.py",
+      "bytes": 4368,
+      "sha256": "ed94903bc9c877e034e21731a57effe1867dba2f70a16558aa4c658a95aa5a3c"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/select_ci.py",
+      "path": "ci/select_ci.py",
+      "bytes": 8554,
+      "sha256": "932a0b90fb9d48ca01150864cae2164d8800978bb39b80703af8911d39c69805"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/ci/select_final.py",
+      "path": "ci/select_final.py",
+      "bytes": 7287,
+      "sha256": "e04ea724d8526814dc35d3af0edcb5b4181d6ed33121e781a2270770f5c978fb"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/sources/apsw-3.53.4.0-LICENSE.txt",
+      "path": "sources/apsw-3.53.4.0-LICENSE.txt",
+      "bytes": 1166,
+      "sha256": "b85a7dc6463f286c14a638070a14f4888564ac7245dc99a17950ec24cf1a7b9d"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/sources/base-pyproject.toml",
+      "path": "sources/base-pyproject.toml",
+      "bytes": 17621,
+      "sha256": "35e6ba73ae8863a68ef7f28315e4a08630afa6be23dfa92cddd6c488e890f17f"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/sources/candidate-source-record.json",
+      "path": "sources/candidate-source-record.json",
+      "bytes": 3146,
+      "sha256": "b626c376606cc17ddeda1ef16ec9c87c076e5a01fa8018ca2ac8c996d80c07a9"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/sources/database-url-derived-review.json",
+      "path": "sources/database-url-derived-review.json",
+      "bytes": 2569,
+      "sha256": "92faf74e1e1446d54a12113e46ca5c0330d51b13e4a234b72d7350cddad01608"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/sources/langflow-1.13.1-license-source.json",
+      "path": "sources/langflow-1.13.1-license-source.json",
+      "bytes": 2459,
+      "sha256": "550dbc47669509210a1441face08ddf560d9650a7ab9235550aec63e9a0ea3c9"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/sources/langflow-1.13.1.json",
+      "path": "sources/langflow-1.13.1.json",
+      "bytes": 10144,
+      "sha256": "10715be762a5ca087f615d0a4f638159bcedd708ef377087142659840a5683a5"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/sources/langflow-base-1.13.1.json",
+      "path": "sources/langflow-base-1.13.1.json",
+      "bytes": 15325,
+      "sha256": "8dd81c62dad71923372cd98af2d6da8a6201b7f0270b83fab6c26aef38894f16"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/sources/langflow-family-1.13.1-osv-query-record.json",
+      "path": "sources/langflow-family-1.13.1-osv-query-record.json",
+      "bytes": 1445,
+      "sha256": "073ffabb87f643edd1cf10775fb8e91b743ed843704d916043e01edf9d0bbbd1"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/sources/langflow-family-1.13.1-osv-response.json",
+      "path": "sources/langflow-family-1.13.1-osv-response.json",
+      "bytes": 2,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/sources/lfx-1.13.1.json",
+      "path": "sources/lfx-1.13.1.json",
+      "bytes": 36917,
+      "sha256": "8e2a89e9995af49a43693f080d33db21a13589e92c216131239b1f01728b6c9f"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/sources/sqlite-native-source-review.json",
+      "path": "sources/sqlite-native-source-review.json",
+      "bytes": 3325,
+      "sha256": "9c72d5b77e3d4e7bceaf73944eddfda9e19cfba1977fed6616f0cfb23c6cde7d"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/sources/sqlite-vec-0.1.9-LICENSE-MIT.txt",
+      "path": "sources/sqlite-vec-0.1.9-LICENSE-MIT.txt",
+      "bytes": 1068,
+      "sha256": "6ce72bbe12d975bd5286e5ab0a064c069693300c47bccbc57bec18485f1621ea"
+    },
+    {
+      "source": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/.github/workflows/langflow-candidate.yml",
+      "path": "producers/.github/workflows/langflow-candidate.yml",
+      "bytes": 11600,
+      "sha256": "08b70db1130be58c2ee330aab719f37d5ea07c3dbeb8e2abb47b651986d6cf6a"
+    },
+    {
+      "source": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/compliance/langflow-candidate-constraints.txt",
+      "path": "producers/compliance/langflow-candidate-constraints.txt",
+      "bytes": 1713,
+      "sha256": "0fc129fd927fe42b9c0043d90f7aa1bee60989ed6bc6270ea9c6f9ec899abf98"
+    },
+    {
+      "source": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker/compose.candidate.yml",
+      "path": "producers/docker/compose.candidate.yml",
+      "bytes": 483,
+      "sha256": "021ca7fe9a2db173bd6850553093b059b644ffea7c6240037690a32027190947"
+    },
+    {
+      "source": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/docker/langflow-candidate.Dockerfile",
+      "path": "producers/docker/langflow-candidate.Dockerfile",
+      "bytes": 1329,
+      "sha256": "2c0036b07e24b75c0fba96af31fb8806d4e79f5a1ec1c0457981b22894eb976b"
+    },
+    {
+      "source": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/frontend/scripts/verify-langflow-ui-cli.mjs",
+      "path": "producers/frontend/scripts/verify-langflow-ui-cli.mjs",
+      "bytes": 3646,
+      "sha256": "91100a2faeee823de7c3a703ae6c5058cb6ac100827b5da0610e0bead2ecb063"
+    },
+    {
+      "source": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/scripts/verify_langflow_candidate.py",
+      "path": "producers/scripts/verify_langflow_candidate.py",
+      "bytes": 12042,
+      "sha256": "52eecea93a7e6573aa450f775b7fbb171c4526d75edc1cc9ee144ee9192d3e21"
+    },
+    {
+      "source": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/scripts/bootstrap_langflow.py",
+      "path": "producers/scripts/bootstrap_langflow.py",
+      "bytes": 12259,
+      "sha256": "e001f7490c870ec75044a3a958795a50857108f3938cda56ad49e6fe4f7fa40b"
+    },
+    {
+      "source": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/scripts/validate_langflow.py",
+      "path": "producers/scripts/validate_langflow.py",
+      "bytes": 21771,
+      "sha256": "67da74addb7dfd79207a0f68cfba165caaafe03f2da39e2f3f537df818e9737a"
+    },
+    {
+      "source": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/tests/test_langflow_expected_version.py",
+      "path": "producers/tests/test_langflow_expected_version.py",
+      "bytes": 2166,
+      "sha256": "49afe1e7abaaaba7fd9321e894724ddd5fb79292f3ceb12adcd8445b9bd10b52"
+    },
+    {
+      "source": "/Users/ffq/Documents/aicoding项目/AI Review Console 开发/tests/test_candidate_native_licenses.py",
+      "path": "producers/tests/test_candidate_native_licenses.py",
+      "bytes": 2711,
+      "sha256": "0a94b5364b5cd8e97c2402649e8027b37b6a158d2519b79c9c884b690a50aa8b"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/seal_packet.py",
+      "path": "producers/seal_packet.py",
+      "bytes": 10531,
+      "sha256": "efc89096e97573117925343643261251de66d0ebd2c1719f0a2be7a300623f7f"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/render_result.py",
+      "path": "producers/render_result.py",
+      "bytes": 25245,
+      "sha256": "c63733865ad796a3aa472e0f8ecb92120a4841ef2cefe2af021ef12dfa529b9e"
+    },
+    {
+      "source": "/private/tmp/arc-langflow-candidate.qya6psom/candidate-license-final-review.json",
+      "path": "environment/candidate-license-final-review.json",
+      "bytes": 7512,
+      "sha256": "eaea19423a22f0ec14fcae40891d046a5ef30d74fea2778abb6d9fc16ceda657"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-05T00:36:21.824484+00:00",
+  "result": "passed",
+  "producer_sha256": "6d3090cc8b7361559b5f05ce8040fad4c777c9dbf924601946bbdcce2755e3f6",
+  "image_id": "sha256:18c3a2a2f8c99e4c1702041546a261957090ecf86fb0f84295a90c48cd79dfb3",
+  "distribution_count": 334,
+  "denied_present": [],
+  "pip_check": "No broken requirements found.",
+  "default_runtime_changed": false,
+  "acceptance": "Isolated candidate observations; not default upgrade or release acceptance",
+  "native_qualification": "Installed distribution metadata and known clidriver paths only; no full filesystem absence or corresponding-source proof."
+}

@@ -1,0 +1,9 @@
+{
+  "outcome": "failed",
+  "failure": "Expected textbox absent from fresh snapshot",
+  "steps": [],
+  "calls": 4,
+  "base_url": "http://localhost:7860/",
+  "scope": "Real candidate GUI login and visible Flow list only; editor modification is not tested",
+  "cli_cache": "Unselected ephemeral runner cache outside the evidence root; no cleanup performed"
+}

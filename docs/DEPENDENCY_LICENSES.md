@@ -97,3 +97,11 @@ Langflow 1.13.0 的[默认依赖](https://github.com/langflow-ai/langflow/blob/v
 同轮只在批准的两处psycopg native目录列名未见libcrypto.so.1.*，限该AMD观察，不关闭旧ARM的FIPS/厂商对应源码问题。精确同镜像owner已交叉核对：API psycopg-binary3.3.5，LF psycopg2-binary2.9.12、psycopg3.3.4、ibm_db3.2.9、zep-python2.0.2。Zep精确许可、完整native对应源码与后端二进制分发条件仍open。最终共享批次12文件/40,256,769B，加此前输入累计135,779,466B，未重置额度或读取entitlement .lic。
 
 完整范围及指纹见[系统维护证据](evidence/runtime-maintenance/README.md)。历史ARM矩阵仍限原image IDs，本次AMD材料不以跨架构旧值代替。
+
+## 精简1.13.1候选的实证范围（2026-11-04）
+
+候选实际image `sha256:bab518885b0099096f7843c3016227644246f3f165e74fbd040f373a4ec8bffb` / source `e73ab92321483403fafd03e721182c5426ae6359` / CI41943564415，334 Python distributions。Zep两包、ibm_db/lfx-ibm、Psycopg binary两包及已知clidriver路径未检出；限metadata/指定路径，不是全FS证明。仍有IBM SDK，实际声明分别为ibm_watsonx_ai1.9.0 BSD-3-Clause、langchain-ibm1.1.2 MIT，不能统称Apache或说全部IBM已移除。
+
+APSW3.53.4.0 own LICENSE1166B实际SHA b85a7dc6463f286c14a638070a14f4888564ac7245dc99a17950ec24cf1a7b9d，与精确source一致，只关闭该原文缺失。base/sqlitevec未采到白名单specimen，LFX通用采集无owntext；已保存精确v1.13.1 MIT及sqlitevec同tag源许可。MIT repo副本仅额外末尾空行，不称全raw同SHA，未保留sameimage project副本独立回读。Psycopg3.3.5实际LGPL原文已保留，纯Python+APT libpq5及runtime150019不自动证明全部ELF/source对应。
+
+SQLite嵌入版本/选项/source、其他native/system与前端静态依赖的完整通知及分发条件仍pending；API旧vendor/FIPS/default1.11.6继续按各自原image处理。仅本轮实读1file1166B，全批余额6files/26,795,216input/3,969,945text，已知135,836,345B。完整原件、source方法、差异与结论见[候选证据](evidence/langflow-candidate/README.md)，没有批准后端二进制分发或替代OSI许可选择。

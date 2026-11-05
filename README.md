@@ -25,9 +25,9 @@ Langflow-powered document review console with deterministic redaction, explainab
 
 固定实施 Contract 为 [Spec计划书](docs/UPGRADE_SPEC.md) `ARC-UPGRADE@0.1.0`。实际验收、内容指纹和剩余边界见 [当前状态](docs/CURRENT_STATE.md)及[Spec索引](docs/SPEC_INDEX.md)。本地技术验证与负责人最终接受分开；没有生产或收费模型授权。
 
-2026-11-03 已归档在固定 Langflow1.11.6 上完成的公共 UBI 系统维护及定向许可补采，并修补 Web libexpat；原52个显式Python pins保留。[功能代码 CI](https://github.com/qife422/ai-review-console/actions/runs/41760412382) 实际通过 **191 Python / 29 前端测试**、AMD64完整工作流/浏览器、Linux ARM64后端工作流。两架构系统包和镜像审计的具体范围、签名、版本与结果见[系统维护记录](docs/evidence/runtime-maintenance/README.md)。Linux ARM云验证不等于Mac宿主验证。
+2026-11-04 完成 **精简1.13.1候选隔离验证**：[实际CI](https://github.com/qife422/ai-review-console/actions/runs/41943564415)通过198 Python/29前端、5组件/2Flow、真实四格式/三决定/九报告及Langflow GUI登录。候选PyPI匹配0，Zep/IBM driver/Psycopg binary与两项未使用集成不在安装清单；Debian133条provider记录和完整分发条件仍未关闭。[完整结果与下一步](docs/evidence/langflow-candidate/README.md)。
 
-**v0.2仍未完成完整发布验收**：Langflow仍有5个Python包的扫描匹配，Debian残余记录、Zep精确许可和完整native/二进制分发材料仍待关闭。稳定/RC/开发Langflow候选没有同时解除三项上限，当前保持固定运行版本。后续按现有计划推进版本历史、修改后再审、队列效率和诊断；模型/OCR/生产化另行选择。已解决、未解决和关闭条件统一见[本轮证据与计划](docs/evidence/runtime-maintenance/README.md)，历史证据保留原字节。
+**默认仍为Langflow1.11.6，v0.2完整发布验收未通过**。本轮是AD-03隔离实验；未据新库回归直接升级原库或替换默认。后续先补依赖锁、系统/许可材料和旧schema迁移/回滚，再作默认版本决定，之后推进版本历史与再审。原[系统维护记录](docs/evidence/runtime-maintenance/README.md)和其他历史证据保留原字节。
 
 ## 基于 Langflow
 

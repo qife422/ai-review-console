@@ -49,3 +49,7 @@ Exact Psycopg 3.3.5 and Psycopg2 2.9.12 build recipes and patches have been fing
 - LFX 1.11.6: the same-version Langflow root MIT text is represented by `licenses/Langflow-LICENSE.txt`.
 
 These copies address known missing package-level texts; they do not authorize full backend image redistribution. Exact native versions, source archive hashes, retained notices and remaining source/binary correspondence work are listed in `docs/DEPENDENCY_LICENSES.md`. Zep 2.0.2 remains unresolved; tags for the separately named `zep-cloud` package are not its license evidence.
+
+## Isolated 1.13.1 candidate observations
+
+The experimental langflow-base/LFX1.13.1 image excludes selected Zep, IBM driver and Psycopg binary distributions; default and API images retain their separately scoped obligations. APSW's installed license specimen and Psycopg's LGPL text were recorded. Exact upstream MIT/sqlite-vec source notices supplement explicitly retained installed-text gaps. The fixed repository MIT copy differs only by a trailing blank line; an independent same-image copy readback was not retained. Embedded SQLite/source, system libraries, frontend notices and full backend redistribution remain subject to further verification. See docs/evidence/langflow-candidate/README.md. No license-option or residual-risk acceptance is implied.

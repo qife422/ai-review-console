@@ -1,0 +1,29 @@
+{
+  "state": "collected_with_explicit_scope",
+  "read_files": 1,
+  "input_bytes": 1166,
+  "files": [
+    {
+      "owner": "langflow-base",
+      "state": "no_declared_license_specimen"
+    },
+    {
+      "owner": "apsw",
+      "version": "3.53.4.0",
+      "declared_file": "apsw-3.53.4.0.dist-info/licenses/LICENSE",
+      "state": "recorded",
+      "bytes": 1166,
+      "sha256": "b85a7dc6463f286c14a638070a14f4888564ac7245dc99a17950ec24cf1a7b9d",
+      "text": "Copyright (c) 2004-2026 Roger Binns <rogerb@rogerbinns.com>\n\nAll code and documentation is provided under this license:\n\nThis software is provided 'as-is', without any express or implied\nwarranty. In no event will the authors be held liable for any damages\narising from the use of this software.\n\nPermission is granted to anyone to use this software for any purpose,\nincluding commercial applications, and to alter it and redistribute it\nfreely, subject to the following restrictions:\n\n    1. The origin of this software must not be misrepresented; you must not\n    claim that you wrote the original software. If you use this software\n    in a product, an acknowledgment in the product documentation would be\n    appreciated but is not required.\n\n    2. Altered source versions must be plainly marked as such, and must not be\n    misrepresented as being the original software.\n\n    3. This notice may not be removed or altered from any source\n    distribution.\n\nAlternatively you may strike the license above and use it under any\nOSI approved open source license such as those listed at\nhttps://opensource.org/licenses/alphabetical\n\nSPDX-License-Identifier: any-OSI\n"
+    },
+    {
+      "owner": "sqlite-vec",
+      "state": "no_declared_license_specimen"
+    }
+  ],
+  "limit_files": 6,
+  "limit_bytes": 262144,
+  "legal_approval": false,
+  "scope": "Exact declared license specimens only; no binary material hashing, license-option selection, embedded-source correspondence or full distribution approval.",
+  "budget_note": "Request only after checking the shared goal ledger; default disabled."
+}

@@ -1,0 +1,46 @@
+{
+  "created_at": "2026-11-05T00:36:05.979911+00:00",
+  "scope": "Exact APSW3.53.4.0 and sqlite-vec0.1.9 upstream license text identification only; installed candidate inventory not yet available",
+  "records": [
+    {
+      "url": "https://raw.githubusercontent.com/rogerbinns/apsw/3.53.4.0/LICENSE",
+      "final_url": "https://raw.githubusercontent.com/rogerbinns/apsw/3.53.4.0/LICENSE",
+      "bytes": 1166,
+      "sha256": "b85a7dc6463f286c14a638070a14f4888564ac7245dc99a17950ec24cf1a7b9d",
+      "fetched_at": "2026-11-05T00:36:05.575474+00:00",
+      "retained_path": "apsw-3.53.4.0-LICENSE.txt",
+      "body_retention": "exact response bytes",
+      "method": "Official raw exact-version tag text; bounded HTTP read at16KiB per response; no wheel/native/archive fetched"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/asg017/sqlite-vec/v0.1.9/LICENSE-MIT",
+      "final_url": "https://raw.githubusercontent.com/asg017/sqlite-vec/v0.1.9/LICENSE-MIT",
+      "bytes": 1068,
+      "sha256": "6ce72bbe12d975bd5286e5ab0a064c069693300c47bccbc57bec18485f1621ea",
+      "fetched_at": "2026-11-05T00:36:05.773150+00:00",
+      "retained_path": "sqlite-vec-0.1.9-LICENSE-MIT.txt",
+      "body_retention": "exact response bytes",
+      "method": "Official raw exact-version tag text; bounded HTTP read at16KiB per response; no wheel/native/archive fetched"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/asg017/sqlite-vec/v0.1.9/LICENSE-APACHE",
+      "final_url": "https://raw.githubusercontent.com/asg017/sqlite-vec/v0.1.9/LICENSE-APACHE",
+      "bytes": 10931,
+      "sha256": "a38070a94d4afd9cd710e3ce67bd1de78097cfe1784c1f0109ac95d3c196bfdc",
+      "fetched_at": "2026-11-05T00:36:05.979897+00:00",
+      "retained_path": null,
+      "body_retention": "hash/URL only; full body not copied",
+      "method": "Official raw exact-version tag text; bounded HTTP read at16KiB per response; no wheel/native/archive fetched"
+    }
+  ],
+  "official_sources": 3,
+  "official_response_bytes": 13165,
+  "apsw": "Exact3.53.4.0 LICENSE provides permissive origin/modification/source-notice terms and an alternative any-OSI option. This record retains the original text and does not elect a new project license.",
+  "sqlite_vec": "Exactv0.1.9 tag contains MIT and Apache2.0 text files. Both texts identified; the license-choice declaration and installed distribution text retention have not been inspected, so this is not full binary-distribution signoff.",
+  "embedded_sqlite": "These3 license texts do not prove the exact SQLite code/version/options actually embedded in either installed wheel, SQLite copyright/source provenance, or correspondence to the candidate binaries. APSW version naming alone is not a native-source mapping. Generic candidate collector currently records metadata but does not select these packages own license texts; do not say actual package-level texts were collected.",
+  "candidate_boundary": "Root candidate keeps pure Python Psycopg3.3.5 plus Debian libpq5. LGPL/Psycopg and actual system/native material checks remain distinct. Existing API psycopg-binary/vendor obligations and olddefault1.11.6 evidence are not closed by the candidate.",
+  "native_files_read": 0,
+  "native_hash_input_added": 0,
+  "new_installation_or_native_execution": false,
+  "legal_approval": false
+}

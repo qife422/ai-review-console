@@ -1,0 +1,159 @@
+{
+  "created_at": "2026-11-05T00:59:08.678609+00:00",
+  "review": "Actual selected candidate license evidence; not full distribution permission or all inventory verification",
+  "source_commit": "e73ab92321483403fafd03e721182c5426ae6359",
+  "ci_run": 41943564415,
+  "artifact_id": 13378541309,
+  "artifact_zip_sha256": "0014e7ac75274a4793bd623d3148ecbce3954f66e5d9fbac545a07fb8f2a5b06",
+  "image_id": "sha256:bab518885b0099096f7843c3016227644246f3f165e74fbd040f373a4ec8bffb",
+  "selected_files": [
+    {
+      "path": "native-license-texts.json",
+      "bytes": 2091,
+      "sha256": "0f5ea746decc9923c81fc5ed8f58b4365e1655cb1b3a0ea86320953a36916e13"
+    },
+    {
+      "path": "metadata/licenses/critical-package-licenses.json",
+      "bytes": 11078,
+      "sha256": "db43af7615729ff5768fedb4de99c0994c70969d390dff1f0532ef51d4dccb3a"
+    },
+    {
+      "path": "identity.json",
+      "bytes": 246,
+      "sha256": "ec7e1eda23bc6bdcb129941b6cd2df29d05c48be84354cbf1d55c60ba0edf382"
+    }
+  ],
+  "derived_raw_report": {
+    "path": "langflow.json",
+    "bytes": 771011,
+    "sha256": "2508c42300eacb82bb8e452c216f1849972a121aaa2798a0a0d1264cb8f883b9"
+  },
+  "native_accounting": {
+    "prior_shared_ledger_supplied_by_root": {
+      "files": 7,
+      "input_bytes": 26796382,
+      "text_bytes": 3971111,
+      "known_goal_input_bytes": 135835179
+    },
+    "actual_files_read": 1,
+    "actual_input_and_text_bytes": 1166,
+    "configured_limit_files": 6,
+    "configured_limit_bytes": 262144,
+    "limit6_is_not_actual6": true,
+    "computed_global_remaining": {
+      "files": 6,
+      "input_bytes": 26795216,
+      "text_bytes": 3969945,
+      "known_goal_input_bytes": 135836345
+    },
+    "known_goal_limit_bytes": 209715200,
+    "no_native_binary_hash_or_execution": true,
+    "collector_sidecar_bound_by_same_CI_artifact_and_identity": "Native sidecar itself has no image_id field; image identity is the artifact/identity and matching generic critical selection. No invented self-contained identity field."
+  },
+  "apsw": {
+    "version": "3.53.4.0",
+    "actual_declared_file": "apsw-3.53.4.0.dist-info/licenses/LICENSE",
+    "bytes": 1166,
+    "sha256": "b85a7dc6463f286c14a638070a14f4888564ac7245dc99a17950ec24cf1a7b9d",
+    "own_text_recorded": true,
+    "actual_text_equals_exact_upstream3_53_4_0_bytes": true,
+    "upstream_source_path": "sources/apsw-3.53.4.0-LICENSE.txt",
+    "metadata_declaration": "any-OSI",
+    "qualification": "Original permissive origin/modification/source-notice text and alternative any-OSI option actually present. Own-license-text material gap is closed. This review has not chosen an alternative license, proved actual embedded SQLite source/options or completed redistribution obligations."
+  },
+  "langflow_and_lfx": {
+    "actual_base_metadata": {
+      "name": "langflow-base",
+      "version": "1.13.1",
+      "location": "/usr/local/lib/python3.12/site-packages",
+      "license_expression": "MIT",
+      "license_metadata": null
+    },
+    "actual_lfx_metadata": {
+      "name": "lfx",
+      "version": "1.13.1",
+      "location": "/usr/local/lib/python3.12/site-packages",
+      "license_expression": null,
+      "license_metadata": null,
+      "declared_file_list_available": true,
+      "license_text_state": "no_license_text_recorded",
+      "missing_text_is_not_permission": true
+    },
+    "actual_base_declared_text_state": "no_declared_license_specimen",
+    "upstream_exact_version_root_mit": {
+      "container_path": "sources/langflow-1.13.1-license-source.json",
+      "container_sha256": "550dbc47669509210a1441face08ddf560d9650a7ab9235550aec63e9a0ea3c9",
+      "url": "https://raw.githubusercontent.com/langflow-ai/langflow/v1.13.1/LICENSE",
+      "bytes": 1065,
+      "sha256": "48d4a7496209a9e1f2f549384251b69319360c3a38127cf513473590be383359",
+      "raw_utf8_losslessly_rebuilds_body": true
+    },
+    "repo_source_comparison": {
+      "path": "licenses/Langflow-LICENSE.txt",
+      "bytes": 1066,
+      "sha256": "2f6f90f0641ad822aec5d2bccd1f97c569cc0cbaf0ec3754d10290808f3b1f1b",
+      "byte_identical_to_official": false,
+      "only_difference": "Repository copy has exactly one additional trailing newline; all copyright and permission text is identical.",
+      "same_image_project_license_copy_independent_readback_available": false,
+      "build_input_basis": "Repository fixed source + Docker COPY + successful build declaration only; generic project_files field was not retained in selected artifact."
+    },
+    "qualification": "Exact1.13.1 monorepo MIT text is now identified independently of the old1.11.6 label. LFX/base dist own texts remain uncollected; repo-copy comparison is not an invented exact-image file readback or whole-dependency MIT claim."
+  },
+  "sqlite_vec": {
+    "actual_metadata": {
+      "name": "sqlite-vec",
+      "version": "0.1.9",
+      "location": "/usr/local/lib/python3.12/site-packages",
+      "license_expression": null,
+      "license_metadata": "MIT License, Apache License, Version 2.0"
+    },
+    "actual_declared_text_state": "no_declared_license_specimen",
+    "upstream_material": "Prior exactv0.1.9 MIT response preserved; Apache2 response hash/URL identified in sources/sqlite-native-source-review.json. Current image own license body was not obtained.",
+    "qualification": "Metadata lists MIT and Apache2 text labels; collected raw sources are not proof of installed specimen retention, choice of license path or native SQLite correspondence."
+  },
+  "psycopg": {
+    "version": "3.3.5",
+    "license_expression": "LGPL-3.0-only",
+    "own_text_state": "recorded",
+    "actual_recorded_files": [
+      {
+        "path": "/usr/local/lib/python3.12/site-packages/psycopg-3.3.5.dist-info/licenses/LICENSE.txt",
+        "bytes": 7652,
+        "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118"
+      }
+    ],
+    "qualification": "Actual LGPL3-only text identified for pure Psycopg3. It does not finish LGPL/GPL notice/source/replacement requirements or Debian libpq/system package review."
+  },
+  "other_actual_metadata": [
+    {
+      "name": "ibm_watsonx_ai",
+      "version": "1.9.0",
+      "location": "/usr/local/lib/python3.12/site-packages",
+      "license_expression": null,
+      "license_metadata": "BSD-3-Clause"
+    },
+    {
+      "name": "langchain-ibm",
+      "version": "1.1.2",
+      "location": "/usr/local/lib/python3.12/site-packages",
+      "license_expression": null,
+      "license_metadata": "MIT"
+    }
+  ],
+  "scope_notes": [
+    "Retained IBM SDK labels differ by actual package: ibm_watsonx_ai1.9.0 reports BSD3Clause and langchain-ibm1.1.2 reports MIT. This is metadata identification only; do not call all IBM SDKs Apache or equate them to clidriver.",
+    "This selected critical report is not the whole installed inventory; target-package absences and runtime success are verified elsewhere in candidate CI, not inferred from these selected rows.",
+    "Candidate-only removal does not close default1.11.6 or API psycopg-binary/vendor/FIPS obligations.",
+    "Actual APSW text match closes one material gap; SQLite/native source-binary correspondence, remaining notice delivery and whole backend distribution signoff stay pending."
+  ],
+  "source_capacity": {
+    "files": 12,
+    "bytes": 95187,
+    "limit_files": 12,
+    "limit_bytes": 262144
+  },
+  "legal_approval": false,
+  "full_backend_distribution_approved": false,
+  "new_native_or_binary_read_by_reviewer": false,
+  "existing_source_CI_or_old_evidence_modified": false
+}

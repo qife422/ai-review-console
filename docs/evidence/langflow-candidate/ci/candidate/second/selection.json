@@ -1,0 +1,374 @@
+{
+  "source": "621a082d55831087599b649b91dc3a99d8357c1e",
+  "run": 41941734467,
+  "jobs": [
+    {
+      "id": 126963992009,
+      "name": "candidate",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_id": 41941734467,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Initialize containers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Require 20 GiB before installation and preserve a 5 GiB stage floor",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Install verification dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Backend lint and PostgreSQL regression",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Frontend lint, tests and build",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Build the isolated candidate and existing API and Web (600 seconds)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Initialize isolated synthetic stores and Flows",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Four upload formats, three decisions, nine downloads and negative retry",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "Verify candidate identity, dependencies, components and UI assets",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        },
+        {
+          "name": "Install bounded browser CLI runtime",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14
+        },
+        {
+          "name": "Real Langflow GUI login and two published Flows",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 15
+        },
+        {
+          "name": "Record candidate package scan and license evidence",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16
+        },
+        {
+          "name": "Preserve compact diagnostics and explicit selected scope",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 33
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 34
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 35
+        },
+        {
+          "name": "Stop containers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 36
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 37
+        }
+      ]
+    }
+  ],
+  "artifact": {
+    "id": 13376923681,
+    "name": "langflow-candidate-amd64",
+    "size_in_bytes": 19516,
+    "url": "https://api.github.com/repos/qife422/ai-review-console/actions/artifacts/13376923681",
+    "expired": false,
+    "created_at": "2026-11-05T00:36:32Z",
+    "expires_at": "2026-11-12T00:36:32Z",
+    "updated_at": "2026-11-05T00:36:32Z",
+    "digest": "sha256:8ba004d84f70240a9b812442d64a8ca1972a72ebe0be3caf3aef97dd5fa247c7",
+    "workflow_run": {
+      "id": 41941734467,
+      "repository_id": 1417816141,
+      "head_repository_id": 1417816141,
+      "head_branch": "main",
+      "head_sha": "621a082d55831087599b649b91dc3a99d8357c1e"
+    }
+  },
+  "method": "Memory-only bounded ZIP download; complete ZIP SHA/size, every member CRC/size/path checked; all original members selected without replacement.",
+  "selected_originals": [
+    {
+      "path": "api.json",
+      "bytes": 789,
+      "sha256": "1871c7d9dd34e18e80f3b215776b1e311ad16b5660982a00c173fe1b21f16e6e"
+    },
+    {
+      "path": "gui/result.json",
+      "bytes": 356,
+      "sha256": "db73fcaff9bc8dc2c64f837381722ea226d601de13d2079138d03642c9677c8a"
+    },
+    {
+      "path": "gui/commands.log",
+      "bytes": 3380,
+      "sha256": "ad64d60965009310a2ddb36037085793336e1d90e9fed1670f605edb73c18766"
+    },
+    {
+      "path": "identity.json",
+      "bytes": 246,
+      "sha256": "bdfbad7369530abb8d5ab08859aad97f87558ceb9ced8986e7a478ca07c02f94"
+    },
+    {
+      "path": "inventory.json",
+      "bytes": 48631,
+      "sha256": "8afd65b961c8772146dad70e64894911a8b5edb951178d5c5f13d7d5fabf1e41"
+    },
+    {
+      "path": "metadata/runner-capacity.txt",
+      "bytes": 1237,
+      "sha256": "53c2c0ad5e298628246f8870b84ac8f0b52ec436fb8428122d7fa8fb645a47f2"
+    },
+    {
+      "path": "metadata/arc-unit.xml",
+      "bytes": 26772,
+      "sha256": "dd7586745e4e7a1b5d91cb41685b79d1e8626a6a35b333c2ecef939a8461874c"
+    },
+    {
+      "path": "metadata/runtime.log",
+      "bytes": 14396,
+      "sha256": "b0b40adbd0e6b64077b5d3ba0053ab7d74bfbe73cca917ec6418a40a1fe6b526"
+    },
+    {
+      "path": "metadata/scan-license-selection.json",
+      "bytes": 109,
+      "sha256": "0b5cd10a8b59bd7dba76a655a721f171ab4dbd819c24ec52068c596c2748cb10"
+    },
+    {
+      "path": "metadata/services.json",
+      "bytes": 7084,
+      "sha256": "c7623a28c4f9ccf05a5939d18f9f7b006e4798ea31dd36da71602644296c315a"
+    },
+    {
+      "path": "metadata/workflow.json",
+      "bytes": 7186,
+      "sha256": "dbf3e1ab47d0088d5b65e35237d3774e138bb935eabe85ec4c95b99033d29a4d"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 629,
+      "sha256": "badff7bff7c34dfe739628c6a298f1094b51b005e88948d73f5ff80025d888ba"
+    }
+  ],
+  "qualification": "Experimental candidate only; no default runtime change or full release acceptance.",
+  "producer_sha256": "ed94903bc9c877e034e21731a57effe1867dba2f70a16558aa4c658a95aa5a3c",
+  "unit_suites": [
+    {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "194",
+      "time": "5.403",
+      "timestamp": "2026-11-05T00:30:34.962835+00:00",
+      "hostname": "runnervmnwato"
+    }
+  ],
+  "workflow": {
+    "version": "1.13.1",
+    "components": 5,
+    "result": "passed",
+    "source_formats": [
+      "docx",
+      "md",
+      "pdf",
+      "txt"
+    ],
+    "decisions": [
+      "approved",
+      "rejected",
+      "changes_requested"
+    ],
+    "report_count": 9,
+    "same_stored_flow_hashes": true,
+    "negative_retry": {
+      "case_id": "RC-8b0447e6fb3747f6865ec35cec25ac8d",
+      "document_version_id": "DV-1908d985fb84424589b3316543f1b193",
+      "source_sha256": "94626cc55e87b184640eabcda403196927ecd7d2c37d2ace044c2034b36c3a83",
+      "first_job": {
+        "job_id": "JB-cf7725e0c80f4c8db892c8918012b7f9",
+        "kind": "intake",
+        "state": "failed",
+        "phase": "failed",
+        "attempt": 1,
+        "retry_generation": 0,
+        "error_code": "synthetic_marker_missing",
+        "error_detail": "Document processing failed: synthetic_marker_missing",
+        "retryable": false,
+        "langflow_job_id": "48031cf7-c70c-4955-a320-2c0e5323d41e",
+        "flow_id": "2c615748-d13f-45cb-9447-8394215665ab",
+        "flow_hash": "492fe18811670806c671c4c0528ced9c4b5fdf033f52127d6ebcd676ade86968",
+        "next_run_at": "2026-11-05T00:36:15.990732+00:00",
+        "created_at": "2026-11-05T00:36:14.237157+00:00"
+      },
+      "retry_job": {
+        "job_id": "JB-6675afb6d9d1479cb4e261f5cfa60a28",
+        "kind": "intake",
+        "state": "failed",
+        "phase": "failed",
+        "attempt": 1,
+        "retry_generation": 1,
+        "error_code": "synthetic_marker_missing",
+        "error_detail": "Document processing failed: synthetic_marker_missing",
+        "retryable": false,
+        "langflow_job_id": "c0cd6c42-720e-433e-b632-fffe32b21385",
+        "flow_id": "2c615748-d13f-45cb-9447-8394215665ab",
+        "flow_hash": "492fe18811670806c671c4c0528ced9c4b5fdf033f52127d6ebcd676ade86968",
+        "next_run_at": "2026-11-05T00:36:18.125295+00:00",
+        "created_at": "2026-11-05T00:36:16.275679+00:00"
+      },
+      "same_key_upload_and_retry_deduplicated": true,
+      "audit_event_counts": {
+        "intake_retry_requested": 1,
+        "document_received": 1,
+        "intake_failed": 2
+      },
+      "result": "failed as expected; unscored; same case/version; one manual retry generation"
+    }
+  },
+  "identity.json": {
+    "source": "621a082d55831087599b649b91dc3a99d8357c1e",
+    "project": "arc-ci-41941734467-amd64",
+    "image_id": "sha256:18c3a2a2f8c99e4c1702041546a261957090ecf86fb0f84295a90c48cd79dfb3",
+    "service": "langflow",
+    "expected_runtime": "1.13.1"
+  },
+  "summary.json": {
+    "at": "2026-11-05T00:36:21.824484+00:00",
+    "result": "passed",
+    "producer_sha256": "6d3090cc8b7361559b5f05ce8040fad4c777c9dbf924601946bbdcce2755e3f6",
+    "image_id": "sha256:18c3a2a2f8c99e4c1702041546a261957090ecf86fb0f84295a90c48cd79dfb3",
+    "distribution_count": 334,
+    "denied_present": [],
+    "pip_check": "No broken requirements found.",
+    "default_runtime_changed": false,
+    "acceptance": "Isolated candidate observations; not default upgrade or release acceptance",
+    "native_qualification": "Installed distribution metadata and known clidriver paths only; no full filesystem absence or corresponding-source proof."
+  },
+  "api.json": {
+    "runtime_version": "1.13.1",
+    "anonymous_flows_http": 403,
+    "authenticated_login": true,
+    "token_recorded": false,
+    "components": [
+      "SyntheticDocumentParser",
+      "DeterministicPIIRedactor",
+      "ExplainableRiskScorer",
+      "ApprovalTaskGateway",
+      "DecisionReportExporter"
+    ],
+    "flows": [
+      "Document Review Decision",
+      "Document Review Intake"
+    ],
+    "openapi_sha256": "58dd38174285686e3d4eff62c1dd63386aa37fb5ecfdf6f780225098b3b4c097",
+    "component_index_sha256": "abc3a52ce0ffd281ec3c747bc65b9b0f1151a9e6cd52f9ac7d7406e8c469e864",
+    "frontend_html_sha256": "b1e4b7ac27425b56f9f4996e1e40097aaa79621bed98cdab3e5487d15f121b98",
+    "frontend_content_type": "text/html; charset=utf-8",
+    "gui_browser_result": "separate GUI CLI probe; HTTP HTML alone is insufficient"
+  },
+  "gui/result.json": {
+    "outcome": "failed",
+    "failure": "Expected textbox absent from fresh snapshot",
+    "steps": [],
+    "calls": 4,
+    "base_url": "http://localhost:7860/",
+    "scope": "Real candidate GUI login and visible Flow list only; editor modification is not tested",
+    "cli_cache": "Unselected ephemeral runner cache outside the evidence root; no cleanup performed"
+  },
+  "inventory_scope": {
+    "python": "3.12.16",
+    "psycopg_implementation": "python",
+    "libpq_runtime_version": 150019,
+    "clidriver_known_paths": [
+      {
+        "path": "/usr/local/lib/python3.12/site-packages/clidriver",
+        "exists": false
+      }
+    ],
+    "scope": "Installed distribution metadata and known clidriver paths only; no full filesystem absence or corresponding-source proof."
+  },
+  "distribution_count": 334
+}

@@ -1,0 +1,178 @@
+rc-ci-41940818042-amd64-langflow-1 Started 
+2026-11-05T00:27:11.1299508Z unknown flag: --no-build
+2026-11-05T00:27:11.1339396Z ##[error]Process completed with exit code 1.
+2026-11-05T00:27:11.1399836Z ##[group]Run docker compose ps --format json > "$RUNNER_TEMP/arc-candidate-meta/services.json"
+2026-11-05T00:27:11.1400542Z [36;1mdocker compose ps --format json > "$RUNNER_TEMP/arc-candidate-meta/services.json"[0m
+2026-11-05T00:27:11.1401163Z [36;1mdocker compose logs --no-color --tail 40 api worker langflow > "$RUNNER_TEMP/arc-candidate-meta/runtime.log"[0m
+2026-11-05T00:27:11.1401723Z [36;1mpython - <<'PY'[0m
+2026-11-05T00:27:11.1401933Z [36;1mimport hashlib, json, os[0m
+2026-11-05T00:27:11.1402269Z [36;1mfrom pathlib import Path[0m
+2026-11-05T00:27:11.1402613Z [36;1mroot = Path(os.environ['RUNNER_TEMP'])[0m
+2026-11-05T00:27:11.1403002Z [36;1mcandidate = root / 'arc-candidate'[0m
+2026-11-05T00:27:11.1403354Z [36;1mcandidate.mkdir(exist_ok=True)[0m
+2026-11-05T00:27:11.1403706Z [36;1mmeta = candidate / 'metadata'[0m
+2026-11-05T00:27:11.1404021Z [36;1mmeta.mkdir()[0m
+2026-11-05T00:27:11.1404519Z [36;1mfor path in sorted((root / 'arc-candidate-meta').iterdir()):[0m
+2026-11-05T00:27:11.1404974Z [36;1m    if path.is_file():[0m
+2026-11-05T00:27:11.1405332Z [36;1m        with (meta / path.name).open('xb') as stream:[0m
+2026-11-05T00:27:11.1405729Z [36;1m            stream.write(path.read_bytes())[0m
+2026-11-05T00:27:11.1406058Z [36;1mselection = [][0m
+2026-11-05T00:27:11.1406456Z [36;1mfor scope, selected in [('scan', {'summary.json'}), ('licenses', set())]:[0m
+2026-11-05T00:27:11.1406953Z [36;1m    source = root / ('arc-candidate-' + scope)[0m
+2026-11-05T00:27:11.1407318Z [36;1m    if not source.exists():[0m
+2026-11-05T00:27:11.1407623Z [36;1m        continue[0m
+2026-11-05T00:27:11.1407901Z [36;1m    target = meta / scope[0m
+2026-11-05T00:27:11.1408198Z [36;1m    target.mkdir()[0m
+2026-11-05T00:27:11.1408504Z [36;1m    for path in sorted(source.rglob('*')):[0m
+2026-11-05T00:27:11.1408855Z [36;1m        if not path.is_file():[0m
+2026-11-05T00:27:11.1409149Z [36;1m            continue[0m
+2026-11-05T00:27:11.1409673Z [36;1m        data = path.read_bytes()[0m
+2026-11-05T00:27:11.1410038Z [36;1m        relative = str(path.relative_to(source))[0m
+2026-11-05T00:27:11.1410419Z [36;1m        keep = relative in selected[0m
+2026-11-05T00:27:11.1411169Z [36;1m        selection.append({'scope': scope, 'path': relative, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest(), 'selected': keep})[0m
+2026-11-05T00:27:11.1411906Z [36;1m        if keep:[0m
+2026-11-05T00:27:11.1412207Z [36;1m            with (target / relative).open('xb') as stream:[0m
+2026-11-05T00:27:11.1412624Z [36;1m                stream.write(data)[0m
+2026-11-05T00:27:11.1413609Z [36;1m(meta / 'scan-license-selection.json').write_text(json.dumps({'scope': 'Explicit compact subset; omitted originals are not preserved in the artifact', 'files': selection}, indent=2) + '\n')[0m
+2026-11-05T00:27:11.1414869Z [36;1mfiles = [p for p in candidate.rglob('*') if p.is_file()][0m
+2026-11-05T00:27:11.1415342Z [36;1msize = sum(p.stat().st_size for p in files)[0m
+2026-11-05T00:27:11.1416064Z [36;1mprint(json.dumps({'selected_bytes': size, 'selected_files': len(files), 'limit_bytes': 1048576, 'limit_files': 50}))[0m
+2026-11-05T00:27:11.1417108Z [36;1massert size <= 1048576 and len(files) <= 50, 'Candidate artifact guard: preserve local evidence; do not upload an oversized packet'[0m
+2026-11-05T00:27:11.1417911Z [36;1mwith open(os.environ['GITHUB_OUTPUT'], 'a') as output:[0m
+2026-11-05T00:27:11.1418355Z [36;1m    output.write('within_limit=true\n')[0m
+2026-11-05T00:27:11.1418705Z [36;1mPY[0m
+2026-11-05T00:27:11.1447639Z shell: /usr/bin/bash -e {0}
+2026-11-05T00:27:11.1447844Z env:
+2026-11-05T00:27:11.1448360Z   ARC_TEST_POSTGRES_URL: ***127.0.0.1:5432/review_console
+2026-11-05T00:27:11.1448650Z   COMPOSE_PROJECT_NAME: arc-ci-41940818042-amd64
+2026-11-05T00:27:11.1448941Z   COMPOSE_FILE: docker-compose.yml:docker/compose.candidate.yml
+2026-11-05T00:27:11.1449220Z   COMPOSE_BAKE: false
+2026-11-05T00:27:11.1449448Z   LANGFLOW_SUPERUSER_PASSWORD: synthetic-demo-change-me
+2026-11-05T00:27:11.1449889Z   REVIEW_SERVICE_TOKEN: synthetic-demo-service-token
+2026-11-05T00:27:11.1450167Z   BASH_ENV: /home/runner/work/_temp/arc-candidate-shell
+2026-11-05T00:27:11.1450467Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-05T00:27:11.1450798Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-05T00:27:11.1451130Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-05T00:27:11.1451429Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-05T00:27:11.1451728Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-05T00:27:11.1452023Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-05T00:27:11.1452277Z ##[endgroup]
+2026-11-05T00:27:11.5197992Z {"selected_bytes": 30475, "selected_files": 5, "limit_bytes": 1048576, "limit_files": 50}
+2026-11-05T00:27:11.5291898Z ##[group]Run actions/upload-artifact@v4
+2026-11-05T00:27:11.5292128Z with:
+2026-11-05T00:27:11.5292319Z   name: langflow-candidate-amd64
+2026-11-05T00:27:11.5292558Z   path: /home/runner/work/_temp/arc-candidate
+2026-11-05T00:27:11.5292787Z   retention-days: 7
+2026-11-05T00:27:11.5292961Z   if-no-files-found: warn
+2026-11-05T00:27:11.5293148Z   compression-level: 6
+2026-11-05T00:27:11.5293322Z   overwrite: false
+2026-11-05T00:27:11.5293497Z   include-hidden-files: false
+2026-11-05T00:27:11.5293684Z env:
+2026-11-05T00:27:11.5294161Z   ARC_TEST_POSTGRES_URL: ***127.0.0.1:5432/review_console
+2026-11-05T00:27:11.5294619Z   COMPOSE_PROJECT_NAME: arc-ci-41940818042-amd64
+2026-11-05T00:27:11.5294913Z   COMPOSE_FILE: docker-compose.yml:docker/compose.candidate.yml
+2026-11-05T00:27:11.5295181Z   COMPOSE_BAKE: false
+2026-11-05T00:27:11.5295403Z   LANGFLOW_SUPERUSER_PASSWORD: synthetic-demo-change-me
+2026-11-05T00:27:11.5295680Z   REVIEW_SERVICE_TOKEN: synthetic-demo-service-token
+2026-11-05T00:27:11.5295986Z   BASH_ENV: /home/runner/work/_temp/arc-candidate-shell
+2026-11-05T00:27:11.5296270Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-05T00:27:11.5296780Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-05T00:27:11.5297104Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-05T00:27:11.5297399Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-05T00:27:11.5297687Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-05T00:27:11.5297980Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-05T00:27:11.5298234Z ##[endgroup]
+2026-11-05T00:27:11.6615126Z (node:6951) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-05T00:27:11.6616172Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-05T00:27:11.6699186Z With the provided path, there will be 5 files uploaded
+2026-11-05T00:27:11.6700287Z Artifact name is valid!
+2026-11-05T00:27:11.6700835Z Root directory input is valid!
+2026-11-05T00:27:11.8772367Z Beginning upload of artifact content to blob storage
+2026-11-05T00:27:11.9068741Z (node:6951) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-05T00:27:12.1105654Z Uploaded bytes 6182
+2026-11-05T00:27:12.1279832Z Finished uploading artifact content to blob storage!
+2026-11-05T00:27:12.1280817Z SHA256 digest of uploaded artifact zip is 9332d8a4be7f925da83034b1014fd37a37e08eb043aaf7d6e49c88774aebd8ba
+2026-11-05T00:27:12.1281624Z Finalizing artifact upload
+2026-11-05T00:27:12.5344172Z Artifact langflow-candidate-amd64.zip successfully finalized. Artifact ID 13376258381
+2026-11-05T00:27:12.5345603Z Artifact langflow-candidate-amd64 has been successfully uploaded! Final size is 6182 bytes. Artifact ID is 13376258381
+2026-11-05T00:27:12.5349650Z Artifact download URL: https://github.com/qife422/ai-review-console/actions/runs/41940818042/artifacts/13376258381
+2026-11-05T00:27:12.5569786Z Post job cleanup.
+2026-11-05T00:27:12.6326610Z [command]/usr/bin/git version
+2026-11-05T00:27:12.6369665Z git version 2.56.0
+2026-11-05T00:27:12.6404126Z Temporarily overriding HOME='/home/runner/work/_temp/761013a8-f1ce-48cf-8f06-bc0b716bbe2e' before making global git config changes
+2026-11-05T00:27:12.6405734Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-05T00:27:12.6412039Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ai-review-console/ai-review-console
+2026-11-05T00:27:12.6456288Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-05T00:27:12.6496072Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-05T00:27:12.6820411Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-05T00:27:12.6848140Z http.https://github.com/.extraheader
+2026-11-05T00:27:12.6858262Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-05T00:27:12.6895815Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-05T00:27:12.7176231Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-05T00:27:12.7211517Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-05T00:27:12.7698518Z Print service container logs: 9d380ebc2f4e487982e818336279e612_postgres1615trixiesha2561beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c_594c02
+2026-11-05T00:27:12.7704005Z ##[command]/usr/bin/docker logs --details 885fe136ee3b58464d9daf647b3a63f33f7e682c42b759e063759c93c00e5cfc
+2026-11-05T00:27:12.7841423Z  The files belonging to this database system will be owned by user "postgres".
+2026-11-05T00:27:12.7842213Z  This user must also own the server process.
+2026-11-05T00:27:12.7844070Z  initdb: warning: enabling "trust" authentication for local connections
+2026-11-05T00:27:12.7844850Z  initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+2026-11-05T00:27:12.7845597Z  2026-11-05 00:22:29.599 UTC [1] LOG:  starting PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-11-05T00:27:12.7846246Z  2026-11-05 00:22:29.599 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-11-05T00:27:12.7846625Z  2026-11-05 00:22:29.599 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-11-05T00:27:12.7847036Z  2026-11-05 00:22:29.600 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-05T00:27:12.7847489Z  2026-11-05 00:22:29.603 UTC [64] LOG:  database system was shut down at 2026-11-05 00:22:29 UTC
+2026-11-05T00:27:12.7847880Z  2026-11-05 00:22:29.607 UTC [1] LOG:  database system is ready to accept connections
+2026-11-05T00:27:12.7860649Z  
+2026-11-05T00:27:12.7861160Z  The database cluster will be initialized with locale "en_US.utf8".
+2026-11-05T00:27:12.7861731Z  The default database encoding has accordingly been set to "UTF8".
+2026-11-05T00:27:12.7862255Z  The default text search configuration will be set to "english".
+2026-11-05T00:27:12.7862661Z  
+2026-11-05T00:27:12.7862898Z  Data page checksums are disabled.
+2026-11-05T00:27:12.7863193Z  
+2026-11-05T00:27:12.7863589Z  fixing permissions on existing directory /var/lib/postgresql/data ... ok
+2026-11-05T00:27:12.7864086Z  creating subdirectories ... ok
+2026-11-05T00:27:12.7864611Z  selecting dynamic shared memory implementation ... posix
+2026-11-05T00:27:12.7865047Z  selecting default max_connections ... 100
+2026-11-05T00:27:12.7865414Z  selecting default shared_buffers ... 128MB
+2026-11-05T00:27:12.7865767Z  selecting default time zone ... Etc/UTC
+2026-11-05T00:27:12.7866109Z  creating configuration files ... ok
+2026-11-05T00:27:12.7866451Z  running bootstrap script ... ok
+2026-11-05T00:27:12.7866717Z  performing post-bootstrap initialization ... ok
+2026-11-05T00:27:12.7866968Z  syncing data to disk ... ok
+2026-11-05T00:27:12.7867161Z  
+2026-11-05T00:27:12.7867306Z  
+2026-11-05T00:27:12.7867494Z  Success. You can now start the database server using:
+2026-11-05T00:27:12.7867736Z  
+2026-11-05T00:27:12.7867934Z      pg_ctl -D /var/lib/postgresql/data -l logfile start
+2026-11-05T00:27:12.7868174Z  
+2026-11-05T00:27:12.7868700Z  waiting for server to start....2026-11-05 00:22:29.303 UTC [48] LOG:  starting PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2026-11-05T00:27:12.7869376Z  2026-11-05 00:22:29.303 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-11-05T00:27:12.7869802Z  2026-11-05 00:22:29.305 UTC [51] LOG:  database system was shut down at 2026-11-05 00:22:28 UTC
+2026-11-05T00:27:12.7870194Z  2026-11-05 00:22:29.311 UTC [48] LOG:  database system is ready to accept connections
+2026-11-05T00:27:12.7870478Z   done
+2026-11-05T00:27:12.7870631Z  server started
+2026-11-05T00:27:12.7870795Z  CREATE DATABASE
+2026-11-05T00:27:12.7870957Z  
+2026-11-05T00:27:12.7871099Z  
+2026-11-05T00:27:12.7871348Z  /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+2026-11-05T00:27:12.7871650Z  
+2026-11-05T00:27:12.7871926Z  waiting for server to shut down...2026-11-05 00:22:29.481 UTC [48] LOG:  received fast shutdown request
+2026-11-05T00:27:12.7872583Z  .2026-11-05 00:22:29.482 UTC [48] LOG:  aborting any active transactions
+2026-11-05T00:27:12.7873037Z  2026-11-05 00:22:29.484 UTC [48] LOG:  background worker "logical replication launcher" (PID 54) exited with exit code 1
+2026-11-05T00:27:12.7873439Z  2026-11-05 00:22:29.484 UTC [49] LOG:  shutting down
+2026-11-05T00:27:12.7873884Z  2026-11-05 00:22:29.485 UTC [49] LOG:  checkpoint starting: shutdown immediate
+2026-11-05T00:27:12.7875107Z  2026-11-05 00:22:29.567 UTC [49] LOG:  checkpoint complete: wrote 926 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.079 s, sync=0.003 s, total=0.083 s; sync files=301, longest=0.002 s, average=0.001 s; distance=4273 kB, estimate=4273 kB; lsn=0/191F0E8, redo lsn=0/191F0E8
+2026-11-05T00:27:12.7876295Z  2026-11-05 00:22:29.573 UTC [48] LOG:  database system is shut down
+2026-11-05T00:27:12.7876688Z   done
+2026-11-05T00:27:12.7876872Z  server stopped
+2026-11-05T00:27:12.7877032Z  
+2026-11-05T00:27:12.7877232Z  PostgreSQL init process complete; ready for start up.
+2026-11-05T00:27:12.7877478Z  
+2026-11-05T00:27:12.7882011Z Stop and remove container: 9d380ebc2f4e487982e818336279e612_postgres1615trixiesha2561beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c_594c02
+2026-11-05T00:27:12.7887075Z ##[command]/usr/bin/docker rm --force 885fe136ee3b58464d9daf647b3a63f33f7e682c42b759e063759c93c00e5cfc
+2026-11-05T00:27:12.9176867Z 885fe136ee3b58464d9daf647b3a63f33f7e682c42b759e063759c93c00e5cfc
+2026-11-05T00:27:12.9207904Z Remove container network: github_network_9c7531e33fa44a21a7945eaf3c6ae2ff
+2026-11-05T00:27:12.9211800Z ##[command]/usr/bin/docker network rm github_network_9c7531e33fa44a21a7945eaf3c6ae2ff
+2026-11-05T00:27:12.9836793Z github_network_9c7531e33fa44a21a7945eaf3c6ae2ff
+2026-11-05T00:27:12.9904556Z Cleaning up orphan processes
+2026-11-05T00:27:13.0362196Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
