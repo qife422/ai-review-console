@@ -1,0 +1,64 @@
+{
+  "evidence_id": "mac-host",
+  "classification": "sealed_evidence",
+  "sealed_at": "2026-11-05T19:26:38.154256+00:00",
+  "display_date": "2026-11-05 America/Los_Angeles",
+  "contract": "ARC-UPGRADE@0.1.0",
+  "source_baseline": "7f00fc5024f494bd9baf8395dccb338aed227246",
+  "result": "readonly_preflight_complete; recovery_prerequisites_not_met",
+  "user_decision": "保持原数据保护，仅同步本轮预检（推荐）",
+  "local_business_validation": "not_started; neitherpassnorfailure",
+  "observations": "preflight.json",
+  "acceptance": {
+    "new_AC-17_runtime_evidence": false,
+    "full_AC-19": "not_passed",
+    "full_v02_last_verified": null,
+    "final_human_acceptance": "pending",
+    "DockerDesktop_started": false,
+    "old_workload_auto_restore_authorized": false,
+    "default1_11_6_changed": false,
+    "original_database_operation": false,
+    "historical_artifact_cleanup": false,
+    "new_build_pull_scan_or_nativecollection": false,
+    "backend_distribution_approval": false,
+    "online_demo_redeployed": false
+  },
+  "provenance": "Derived actualtool observations withcommands/status/method; fresh host/filesystemmetadata. RawCLI responses/settingsbody/Docker.rawcontents andallengineinventories notretained/read; no fake rawresponseSHA. OfficialDockerURLs supportrestart/startsemantics.",
+  "protection": "protection.json",
+  "documentation_impact": "documentation-impact.json",
+  "capacity": "capacity.json",
+  "payload_files": 6,
+  "payload_bytes": 21225,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5295,
+      "sha256": "ebe29de8382fe42fa0fb1fef49c31a09e6b3a27162bb1e39e2024bee933653c8"
+    },
+    {
+      "path": "capacity.json",
+      "bytes": 2134,
+      "sha256": "9456b465a0ce6f2b2f67047c7481853f08c3fd1a9e36e507153d11b2c3f1d149"
+    },
+    {
+      "path": "documentation-impact.json",
+      "bytes": 816,
+      "sha256": "ee1bafc8ee46f8a19e6bd4789cf356177b7d3958cb7ac1e32821cd3fe2e6dbb1"
+    },
+    {
+      "path": "plan.json",
+      "bytes": 2476,
+      "sha256": "134966a6ce36b0492cbef6644f1cdfc384fd2d7448fd91904aa57025c95c13d6"
+    },
+    {
+      "path": "preflight.json",
+      "bytes": 7004,
+      "sha256": "060527dfdc19d301a1f5b9def8286b957c4e6d237f2bd05d2b3e29903dc1c252"
+    },
+    {
+      "path": "protection.json",
+      "bytes": 3500,
+      "sha256": "2b125e13ff5b9c90517da1a31964843735a018e8d3402c5eca792be296767b44"
+    }
+  ]
+}

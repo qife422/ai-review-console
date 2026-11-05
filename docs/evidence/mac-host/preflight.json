@@ -1,0 +1,143 @@
+{
+  "classification": "derived_tool_observations_and_current_metadata",
+  "recorded_at": "2026-11-05T19:19:55.879670+00:00",
+  "source_baseline": "7f00fc5024f494bd9baf8395dccb338aed227246",
+  "host": {
+    "system": "Darwin",
+    "machine": "arm64",
+    "macOS_version": "26.5.2",
+    "memory_bytes": 8589934592,
+    "logical_cpus": 8,
+    "free_bytes_at_cli_probe": 18993098752,
+    "free_bytes_at_record": 18946879488,
+    "data_volume_used_percent_observed": 91
+  },
+  "docker_client": {
+    "version": "28.3.2",
+    "context": "desktop-linux",
+    "client_arch": "arm64",
+    "server_version": null
+  },
+  "observed_commands": [
+    {
+      "command": "docker desktop status",
+      "exit_code": 1,
+      "stderr": "Could not retrieve status. Is Docker Desktop running?",
+      "result": "Desktopstatusunavailable"
+    },
+    {
+      "command": "docker --context desktop-linux info --format '{{json .}}'",
+      "exit_code": 1,
+      "stderr": "Cannot connect to the Docker daemon at unix:///Users/ffq/.docker/run/docker.sock. Is the docker daemon running?",
+      "result": "serverunavailable",
+      "zero_server_counts_valid": false,
+      "note": "CLI stdout contained a zero-valued server structure and validClientInfo; no serverinventory accepted."
+    },
+    {
+      "command": "docker desktop start --help",
+      "exit_code": 0,
+      "options": [
+        "--detach",
+        "--timeout"
+      ],
+      "starts_desktop": false,
+      "restore_suppression_option_found": false
+    }
+  ],
+  "contexts": {
+    "method": "docker context ls --format '{{json .}}'; resolve localUnixsocket paths only, no endpoint connection or context switch",
+    "names": [
+      "default",
+      "desktop-linux"
+    ],
+    "both_resolve_to_same_socket": true,
+    "resolved_socket": "/Users/ffq/.docker/run/docker.sock",
+    "socket_exists": false,
+    "independent_accessible_context_found": false,
+    "colima_podman_orb_in_PATH": false,
+    "qualification": "Current configuredcontexts/PATHprobe only; not proof no alternativeVM exists anywhere."
+  },
+  "backing_file_stat": {
+    "path": "/Users/ffq/Library/Containers/com.docker.docker/Data/vms/0/data/Docker.raw",
+    "logical_bytes": 245106737152,
+    "allocated_bytes": 29555404800,
+    "mtime_utc": "2026-11-02T07:17:56.644190+00:00",
+    "method": "stat metadata only; contents not opened, mounted, copied or changed",
+    "not_image_cache_capacity": true
+  },
+  "settings_probe": {
+    "path": "/Users/ffq/Library/Group Containers/group.com.docker/settings-store.json",
+    "type": "regular",
+    "logical_bytes": 273,
+    "content_read_completed": false,
+    "content_sha256": null,
+    "incident": "Ownread-onlyPythonprobe50546 was blocked atPath.read_text/io.open afterCLIcommands. Childlessprocess identity/parent rechecked, SIGINTsent onlytoownprobe, exit130; noDockerprocess signalled. No second settings-bodyread.",
+    "cause": "unknown_file_open_block; not inferredTCCdenial_or_enginecorruption"
+  },
+  "policy_sources": [
+    {
+      "path": "docs/evidence/v02-release/environment/docker-growth-warning.json",
+      "sha256": "f38d57f2f777170f45fa21ed1258318cea11d536a2ff40cee1d1a62c695fdadf",
+      "observation": "Historical3,629,000,000Bglobal proxy exceeds3GiB. Localbuild/pull/cachegrowth stop retained."
+    },
+    {
+      "path": "docs/evidence/release-compatibility/capacity/method-review.json",
+      "sha256": "cffd9946ca5d0f2e96741b13a37eba57b989411623143d0fd1c2f1cb4bb0492b",
+      "observation": "Historicalknown11images;6referenced IDs lackedmetadata; fullproject12GiB notproven, notcurrentinventory."
+    },
+    {
+      "path": "docs/UPGRADE_SPEC.md",
+      "sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753",
+      "requirements": [
+        "projectDocker12GiB",
+        "perWPnetgrowth3GiB",
+        "runtimeData1GiB/5000files",
+        "noinferredcleanup"
+      ]
+    }
+  ],
+  "official_recovery_sources": [
+    "https://docs.docker.com/engine/containers/start-containers-automatically/",
+    "https://docs.docker.com/reference/cli/docker/desktop/start/"
+  ],
+  "inference": "Daemonstartup can reactivatecontainers withalways policy. Actual historicalpolicies unavailable, repositoryCompose defaults notfreshcontainer state. ExistingCLIstart flags do not establishno-restore mode. No safeexistingisolateddaemon identified.",
+  "not_a_new_local_gate": "30GiB is the priorCI migration entrance, not automatically a local5case requirement. Freehostbytesalone neitherproveDockerquota nor establishuniversalfailure.",
+  "decision": {
+    "user_choice": "保持原数据保护，仅同步本轮预检（推荐）",
+    "desktop_start_authorized": false,
+    "desktop_start_performed": false,
+    "local_validation": "not_started_prerequisites_not_met",
+    "local_validation_failure": false,
+    "build_pull_prune_delete_move_compress": false,
+    "default1_11_6_changed": false,
+    "original_database_operation": false,
+    "native_target_reads": 0
+  },
+  "review": {
+    "Astra": "Read-only recovery-boundary review supports hold; actualrestartpolicy andstorageconditions unavailable. NoDocker/network/write.",
+    "Sol": "Read-only localentrypointscope: generalvalidate_langflow canrun after independenttargetbinding; nofakeGITHUBnamespace, CI-onlyguards remainrestricted. NoDocker/network/write.",
+    "final_candidate_review": "Astra readonlycheckedREADME/preflight/plan/protection: userpreserve-onlychoice consistent; no falseMacpass/failure, noinvented30Gi localgate, nozeroinventory inference orTCC/enginecorruption claim; protection bounded to actual operations/fixedinput checks. No additionalnetwork/Docker/writes."
+  },
+  "limitations": [
+    "CLIobservations are selectedderived summaries fromtooloutputs, not retainedraw response blobs; no rawresponseSHA invented.",
+    "No container/image/volume/cache/restartpolicy inventory, guestfreecapacity, or businessvalidation obtained.",
+    "No currentlyusable independentempty daemon proven.",
+    "No allhistoricalDockerbyteimmutability claim fromstat alone; noengine mutation performed."
+  ],
+  "next_steps": [
+    {
+      "actor": "User/environmentoperator",
+      "action": "Provide a verifiable recoverymechanism that doesnot restorehistoricalworkloads, or an alreadyexisting independentempty daemon/VM withseparate disk/socket andnohistoricalmounts. Currentuser choice retainsprotection, no startup action."
+    },
+    {
+      "actor": "Agent",
+      "precondition": "Trustworthy recoverymechanism and applicableauthorization exist",
+      "action": "Readonly inventory preciseimage/cache/volume/restartpolicy; resolve orboundhistoricalmissingmetadata and12GiB/3GiB limits beforeanygrowth. Noautomaticcleanup."
+    },
+    {
+      "actor": "Agent",
+      "precondition": "Capacity/preservation andexactexistingimages/cleanlocalnamespace confirmed",
+      "action": "Use realMaclocalstack5syntheticcases/9reports, loopbacktargetbinding andfreshvolumes; nofakeGitHubenvironment. Stoponlyownnewcontainers, retainallartifacts."
+    }
+  ]
+}

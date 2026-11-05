@@ -2,6 +2,13 @@
 
 本文件记录主要功能与交接边界；精确代码差异以 Git 提交为准。开发快照不是正式发布，源码备份不是运行数据库备份。
 
+## 2026-11-05 — Mac 宿主恢复条件预检
+
+- 核对macOS26.5.2 arm64、8GiB/8CPU、探针时约17.7GiB空闲；Desktop状态和daemon查询均exit1。两个context指向同一缺失socket，失败info中的零值server结构不作为空引擎证据。
+- 旧3GiB增长警戒、完整项目12GiB归属及历史容器实际restart policy仍未解决；Docker.raw只读stat不替代内部库存。设置文件open未返回的自有探针已中断，不推断引擎损坏，也未向Docker进程发信号。
+- 用户在审阅具体启动风险后明确选择“保持原数据保护，仅同步本轮预检”；Desktop/容器未启动，本机隔离验收未运行，不能记作Mac测试失败或通过。未build/pull/prune、改默认、操作原库或新增native取证。
+- [观察、恢复前提及下一步](docs/evidence/mac-host/README.md)封存；固定输入与十旧包保留。460分钟累计不重置，只做相称文档/证据核验和GitHub回读；完整发布仍未通过。
+
 ## 2026-11-05 — ARM 隔离迁移与检查点恢复
 
 - 手动迁移入口新增architecture选择，默认仍AMD64；ARM使用原生Linux runner，baseline写入前核host/runner/Docker及LF旧版、候选、API、Web、PG五个实际image平台，保留原namespace、空目标与容量保护。

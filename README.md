@@ -33,7 +33,9 @@ Langflow-powered document review console with deterministic redaction, explainab
 
 同日[原生ARM64迁移CI42086830311](https://github.com/qife422/ai-review-console/actions/runs/42086830311)实际通过：新1.11.6虚构PG检查点→新1.13.1，以及恢复到第三个新1.11.6环境；两目标各新增5案、3决定、9报告，旧记录、两Flow和15个检查点文件验证保全。[完整结果与边界](docs/evidence/arm-migration/README.md)。
 
-**默认仍为Langflow1.11.6，v0.2完整发布验收未通过**。原SQLite和历史卷不变；AMD与ARM检查点演练分别绑定自己的source/image，不涵盖原库迁移、原地降级或升级后写入零丢失。下一步处理Mac宿主容量入口、系统与native/许可证缺口，再按AD-03评审默认切换，之后推进版本历史和再审。历史证据保留原字节。
+Mac宿主只读预检已完成：Docker daemon不可连接，现有资源归属与历史容器恢复策略不可读，旧增长停点未解除；按用户选择未启动本机业务验收。[恢复前提与执行边界](docs/evidence/mac-host/README.md)。
+
+**默认仍为Langflow1.11.6，v0.2完整发布验收未通过**。原SQLite和历史卷不变；AMD与ARM检查点演练分别绑定自己的source/image，不涵盖原库迁移、原地降级或升级后写入零丢失。下一步在恢复和容量条件满足后补Mac本机验收，继续处理系统与native/许可证缺口，再按AD-03评审默认切换，之后推进版本历史和再审。历史证据保留原字节。
 
 ## 基于 Langflow
 
