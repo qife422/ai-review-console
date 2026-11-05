@@ -20,7 +20,6 @@ jobs:
     env:
       COMPOSE_BAKE: "false"
       ARC_MIGRATION_ARCH: ${{ inputs.architecture }}
-      ARC_MIGRATION_RUNNER_ARCH: ${{ runner.arch }}
       POSTGRES_PASSWORD: synthetic-migration-postgres-only
       LANGFLOW_SUPERUSER: synthetic-migration-admin
       LANGFLOW_SUPERUSER_PASSWORD: synthetic-migration-password-only
@@ -32,6 +31,8 @@ jobs:
       - name: Require fresh run namespaces and 30 GiB before builds
         run: |
           set -euo pipefail
+          export ARC_MIGRATION_RUNNER_ARCH="$RUNNER_ARCH"
+          echo "ARC_MIGRATION_RUNNER_ARCH=$ARC_MIGRATION_RUNNER_ARCH" >> "$GITHUB_ENV"
           [[ "$GITHUB_ACTIONS" == true && "$GITHUB_RUN_ID" =~ ^[1-9][0-9]{0,19}$ && "$GITHUB_RUN_ATTEMPT" =~ ^[1-9][0-9]{0,5}$ ]]
           case "$ARC_MIGRATION_ARCH:$ARC_MIGRATION_RUNNER_ARCH:$(uname -s):$(uname -m)" in
             amd64:X64:Linux:x86_64|arm64:ARM64:Linux:aarch64) ;;
