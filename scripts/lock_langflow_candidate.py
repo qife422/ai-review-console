@@ -18,6 +18,8 @@ from urllib.parse import urlsplit
 BASELINE = Path("docs/evidence/langflow-candidate/ci/candidate/second/inventory.json")
 BASELINE_SHA256 = "8afd65b961c8772146dad70e64894911a8b5edb951178d5c5f13d7d5fabf1e41"
 PINS = Path("compliance/langflow-candidate.in")
+BUILD_PINS = Path("compliance/langflow-candidate-build-tools.in")
+BUILD_TOOLS = frozenset({"pip", "setuptools", "wheel", "packaging"})
 MAX_REPORT = 64 * 1024 * 1024
 MAX_OUTPUT = 512 * 1024
 
@@ -61,7 +63,17 @@ def target(environment: dict) -> None:
         raise ValueError("requires CPython 3.12.16 Linux x86_64")
 
 
-def lock_from_report(data: dict, pins: dict[str, str]) -> tuple[str, list]:
+def scoped_pins(baseline: dict[str, str], scope: str) -> dict[str, str]:
+    if scope == "runtime":
+        return baseline
+    if scope != "build-tools" or not BUILD_TOOLS.issubset(baseline):
+        raise ValueError("build tool scope requires all four tools in fixed baseline")
+    return {name: baseline[name] for name in sorted(BUILD_TOOLS)}
+
+
+def lock_from_report(
+    data: dict, pins: dict[str, str], *, wheel_only: bool = False
+) -> tuple[str, list]:
     if data.get("version") != "1":
         raise ValueError("unsupported pip report format")
     target(data["environment"])
@@ -92,6 +104,8 @@ def lock_from_report(data: dict, pins: dict[str, str]) -> tuple[str, list]:
             (".tar.gz", ".zip", ".tar.bz2", ".tar.xz", ".tgz")
         ):
             raise ValueError("unsupported source archive: " + name)
+        if wheel_only and kind != "wheel":
+            raise ValueError("build tools require wheel archives: " + name)
         selected[name] = {
             "name": name,
             "version": version,
@@ -161,7 +175,8 @@ def main() -> None:
     sub = parser.add_subparsers(dest="command", required=True)
     for command in ("generate", "verify"):
         p = sub.add_parser(command)
-        p.add_argument("--pins", type=Path, default=PINS)
+        p.add_argument("--scope", choices=("runtime", "build-tools"), default="runtime")
+        p.add_argument("--pins", type=Path)
         p.add_argument("--baseline", type=Path, default=BASELINE)
         p.add_argument("--receipt", type=Path, required=True)
         if command == "generate":
@@ -170,10 +185,14 @@ def main() -> None:
         else:
             p.add_argument("--python", required=True)
     args = parser.parse_args()
+    if args.pins is None:
+        args.pins = BUILD_PINS if args.scope == "build-tools" else PINS
+    baseline = baseline_pins(args.baseline)
     pins = read_pins(args.pins)
-    if pins != baseline_pins(args.baseline):
+    if pins != scoped_pins(baseline, args.scope):
         raise ValueError("pins differ from fixed baseline")
     receipt = {
+        "dependency_scope": args.scope,
         "baseline_sha256": BASELINE_SHA256,
         "pins_sha256": hashlib.sha256(args.pins.read_bytes()).hexdigest(),
     }
@@ -181,7 +200,9 @@ def main() -> None:
         if args.report.stat().st_size > MAX_REPORT:
             raise ValueError("ephemeral pip report exceeds 64MiB")
         raw = args.report.read_bytes()
-        lock, archives = lock_from_report(json.loads(raw), pins)
+        lock, archives = lock_from_report(
+            json.loads(raw), pins, wheel_only=args.scope == "build-tools"
+        )
         receipt.update(
             {
                 "report_sha256": hashlib.sha256(raw).hexdigest(),
@@ -192,6 +213,16 @@ def main() -> None:
                 "scope": "resolver selection; not installation or runtime verification",
             }
         )
+        if args.scope == "runtime":
+            receipt["source_build_policy"] = {
+                "build_tools": scoped_pins(baseline, "build-tools"),
+                "build_tools_install": "separate wheel-only hash lock; --require-hashes",
+                "resolver_and_install": "--no-build-isolation; no automatic build dependencies",
+                "runtime_install": "--require-hashes; full dependency resolution",
+                "archive_hash_scope": "selected source archive for each sdist",
+                "binary_reproducibility_verified": False,
+                "policy_execution_verified_by_this_receipt": False,
+            }
         write_outputs([(args.lock, lock.encode()), (args.receipt, encode(receipt))])
     else:
         receipt.update(verify_python(args.python, pins))

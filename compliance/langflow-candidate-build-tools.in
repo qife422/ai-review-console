@@ -1,0 +1,5 @@
+# Build tools are a strict subset of the fixed 334-distribution baseline.
+packaging==24.2
+pip==26.2.2
+setuptools==84.1.0
+wheel==0.48.0

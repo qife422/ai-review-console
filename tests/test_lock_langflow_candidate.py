@@ -122,3 +122,131 @@ def test_installed_set_requires_exact_versions_and_no_extra_packages():
         pytest.raises(ValueError, match="installed package set"),
     ):
         lock.verify_python("/venv/bin/python", {"example-package": "1.2"})
+
+
+def test_build_tools_scope_is_exact_original_subset():
+    baseline = lock.baseline_pins(lock.BASELINE)
+    build = lock.scoped_pins(baseline, "build-tools")
+    assert build == lock.read_pins(lock.BUILD_PINS)
+    assert set(build) == {"pip", "setuptools", "wheel", "packaging"}
+    assert len(lock.scoped_pins(baseline, "runtime")) == 334
+    baseline.pop("wheel")
+    with pytest.raises(ValueError, match="four tools"):
+        lock.scoped_pins(baseline, "build-tools")
+
+
+def test_build_tools_scope_rejects_sdist():
+    data = report()
+    data["install"][0]["download_info"]["url"] = (
+        "https://files.pythonhosted.org/packages/ab/example.tar.gz"
+    )
+    with pytest.raises(ValueError, match="wheel archives"):
+        lock.lock_from_report(data, {"example-package": "1.2"}, wheel_only=True)
+
+
+def make_report(pins):
+    data = report()
+    data["install"] = []
+    for name, version in pins.items():
+        item = copy.deepcopy(report()["install"][0])
+        item["metadata"] = {"name": name, "version": version}
+        data["install"].append(item)
+    return data
+
+
+def test_build_tools_generate_and_verify_cli(tmp_path, monkeypatch):
+    import json
+    import sys
+
+    pins = lock.read_pins(lock.BUILD_PINS)
+    source = tmp_path / "report.json"
+    source.write_text(json.dumps(make_report(pins)))
+    output, receipt = tmp_path / "build.lock", tmp_path / "receipt.json"
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "lock",
+            "generate",
+            "--scope",
+            "build-tools",
+            "--report",
+            str(source),
+            "--lock",
+            str(output),
+            "--receipt",
+            str(receipt),
+        ],
+    )
+    lock.main()
+    data = json.loads(receipt.read_text())
+    assert data["dependency_scope"] == "build-tools"
+    assert data["package_count"] == 4
+    assert data["sdist_count"] == 0
+    assert len(output.read_text().splitlines()) == 5
+    installed = {
+        "environment": ENV,
+        "packages": [{"name": name, "version": version} for name, version in pins.items()],
+    }
+    verification = tmp_path / "verified.json"
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "lock",
+            "verify",
+            "--scope",
+            "build-tools",
+            "--python",
+            "/venv/bin/python",
+            "--receipt",
+            str(verification),
+        ],
+    )
+    with patch.object(
+        lock.subprocess,
+        "run",
+        side_effect=[
+            Mock(),
+            Mock(stdout=json.dumps(installed)),
+        ],
+    ):
+        lock.main()
+    result = json.loads(verification.read_text())
+    assert result["package_count"] == 4
+    assert result["installed_set_matches_pins"] is True
+
+
+def test_runtime_receipt_records_limited_sdist_build_policy(tmp_path, monkeypatch):
+    import json
+    import sys
+
+    data = make_report(lock.read_pins(lock.PINS))
+    data["install"][0]["download_info"]["url"] = (
+        "https://files.pythonhosted.org/packages/ab/example.tar.gz"
+    )
+    source = tmp_path / "report.json"
+    source.write_text(json.dumps(data))
+    receipt = tmp_path / "receipt.json"
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "lock",
+            "generate",
+            "--report",
+            str(source),
+            "--lock",
+            str(tmp_path / "runtime.lock"),
+            "--receipt",
+            str(receipt),
+        ],
+    )
+    lock.main()
+    result = json.loads(receipt.read_text())
+    assert result["package_count"] == 334
+    assert result["sdist_count"] == 1
+    policy = result["source_build_policy"]
+    assert policy["build_tools"] == lock.read_pins(lock.BUILD_PINS)
+    assert policy["binary_reproducibility_verified"] is False
+    assert policy["policy_execution_verified_by_this_receipt"] is False
