@@ -1,12 +1,13 @@
 {
   "contract": "ARC-UPGRADE@0.1.0",
   "work_package": "WP-05",
-  "purpose": "Fixed input selections for a single isolated ARM64 business acceptance run. Metadata only. Partial preflight lock, not an executable download plan.",
+  "purpose": "Fixed input selections and bounded preflight receipts for a single isolated ARM64 business acceptance run. Full execution is gated.",
   "accepted_scope_commit": "2a9aa0e30d3671f017efaa2f5e61edc39c42d173",
   "build_source": "31d1eac5b621e06928a22351c45542910caa7602",
   "checked_date": "2026-11-05",
   "execution_ready": false,
-  "payload_transferred": false,
+  "payload_transferred": true,
+  "payload_retained": false,
   "limits": {
     "network_bytes": 1073741824,
     "guest_disk_bytes": 8589934592,
@@ -46,7 +47,7 @@
   },
   "registry": {
     "source": "https://registry-1.docker.io/v2/",
-    "method": "GET index and linux/arm64 manifest by digest and verify response length and SHA-256. The two manifests bind each config and layer digest and byte count. Payload bodies not fetched.",
+    "method": "GET index and linux/arm64 manifest by digest and verify response length and SHA-256. The two manifests bind each config and layer digest and byte count. The Python config and four layer bodies were read in memory for preflight. PostgreSQL layers were not fetched.",
     "images": [
       {
         "repository": "library/python",
@@ -257,7 +258,7 @@
     ]
   },
   "apt": {
-    "method": "Official HTTPS InRelease and ARM64 Packages.xz fetched by SHA-256 URL. Index lengths and hashes match InRelease. Local publisher signature and exact install transaction still pending.",
+    "method": "Official HTTPS InRelease and ARM64 Packages.xz fetched by SHA-256 URL. The preflight records digest-bound publisher signatures and a static six-package plan. Native APT simulation and installation remain pending.",
     "snapshots": [
       {
         "suite": "bookworm",
@@ -339,9 +340,151 @@
       }
     ]
   },
+  "preflight": {
+    "method": "Read exactly the digest-verified Python ARM64 layer bodies and config in memory. Verify all four uncompressed DiffIDs and reconstruct selected files in OCI order, applying whiteouts. Match ARM64 Packages.xz size and SHA-256 and each selected DEB row. Re-check the same three Debian InRelease digests using only the image's digest-bound Signed-By keyring and expected Debian primary keys per suite.",
+    "python_base": {
+      "config_digest": "sha256:d6342530e5be101fe5a8336844ea0d1f1a7396badd23bf856e568cb67cb17bbe",
+      "status_bytes": 90472,
+      "status_sha256": "5162cc93263ebb96e4bf186ec78bda5f2dd38e6a549551d557ba48a4676f4c3c",
+      "status_package_count": 105,
+      "apt_keyring_sha256": "506b815cbb32d9b6066b4a2aa524071e071761e7e7f68c3ac74f3061ba852017",
+      "layers": [
+        {
+          "digest": "sha256:f791e47cf52abf7b364878f2141547e3781072e437f599f6632849d88fca8ca4",
+          "bytes": 28137951,
+          "uncompressed_tar_bytes": 100270080
+        },
+        {
+          "digest": "sha256:03557f251b4b73480b1d85ad514ac8fdf3f57527d38501d2212154e5fd711292",
+          "bytes": 3174113,
+          "uncompressed_tar_bytes": 8833024
+        },
+        {
+          "digest": "sha256:0e52ade5941015ddaf9fc870ec0a2e9f5e16c36db598c29a6255b2126e49e5be",
+          "bytes": 13611292,
+          "uncompressed_tar_bytes": 45014016
+        },
+        {
+          "digest": "sha256:abdbc0972de9023277dcc99d00cfe0ebefb63b60c26122ffa8cd242b3cb11cbf",
+          "bytes": 250,
+          "uncompressed_tar_bytes": 5120
+        }
+      ]
+    },
+    "signed_snapshots": [
+      {
+        "suite": "bookworm",
+        "inrelease_sha256": "77737fa4b34f2693e982cc9ee35736816c35a7778fc2d326cc1bbf5b301fe1aa",
+        "index_sha256": "2ddb1737692e8c45c53e8d57c0ce4cd21c78c5703b830c3226b1423566a06c00",
+        "date": "Sat, 11 Jul 2026 10:16:37 UTC",
+        "valid_until": null,
+        "verified_signatures": [
+          {
+            "primary": "b8b80b5b623eab6ad8775c45b7c5d7d6350947f8",
+            "signing_key": "6ed0e7b82643e131"
+          },
+          {
+            "primary": "04b54c3cdca79751b16bc6b5225629df75b188bd",
+            "signing_key": "78dba3bc47ef2265"
+          },
+          {
+            "primary": "4d64fec119c2029067d6e791f8d2585b8783d481",
+            "signing_key": "f8d2585b8783d481"
+          }
+        ]
+      },
+      {
+        "suite": "bookworm-updates",
+        "inrelease_sha256": "72a46872526f1b12732c4c6b863e843648f380258c20be540f1fe3a8ac4bc5e7",
+        "index_sha256": "5dfd52317071685ad6e58c4ef0720128b7db68624079f83be02bdf55f07ac070",
+        "date": "Thu, 05 Nov 2026 20:16:59 UTC",
+        "valid_until": null,
+        "verified_signatures": [
+          {
+            "primary": "b8b80b5b623eab6ad8775c45b7c5d7d6350947f8",
+            "signing_key": "6ed0e7b82643e131"
+          },
+          {
+            "primary": "04b54c3cdca79751b16bc6b5225629df75b188bd",
+            "signing_key": "78dba3bc47ef2265"
+          }
+        ]
+      },
+      {
+        "suite": "bookworm-security",
+        "inrelease_sha256": "5d916d253a3ed4b2413b355ac864adc2188295df58d3f569879e5322f50378bf",
+        "index_sha256": "bfc587ba1d4bb8824d1d144e0dd72c4dec4eb84225bd4f55bce638f4721ed621",
+        "date": "Thu, 05 Nov 2026 18:22:28 UTC",
+        "valid_until": "Thu, 12 Nov 2026 18:22:28 UTC",
+        "verified_signatures": [
+          {
+            "primary": "ac530d520f2f3269f5e98313a48449044aad5c5d",
+            "signing_key": "54404762bbb6e853"
+          },
+          {
+            "primary": "05ab90340c0c5e797f44a8c8254cf3b5aec0a8f0",
+            "signing_key": "bde6d2b9216ec7a8"
+          }
+        ]
+      }
+    ],
+    "package_plan": {
+      "explicit": [
+        "apt=2.6.2",
+        "libapt-pkg6.0=2.6.2",
+        "libpq5=15.19-0+deb12u1"
+      ],
+      "upgraded": [
+        "apt",
+        "libapt-pkg6.0"
+      ],
+      "added": [
+        "libldap-2.5-0",
+        "libpq5",
+        "libsasl2-2",
+        "libsasl2-modules-db"
+      ],
+      "removed": [],
+      "tested_selected_dependency_clauses": 33,
+      "parsed_post_state_clauses": 458,
+      "qualification": "Static metadata closure and relevant reverse dependency/Breaks/Conflicts checks passed. The native APT simulation and installation are pending."
+    },
+    "plugin_archive_inspection": [
+      {
+        "name": "docker-buildx-plugin",
+        "regular_files": 2,
+        "members": 10,
+        "regular_bytes": 74041969,
+        "regular_4k_alloc_upper": 74047488,
+        "tar_bytes": 74055680
+      },
+      {
+        "name": "docker-compose-plugin",
+        "regular_files": 2,
+        "members": 10,
+        "regular_bytes": 73244256,
+        "regular_4k_alloc_upper": 73248768,
+        "tar_bytes": 73256960
+      }
+    ],
+    "transfer": {
+      "scope": "HTTP response body bytes received by the scoped client. Excludes headers, TLS/TCP framing, kernel pre-read and unrelated traffic.",
+      "earlier_metadata_reserved_bytes": 33554432,
+      "failed_token_reserved_bytes": 16384,
+      "observed_successful_body_bytes": 108457769,
+      "signed_by_only_recheck_body_bytes": 28392137,
+      "carried_reservation_bytes": 143255439,
+      "known_future_payload_bytes": 610869452,
+      "future_metadata_and_controlled_retry_allowance_bytes": 134217728,
+      "provisional_total_reserved_bytes": 888342619,
+      "provisional_headroom_bytes": 185399205,
+      "receiver": "../scripts/mac_acceptance_fetch.py",
+      "journal_test": "Two concurrent reservations, cross-process reopen to exact cap, overflow refusal, no reset and scope mismatch checked locally. Production journal and guest egress guard not activated."
+    }
+  },
   "unresolved": [
-    "Exact signed APT transaction against the fixed Python base dpkg status.",
-    "Shared hard transfer accounting for registry, metadata, packages and any retry or redirection. Verify local-input offline API/Langflow builds and enforce runtime egress isolation.",
-    "First boot and engine disk peak, plugin archive member sizes, and in-flight writes after the stop threshold. Confirm each later stage's unpacked and retained footprint."
+    "Native apt-get simulation against the fixed base and signed indexes, followed by a six-DEB offline installation.",
+    "Bind the tested journal to the single acquisition runner. Prove egress is blocked before guest startup, and verify offline base import and builds.",
+    "First-boot disk growth and in-flight writes after the stop threshold are not proven. The proposed first-boot gate adjustment requires approval."
   ]
 }

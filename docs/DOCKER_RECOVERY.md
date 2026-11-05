@@ -84,13 +84,26 @@ Docker 官方 Registry 的索引及 ARM64 子 manifest 已逐级核 SHA，两个
 
 2026-11-05 14:28（America/Los_Angeles），宿主 `statvfs` 可用 27,073,880,064B（25.21 GiB），通过 24 GiB 宿主入口。原机制根 `lstat` 实际分配 2,038,247,424B，加新根 10 GiB 规划后距两根 12 GiB 合计上限仅余 109,236,224B。新根仍不存在。独立流式核对 Debian 基盘和三份引擎 DEB 的封存摘要。宿主 `limactl` 与签名绑定的发布归档中同名成员 SHA-256 相同，两插件长度及 SHA-256 与既有签名索引一致。
 
-[已固定的部分输入清单](mac-acceptance-inputs.json)记录 URL、字节数与摘要，当前标记 `execution_ready: false`。本轮从公开来源读取元数据，未下载镜像层、wheel、插件或 Debian 包正文。
+[部分输入清单](mac-acceptance-inputs.json)记录 URL、字节数与摘要，当前标记 `execution_ready: false`。该轮仅从公开来源读取元数据，后续有界预检另见[签名、取件与首启决策](#签名取件与首启决策)。
 
 - **API 与候选。** API 33 个运行 pin、pip 和五个项目构建工具已选定 39 个兼容 wheel，共 37,236,398B。其中 19 档按 SHA 与 LF 选档共用，新增 22,255,953B。LF 既有 334 档含 4 个 sdist，沿原哈希锁。API 的 `pip install --no-deps .` 仍会创建隔离构建环境。可用固定 Hatchling 工具集从同一源码离线构建项目 wheel，再在隔离环境核实际清单和 `pip check`。该路径尚未实跑。
 - **基底与 APT。** 两个官方 ARM64 manifest 重新核 SHA，绑定 18 层和配置。三套 Debian `InRelease` 与按 SHA 取的 ARM64 索引共 9,297,332B 元数据，索引长度和哈希匹配。从中选出 `apt`、`libapt-pkg6.0`、`libpq5`、`libldap-2.5-0` 和两份 SASL 包，共 2,569,568B。签名复核和与精确 Python 基底状态绑定的 APT 安装事务仍待验证。Dockerfile 中 APT/pip 的隐式下载及引擎重试也需纳入同一 1 GiB 接收限额。 [APT 事务选项](https://manpages.debian.org/bookworm/apt/apt-get.8.en.html) · [Docker 拉取重试](https://docs.docker.com/reference/cli/dockerd/)
 - **首次启动停点。** 2,048 MiB 阶段预算扣除静态映射及已估引擎/归档成本后余 489,310,080B（约 466.64 MiB）。两插件尚无实测归档成员展开量，这一余量还要覆盖分区和文件系统、首次开机写入及停止延迟。旧 4 GiB VM 的首次 `start` 前后分配差为 1,519,616B，只反映旧配置的两次读数。旧守卫三轮均未触发，`limactl stop --force` 的 30 秒调用超时无法界定落盘完成时间或停止增量。8 GiB 盘的静态转换上界无法涵盖首次启动时的扩容与初始化写入。 [Lima 2.2.1 VZ 创建路径](https://github.com/lima-vm/lima/blob/v2.2.1/pkg/driver/vz/vz_driver_darwin.go) · [cloud-init 扩容行为](https://docs.cloud-init.io/en/latest/reference/modules.html#growpart)
 
-本轮只读前置核对通过后，因完整取件控制和首启峰值上界仍缺，按已批准停点保留 `not_started`。未创建或启动实例，因此没有本轮实例需要停止，旧机制实例及原 Docker 均未操作。由 Agent 在原额度内先核固定 APT 事务和全路径接收控制，再核可执行的首启写入及停止上界。若只能通过更改盘布局、容量停点或另行启动校准实例取得证据，由用户决定对应变更。五案九报告、完整 WP-05 和 AC-19 仍待完成。
+该轮在创建前保留 `not_started`。后续继续补签名、取件控制与首启上界，旧机制实例及原 Docker 未操作。
+
+#### 签名、取件与首启决策
+
+2026-11-05，继续用户批准的单实例及累计 600 分钟，沿用固定 Contract。本次预检的基线为 `17165d3`。读取签名与制品均在宿主内存完成，未创建新根或写入旧根。14:46 的宿主可用量 27,052,384,256B，约 25.19 GiB，达到 24 GiB 入口。
+
+- **APT 安装清单。** 对固定 Python ARM64 镜像的配置和四个层逐件核压缩摘要、长度及解压 DiffID，按层顺序恢复最终 dpkg status（105 包，90,472B）与 APT sources、keyring。用镜像 `Signed-By` 绑定的 keyring 按 suite 验过三套 Debian `InRelease`，并核索引长度、SHA-256 与六个 DEB 行。固定事务是将 `apt`、`libapt-pkg6.0` 从 2.6.1 升至 2.6.2，新增 `libpq5`、`libldap-2.5-0` 和两份 SASL 包。静态核六包的 33 个依赖子句及相关反向依赖、Breaks 和 Conflicts，未见需删除、降级或增加的包。签名、基底、事务和版本均记录在输入清单。下一步在精确基底用本地已验索引执行 `apt-get -s --no-install-recommends --no-remove`，要求两升级、四新增、无删除或降级，再用逐档核 SHA 的六个本地包、禁网及 `--no-download --no-remove` 安装。原生求解和实际安装尚未执行。 [签名密钥](https://ftp-master.debian.org/keys.html) · [APT 选项](https://manpages.debian.org/bookworm/apt/apt-get.8.en.html)
+- **下载总量。** [限额取件器](../scripts/mac_acceptance_fetch.py)在发请求前保留额度，检查固定档长度和 SHA，拒绝未知主机、超长、不明编码和隐式重试。认证分块响应仅限有界元数据。Docker Registry 到核定 CDN 的一次跳转不转发 bearer，也不记录签名 query。实际成功接收 **108,457,769B**，包括镜像层、索引、两插件，以及仅用指定 keyring 复验签名时有界重取的 28,392,137B。首次 token 因分块响应被拒，保留 16,384B，修正后通过。连同较早元数据保守扣留 32 MiB，当前承接 **143,255,439B**。已知后续制品含重取本轮未落盘档案，共 **610,869,452B**。再保留 128 MiB 给元数据和显式重传，规划总扣额 **888,342,619B**，距 1 GiB 尚余 **185,399,205B**。下载限额口径为外部 HTTP 响应正文，包含制品自身压缩字节、失败和重复下载预扣，协议头、TCP/TLS 和内核预读需另计。持久预扣日志通过并发、跨进程续接、禁止重置和拒绝超额测试，实际完整取件入口仍待绑定唯一日志，沿用上述已扣量。 [Registry 取件协议](https://docs.docker.com/reference/api/registry/latest/operations/GetBlob/)
+- **客体出口。** 方案为宿主统一取件，经专用本地链路交付固定镜像和包，guest 再离线导入、安装与构建。空 `networks` 仍接 Lima 默认 usernet，`ssh.overVsock` 可回落到 TCP，Buildx 的 `--network=none` 只约束 `RUN`。在首启前必须证明新实例无外部取件出口，且仅留必要的本地 DHCP/SSH 管理流量。随后再负控 daemon、BuildKit 及运行容器的外部连接。固定版本未提供关闭默认出口的实例开关。Lima 的 boot provision 落到 cloud-init bootcmd，执行时网络已上线，不能承担首包阻断。下一步先核只约束新 Lima/hostagent 进程及其 usernet 后代的隔离机制，验证在不改变全局网络的情况下保留本地管理、阻断外部 IPv4/IPv6。若无法证明则留在创建前。 [Lima usernet](https://lima-vm.io/docs/config/network/user/) · [固定 VZ 管理路径](https://github.com/lima-vm/lima/blob/v2.2.1/pkg/driver/vz/vm_darwin.go#L101-L145) · [Lima 启动模板](https://github.com/lima-vm/lima/blob/v2.2.1/pkg/cidata/cidata.TEMPLATE.d/user-data#L177-L213) · [cloud-init 网络阶段](https://docs.cloud-init.io/en/22.4.2/topics/boot.html#network) · [Buildx 网络参数](https://docs.docker.com/reference/cli/docker/buildx/build/)
+- **首启与停止。** 两插件已按旧签名索引的长度和 SHA 验正文，在内存枚举归档成员，常规文件合计 **147,286,225B**，按 4 KiB 逐文件取整为 **147,296,256B**。替换前轮的插件估算后，2,048 MiB 阶段仍只余 **489,321,344B**（约 466.65 MiB），覆盖首次启动、FS 与剩余开销。Lima VZ 的 Linux 默认 raw 格式能界定单盘写入地址范围。已有证据无法把启动占用收紧为 2,048 MiB，也无法证明触发停点后的停止写入 ≤0.5 GiB。 [Lima 2.2.1 VZ 存储实现](https://github.com/lima-vm/lima/blob/v2.2.1/pkg/driver/vz/vz_driver_darwin.go)
+
+**待用户决定的最小调整。** 保持同一个 8 GiB raw 盘、路径和实例数，仅把空实例首启从「启动前证明 2,048 MiB」改为「在完整单盘预留下执行一次受监控空启动，按实测准入下一阶段」。宿主仍须具备 24 GiB 入口和 14 GiB 运行停点。先核唯一盘最大范围 8 GiB、盘外文件可控 ≤1 GiB、分配与停机缓冲 1 GiB，继续使用现行 10 GiB 规划包络、逻辑 9 GiB 和两根合计 12 GiB。5.5 GiB 仍立即触发停止，6 GiB 仍为工作目标。触发后尚无 0.5 GiB 停止增量保证，保守规划差额为 4.5 GiB，最多仍按整个 10 GiB 包络预留。此差额只用于应对在途写入。若不能先核唯一盘、盘外上界、进程归属与首启前出口控制，继续停止。若空首启未触发停点，须实测文件系统余量、占用和增长，再以 2,048 MiB 核累计首启占用及引擎安装峰值。超出即停并保留。该提案无需新增 APFS 卷、第二实例、扩盘或清理，后续各阶段原停点继续有效。
+
+本轮未创建或启动实例，五案九报告为 `not_started`，完整 WP-05 和 AC-19 仍待完成。Agent 先固化唯一取件入口及首启前出口阻断证据。上述首启时序与停止容量影响由用户决定。确认且条件满足后才启动同一空实例，做原生 APT 模拟和后续阶段。
 
 ## Mac 业务回归准入复核
 
