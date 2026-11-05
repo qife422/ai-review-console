@@ -1,0 +1,21 @@
+{
+  "scope": "Final docs/evidence after source7877364 tested nativeARM images. No post-docs rebuild/newscan/deployment claimed; skipCI notsuccess.",
+  "image_COPY_inputs": [
+    {
+      "path": "README.md",
+      "tested_sha256": "ad0bb10ed77ac8eaf5f2fe187563f218c4f0d38996317f66a8cd06cf5039ec9a",
+      "final_sha256": "1a76575ab2ee99d7ba350c6407f29274abc0e5249ad3114097e68bced929c410",
+      "changed": true
+    }
+  ],
+  "unchanged_notice_inputs": [
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "46973e560732caca4a443369d81145b7a6ba78c6b072764021b21c8cc92a1f2d"
+    },
+    {
+      "path": "docs/DEPENDENCY_LICENSES.md",
+      "sha256": "e636fe01bdcad79cb4e3129b72440d8ebf1df38f64f782c2134715842ee5b071"
+    }
+  ]
+}

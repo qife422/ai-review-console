@@ -1,0 +1,107 @@
+{
+  "checked_at": "2026-11-05T18:57:32.615468+00:00",
+  "classification": "derived_result_review",
+  "source": "7877364c17f5442df620f8be5c0f6f5a2c6f0d21",
+  "run": 42086830311,
+  "run_conclusion": "success",
+  "job_id": 127454102830,
+  "job_elapsed_seconds": 672.0,
+  "jobs_source": {
+    "method": "gh run view --json status,conclusion,jobs,headSha; select terminal status and timestamps",
+    "bytes": 3846,
+    "sha256": "12f020282367486e5743d4ec411feb33c81f5645b4c67838e7cf3f2e24cc3a0c",
+    "full_response_retained": false
+  },
+  "architecture_original": "ci/architecture.json",
+  "checkpoint_manifest_sha256": "16caf2e7dfcf675c888557f4fcbf8c2e23b0c0e3b077cc3f453069f2532123c7",
+  "checkpoint_files": 15,
+  "checkpoint_file_bytes": 211475,
+  "dump_sizes_and_sha": {
+    "langflow": {
+      "bytes": 5758782,
+      "sha256": "0f3cfa18d3632a7fbf6b6f549227e5beea8bee92b48fd97b2094b744f07a64ce"
+    },
+    "review_console": {
+      "bytes": 123901,
+      "sha256": "2d18c83db2f91f8baa4a1d1e7ce310856b66ad9a602acb04463f4f660c44fb90"
+    }
+  },
+  "targets": {
+    "upgrade": {
+      "observed_langflow_version": "1.13.1",
+      "increment": {
+        "decisions": 3,
+        "document_versions": 5,
+        "report_artifacts": 9,
+        "review_cases": 5,
+        "workflow_jobs": 9
+      },
+      "old_semantics_and_files_preserved": true,
+      "flow_identity_graph_equal_to_source": true,
+      "business_cases_array": 3,
+      "additional_markdown_case": "RC-291d2b5c7d104606a8474b1c2b472b3d",
+      "negative_retry_result": "failed as expected; unscored; same case/version; one manual retry generation",
+      "source_alembic": [
+        "d19e7b3c5a42"
+      ],
+      "poststartup_alembic": [
+        "e4f6a8b2c1d3"
+      ],
+      "source_physical_gaps": {
+        "deployment": {
+          "live_columns": 11,
+          "max_physical_ordinal": 12
+        },
+        "deployment_provider_account": {
+          "live_columns": 9,
+          "max_physical_ordinal": 10
+        }
+      },
+      "poststartup_physical_gaps": {}
+    },
+    "rollback": {
+      "observed_langflow_version": "1.11.6",
+      "increment": {
+        "decisions": 3,
+        "document_versions": 5,
+        "report_artifacts": 9,
+        "review_cases": 5,
+        "workflow_jobs": 9
+      },
+      "old_semantics_and_files_preserved": true,
+      "flow_identity_graph_equal_to_source": true,
+      "business_cases_array": 3,
+      "additional_markdown_case": "RC-6090302d0f4643f7b8174327ce53e243",
+      "negative_retry_result": "failed as expected; unscored; same case/version; one manual retry generation",
+      "source_alembic": [
+        "d19e7b3c5a42"
+      ],
+      "poststartup_alembic": [
+        "d19e7b3c5a42"
+      ],
+      "source_physical_gaps": {
+        "deployment": {
+          "live_columns": 11,
+          "max_physical_ordinal": 12
+        },
+        "deployment_provider_account": {
+          "live_columns": 9,
+          "max_physical_ordinal": 10
+        }
+      },
+      "poststartup_physical_gaps": {}
+    }
+  },
+  "independent_review": {
+    "reviewer": "Astra migration_review",
+    "method": "Read-only local selected original member size/SHA, source/run/image and producer-assertion review; no new network/Docker/writes",
+    "conclusion": "Passed scopedARM syntheticPG checkpoint migration/restoration. All10originalmembers match; same checkpoint, five nativeARM images, Flow/hash preservation and target increments consistent. No remaining blocking finding."
+  },
+  "measurement_limits": [
+    "before_schema is source checkpoint fingerprint; after_schema is post-startup/pre-business fingerprint. Do not recompute newbusiness increments from these two snapshots.",
+    "Target increments/old-record and file preservation were asserted by sameSHAproducer against actual SQL/volumes; raw dumps and filepayloads were not selected for independent offline re-execution.",
+    "Relative column semantics/name/type/nullability/order normalized; physical dropped-column ordinal gaps compact during logicalrestore. Not fullDDL/default/index/constraint equivalence.",
+    "Negative failure_retry remains failed as expected with dedup; not positiveARMfault-recovery acceptance.",
+    "No originalSQLite/historicalvolumes, in-place downgrade, postcheckpoint-writeRPO0, Mac, newscan/native/license orfullAC19 proof."
+  ]
+}

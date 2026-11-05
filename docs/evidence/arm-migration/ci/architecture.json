@@ -1,0 +1,35 @@
+{
+  "requested": "arm64",
+  "host_system": "Linux",
+  "host_machine": "aarch64",
+  "runner_arch": "ARM64",
+  "docker_platform": "linux aarch64",
+  "postgres_reference": "postgres:16.15-trixie@sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c",
+  "images": {
+    "baseline": {
+      "image_id": "sha256:700e62a4f887345a378292ae821b2b431b0b906d952e890a3aa2eb0862cec9b5",
+      "os": "linux",
+      "architecture": "arm64"
+    },
+    "candidate": {
+      "image_id": "sha256:56dfce34864f75eb9e78dd02293a5f5a0bbd778789beef58d08eba3c25f7a07e",
+      "os": "linux",
+      "architecture": "arm64"
+    },
+    "api": {
+      "image_id": "sha256:9c205c99f61a300cd281993900205d129baa05b8dc047ea283a186eb2fc98991",
+      "os": "linux",
+      "architecture": "arm64"
+    },
+    "web": {
+      "image_id": "sha256:52a31e0f234008f9407ca96748e6567f9c77a67d66a886f1f40321faf8e3f012",
+      "os": "linux",
+      "architecture": "arm64"
+    },
+    "postgres": {
+      "image_id": "sha256:6162f3765f7563b273a879894c5751d41285f922dd75ba0ba508a89e024e43ca",
+      "os": "linux",
+      "architecture": "arm64"
+    }
+  }
+}

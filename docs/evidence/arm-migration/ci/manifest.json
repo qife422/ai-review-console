@@ -1,0 +1,139 @@
+{
+  "checked_at": "2026-11-05T18:53:47.897330+00:00",
+  "phase_results": {
+    "checkpoint": "passed",
+    "upgrade": "passed",
+    "rollback": "passed"
+  },
+  "source_commit": "7877364c17f5442df620f8be5c0f6f5a2c6f0d21",
+  "run_id": "42086830311",
+  "run_attempt": "1",
+  "files": [
+    {
+      "path": "capacity.jsonl",
+      "bytes": 13340,
+      "sha256": "8a277e14b96cd3a5818496e8b60c0f3166dcccc62b17363c9d6736cf32a21fc6"
+    },
+    {
+      "path": "architecture.json",
+      "bytes": 1121,
+      "sha256": "205394b7c8d28744eea893be0a4ad9d5fb6be12eb79f941978a2d11b60379e5c"
+    },
+    {
+      "path": "baseline-validation.json",
+      "bytes": 7199,
+      "sha256": "3e820e5204c6cdec1d5ca568a71fb4e07b0385e6c0eca6e3f4b381fd39ae6204"
+    },
+    {
+      "path": "checkpoint-manifest.json",
+      "bytes": 18005,
+      "sha256": "16caf2e7dfcf675c888557f4fcbf8c2e23b0c0e3b077cc3f453069f2532123c7"
+    },
+    {
+      "path": "checkpoint-summary.json",
+      "bytes": 29127,
+      "sha256": "e74a8c955957030aea055ad1559c9e7862b49b46bf72f50a2edbf98fb153cfe4"
+    },
+    {
+      "path": "upgrade-restore.json",
+      "bytes": 13709,
+      "sha256": "d97a1ea8b3e0aa644ab1e61ad14f715fea59f5df1537a022b75179e78ca5563a"
+    },
+    {
+      "path": "upgrade-summary.json",
+      "bytes": 54074,
+      "sha256": "6d812a41bda0f962ea5d1ff97d3b2671172ba94d5957c5193865b639d78ce187"
+    },
+    {
+      "path": "rollback-restore.json",
+      "bytes": 13720,
+      "sha256": "8e1dc6d61632179aa1ee267066470c8eeecca7d386ccf6eeef43727e478a7fcd"
+    },
+    {
+      "path": "rollback-summary.json",
+      "bytes": 54084,
+      "sha256": "9918b248ef735149d3b27887233f4e508e059d0fbbaf51ec3f2609d94039000f"
+    }
+  ],
+  "images": {
+    "ARC_MIGRATION_BASELINE_IMAGE": "sha256:700e62a4f887345a378292ae821b2b431b0b906d952e890a3aa2eb0862cec9b5",
+    "ARC_MIGRATION_CANDIDATE_IMAGE": "sha256:56dfce34864f75eb9e78dd02293a5f5a0bbd778789beef58d08eba3c25f7a07e",
+    "ARC_MIGRATION_API_IMAGE": "sha256:9c205c99f61a300cd281993900205d129baa05b8dc047ea283a186eb2fc98991",
+    "ARC_MIGRATION_WEB_IMAGE": "sha256:52a31e0f234008f9407ca96748e6567f9c77a67d66a886f1f40321faf8e3f012"
+  },
+  "architecture": {
+    "requested": "arm64",
+    "host_system": "Linux",
+    "host_machine": "aarch64",
+    "runner_arch": "ARM64",
+    "docker_platform": "linux aarch64",
+    "postgres_reference": "postgres:16.15-trixie@sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c",
+    "images": {
+      "baseline": {
+        "image_id": "sha256:700e62a4f887345a378292ae821b2b431b0b906d952e890a3aa2eb0862cec9b5",
+        "os": "linux",
+        "architecture": "arm64"
+      },
+      "candidate": {
+        "image_id": "sha256:56dfce34864f75eb9e78dd02293a5f5a0bbd778789beef58d08eba3c25f7a07e",
+        "os": "linux",
+        "architecture": "arm64"
+      },
+      "api": {
+        "image_id": "sha256:9c205c99f61a300cd281993900205d129baa05b8dc047ea283a186eb2fc98991",
+        "os": "linux",
+        "architecture": "arm64"
+      },
+      "web": {
+        "image_id": "sha256:52a31e0f234008f9407ca96748e6567f9c77a67d66a886f1f40321faf8e3f012",
+        "os": "linux",
+        "architecture": "arm64"
+      },
+      "postgres": {
+        "image_id": "sha256:6162f3765f7563b273a879894c5751d41285f922dd75ba0ba508a89e024e43ca",
+        "os": "linux",
+        "architecture": "arm64"
+      }
+    }
+  },
+  "selected_platform_locks": [
+    "compliance/langflow-candidate-arm64.lock",
+    "compliance/langflow-candidate-build-tools-arm64.lock"
+  ],
+  "sources": {
+    "docker/compose.migration.yml": "def64529bc278a6f0860b699000e0cfade50f8056469892bf7d38d2a43615b6a",
+    ".github/workflows/langflow-migration.yml": "fcbd45792a4ef46baf4497ab806bea968dc1fbe95717244289b134acb6c44882",
+    "scripts/verify_langflow_migration.py": "277305f39ad1c8ca5c6f7c9eac0660b7a747c683c10b1edcfbbe539672a4a952",
+    "scripts/validate_langflow.py": "00a3bfbfa9c70593fe2b90c0c1ec4668b25ee5e2121f0fc81d8e94400067cb2f",
+    "scripts/bootstrap_langflow.py": "e001f7490c870ec75044a3a958795a50857108f3938cda56ad49e6fe4f7fa40b",
+    "api/app/langflow_client.py": "bcd2852b468d7daf03c36edb9823d339df88e21f70897b4d48eb11e494c10c5b",
+    "docker/langflow.Dockerfile": "bb38c30695ea422839935a6209786f8ab8728d054210756d2b1af1e9d6b59cb6",
+    "docker/langflow-candidate.Dockerfile": "44d26559f0eda0fdb5e6c16f5b11732f8290065f4c06d591d481411a0f873919",
+    "docker/api.Dockerfile": "ed3d6ac4364d1b61658eaa4e1eeff6f8bafbb5263dda0d8b2ace2d6e478616c8",
+    "docker/web.Dockerfile": "e47b6a7329a34c940a7544a0ea9342936f5f8516551a9ba8e02f884e6485ceeb",
+    "docker/postgres-init.sql": "1d264c94146f77495adac974416b946bf2ee3b107c72614c197bc84639535cc3",
+    "requirements.lock": "993529902d7718533e40a25ccd220f713f2a8a4c6b4123a127625362593d891e",
+    "frontend/package-lock.json": "c887f8c63172bc87d022265f925e9fdb5c4b4b79151a5d8d86176f789a7c5a3e",
+    "compliance/langflow-candidate.lock": "22c0c6fd00a436f20fbc649e7ef69273da933b2c75ea0f797be9adfb48a4bd7b",
+    "compliance/langflow-candidate-arm64.lock": "1d83205f67800760e0e1e2542bfec26071af9d5c0f37a8ab89a9da1c0e1a0028",
+    "compliance/langflow-candidate-build-tools.lock": "9f87377dbd3950d2fd2f54d740a9fa7ce7f71acc87ef0f1e119b45fa970fa9ea",
+    "compliance/langflow-candidate-build-tools-arm64.lock": "3ec5a7b0e7dc5791b73277784eb4875b1965d70744200d95307445cf08c42415"
+  },
+  "method": "synthetic baseline checkpoint; fresh upgrade; third fresh old-version restore",
+  "not_tested": [
+    "original SQLite/historical volumes",
+    "in-place downgrade",
+    "zero loss of post-checkpoint writes",
+    "production migration",
+    "Mac host"
+  ],
+  "unselected": "plain dumps and file copies remain ephemeral on this runner; not uploaded",
+  "limits": {
+    "dump_bytes_each": 8388608,
+    "dump_total_bytes": 33554432,
+    "checkpoint_files": 100,
+    "checkpoint_file_bytes": 33554432,
+    "selected_bytes": 1048576,
+    "selected_files": 20
+  }
+}

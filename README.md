@@ -31,7 +31,9 @@ Langflow-powered document review console with deterministic redaction, explainab
 
 同日完成发布缺口对账和Zep2.0.2官方发行包复查，精确许可仍未确认；默认Langflow的Zep与API原生库义务分别记录。[发布阻塞、关闭条件与后续行动](docs/evidence/release-gaps/README.md)。
 
-**默认仍为Langflow1.11.6，v0.2完整发布验收未通过**。原SQLite和历史卷不变；前轮[AMD检查点升级/回滚](docs/evidence/langflow-transition/README.md)只绑定原source/image，不继承为ARM迁移通过。下一步补Mac宿主、ARM隔离迁移及系统/许可缺口，再按AD-03评审默认切换，之后推进版本历史和再审。历史证据保留原字节。
+同日[原生ARM64迁移CI42086830311](https://github.com/qife422/ai-review-console/actions/runs/42086830311)实际通过：新1.11.6虚构PG检查点→新1.13.1，以及恢复到第三个新1.11.6环境；两目标各新增5案、3决定、9报告，旧记录、两Flow和15个检查点文件验证保全。[完整结果与边界](docs/evidence/arm-migration/README.md)。
+
+**默认仍为Langflow1.11.6，v0.2完整发布验收未通过**。原SQLite和历史卷不变；AMD与ARM检查点演练分别绑定自己的source/image，不涵盖原库迁移、原地降级或升级后写入零丢失。下一步处理Mac宿主容量入口、系统与native/许可证缺口，再按AD-03评审默认切换，之后推进版本历史和再审。历史证据保留原字节。
 
 ## 基于 Langflow
 

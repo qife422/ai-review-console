@@ -1,0 +1,133 @@
+{
+  "checked_at": "2026-11-05T18:58:58.343591+00:00",
+  "method": "regular files and symlink lstat; no following/removing symlinks; snapshot before capacity/manifest",
+  "prior_six": [
+    {
+      "path": "/private/tmp/arc-runtime-maintenance.wT9huB",
+      "bytes": 38360216,
+      "regular_files": 276,
+      "symlinks": 0
+    },
+    {
+      "path": "/private/tmp/arc-langflow-candidate.qya6psom",
+      "bytes": 1217200,
+      "regular_files": 72,
+      "symlinks": 8
+    },
+    {
+      "path": "/private/tmp/arc-langflow-transition.l7tcavqh",
+      "bytes": 860409,
+      "regular_files": 60,
+      "symlinks": 0
+    },
+    {
+      "path": "/private/tmp/arc-langflow-arm.tlmz8anp",
+      "bytes": 514075,
+      "regular_files": 26,
+      "symlinks": 0
+    },
+    {
+      "path": "/private/tmp/arc-candidate-acceptance.1gcqlp6y",
+      "bytes": 485527,
+      "regular_files": 33,
+      "symlinks": 0
+    },
+    {
+      "path": "/private/tmp/arc-release-gaps.gsh2c_pd",
+      "bytes": 16056,
+      "regular_files": 4,
+      "symlinks": 0
+    }
+  ],
+  "new_temp": {
+    "path": "/private/tmp/arc-arm-migration.sr1d4ffq",
+    "bytes": 2526,
+    "regular_files": 1,
+    "symlinks": 0
+  },
+  "combined_temp_bytes": 41456009,
+  "ci_selected": {
+    "path": "artifacts/evidence-candidates/arm-migration/ci",
+    "bytes": 212734,
+    "regular_files": 11,
+    "symlinks": 0
+  },
+  "candidate_before_capacity_manifest": {
+    "path": "artifacts/evidence-candidates/arm-migration",
+    "bytes": 233732,
+    "regular_files": 17,
+    "symlinks": 0
+  },
+  "host_free_bytes": 18921127936,
+  "runner_samples": {
+    "count": 230,
+    "minimum_free_bytes": 106435391488,
+    "floor_bytes": 5368709120,
+    "not_hard_quota": true
+  },
+  "limits": {
+    "created_at": "2026-11-05T18:39:31.053471+00:00",
+    "same_goal": "cfd2d589-0c13-4ee0-bd93-8316c3f556a4",
+    "budget_cumulative_minutes": 460,
+    "prior_elapsed_seconds": 23065.999898433685,
+    "user_authorization": "2026-11-05\u5141\u8bb8\u540e\u7eed\u8ba1\u5212\u7ee7\u7eed\uff1b\u968f\u540e\u660e\u786e\u7d2f\u8ba1460\u5206\u949f\uff0c\u5b8c\u6210ARM\u9694\u79bb\u9a8c\u8bc1\u4e0e\u6536\u5c3e\uff1b\u4fdd\u7559\u9ed8\u8ba41.11.6/\u539f\u6570\u636e\u53ca\u5386\u53f2\u8bc1\u636e\u3002",
+    "contract": "ARC-UPGRADE@0.1.0 / WP-05 / AC-17 / AD-03 candidate only",
+    "source_baseline": "2939a1d00eeece8020ef2be2ebcef1f654c1efda",
+    "scope": "NativeLinuxARM64 new synthetic baseline1.11.6 checkpoint, fresh1.13.1 upgrade and thirdfresh1.11.6 checkpoint restoration. No original data or default replacement; no postcheckpoint-write RPO0 claim.",
+    "temporary": "/private/tmp/arc-arm-migration.sr1d4ffq",
+    "new_temp_limit_bytes": 65536,
+    "new_temp_limit_files": 12,
+    "prior_six_temp_bytes": 41453483,
+    "combined_temp_limit_bytes": 41943040,
+    "ci_selected_limit_bytes": 524288,
+    "ci_selected_limit_files": 40,
+    "selected_placement": "Memory ZIP verify and direct compact selection to ignored candidate; no duplicate rawselected files in temp, rawZIP never persisted.",
+    "transport_limit_each_bytes": 4194304,
+    "candidate": "artifacts/evidence-candidates/arm-migration",
+    "formal": "docs/evidence/arm-migration",
+    "project_candidate_formal_each_limit_bytes": 104857600,
+    "project_candidate_formal_each_limit_files": 1000,
+    "source_baseline_bytes": 764861,
+    "amplification_stop": "above1GiB AND100x source; no whole-build backup",
+    "runner_limits": {
+      "entrance_free_bytes": 32212254720,
+      "sampled_free_floor_bytes": 5368709120,
+      "sample_seconds": 5,
+      "dump_each_bytes": 8388608,
+      "dump_total_bytes": 33554432,
+      "checkpoint_files": 100,
+      "checkpoint_file_bytes": 33554432,
+      "runner_selected_bytes": 1048576,
+      "runner_selected_files": 20
+    },
+    "native_target_reads": 0,
+    "native_remaining": {
+      "files": 6,
+      "input_bytes": 26795216,
+      "text_bytes": 3969945
+    },
+    "source_downloads_planned": 0,
+    "cleanup_authorized": false,
+    "local_Docker_operations": false,
+    "cost_estimates": {
+      "next_minutes": [
+        40,
+        60
+      ],
+      "model_tokens": [
+        12000,
+        25000
+      ],
+      "actual_tokens": null,
+      "actual_billing": null
+    },
+    "roles": {
+      "Terra": "bounded workflow architecture adaptation",
+      "Sol": "existing producer/Compose ARM feasibility readonly",
+      "Astra": "fixedcandidate independent safetyreview",
+      "root": "integration, actualCI, selectedevidence andhandoff"
+    }
+  },
+  "local_Docker_operations": false,
+  "cleanup": false
+}

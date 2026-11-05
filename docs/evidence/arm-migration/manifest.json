@@ -1,0 +1,188 @@
+{
+  "evidence_id": "arm-migration",
+  "classification": "sealed_evidence",
+  "sealed_at": "2026-11-05T18:58:58.343591+00:00",
+  "display_date": "2026-11-05 America/Los_Angeles",
+  "contract": "ARC-UPGRADE@0.1.0",
+  "spec_sha256": "a77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753",
+  "source": "7877364c17f5442df620f8be5c0f6f5a2c6f0d21",
+  "run": 42086830311,
+  "run_conclusion": "success",
+  "architecture": {
+    "requested": "arm64",
+    "host_system": "Linux",
+    "host_machine": "aarch64",
+    "runner_arch": "ARM64",
+    "docker_platform": "linux aarch64",
+    "postgres_reference": "postgres:16.15-trixie@sha256:1beaa3084eee2676f20a9cd9928f0bf2c5bf674f8e49f81017912183d377c61c",
+    "images": {
+      "baseline": {
+        "image_id": "sha256:700e62a4f887345a378292ae821b2b431b0b906d952e890a3aa2eb0862cec9b5",
+        "os": "linux",
+        "architecture": "arm64"
+      },
+      "candidate": {
+        "image_id": "sha256:56dfce34864f75eb9e78dd02293a5f5a0bbd778789beef58d08eba3c25f7a07e",
+        "os": "linux",
+        "architecture": "arm64"
+      },
+      "api": {
+        "image_id": "sha256:9c205c99f61a300cd281993900205d129baa05b8dc047ea283a186eb2fc98991",
+        "os": "linux",
+        "architecture": "arm64"
+      },
+      "web": {
+        "image_id": "sha256:52a31e0f234008f9407ca96748e6567f9c77a67d66a886f1f40321faf8e3f012",
+        "os": "linux",
+        "architecture": "arm64"
+      },
+      "postgres": {
+        "image_id": "sha256:6162f3765f7563b273a879894c5751d41285f922dd75ba0ba508a89e024e43ca",
+        "os": "linux",
+        "architecture": "arm64"
+      }
+    }
+  },
+  "observed": {
+    "baseline_cases": 5,
+    "checkpoint_files": 15,
+    "checkpoint_file_bytes": 211475,
+    "checkpoint_manifest_sha256": "16caf2e7dfcf675c888557f4fcbf8c2e23b0c0e3b077cc3f453069f2532123c7",
+    "target_versions": {
+      "upgrade": "1.13.1",
+      "checkpoint_restore": "1.11.6"
+    },
+    "increments_each_target": {
+      "cases": 5,
+      "DVID": 5,
+      "decisions": 3,
+      "reports": 9,
+      "jobs": 9
+    },
+    "local_tests": {
+      "producer_plus_entrypoint": 42,
+      "postfix_entrypoint": 11
+    },
+    "native_target_reads": 0
+  },
+  "acceptance": {
+    "AC-17": "scoped_nativeARM_syntheticPG_checkpoint_upgrade_and_thirdfresh_oldversion_restore_passed",
+    "AC-18": "listed_business_and_negative_retry_subitems_only",
+    "full_AC-19": "not_passed",
+    "full_v02_last_verified": null,
+    "final_human_acceptance": "pending",
+    "residual_risk_accepted": false,
+    "default_adoption": false,
+    "original_data_migration": false,
+    "backend_distribution_approval": false,
+    "new_vulnerability_scan": false,
+    "online_demo_redeployed": false
+  },
+  "limitations": [
+    "NotoriginalSQLite/historicalvolumes",
+    "Notinplace downgrade",
+    "NotpostcheckpointwriteRPO0",
+    "NotfullDDL/default/index/constraint equality",
+    "after_schema is prebusiness snapshot; increments are producerSQL/file-asserted",
+    "NotMac orARMGUI/fault/performance acceptance",
+    "Noexactimage inheritance from older scan/license reports"
+  ],
+  "provenance": "Ten original CI members with size/SHA plus verified memory-only GitHubZIP digest; raw dumps/filecopies/buildtree/cache/logs unselected. Derived reviews label method and scope.",
+  "protection": "protection.json",
+  "documentation_impact": "documentation-impact.json",
+  "capacity": "capacity.json",
+  "payload_files": 18,
+  "payload_bytes": 238295,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 7572,
+      "sha256": "cd6efe13d9ed09d0ee1d583d32e3ef227b1074ee0f7fcb8dde567c798f15d30d"
+    },
+    {
+      "path": "capacity.json",
+      "bytes": 4563,
+      "sha256": "22aa152fedaeaef5b7e1e9561eb962db80cba178460e491e7d83ee40a190090d"
+    },
+    {
+      "path": "ci/architecture.json",
+      "bytes": 1121,
+      "sha256": "205394b7c8d28744eea893be0a4ad9d5fb6be12eb79f941978a2d11b60379e5c"
+    },
+    {
+      "path": "ci/baseline-validation.json",
+      "bytes": 7199,
+      "sha256": "3e820e5204c6cdec1d5ca568a71fb4e07b0385e6c0eca6e3f4b381fd39ae6204"
+    },
+    {
+      "path": "ci/capacity.jsonl",
+      "bytes": 13340,
+      "sha256": "8a277e14b96cd3a5818496e8b60c0f3166dcccc62b17363c9d6736cf32a21fc6"
+    },
+    {
+      "path": "ci/checkpoint-manifest.json",
+      "bytes": 18005,
+      "sha256": "16caf2e7dfcf675c888557f4fcbf8c2e23b0c0e3b077cc3f453069f2532123c7"
+    },
+    {
+      "path": "ci/checkpoint-summary.json",
+      "bytes": 29127,
+      "sha256": "e74a8c955957030aea055ad1559c9e7862b49b46bf72f50a2edbf98fb153cfe4"
+    },
+    {
+      "path": "ci/manifest.json",
+      "bytes": 5910,
+      "sha256": "ce31f85f0ef276f1a9913f814bedc66f2979757b7d3e111b48993e30efd13431"
+    },
+    {
+      "path": "ci/rollback-restore.json",
+      "bytes": 13720,
+      "sha256": "8e1dc6d61632179aa1ee267066470c8eeecca7d386ccf6eeef43727e478a7fcd"
+    },
+    {
+      "path": "ci/rollback-summary.json",
+      "bytes": 54084,
+      "sha256": "9918b248ef735149d3b27887233f4e508e059d0fbbaf51ec3f2609d94039000f"
+    },
+    {
+      "path": "ci/selection.json",
+      "bytes": 2445,
+      "sha256": "b062071971ab91c5529a322b74beef2d371db489e3609be662831105cdd0bc2c"
+    },
+    {
+      "path": "ci/upgrade-restore.json",
+      "bytes": 13709,
+      "sha256": "d97a1ea8b3e0aa644ab1e61ad14f715fea59f5df1537a022b75179e78ca5563a"
+    },
+    {
+      "path": "ci/upgrade-summary.json",
+      "bytes": 54074,
+      "sha256": "6d812a41bda0f962ea5d1ff97d3b2671172ba94d5957c5193865b639d78ce187"
+    },
+    {
+      "path": "documentation-impact.json",
+      "bytes": 734,
+      "sha256": "6b763b3d5f8739650edd528c1c0707785b4b87b4785b8f96bb88bab3ff7a3f4a"
+    },
+    {
+      "path": "plan.json",
+      "bytes": 2526,
+      "sha256": "76d9f866be259d879435351eb2ee9e2a2291fa0a75a434c78a917d7002d7ec2c"
+    },
+    {
+      "path": "protection.json",
+      "bytes": 3428,
+      "sha256": "47ab04fdad327d5e7bb8a064c63d42f1b4cfc67288df5433beb1881cfbd15cf2"
+    },
+    {
+      "path": "result-review.json",
+      "bytes": 4320,
+      "sha256": "e2b86e4f9e47ac202a49689213373b4b0d28c443b9df04c29bb009de797939c5"
+    },
+    {
+      "path": "verification-review.json",
+      "bytes": 2418,
+      "sha256": "d8045d25cc0261c550ee0eed8604584bbeb6d24be5dbf9232ae3e2ab5fb1c964"
+    }
+  ]
+}

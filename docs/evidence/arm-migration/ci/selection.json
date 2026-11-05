@@ -1,0 +1,72 @@
+{
+  "classification": "original_selected_members_with_transport_receipt",
+  "run": 42086830311,
+  "source": "7877364c17f5442df620f8be5c0f6f5a2c6f0d21",
+  "artifact_id": 13443877085,
+  "transport_bytes": 50527,
+  "transport_sha256": "7220b8371291bfea81f6610a5e43e0b1b94c33d40d845bf437962fbd8666b5db",
+  "transport_retained": false,
+  "files": [
+    {
+      "member": "manifest.json",
+      "path": "manifest.json",
+      "bytes": 5910,
+      "sha256": "ce31f85f0ef276f1a9913f814bedc66f2979757b7d3e111b48993e30efd13431"
+    },
+    {
+      "member": "architecture.json",
+      "path": "architecture.json",
+      "bytes": 1121,
+      "sha256": "205394b7c8d28744eea893be0a4ad9d5fb6be12eb79f941978a2d11b60379e5c"
+    },
+    {
+      "member": "capacity.jsonl",
+      "path": "capacity.jsonl",
+      "bytes": 13340,
+      "sha256": "8a277e14b96cd3a5818496e8b60c0f3166dcccc62b17363c9d6736cf32a21fc6"
+    },
+    {
+      "member": "baseline-validation.json",
+      "path": "baseline-validation.json",
+      "bytes": 7199,
+      "sha256": "3e820e5204c6cdec1d5ca568a71fb4e07b0385e6c0eca6e3f4b381fd39ae6204"
+    },
+    {
+      "member": "checkpoint-manifest.json",
+      "path": "checkpoint-manifest.json",
+      "bytes": 18005,
+      "sha256": "16caf2e7dfcf675c888557f4fcbf8c2e23b0c0e3b077cc3f453069f2532123c7"
+    },
+    {
+      "member": "checkpoint-summary.json",
+      "path": "checkpoint-summary.json",
+      "bytes": 29127,
+      "sha256": "e74a8c955957030aea055ad1559c9e7862b49b46bf72f50a2edbf98fb153cfe4"
+    },
+    {
+      "member": "upgrade-restore.json",
+      "path": "upgrade-restore.json",
+      "bytes": 13709,
+      "sha256": "d97a1ea8b3e0aa644ab1e61ad14f715fea59f5df1537a022b75179e78ca5563a"
+    },
+    {
+      "member": "upgrade-summary.json",
+      "path": "upgrade-summary.json",
+      "bytes": 54074,
+      "sha256": "6d812a41bda0f962ea5d1ff97d3b2671172ba94d5957c5193865b639d78ce187"
+    },
+    {
+      "member": "rollback-restore.json",
+      "path": "rollback-restore.json",
+      "bytes": 13720,
+      "sha256": "8e1dc6d61632179aa1ee267066470c8eeecca7d386ccf6eeef43727e478a7fcd"
+    },
+    {
+      "member": "rollback-summary.json",
+      "path": "rollback-summary.json",
+      "bytes": 54084,
+      "sha256": "9918b248ef735149d3b27887233f4e508e059d0fbbaf51ec3f2609d94039000f"
+    }
+  ],
+  "not_selected": "Raw dumps/checkpoint filecopies/build trees/caches/logs never part of this selected transport. No source response invented."
+}

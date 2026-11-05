@@ -1,0 +1,44 @@
+{
+  "classification": "derived_local_verification_and_review",
+  "source": "7877364c17f5442df620f8be5c0f6f5a2c6f0d21",
+  "run": 42086830311,
+  "changed_paths": [
+    ".github/workflows/langflow-migration.yml",
+    "tests/test_langflow_migration_entrypoint.py"
+  ],
+  "source_sha256": {
+    ".github/workflows/langflow-migration.yml": "fcbd45792a4ef46baf4497ab806bea968dc1fbe95717244289b134acb6c44882",
+    "tests/test_langflow_migration_entrypoint.py": "3901f05079f13438839fbcffdfbe74e1c270a08784305bc3a771f7da05958743",
+    "scripts/verify_langflow_migration.py": "277305f39ad1c8ca5c6f7c9eac0660b7a747c683c10b1edcfbbe539672a4a952",
+    "docker/compose.migration.yml": "def64529bc278a6f0860b699000e0cfade50f8056469892bf7d38d2a43615b6a"
+  },
+  "tests": {
+    "initial_producer_plus_entrypoint": 42,
+    "result": "passed",
+    "post_dispatch_parsefix_entrypoint": 11,
+    "result_postfix": "passed",
+    "ruff": "passed",
+    "diff_check": "passed",
+    "scope": "Existing producer unchanged; entrypoint includes shell/embeddedPython compile and executed platform-evidence positive/negative cases, noDocker."
+  },
+  "independent_review": {
+    "reviewer": "Astra migration_review",
+    "method": "Read-only fixedcandidate WF/test/protectedproducer inspection; noimplementation, network orDocker",
+    "initial_source_sha256": "dc81d5389a9d89bed6c517a847fa6009ba7e503275d63611e013394fb121a405",
+    "postfix_source_sha256": "fcbd45792a4ef46baf4497ab806bea968dc1fbe95717244289b134acb6c44882",
+    "conclusion": "No remaining blocking finding. Architecture checks precede baseline writes, namespaces/empty targets/volumeidentity preserved, capacity/uploadbounded, defaultamd64 kept. Postfix only changes runner architecture variable source; actualARM proof pending."
+  },
+  "dispatch_failure": {
+    "source": "6725640591784a51164ad1515318a99e3a5f94ed",
+    "http_status": 422,
+    "error": "Line23 Col34 Unrecognized named-value runner in job-levelenv expression runner.arch",
+    "valid_migration_run_created": false,
+    "fix": "Readstandard RUNNER_ARCH in firststep; export andpersistGITHUB_ENV. Noarchitecture/data assertion weakened.",
+    "official_sources": [
+      "https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#context-availability",
+      "https://docs.github.com/en/actions/reference/workflows-and-actions/variables"
+    ]
+  },
+  "tokens_actual": null,
+  "billing_actual": null
+}
