@@ -2,13 +2,13 @@
 
 更新日期：2026-11-05（America/Los_Angeles）。冷启动以本文件、固定Contract、实际源码及精确范围证据为准。
 
-负责人已批准ARC-UPGRADE@0.1.0及WP-00..05 continuous；ARM虚构PG迁移/检查点恢复等有限验证已完成。用户最新授权先核Mac容量与Docker恢复条件，满足后再做本机隔离；条件未满足且启动风险已具体说明后，用户明确选择“保持原数据保护，仅同步本轮预检”。原goal累计460分钟和修复次数保留，本轮仅只读预检、文档/证据核验及GitHub同步；不授权Desktop启动、既有容器恢复、build/pull/清理、默认替换或后端发布。门禁只覆盖工作区shell/文件补丁，不授予权限。
+负责人已批准ARC-UPGRADE@0.1.0及WP-00..05 continuous；ARM虚构PG迁移/检查点恢复等有限验证已完成。用户前轮在Mac预检后明确选择保持原数据保护、仅同步预检；本轮进一步授权排查不自动恢复历史容器的Docker方案，先确认方案与条件、暂不启动Docker，再同步GitHub。原goal累计460分钟和修复次数保留，本轮仅只读方案核查与文档自查同步；不授权Desktop启动、设置或旧容器修改、既有任务恢复、新实验环境创建、build/pull/清理、默认替换或后端发布。门禁只覆盖工作区shell/文件补丁，不授予权限。
 
 | 轴 | 当前状态 |
 |---|---|
 | Contract | approved/0.1.0，固定字节不变 |
 | 交付 | implementing；WP-05完整发布仍open；ARM虚构PG检查点验收已完成；Mac只读预检完成，本机验收未启动（恢复/容量前提未满足）；Zep仍open |
-| Mac宿主 | macOS26.5.2 arm64，8GiB/8CPU，探针时约17.7GiB空闲；Desktop/daemon不可用，策略与内部容量不可读；用户选择仅同步预检 |
+| Mac宿主 | 前轮macOS26.5.2 arm64/8GiB/8CPU及约17.7GiB余量快照；本轮确认Desktop4.43.2/build199162，restart配置缺省；已找到弃用控制候选，未验证或启动，策略/内部容量仍不可读 |
 | 默认运行时 | 1.11.6，原Dockerfile含52inline pins及既有补丁，字节不变 |
 | 精简候选 | base/LFX1.13.1；独立AMD64/ARM64各334包/4工具SHA锁及已验证实际清单 |
 | 既有常规CI | e6f6fe7 / 41979142562 success：271 Python/29前端，默认与候选各AMD/ARM后端、AMD业务浏览器；ARM GUI跳过 |
@@ -18,10 +18,11 @@
 | 隔离迁移/回滚 | ARM7877364 / 42086830311与旧AMD480246c / 41954322019各有独立实证；两架构各新1.13.1及第三新1.11.6，目标各新增5案/9报告；不涵盖原库或升级后写入RPO0 |
 | 系统与许可 | 旧精确候选各132 LF provider记录；默认LF的Zep/IBM driver及各API/LF精确image的native/source/FIPS分发缺口仍open；本轮未重扫 |
 | 发布与接受 | AC-19 not passed；完整last_verified=null；最终接受pending，未接受残余风险或批准后端分发 |
-| 保护 | 原SQLite/历史卷、Spec/baseline、默认及依赖锁、十旧封存包不变，新Mac预检包按manifest封存；没有本地Docker增长或历史清理 |
+| 保护 | 原SQLite/历史卷、Spec/baseline、默认及依赖锁、十一旧封存包不变，恢复方案仅为文档，未新增运行证据包；没有本地Docker增长或历史清理 |
 
 ## 活动证据
 
+- [Docker安全恢复方案核查](DOCKER_RECOVERY.md)：本轮只读确认Desktop4.43.2/build199162，daemon.json124B、仅builder/experimental，SHA27369c832f1be7d067b379f3236a203993e7bec45135e58829a9273c3209f53c。Moby28.3.2弃用restart控制有源码依据，但配置传递及实际抑制尚未验证，且不能保证AutoRemove/历史存储零变更；暂不启动。优先条件是已有独立空环境的标识与隔离边界，不另建Spec/证据包。
 - [本轮Mac宿主及Docker恢复预检](evidence/mac-host/README.md)，[正式manifest](evidence/mac-host/manifest.json) SHA-256 `9d74ef908847c7007ed1cac0e36d1e9e5e3772b1e5f813b2cdf77e2234e20305`。两个context指向同一缺失socket，info失败后的零值server结构不当作空engine；未启动Desktop或本机业务验收。用户明确保持保护、仅同步预检；不把条件未满足记为Mac测试失败。
 - [本轮ARM隔离迁移与检查点恢复](evidence/arm-migration/README.md)，[正式manifest](evidence/arm-migration/manifest.json) SHA-256 `abf078ccd1dbd11aa6908138a89e15d8299c4cc0ab4c5da87d99648d0a18e346`。[CI42086830311](https://github.com/qife422/ai-review-console/actions/runs/42086830311) / source7877364c17f5442df620f8be5c0f6f5a2c6f0d21整体success，Linux/aarch64、runnerARM64、五个image实际arm64。两目标分别1.13.1/1.11.6，各新增5案/5文档/3决定/9报告/9任务，旧业务/Flow及15文件保全；LF候选image sha256:56dfce34864f75eb9e78dd02293a5f5a0bbd778789beef58d08eba3c25f7a07e。首个6725640的422和修复记录保留。
 - [本轮发布缺口矩阵、关闭条件和Zep复查](evidence/release-gaps/README.md)：已封存，[manifest](evidence/release-gaps/manifest.json) SHA-256 `cd5b73563dcbe6b257d05765ecf74b7356c41ff2d42bcd0497779fd9657c3872`。9次官方请求111,442B；精确2.0.2许可仍OPEN，未修改runtime或重复应用测试。封存时上游澄清草稿尚未发送；随后经用户明确批准，已按批准稿发布[上游issue #368](https://github.com/getzep/zep-python/issues/368)，发布后回读时open、0回复，待维护者澄清。旧封存包保持原字节，问题提交不构成许可闭项或后端分发批准。
@@ -41,7 +42,7 @@
 
 ## 自查、保护与产物
 
-原SQLite57,344B SHA980ad5d23d866a52e4101966594e5a24ee67edef08475afc63ff9c3e1f6fca1f；固定Spec SHAa77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753；baseline SHA5ad13f524e74554b9c8cb30b9809ffbbbbed8e3d7fa4ede5625bb1b7d781bf2e。默认Dockerfile/52pins、requirements.lock和AMD两锁字节未变；本轮10固定输入及十旧manifest新SHA核对一致，旧包路径无改动；前轮8包1,325payload全读与release-gaps的10payload封存核验沿链保留，不冒称本轮重读全部历史正文。没有原库执行、迁移或挂载。
+原SQLite57,344B SHA980ad5d23d866a52e4101966594e5a24ee67edef08475afc63ff9c3e1f6fca1f；固定Spec SHAa77947d0369566cef516641ef918e37d08046afc2edf8215dcff90d49ce01753；baseline SHA5ad13f524e74554b9c8cb30b9809ffbbbbed8e3d7fa4ede5625bb1b7d781bf2e。默认Dockerfile/52pins、requirements.lock和AMD两锁字节未变；本轮10固定输入及十一旧manifest新SHA核对一致，旧包路径无改动；前轮8包1,325payload全读与release-gaps的10payload封存核验沿链保留，不冒称本轮重读全部历史正文。没有原库执行、迁移或挂载。
 
 候选专项temp `/private/tmp/arc-candidate-acceptance.1gcqlp6y` 限768KiB；旧四temp加新增限40MiB，CI选材512KiB/40files、来源64KiB/4files，候选/正式各100MiB/1000files，沿既有源码放大停点。ZIP只在内存校验官方size/digest；完整日志/构建/缓存及未选报告不入包。CI20GiB入口/5GiB取样余量不是Docker硬配额；512MiB/500files只是计划警戒估算，未实施持续卷限额，API实际配置1GiB/5000。容量实测见本轮environment记录。本地Docker旧warning/pending_cleanup保留，未start/build/pull/prune，未宣称全layers归属已盘清。
 
@@ -59,7 +60,7 @@
 
 上游沟通已完成：#368由qife422于2026-11-05发布，标题和1748字符正文回读与批准稿一致；正文SHA-256 `665ded10bc7302e118d45ed6204549fc34930b67f9af4439e2a49d41da406cb7`。连接器创建因integration权限403未执行成功，改用已登录CLI发布，再通过连接器GET核实。下一项是由维护者提供精确2.0.2的许可说明；收到后由Agent核对来源、版本及适用范围。当前没有运行中的等待任务或自动监控，不重复提交issue；Zep及完整AC-19继续open。
 
-1. Mac预检已完成且本轮用户选择不启动Desktop。用户/环境操作者需提供可验证的不恢复历史工作负载途径，或已存在独立空daemon/VM的条件；相应前提与授权成立后，由Agent只读盘点当前image/cache/卷/策略及12GiB/3GiB边界，再进行全新本机栈5案/9报告验收。当前无活动等待/恢复进程，不重复启动或伪造GitHub环境；原库迁移/升级后写入恢复继续另行设计。
+1. 按[恢复方案](DOCKER_RECOVERY.md)，先由用户/环境操作者提供已有独立空环境标识、disk/socket/共享目录边界；Agent核实后，在相应授权与资源条件成立时验证Moby候选机制及相同Mac Desktop的配置传递。当前历史盘启动仍缺AutoRemove/编排/外部启动器与容量证据，restart抑制不等于历史零写入；暂不改配置或启动Desktop，不安装/创建替代引擎绕停点。后续才考虑只读库存及新本机栈5案/9报告；原库迁移另行设计。
 2. 由Agent按最终制品范围选择一项可闭合的native/source材料或系统处置，保持共享采集与累计预算；Zep精确许可仍依赖维护者回复#368，不能以重复复查代替依据。SQLite/系统native通知和提供方式、默认LF的Zep/IBM driver及各image的vendor/FIPS条件继续open。
 3. 完整发布条件、技术验收和负责人AD-03决定后才切换默认，再沿WP-08推进版本历史、修改后再审、队列及失败诊断；模型/OCR、真实身份/数据、生产部署仍有独立选择。
 

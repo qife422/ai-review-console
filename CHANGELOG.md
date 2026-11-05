@@ -2,6 +2,13 @@
 
 本文件记录主要功能与交接边界；精确代码差异以 Git 提交为准。开发快照不是正式发布，源码备份不是运行数据库备份。
 
+## 2026-11-05 — Docker 安全恢复方案核查
+
+- 按新授权继续只读研究，暂不启动Docker。实际确认Desktop4.43.2/build199162、客户端28.3.2；白名单读取daemon.json124B，仅builder/experimental，restart/live-restore缺省，未公开其他值或改配置。
+- [恢复方案及前提](docs/DOCKER_RECOVERY.md)记录Moby28.3.2已弃用restart控制的源码推论，区分“候选机制”与“本机已验证”。Desktop启动CLI没有相应开关；live-restore、登录启动设置及启动后竞速stop/update不能替代启动前保护。
+- 明确抑制容器自动启动不保证历史存储零变更：恢复流程仍可能处理AutoRemove、状态和挂载点。优先在已有独立空环境验证，当前历史盘不满足启动条件；未另建环境、安装、备份整盘或扩大额度。
+- 仅文档更新，无新运行验收/封存包；10固定输入、11旧manifest及旧路径diff核对。默认1.11.6、原始数据和历史产物保护边界保持，460分钟累计不重置；完整AC-19、Zep及系统/native缺口继续open。
+
 ## 2026-11-05 — Mac 宿主恢复条件预检
 
 - 核对macOS26.5.2 arm64、8GiB/8CPU、探针时约17.7GiB空闲；Desktop状态和daemon查询均exit1。两个context指向同一缺失socket，失败info中的零值server结构不作为空引擎证据。
