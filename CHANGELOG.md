@@ -5,9 +5,10 @@
 ## 2026-11-05 — 发布缺口与 Zep 精确许可复查
 
 - 重新读取官方PyPI2.0.2元数据、SHA验证wheel/sdist及精确tag；9次请求111,442B，来源指纹与旧记录一致。精确许可仍OPEN，不套当前main/旧oss分支许可、不注入未经证实文本。
-- 按服务和精确image拆分缺口：Zep已实证属于默认LF，API为Psycopg3.3.5等native义务；补齐六项发布阻塞、关闭条件与上游澄清草稿，未发送第三方消息。
+- 按服务和精确image拆分缺口：Zep已实证属于默认LF，API为Psycopg3.3.5等native义务；补齐六项发布阻塞、关闭条件与上游澄清草稿，封存时尚未发送。随后经用户单独授权，已按批准稿发布[上游issue #368](https://github.com/getzep/zep-python/issues/368)，标题及正文回读一致，待维护者回复；Zep许可仍OPEN，旧封存包不修改。
 - 本机Docker daemon不可连接，image/cache内部容量盘点仍unavailable；只读核Docker.raw分配及五旧temp，不start/build/pull/prune或清理。本轮没有新增native目标读取、运行时变更、扫描或重复业务测试。
 - [本轮结论与后续行动](docs/evidence/release-gaps/README.md)封存；固定输入/八旧包保留，完整发布、默认切换和后端分发仍未批准。
+- 用户确认更新hook全部通过后恢复文档同步；同目标累计预算明确扩至400分钟，仅收尾两份文档、自查及GitHub同步，原计量和修复次数保留。没有新增运行时变更、测试、构建或扫描，不创建额外Spec/状态表/证据包。
 
 ## 2026-11-05 — 候选编辑器、恢复与性能专项
 

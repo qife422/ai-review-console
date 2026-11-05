@@ -2,7 +2,7 @@
 
 更新日期：2026-11-05（America/Los_Angeles）。冷启动以本文件、固定Contract、实际源码及精确范围证据为准。
 
-负责人已批准ARC-UPGRADE@0.1.0及WP-00..05 continuous。本轮授权补齐1.13.1精简候选的管理编辑器、故障恢复和性能验收，并自查同步GitHub。同目标累计预算360分钟，既有累计保留；没有扩大默认替换、原始数据、历史清理或后端发布权限。门禁只验证工作区shell/文件补丁覆盖，登记不授予权限。
+负责人已批准ARC-UPGRADE@0.1.0及WP-00..05 continuous。候选管理编辑器、故障恢复和性能专项已完成有限验收；后续发布缺口复核及上游澄清另按实际范围记录。2026-11-05用户明确把同目标累计预算从360分钟扩至400分钟，仅用于回读#368、更新本文件及CHANGELOG、自查推送，既有累计和修复次数保留；没有扩大功能、构建、默认替换、原始数据、历史清理或后端发布权限。门禁只覆盖工作区shell/文件补丁，登记不授予权限。
 
 | 轴 | 当前状态 |
 |---|---|
@@ -21,7 +21,7 @@
 
 ## 活动证据
 
-- [本轮发布缺口矩阵、关闭条件和Zep复查](evidence/release-gaps/README.md)：已封存，[manifest](evidence/release-gaps/manifest.json) SHA-256 `cd5b73563dcbe6b257d05765ecf74b7356c41ff2d42bcd0497779fd9657c3872`。9次官方请求111,442B；精确2.0.2许可仍OPEN，未修改runtime或重复应用测试。上游澄清草稿已备好，未发送。
+- [本轮发布缺口矩阵、关闭条件和Zep复查](evidence/release-gaps/README.md)：已封存，[manifest](evidence/release-gaps/manifest.json) SHA-256 `cd5b73563dcbe6b257d05765ecf74b7356c41ff2d42bcd0497779fd9657c3872`。9次官方请求111,442B；精确2.0.2许可仍OPEN，未修改runtime或重复应用测试。封存时上游澄清草稿尚未发送；随后经用户明确批准，已按批准稿发布[上游issue #368](https://github.com/getzep/zep-python/issues/368)，发布后回读时open、0回复，待维护者澄清。旧封存包保持原字节，问题提交不构成许可闭项或后端分发批准。
 - [本轮编辑器、恢复与性能结果及计划](evidence/candidate-acceptance/README.md)，[正式manifest](evidence/candidate-acceptance/manifest.json)，SHA-256 `d9736e997bf048f2e46337daa65089131f9d84c3613ea5a61143fed41c532fc1`。
 - [B运行41983887326](https://github.com/qife422/ai-review-console/actions/runs/41983887326)，source8db7f5f8a5cd6c1634a8c7a0ed40b195ff3ed424：故障、PDF恢复、性能及301项单元通过；整轮因编辑器最终登录429而failed。LF image sha256:b836bf131480cd92747e8e50f54324fd3d76531137a59fa214e32549f2b44966，API/worker sha256:de0ace4c6c71bef46334aa8f360ae8fd3bcde0dab042f0d613dd7a9c4a40c411。
 - [C编辑器专项42070564065](https://github.com/qife422/ai-review-console/actions/runs/42070564065)，source54592dff0231ee84b992956e0ea9b99b0eecdc39：通过虚构副本改名、保存、重载及API回读（C专项success，305项Python/29项前端通过）。只修429探针有界等待、helper外层时限、对应测试及手动CI选择；B故障/报告/性能明确跳过，不变成C精确image全项通过。
@@ -46,7 +46,11 @@
 
 缺失receipt.lock时，用户授权的最小补建因账本并发变化在写前取消；正规门禁随后恢复。本代理没有手工改账本/门禁代码、补建锁或重置累计计时，具体记录保留。临时和历史产物没有删除、迁移或压缩。
 
+后续同步曾因门禁源码变更与旧回调指纹不符而停止。现已实际读取最新工作区AGENTS、规则索引及开发范式，保留固定Contract；用户确认四条更新hook全部通过后，接续原目标。只读及正规计量入口现可调用，本次按授权恢复两份文档同步；不把这些观察扩大为所有产品生命周期或MCP/浏览器/云端均已验证。没有自动切换模型、另建Spec或证据包。
+
 ## 后续计划
+
+上游沟通已完成：#368由qife422于2026-11-05发布，标题和1748字符正文回读与批准稿一致；正文SHA-256 `665ded10bc7302e118d45ed6204549fc34930b67f9af4439e2a49d41da406cb7`。连接器创建因integration权限403未执行成功，改用已登录CLI发布，再通过连接器GET核实。下一项是由维护者提供精确2.0.2的许可说明；收到后由Agent核对来源、版本及适用范围。当前没有运行中的等待任务或自动监控，不重复提交issue；Zep及完整AC-19继续open。
 
 1. 补Mac宿主实际运行与ARM旧schema隔离迁移；如需更全面管理验收，独立补组件参数/代码编辑及clone执行。升级后写入恢复、原库迁移另行设计。
 2. 继续按供应商状态处理Debian残余，补SQLite/系统native对应源码、完整通知及提供方式，以及默认LF的Zep/IBM driver、各image的native/vendor/FIPS许可；保持共享采集和累计预算边界。
