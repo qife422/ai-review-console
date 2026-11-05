@@ -25,7 +25,12 @@ from typing import Any
 import httpx
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from bootstrap_langflow import COMPONENTS, find_template  # noqa: E402
+from bootstrap_langflow import (  # noqa: E402
+    COMPONENTS,
+    add_expected_langflow_version_argument,
+    find_template,
+    require_langflow_version,
+)
 
 from api.app.langflow_client import LangflowClient, graph_hash  # noqa: E402
 
@@ -405,12 +410,15 @@ def _benchmark(client: httpx.Client, count: int) -> dict[str, Any]:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
+    add_expected_langflow_version_argument(parser)
     parser.add_argument("--api-url", default=os.getenv("REVIEW_API_URL", "http://localhost:8080"))
     parser.add_argument("--evidence", type=Path)
     parser.add_argument("--benchmark-count", type=int, default=0, choices=range(21))
     args = parser.parse_args()
     langflow = LangflowClient()
     try:
+        openapi = langflow.request("GET", "/openapi.json").json()
+        observed_version = require_langflow_version(openapi, args.expected_langflow_version)
         component_index = langflow.request("GET", "/api/v1/all").json()
         missing = [name for name in COMPONENTS if not find_template(component_index, name)]
         if missing:
@@ -423,9 +431,6 @@ def main() -> None:
         if not all(selected.values()):
             raise RuntimeError("Published review Flows are missing")
         before = {name: graph_hash(item["data"]) for name, item in selected.items() if item}
-        openapi = langflow.request("GET", "/openapi.json").json()
-        if openapi.get("info", {}).get("version") != "1.11.6":
-            raise AssertionError("Runtime differs from the pinned Langflow 1.11.6 contract")
         build_operation = openapi["paths"]["/api/v1/build/{flow_id}/flow"]["post"]
         if not build_operation.get("requestBody"):
             raise AssertionError("Build API does not expose its per-execution input body")
@@ -456,7 +461,8 @@ def main() -> None:
             "producer_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
             "command": sys.argv,
             "checked_at": datetime.now(UTC).isoformat(),
-            "langflow_version": "1.11.6",
+            "langflow_version": observed_version,
+            "expected_langflow_version": args.expected_langflow_version,
             "acceptance": ["AC-02", "AC-04", "AC-05", "AC-13", "AC-18"],
             "component_count": len(COMPONENTS),
             "build_input": "authenticated Build API data override; no per-case PATCH",

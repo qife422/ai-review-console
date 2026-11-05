@@ -1,0 +1,14 @@
+services:
+  langflow:
+    image: ai-review-console-langflow:candidate
+    build:
+      dockerfile: docker/langflow-candidate.Dockerfile
+  flow-init:
+    command:
+      - python
+      - scripts/bootstrap_langflow.py
+      - --upload
+      - --manifest
+      - /app/config/langflow-flows.json
+      - --expected-langflow-version
+      - "1.13.1"

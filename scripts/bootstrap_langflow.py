@@ -23,6 +23,31 @@ COMPONENTS = (
     "ApprovalTaskGateway",
     "DecisionReportExporter",
 )
+DEFAULT_LANGFLOW_VERSION = "1.11.6"
+EXPECTED_LANGFLOW_VERSIONS = (DEFAULT_LANGFLOW_VERSION, "1.13.1")
+
+
+def add_expected_langflow_version_argument(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument(
+        "--expected-langflow-version",
+        default=DEFAULT_LANGFLOW_VERSION,
+        choices=EXPECTED_LANGFLOW_VERSIONS,
+        help="Require this exact observed OpenAPI version (default: %(default)s).",
+    )
+
+
+def require_langflow_version(
+    openapi: object, expected: str = DEFAULT_LANGFLOW_VERSION
+) -> str:
+    if expected not in EXPECTED_LANGFLOW_VERSIONS:
+        raise ValueError("Unsupported expected Langflow version")
+    info = openapi.get("info") if isinstance(openapi, dict) else None
+    observed = info.get("version") if isinstance(info, dict) else None
+    if observed != expected:
+        raise AssertionError(
+            f"Runtime version mismatch: expected Langflow {expected}, observed {observed!r}"
+        )
+    return observed
 
 
 def login(client: httpx.Client, username: str, password: str) -> dict[str, str]:
@@ -166,6 +191,7 @@ def build_flows(component_index: object) -> list[dict[str, Any]]:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
+    add_expected_langflow_version_argument(parser)
     parser.add_argument("--upload", action="store_true")
     parser.add_argument("--write", type=Path)
     parser.add_argument("--manifest", type=Path)
@@ -175,6 +201,11 @@ def main() -> None:
     password = os.getenv("LANGFLOW_SUPERUSER_PASSWORD", "")
     with httpx.Client(base_url=base_url, timeout=30) as client:
         headers = login(client, username, password)
+        runtime = client.get("/openapi.json", headers=headers)
+        runtime.raise_for_status()
+        observed_version = require_langflow_version(
+            runtime.json(), args.expected_langflow_version
+        )
         response = client.get("/api/v1/all", headers=headers)
         response.raise_for_status()
         flows = build_flows(response.json())
@@ -239,7 +270,8 @@ def main() -> None:
             digest = canonical_hash(configuration)
             manifest = {
                 "schema_version": "1.0",
-                "langflow_version": "1.11.6",
+                "langflow_version": observed_version,
+                "expected_langflow_version": args.expected_langflow_version,
                 "config_hash": digest,
                 "configuration": configuration,
                 "flows": {},
