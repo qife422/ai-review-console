@@ -95,7 +95,7 @@ try {
     assert(parsed && Number(parsed[1]) > 0 && Number(parsed[2]) > 0, 'Editor nodes and edges not observed');
     cli('screenshot', `--filename=${join(evidence, 'editor.png')}`);
     // Resolve each actionable reference against a fresh snapshot. Unsupported UI fails closed.
-    const renameButton = ref('button', new RegExp(`^${state.original_name}$`));
+    const renameButton = ref('button', new RegExp(`^Edit flow details and settings for ${state.original_name}$`));
     cli('click', renameButton);
     const nameField = ref('textbox', /^(?:Flow name|Name)$/i);
     cli('fill', nameField, state.edited_name);

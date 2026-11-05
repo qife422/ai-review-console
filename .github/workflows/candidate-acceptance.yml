@@ -33,10 +33,11 @@ jobs:
       - name: Require capacity and fresh namespace
         run: |
           set -euo pipefail
-          test "$(df -B1 --output=avail "$RUNNER_TEMP" | tail -n1 | tr -d '[:space:]')" -ge 21474836480
-          mkdir "$RUNNER_TEMP/arc-acceptance" "$RUNNER_TEMP/arc-acceptance/selected"
-          echo "ARC_ACCEPTANCE_ROOT=$RUNNER_TEMP/arc-acceptance" >> "$GITHUB_ENV"
-          echo "ARC_CANDIDATE_COMPOSE_FILE=$RUNNER_TEMP/arc-acceptance/effective.compose.json" >> "$GITHUB_ENV"
+          test "$(df -B1 --output=avail /tmp | tail -n1 | tr -d '[:space:]')" -ge 21474836480
+          arc_root="$(mktemp -d "/tmp/arc-candidate-acceptance-${GITHUB_RUN_ID}.XXXXXX")"
+          mkdir "$arc_root/selected"
+          echo "ARC_ACCEPTANCE_ROOT=$arc_root" >> "$GITHUB_ENV"
+          echo "ARC_CANDIDATE_COMPOSE_FILE=$arc_root/effective.compose.json" >> "$GITHUB_ENV"
           python3 - <<'PY'
           import os,subprocess
           p=os.environ['COMPOSE_PROJECT_NAME']
@@ -44,11 +45,11 @@ jobs:
               args=['docker',kind,'ls','-q','--filter','label=com.docker.compose.project='+p]
               assert not subprocess.check_output(args).strip(),'Refusing existing target '+kind
           PY
-          cat > "$RUNNER_TEMP/arc-acceptance/shell" <<'SH'
+          cat > "$arc_root/shell" <<'SH'
           set -euo pipefail
           arc_guard() {
             local free
-            free="$(df -B1 --output=avail "$RUNNER_TEMP" | tail -n1 | tr -d '[:space:]')"
+            free="$(df -B1 --output=avail "$ARC_ACCEPTANCE_ROOT" | tail -n1 | tr -d '[:space:]')"
             printf '{"free_bytes":%s,"minimum":5368709120}\n' "$free" >> "$ARC_ACCEPTANCE_ROOT/selected/capacity.jsonl"
             test "$free" -ge 5368709120
           }
@@ -64,7 +65,7 @@ jobs:
             arc_guard
           }
           SH
-          echo "BASH_ENV=$RUNNER_TEMP/arc-acceptance/shell" >> "$GITHUB_ENV"
+          echo "BASH_ENV=$arc_root/shell" >> "$GITHUB_ENV"
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -105,7 +106,7 @@ jobs:
         if: always() && steps.initialized.outcome == 'success'
         env:
           ARC_LF_VERIFY_EDITOR: "1"
-          ARC_LF_EVIDENCE_DIR: ${{ runner.temp }}/arc-acceptance/selected/editor
+          ARC_LF_EVIDENCE_DIR: ${{ env.ARC_ACCEPTANCE_ROOT }}/selected/editor
           ARC_PLAYWRIGHT_CLI: playwright-cli
         run: arc_bounded timeout 600s node frontend/scripts/verify-langflow-ui-cli.mjs
       - name: Five isolated worker and transport fault recoveries
@@ -175,5 +176,5 @@ jobs:
         if: always() && steps.selected.outcome == 'success'
         with:
           name: candidate-acceptance-amd64
-          path: ${{ runner.temp }}/arc-acceptance/selected
+          path: ${{ env.ARC_ACCEPTANCE_ROOT }}/selected
           retention-days: 7
