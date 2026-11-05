@@ -2,7 +2,7 @@
 
 更新日期：2026-11-05（America/Los_Angeles）。冷启动以本文件、固定Contract、实际源码及精确范围证据为准。
 
-负责人已批准ARC-UPGRADE@0.1.0及WP-00..05 continuous；ARM虚构PG迁移/检查点恢复等有限验证已完成。用户前轮授权Docker恢复方案研究并暂不启动；本轮进一步授权只读排查本机已有独立空Docker环境、核实隔离边界，无合格对象时整理最小准备方案和预计成本，再同步GitHub。原goal累计460分钟和修复次数保留，本轮仅有限只读环境盘点、方案/成本说明及文档自查同步；不授权Desktop启动、设置或旧容器修改、既有任务恢复、新实验环境创建、build/pull/清理、默认替换或后端发布。门禁只覆盖工作区shell/文件补丁，不授予权限。
+负责人已批准ARC-UPGRADE@0.1.0及WP-00..05 continuous；ARM虚构PG迁移/检查点恢复等有限验证已完成。用户已选择最小Linux VM路线，本轮只授权固定制品来源、拟议安装路径/隔离边界、容量停点及累计预算方案，暂不安装/创建/启动，再自查同步GitHub。原goal累计460分钟和修复次数保留；提议600分钟尚未批准或应用，本轮仅小型官方元数据核查及计划文档同步；不授权Desktop启动、设置或旧容器修改、既有任务恢复、新实验环境创建、build/pull/清理、默认替换或后端发布。门禁只覆盖工作区shell/文件补丁，不授予权限。
 
 | 轴 | 当前状态 |
 |---|---|
@@ -22,7 +22,7 @@
 
 ## 活动证据
 
-- [Docker恢复方案、已有环境盘点及准备成本](DOCKER_RECOVERY.md)：本轮context ls为2个同原Desktop入口；9个PATH命令/27精确binary位置、16app位置和9provider根未提供新环境候选，原vms仅0；6socket精确路径无独立可连socket，仅见vmnetd helper，未连接daemon。隔离/空状态unavailable，未发现不等于全机没有。最小Linux机制实验预计准备+验证60–120分钟/新增实际2–4GiB，可能越3GiB停点，未获创建准入；同版Mac另有制品与环境前提。前轮restart候选仍未验证，不另建Spec或证据包。
+- [已选Linux VM的制品/路径/容量/预算方案](DOCKER_RECOVERY.md)：固定Lima2.2.1/VZ/plain、Debian12 arm64日期镜像、DockerCE/CLI28.3.2+containerd1.7.27及Alpine3.22.1探针，六下载预期437,586,414B，仅元数据取摘要、未下载payload或验PGP。拟议根/private/tmp/arc-linux-vm不存在；2CPU/2GiB/4GiB逻辑盘，不转发宿主Docker socket。当前100倍源码停点76,486,100B不足，故不能下载；拟议仅该VM逻辑6GiB/9000倍任一停止、实际增长仍3GiB及累计600分钟均未批准，原460分钟和旧容量停点有效。前轮有限盘点未发现独立空对象；无创建/启动或新运行证据。
 - [本轮Mac宿主及Docker恢复预检](evidence/mac-host/README.md)，[正式manifest](evidence/mac-host/manifest.json) SHA-256 `9d74ef908847c7007ed1cac0e36d1e9e5e3772b1e5f813b2cdf77e2234e20305`。两个context指向同一缺失socket，info失败后的零值server结构不当作空engine；未启动Desktop或本机业务验收。用户明确保持保护、仅同步预检；不把条件未满足记为Mac测试失败。
 - [本轮ARM隔离迁移与检查点恢复](evidence/arm-migration/README.md)，[正式manifest](evidence/arm-migration/manifest.json) SHA-256 `abf078ccd1dbd11aa6908138a89e15d8299c4cc0ab4c5da87d99648d0a18e346`。[CI42086830311](https://github.com/qife422/ai-review-console/actions/runs/42086830311) / source7877364c17f5442df620f8be5c0f6f5a2c6f0d21整体success，Linux/aarch64、runnerARM64、五个image实际arm64。两目标分别1.13.1/1.11.6，各新增5案/5文档/3决定/9报告/9任务，旧业务/Flow及15文件保全；LF候选image sha256:56dfce34864f75eb9e78dd02293a5f5a0bbd778789beef58d08eba3c25f7a07e。首个6725640的422和修复记录保留。
 - [本轮发布缺口矩阵、关闭条件和Zep复查](evidence/release-gaps/README.md)：已封存，[manifest](evidence/release-gaps/manifest.json) SHA-256 `cd5b73563dcbe6b257d05765ecf74b7356c41ff2d42bcd0497779fd9657c3872`。9次官方请求111,442B；精确2.0.2许可仍OPEN，未修改runtime或重复应用测试。封存时上游澄清草稿尚未发送；随后经用户明确批准，已按批准稿发布[上游issue #368](https://github.com/getzep/zep-python/issues/368)，发布后回读时open、0回复，待维护者澄清。旧封存包保持原字节，问题提交不构成许可闭项或后端分发批准。
@@ -60,7 +60,7 @@
 
 上游沟通已完成：#368由qife422于2026-11-05发布，标题和1748字符正文回读与批准稿一致；正文SHA-256 `665ded10bc7302e118d45ed6204549fc34930b67f9af4439e2a49d41da406cb7`。连接器创建因integration权限403未执行成功，改用已登录CLI发布，再通过连接器GET核实。下一项是由维护者提供精确2.0.2的许可说明；收到后由Agent核对来源、版本及适用范围。当前没有运行中的等待任务或自动监控，不重复提交issue；Zep及完整AC-19继续open。
 
-1. 本机有限盘点未发现可准入的独立空环境。按[准备方案及成本](DOCKER_RECOVERY.md)，由用户/环境操作者选择已有外部独立环境，或另行选择准备最小Linux VM；Agent收到具体标识/选择后补精确路径、制品SHA、容量停点及累计预算，未获创建/安装/下载决定前不实施。Linux机制验证不能替代相同Mac Desktop或原盘恢复；当前不启动、不改配置、不重复无界扫描，容量停点继续有效。之后才考虑新本机栈5案/9报告；原库迁移另行设计。
+1. Linux VM路线已经选择，六项主制品和准入方案已固定。下一步由负责人评审[单VM容量例外、累计600分钟及有限执行范围](DOCKER_RECOVERY.md)；当前未批准、不重设460分钟。Agent在相应决定后先核制品签名/实际字节、路径所有权、依赖及峰值；任何未知下载/根外副作用即停，不自动换包或apt fallback。旧增长warning与完整12GiB归属仍未关闭，Linux机制实验也不能代替Mac Desktop或原盘恢复；当前不安装创建启动。之后才考虑新本机栈5案/9报告；原库迁移另行设计。
 2. 由Agent按最终制品范围选择一项可闭合的native/source材料或系统处置，保持共享采集与累计预算；Zep精确许可仍依赖维护者回复#368，不能以重复复查代替依据。SQLite/系统native通知和提供方式、默认LF的Zep/IBM driver及各image的vendor/FIPS条件继续open。
 3. 完整发布条件、技术验收和负责人AD-03决定后才切换默认，再沿WP-08推进版本历史、修改后再审、队列及失败诊断；模型/OCR、真实身份/数据、生产部署仍有独立选择。
 

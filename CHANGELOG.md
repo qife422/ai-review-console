@@ -2,6 +2,13 @@
 
 本文件记录主要功能与交接边界；精确代码差异以 Git 提交为准。开发快照不是正式发布，源码备份不是运行数据库备份。
 
+## 2026-11-05 — 最小 Linux VM 固定输入及准入方案
+
+- 按所选路线固定Lima2.2.1/VZ/plain、Debian12日期镜像及Docker CE/CLI28.3.2、containerd1.7.27和Alpine探针的官方URL/预期摘要/大小；六下载合计437,586,414B。静态Docker tgz缺发布者SHA，改用官方APT元数据中可固定摘要的DEB候选；没有下载安装制品或声称PGP已验。
+- [既有恢复说明](docs/DOCKER_RECOVERY.md)固定拟议/private/tmp/arc-linux-vm根、guest内部路径及不共享宿主目录/不转发Docker socket的边界；根不存在，未安装、创建或启动。Plain和手动解包策略不替代实际依赖、转换、签名与隔离验收。
+- 识别当前100倍源码76,486,100B停点已低于受选下载总量，当前不能准入。提出仅单VM逻辑6GiB/9000倍任一停、实际增长仍3GiB、累计600分钟的待审方案；不修改固定Contract，不应用额度或解除历史warning/完整12GiB缺口。
+- 本轮仅更新四份文档，无新Spec/证据包/原库或历史变更；自查和独立复核按实际范围记录，默认1.11.6及完整AC-19状态保持。
+
 ## 2026-11-05 — 本机独立环境盘点及准备成本
 
 - 只读检查已有context、精确socket/binary/app/provider目录和常见进程：仅原Desktop两个context指向同一缺失socket，未在有限范围发现合格独立空环境。未连接daemon，不把unknown空状态记成0容器/镜像/卷，也不声称全机绝无VM。

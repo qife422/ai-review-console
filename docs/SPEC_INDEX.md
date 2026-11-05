@@ -4,7 +4,7 @@
 
 | ID | 标题 | Contract / 版本 | 交付状态 | 依赖与验证覆盖 | 路径 | 下一步 |
 |---|---|---|---|---|---|---|
-| ARC-UPGRADE | AI Review Console 完善及后续升级 | approved/0.1.0，固定字节不变 | implementing；WP-05仍open；完整last_verified=null，最终接受pending | Mac预检/方案/本机有限盘点完成，未发现可准入独立空环境，已列准备成本；restart候选及本机验收未启动，历史/容量前提未满足；精确Zep2.0.2复查仍OPEN；AMD专项5项故障/PDF恢复/20×1MiB性能通过；编辑器通过虚构副本改名、保存、重载及API回读（C专项success，305项Python/29项前端通过）；候选AMD/ARM独立334包/4工具SHA锁；e6f6fe7/CI41979142562通过271/29、默认/候选双架构后端及AMD浏览器；旧AMD480246c/CI41954322019和本轮ARM7877364/CI42086830311各自完成虚构PG检查点升级/第三旧版恢复，不能跨image继承或涵盖原库；ARM候选PyPI0、Debian132/native分发仍open | [UPGRADE_SPEC.md](UPGRADE_SPEC.md) | 依[环境盘点/准备成本](DOCKER_RECOVERY.md)先选择具体独立环境，补精确资源与累计预算，未授权前不创建/启动；按[发布缺口矩阵](evidence/release-gaps/README.md)补许可/native及系统材料，再按AD-03决定默认升级；之后WP-08 |
+| ARC-UPGRADE | AI Review Console 完善及后续升级 | approved/0.1.0，固定字节不变 | implementing；WP-05仍open；完整last_verified=null，最终接受pending | Mac预检/有限盘点后已选最小Linux VM并固定六项主制品、路径/边界及待审容量/预算方案；未下载/创建/启动，旧容量/历史前提未满足；精确Zep2.0.2复查仍OPEN；AMD专项5项故障/PDF恢复/20×1MiB性能通过；编辑器通过虚构副本改名、保存、重载及API回读（C专项success，305项Python/29项前端通过）；候选AMD/ARM独立334包/4工具SHA锁；e6f6fe7/CI41979142562通过271/29、默认/候选双架构后端及AMD浏览器；旧AMD480246c/CI41954322019和本轮ARM7877364/CI42086830311各自完成虚构PG检查点升级/第三旧版恢复，不能跨image继承或涵盖原库；ARM候选PyPI0、Debian132/native分发仍open | [UPGRADE_SPEC.md](UPGRADE_SPEC.md) | 评审[单VM资源与累计600分钟提案](DOCKER_RECOVERY.md)，当前仍460分钟且未获创建执行授权；按[发布缺口矩阵](evidence/release-gaps/README.md)补许可/native及系统材料，再按AD-03决定默认升级；之后WP-08 |
 
 确切授权、保护边界、manifest、产物规则与冷启动入口见[CURRENT_STATE.md](CURRENT_STATE.md)。用户已把同目标累计预算扩至460分钟，既有计量保留；默认1.11.6和原数据不变。固定Spec编制时review/not_authorized字段不覆盖后续批准；局部CI成功不改变完整发布或最终接受。
 
