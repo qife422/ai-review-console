@@ -66,18 +66,32 @@ jobs:
       matrix:
         include:
           - runner: ubuntu-latest
+            runtime: default
+            version: "1.11.6"
+            compose_files: docker-compose.yml
             arch: amd64
             native_profile: prior-materials
             os_profile: rhel
           - runner: ubuntu-24.04-arm
+            runtime: default
+            version: "1.11.6"
+            compose_files: docker-compose.yml
             arch: arm64
             native_profile: arm-backend
             os_profile: rhel
+          - runner: ubuntu-latest
+            runtime: candidate
+            version: "1.13.1"
+            compose_files: docker-compose.yml:docker/compose.candidate.yml
+            arch: amd64
+            native_profile: prior-materials
+            os_profile: debian
     runs-on: ${{ matrix.runner }}
     timeout-minutes: 35
     env:
       COMPOSE_PROJECT_NAME: arc-ci-${{ github.run_id }}-${{ matrix.arch }}
       COMPOSE_BAKE: "false"
+      COMPOSE_FILE: ${{ matrix.compose_files }}
       LANGFLOW_SUPERUSER_PASSWORD: synthetic-demo-change-me
       REVIEW_SERVICE_TOKEN: synthetic-demo-service-token
     steps:
@@ -85,6 +99,8 @@ jobs:
         run: |
           mkdir -p "$RUNNER_TEMP/arc-ci-evidence"
           {
+            echo 'matrix_runtime=${{ matrix.runtime }}'
+            echo 'expected_langflow_version=${{ matrix.version }}'
             echo 'matrix_arch=${{ matrix.arch }}'
             echo 'runner_arch=${{ runner.arch }}'
             uname -a
@@ -115,7 +131,8 @@ jobs:
           docker compose up -d postgres langflow
           docker compose run --no-deps storage-init
           docker compose run migrate
-          docker compose run flow-init
+          docker compose run flow-init python scripts/bootstrap_langflow.py --upload \
+            --manifest /app/config/langflow-flows.json --expected-langflow-version '${{ matrix.version }}'
           docker compose up -d --no-deps api worker web
       - name: Wait for API and Web
         run: |
@@ -124,7 +141,8 @@ jobs:
         run: |
           mkdir -p "$RUNNER_TEMP/arc-ci-evidence"
           .venv/bin/python scripts/validate_langflow.py --api-url http://localhost:8080 \
-            --evidence "$RUNNER_TEMP/arc-ci-evidence/workflow.json"
+            --evidence "$RUNNER_TEMP/arc-ci-evidence/workflow.json" \
+            --expected-langflow-version '${{ matrix.version }}'
       - name: Install bounded browser CLI runtime
         if: matrix.arch == 'amd64'
         run: |
@@ -165,6 +183,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: workflow-browser-verification-${{ matrix.arch }}
+          name: workflow-browser-verification-${{ matrix.runtime }}-${{ matrix.arch }}
           path: ${{ runner.temp }}/arc-ci-evidence
           retention-days: 7

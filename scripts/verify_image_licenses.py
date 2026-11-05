@@ -111,6 +111,10 @@ LANGFLOW_LICENSE_FILES = (
     "/app/licenses/FastMCP-3.4.10-LICENSE.txt",
     "/app/licenses/Langflow-LICENSE.txt",
 )
+CANDIDATE_NOTICE_FILES = (
+    "/app/licenses/sqlite-vec-LICENSE-MIT.txt",
+    "/app/licenses/sqlite-vec-LICENSE-APACHE.txt",
+)
 FONT_PATH = "/app/review_core/assets/NotoSansSC-Regular.ttf"
 WEB_ROOT = "/usr/share/nginx/html/licenses"
 WEB_FILES = ("THIRD_PARTY_LICENSES.md", "IBM-Plex-OFL-1.1.txt", "PROJECT-Apache-2.0.txt")
@@ -272,6 +276,11 @@ def collect_python(name: str, budget: TextBudget) -> dict:
             }
         )
     project_paths = PROJECT_FILES + (LANGFLOW_LICENSE_FILES if name == "langflow" else ())
+    if name == "langflow" and any(
+        normalize(p["name"]) == "langflow-base" and p["version"] == "1.13.1"
+        for p in packages
+    ):
+        project_paths += CANDIDATE_NOTICE_FILES
     project = [read_file(Path(p), Path("/app"), budget) for p in project_paths]
     project.append(read_file(Path(FONT_PATH), Path("/app"), budget, text=False))
     installed_names = {normalize(p["name"]) for p in packages}

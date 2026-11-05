@@ -52,4 +52,6 @@ These copies address known missing package-level texts; they do not authorize fu
 
 ## Isolated 1.13.1 candidate observations
 
+The candidate source includes both exact sqlite-vec v0.1.9 upstream notice files at `licenses/sqlite-vec-LICENSE-MIT.txt` and `licenses/sqlite-vec-LICENSE-APACHE.txt`. Both are retained without selecting an alternative license. The collector checks these supplemental files in the actual candidate image; installed wheel own-text and native source correspondence remain separate checks. The shared Langflow MIT copy retains the complete v1.13.1 copyright and permission text, with one extra trailing newline.
+
 The experimental langflow-base/LFX1.13.1 image excludes selected Zep, IBM driver and Psycopg binary distributions; default and API images retain their separately scoped obligations. APSW's installed license specimen and Psycopg's LGPL text were recorded. Exact upstream MIT/sqlite-vec source notices supplement explicitly retained installed-text gaps. The fixed repository MIT copy differs only by a trailing blank line; an independent same-image copy readback was not retained. Embedded SQLite/source, system libraries, frontend notices and full backend redistribution remain subject to further verification. See docs/evidence/langflow-candidate/README.md. No license-option or residual-risk acceptance is implied.

@@ -1,0 +1,29 @@
+{
+  "scope": "Experimental Linux AMD64 CPython3.12.16 Langflow base/LFX1.13.1; not the default runtime or ARM lock",
+  "source_commit": "82a028e5738f04c9ce642e76544ffbae5554ab62",
+  "run": "https://github.com/qife422/ai-review-console/actions/runs/41952562436",
+  "artifact_id": 13382130734,
+  "python_distributions": 334,
+  "build_tools": 4,
+  "installation_verified": true,
+  "pip_check": "passed",
+  "source_build_policy": "Hash-locked pip/setuptools/wheel/packaging bootstrap; --require-hashes with dependencies enabled and --no-build-isolation. Source archive hashes do not imply reproducible built wheel bytes.",
+  "inputs": {
+    "langflow-candidate.in": {
+      "bytes": 7781,
+      "sha256": "93558be0714d17c73e253621f2f9d6ecc479af3b9777964040e82cb3cc16835b"
+    },
+    "langflow-candidate-build-tools.in": {
+      "bytes": 135,
+      "sha256": "3ee1f4bbba9c9cc73c11512c26cf6b2bb96326ea2888ed98e2d20b20972a6298"
+    },
+    "langflow-candidate.lock": {
+      "bytes": 34169,
+      "sha256": "22c0c6fd00a436f20fbc649e7ef69273da933b2c75ea0f797be9adfb48a4bd7b"
+    },
+    "langflow-candidate-build-tools.lock": {
+      "bytes": 449,
+      "sha256": "9f87377dbd3950d2fd2f54d740a9fa7ce7f71acc87ef0f1e119b45fa970fa9ea"
+    }
+  }
+}
